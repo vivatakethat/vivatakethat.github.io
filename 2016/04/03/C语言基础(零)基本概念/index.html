@@ -1,0 +1,888 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>C语言基础(零)基本概念 | take that的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="takethat">
+    
+
+    
+	<meta name="keywords" content="嵌入式, C++, C, Linux">
+    <meta name="description" content="位置：信息学院
+
+2016-4-3 周六, 12:07AM   2016-4-3 周六; &amp;nbsp;8：50AM——10:AM
+教材《一站式学习C编程》
+
+
+
+程序的基本概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言基础(零)基本概念">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/04/03/C语言基础(零)基本概念/index.html">
+<meta property="og:site_name" content="take that的博客">
+<meta property="og:description" content="位置：信息学院
+
+2016-4-3 周六, 12:07AM   2016-4-3 周六; &amp;nbsp;8：50AM——10:AM
+教材《一站式学习C编程》
+
+
+
+程序的基本概念">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/shell03-background.jpg">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.1%E7%BC%96%E8%AF%91%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.2j%E8%A7%A3%E9%87%8A%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.3j%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png">
+<meta property="og:updated_time" content="2016-11-16T14:13:03.108Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C语言基础(零)基本概念">
+<meta name="twitter:description" content="位置：信息学院
+
+2016-4-3 周六, 12:07AM   2016-4-3 周六; &amp;nbsp;8：50AM——10:AM
+教材《一站式学习C编程》
+
+
+
+程序的基本概念">
+
+    
+    <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/batman.jpg" alt="take that的博客" title="take that的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
+				<h2 class="blog-motto">热  爱  生  活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|tags</a></li>
+					
+						<li><a href="/categories">分类|categories</a></li>
+					
+						<li><a href="/about">关于|About</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 12341059951958788027 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/04/03/C语言基础(零)基本概念/" title="C语言基础(零)基本概念" itemprop="url">C语言基础(零)基本概念</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-04-03T04:02:32.000Z" itemprop="datePublished"> 发表于 2016-04-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#程序的基本概念"><span class="toc-number">1.</span> <span class="toc-text">程序的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序语言（Programmming-Language）"><span class="toc-number">1.1.</span> <span class="toc-text">程序语言（Programmming Language）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序执行过程"><span class="toc-number">1.2.</span> <span class="toc-text">程序执行过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#程序的发展演化"><span class="toc-number">1.2.1.</span> <span class="toc-text">程序的发展演化</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/shell03-background.jpg" alt="攻壳机动队" title="攻壳机动队"><br><br></p>
+<hr>
+<blockquote>
+<p>位置：信息学院</p>
+<blockquote>
+<p>2016-4-3 周六, 12:07AM   <br><br>2016-4-3 周六; &nbsp;8：50AM——10:AM</p>
+<p>教材《一站式学习C编程》</p>
+</blockquote>
+</blockquote>
+<hr>
+<h1 id="程序的基本概念"><a href="#程序的基本概念" class="headerlink" title="程序的基本概念"></a>程序的基本概念</h1><a id="more"></a>
+<ul>
+<li>程序（Program）由一系列指令组成，指令是指示计算机做某种运算的命令。通常包括以下几个指令：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#9312;&#36755;&#20837;&#65288;Input&#65289;&#10;      &#20174;&#38190;&#30424;&#12289;&#25991;&#20214;&#25110;&#32773;&#20854;&#20182;&#35774;&#22791;&#33719;&#21462;&#25968;&#25454;&#10;&#9313;&#36755;&#20986;&#65288;Output&#65289;&#10;      &#25226;&#25968;&#25454;&#26174;&#31034;&#21040;&#23631;&#24149;&#65292;&#25110;&#32773;&#23384;&#20837;&#19968;&#20010;&#25991;&#20214;&#65292;&#25110;&#32773;&#21457;&#36865;&#21040;&#20854;&#23427;&#35774;&#22791;&#12290;&#10;&#9314;&#22522;&#26412;&#36816;&#31639;&#10;    &#25191;&#34892;&#22522;&#26412;&#30340;&#25968;&#23398;&#36816;&#31639;&#65288;&#21152;&#20943;&#20056;&#38500;&#65289;&#21644;&#25968;&#25454;&#23384;&#21462;&#12290;&#10;&#9315;&#27979;&#35797;&#21644;&#20998;&#25903;&#10;    &#27979;&#35797;&#26576;&#20010;&#26465;&#20214;&#65292;&#28982;&#21518;&#26681;&#25454;&#19981;&#21516;&#30340;&#27979;&#35797;&#32467;&#26524;&#25191;&#34892;&#19981;&#21516;&#30340;&#21518;&#32493;&#25351;&#20196;&#12290;&#10;&#9316;&#24490;&#29615;&#10;    &#37325;&#22797;&#25191;&#34892;&#19968;&#31995;&#21015;&#25805;&#20316;&#12290;</span><br></pre></td></tr></table></figure>
+<p><strong>程序那么复杂，而编写程序的指令只有这么简单的这几种，这中间的落差需要程序去填补。把复杂的<br>任务分解成子任务，把子任务再分解成更简单的任务，层层分解，直到简单得可以用上指令来完成。</strong></p>
+<h2 id="程序语言（Programmming-Language）"><a href="#程序语言（Programmming-Language）" class="headerlink" title="程序语言（Programmming Language）"></a>程序语言（Programmming Language）</h2><ol>
+<li>低级语言（Low-level Language）:直接用计算机指令编写程序，如：机器语言（Machine Language）和汇编语言(Assembly Language)</li>
+<li>高级语言（Assembly Language）用语句（Statement）编写，如:C、C++、Java、Python等；</li>
+</ol>
+<blockquote>
+<p>汇编语言与机器语言的指令是一一对应的，编译器就是做一个简单的替换工作。</p>
+<p>C语言的语句和低级语言的指令不是简单的一一对应关系，如：一条<code>a=a+b;</code>语句要翻译成三条汇编或机器指令，这个过程称为编译<code>（Compile）</code>，由编译器<code>（Compiler）</code>来完成，显然编译器要比汇编器要复杂的多。C语言编写的程序必须经过编译转成机器指令才能被计算机执行。</p>
+<p>C语言是可移植的<code>(Portable)</code>或者称为平台无关的<code>(Platform Independeng)</code>。</p>
+</blockquote>
+<p><strong><em><code>平台</code>这个词有很多种解释，可以指计算机体系架构<code>（Architecture）</code>,也可以指操作系统，也可以开发平台（编译器、连接器等）。不同的计算机体系结构有不同的<code>指令集（Instruction Set）</code>可以识别的机器指令格式是不同的。</em></strong></p>
+<p><br></p>
+<p><br></p>
+<hr>
+<h2 id="程序执行过程"><a href="#程序执行过程" class="headerlink" title="程序执行过程"></a>程序执行过程</h2><p><strong> 编译执行过程</strong></p>
+<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.1%E7%BC%96%E8%AF%91%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="编译执行的过程" title="编译执行的过程"><br><br></p>
+<blockquote>
+<p>源代码<code>(Source Code)</code>或源文件通过运行编译器对它进行编译，编译的过程并不执行程序，而是把源代码全部翻译成机器指令，再生成一个新的文件,如a.out这<br>称为可执行文件，可执行文件可以被操作系统加载运行，计算机执行该文件中由编译器生成的指令。</p>
+</blockquote>
+<p><br><br><br><strong>解释执行过程</strong></p>
+<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.2j%E8%A7%A3%E9%87%8A%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="编译执行的过程" title="编译执行的过程"><br><br></p>
+<blockquote>
+<p>有些高级语言以解释(Interpret)的方式执行，解释执行过程和C语言的编译执行过程很不一样。例如写一个Shell脚本script.sh，内容如下：</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh&#10;VAR=1&#10;VAR=$(($VAR+1))&#10;echo $VAR</span><br></pre></td></tr></table></figure>
+<p><em>用Shell程序/bin/sh解释这个脚本，结果如下:</em><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /bin/sh script.sh&#10;2</span><br></pre></td></tr></table></figure></p>
+<p>这里的/bin/sh称为解释器<code>(Interpreter)</code>，它把脚本的每一行当做一条命令解释执行，而不需要先生成可执行文件（可执行文件包含机器指令）。若把脚本的这个三行<br>当作命令直接敲到Shell提示符下，也能取到相同的结果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ VAR=1&#10;$ VAR=$(($VAR+1))&#10;$ echo $VAR&#10;2</span><br></pre></td></tr></table></figure></p>
+<p><br><br><br><strong>编译和解释相结合的方式执行</strong></p>
+<blockquote>
+<p>如Java、Python、Perl等编程语言都采用这种方式。</p>
+</blockquote>
+<p>以Python为例，程序员写的源代码.py文件首先被编译成.pyc文件，称为字节码（Byte COde），然后字节码被Python虚拟机解释执行。字节码是Python虚拟机的指令而非<br>机器指令，所以它是<code>平台无关</code>的。如果把字节码文件从一种平台拷贝到另一种平台上，另一种平台也需要安装Python虚拟机才能运行这个字节码文件。<br><br><br><img src="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.3j%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="虚拟机执行过程" title="虚拟机执行的过程"><br><br><br><em>虚拟机的定义有2个一种是类似与Vmware的<code>系统虚拟机</code>，另一种则是<code>程序虚拟机</code>如：JVM,CLR</em><br><br><em>程序虚拟机也称作托管运行时环境，运行这个虚拟机时，就好比普通的OS中的一个进程。当这个进程启动时，虚拟机启动，当进程销毁时，虚拟机销毁。<code>使用虚拟机的目的就是提供一个和平台无关的编程环境</code>。</em></p>
+<hr>
+<h3 id="程序的发展演化"><a href="#程序的发展演化" class="headerlink" title="程序的发展演化"></a>程序的发展演化</h3><p>程序语言仍在发展演化。</p>
+<blockquote>
+<p>机器语言称为第一代语言（1GL，1st Generation Programming Language）</p>
+<p>汇编语言称为第二代语言（2GL,2nd Generation Programming Language）</p>
+<p>C、C++、Java、Python等称为第三代语言（3GL,3rd Generation Programming Language）</p>
+</blockquote>
+  
+	</div>
+
+	<!-- css -->
+	<style type="text/css">
+	    .center {
+	        text-align: center;
+	    }
+	    .hidden {
+	        display: none;
+	    }
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+			_background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+
+			<!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+			     因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+	    <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+			
+		
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+    
+	<div id="donate_guide" class="donate_bar center hidden">
+        <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+	    
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="微信打赏 Donate" height="190px" width="auto"/>
+		</a>
+        
+        &nbsp;&nbsp;
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="支付宝打赏 Donate" height="190px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function() {
+			$('#donate_board').addClass('hidden');
+	    $('#donate_guide').removeClass('hidden');
+		}
+
+		function donate_on_web(){
+			$('#donate').submit();
+        }
+
+		var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+		}
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/编程/">编程</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.vivatakethat.com/2016/04/03/C语言基础(零)基本概念/" data-title="C语言基础(零)基本概念 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/04/03/嵌入式开发学习（零-概述.）/" title="嵌入式开发学习(零)：概述">
+  <strong>上一篇：</strong><br/>
+  <span>
+  嵌入式开发学习(零)：概述</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/04/03/C函数_Memo/"  title="C函数_Memo">
+ <strong>下一篇：</strong><br/> 
+ <span>C函数_Memo
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/04/03/C语言基础(零)基本概念/" data-title="C语言基础(零)基本概念" data-url="http://www.vivatakethat.com/2016/04/03/C语言基础(零)基本概念/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#程序的基本概念"><span class="toc-number">1.</span> <span class="toc-text">程序的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序语言（Programmming-Language）"><span class="toc-number">1.1.</span> <span class="toc-text">程序语言（Programmming Language）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序执行过程"><span class="toc-number">1.2.</span> <span class="toc-text">程序执行过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#程序的发展演化"><span class="toc-number">1.2.1.</span> <span class="toc-text">程序的发展演化</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="vivatakethat" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Coursera/" title="Coursera">Coursera<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Web/" title="Web">Web<sup>2</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/git/" title="git">git<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/memo/" title="memo">memo<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/云计算/" title="云计算">云计算<sup>10</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程/" title="工程">工程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/英语/" title="英语">英语<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English/" title="English">English<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com/" target="_blank" title="一个面向程序员交流分享的新一代社区">Stack overflow</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://vivatakethat.com" target="_blank" title="takethat&#39;s Blog">takethat&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.fiochen.me" target="_blank" title=" 甜甜哥哥的博客">思华的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/example440982" target="_blank" title="轻微的博客">轻微的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <p class="asidetitle">热评文章</p>
+<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vivatakethat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer>
+<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Take That in here <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/vivatakethat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:vivatakethat@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015.4-2017
+		
+		<a href="/about" target="_blank" title="takethat">takethat</a>
+		
+
+		</p>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Xd__7-Q-nUc6axwJDfV5','2.0.0');
+</script>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_pv">
+      Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+    You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    $('#toc.toc-aside').css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"vivatakethat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6f10d7c2f9fab5591ab7b7c322e0a114";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  </body>
+</html>
+

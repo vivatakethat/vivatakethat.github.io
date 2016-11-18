@@ -1,0 +1,1035 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>PHP基础（一） | take that的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="takethat">
+    
+
+    
+	<meta name="keywords" content="嵌入式, C++, C, Linux">
+    <meta name="description" content="位置：信息学院
+
+2016-4-2 周五-下午
+
+
+PHP入门一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP基础（一）">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/04/04/PHP入门(一)/index.html">
+<meta property="og:site_name" content="take that的博客">
+<meta property="og:description" content="位置：信息学院
+
+2016-4-2 周五-下午
+
+
+PHP入门一">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/PHP%E5%9F%BA%E7%A1%80%E4%B8%80%E6%8A%AC%E5%A4%B4.jpg">
+<meta property="og:updated_time" content="2016-11-16T14:14:33.001Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP基础（一）">
+<meta name="twitter:description" content="位置：信息学院
+
+2016-4-2 周五-下午
+
+
+PHP入门一">
+
+    
+    <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/batman.jpg" alt="take that的博客" title="take that的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
+				<h2 class="blog-motto">热  爱  生  活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|tags</a></li>
+					
+						<li><a href="/categories">分类|categories</a></li>
+					
+						<li><a href="/about">关于|About</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 12341059951958788027 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/04/04/PHP入门(一)/" title="PHP基础（一）" itemprop="url">PHP基础（一）</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-04-04T15:54:32.000Z" itemprop="datePublished"> 发表于 2016-04-04</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PHP入门一"><span class="toc-number">1.</span> <span class="toc-text">PHP入门一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">1.1.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP中的算术运算符"><span class="toc-number">1.2.</span> <span class="toc-text">PHP中的算术运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php中赋值运算"><span class="toc-number">1.3.</span> <span class="toc-text">php中赋值运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP中的比较运算"><span class="toc-number">1.4.</span> <span class="toc-text">PHP中的比较运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三元运算"><span class="toc-number">1.5.</span> <span class="toc-text">三元运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逻辑运算"><span class="toc-number">1.6.</span> <span class="toc-text">逻辑运算</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/PHP%E5%9F%BA%E7%A1%80%E4%B8%80%E6%8A%AC%E5%A4%B4.jpg" alt="" title="抬头图"></p>
+<blockquote>
+<p>位置：信息学院</p>
+<blockquote>
+<p>2016-4-2 周五-下午</p>
+</blockquote>
+</blockquote>
+<h1 id="PHP入门一"><a href="#PHP入门一" class="headerlink" title="PHP入门一"></a>PHP入门一</h1><a id="more"></a>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>运算符是告诉PHP做相关运算的标识符号。例如，你需要计算123乘以456等于多少，这时候就需要一个符号，告诉服务器，你需要做乘法运算。<br>PHP运算符一般分为</p>
+<ul>
+<li>算术运算符</li>
+<li>赋值运算符</li>
+<li>比较运算符</li>
+<li>三元运算符</li>
+<li>逻辑运算符</li>
+<li>字符串连接运算符</li>
+<li>错误控制运算符</li>
+</ul>
+<p><br><br>例如：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span> </span><br><span class="line"><span class="variable">$a</span> = <span class="number">1</span>;</span><br><span class="line"><span class="variable">$b</span> = <span class="number">1</span>;</span><br><span class="line"><span class="variable">$c</span>=<span class="variable">$a</span>+<span class="variable">$b</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$c</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将会输出<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="PHP中的算术运算符"><a href="#PHP中的算术运算符" class="headerlink" title="PHP中的算术运算符"></a>PHP中的算术运算符</h2><p>算术运算符主要是用于进行算术运算的，例如：加法运算、减法运算、乘法运算、除法运算。在PHP中的常用的算术运算符对应下表：</p>
+<table>
+<thead>
+<tr>
+<th>算术运算符</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">示例</th>
+<th style="text-align:center">结果</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td style="text-align:center">加法</td>
+<td style="text-align:center">$a+$b</td>
+<td style="text-align:center">$a和$b的和</td>
+<td style="text-align:right">3+4=7</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:center">减法</td>
+<td style="text-align:center">$a-$b</td>
+<td style="text-align:center">$a和$b的差</td>
+<td style="text-align:right">6-4=2</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td style="text-align:center">乘法</td>
+<td style="text-align:center">$a<code>*</code>$b</td>
+<td style="text-align:center">$a和$b的积</td>
+<td style="text-align:right">3*7=21</td>
+</tr>
+<tr>
+<td>‘/‘</td>
+<td style="text-align:center">除法</td>
+<td style="text-align:center">$a/$$b</td>
+<td style="text-align:center">$a和$b的商</td>
+<td style="text-align:right">8/2=4</td>
+</tr>
+<tr>
+<td>$</td>
+<td style="text-align:center">取模</td>
+<td style="text-align:center">$a%$b</td>
+<td style="text-align:center">$a除以$b的余数</td>
+<td style="text-align:right">6$3=0</td>
+</tr>
+</tbody>
+</table>
+<p><br><br><code>算平均分:</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">$english = <span class="number">110</span>; <span class="comment">//英语成绩</span></span><br><span class="line">$math= <span class="number">118</span>; <span class="comment">//数学成绩</span></span><br><span class="line">$biological = <span class="number">80</span>; <span class="comment">//生物成绩</span></span><br><span class="line">$physical = <span class="number">90</span>; <span class="comment">//物理成绩</span></span><br><span class="line"></span><br><span class="line">$sum = $english+$math+$biological+$physical;</span><br><span class="line">$avg=$sum/<span class="number">4</span>;</span><br><span class="line">$x=$math-$english;</span><br><span class="line">$x2=$english*$english;</span><br><span class="line"></span><br><span class="line">echo <span class="string">"总分:"</span>.$sum.<span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">echo <span class="string">"平均分:"</span>.$avg.<span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">echo <span class="string">"数学比英语高的分数:"</span>.$x.<span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">echo <span class="string">"英语成绩的平方:"</span>.$x2.<span class="string">"&lt;br /&gt;"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>输出：<br><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">总分<span class="pseudo">:398</span></span><br><span class="line">平均分<span class="pseudo">:99</span><span class="class">.5</span></span><br><span class="line">数学比英语高的分数<span class="pseudo">:8</span></span><br><span class="line">英语成绩的平方<span class="pseudo">:12100</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="php中赋值运算"><a href="#php中赋值运算" class="headerlink" title="php中赋值运算"></a>php中赋值运算</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PHP的赋值运算符有两种，分别是：</span><br><span class="line">(<span class="number">1</span>)“=”：把右边表达式的值赋给左边的运算数。它将右边表达式值复制一份，交给左边的运算数。换而言之，首先给左边的运算数申请了一块内存，然后把复制的值放到这个内存中。</span><br><span class="line">(<span class="number">2</span>)“&amp;”：引用赋值，意味着两个变量都指向同一个数据。它将使两个变量共享一块内存，如果这个内存存储的数据变了，那么两个变量的值都会发生变化。</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;?php &#10;    $a = &#34;geekspeedPHP&#65281;&#34;;&#10;&#9;$b=$a;&#10;&#9;$c=&#38;$a;&#10;&#9;$a = &#34;geekspeedPHP&#65281;&#34;;&#10;&#9;&#10;&#9;echo $b.&#34;&#60;br /&#62;&#34;;&#10;&#9;echo $c.&#34;&#60;br /&#62;&#34;;&#10;?&#62;</span><br></pre></td></tr></table></figure>
+<p><br><br>输出：<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">我在geekspeedPHP！<span class="comment">'</span></span><br><span class="line">我正在geekspeed学习PHP！</span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h2 id="PHP中的比较运算"><a href="#PHP中的比较运算" class="headerlink" title="PHP中的比较运算"></a>PHP中的比较运算</h2><p><strong>比较运算符主要是用于进行比较运算的，例如：等于、全等、不等、大于、小于。在PHP中常用的比较运算符如下表：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">比较运算符</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">==</td>
+<td style="text-align:center">等于</td>
+<td style="text-align:center">$a==$b</td>
+<td style="text-align:center">如果$a等于$b,返回TRUE</td>
+</tr>
+<tr>
+<td style="text-align:center">===</td>
+<td style="text-align:center">全等</td>
+<td style="text-align:center">$a===$b</td>
+<td style="text-align:center">如果$a等于$b,并且它们的类型也相等，返回TRUE。</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td style="text-align:center">不等</td>
+<td style="text-align:center">$a!=$b</td>
+<td style="text-align:center">如果$a不等于$b，返回TRUE</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&gt;</td>
+<td style="text-align:center">不等</td>
+<td style="text-align:center">$a&lt;&gt;$b</td>
+<td style="text-align:center">如果$a不等于$b,返回TRUE</td>
+</tr>
+<tr>
+<td style="text-align:center">!==</td>
+<td style="text-align:center">非全等</td>
+<td style="text-align:center">$a!==$b</td>
+<td style="text-align:center">如果$a不等于$b，或者它们的类型不同，返回TRUE</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">小于</td>
+<td style="text-align:center">$a&lt;$b</td>
+<td style="text-align:center">如果$a严格小于$b,返回TRUE</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">大于</td>
+<td style="text-align:center">$a&gt;$b</td>
+<td style="text-align:center">如果$a严格大于$b,返回TRUE</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td style="text-align:center">小于等于</td>
+<td style="text-align:center">$a&lt;=$b</td>
+<td style="text-align:center">如果$a小于或者等于$b,返回TRUE</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td style="text-align:center">大于等于</td>
+<td style="text-align:center">$a&gt;=$b</td>
+<td style="text-align:center">如果$a大于或者等于$b,返回TRUE</td>
+</tr>
+</tbody>
+</table>
+<p><code>比较运算符</code></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span>  </span><br><span class="line">    <span class="variable">$a</span> = <span class="number">1</span>;</span><br><span class="line">	<span class="variable">$b</span> = <span class="string">"1"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>==<span class="variable">$b</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>===<span class="variable">$b</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>!=<span class="variable">$b</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>&lt;&gt;<span class="variable">$b</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>!==<span class="variable">$b</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>&lt;<span class="variable">$b</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="variable">$c</span> = <span class="number">5</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>&lt;<span class="variable">$c</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>&gt;<span class="variable">$c</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>&lt;=<span class="variable">$c</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>&gt;=<span class="variable">$c</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	var_dump(<span class="variable">$a</span>&gt;=<span class="variable">$b</span>);</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将会输出:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool(true)&#10;&#10;bool(false)&#10;&#10;bool(false)&#10;&#10;bool(false)&#10;&#10;bool(true)&#10;&#10;bool(false)&#10;&#10;bool(true)&#10;&#10;bool(false)&#10;&#10;bool(true)&#10;&#10;bool(false)&#10;&#10;bool(true)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h2><p>(“?:”)三元运算符也是一个比较运算符，对于表达式(expr1)?(expr2):(expr3)，如果expr1的值为true，则此表达式的值为expr2，否则为expr3。<br>实例:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span> </span><br><span class="line">    <span class="variable">$a</span> = <span class="number">78</span>;<span class="comment">//成绩</span></span><br><span class="line">	<span class="variable">$b</span>=<span class="variable">$a</span>&gt;=<span class="number">60</span>?<span class="string">"及格"</span>:<span class="string">"不及格"</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="variable">$b</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>其expr1的作用是判断$a值是否大于60，若大于60，则$b变量的值为expr2的值“及格”，若小于60，则$b变量的值为expr3的值“不及格”。运行结果:</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">及格</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h2><p> 逻辑运算符主用是进行逻辑运算的，例如：<code>逻辑与</code>、<code>逻辑或</code>、<code>逻辑异或</code>、<code>逻辑非</code>等，在PHP中常用的逻辑运算符如下表：</p>
+<table>
+<thead>
+<tr>
+<th>例子</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$a and $b</td>
+<td style="text-align:center">And(逻辑与)</td>
+<td style="text-align:center">如果$a与$b都为TRUE,返回TRUE</td>
+</tr>
+<tr>
+<td>$a or $b</td>
+<td style="text-align:center">Or(逻辑或)</td>
+<td style="text-align:center">如果$a或$b任一为TRUE，返回TRUE</td>
+</tr>
+<tr>
+<td>$a xor $b</td>
+<td style="text-align:center">Xor(逻辑异或)</td>
+<td style="text-align:center">如果$a与$b有且仅有一个为TRUE，返回TRUE</td>
+</tr>
+<tr>
+<td>!$a</td>
+<td style="text-align:center">Not(逻辑非)</td>
+<td style="text-align:center">如果$a不为TRUE，返回TRUE</td>
+</tr>
+<tr>
+<td>$a&amp;&amp;$b</td>
+<td style="text-align:center">And(逻辑与)</td>
+<td style="text-align:center">如果$a与$b都为TRUE,返回TRUE</td>
+</tr>
+<tr>
+<td>$a&#124;&#124;$b</td>
+<td style="text-align:center">Or(逻辑或)</td>
+<td style="text-align:center">如果$a或$b任一为TRUE,返回TRUE</td>
+</tr>
+</tbody>
+</table>
+<p> 或者我们可以从投票的角度来理解逻辑运算：</p>
+<blockquote>
+<p>1、逻辑与(<code>And</code>)：要求所有人都投票同意，才会通过某协议；</p>
+<p>2、逻辑或(<code>Or</code>)：只要求一个人投票同意就行；</p>
+<p>3、逻辑异或(<code>Xor</code>)：只能有且只能有一个人投票同意；</p>
+<p>4、逻辑非(<code>Not</code>)：某个人要反对，但是通过逻辑非，使其反对无效；</p>
+</blockquote>
+<p>“与(<code>And</code>)”和“或(<code>Or</code>)”有两种不同形式运算符的原因是它们运算的优先级（就是运算的有限顺序，比如我们小学的时候学习四则运算，加减乘除混合在一起啦，优先计算乘除，再计算加减）不同。</p>
+ <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> &lt;?php </span><br><span class="line">    <span class="variable">$a</span> = TRUE; //A同意</span><br><span class="line">	<span class="variable">$b</span> = TRUE; //B同意</span><br><span class="line">	<span class="variable">$c</span> = FALSE; //C反对</span><br><span class="line">	<span class="variable">$d</span> = FALSE; //D反对</span><br><span class="line">	//咱顺便复习下三元运算符</span><br><span class="line">	echo (<span class="variable">$a</span> and <span class="variable">$b</span>)?<span class="string">"通过"</span>:<span class="string">"不通过"</span>;//逻辑与</span><br><span class="line">	echo <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	echo (<span class="variable">$a</span> or <span class="variable">$c</span>)?<span class="string">"通过"</span>:<span class="string">"不通过"</span>;//逻辑或</span><br><span class="line">	echo <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	echo (<span class="variable">$a</span> xor <span class="variable">$c</span> xor <span class="variable">$d</span>)?<span class="string">"通过"</span>:<span class="string">"不通过"</span>;//逻辑异或</span><br><span class="line">	echo <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	echo !<span class="variable">$c</span>?<span class="string">"通过"</span>:<span class="string">"不通过"</span>;//逻辑非</span><br><span class="line">	echo <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	echo <span class="variable">$a</span> &amp;&amp; <span class="variable">$d</span>?<span class="string">"通过"</span>:<span class="string">"不通过"</span>;//逻辑与</span><br><span class="line">	echo <span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">	echo <span class="variable">$b</span> || <span class="variable">$c</span>||<span class="variable">$d</span>?<span class="string">"通过"</span>:<span class="string">"不通过"</span>;//逻辑或</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>结果将会输出:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">通过</span><br><span class="line">通过</span><br><span class="line">通过</span><br><span class="line">通过</span><br><span class="line">不通过</span><br><span class="line">通过</span><br></pre></td></tr></table></figure>
+  
+	</div>
+
+	<!-- css -->
+	<style type="text/css">
+	    .center {
+	        text-align: center;
+	    }
+	    .hidden {
+	        display: none;
+	    }
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+			_background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+
+			<!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+			     因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+	    <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+			
+		
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+    
+	<div id="donate_guide" class="donate_bar center hidden">
+        <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+	    
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="微信打赏 Donate" height="190px" width="auto"/>
+		</a>
+        
+        &nbsp;&nbsp;
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="支付宝打赏 Donate" height="190px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function() {
+			$('#donate_board').addClass('hidden');
+	    $('#donate_guide').removeClass('hidden');
+		}
+
+		function donate_on_web(){
+			$('#donate').submit();
+        }
+
+		var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+		}
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Web/">Web</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/PHP/">PHP</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.vivatakethat.com/2016/04/04/PHP入门(一)/" data-title="PHP基础（一） | take that的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/04/05/vi基础(零)/" title="vi基础(零)">
+  <strong>上一篇：</strong><br/>
+  <span>
+  vi基础(零)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/04/03/嵌入式开发学习（零-概述.）/"  title="嵌入式开发学习(零)：概述">
+ <strong>下一篇：</strong><br/> 
+ <span>嵌入式开发学习(零)：概述
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/04/04/PHP入门(一)/" data-title="PHP基础（一）" data-url="http://www.vivatakethat.com/2016/04/04/PHP入门(一)/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PHP入门一"><span class="toc-number">1.</span> <span class="toc-text">PHP入门一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">1.1.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP中的算术运算符"><span class="toc-number">1.2.</span> <span class="toc-text">PHP中的算术运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php中赋值运算"><span class="toc-number">1.3.</span> <span class="toc-text">php中赋值运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP中的比较运算"><span class="toc-number">1.4.</span> <span class="toc-text">PHP中的比较运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三元运算"><span class="toc-number">1.5.</span> <span class="toc-text">三元运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逻辑运算"><span class="toc-number">1.6.</span> <span class="toc-text">逻辑运算</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="vivatakethat" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Coursera/" title="Coursera">Coursera<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Web/" title="Web">Web<sup>2</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/git/" title="git">git<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/memo/" title="memo">memo<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/云计算/" title="云计算">云计算<sup>10</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程/" title="工程">工程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/英语/" title="英语">英语<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English/" title="English">English<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com/" target="_blank" title="一个面向程序员交流分享的新一代社区">Stack overflow</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://vivatakethat.com" target="_blank" title="takethat&#39;s Blog">takethat&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.fiochen.me" target="_blank" title=" 甜甜哥哥的博客">思华的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/example440982" target="_blank" title="轻微的博客">轻微的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <p class="asidetitle">热评文章</p>
+<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vivatakethat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer>
+<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Take That in here <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/vivatakethat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:vivatakethat@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015.4-2017
+		
+		<a href="/about" target="_blank" title="takethat">takethat</a>
+		
+
+		</p>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Xd__7-Q-nUc6axwJDfV5','2.0.0');
+</script>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_pv">
+      Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+    You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    $('#toc.toc-aside').css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"vivatakethat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6f10d7c2f9fab5591ab7b7c322e0a114";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  </body>
+</html>
+

@@ -1,0 +1,955 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>硬件基础知识 | take that的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="takethat">
+    
+
+    
+	<meta name="keywords" content="嵌入式, C++, C, Linux">
+    <meta name="description" content="EMI单片机编写程序是根据硬件电路图编写.
+电容隔离直流通交流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="硬件基础知识">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/07/23/硬件基础知识/index.html">
+<meta property="og:site_name" content="take that的博客">
+<meta property="og:description" content="EMI单片机编写程序是根据硬件电路图编写.
+电容隔离直流通交流">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E9%BB%91%E9%B9%B0%E5%9D%A0%E8%90%BD.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/KST-51-USB%E6%8E%A5%E5%8F%A3%E7%94%B5%E8%B7%AF%E5%9B%BE+%E7%94%B5%E6%BA%90%E5%BC%80%E5%85%B3%E4%BE%9B%E7%94%B5%E5%9B%BE.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%94%B5%E5%AE%B9%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \mathscal{10*10^4pf}">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi?  \mathscal{10*10^2}">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%89%E6%9E%81%E7%AE%A1.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%89%E6%9E%81%E7%AE%A1%E4%BD%BF%E7%94%A8%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%89%E6%9E%81%E7%AE%A13%E7%A7%8D%E7%8A%B6%E6%80%81.jpg">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \cal{B}">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%89%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/74HC245%E7%94%B5%E8%B7%AF%E5%9B%BE.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E5%8D%95%E7%89%87%E6%9C%BA%E7%94%B5%E8%B7%AF.jpg">
+<meta property="og:updated_time" content="2016-11-16T14:08:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="硬件基础知识">
+<meta name="twitter:description" content="EMI单片机编写程序是根据硬件电路图编写.
+电容隔离直流通交流">
+
+    
+    <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/batman.jpg" alt="take that的博客" title="take that的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
+				<h2 class="blog-motto">热  爱  生  活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|tags</a></li>
+					
+						<li><a href="/categories">分类|categories</a></li>
+					
+						<li><a href="/about">关于|About</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 12341059951958788027 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/07/23/硬件基础知识/" title="硬件基础知识" itemprop="url">硬件基础知识</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-07-23T01:59:32.000Z" itemprop="datePublished"> 发表于 2016-07-23</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EMI"><span class="toc-number">1.</span> <span class="toc-text">EMI</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三极管"><span class="toc-number">2.</span> <span class="toc-text">三极管</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#74HC245电路"><span class="toc-number">3.</span> <span class="toc-text">74HC245电路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#74H138"><span class="toc-number">4.</span> <span class="toc-text">74H138</span></a></li></ol>
+		
+		</div>
+		
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E9%BB%91%E9%B9%B0%E5%9D%A0%E8%90%BD.jpg" alt="黑鹰坠落" title="黑鹰坠落"></p>
+<h1 id="EMI"><a href="#EMI" class="headerlink" title="EMI"></a>EMI</h1><p>单片机编写程序是根据硬件电路图编写.</p>
+<p>电容隔离直流通交流</p>
+<a id="more"></a>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/KST-51-USB%E6%8E%A5%E5%8F%A3%E7%94%B5%E8%B7%AF%E5%9B%BE+%E7%94%B5%E6%BA%90%E5%BC%80%E5%85%B3%E4%BE%9B%E7%94%B5%E5%9B%BE.jpg" alt=""><br>C16和C19都是几百微法，是非常大的电容。属于低频滤波<br>C10是0.1微法的小电容，属于高频滤波。</p>
+<p><strong>低频滤波</strong>           <em>C16、C19</em></p>
+<ol>
+<li>钽电容、电解电容、陶瓷电容<blockquote>
+<p>起缓冲，保护作用</p>
+<blockquote>
+<p>USB供电先进入电容，然后通过电容<em>C16</em>在输送到后级电路,起到对电路保护作用<br>对后级电压和电流起稳定作用。</p>
+<blockquote>
+<blockquote>
+<ol>
+<li>考虑耐压值，高于供电系统的1.5倍以上。 2. 容值：根据经验选择。3. 类型<em>吕电容表现教差，成本低</em></li>
+</ol>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E7%94%B5%E5%AE%B9%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="电容示意图" title="电容示意图"></p>
+<hr>
+<p><strong>高频滤波电容</strong><br>静电、快速瞬间脉冲、浪涌属于高频率。用于出去高频干扰，通常在电源、每个IC电源正极负极出现的小微法电容。<br>在电源附近通常用104电容来取出高频干扰。&nbsp; <img src="http://www.forkosh.com/mathtex.cgi? \mathscal{10*10^4pf}"> 也是100纳法</p>
+<blockquote>
+<p>1K电阻也是这种命名方法：102  &nbsp;   即: <img src="http://www.forkosh.com/mathtex.cgi?  \mathscal{10*10^2}"></p>
+<blockquote>
+<p>1法拉(F)= 1000毫法(mF)=1000000微法(μF)<br>1微法(μF)= 1000纳法(nF)= 1000000皮法(pF)。</p>
+</blockquote>
+</blockquote>
+<p><strong>知识背景</strong></p>
+<ol>
+<li>电磁干扰<em>EMI</em></li>
+</ol>
+<ul>
+<li>静电放电<em>ESD</em>干扰<blockquote>
+<p>冬天空气比较干燥，可以通过铁柜等金属体进行放电，这就是静电放电干扰</p>
+<blockquote>
+<p>人能感受到的静电，这个静电已经超过3千伏；如果肉眼能看到火花，可能是5千伏以上的静电.</p>
+<blockquote>
+<p>这个电压是非常高的.但是为什么对人体没有危害呢？是因为虽然它的电压非常高，但是它的能量非常小，但对于电路板上的元器件伤害就非常大。所以设计电路要充分考虑这个问题。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>快速瞬间脉冲群<em>EFT</em></p>
+<blockquote>
+<p>使用电钻的时候听收音机、看电视有杂音。这就是快速瞬间脉冲群<em>EFT</em>的效果</p>
+</blockquote>
+</li>
+<li><p>热拔插浪涌<em>Surge</em></p>
+<blockquote>
+<p>老式电脑性能不好，热拔插U盘等外围设备会出现蓝屏或重启现象，这就是热拔插浪涌效果。</p>
+<blockquote>
+<p>插上U盘或者移动硬盘，电脑瞬间会产生一个电源切换，给我们的U盘或者移动硬盘供电，这个瞬间切换如果电路处理不好就会造成电脑蓝屏或重启</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h1 id="三极管"><a href="#三极管" class="headerlink" title="三极管"></a>三极管</h1><p>三极管是数模电路中经常用到的期间。<br>按材质分为:<strong>硅管</strong>、  <em>（使用较多0.7V）</em>  &nbsp;<strong>锗管</strong> </p>
+<blockquote>
+<p>仅仅是导通的电压值不同,其用法原理一致。</p>
+</blockquote>
+<p>按结构分为<strong>PNP</strong> 、<strong>NPN</strong></p>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%89%E6%9E%81%E7%AE%A1.jpg" alt="三极管" title="三极管"></p>
+<p>左侧横向为<strong>基极</strong>也是<strong>b级</strong></p>
+<p>箭头的指向一头是b级，另外一头是发射极<em>e极</em>剩下的则是集电极<em>c级</em></p>
+<p><strong>箭头朝内PNP，导通电压顺箭头过，电压导通电流控制</strong></p>
+<blockquote>
+<p>箭头的出发点朝内则是PNP否则则是NPN</p>
+<blockquote>
+<p>导通电压顺箭头过，9012的起始点是<em>发射点</em>比结束点<em>基极</em>高0.7V<em>硅管的值</em> 三极管便导通。发射极和基极是控制部分，<em>箭头之间</em>被控制部分则是发射极和集电极之间。只要顺箭头有0.7V的压降，就可以保证发射极和集电极可以导通。</p>
+</blockquote>
+</blockquote>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%89%E6%9E%81%E7%AE%A1%E4%BD%BF%E7%94%A8%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="三极管使用示意图" title="三极管使用示意图"></p>
+<blockquote>
+<p>用p1.0去控制了三极管导通以控制LED灯的亮灭，</p>
+<blockquote>
+<p>当p1.0输出高电平5v，控制端<em>箭头部分</em>没有导通,被控制部分则不会导通。LED是灭的状态。</p>
+<blockquote>
+<p>当p1.0输出一个低电平，则控制端则这一支路则导通。三极管发射极和基极电压是0.7V另外的4.3V在R47这个电阻上。发射极和集电极之间的电压非常低在0.1-0.2v之间可以初略认为是0V。R41为限流电阻。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%89%E6%9E%81%E7%AE%A13%E7%A7%8D%E7%8A%B6%E6%80%81.jpg" alt="" title="三极管3种状态"></p>
+<p>截止和饱和在数字电路中经常用到。</p>
+<blockquote>
+<p>截止：三极管不导通</p>
+<blockquote>
+<p>饱和：三极管导通</p>
+<blockquote>
+<p>放大：是导通的另外一种状态。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>可以通过右侧支路计算左侧电路电流满足的必要条件：<br>当右侧支路导通时：R41为1K，是3V，3mA，LED2位2V。3mA除以  <img src="http://www.forkosh.com/mathtex.cgi? \cal{B}">&nbsp; 则是30μA。也就是说基极的电流必须要大于30μA。R47有4.3V电压，4.3V除以30μA可以计算出R47的电阻最大值为143K。也就是说R47小于143K即可。</p>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%89%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8.jpg" alt="三极管应用" title="三极管应用"><br>数字电路主要有控制应用和驱动应用。</p>
+<ol>
+<li><p>控制应用<br> 通过IO口控制三极管是否导通，来控制LED灯</p>
+<p>控制电压转换的作用:单片机工作电压为5V，如果外接更高电压的电路会烧坏单片机。图3-8:IO口输出高电平三极管导通，发射极和集电极电压约等于0，out引脚输出0V。如果IO口输出一个低电平三极管则会截止，OUT口如果没有接地的话则是12V</p>
+</li>
+</ol>
+<ol>
+<li>驱动应用<br>单片机起控制作用。驱动通常指功率输出能力。功率等于电压乘以电流  &nbsp;P=UI  &nbsp;因为电压通常确定了，有的时候驱动也指电流输出能力。</li>
+</ol>
+<h1 id="74HC245电路"><a href="#74HC245电路" class="headerlink" title="74HC245电路"></a>74HC245电路</h1><p>所有的74系列器件都是常用数字逻辑器件</p>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/74HC245%E7%94%B5%E8%B7%AF%E5%9B%BE.jpg" alt="74HC245电路图" title="74HC245电路图"></p>
+<p>电路设计要受单片机50mA的电流限制，上图中的LEDS6输入一个高电平，三极管导通后LED2-LED9只要他们的左侧是低电平，LED灯都导通，电流则是<em>3V /330Ω ≈</em> 9mA,8条支路则是72mA,如果直接输入到单片机则会损坏单片机。 &nbsp;  <em>远大于50mA</em>  &nbsp;</p>
+<p>74HC245相当于电流缓冲器件。<em>是双向的缓冲器</em></p>
+<blockquote>
+<p>有20个引脚，逻辑上是输入输出<br><em>20</em>和 <em>10</em>引脚是电源的正极和负极。</p>
+</blockquote>
+<p><em>19</em>引脚是OE引脚，是<strong>使能</strong>引脚，</p>
+<blockquote>
+<p>OE上面有一条横向，意思是<strong>负逻辑</strong>也就是低电平有效，19脚接低电平，使能才能让74HC245工作。</p>
+<blockquote>
+<p>使能引脚接入IO口：就是控制器件可以让它起作用也可以让它不起作用。直接接地则是一直起作用的状态。</p>
+</blockquote>
+</blockquote>
+<p><em>1</em>脚接的是  <em>DIR</em>，是方向引脚。</p>
+<blockquote>
+<p>如果接正5V高电平:B1-B8与A1-A8一一对应<em>A输出高电平，B也输出高电平</em>。也可以让DIR接低电平:B作为输入，A作为输出<em>B是高电平，A就是高电平</em></p>
+</blockquote>
+<p> DB_0与单片机上的P0口接在一起。<br> <img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%8D%95%E7%89%87%E6%9C%BA%E7%94%B5%E8%B7%AF.jpg" alt=""><br>DB_0~7输入全低电平，每个LED都会点亮，产生8路的72mA电流，通过7425电路直接流入GND，它和245形成回路。而单片机的IO口P0仅仅是控制了245</p>
+<blockquote>
+<p>245手册说明70mA通过是没有问题</p>
+</blockquote>
+<h1 id="74H138"><a href="#74H138" class="headerlink" title="74H138"></a>74H138</h1><p>在实际单片机电路设计中io口是有限的</p>
+  
+	</div>
+
+	<!-- css -->
+	<style type="text/css">
+	    .center {
+	        text-align: center;
+	    }
+	    .hidden {
+	        display: none;
+	    }
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+			_background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+
+			<!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+			     因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+	    <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+			
+		
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+    
+	<div id="donate_guide" class="donate_bar center hidden">
+        <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+	    
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="微信打赏 Donate" height="190px" width="auto"/>
+		</a>
+        
+        &nbsp;&nbsp;
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="支付宝打赏 Donate" height="190px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function() {
+			$('#donate_board').addClass('hidden');
+	    $('#donate_guide').removeClass('hidden');
+		}
+
+		function donate_on_web(){
+			$('#donate').submit();
+        }
+
+		var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+		}
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/嵌入式/">嵌入式</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/51/">51</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.vivatakethat.com/2016/07/23/硬件基础知识/" data-title="硬件基础知识 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/07/27/Linux系统编程-代码运行返回信息/" title="Linux系统编程-代码运行返回信息">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Linux系统编程-代码运行返回信息</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/07/21/proteus元器件memo/"  title="proteus小记">
+ <strong>下一篇：</strong><br/> 
+ <span>proteus小记
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/07/23/硬件基础知识/" data-title="硬件基础知识" data-url="http://www.vivatakethat.com/2016/07/23/硬件基础知识/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EMI"><span class="toc-number">1.</span> <span class="toc-text">EMI</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三极管"><span class="toc-number">2.</span> <span class="toc-text">三极管</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#74HC245电路"><span class="toc-number">3.</span> <span class="toc-text">74HC245电路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#74H138"><span class="toc-number">4.</span> <span class="toc-text">74H138</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="vivatakethat" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Coursera/" title="Coursera">Coursera<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Web/" title="Web">Web<sup>2</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/git/" title="git">git<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/memo/" title="memo">memo<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/云计算/" title="云计算">云计算<sup>10</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程/" title="工程">工程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/英语/" title="英语">英语<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English/" title="English">English<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com/" target="_blank" title="一个面向程序员交流分享的新一代社区">Stack overflow</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://vivatakethat.com" target="_blank" title="takethat&#39;s Blog">takethat&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.fiochen.me" target="_blank" title=" 甜甜哥哥的博客">思华的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/example440982" target="_blank" title="轻微的博客">轻微的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <p class="asidetitle">热评文章</p>
+<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vivatakethat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer>
+<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Take That in here <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/vivatakethat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:vivatakethat@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015.4-2017
+		
+		<a href="/about" target="_blank" title="takethat">takethat</a>
+		
+
+		</p>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Xd__7-Q-nUc6axwJDfV5','2.0.0');
+</script>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_pv">
+      Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+    You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    $('#toc.toc-aside').css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"vivatakethat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6f10d7c2f9fab5591ab7b7c322e0a114";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  </body>
+</html>
+

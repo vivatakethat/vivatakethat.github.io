@@ -1,0 +1,1136 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>IaaS基础架设 | take that的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="takethat">
+    
+
+    
+	<meta name="keywords" content="嵌入式, C++, C, Linux">
+    <meta name="description" content="位置：信息学院
+
+2016-4-9 周六; 
+
+
+
+PaaS(双节点)基础架设">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IaaS基础架设">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/04/09/IaaS基础架设/index.html">
+<meta property="og:site_name" content="take that的博客">
+<meta property="og:description" content="位置：信息学院
+
+2016-4-9 周六; 
+
+
+
+PaaS(双节点)基础架设">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/IaaS%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/RD-630%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%AE%9E%E7%85%A7.jpg">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E6%8E%A5%E7%BA%BF%E5%9B%BE.jpg">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/compute%E5%88%86%E5%8C%BA%E5%AE%9E%E4%BE%8B%E5%9B%BE.jpg">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/%E6%9C%AC%E5%9C%B0%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE%E5%9B%BE.png">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/glacne%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F.png">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/Dashboard%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9.png">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/Dashboard%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B92.png">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/Dashboard%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B93.png">
+<meta property="og:updated_time" content="2016-11-16T14:12:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IaaS基础架设">
+<meta name="twitter:description" content="位置：信息学院
+
+2016-4-9 周六; 
+
+
+
+PaaS(双节点)基础架设">
+
+    
+    <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/batman.jpg" alt="take that的博客" title="take that的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
+				<h2 class="blog-motto">热  爱  生  活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|tags</a></li>
+					
+						<li><a href="/categories">分类|categories</a></li>
+					
+						<li><a href="/about">关于|About</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 12341059951958788027 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/04/09/IaaS基础架设/" title="IaaS基础架设" itemprop="url">IaaS基础架设</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-04-09T07:32:32.000Z" itemprop="datePublished"> 发表于 2016-04-09</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PaaS-双节点-基础架设"><span class="toc-number">1.</span> <span class="toc-text">PaaS(双节点)基础架设</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预备工作"><span class="toc-number">1.1.</span> <span class="toc-text">预备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#硬件准备"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">硬件准备</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统安装CentOS"><span class="toc-number">1.2.</span> <span class="toc-text">系统安装CentOS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置网络"><span class="toc-number">1.3.</span> <span class="toc-text">配置网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CentOS基本配置"><span class="toc-number">1.4.</span> <span class="toc-text">CentOS基本配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置本地源"><span class="toc-number">1.5.</span> <span class="toc-text">配置本地源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本服务安装"><span class="toc-number">1.6.</span> <span class="toc-text">基本服务安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改脚本"><span class="toc-number">1.7.</span> <span class="toc-text">修改脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装服务"><span class="toc-number">1.8.</span> <span class="toc-text">安装服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#controller上安装"><span class="toc-number">1.8.1.</span> <span class="toc-text">controller上安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#双节点均要安装"><span class="toc-number">1.9.</span> <span class="toc-text">双节点均要安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云服务网络配置"><span class="toc-number">1.10.</span> <span class="toc-text">云服务网络配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">1.11.</span> <span class="toc-text">注意事项</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/IaaS%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg" alt="航母战斗群" title="航母战斗群"></p>
+<blockquote>
+<p>位置：信息学院</p>
+<blockquote>
+<p>2016-4-9 周六; </p>
+</blockquote>
+</blockquote>
+<hr>
+<h1 id="PaaS-双节点-基础架设"><a href="#PaaS-双节点-基础架设" class="headerlink" title="PaaS(双节点)基础架设"></a>PaaS(双节点)基础架设</h1><a id="more"></a>
+<h2 id="预备工作"><a href="#预备工作" class="headerlink" title="预备工作"></a>预备工作</h2><h4 id="硬件准备"><a href="#硬件准备" class="headerlink" title="硬件准备"></a>硬件准备</h4><p><img src="http://7xsic8.com2.z0.glb.clouddn.com/RD-630%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%AE%9E%E7%85%A7.jpg" alt="ThinkServer-RD630" title="ThinkServer-RD630以及交换机"></p>
+<ul>
+<li>服务器ThinkServer-RD630(X2)<br><strong>controller节点(左一)</strong><blockquote>
+<p>Intel(R) Xeon(R) CPU E5-2609 2.40GHz</p>
+<p>8G内存<br>CentOS release 6.5(Final)  X86_64  选择Minimal最小化安装</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>compute节点(右一)</strong></p>
+<blockquote>
+<p>Intel(R) Xeon(R) CPU E5-2609 2.40GHz</p>
+<p>24G内存</p>
+<p>CentOS release 6.5(Final)  X86_64  选择Minimal最小化安装</p>
+</blockquote>
+<p><br></p>
+<p><strong>compute节点(右一)</strong></p>
+<ul>
+<li>H3C交换机<br><strong>交换机</strong><blockquote>
+<p>型号：H3C S5120-28C-EI</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<ul>
+<li>接线工作：<br><img src="http://7xsic8.com2.z0.glb.clouddn.com/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E6%8E%A5%E7%BA%BF%E5%9B%BE.jpg" alt="交换机接线图" title="交换机接线图"></li>
+</ul>
+<blockquote>
+<p>eth0为外网，eth1设为外网；</p>
+<p>V1-V12为内网，与物理网卡标记2(eth1)相连；</p>
+<p>V13-24为外网，与物理网卡标记1(eth0)相连</p>
+</blockquote>
+<hr>
+<h2 id="系统安装CentOS"><a href="#系统安装CentOS" class="headerlink" title="系统安装CentOS"></a>系统安装CentOS</h2><p>+操作系统均选择Minimal</p>
+<ul>
+<li>controller无需分区使用整个硬盘</li>
+<li>compute需要预留2个空分区<blockquote>
+<p>预留2个空分区用来存储cinder、swift</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/compute%E5%88%86%E5%8C%BA%E5%AE%9E%E4%BE%8B%E5%9B%BE.jpg" alt="compute分区" title="compute分区"></p>
+<ul>
+<li>PC网卡配置</li>
+</ul>
+<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/%E6%9C%AC%E5%9C%B0%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE%E5%9B%BE.png" alt="PC网卡配置" title="PC网卡配置"></p>
+<blockquote>
+<p>把其他不相关网卡禁用，否则干扰实验。</p>
+</blockquote>
+<hr>
+<h2 id="配置网络"><a href="#配置网络" class="headerlink" title="配置网络"></a>配置网络</h2><ul>
+<li>Controller网卡<blockquote>
+<p>eth0为外网 eth1为内网<br><code>vi /etc/sysconfig/network-scripts/ifcfg-eth0</code></p>
+</blockquote>
+</li>
+</ul>
+<p>配置：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=eth0</span><br><span class="line">HWADDR=F8:<span class="number">0F</span>:<span class="number">41</span>:F4:B4:FA</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">UUID=feee8a77-<span class="number">8</span>ae0-<span class="number">4459</span>-<span class="number">9f</span>58-<span class="number">561</span>ea355ebd7</span><br><span class="line">ONBOOT=yes</span><br><span class="line">NM_CONTROLLED=no</span><br><span class="line">BOOTPROTO=<span class="keyword">static</span></span><br><span class="line">IPADDR=<span class="number">192.168</span><span class="number">.0</span><span class="number">.100</span></span><br><span class="line">NETMASK=<span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br><span class="line">GATEWAY=<span class="number">192.168</span><span class="number">.0</span><span class="number">.1</span></span><br></pre></td></tr></table></figure></p>
+<p><code>vi /etc/sysconfig/network-scripts/ifcfg-eth1</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=eth1</span><br><span class="line">HWADDR=F8:<span class="number">0F</span>:<span class="number">41</span>:F4:B4:FB</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">UUID=<span class="number">902f</span>dce4-<span class="number">5102</span>-<span class="number">438e-8554</span>-<span class="number">44</span>cf0be012ab</span><br><span class="line">ONBOOT=yes</span><br><span class="line">NM_CONTROLLED=no</span><br><span class="line">BOOTPROTO=<span class="keyword">static</span></span><br><span class="line">IPADDR=<span class="number">10.0</span><span class="number">.0</span><span class="number">.100</span></span><br><span class="line">NETMASK=<span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
+<p> 重启网卡服务:<br> <code>service network restart</code></p>
+<ul>
+<li>compute网卡<br><code>vi /etc/sysconfig/network-scripts/ifcfg-eth0</code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=eth0</span><br><span class="line">HWADDR=F8:<span class="number">0F</span>:<span class="number">41</span>:F4:B4:F7</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">UUID=fd6de9a3-<span class="number">4</span>ae5-<span class="number">4f</span>61-a709-fcebdb604bef</span><br><span class="line">ONBOOT=yes</span><br><span class="line">NM_CONTROLLED=no</span><br><span class="line">BOOTPROTO=<span class="keyword">static</span></span><br><span class="line">IPADDR=<span class="number">192.168</span><span class="number">.0</span><span class="number">.200</span></span><br><span class="line">GATEWAY=<span class="number">192.168</span><span class="number">.0</span><span class="number">.2</span></span><br><span class="line">NETMASK=<span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>vi /etc/sysconfig/network-scripts/ifcfg-eth1</code><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=eth1</span><br><span class="line">HWADDR=F8:<span class="number">0F</span>:<span class="number">41</span>:F4:B4:F8</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">UUID=<span class="number">782</span>d0804-<span class="number">34</span>ce-<span class="number">4</span>d3d-ac4f-<span class="number">5</span>c0451930f97</span><br><span class="line">ONBOOT=yes</span><br><span class="line">NM_CONTROLLED=no</span><br><span class="line">BOOTPROTO=<span class="keyword">static</span></span><br><span class="line">IPADDR=<span class="number">10.0</span><span class="number">.0</span><span class="number">.200</span></span><br><span class="line">NETMASK=<span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br></pre></td></tr></table></figure></p>
+<p> 重启网卡服务:<br> <code>service network restart</code></p>
+<hr>
+<p><strong>使用SecureFX将<code>CentOS-6.5x86_64-bin.iso</code>、<code>IaaS-v1.3.iso</code>、<code>Paas-v1.3.iso</code>、<code>脚本</code>传入controller节点上</strong></p>
+<h2 id="CentOS基本配置"><a href="#CentOS基本配置" class="headerlink" title="CentOS基本配置"></a>CentOS基本配置</h2><p><strong>1. hostname、增加内网地址</strong></p>
+<p><code>vi /etc/sysconfig/network</code></p>
+<blockquote>
+<p>controller节点主机名改为controller</p>
+<p>compute节点主机名改为compute</p>
+</blockquote>
+<p><strong>2. 添加内网地址：</strong><br><strong>compute、controller都要添加</strong><br><code>vi /etc/hosts</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">::1         localhost localhost.localdomain localhost6 localhost6.localdomain6&#10;10.0.0.100  controller &#10;10.0.0.200  compute</span><br></pre></td></tr></table></figure>
+<p><strong>3. 关闭防火墙</strong></p>
+<p><strong>controller、compute都要操作</strong><br><code>service iptables stop</code><br><code>setenforce  0</code><br><strong> 修改selinux</strong><br><code>vi  /etc/selinux/config</code></p>
+<blockquote>
+<p>SELINUX=permissive</p>
+</blockquote>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="constant">@controller</span> ~]<span class="preprocessor"># setenforce 0</span></span><br><span class="line">[root<span class="constant">@controller</span> ~]<span class="preprocessor"># getenforce</span></span><br><span class="line"> Permissive</span><br></pre></td></tr></table></figure>
+<h2 id="配置本地源"><a href="#配置本地源" class="headerlink" title="配置本地源"></a>配置本地源</h2><ol>
+<li><p><strong>创建挂在文件夹</strong></p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="constant">@controller</span> ~]<span class="preprocessor"># mkdir /opt/centos</span></span><br><span class="line">[root<span class="constant">@controller</span> ~]<span class="preprocessor"># mkdir /opt/icehouse</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>删除自带源</strong></p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="property">@controller</span> ~]<span class="comment"># rm -rfv /etc/yum.repos.d/*</span></span><br><span class="line">removed `<span class="javascript">/etc/yum.repos.d/CentOS-Base.repo<span class="string">'</span><br><span class="line">removed </span></span>`/etc/yum.repos.d/CentOS-Debuginfo.repo<span class="string">'</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">removed `/etc/yum.repos.d/CentOS-Media.repo'</span></span><br><span class="line">removed `<span class="javascript"><span class="string">/etc/yum.repos.d/CentOS-Vault.repo'</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置源本地：</strong></p>
+</li>
+</ol>
+<p>[root@controller ~]#<code>vi /etc/yum.repos.d/local.repo</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[centos]</span></span><br><span class="line"><span class="setting">name=<span class="value">centos</span></span></span><br><span class="line"><span class="setting">baseurl=<span class="value">file:///opt/centos/</span></span></span><br><span class="line"><span class="setting">enabled=<span class="value"><span class="number">1</span></span></span></span><br><span class="line"><span class="setting">gpgcheck=<span class="value"><span class="number">0</span></span></span></span><br><span class="line"><span class="title">[icehouse]</span></span><br><span class="line"><span class="setting">name=<span class="value">icehouse</span></span></span><br><span class="line"><span class="setting">baseurl=<span class="value">file:///opt/icehouse/iaas-repo/</span></span></span><br><span class="line"><span class="setting">enabled=<span class="value"><span class="number">1</span></span></span></span><br><span class="line"><span class="setting">gpgcheck=<span class="value"><span class="number">0</span></span></span></span><br></pre></td></tr></table></figure>
+<p><strong>配置compute源</strong></p>
+<p>[root@compute yum.repos.d]# <code>rm -rf /etc/yum.repos.d/*</code><br>[root@compute yum.repos.d]# <code>vi /etc/yum.repos.d/local.repo</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[centos]&#10;name=centos&#10;baseurl=ftp://10.0.0.100/centos/&#10;gpgcheck=0&#10;enabled=1&#10;[icehouse]&#10;name=icehouse&#10;baseurl=ftp://10.0.0.100/icehouse/iaas-repo/&#10;gpgcheck=0&#10;enabled=1</span><br></pre></td></tr></table></figure>
+<ol>
+<li><strong>挂载镜像</strong></li>
+</ol>
+<p>[root@controller ~]# <code>mount -o loop CentOS-6.5-x86_64-bin.iso /opt/centos/</code><br>[root@controller ~]# <code>mount -o loop XianDian-iaas-v1.2.iso /opt/icehouse/</code></p>
+<ol>
+<li><strong>更新controller源</strong></li>
+</ol>
+<p>[root@controller ~]# <code>yum clean all</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Loaded plugins: fastestmirror&#10;Cleaning repos: centos icehouse&#10;Cleaning up Everything</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果yum list失败，请检查controller节点上的vsftpd状态，并<code>关闭</code>防火墙。<br>如果防火墙关闭，vsftpd在运行，yum.repo.d文件配置没错提示<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Error <span class="number">14</span>]PYCURL ERROR <span class="number">9</span>-<span class="string">"server denied you to change to the given directory"</span></span><br><span class="line">Trying other mirror.</span><br></pre></td></tr></table></figure></p>
+<p>setenfoce 0     将镜像所在节点的selinux零时设置为permissive</p>
+</blockquote>
+<p><strong>再次关闭防火墙</strong></p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[root@controller ~]</span># service  iptables  stop</span><br><span class="line">iptables: Setting chains to policy ACCEPT: filter <span class="string">[  OK  ]</span></span><br><span class="line">iptables: Flushing firewall rules: <span class="string">[  OK  ]</span></span><br><span class="line">iptables: Unloading modules: <span class="string">[  OK  ]</span></span><br><span class="line"><span class="string">[root@controller ~]</span># getenforce</span><br><span class="line">Permissive</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="基本服务安装"><a href="#基本服务安装" class="headerlink" title="基本服务安装"></a>基本服务安装</h2><p><code>yum list</code></p>
+<p><strong>安装必要组件</strong><br>controller下</p>
+<p><code>[root@controller ~]# yum  install  ntp  vsftpd  qpid-cpp-server  openssh-clients</code></p>
+<blockquote>
+<p>scp命令在openssh-clients这个包里</p>
+</blockquote>
+<p><code>[root@controller ~]# vi /etc/vsftpd/vsftpd.conf</code><br><strong>在末尾添加</strong></p>
+<blockquote>
+<p>anon_root=/opt</p>
+</blockquote>
+<p><code>[root@controller ~]# service vsftpd restart</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Shutting down vsftpd: [  OK  ]&#10;Starting vsftpd for vsftpd: [  OK  ]</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>再更新compute   Yum源</strong><br><strong>在compute:安装<code>ntp</code> 、 <code>openssh-clients</code></strong></p>
+<blockquote>
+<p>yum –y install  ntp  openssh-clients<br><strong>配置ntp</strong></p>
+</blockquote>
+<p><code>[root@controller ~]# vi /etc/ntp.conf</code></p>
+<blockquote>
+<p>server 127.127.1.0</p>
+<p>fudge 127.127.1.0      &nbsp;  &nbsp; &nbsp;       stratum 10</p>
+</blockquote>
+<p><code>[root@controller ~]# service ntpd restart</code></p>
+<blockquote>
+<p>Shutting down ntpd: [  OK  ]</p>
+<p>Starting ntpd: [  OK  ]</p>
+</blockquote>
+<p><code>[root@controller ~]# chkconfig  ntpd  on</code><br><strong>修改/etc/qpidd.cinf</strong><br><code>[root@controller ~]# vi /etc/qpidd.conf</code></p>
+<blockquote>
+<p>auth=no</p>
+</blockquote>
+<p><strong>重启qpidd</strong></p>
+<blockquote>
+<p>service qpidd restart</p>
+</blockquote>
+<p><strong>在compute下安装</strong><br><code>[root@compute etc]# yum install  -y  ntp  openssh-clients</code></p>
+<p><strong>comput下同步</strong><br><code>ntpdate  controller</code></p>
+<blockquote>
+<p>(如果不能同步，请尝试关闭controller的防火墙)</p>
+</blockquote>
+<hr>
+<h2 id="修改脚本"><a href="#修改脚本" class="headerlink" title="修改脚本"></a>修改脚本</h2><p><strong>进入脚本件夹内</strong><br>controller:</p>
+<blockquote>
+<p><code>chmod +x *.sh</code> 提权</p>
+<p><code>vi iaas-install-mysql.sh</code>看IP是否要改</p>
+</blockquote>
+<p><strong>根据实际情况修改脚本IP</strong><br><strong>将脚本修该为实际内网IP，网卡设为外网</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@controller scripts]# sed  -i  &#39;s,192.168.100.10,10.0.0.100,g&#39;  *.sh  &#21518;&#38754;&#26367;&#25442;&#21069;&#38754;&#30340;&#65292;controller  &#20869;&#32593;IP&#65307;&#10;[root@controller scripts]# sed  -i  &#39;s,192.168.100.20,10.0.0.200,g&#39;  *.sh  &#21518;&#38754;&#26367;&#25442;&#21069;&#38754;&#65292; compute  &#20869;&#32593;IP&#65307;&#10;sed  -i  &#8216;s,eth1,eth0,g&#8217;  *.sh             &#23558;&#22806;&#32593;&#32593;&#21345;&#25512;&#19978;&#21435;&#65292;eth0&#20026;&#22806;&#32593; eth1&#20869;&#32593; (PS:&#33050;&#26412;&#20462;&#25913;&#21518;&#24212;&#35813;&#26159;&#20869;&#32593;IP&#65292;&#22806;&#32593;&#32593;&#21345;&#65307;)</span><br></pre></td></tr></table></figure>
+<p> <strong>修改后给compute传一份 </strong><br>在compute下装 <code>yum  –install  openssh-clients</code></p>
+<blockquote>
+<p><code>scp  -r  脚本文件夹  compute:/root/</code></p>
+</blockquote>
+<hr>
+<h2 id="安装服务"><a href="#安装服务" class="headerlink" title="安装服务"></a>安装服务</h2><h3 id="controller上安装"><a href="#controller上安装" class="headerlink" title="controller上安装"></a>controller上安装</h3><ol>
+<li>安装Mysql<br><code>./iaas-install-mysql.sh</code></li>
+</ol>
+<hr>
+<ol>
+<li>安装Keystone<br><code>./iaas-install-keystone.sh</code><blockquote>
+<p>(漫长等待….)<br><strong> 执行yum  upgrade</strong></p>
+</blockquote>
+</li>
+</ol>
+<p>写入环境变量 <code>source  /etc/keystone/admin-openrc.sh</code></p>
+<blockquote>
+<p>如果没有执行会出现Expecting an auth URL via either –os-auth-url or env[OS_AUTH_URL]</p>
+<p>仅当前窗口有效,执行后没有任何提示</p>
+</blockquote>
+<p><strong>检查</strong></p>
+<blockquote>
+<p><code>keystone user-list</code></p>
+<p><code>keystone role-list</code></p>
+<p><code>keystone service-list</code></p>
+</blockquote>
+<hr>
+<ol>
+<li>安装Glance<br><code>./iaas-install-glance.sh</code></li>
+</ol>
+<blockquote>
+<p><code>source  /etc/keystone/admin-openrc.sh</code></p>
+<p>检查镜像<code>glance index</code></p>
+</blockquote>
+<p><strong>创建镜像：</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">glance image-create  --name   &#8216;centos6.5&#8217;  --disk-format  qcow2  --container-format bare  --is-public   true  --progress  &#60;  /opt/icehouse/images/ce~.qcow2</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/glacne%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F.png" alt="创建镜像" title="创建镜像"></p>
+<blockquote>
+<p>再次检查镜像<code>glance index</code></p>
+</blockquote>
+<hr>
+<h2 id="双节点均要安装"><a href="#双节点均要安装" class="headerlink" title="双节点均要安装"></a>双节点均要安装</h2><ol>
+<li>安装Nova<blockquote>
+<p>先在<code>controller</code>上安装,<code>comput</code>也要安装</p>
+</blockquote>
+</li>
+</ol>
+<p><code>./iaas-install-nova-controller.sh</code></p>
+<blockquote>
+<p><code>source  /etc/keystone/admin-openrc.sh</code></p>
+<p>安装完毕 检查 <code>nova service-list</code></p>
+<p>compute安装完成后controller中会增加nova-compute</p>
+<p>检查防火墙是否关闭(stop)</p>
+<p><code>/etc/init.d/qpidd status</code>, 需要start</p>
+<p>如果qpidd 是stop状态则需要重启 <code>/etc/init.d/qpidd restart</code>服务)</p>
+<p>在controller执行<code>nova  service-list</code>看服务状态</p>
+</blockquote>
+<hr>
+<ol>
+<li>安装neutron<blockquote>
+<p>先在<code>controller</code>上安装,<code>comput</code>也要安装</p>
+</blockquote>
+</li>
+</ol>
+<p><code>./iaas-install-neutron-controller.sh</code></p>
+<p><br></p>
+<blockquote>
+<p>先在compute执行<strong>yum  upgrade</strong></p>
+</blockquote>
+<p><br><br>再安装<br><code>./iaas-install-neutron-compute.sh</code></p>
+<blockquote>
+<p>在controller查看服务状态<code>neutron agent-list</code></p>
+</blockquote>
+<hr>
+<h2 id="云服务网络配置"><a href="#云服务网络配置" class="headerlink" title="云服务网络配置"></a>云服务网络配置</h2><p><strong>controller</strong>进行</p>
+<ol>
+<li><strong>创建网络</strong><blockquote>
+<p>查看 租户ID<code>keystone tenant-list</code></p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">neutron net-create   --tenant-id  735bdf1e1af24844991e05822271e770  sharednet1  --shared  --provider:network_type   flat   --provider:physical_network  physnet1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意tenant-id 添加<code>server</code>的ID</p>
+<p>检查1.<code>neutron agent-list</code></p>
+<p>2.<code>neutron net-list</code></p>
+<p>3.<code>neutron net-show   &#39;sharednet1&#39;</code></p>
+</blockquote>
+<ol>
+<li><strong>安装DashBoard</strong><br><code>yum   install   memcached   python-memcached   mod_wsgi   openstack-dashboard</code></li>
+</ol>
+<blockquote>
+<p>修改<code>vi  /etc/openstack-dashboard/local_settings</code> 如图：</p>
+</blockquote>
+<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/Dashboard%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9.png" alt="dashboard配置文件修改1" title="dashboard修改1"></p>
+<blockquote>
+<p>修改为<code>controller</code>内网的IP</p>
+<p>去掉CACHES注释并提至定格(<code>Python</code>语法)，如图：</p>
+</blockquote>
+<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/Dashboard%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B92.png" alt="dashboard配置文件修改该2" title="dashboard修改2"></p>
+<blockquote>
+<p>修改<code>OPENSTACK_HOST</code>主机名，如图：</p>
+</blockquote>
+<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/Dashboard%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B93.png" alt="" title="dashboard修改3"></p>
+<blockquote>
+<p>重启服务<code>/etc/init.d/httpd  restart</code><br>在网页上启动实例<code>http://10.0.0.100/dashboard</code>      (contorller内网ip)<br>创建子网subnet1，网络地址与外网地址一致</p>
+</blockquote>
+<hr>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p><strong>如果关闭服务器，在开启建议重启服务流程</strong></p>
+<ol>
+<li>source /etc/keystone/admin-openrc.sh  <blockquote>
+<p>关掉浏览器的dashboard每次都要重新souce一下</p>
+</blockquote>
+</li>
+<li>service iptables stop  <code>coontroller&amp;&amp;compue都要</code></li>
+<li>service httpd restart</li>
+<li>neutron agent-list<blockquote>
+<p>查看还有那些服务没开启，有XX字样表示该服务宕掉了，应该<code>#   /etc/init.d/neutron-??   restart</code>即可</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>其他错误1</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="link_label">15:30:03</span>][<span class="link_reference">root@controller ~</span>]# neutron agent-list</span><br><span class="line">[15:30:04]Connection to neutron failed: Maximum attempts reached</span><br></pre></td></tr></table></figure></p>
+<p>最后解决方法：重启controller节点neutron服务:<br><br><code>service  neutron-server  restart</code></p>
+<blockquote>
+<p>可以通过/var/log/neutron/下的日志查看具体原因<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[15:31:53][root@controller ~]# tail /var/log/neutron/server.log </span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron   File "/usr/lib64/python2.6/site-packages/sqlalchemy/engine/strategies.py", line 80, in connect</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron     return dialect.connect(*cargs, **cparams)</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron   File "/usr/lib64/python2.6/site-packages/sqlalchemy/engine/default.py", line 283, in connect</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron     return self.dbapi.connect(*cargs, **cparams)</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron   File "/usr/lib64/python2.6/site-packages/MySQLdb/__init__.py", line 81, in Connect</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron     return Connection(*args, **kwargs)</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron   File "/usr/lib64/python2.6/site-packages/MySQLdb/connections.py", line 187, in __init__</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron     super(Connection, self).__init__(*args, **kwargs2)</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron OperationalError: (OperationalError) (2003, "Can't connect to MySQL server on 'controller' (111)") None None</span><br><span class="line">[<span class="number">15:31:53]201</span><span class="number">6-05-11 15</span>:<span class="number">25:30.531</span> 1877 TRACE neutron </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[15:32:34][root@controller ~]# tail /var/log/neutron/metadata-agent.log </span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 10</span>:<span class="number">44:06.160 49</span>30 TRACE neutron.agent.metadata.agent   File "/usr/lib/python2.6/site-packages/neutron/openstack/common/rpc/proxy.py", line 129, in call</span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 10</span>:<span class="number">44:06.160 49</span>30 TRACE neutron.agent.metadata.agent     exc.info, real_topic, msg.get('method'))</span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 10</span>:<span class="number">44:06.160 49</span>30 TRACE neutron.agent.metadata.agent Timeout: Timeout while waiting on RPC response - topic: "q-plugin", RPC method: "report_state" info: "&lt;unknown&gt;"</span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 10</span>:<span class="number">44:06.160 49</span>30 TRACE neutron.agent.metadata.agent </span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 10</span>:<span class="number">44:06.162 49</span>30 WARNING neutron.openstack.common.loopingcall [req-78bad<span class="number">648-1c92</span>-4941-b0be-e976b95ae2ad None] task run outlasted interval by <span class="number">30.070491</span> sec</span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 11</span>:<span class="number">27:05.614</span> 18645 INFO neutron.common.config [-] Logging enabled!</span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 11</span>:<span class="number">27:05.802</span> 18645 INFO eventlet.wsgi.server [req-458fe079-e01c-476d-bff0-c8ca<span class="number">398b7164</span> None] (18645) wsgi starting up on http:///:v/</span><br><span class="line">[15:32:34]</span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 11</span>:<span class="number">27:05.818</span> 18645 INFO neutron.openstack.common.rpc.impl_qpid [req-458fe079-e01c-476d-bff0-c8ca<span class="number">398b7164</span> None] Connected to AMQP server on controller:5672</span><br><span class="line">[<span class="number">15:32:34]201</span><span class="number">6-05-11 11</span>:<span class="number">27:05.830</span> 18645 INFO neutron.openstack.common.rpc.impl_qpid [req-458fe079-e01c-476d-bff0-c8ca<span class="number">398b7164</span> None] Connected to AMQP server on controller:5672</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li>mysql无法启动<br>请尝试安全启动mysql<br><br><code>mysqld_safe</code><blockquote>
+<p>直接执行该命令即可</p>
+</blockquote>
+</li>
+</ul>
+  
+	</div>
+
+	<!-- css -->
+	<style type="text/css">
+	    .center {
+	        text-align: center;
+	    }
+	    .hidden {
+	        display: none;
+	    }
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+			_background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+
+			<!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+			     因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+	    <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+			
+		
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+    
+	<div id="donate_guide" class="donate_bar center hidden">
+        <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+	    
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="微信打赏 Donate" height="190px" width="auto"/>
+		</a>
+        
+        &nbsp;&nbsp;
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="支付宝打赏 Donate" height="190px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function() {
+			$('#donate_board').addClass('hidden');
+	    $('#donate_guide').removeClass('hidden');
+		}
+
+		function donate_on_web(){
+			$('#donate').submit();
+        }
+
+		var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+		}
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/云计算/">云计算</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/IaaS/">IaaS</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.vivatakethat.com/2016/04/09/IaaS基础架设/" data-title="IaaS基础架设 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/04/11/嵌入式Linux-c编程（零）-/" title="嵌入式Linux-c编程(零)">
+  <strong>上一篇：</strong><br/>
+  <span>
+  嵌入式Linux-c编程(零)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/04/09/PaaS基础架设/"  title="PaaS基础架设">
+ <strong>下一篇：</strong><br/> 
+ <span>PaaS基础架设
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/04/09/IaaS基础架设/" data-title="IaaS基础架设" data-url="http://www.vivatakethat.com/2016/04/09/IaaS基础架设/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PaaS-双节点-基础架设"><span class="toc-number">1.</span> <span class="toc-text">PaaS(双节点)基础架设</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预备工作"><span class="toc-number">1.1.</span> <span class="toc-text">预备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#硬件准备"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">硬件准备</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统安装CentOS"><span class="toc-number">1.2.</span> <span class="toc-text">系统安装CentOS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置网络"><span class="toc-number">1.3.</span> <span class="toc-text">配置网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CentOS基本配置"><span class="toc-number">1.4.</span> <span class="toc-text">CentOS基本配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置本地源"><span class="toc-number">1.5.</span> <span class="toc-text">配置本地源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本服务安装"><span class="toc-number">1.6.</span> <span class="toc-text">基本服务安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改脚本"><span class="toc-number">1.7.</span> <span class="toc-text">修改脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装服务"><span class="toc-number">1.8.</span> <span class="toc-text">安装服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#controller上安装"><span class="toc-number">1.8.1.</span> <span class="toc-text">controller上安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#双节点均要安装"><span class="toc-number">1.9.</span> <span class="toc-text">双节点均要安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云服务网络配置"><span class="toc-number">1.10.</span> <span class="toc-text">云服务网络配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">1.11.</span> <span class="toc-text">注意事项</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="vivatakethat" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Coursera/" title="Coursera">Coursera<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Web/" title="Web">Web<sup>2</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/git/" title="git">git<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/memo/" title="memo">memo<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/云计算/" title="云计算">云计算<sup>10</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程/" title="工程">工程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/英语/" title="英语">英语<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English/" title="English">English<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com/" target="_blank" title="一个面向程序员交流分享的新一代社区">Stack overflow</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://vivatakethat.com" target="_blank" title="takethat&#39;s Blog">takethat&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.fiochen.me" target="_blank" title=" 甜甜哥哥的博客">思华的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/example440982" target="_blank" title="轻微的博客">轻微的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <p class="asidetitle">热评文章</p>
+<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vivatakethat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer>
+<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Take That in here <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/vivatakethat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:vivatakethat@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015.4-2017
+		
+		<a href="/about" target="_blank" title="takethat">takethat</a>
+		
+
+		</p>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Xd__7-Q-nUc6axwJDfV5','2.0.0');
+</script>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_pv">
+      Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+    You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    $('#toc.toc-aside').css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"vivatakethat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6f10d7c2f9fab5591ab7b7c322e0a114";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  </body>
+</html>
+

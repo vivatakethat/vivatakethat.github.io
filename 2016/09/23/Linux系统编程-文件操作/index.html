@@ -1,0 +1,1131 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Linux系统编程-文件操作 | take that的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="takethat">
+    
+
+    
+	<meta name="keywords" content="嵌入式, C++, C, Linux">
+    <meta name="description" content="下面主要介绍文件IO操作的4个主要系统调用：open()、read()、write()、close()Linux程序中可以像文件那样使用磁盘文件、串口、打印机。也就是说Linux任何事物都可以用一个文件来操作。
+
+
+你只需要很少的函数就可以对文件和设备进行访问和控制。这些函数被称为系统调用。系统调用由UNIX(和Linux)直接提供，它们本身通向操作系统本身的接口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux系统编程-文件操作">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/09/23/Linux系统编程-文件操作/index.html">
+<meta property="og:site_name" content="take that的博客">
+<meta property="og:description" content="下面主要介绍文件IO操作的4个主要系统调用：open()、read()、write()、close()Linux程序中可以像文件那样使用磁盘文件、串口、打印机。也就是说Linux任何事物都可以用一个文件来操作。
+
+
+你只需要很少的函数就可以对文件和设备进行访问和控制。这些函数被称为系统调用。系统调用由UNIX(和Linux)直接提供，它们本身通向操作系统本身的接口">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E5%A4%A7%E4%BA%8B%E4%BB%B6%E8%B6%85%E4%BA%BA%20%E6%AF%81%E7%81%AD.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%94%A8%E6%88%B7%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E5%86%85%E6%A0%B8%E4%B8%8E%E7%A1%AC%E4%BB%B6%E5%85%B3%E7%B3%BB%E5%9B%BE.jpg">
+<meta property="og:updated_time" content="2016-09-24T03:44:15.648Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux系统编程-文件操作">
+<meta name="twitter:description" content="下面主要介绍文件IO操作的4个主要系统调用：open()、read()、write()、close()Linux程序中可以像文件那样使用磁盘文件、串口、打印机。也就是说Linux任何事物都可以用一个文件来操作。
+
+
+你只需要很少的函数就可以对文件和设备进行访问和控制。这些函数被称为系统调用。系统调用由UNIX(和Linux)直接提供，它们本身通向操作系统本身的接口">
+
+    
+    <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/batman.jpg" alt="take that的博客" title="take that的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
+				<h2 class="blog-motto">热  爱  生  活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|tags</a></li>
+					
+						<li><a href="/categories">分类|categories</a></li>
+					
+						<li><a href="/about">关于|About</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 12341059951958788027 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/23/Linux系统编程-文件操作/" title="Linux系统编程-文件操作" itemprop="url">Linux系统编程-文件操作</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-09-23T07:50:32.000Z" itemprop="datePublished"> 发表于 2016-09-23</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#open"><span class="toc-number">1.</span> <span class="toc-text">open</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#read"><span class="toc-number">2.</span> <span class="toc-text">read</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#write"><span class="toc-number">3.</span> <span class="toc-text">write</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#creat"><span class="toc-number">4.</span> <span class="toc-text">creat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#验证-amp-验证"><span class="toc-number">5.</span> <span class="toc-text">验证&验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#验证close-文件描述符的功能"><span class="toc-number">6.</span> <span class="toc-text">验证close(文件描述符的功能)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#存疑"><span class="toc-number">6.1.</span> <span class="toc-text">存疑</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%A4%A7%E4%BA%8B%E4%BB%B6%E8%B6%85%E4%BA%BA%20%E6%AF%81%E7%81%AD.jpg" alt="大事件 超人毁灭" title="大事件 超人毁灭"></p>
+<p>下面主要介绍文件IO操作的4个主要系统调用：open()、read()、write()、close()<br>Linux程序中可以像文件那样使用磁盘文件、串口、打印机。也就是说Linux任何事物都可以用一个文件来操作。</p>
+<blockquote>
+<blockquote>
+<p>你只需要很少的函数就可以对文件和设备进行访问和控制。这些函数被称为<strong>系统调用</strong>。<br>系统调用由UNIX(和Linux)直接提供，它们本身通向操作系统本身的接口</p>
+</blockquote>
+</blockquote>
+<a id="more"></a>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E7%94%A8%E6%88%B7%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E5%86%85%E6%A0%B8%E4%B8%8E%E7%A1%AC%E4%BB%B6%E5%85%B3%E7%B3%BB%E5%9B%BE.jpg" alt="Linux系统各种函数与用户设备驱动内核硬件关系图" title="Linux系统各种函数与用户设备驱动内核硬件关系图]"></p>
+<h1 id="open"><a href="#open" class="headerlink" title="open"></a>open</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fd=<span class="function"><span class="title">open</span><span class="params">(pathname,flags,mode)</span></span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>函数打开pathname所标识的文件，并返回文件描述符，用以在后续函数中指代打开的文件。</p>
+</blockquote>
+<p>函数原型<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">open</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">int</span> flags, ...<span class="comment">/*mode_t mode*/</span>)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>open()将返回一文件描述符，用于后续函数调用中指代该文件</p>
+<blockquote>
+<p>若发生错误，则返回-1，并将errno置为相应的错误标志</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>flags标志位</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标志位</th>
+<th style="text-align:center">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>O_RDONLY</code></td>
+<td style="text-align:center">以只读方式打开文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>O_WRONLY</code></td>
+<td style="text-align:center">以只写方式打开文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>O_RDWR</code></td>
+<td style="text-align:center">以可读写方式打开文件.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>上述三种旗标是互斥的, 也就是不可同时使用, 但可与下列的旗标利用OR(|)运算符组合.</p>
+</blockquote>
+<p>补充</p>
+<table>
+<thead>
+<tr>
+<th>标志位</th>
+<th style="text-align:center">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O_CREAT</td>
+<td style="text-align:center">若文件不存在则创建</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>标志O_NOCTTY可以告诉UNIX这个程序不会成为这个端口上的“控制终端”。如果不这样做的话，所有的输入，比如键盘上过来的Ctrl+C中止信号等等，会影响到你的进程。而有些程序比如getty(1M/8)则会在打开登录进程的时候使用这个特性，但是通常情况下，用户程序不会使用这个行为.|</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标志位</th>
+<th style="text-align:center">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">O_TRUNC</td>
+<td style="text-align:center">截断已有文件，使其长度为零</td>
+</tr>
+<tr>
+<td style="text-align:center">O_DIRECT</td>
+<td style="text-align:center">无缓冲的输入/输出</td>
+</tr>
+<tr>
+<td style="text-align:center">O_NOCTTY</td>
+<td style="text-align:center">不要让pathname<em>(所指向的终端设备)</em>称为控制终端。</td>
+</tr>
+<tr>
+<td style="text-align:center">O_NDELAY</td>
+<td style="text-align:center">标志则是告诉UNIX，这个程序并不关心DCD信号线的状态——也就是不关心端口另一端是否已经连接。如果不指定这个标志的话，除非DCD信号线上有space电压否则这个程序会一直睡眠。</td>
+</tr>
+<tr>
+<td style="text-align:center">O_EXCL</td>
+<td style="text-align:center">如果O_CREAT 也被设置, 此指令会去检查文件是否存在. 文件若不存在则建立该文件, 否则将导致打开文件错误. 此外, 若O_CREAT 与O_EXCL 同时设置, 并且欲打开的文件为符号连接, 则会打开文件失败.</td>
+</tr>
+<tr>
+<td style="text-align:center">O_TRUNC</td>
+<td style="text-align:center">若文件存在并且以可写的方式打开时, 此旗标会令文件长度清为0, 而原来存于该文件的资料也会消失.</td>
+</tr>
+<tr>
+<td style="text-align:center">O_APPEND</td>
+<td style="text-align:center">当读写文件时会从文件尾开始移动, 也就是所写入的数据会以附加的方式加入到文件后面.</td>
+</tr>
+<tr>
+<td style="text-align:center">O_NONBLOCK</td>
+<td style="text-align:center">以不可阻断的方式打开文件, 也就是无论有无数据读取或等待, 都会立即返回进程之中.</td>
+</tr>
+<tr>
+<td style="text-align:center">O_SYNC</td>
+<td style="text-align:center">以同步的方式打开文件.</td>
+</tr>
+<tr>
+<td style="text-align:center">O_NOFOLLOW</td>
+<td style="text-align:center">如果参数pathname 所指的文件为一符号连接, 则会令打开文件失败.</td>
+</tr>
+<tr>
+<td style="text-align:center">O_DIRECTORY</td>
+<td style="text-align:center">如果参数pathname 所指的文件并非为一目录, 则会令打开文件失败。注：此为Linux2. 2 以后特有的旗标, 以避免一些系统安全问题. </td>
+</tr>
+</tbody>
+</table>
+<p>参数mode<br>当你使用O_CREAT标志的open调用来创建文件，你必须使用3个参数的格式的open调用。</p>
+<blockquote>
+<p>第3个参数mode是几个标志按位或后得到的,这些标志在头文件<code>sys/stat.h</code>中定义</p>
+<blockquote>
+<p>则有下列数种组合, 只有在建立新文件时才会生效, 此外真正建文件时的权限会受到umask 值所影响, 因此该文件权限应该为 (mode-umaks).</p>
+</blockquote>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标志位</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">S_IRWXU  00700 权限</td>
+<td style="text-align:center">代表该文件所有者具有可读、可写及可执行的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IRUSR 或S_IREAD, 00400 权限</td>
+<td style="text-align:center">代表该文件所有者具有可读取的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IWUSR 或S_IWRITE, 00200 权限</td>
+<td style="text-align:center">代表该文件所有者具有可写入的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IXUSR 或S_IEXEC, 00100 权限</td>
+<td style="text-align:center">代表该文件所有者具有可执行的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IRWXG 00070 权限</td>
+<td style="text-align:center">代表该文件用户组具有可读、可写及可执行的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IRGRP 00040 权限</td>
+<td style="text-align:center">代表该文件用户组具有可读的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IWGRP 00020 权限</td>
+<td style="text-align:center">代表该文件用户组具有可写入的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IXGRP 00010 权限</td>
+<td style="text-align:center">代表该文件用户组具有可执行的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IRWXO 00007 权限</td>
+<td style="text-align:center">代表其他用户具有可读、可写及可执行的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IROTH 00004 权限</td>
+<td style="text-align:center">代表其他用户具有可读的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IWOTH 00002 权限</td>
+<td style="text-align:center">代表其他用户具有可写入的权限</td>
+</tr>
+<tr>
+<td style="text-align:center">S_IXOTH 00001 权限</td>
+<td style="text-align:center">代表其他用户具有可执行的权限</td>
+</tr>
+</tbody>
+</table>
+<p>返回值：若所有欲核查的权限都通过了检查则返回0 值, 表示成功, 只要有一个权限被禁止则返回-1.</p>
+<p>实例程序<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">main()&#123;</span><br><span class="line">	<span class="keyword">int</span> fd;</span><br><span class="line">	<span class="keyword">char</span> *leds = <span class="string">"/dev/leds"</span>;</span><br><span class="line">	<span class="keyword">char</span> *test1 = <span class="string">"/bin/test1"</span>;</span><br><span class="line">	<span class="keyword">char</span> *test2 = <span class="string">"/bin/test2"</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>((fd = open(leds,O_RDWR|O_NOCTTY|O_NDELAY))&lt;<span class="number">0</span>)&#123;			</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"open %s failed!\n"</span>,leds);</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n%s fd is %d\n"</span>,leds,fd);</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">if</span>((fd = open(test1,O_RDWR,<span class="number">0777</span>))&lt;<span class="number">0</span>)&#123;	<span class="comment">/*文件可读可写*/</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"open %s failed!\n"</span>,test1);</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%s fd is %d\n"</span>,test1,fd);	</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">if</span>((fd = open(test2,O_RDWR|O_CREAT,<span class="number">0777</span>))&lt;<span class="number">0</span>)&#123;   <span class="comment">/*如果文件不存在，则创建一个文件*/</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"open %s failed!\n"</span>,test2);</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%s fd is %d\n"</span>,test2,fd);	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>错误代码：<br>|代码              |说明                      |            |<br>|：————-:|:——————:|<br>|EEXIST 参数pathname| 所指的文件已存在, 却使用了O_CREAT 和O_EXCL 旗标.|<br>|EACCESS 参数pathname |所指的文件不符合所要求测试的权限.|<br>|EROFS |欲测试写入权限的文件存在于只读文件系统内.|<br>|EFAULT 参数pathname| 指针超出可存取内存空间.|<br>|EINVAL 参数mode| 不正确.|<br>|ENAMETOOLONG 参数 pathname| 太长.|<br>|ENOTDIR 参数pathname| 不是目录.|<br>|ENOMEM |核心内存不足.|<br>|ELOOP 参数pathname |有过多符号连接问题.|<br>|EIO |I/O 存取错误.|</p>
+<hr>
+<h1 id="read"><a href="#read" class="headerlink" title="read"></a>read</h1><p>读取文件内容read()，调用从文件描述符fd所指代的打开文件中读取数据</p>
+<p>函数原型<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">ssize_t</span> read(<span class="keyword">int</span> fd, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> count);</span><br></pre></td></tr></table></figure></p>
+<p>系统调用read：从与文件描述符fildes相关联的文件读入nbytes个字节的数据，并把他们放到数据去buff中。它返回实际读入的字节数，这可能会小于请求的字节数。</p>
+<p>如果read返回0，就表示未读入任何数据，已达到文件尾部。同样，如果返回的是-1，就表示read调用出现错误。</p>
+<p>UNIX和Linux中比较重要的设备文件有3个:     /dev/console、/dev/tty和/dev/null</p>
+<ol>
+<li>/dev/console<br>这个设备代表是系统控制台。<blockquote>
+<p>错误信息通常会被发送到这个设备</p>
+</blockquote>
+</li>
+</ol>
+<ol>
+<li>/dev/tty<br>如果一个进程有控制终端的话，那么特殊文件/dev/tty就是这个控制终端<em>(键盘和显示屏，或键盘窗口)</em>的别名<em>(逻辑设备)</em></li>
+</ol>
+<ol>
+<li>/dev/null<br>/dev/null文件是空(null)设备。所有写向这个设备的输出都将被丢弃，而读这个设备会立刻返回一个文件标志.<blockquote>
+<p>所以在cp命令里可以把它用做复制文件的源文件</p>
+</blockquote>
+</li>
+</ol>
+<p>目录<br>目录是用于保存其他文件的节点号和名字的文件。目录文件中的每个数据项都是指向某个文件节点的链接，删除文件名就等于删除与之对应的链接。</p>
+<blockquote>
+<p>文件的节点号可以通过<code>ls -i</code>命令查看</p>
+<blockquote>
+<p>你可以通过使用ln命令在不同的目录中创建指向同一个文件的链接。</p>
+</blockquote>
+</blockquote>
+<p>incode编号</p>
+<blockquote>
+<p>文件除了本身包含的内容以外，还包含“管理信息”，它包含文件的创建/修改日期和它的访问权限。这些属性被保存在文件的inode<em>节点</em>中，</p>
+<blockquote>
+<p>它是文件系统中的一个特殊的数据块，它同时还包含文件的长度和文件在磁盘上的存放的位置。系统使用的文件的inode编号，目录结构为文件命名仅仅是为了方便人们使用。</p>
+</blockquote>
+</blockquote>
+<h1 id="write"><a href="#write" class="headerlink" title="write"></a>write</h1><p>原型<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"> <span class="keyword">size_t</span> write(<span class="keyword">int</span> fildes,<span class="keyword">const</span> <span class="keyword">void</span>*buf,<span class="keyword">size_t</span> nbytes);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>系统调用write的作用是把缓冲区buf的前nbytes个字节写入与文件描述符fildes关联的文件中。它返回实际写入的字节数。<em>如果文件描述符有错或者底层的驱动设备对数据块长度比价敏感，返回值可能会小于nbytes</em></p>
+<blockquote>
+<p>fildes文件描述符<em>(即fd)</em>。</p>
+</blockquote>
+</blockquote>
+<p>标准文件描述符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">文件描述符</th>
+<th style="text-align:center">用途</th>
+<th style="text-align:center">POSIX名称</th>
+<th style="text-align:center">stdio流</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">标准输入</td>
+<td style="text-align:center">STDIN_FILENO</td>
+<td style="text-align:center">stdin</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">标准输出</td>
+<td style="text-align:center">STDOUT_FILENO</td>
+<td style="text-align:center">stdout</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">标准错误</td>
+<td style="text-align:center">STDERR_FILENO</td>
+<td style="text-align:center">stderr</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>在程序中指代这些文件描述符时，可以使用数字(0、1、2)表示，或者采用<unistd.h>所定义的POSIX标准名称。</unistd.h></p>
+<blockquote>
+<p>注意使用POSIX标准命名，一定要加头文件<code>unistd.h</code>如果使用数字则不一定要。</p>
+</blockquote>
+</blockquote>
+<p> 实例程序1.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>((write(<span class="number">1</span>,<span class="string">"Here is some data\n"</span>,<span class="number">18</span>))!=<span class="number">18</span>)</span><br><span class="line">		write(<span class="number">2</span>,<span class="string">"A write error has occured on file descriptor 1\n"</span>,<span class="number">46</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> 实例程序2</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//标准输入输出头文件</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//文件操作函数头文件</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> fd;</span><br><span class="line">	<span class="keyword">char</span> *testwrite = <span class="string">"/bin/testwrite"</span>;</span><br><span class="line">	<span class="keyword">ssize_t</span> length_w;</span><br><span class="line">	<span class="keyword">char</span> buffer_write[] = <span class="string">"Hello Write Function!"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>((fd = open(testwrite, O_RDWR|O_CREAT,<span class="number">0777</span>))&lt;<span class="number">0</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"open %s failed\n"</span>,testwrite); </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//将buffer写入fd文件</span></span><br><span class="line">	length_w = write(fd,buffer_write,<span class="built_in">strlen</span>(buffer_write));</span><br><span class="line">	<span class="keyword">if</span>(length_w == -<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		perror(<span class="string">"write"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Write Function OK!\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	close(fd);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="creat"><a href="#creat" class="headerlink" title="creat"></a>creat</h1><p>打开文件creat函数<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">creat</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, mode_t mode)</span></span>;`</span><br></pre></td></tr></table></figure></p>
+<h1 id="验证-amp-验证"><a href="#验证-amp-验证" class="headerlink" title="验证&amp;验证"></a>验证&amp;验证</h1><p><strong>验证</strong>结论 执行close(1);后面指令将无法正常执行。</p>
+<blockquote>
+<p>1  表示<code>标准输出</code></p>
+</blockquote>
+<h1 id="验证close-文件描述符的功能"><a href="#验证close-文件描述符的功能" class="headerlink" title="验证close(文件描述符的功能)"></a>验证close(文件描述符的功能)</h1><p>实例程序1.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fd=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">char</span> *file=<span class="string">"/bin/testwrite"</span>;</span><br><span class="line">	fd=close(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"./colose(0)\t fd=%d\n"</span>,fd);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"./colose(0)_double\t fd=%d\n"</span>,fd);</span><br><span class="line">	fd=close(<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"./close(1)\t fd=%d\n"</span>,fd);</span><br><span class="line">	fd=close(<span class="number">3</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"./close(3)\t fd=%d\n"</span>,fd);</span><br><span class="line">	fd=open(file,O_CREAT);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,fd);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ACER</span><span class="symbol">:/home/takethat/workspace/linux_program/io/open</span><span class="comment"># gcc open.c -o run_open</span></span><br><span class="line">root<span class="variable">@ACER</span><span class="symbol">:/home/takethat/workspace/linux_program/io/open</span><span class="comment"># ./run_open</span></span><br><span class="line">./colose(<span class="number">0</span>)      fd=<span class="number">0</span></span><br><span class="line">./colose(<span class="number">0</span>)<span class="constant">_double </span>      fd=<span class="number">0</span></span><br><span class="line">root<span class="variable">@ACER</span><span class="symbol">:/home/takethat/workspace/linux_program/io/open</span><span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<p>实例程序2.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> fd;</span><br><span class="line">        fd=close(<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"fd is %d\n"</span>,fd);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"hello,close(1)\n"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该程序执行后无任何输出。</p>
+<p>程序执行完<code>fd=close(1);</code> 就不再执行了。</p>
+<p>但程序执行close(0); 、 close(2);程序则正常运行</p>
+<h2 id="存疑"><a href="#存疑" class="headerlink" title="存疑"></a>存疑</h2><p>open返回文件描述符3是什么？</p>
+<blockquote>
+<p>文件描述符不是只有0、1、2吗?</p>
+</blockquote>
+<p>是不是跟函数返回类型定义有关？因为</p>
+<p>open函数的定义<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line">     <span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line">     <span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">int</span> <span class="title">open</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">int</span> flags)</span></span>;</span><br><span class="line">     <span class="function"><span class="keyword">int</span> <span class="title">open</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">int</span> flags, mode_t mode)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>write函数定义<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"> <span class="keyword">size_t</span> write(<span class="keyword">int</span> fildes,<span class="keyword">const</span> <span class="keyword">void</span>*buf,<span class="keyword">size_t</span> nbytes);</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>实例程序：fd返回3</p>
+<blockquote>
+<p>声明/home/takethat/workspace/linux_program/io/open/file  这个文件是存在的</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">                <span class="keyword">int</span> fd;</span><br><span class="line">        fd=open(<span class="string">"/home/takethat/workspace/linux_program/io/open/file"</span>,O_RDONLY);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"fd is %d\n\n"</span>,fd);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行结果<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ACER</span><span class="symbol">:/home/takethat/workspace/linux_program/io/open</span><span class="comment"># gcc fd_open0.c -o run_fd_open0</span></span><br><span class="line">root<span class="variable">@ACER</span><span class="symbol">:/home/takethat/workspace/linux_program/io/open</span><span class="comment"># ./run_fd_open0</span></span><br><span class="line">fd is <span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<p>fd返回3</p>
+<p>插曲：倘若用在该代码预先用close(0);关闭标准输入，open返回0</p>
+<p>fd_open.c<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">                <span class="keyword">int</span> fd,fd0;</span><br><span class="line">        fd0=close(STDIN_FILENO);<span class="comment">/*close file descriptor 0*/</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"fd0 is %d\n"</span>,fd0);</span><br><span class="line"></span><br><span class="line">        fd=open(<span class="string">"/home/takethat/workspace/linux_program/io/open/file"</span>,O_RDONLY);</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"fd is %d\n\n"</span>,fd);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fd0 <span class="keyword">is</span> <span class="number">0</span></span><br><span class="line">fd <span class="keyword">is</span> <span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<p>若把 程序fd_open.c<br><figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fd0=<span class="keyword">close</span>(STDIN_FILENO);/*<span class="keyword">close</span> <span class="keyword">file</span> descriptor <span class="number">0</span>*/</span><br></pre></td></tr></table></figure></p>
+<p>换成</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fd0=<span class="keyword">close</span>(<span class="number">2</span>);/*<span class="keyword">close</span> <span class="keyword">file</span> descriptor <span class="number">2</span>*/</span><br></pre></td></tr></table></figure>
+<p>程序运行则是:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fd0 <span class="keyword">is</span> <span class="number">0</span></span><br><span class="line">fd <span class="keyword">is</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>这是因为0被关闭。则0是未被占用的。然后被open使用,所以输出是2</p>
+<blockquote>
+<p>SUSV3固定，如果调用open()成功，必须保证其返回值为进程未使用文件描述符数值最小者。</p>
+</blockquote>
+</blockquote>
+  
+	</div>
+
+	<!-- css -->
+	<style type="text/css">
+	    .center {
+	        text-align: center;
+	    }
+	    .hidden {
+	        display: none;
+	    }
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+			_background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+
+			<!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+			     因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+	    <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+			
+		
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+    
+	<div id="donate_guide" class="donate_bar center hidden">
+        <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+	    
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="微信打赏 Donate" height="190px" width="auto"/>
+		</a>
+        
+        &nbsp;&nbsp;
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="支付宝打赏 Donate" height="190px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function() {
+			$('#donate_board').addClass('hidden');
+	    $('#donate_guide').removeClass('hidden');
+		}
+
+		function donate_on_web(){
+			$('#donate').submit();
+        }
+
+		var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+		}
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/嵌入式/">嵌入式</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Linux/">Linux</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.vivatakethat.com/2016/09/23/Linux系统编程-文件操作/" data-title="Linux系统编程-文件操作 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/09/26/E——英语应用短文/" title="英语应用短文">
+  <strong>上一篇：</strong><br/>
+  <span>
+  英语应用短文</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/09/21/Ubuntu-常用操作memo/"  title="Ubuntu-常用操作">
+ <strong>下一篇：</strong><br/> 
+ <span>Ubuntu-常用操作
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/09/23/Linux系统编程-文件操作/" data-title="Linux系统编程-文件操作" data-url="http://www.vivatakethat.com/2016/09/23/Linux系统编程-文件操作/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#open"><span class="toc-number">1.</span> <span class="toc-text">open</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#read"><span class="toc-number">2.</span> <span class="toc-text">read</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#write"><span class="toc-number">3.</span> <span class="toc-text">write</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#creat"><span class="toc-number">4.</span> <span class="toc-text">creat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#验证-amp-验证"><span class="toc-number">5.</span> <span class="toc-text">验证&验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#验证close-文件描述符的功能"><span class="toc-number">6.</span> <span class="toc-text">验证close(文件描述符的功能)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#存疑"><span class="toc-number">6.1.</span> <span class="toc-text">存疑</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="vivatakethat" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Coursera/" title="Coursera">Coursera<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Web/" title="Web">Web<sup>2</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/git/" title="git">git<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/memo/" title="memo">memo<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/云计算/" title="云计算">云计算<sup>10</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程/" title="工程">工程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/英语/" title="英语">英语<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English/" title="English">English<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com/" target="_blank" title="一个面向程序员交流分享的新一代社区">Stack overflow</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://vivatakethat.com" target="_blank" title="takethat&#39;s Blog">takethat&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.fiochen.me" target="_blank" title=" 甜甜哥哥的博客">思华的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/example440982" target="_blank" title="轻微的博客">轻微的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <p class="asidetitle">热评文章</p>
+<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vivatakethat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer>
+<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Take That in here <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/vivatakethat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:vivatakethat@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015.4-2017
+		
+		<a href="/about" target="_blank" title="takethat">takethat</a>
+		
+
+		</p>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Xd__7-Q-nUc6axwJDfV5','2.0.0');
+</script>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_pv">
+      Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+    You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    $('#toc.toc-aside').css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"vivatakethat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6f10d7c2f9fab5591ab7b7c322e0a114";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  </body>
+</html>
+

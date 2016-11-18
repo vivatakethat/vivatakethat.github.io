@@ -1,0 +1,932 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>嵌入式Linux-c编程(零) | take that的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="takethat">
+    
+
+    
+	<meta name="keywords" content="嵌入式, C++, C, Linux">
+    <meta name="description" content="前言:开放、自由和灵活是Linux的魅力所在，而在这一点在GCC上的体现就是程序员通过它能够更好的控制整个编译过程。在使用GCC编译程序时，编译过程可细分为4个阶段">
+<meta property="og:type" content="article">
+<meta property="og:title" content="嵌入式Linux-c编程(零)">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/04/11/嵌入式Linux-c编程（零）-/index.html">
+<meta property="og:site_name" content="take that的博客">
+<meta property="og:description" content="前言:开放、自由和灵活是Linux的魅力所在，而在这一点在GCC上的体现就是程序员通过它能够更好的控制整个编译过程。在使用GCC编译程序时，编译过程可细分为4个阶段">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/Linuxc0%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg">
+<meta property="og:updated_time" content="2016-11-16T14:14:32.946Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="嵌入式Linux-c编程(零)">
+<meta name="twitter:description" content="前言:开放、自由和灵活是Linux的魅力所在，而在这一点在GCC上的体现就是程序员通过它能够更好的控制整个编译过程。在使用GCC编译程序时，编译过程可细分为4个阶段">
+
+    
+    <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/batman.jpg" alt="take that的博客" title="take that的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
+				<h2 class="blog-motto">热  爱  生  活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|tags</a></li>
+					
+						<li><a href="/categories">分类|categories</a></li>
+					
+						<li><a href="/about">关于|About</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 12341059951958788027 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/04/11/嵌入式Linux-c编程（零）-/" title="嵌入式Linux-c编程(零)" itemprop="url">嵌入式Linux-c编程(零)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-04-11T02:50:32.000Z" itemprop="datePublished"> 发表于 2016-04-11</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GCC编译器"><span class="toc-number">1.1.</span> <span class="toc-text">GCC编译器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gcc命令常用选项以及工作流程"><span class="toc-number">1.1.1.</span> <span class="toc-text">gcc命令常用选项以及工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gcc常用命令"><span class="toc-number">1.1.2.</span> <span class="toc-text">gcc常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库的使用"><span class="toc-number">1.2.</span> <span class="toc-text">库的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态链接-静态链接对比"><span class="toc-number">1.2.1.</span> <span class="toc-text">动态链接\静态链接对比</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/Linuxc0%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg" alt="攻壳机动队" title="攻壳机动队"></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p><strong>开放、自由和灵活是Linux的魅力所在，而在这一点在GCC上的体现就是程序员通过它能够更好的控制整个编译过程。在使用GCC编译程序时，编译过程可细分为4个阶段</strong></p>
+<a id="more"></a>
+<ol>
+<li><p>预处理（Pre-Processing）</p>
+<blockquote>
+<p>GCC在编译时首先要把头文件如<code>stdio.h</code>中内容加载到源程序首部。</p>
+<p><code>.i</code>已经预处理的C源程序</p>
+</blockquote>
+</li>
+<li><p>编译(Compiling)</p>
+<blockquote>
+<p>必须实现3个步骤<br>词法分析:检查关键字、标示符是否正确；</p>
+<p>语法分析：检查程序中语法是否正确;</p>
+<p>检查程序中逻辑语句是否正确</p>
+<p><code>.s/.S</code>是汇编源程序</p>
+</blockquote>
+</li>
+<li><p>汇编（Assembling）</p>
+<blockquote>
+<p>汇编阶段任务是把汇编程序翻译成CPU可识别的二进制文件（又称为目标文件<code>.o</code>）</p>
+</blockquote>
+</li>
+<li><p>链接（Linking）</p>
+<blockquote>
+<p>目标文件虽然已经可以被CPU直接识别，但是单个目标文件一般是无法运行的，原因在于一个程序往往是由多个源文件组成，每个源文件只对应一个目标文件。</p>
+<p>连接阶段的任务就是把程序的目标文件所需的问价连接在一起，最终生成一个可直接运行的文件，称为可执行文件。</p>
+<p>gcc命令生成的可执行文件有3种：<code>a.out</code>(Assembler and Link editor output)、<code>COFF</code>（Common object file format）、<code>ELF</code>(Executable and linkable format)，其中,a.out 和COF格式都是比较老的格式，现在Linux平台上可执行文件的主流格式是ELF。</p>
+</blockquote>
+</li>
+</ol>
+<p>Linux程序演可以根据自己的需要让GCC在编译的任何阶段结束，以便检查或使用编译器在该阶段的输出信息，或者对最后生成的二进制文件进行控制，以便通过加入不同数量和种类的调试代码来为今后的调试做好准备。和其他常用的编辑器一样，GCC也提供了灵活而强大的代码优化功能，利用它可生成执行效率更高的代码。</p>
+<hr>
+<h2 id="GCC编译器"><a href="#GCC编译器" class="headerlink" title="GCC编译器"></a>GCC编译器</h2><p>GCC(GNU Compile Collection)是Linux平台最流行的编译系统。</p>
+<ul>
+<li>GCC可以为x86、ARM、MIPS扽各不同体系架构的硬件平台编译程序。</li>
+<li>GCC可以编译C、C++、Pascal、Java等数十种高级语言。</li>
+</ul>
+<hr>
+<h3 id="gcc命令常用选项以及工作流程"><a href="#gcc命令常用选项以及工作流程" class="headerlink" title="gcc命令常用选项以及工作流程"></a>gcc命令常用选项以及工作流程</h3><p>gcc命令的使用格式为:<br><code>gcc [选项] [文件名] [选项] [文件名]</code></p>
+<h3 id="gcc常用命令"><a href="#gcc常用命令" class="headerlink" title="gcc常用命令"></a>gcc常用命令</h3><p>gcc命令拥有强大的编译选项，按类型可分为：</p>
+<p> <strong>1. 总体选项</strong></p>
+<ul>
+<li><code>-c      对文件进行编译或汇编</code></li>
+<li><code>-E</code>     对源文件进行预处理</li>
+<li><code>-S</code>     对源文件进行编译</li>
+<li><code>-o  file</code>     输出目标文件file</li>
+<li><code>-v</code>            显示编译阶段命令</li>
+</ul>
+<hr>
+<p> <strong>2. 语言选项</strong></p>
+<ul>
+<li><code>ansi</code>    支持符合ANSI标准的C程序</li>
+</ul>
+<hr>
+<p> <strong>3. 警告选项</strong></p>
+<ul>
+<li><code>-W</code>      屏蔽所有的警告信息</li>
+<li><code>-Wall</code>   显示所有类型的警告信息</li>
+<li><code>Werror</code>  出现任何警告信息就停止编译</li>
+</ul>
+<hr>
+<p> <strong>4. 调试选项</strong></p>
+<ul>
+<li><code>-g</code>  产生调试信息</li>
+</ul>
+<hr>
+<p> <strong>5. 优化选项:用于对目标进行优化，通常选项如下：</strong><br> <code>-O1</code>      对目标文件的性能优化<br> <code>-O2</code>      在-O1de基础上进一步优化，提高目标文件的运行性<br> <code>-O3</code>      在-O2de基础上进一步优化，支持函数集成优化<br> <code>-O0</code>      不进行优化</p>
+<hr>
+<p><strong>6. 连接器选项:用于控制连接过程，常用选项如下：</strong></p>
+<ul>
+<li><code>static</code>          使用静态连接</li>
+<li><code>library</code>         链接library函数库文件</li>
+<li><code>Ldir</code>           指定链接器的搜索目录dir</li>
+<li><code>Ldir</code>            指定搜索目录dir</li>
+</ul>
+<hr>
+<h2 id="库的使用"><a href="#库的使用" class="headerlink" title="库的使用"></a>库的使用</h2><p>从逻辑上看，程序的主题是由一系列函数组成，所以编写程序的主要工作之一就是实现函数。</p>
+<blockquote>
+<p>为了降低编程的工作量，碧昂成系统会把一些非常基本、常用的函数集中到函数库中实现，如<code>信息的打印函数</code>、<code>文件的打开或关闭函数</code>、<code>内存空间的申请与释放函数</code>、<code>数学计算函数</code>；当程序需要使用到函数中某个函数时，就可以直接从库中调用。就好比建造房屋时，建筑队并不需要直接从头开始制造砖瓦和水泥，而只需要从原料市场购买就可以了。</p>
+</blockquote>
+<p>每种高级编程语言都有各自的函数国库，例如，C语言的C库、Visual C++的MFC、Java的JFC等。函数库中的函数裤脚都是由经验丰富的资深程序员编写的；</p>
+<blockquote>
+<p>函数库的使用不仅减少编程的工作量，还能有效提高程序的性能和健壮性。在面向对象编程中，函数库被封装在类中，所以含数据库就演变成了类库，但其原理和机制是类似的。</p>
+</blockquote>
+<p><strong>函数库的使用方式分为<code>静态连接</code>和<code>动态连接</code>2种</strong></p>
+<ol>
+<li><p><code>静态连接</code>是指编译系统在链接阶段把程序的目标文件和所需的函数库文件连接在一起，这样生成的可执行文件就可以在没有函数库的情况下运行。</p>
+<blockquote>
+<p>就好比火箭把燃料和氧料装载一起，就可以在没有空气的太空中飞行。</p>
+<p>在使用静态链接方式产生的可执行文件体积较大，但运行效率较高。</p>
+</blockquote>
+</li>
+<li><p><code>动态链接</code>是指编译系统在连接阶段并不把目标文件和函数库文件链接在一起，而是等到程序在运行过程中需要使用时才链接函数库。</p>
+<blockquote>
+<p>使用动态链接方式产生的可执行文件由于没有库文件，所以体积小。但由于需要动态加载函数库，所以运行效率要低一点。</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<p><strong>Glibc(GNU Library C)</strong>是GNU推出的C语言函数库，符合ISO C（International Standard for the C Programming Language）和POSIX(Portable Operating System Interface for Computer Environments)标准。其中，ISO C标准的扩充。因此Glibc可以在各种不同体系架构的计算机平台上使用。<br> Glibc中包含了大量的函数库，其中Libc是最基本的函数库，每个C程序都需要使用libc库。此外，常用的还有数学库libm、加密库libcrypt、POSIX线程库libpthread、网络服务库libnsl、IEEE浮点运算库libieee等。<code>Glibc</code>库为C程序提供了大量功能的强大函数、日期时间函数等。</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> C程序在调用Glibc中的函数库时，需要引用函数库对应的头文件，如stdio.h、<span class="built_in">string</span>.h、time.h等。这些头文件都放在`/usr/include`目录下。同时，在编译命令中需要加入某些函数库的链接参数（在函数库的使用文档中会列出具体的链接库名称参数），并使用符号`-l`进行连接。比如`libm`库函数链接参数为m,libpthread库的链接参数为pthread等。例如：</span><br><span class="line">   </span><br><span class="line">```c</span><br><span class="line"><span class="comment">//test.c</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="built_in">sin</span>(<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# gcc test.c -o test -lm&#10;test.c: In function &#8216;main&#8217;:&#10;test.c:7:1: warning: format &#8216;%d&#8217; expects argument of type &#8216;int&#8217;, but argument 2 has type &#8216;double&#8217; [-Wformat=]&#10; printf(&#34;%d\n&#34;,sin(0));&#10; ^&#10;root@ubuntu:~/test# ./test &#10;2082002856</span><br></pre></td></tr></table></figure>
+<p>在Linux系统中，Glibc分布在/lib和/usr/lib目录下，其中/lib目录中的函数库文件主要是给/bin目录下的系统程序使用的，/usr/bin目录中的函数库文件主要是给/usr目录下的用户程序使用的。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">libdialog</span><span class="class">.a</span>  </span><br><span class="line"><span class="tag">libdumbnet</span><span class="class">.la</span></span><br><span class="line"><span class="tag">libspreadsheet-1</span><span class="class">.12</span><span class="class">.9</span><span class="class">.so</span></span><br><span class="line"><span class="tag">libspreadsheet</span><span class="class">.so</span></span><br></pre></td></tr></table></figure>
+<p>其中后缀为<code>.a</code>的是静态库文件、后缀为<code>.la的是用来记录库文件信息的动态库文件，后缀为</code>.so<code>的是动态库文件。其中</code>libspreadsheet-1.12.9.so<code>是正真的Png动态库文件，而</code>libspreadsheet.so<code>是指向</code>libspreadsheet-1.12.9.so`动态库文件的符号链接符号。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/usr/lib# file libspreadsheet.so &#10;libspreadsheet.so: symbolic link to `libspreadsheet-1.12.9.so&#39;</span><br></pre></td></tr></table></figure>
+<h3 id="动态链接-静态链接对比"><a href="#动态链接-静态链接对比" class="headerlink" title="动态链接\静态链接对比"></a>动态链接\静态链接对比</h3><ul>
+<li>动态链接</li>
+</ul>
+<p>使用动态连接方法编译程序时，动态库的符号链接文件会写入二进制文件中。这样程序运行时就可以通过符号链接文件找到指定的动态库文件了。<br>以gcc  test.c -o test命令生成的可执行文件test，用<code>file</code>查看test文件相关信息：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# file test&#10;test: ELF 64-bit LSB  executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=138f13e9f7019179a87694a18d428296098eb441, not stripped</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><code>dynamically linked(uses shared libs)</code>表明test文件使用了动态链接库。</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# du -sh test&#10;12K     test</span><br></pre></td></tr></table></figure>
+<p>其文件大小为<code>12k</code></p>
+<ul>
+<li>静态链接<br>用过参数<code>static</code>对文件进行静态链接方式编译,生成test文件<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# file test&#10;test: ELF 64-bit LSB  executable, x86-64, version 1 (GNU/Linux), statically linked, for GNU/Linux 2.6.24, BuildID[sha1]=27c00935a81c38b2bd8a1a72a7037cbb15e88278, not stripped</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其中<code>statically linked</code>表明test文件使用了静态链接库。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# du -sh test&#10;856K    test</span><br></pre></td></tr></table></figure></p>
+<p>其文件大小也增大至856k</p>
+  
+	</div>
+
+	<!-- css -->
+	<style type="text/css">
+	    .center {
+	        text-align: center;
+	    }
+	    .hidden {
+	        display: none;
+	    }
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+			_background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+
+			<!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+			     因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+	    <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+			
+		
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+    
+	<div id="donate_guide" class="donate_bar center hidden">
+        <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+	    
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="微信打赏 Donate" height="190px" width="auto"/>
+		</a>
+        
+        &nbsp;&nbsp;
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="支付宝打赏 Donate" height="190px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function() {
+			$('#donate_board').addClass('hidden');
+	    $('#donate_guide').removeClass('hidden');
+		}
+
+		function donate_on_web(){
+			$('#donate').submit();
+        }
+
+		var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+		}
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/编程/">编程</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Linux-C/">Linux-C</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.vivatakethat.com/2016/04/11/嵌入式Linux-c编程（零）-/" data-title="嵌入式Linux-c编程(零) | take that的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/04/12/Linux系统(零)/" title="Linux系统(零)">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Linux系统(零)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/04/09/IaaS基础架设/"  title="IaaS基础架设">
+ <strong>下一篇：</strong><br/> 
+ <span>IaaS基础架设
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/04/11/嵌入式Linux-c编程（零）-/" data-title="嵌入式Linux-c编程(零)" data-url="http://www.vivatakethat.com/2016/04/11/嵌入式Linux-c编程（零）-/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GCC编译器"><span class="toc-number">1.1.</span> <span class="toc-text">GCC编译器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gcc命令常用选项以及工作流程"><span class="toc-number">1.1.1.</span> <span class="toc-text">gcc命令常用选项以及工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gcc常用命令"><span class="toc-number">1.1.2.</span> <span class="toc-text">gcc常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库的使用"><span class="toc-number">1.2.</span> <span class="toc-text">库的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态链接-静态链接对比"><span class="toc-number">1.2.1.</span> <span class="toc-text">动态链接\静态链接对比</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="vivatakethat" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Coursera/" title="Coursera">Coursera<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Web/" title="Web">Web<sup>2</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/git/" title="git">git<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/memo/" title="memo">memo<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/云计算/" title="云计算">云计算<sup>10</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程/" title="工程">工程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/英语/" title="英语">英语<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English/" title="English">English<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com/" target="_blank" title="一个面向程序员交流分享的新一代社区">Stack overflow</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://vivatakethat.com" target="_blank" title="takethat&#39;s Blog">takethat&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.fiochen.me" target="_blank" title=" 甜甜哥哥的博客">思华的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/example440982" target="_blank" title="轻微的博客">轻微的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <p class="asidetitle">热评文章</p>
+<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vivatakethat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer>
+<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Take That in here <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/vivatakethat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:vivatakethat@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015.4-2017
+		
+		<a href="/about" target="_blank" title="takethat">takethat</a>
+		
+
+		</p>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Xd__7-Q-nUc6axwJDfV5','2.0.0');
+</script>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_pv">
+      Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+    You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    $('#toc.toc-aside').css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"vivatakethat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6f10d7c2f9fab5591ab7b7c322e0a114";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  </body>
+</html>
+

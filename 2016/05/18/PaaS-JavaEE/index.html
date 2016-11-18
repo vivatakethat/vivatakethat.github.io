@@ -1,0 +1,946 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>JavaEE-PaaS应用 | take that的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="takethat">
+    
+
+    
+	<meta name="keywords" content="嵌入式, C++, C, Linux">
+    <meta name="description" content="JavaEE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaEE-PaaS应用">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/05/18/PaaS-JavaEE/index.html">
+<meta property="og:site_name" content="take that的博客">
+<meta property="og:description" content="JavaEE">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/JavaEE-SQL.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Java_insert.jpg">
+<meta property="og:updated_time" content="2016-11-16T14:11:38.536Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaEE-PaaS应用">
+<meta name="twitter:description" content="JavaEE">
+
+    
+    <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/batman.jpg" alt="take that的博客" title="take that的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
+				<h2 class="blog-motto">热  爱  生  活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|tags</a></li>
+					
+						<li><a href="/categories">分类|categories</a></li>
+					
+						<li><a href="/about">关于|About</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 12341059951958788027 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/05/18/PaaS-JavaEE/" title="JavaEE-PaaS应用" itemprop="url">JavaEE-PaaS应用</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-05-18T04:25:32.000Z" itemprop="datePublished"> 发表于 2016-05-18</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaEE"><span class="toc-number">1.</span> <span class="toc-text">JavaEE</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Maven"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装Maven</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装JBossews"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装JBossews</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装cartridge"><span class="toc-number">1.0.3.</span> <span class="toc-text">安装cartridge</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="JavaEE"><a href="#JavaEE" class="headerlink" title="JavaEE"></a>JavaEE</h1><a id="more"></a>
+<ol>
+<li>在<strong><code>node</code></strong>节点上 wget -nd -r 镜像里的paas-java下所有文件<blockquote>
+<p>[root@node ~]# wget -nd -r ftp://192.168.200.10/paas/paas-java/</p>
+</blockquote>
+</li>
+<li>安装依赖包<blockquote>
+<p>[root@node ~]#<code>rpm -ivh</code>  <code>ttmkfdir</code>-3.0.9-32.1.el6.x86_64.rpm </p>
+<p>[root@node ~]# <code>rpm -ivh</code> <code>xorg</code>-x11-fonts-Type1-7.2-9.1.el6.noarch.rpm </p>
+</blockquote>
+</li>
+</ol>
+<ol>
+<li>安装java-jdk<blockquote>
+<p><code>#</code> rpm  -ivh    <code>java-1.7.0-openjdk-1.7.0.45-2.4.3.3.el6.x86_64.rpm</code></p>
+<p><code>#</code> rpm -ivh  java-1.7.0-openjdk-<code>devel</code>-1.7.0.45-2.4.3.3.el6.x86_64.rpm </p>
+</blockquote>
+</li>
+</ol>
+<p>将apache-maven-3.1.1-bin.tar.gz 、apache-tomcat-7.0.57.tar.gz、  apache-tomcat-6.0.43.tar.gz、origin-server-master.zip复制到/tmp文件下</p>
+<blockquote>
+<p>[root@node ~]# cp apache-* /tmp</p>
+<p>[root@node ~]# cp origin-server-master.zip /tmp</p>
+</blockquote>
+<p>并在该目录下解压:cd /tmp</p>
+<blockquote>
+<p>[root@node tmp]# tar -zxvf apache-tomcat-6.0.43.tar.gz </p>
+<p>[root@node tmp]# tar -zxvf apache-tomcat-7.0.57.tar.gz </p>
+<p>[root@node tmp]# tar -zxvf apache-maven-3.1.1-bin.tar.gz </p>
+<p>[root@node tmp]# unzip origin-server-master.zip</p>
+</blockquote>
+<hr>
+<h3 id="安装Maven"><a href="#安装Maven" class="headerlink" title="安装Maven"></a>安装Maven</h3><ul>
+<li>[root@node tmp]# cp -rfv /tmp/<code>apache-maven</code>-3.1.1    &nbsp;  /etc/<code>alternatives/maven</code></li>
+<li>[root@node tmp]# echo -e &nbsp;’export &nbsp; M2_HOME=/etc/alternatives/maven\nexport &nbsp; PATH=${M2_HOME}/bin:${PATH}’  &nbsp;&gt;  &nbsp;/etc/profile.d/maven.sh</li>
+<li><p>[root@node tmp]# source &nbsp; /etc/profile.d/maven.sh //机器重启后需要重复执行该指令</p>
+</li>
+<li><p>查看mvn版本，验证mvn是否成功安装</p>
+<blockquote>
+<p>mvn -v</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Apache Maven <span class="number">3.1</span><span class="number">.1</span> (<span class="number">0728685237757f</span>fbf44136acec0402957f723d9a; <span class="number">2013</span>-<span class="number">09</span>-<span class="number">17</span> <span class="number">11</span>:<span class="number">22</span>:<span class="number">22</span>-<span class="number">0400</span>)</span><br><span class="line">Maven home: /etc/alternatives/maven</span><br><span class="line">Java version: <span class="number">1.7</span><span class="number">.0</span>_45, vendor: Oracle Corporation</span><br><span class="line">Java home: /usr/lib/jvm/java-<span class="number">1.7</span><span class="number">.0</span>-openjdk-<span class="number">1.7</span><span class="number">.0</span><span class="number">.45</span>.x86_64/jre</span><br><span class="line">Default locale: en_US, platform encoding: UTF-<span class="number">8</span></span><br><span class="line">OS name: <span class="string">"linux"</span>, version: <span class="string">"2.6.32-431.el6.x86_64"</span>, arch: <span class="string">"amd64"</span>, family: <span class="string">"unix"</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="安装JBossews"><a href="#安装JBossews" class="headerlink" title="安装JBossews"></a>安装JBossews</h3><ol>
+<li>拷贝文件<blockquote>
+<ul>
+<li>[root@node tmp]# cp &nbsp;  -rfv  &nbsp;  /tmp/apache-tomcat-6.0.43  &nbsp;  /etc/alternatives/jbossews-1.0</li>
+<li><p>[root@node tmp]# cp  &nbsp;  -rfv  &nbsp;  /tmp/apache-tomcat-7.0.57  &nbsp;  /etc/alternatives/jbossews-2.0</p>
+</li>
+<li><p>[root@node tmp]# cp -rfv /tmp/origin-server-master/cartridges/openshift-origin-cartridge-jbossews/  /usr/libexec/openshift/cartridges/jbossews</p>
+</li>
+</ul>
+<p>[root@node tmp]# chmod a+x /usr/libexec/openshift/cartridges/jbossews/bin/*</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="安装cartridge"><a href="#安装cartridge" class="headerlink" title="安装cartridge"></a>安装cartridge</h3><ol>
+<li>在<code>`node</code>节点上执行：<br><code>[root@node tmp]# /usr/sbin/oo-admin-cartridge --recursive -a install -s /usr/libexec/openshift/cartridges/</code> <blockquote>
+<p>会提示:succeeded</p>
+</blockquote>
+</li>
+</ol>
+<ol>
+<li>在<code>broker</code>节点上：<blockquote>
+<p>[root@broker ~]# <code>cd /var/www/openshift/broker/</code></p>
+<p>[root@broker broker]# <code>oo-admin-broker-cache --clear --console</code><br>提示：</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">Clearing</span> broker cache.</span><br><span class="line"><span class="variable">Clearing</span> console cache.</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>[root@broker broker]# <code>bundle exec rake tmp:clear</code></p>
+</blockquote>
+<hr>
+<p>在webconsole网页上部署：</p>
+<ol>
+<li>添加：<strong><code>Tomcat 7(JBoss EWS 2.0)</code></strong><blockquote>
+<p>添加指定URL<br>添加MySQL5.1和phpMyAdmin4.0</p>
+</blockquote>
+</li>
+<li><p>通过phpMyAdmin 4.0创建数据库文件</p>
+</li>
+<li><p>通过phpmyadmin的URL登录到数据库管理界面,选择数据库为broker(自动创建)并点击<br>sql 菜 单 ， 创 建 t_user 表。创建 t_user 表 的 命 令 在 提 供 的<br>swift.war/WEB-INF/classes/sql/mysql.sql 文件中，点击执行</p>
+</li>
+</ol>
+<ul>
+<li>解压node节点上的war包</li>
+</ul>
+<ol>
+<li>mkdir war</li>
+<li>wget swift.war</li>
+<li><p>cd war</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># jar -xvf swift.war</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>rm   swift.war</code></p>
+</li>
+</ol>
+<ul>
+<li><p>查询所需的t_user命令</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># <span class="keyword">cat</span> WEB-<span class="keyword">INF</span>/classes/sql/mysql.sql</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在phpMyadmin选取 <code>指定</code> 数据库,在<code>SQL</code>写入，并执行命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">create</span> <span class="keyword">table</span> t_user</span><br><span class="line">(</span><br><span class="line">  <span class="keyword">id</span>          <span class="built_in">int</span> <span class="keyword">not</span> <span class="literal">null</span> AUTO_INCREMENT,</span><br><span class="line">  username    <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">  realname    <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">  email       <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">  <span class="keyword">password</span>    <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">  joindate    <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">default</span> <span class="literal">null</span>,</span><br><span class="line">  lastdate    <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">default</span> <span class="literal">null</span>,</span><br><span class="line">  <span class="keyword">capacity</span>    <span class="built_in">int</span> <span class="keyword">default</span> <span class="number">1024</span>,</span><br><span class="line">  primary <span class="keyword">key</span> (<span class="keyword">id</span>)</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">1</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/JavaEE-SQL.jpg" alt="SQL" title="SQL"></p>
+<ul>
+<li>在上面菜单进入<code>插入</code>界面：按要求填写</li>
+</ul>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Java_insert.jpg" alt="SQL插入" title="SQL插入"></p>
+<ul>
+<li>修改war包里的数据库帐号和密码<br><code># vi WEB-INF/classes/jdbc.properties</code></li>
+</ul>
+<p>注意修改该jdbc.url对应的数据库名称,和主机名<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#Mysql</span> - linkx</span><br><span class="line">jdbc.driverClassName=com<span class="class">.mysql</span><span class="class">.jdbc</span><span class="class">.Driver</span></span><br><span class="line">jdbc.url=jdbc:mysql:<span class="comment">//127.1.245.130:3306/xiandian?useUnicode=true&amp;characterEncoding=UTF-8</span></span><br><span class="line">jdbc.username=adminGyApv2h</span><br><span class="line">jdbc.password=<span class="number">7</span>M6E8f9psxYz</span><br><span class="line">#<span class="id">#oracle</span></span><br><span class="line"><span class="id">#jdbc</span>.driverClassName=oracle<span class="class">.jdbc</span><span class="class">.driver</span><span class="class">.OracleDriver</span></span><br><span class="line"><span class="id">#jdbc</span>.url=jdbc:oracle:thin:@localhost:<span class="number">1521</span>:ora9i</span><br><span class="line"><span class="id">#jdbc</span>.username=stamen</span><br><span class="line"><span class="id">#jdbc</span>.password=abc</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>打包:<br><code># jar -cvf xiandian.war **./**</code></p>
+</li>
+<li><p>拷贝到对应的文件夹</p>
+</li>
+</ul>
+<ol>
+<li><code># cd /root/sourcecode/xiandian/</code></li>
+<li><code># cp -R /root/war/xiandian.war webapps/</code></li>
+<li><code>rm pom.xml</code></li>
+<li><p>提交</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># git add .</span></span><br><span class="line"><span class="preprocessor"># git commit -am "change"</span></span><br><span class="line"><span class="preprocessor"># git push</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>登入网页,记得尾椎记得要打<code>数据库名</code></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">http:</span><span class="comment">//xiandian-broker.xdpaas.com/xiandian/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用curl命令访问JavaEE的登入页面</p>
+</li>
+</ol>
+<p><code># curl  http://xiandian-broker.xdpaas.com/xiandian/</code></p>
+  
+	</div>
+
+	<!-- css -->
+	<style type="text/css">
+	    .center {
+	        text-align: center;
+	    }
+	    .hidden {
+	        display: none;
+	    }
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+			_background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+
+			<!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+			     因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+	    <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+			
+		
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+    
+	<div id="donate_guide" class="donate_bar center hidden">
+        <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+	    
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="微信打赏 Donate" height="190px" width="auto"/>
+		</a>
+        
+        &nbsp;&nbsp;
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="支付宝打赏 Donate" height="190px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function() {
+			$('#donate_board').addClass('hidden');
+	    $('#donate_guide').removeClass('hidden');
+		}
+
+		function donate_on_web(){
+			$('#donate').submit();
+        }
+
+		var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+		}
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/云计算/">云计算</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/PaaS/">PaaS</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.vivatakethat.com/2016/05/18/PaaS-JavaEE/" data-title="JavaEE-PaaS应用 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/05/18/MongoDB数据库/" title="MongoDB数据库">
+  <strong>上一篇：</strong><br/>
+  <span>
+  MongoDB数据库</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/05/16/PaaS应用搭建二/"  title="PaaS应用搭建(二)">
+ <strong>下一篇：</strong><br/> 
+ <span>PaaS应用搭建(二)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/05/18/PaaS-JavaEE/" data-title="JavaEE-PaaS应用" data-url="http://www.vivatakethat.com/2016/05/18/PaaS-JavaEE/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaEE"><span class="toc-number">1.</span> <span class="toc-text">JavaEE</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Maven"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装Maven</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装JBossews"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装JBossews</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装cartridge"><span class="toc-number">1.0.3.</span> <span class="toc-text">安装cartridge</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="vivatakethat" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Coursera/" title="Coursera">Coursera<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Web/" title="Web">Web<sup>2</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/git/" title="git">git<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/memo/" title="memo">memo<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/云计算/" title="云计算">云计算<sup>10</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程/" title="工程">工程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/英语/" title="英语">英语<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English/" title="English">English<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com/" target="_blank" title="一个面向程序员交流分享的新一代社区">Stack overflow</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://vivatakethat.com" target="_blank" title="takethat&#39;s Blog">takethat&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.fiochen.me" target="_blank" title=" 甜甜哥哥的博客">思华的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/example440982" target="_blank" title="轻微的博客">轻微的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <p class="asidetitle">热评文章</p>
+<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vivatakethat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer>
+<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Take That in here <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/vivatakethat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:vivatakethat@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015.4-2017
+		
+		<a href="/about" target="_blank" title="takethat">takethat</a>
+		
+
+		</p>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Xd__7-Q-nUc6axwJDfV5','2.0.0');
+</script>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_pv">
+      Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+    You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    $('#toc.toc-aside').css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"vivatakethat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6f10d7c2f9fab5591ab7b7c322e0a114";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  </body>
+</html>
+
