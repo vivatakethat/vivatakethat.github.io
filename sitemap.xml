@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
+    
+    <lastmod>2016-11-21T17:28:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
     
-    <lastmod>2016-11-21T17:25:25.000Z</lastmod>
+    <lastmod>2016-11-21T17:27:40.000Z</lastmod>
     
   </url>
   
@@ -362,13 +369,6 @@
     <loc>http://www.vivatakethat.com/2016/05/16/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA%E4%BA%8C/</loc>
     
     <lastmod>2016-11-16T14:11:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
-    
-    <lastmod>2016-11-16T14:11:07.642Z</lastmod>
     
   </url>
   

@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
+    <lastmod>2016-11-21T17:28:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>PHP基础（零）</title>
+        <pubTime>2016-04-01T06:38:32.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.vivatakethat.com/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2016-11-21T17:25:25.000Z</lastmod>
+    <lastmod>2016-11-21T17:27:40.000Z</lastmod>
     <data>
         <display>
         <title>hexo部署过程问题与结局方案</title>
@@ -999,26 +1019,6 @@
            
              
               <breadCrumb title="云计算" url="http://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
-    <lastmod>2016-11-16T14:11:07.642Z</lastmod>
-    <data>
-        <display>
-        <title>PHP基础（零）</title>
-        <pubTime>2016-04-01T06:38:32.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://www.vivatakethat.com/categories/Web/"/>
           
         </display>
     </data>
