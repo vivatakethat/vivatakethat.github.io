@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="QT_Memo">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/1922601.jpg">
-<meta property="og:updated_time" content="2016-11-10T06:02:45.000Z">
+<meta property="og:updated_time" content="2016-11-21T08:54:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QT memo">
 <meta name="twitter:description" content="QT_Memo">
@@ -113,9 +113,8 @@
 <p>QT_Memo</p>
 <a id="more"></a>
 <p><strong>1. </strong>Hello,QT<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;QLabel&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="function">QApplication <span class="title">app</span><span class="params">(argc, argv)</span></span>;<span class="comment">// 创建一个QApplication类的实例,QApplication实际上是QCoreApplication的子类。）</span></span><br><span class="line"></span><br><span class="line">    <span class="function">QLabel <span class="title">label</span><span class="params">(<span class="string">"Hello, world"</span>)</span></span>;<span class="comment">//创建一个QLabel对象，构造函数赋值“Hello, world”，当然就是能够在QLabel上面显示这行文本</span></span><br><span class="line">    label.show();<span class="comment">//最后调用QLabel的show()函数将其显示出来。</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> app.exec();  <span class="comment">//调用app.exec()，开启事件循环</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>QT5.70新建空的QT项目时候要注意在<strong>.pro</strong>文件中添加<br><figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">QT +</span>=<span class="string"> core gui</span></span><br></pre></td></tr></table></figure></p>
-<p>不然会出现<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot <span class="built_in">open</span> <span class="built_in">include</span> <span class="built_in">file</span>: <span class="string">'QApplication'</span>: No such <span class="built_in">file</span> <span class="operator">or</span> <span class="built_in">directory</span></span><br></pre></td></tr></table></figure></p>
-<p>之类的错误</p>
+<p>解决方法：<br>1、首先在.pro文件里面添加<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QT       += core gui</span><br><span class="line">greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</span><br></pre></td></tr></table></figure></p>
+<p>2、把所有.cpp文件里面的<code>#include &lt;QtGui&gt;</code>改成<code>#include &lt;QtWidgets&gt;</code><br>按上述两步操作后，可以正常执行程序。</p>
 <hr>
   
 	</div>
@@ -318,6 +317,10 @@
 		  
 		
 		  
+			<li><a href="/categories/English/" title="English">English<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
 		  
 		
@@ -364,7 +367,7 @@
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+			<li><a href="/categories/编程/" title="编程">编程<sup>23</sup></a></li>
 		  
 		
 		  
@@ -385,7 +388,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>13</sup></a></li>
 			
 		
 			
@@ -429,6 +432,10 @@
 			
 		
 			
+				<li><a href="/tags/QT/" title="QT">QT<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
@@ -446,10 +453,6 @@
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
 			
 		
 			

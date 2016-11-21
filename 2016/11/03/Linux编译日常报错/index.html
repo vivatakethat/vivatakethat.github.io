@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="Linux编译日常报错,备忘。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg">
-<meta property="og:updated_time" content="2016-11-03T14:05:18.000Z">
+<meta property="og:updated_time" content="2016-11-19T09:00:45.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux编译日常报错">
 <meta name="twitter:description" content="Linux编译日常报错,备忘。">
@@ -117,7 +117,9 @@
 </li>
 </ol>
 <p>解决方法<br>错误源码:<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">6 <span class="title">MODULE_LINCESE</span><span class="params">(<span class="string">"Dual BSD/GPL"</span>)</span></span>;  <span class="comment">//GPL:声明开源;        Dual BSD:没有版本限制</span></span><br></pre></td></tr></table></figure></p>
-<p>  正确应该为:<br>  ```</p>
+<p>  正确应该为:<br>  <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="css"></span><br><span class="line"># <span class="tag">webbench-1</span><span class="class">.5</span></span><br><span class="line"></span><br><span class="line"><span class="tag">OS</span>: <span class="tag">Ubuntu</span> 14<span class="class">.04</span><span class="class">.2</span> <span class="tag">LTS</span> \<span class="tag">n</span> \<span class="tag">l</span></span><br><span class="line"><span class="tag">gcc</span><span class="pseudo">:gcc</span> <span class="tag">version</span> 4<span class="class">.8</span><span class="class">.4</span> (<span class="tag">Ubuntu</span> 4<span class="class">.8</span><span class="class">.4-2ubuntu1</span>~14<span class="class">.04</span><span class="class">.3</span>) </span><br><span class="line">```<span class="tag">make</span></span><br><span class="line"><span class="tag">root</span><span class="at_rule">@<span class="keyword">ubuntu:~/webbench-1.5#</span> make</span><br><span class="line">cc -Wall -ggdb -W -O   -c -o webbench.o webbench.c</span><br><span class="line">webbench.c: In function ‘alarm_handler’:</span><br><span class="line">webbench.c:<span class="number">77</span>:<span class="number">31</span>: warning: unused parameter ‘signal’ [-Wunused-parameter]</span><br><span class="line"> static void <span class="function">alarm_handler</span>(int signal)</span><br><span class="line">                               ^</span><br><span class="line">cc -Wall -ggdb -W -O  -o webbench webbench.o  </span><br><span class="line">ctags *.c</span><br><span class="line">/bin/sh: <span class="number">1</span>: ctags: not found</span><br><span class="line">make: [tags] Error <span class="number">127</span> (ignored)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>没有ctags命令</p>
+<p>解决办法：安装ctages<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:~/webbench-</span><span class="number">1.5</span><span class="comment"># apt-get install ctags</span></span><br></pre></td></tr></table></figure></p>
   
 	</div>
 
@@ -319,6 +321,10 @@
 		  
 		
 		  
+			<li><a href="/categories/English/" title="English">English<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
 		  
 		
@@ -365,7 +371,7 @@
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>22</sup></a></li>
+			<li><a href="/categories/编程/" title="编程">编程<sup>23</sup></a></li>
 		  
 		
 		  
@@ -386,7 +392,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>12</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>13</sup></a></li>
 			
 		
 			
@@ -430,6 +436,10 @@
 			
 		
 			
+				<li><a href="/tags/QT/" title="QT">QT<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
@@ -447,10 +457,6 @@
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
 			
 		
 			

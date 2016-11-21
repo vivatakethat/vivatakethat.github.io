@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
-  <updated>2016-11-18T10:43:27.000Z</updated>
+  <updated>2016-11-21T16:17:10.215Z</updated>
   <id>http://www.vivatakethat.com/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QWidget类_QT5</title>
+    <link href="http://www.vivatakethat.com/2016/11/22/QWidget%E7%B1%BB_QT5/"/>
+    <id>http://www.vivatakethat.com/2016/11/22/QWidget类_QT5/</id>
+    <published>2016-11-21T16:21:32.000Z</published>
+    <updated>2016-11-21T16:17:10.215Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%A5%9E%E5%A5%87%E5%A5%B3%E4%BE%A04.jpg&quot; alt=&quot;神奇女侠&quot; title=&quot;神奇女侠&quot;&gt;&lt;/p&gt;
+&lt;p&gt;QWidget类是所有用户界面对象的基类，是基础窗口部件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;像窗口、对话框、标签、按钮、文本输入框等都是窗口部件&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实例：窗口与子部件：&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//#include &amp;lt;QtGui&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;lt;QtWidgets&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc, &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; *argv[])&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;QApplication &lt;span class=&quot;title&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(argc, argv)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//新建QWidget类对象，默认parent参数是0，所以它是一个窗口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    QWidget * widget=&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; QWidget();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;comment&quot;&gt;//设置标题&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    widget-&amp;gt;setWindowTitle(QObject::tr(&lt;span class=&quot;string&quot;&gt;&quot;I&#39;m a  label&quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// label2指定了父窗口为widget，所以不是窗口.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      QLabel *label2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; QLabel(widget);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   label2-&amp;gt;setText(QObject::tr(&lt;span class=&quot;string&quot;&gt;&quot;label2:i&#39;m not depart windows,i&#39;m just widget part&quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   label2-&amp;gt;resize(&lt;span class=&quot;number&quot;&gt;250&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;//改变窗口大小；void resize(int w, int h)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/******************************************************************************************/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;comment&quot;&gt;// 新建QLabel对象，默认parent参数是0，所以它是个窗口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   QLabel *label = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; QLabel();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 设置窗口标题&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   label-&amp;gt;setWindowTitle(QObject::tr(&lt;span class=&quot;string&quot;&gt;&quot;I&#39;m a Windows!&quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;comment&quot;&gt;// 设置要显示的信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    label-&amp;gt;setText(QObject::tr(&lt;span class=&quot;string&quot;&gt;&quot;show what your want!&quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    label-&amp;gt;resize(&lt;span class=&quot;number&quot;&gt;250&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/******************************************************************************************/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 在屏幕上显示出来&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    widget-&amp;gt;show();  &lt;span class=&quot;comment&quot;&gt;//代码中有多少个widget就要show多少个&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    label-&amp;gt;show();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/******************************************************************************************/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; ret = a.exec();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   * 这里使用new操作符为label2分配了空间,但是并没有使用delete进行释放，&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   * 这是因为QT在销毁父对象的时候也会自动销毁自独享&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;delete&lt;/span&gt; label;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;delete&lt;/span&gt; widget;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; ret;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%A5%9E%E5%A5%87%E5%A5%B3%E4%BE%A04.jpg&quot; alt=&quot;神奇女侠&quot; title=&quot;神奇女侠&quot;&gt;&lt;/p&gt;
+&lt;p&gt;QWidget类是所有用户界面对象的基类，是基础窗口部件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;像窗口、对话框、标签、按钮、文本输入框等都是窗口部件&lt;br&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="QT" scheme="http://www.vivatakethat.com/tags/QT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>语态_英语语法</title>
+    <link href="http://www.vivatakethat.com/2016/11/20/%E8%AF%AD%E6%80%81_%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95/"/>
+    <id>http://www.vivatakethat.com/2016/11/20/语态_英语语法/</id>
+    <published>2016-11-20T05:32:10.000Z</published>
+    <updated>2016-11-20T18:07:20.191Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Dragon%20Ball.jpg&quot; alt=&quot;Dragon Ball&quot; title=&quot;Dragon Ball&quot;&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;名词&quot;&gt;&lt;a href=&quot;#名词&quot; class=&quot;headerlink&quot; title=&quot;名词&quot;&gt;&lt;/a&gt;名词&lt;/h1&gt;&lt;h2 id=&quot;动词&quot;&gt;&lt;a href=&quot;#动词&quot; class=&quot;headerlink&quot; title=&quot;动词&quot;&gt;&lt;/a&gt;动词&lt;/h2&gt;&lt;p&gt;在英语中按动词后可否直接跟宾语，可以把动词分成两种：及物动词与不及物动词&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不及物动词&lt;br&gt;不及物动词后不能直接跟有动作的对象（即宾语）&lt;blockquote&gt;
+&lt;p&gt;要跟宾语，必须先在其后添加上某个介词，如to,of ,at后方可跟上宾语&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;字典里词后标有vi. 的就是不及物动词。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;及物动词&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Dragon%20Ball.jpg&quot; alt=&quot;Dragon Ball&quot; title=&quot;Dragon Ball&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="English" scheme="http://www.vivatakethat.com/categories/English/"/>
+    
+    
+      <category term="memo" scheme="http://www.vivatakethat.com/tags/memo/"/>
+    
+  </entry>
   
   <entry>
     <title>4412_生成设备节点</title>
@@ -83,7 +149,7 @@
     <link href="http://www.vivatakethat.com/2016/11/18/C++_memo_2/"/>
     <id>http://www.vivatakethat.com/2016/11/18/C++_memo_2/</id>
     <published>2016-11-18T07:42:32.000Z</published>
-    <updated>2016-11-18T03:06:18.000Z</updated>
+    <updated>2016-11-21T05:55:11.866Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E6%9C%88%E4%BA%AE-2016-11-03.jpg&quot; alt=&quot;月_2016-11-03&quot; title=&quot;月_2016-11-03&quot;&gt;&lt;br&gt;C++ 零碎笔记:&lt;br&gt;using &lt;/p&gt;
 &lt;blockquote&gt;
@@ -119,7 +185,7 @@
     <link href="http://www.vivatakethat.com/2016/11/17/C++%E5%B8%B8%E7%94%A8%E5%BA%93_%E5%87%BD%E6%95%B0/"/>
     <id>http://www.vivatakethat.com/2016/11/17/C++常用库_函数/</id>
     <published>2016-11-17T06:02:32.000Z</published>
-    <updated>2016-11-18T03:24:49.000Z</updated>
+    <updated>2016-11-21T06:21:58.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%A5%9E%E5%A5%87%E5%A5%B3%E4%BE%A0.png&quot; alt=&quot;神奇女侠&quot; title=&quot;神奇女侠&quot;&gt;&lt;/p&gt;
 &lt;p&gt;C++常用：类、函数快速查阅，备忘.&lt;/p&gt;
@@ -147,7 +213,14 @@
 &lt;p&gt;p77&lt;br&gt;string对象&lt;br&gt;|操作|说明|&lt;br&gt;|:–:|:—:|&lt;br&gt;|os&amp;lt;&lt;s||将s写到输出流中，返回os| |is=&quot;&quot;&gt;&amp;gt;s|从is中读取字符赋给s,字符串以空白分隔，返回is|&lt;br&gt;|getline(is,s)|从is中读取一行赋给s，返回is|&lt;br&gt;|s.size()|返回s中字符的个数|&lt;br&gt;|s[n]|返回s中第n个字符的引用，位置n从0记起|&lt;/s||将s写到输出流中，返回os|&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;getline读取一整行&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; line;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (getline(&lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt;, line))		&lt;span class=&quot;comment&quot;&gt;/*函数从输入流读入内容，直到遇到换行符为止，然后把所读的内容存入到那个string对象中去。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		cout &amp;lt;&amp;lt; line &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;li&gt;&lt;p&gt;getline读取一整行&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; line;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (getline(&lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt;, line))		&lt;span class=&quot;comment&quot;&gt;/*函数从输入流读入内容，直到遇到换行符为止，然后把所读的内容存入到那个string对象中去。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		cout &amp;lt;&amp;lt; line &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;成员函数: empty&lt;br&gt;根据string对象是否返回一个对应的布尔值&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; line;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (getline(&lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt;, line))   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!line.empty())    		&lt;span class=&quot;comment&quot;&gt;//	每次输入一整行，遇到空行直接跳出&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; line &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;size&lt;br&gt;size函数返回string对象的长度（即string对象中字符的个数）&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; line;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (getline(&lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt;, line))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (line.size()&amp;gt;&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)     &lt;span class=&quot;comment&quot;&gt;//每次读入一整行,输出其中超过4行个字符的行。（也就是说输出超脱4个字符，才输出）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; line &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -1063,7 +1136,7 @@
     <link href="http://www.vivatakethat.com/2016/11/03/Linux%E7%BC%96%E8%AF%91%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/"/>
     <id>http://www.vivatakethat.com/2016/11/03/Linux编译日常报错/</id>
     <published>2016-11-03T05:32:10.000Z</published>
-    <updated>2016-11-03T14:05:18.000Z</updated>
+    <updated>2016-11-19T09:00:45.487Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg&quot; alt=&quot;被关在牢笼中的究竟是James还是Mary&quot; title=&quot;被关在牢笼中的究竟是James还是Mary&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Linux编译日常报错,备忘。&lt;/p&gt;
@@ -1073,7 +1146,9 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;解决方法&lt;br&gt;错误源码:&lt;br&gt;&lt;figure class=&quot;highlight aspectj&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;6 &lt;span class=&quot;title&quot;&gt;MODULE_LINCESE&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Dual BSD/GPL&quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;;  &lt;span class=&quot;comment&quot;&gt;//GPL:声明开源;        Dual BSD:没有版本限制&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;  正确应该为:&lt;br&gt;  ```&lt;/p&gt;
+&lt;p&gt;  正确应该为:&lt;br&gt;  &lt;figure class=&quot;highlight http&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;css&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &lt;span class=&quot;tag&quot;&gt;webbench-1&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;OS&lt;/span&gt;: &lt;span class=&quot;tag&quot;&gt;Ubuntu&lt;/span&gt; 14&lt;span class=&quot;class&quot;&gt;.04&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.2&lt;/span&gt; &lt;span class=&quot;tag&quot;&gt;LTS&lt;/span&gt; \&lt;span class=&quot;tag&quot;&gt;n&lt;/span&gt; \&lt;span class=&quot;tag&quot;&gt;l&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;gcc&lt;/span&gt;&lt;span class=&quot;pseudo&quot;&gt;:gcc&lt;/span&gt; &lt;span class=&quot;tag&quot;&gt;version&lt;/span&gt; 4&lt;span class=&quot;class&quot;&gt;.8&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.4&lt;/span&gt; (&lt;span class=&quot;tag&quot;&gt;Ubuntu&lt;/span&gt; 4&lt;span class=&quot;class&quot;&gt;.8&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.4-2ubuntu1&lt;/span&gt;~14&lt;span class=&quot;class&quot;&gt;.04&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.3&lt;/span&gt;) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```&lt;span class=&quot;tag&quot;&gt;make&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;at_rule&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;ubuntu:~/webbench-1.5#&lt;/span&gt; make&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cc -Wall -ggdb -W -O   -c -o webbench.o webbench.c&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;webbench.c: In function ‘alarm_handler’:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;webbench.c:&lt;span class=&quot;number&quot;&gt;77&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;31&lt;/span&gt;: warning: unused parameter ‘signal’ [-Wunused-parameter]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; static void &lt;span class=&quot;function&quot;&gt;alarm_handler&lt;/span&gt;(int signal)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                               ^&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cc -Wall -ggdb -W -O  -o webbench webbench.o  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ctags *.c&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/bin/sh: &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;: ctags: not found&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make: [tags] Error &lt;span class=&quot;number&quot;&gt;127&lt;/span&gt; (ignored)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;没有ctags命令&lt;/p&gt;
+&lt;p&gt;解决办法：安装ctages&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:~/webbench-&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# apt-get install ctags&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -1545,314 +1620,6 @@
     
     
       <category term="MCU" scheme="http://www.vivatakethat.com/tags/MCU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>英语周记memo_20161024</title>
-    <link href="http://www.vivatakethat.com/2016/10/24/%E8%8B%B1%E8%AF%AD%E5%91%A8%E8%AE%B0memo2016_10_24-10_28/"/>
-    <id>http://www.vivatakethat.com/2016/10/24/英语周记memo2016_10_24-10_28/</id>
-    <published>2016-10-24T04:35:32.000Z</published>
-    <updated>2016-11-15T06:29:54.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/kirov%20airship2.jpg&quot; alt=&quot;kirov airship2&quot; title=&quot;kirov airship2&quot;&gt;&lt;/p&gt;
-&lt;p&gt;20161024——20161030&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;The-Perfect-Essay&quot;&gt;&lt;a href=&quot;#The-Perfect-Essay&quot; class=&quot;headerlink&quot; title=&quot;The Perfect Essay&quot;&gt;&lt;/a&gt;The Perfect Essay&lt;/h1&gt;&lt;p&gt;A 4-year-old may &lt;strong&gt;protest&lt;/strong&gt; that a sister has more fruit juice when it is only the shapes of the glasses that differ,not the amount of juice.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;protest&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;the child will immediately test your &lt;strong&gt;claim&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;claim宣称、要求&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The author was advised against the improper use of figures of speech.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;improper&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;figures of speech :&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The author’smother taught him a valuable lesson by pointing out lots of flaws in his seemingly perfect essay.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;point out&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;flaw :缺陷、瑕疵&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;essay&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;flawless&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;She had no patience for brilliant but irrelevant figures of speech&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;irrelevant:无关紧要，不重要&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对于那些很好但又不相关的修辞是无法忍耐的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Criticizing someone’s speech is said to be easier than coming up with a better one.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Criticize  (v.)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;criticism  （n.）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The author looks upon his mother as his most demanding and caring instructor.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;look upon&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;demanding  &lt;em&gt;adj&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Constructive criticism gives an author a good start to improve his writing.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Constructive :建设性的批评、提议、评论&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;A writer should polish his writing repeatedly so as to get closer to perfection.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;polish  &lt;em&gt;（adj）&lt;/em&gt;波兰的;  &amp;nbsp; &lt;em&gt;()v&lt;/em&gt;抛光，打磨&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;perfection完美 &lt;em&gt;n&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;just &amp;nbsp; &amp;lt;3 &amp;nbsp; code&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lt;3代表心形 就是喜欢的意思 ;仅仅喜欢code&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Ask questions,get answers,no distractions&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;distraction注意力分散; 精神不集中. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;There’s no chilt-chat&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;chilt-chat闲聊&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Real problems or questions that you’ve encountered&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;encounter遭到，遭遇。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Use comments to ask for more information or clarify a question or answer.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;clarify阐明&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Once you earn 50  reputation,you can comment on anybody’s post.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;reputation声誉&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;She  trimmed back my flowery language,drew lines throught my exclamation marks and argued for the value of restraint in expression.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;trimmed back:消减，调整&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;exclamation marks感叹号&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;restraint约束，克制&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;2016年12月CET4-真题第3-套&quot;&gt;&lt;a href=&quot;#2016年12月CET4-真题第3-套&quot; class=&quot;headerlink&quot; title=&quot;2016年12月CET4 真题第3 套&quot;&gt;&lt;/a&gt;2016年12月CET4 真题第3 套&lt;/h1&gt;&lt;p&gt;Section C&lt;/p&gt;
-&lt;p&gt;Could you reproduce Silicon Valley elsewhere,or is there something unique about it?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;reproduce复制，重现&lt;br&gt;Silicon Valley 硅谷&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Observation bears this out.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Observation观察&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Within the US,towns have become startup hubs if and only if the have both rich people and nerds&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Within the 国家名  :在什么 国家 内&lt;br&gt;nerds:痴迷科研的人&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Whereas  Pittsburgh has the  opposite  problem:plenty of nerds,but no rich people.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;opposite:另一面、对立面，相反的&lt;br&gt;Pittsburgh:匹兹堡市  ，地名&lt;br&gt;whereas:然而，但是&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The top US  Computer  Science departments are said to be MIT,Stanford,Berkely,and Carnegie-Mellon yield in Pittsburgh?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Computer Science departments  计算机科学系&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;department:(政府)部，司；（大学）系&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;MIT yielded Route 128.Standord and Berkeley yielded Silicon Valley.But what did Carnegie-Mellon yield in Pittsburh?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;yield ：&lt;em&gt;v&lt;/em&gt;产生 &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;MIT大学开辟了128路公路区，斯坦福大学和伯克利大学开创了硅谷。但是卡内基-梅隆大学在匹兹堡开辟了什么呢？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Startup investors are a distinct type of rich people.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;distinct:截然不同，明显&lt;br&gt;a distinct type of XXX:截然不同的XXX&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;And   the   fact they  have a personal  stake  in the  outcome  makes them  really pay attention.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;personal stake:个人风险&lt;br&gt;outcome: 结果&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Its fame in high technology is incomparable&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;incomparable:无与伦比&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Lack of incentive for investment.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;incentive:刺激&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;what does the author imply about Boston?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;imply about:暗示，意味着&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The weather is terrible ,particularly in winter,and there’s no interesting old city to make up for it,as there is in Boston.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;make up:弥补，化妆&lt;br&gt;天气很糟糕，尤其在冬天，而且又不像波士顿那样有古老而有趣的城市可以弥补。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;It is an old city with many sites of historcial interest.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;sites of historcial interest:历史遗迹&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;翻译：&lt;br&gt;&amp;nbsp; &amp;nbsp;    今年在长沙举行了一年一度的外国人汉语演讲比赛。这项比赛证明是促进中国和世界其他地区文化交流的好方法。它为世界各地的年轻人提供了更好地了解中国的机会。&lt;/p&gt;
-&lt;p&gt;&amp;nbsp; &amp;nbsp;    来自87个国家共计126位选手聚集在湖南省省会参加了从7月6日到8月5日进行的半决赛和决赛。&lt;/p&gt;
-&lt;p&gt;&amp;nbsp; &amp;nbsp;       比赛并不是唯一的活动。选手们还有寄回参观了中国其他地区的著名景点和历史名胜。&lt;/p&gt;
-&lt;p&gt;翻译提示：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;An annual  一年一度&lt;br&gt;Chinese specch contest:汉语演讲比赛&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;contest:比赛，竞赛&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;contestant:参赛者，参赛选手&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;聚集在:gathered in  XXX&lt;/p&gt;
-&lt;p&gt;a brief description of the picture XXXX&lt;br&gt;&amp;gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/kirov%20airship2.jpg&quot; alt=&quot;kirov airship2&quot; title=&quot;kirov airship2&quot;&gt;&lt;/p&gt;
-&lt;p&gt;20161024——20161030&lt;br&gt;
-    
-    </summary>
-    
-      <category term="memo" scheme="http://www.vivatakethat.com/categories/memo/"/>
-    
-    
-      <category term="English" scheme="http://www.vivatakethat.com/tags/English/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>游戏中出现的词汇</title>
-    <link href="http://www.vivatakethat.com/2016/10/19/G-%E6%B8%B8%E6%88%8F%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E5%8D%95%E8%AF%8D/"/>
-    <id>http://www.vivatakethat.com/2016/10/19/G-游戏中出现的单词/</id>
-    <published>2016-10-19T10:32:10.000Z</published>
-    <updated>2016-11-06T13:59:50.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Crysis2-.jpg&quot; alt=&quot;Crysis2-Maximum Edition&quot; title=&quot;Crysis2-Maximum Edition&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Crysis2-Maximum Edition中出现的词汇&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Crysis2-Maximum-Edition&quot;&gt;&lt;a href=&quot;#Crysis2-Maximum-Edition&quot; class=&quot;headerlink&quot; title=&quot;Crysis2-Maximum Edition&quot;&gt;&lt;/a&gt;Crysis2-Maximum Edition&lt;/h1&gt;&lt;p&gt;Primary:locate and Protect Nathan Gould:Find the subway entrance&lt;/p&gt;
-&lt;p&gt;CAMPAIGN战役&lt;/p&gt;
-&lt;p&gt;Alpha company:阿尔法连队&lt;/p&gt;
-&lt;p&gt;Nanosuit:纳米服&lt;/p&gt;
-&lt;p&gt;MODS&lt;/p&gt;
-&lt;p&gt;FELINE&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Accuracy  精准&lt;/li&gt;
-&lt;li&gt;Rate of fire 射速&lt;/li&gt;
-&lt;li&gt;Mobility  移动性&lt;/li&gt;
-&lt;li&gt;damage  损害&lt;/li&gt;
-&lt;li&gt;range   射程，最大范围&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Press F Resupply grenades&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;按F再供给手榴弹&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Double tap 1 Equip  grenades&lt;/p&gt;
-&lt;p&gt;AMMO弹药&lt;/p&gt;
-&lt;p&gt;Resupply ammunition再供给弹药&lt;/p&gt;
-&lt;p&gt;lean over斜靠&lt;/p&gt;
-&lt;p&gt;Hold melee to perform a Power Melee attack.Crush enemies with a single blow.&lt;/p&gt;
-&lt;p&gt;Investigate the Crash Site:Examine the alien pods&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;investigate侦查&lt;br&gt;examine仔细检查&lt;br&gt;pods豌豆&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;NEW YORK SOUVENIRS&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Souvenirs纪念品&lt;br&gt;DOG TAGS&lt;br&gt;NEW YORK VEHICLES&lt;br&gt;EMAIL CONVERSATIONS&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;All civilians,go immediately to the lower levels&lt;blockquote&gt;
-&lt;p&gt;civilians平民&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;We need another twenty minutes for full evac.&lt;blockquote&gt;
-&lt;p&gt;evac:撤离(evacuation)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;Take those squid mother fuckers down!&lt;blockquote&gt;
-&lt;p&gt;squid鱿鱼&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Colonel Barclay,this is Alpha Two.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Colonel上校&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;We’re in the main hall  !&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;hall 门厅&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Mortars!Incoming!&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;mortars迫击炮&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Primary:Escape Central Station Collapse:Board the vehicle to Time Square&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;vehicle车&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This is Barclay to all remaining marines in the mid-town.&lt;br&gt;Secondary evacuation is now relocated to Times Square.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;relocate搬迁，重新安置&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;marines海军陆战队  &lt;em&gt;n.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;where we will airlift whith heavy armored VTOL transports.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;航空运输&lt;br&gt;armored武装，装甲&lt;br&gt;VTOL:垂直起降喷气机&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Warning:The Nanosuit consumes energy when absorbing damage in Armor Mode&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;consume:消耗，消费&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Watch for ricochet,give it some space.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;ricochet:跳弹&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Primary:Eliminate Commander Lockhart&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Eliminate清除&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;he must’ve  cloaked!&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;cloaked:伪装,斗篷&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Crysis2-.jpg&quot; alt=&quot;Crysis2-Maximum Edition&quot; title=&quot;Crysis2-Maximum Edition&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Crysis2-Maximum Edition中出现的词汇&lt;br&gt;
-    
-    </summary>
-    
-      <category term="memo" scheme="http://www.vivatakethat.com/categories/memo/"/>
-    
-    
-      <category term="English" scheme="http://www.vivatakethat.com/tags/English/"/>
     
   </entry>
   
