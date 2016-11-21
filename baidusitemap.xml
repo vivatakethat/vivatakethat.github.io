@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/11/17/Visual%20Studio-Error/</loc>
-    <lastmod>2016-11-21T17:10:27.000Z</lastmod>
+    <loc>http://www.vivatakethat.com/2016/11/22/QWidget%E7%B1%BB_QT5/</loc>
+    <lastmod>2016-11-21T17:18:18.000Z</lastmod>
     <data>
         <display>
-        <title>Visual Studio-Error</title>
-        <pubTime>2016-11-17T05:32:10.000Z</pubTime>
+        <title>QWidget类_QT5</title>
+        <pubTime>2016-11-21T16:21:32.000Z</pubTime>
         
-        <tag>IDE</tag>
+        <tag>QT</tag>
          
          
            
@@ -25,13 +25,33 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/11/18/C++_memo_2/</loc>
-    <lastmod>2016-11-21T17:09:30.000Z</lastmod>
+    <lastmod>2016-11-21T17:17:33.000Z</lastmod>
     <data>
         <display>
         <title>C++_memo_2</title>
         <pubTime>2016-11-18T07:42:32.000Z</pubTime>
         
         <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/11/17/Visual%20Studio-Error/</loc>
+    <lastmod>2016-11-21T17:17:26.748Z</lastmod>
+    <data>
+        <display>
+        <title>Visual Studio-Error</title>
+        <pubTime>2016-11-17T05:32:10.000Z</pubTime>
+        
+        <tag>IDE</tag>
          
          
            
@@ -57,26 +77,6 @@
            
              
               <breadCrumb title="English" url="http://www.vivatakethat.com/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/22/QWidget%E7%B1%BB_QT5/</loc>
-    <lastmod>2016-11-21T17:08:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>QWidget类_QT5</title>
-        <pubTime>2016-11-21T16:21:32.000Z</pubTime>
-        
-        <tag>QT</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
           
         </display>
     </data>
