@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2016-11-21T17:25:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo部署过程问题与结局方案</title>
+        <pubTime>2016-10-17T08:10:32.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://www.vivatakethat.com/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/11/22/QWidget%E7%B1%BB_QT5/</loc>
     <lastmod>2016-11-21T17:21:50.000Z</lastmod>
     <data>
@@ -237,26 +257,6 @@
            
              
               <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2016-11-18T02:22:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo部署过程问题与结局方案</title>
-        <pubTime>2016-10-17T08:10:32.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="http://www.vivatakethat.com/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
