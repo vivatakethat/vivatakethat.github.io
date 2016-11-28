@@ -23,7 +23,7 @@ c++  Primer第五版">
 
 c++  Primer第五版">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg">
-<meta property="og:updated_time" content="2016-11-17T18:47:00.000Z">
+<meta property="og:updated_time" content="2016-11-27T13:53:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo_1">
 <meta name="twitter:description" content="c++零碎笔记：类、函数、引用、指针、const、auto、 constexpr变量、decltype
@@ -173,9 +173,11 @@ c++  Primer第五版">
 <li><p>const指针<br><strong>1.</strong> 常量指针<br>此时不能通过指针改变所指对象的值，但指针本身可以改变。例如：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a=<span class="number">20</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> b=<span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p=&amp;a;    <span class="comment">//指针类型前加const表示p为常量指针</span></span><br><span class="line"></span><br><span class="line">*p=<span class="number">30</span>;      <span class="comment">//错，不能那个通过P修改指针指向常量</span></span><br><span class="line">p=&amp;b;       <span class="comment">//对，指针本身的值可以修改</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>指针和数组<br>数组是具有一定顺序关系的若干个同类型变量的集合体，数组中所有元素都是一次存储在内存单元中的，每个元素都有相应的地址。</p>
+<li><p>指针和数组</p>
 </li>
 </ul>
+<p><a href="http://www.cnblogs.com/mq0036/p/3382732.html" target="_blank" rel="external">补充阅读连接</a></p>
+<p>数组是具有一定顺序关系的若干个同类型变量的集合体，数组中所有元素都是一次存储在内存单元中的，每个元素都有相应的地址。</p>
 <p>例如,当有下列的数组定义时:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>];</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>则a所表示的地址就是元素a[0]的地址，即a等于&amp;a[0]。在指针操作中，若定义了下列指针并初始化为:</p>
@@ -718,10 +720,6 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
-		  
-		
-		  
 			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
 		  
 		
@@ -752,7 +750,7 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>21</sup></a></li>
 		  
 		
 		  
@@ -785,7 +783,7 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
 			
 		
 			
@@ -809,11 +807,11 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
 			
 		
 			
@@ -821,7 +819,7 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -837,7 +835,7 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
 			
 		
 			

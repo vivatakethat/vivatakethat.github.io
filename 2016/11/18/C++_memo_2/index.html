@@ -23,7 +23,7 @@ C++ Primer第5版">
 
 C++ Primer第5版">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E6%9C%88%E4%BA%AE-2016-11-03.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-11-26T16:21:14.000Z">
+<meta property="og:updated_time" content="2016-11-27T17:14:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo_2">
 <meta name="twitter:description" content="C++ 零碎笔记:using 
@@ -111,7 +111,7 @@ C++ Primer第5版">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">4.</span> <span class="toc-text">new和delete</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#this"><span class="toc-number">5.</span> <span class="toc-text">this</span></a></li></ol>
 		
 		</div>
 		
@@ -147,6 +147,11 @@ C++ Primer第5版">
 <li>枚举中每个成员(标识符)结束符是<figure class="highlight"><figcaption><span>最后一个成员可省略 ``**,**``</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;2. &#21021;&#22987;&#21270;&#26102;&#21487;&#20197;&#36171;&#36127;&#25968;, &#20197;&#21518;&#30340;&#26631;&#35782;&#31526;&#20173;&#20381;&#27425;&#21152;1&#12290; &#10;&#10;3. &#26522;&#20030;&#21464;&#37327;&#21482;&#33021;&#21462;&#26522;&#20030;&#35828;&#26126;&#32467;&#26500;&#20013;&#30340;&#26576;&#20010;&#26631;&#35782;&#31526;&#24120;&#37327;&#12290; &#10;    &#20363;&#22914;: &#10;```C++&#10;enum string &#10;&#123; &#10;    x1=5, &#10;    x2, &#10;    x3, &#10;    x4, &#10;&#125;; &#10;enum strig x=x3;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>此时, 枚举变量x实际上是7。</p>
+<hr>
+<h1 id="new和delete"><a href="#new和delete" class="headerlink" title="new和delete"></a>new和delete</h1><p>动态内存分配可以保证我们在程序运行过程中按照实际需求盛情适量的内存，使用结束后还可以释放。</p>
+<p>动态数组程序<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span>::<span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span>  <span class="built_in">std</span>::<span class="built_in">string</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">( )</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span>(*cp)[<span class="number">5</span>];	<span class="comment">//该语句是定义一个数组指针，指向含5个元素的一维数组。</span></span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	cp = <span class="keyword">new</span> <span class="keyword">float</span>[<span class="number">3</span>][<span class="number">5</span>];    <span class="comment">//可以这样赋值的吗？</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</span><br><span class="line">			*(*(cp + i) + j) = <span class="keyword">float</span>(i * <span class="number">2</span> + j);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; cp[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[] cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br><span class="line"><span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>this指针是一个隐含于每一个类成员函数中的特殊指针，它指向正在被成员函数操作对象的本身。</p>
   
 	</div>
 
@@ -316,7 +321,7 @@ C++ Primer第5版">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">4.</span> <span class="toc-text">new和delete</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#this"><span class="toc-number">5.</span> <span class="toc-text">this</span></a></li></ol>
  
   </div>
 
@@ -356,10 +361,6 @@ C++ Primer第5版">
 		  
 		
 		  
-			<li><a href="/categories/Linux驱动设备/" title="Linux驱动设备">Linux驱动设备<sup>1</sup></a></li>
-		  
-		
-		  
 			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
 		  
 		
@@ -390,7 +391,7 @@ C++ Primer第5版">
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>20</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>21</sup></a></li>
 		  
 		
 		  
@@ -423,7 +424,7 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>11</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
 			
 		
 			
@@ -447,11 +448,11 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>3</sup></a></li>
 			
 		
 			
@@ -459,7 +460,7 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -475,7 +476,7 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>2</sup></a></li>
+				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
 			
 		
 			

@@ -4,12 +4,52 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/11/18/4412_%E7%94%9F%E6%88%90%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9/</loc>
+    <lastmod>2016-11-28T06:24:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>4412_生成设备节点</title>
+        <pubTime>2016-11-18T10:42:32.000Z</pubTime>
+        
+        <tag>驱动</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/11/18/C++_memo_2/</loc>
-    <lastmod>2016-11-26T16:21:14.000Z</lastmod>
+    <lastmod>2016-11-27T17:14:22.000Z</lastmod>
     <data>
         <display>
         <title>C++_memo_2</title>
         <pubTime>2016-11-18T07:42:32.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/11/17/C++_memo_1/</loc>
+    <lastmod>2016-11-27T13:53:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>C++_memo_1</title>
+        <pubTime>2016-11-16T16:42:32.000Z</pubTime>
         
         <tag>C++</tag>
          
@@ -224,26 +264,6 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/11/18/4412_%E7%94%9F%E6%88%90%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9/</loc>
-    <lastmod>2016-11-18T10:43:27.000Z</lastmod>
-    <data>
-        <display>
-        <title>4412_生成设备节点</title>
-        <pubTime>2016-11-18T10:42:32.000Z</pubTime>
-        
-        <tag>MCU</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux驱动设备" url="http://www.vivatakethat.com/categories/Linux%E9%A9%B1%E5%8A%A8%E8%AE%BE%E5%A4%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/09/04/4412_ADC%E6%A8%A1%E6%95%B0%E8%BD%AC%E6%8D%A2/</loc>
     <lastmod>2016-11-18T10:36:25.000Z</lastmod>
     <data>
@@ -323,26 +343,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/17/C++_memo_1/</loc>
-    <lastmod>2016-11-17T18:47:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>C++_memo_1</title>
-        <pubTime>2016-11-16T16:42:32.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
   <url>
