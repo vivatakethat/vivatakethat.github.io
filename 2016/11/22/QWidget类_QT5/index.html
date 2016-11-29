@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="QWidget类是所有用户界面对象的基类，是基础窗口部件。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%A5%9E%E5%A5%87%E5%A5%B3%E4%BE%A04.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-11-22T07:47:58.000Z">
+<meta property="og:updated_time" content="2016-11-29T14:23:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QWidget类_QT5">
 <meta name="twitter:description" content="QWidget类是所有用户界面对象的基类，是基础窗口部件。">
@@ -119,21 +119,24 @@
 <ul>
 <li><p>窗口部件<strong>Widget</strong><br>窗口部件(Widget)是Qt中建立用户界面的主要元素。像窗口、对话框、标签、按钮、文本输入框等都是窗口部件。</p>
 </li>
-<li><p>窗口<br>窗口就是没有父部件的部件，所以又称为<strong>顶级部件</strong>（top-level widget）。</p>
+<li><p>窗口</p>
+</li>
+</ul>
+<p>窗口就是没有父部件的部件，所以又称为<strong>顶级部件</strong>（top-level widget）。</p>
 <blockquote>
 <p>与其相对的是非窗口部件，即<strong>子部件</strong>(child widget)</p>
 <blockquote>
-<p>Qt中大部分不仅用作子部件嵌入在别的窗口中，例如程序中的<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10;+ QWidget&#10;&#25552;&#20379;&#20102;&#32472;&#21046;&#33258;&#24049;&#21644;&#22788;&#29702;&#29992;&#25143;&#36755;&#20837;&#20107;&#20214;&#30340;&#22522;&#26412;&#21151;&#33021;&#65292;Qt&#25552;&#20379;&#30340;&#25152;&#26377;&#30028;&#38754;&#20803;&#32032;&#19981;&#26159;QWidget&#30340;&#23376;&#31867;&#23601;&#26159;&#19982;QWidget&#30340;&#23376;&#31867;&#30456;&#20851;&#32852;&#12290;&#10;&#62;&#35201;&#35774;&#35745;&#33258;&#24049;&#30340;&#31383;&#21475;&#37096;&#20214;&#65292;&#21487;&#20197;&#32487;&#25215;&#33258;QWidget&#25110;&#32773;&#23427;&#30340;&#23376;&#31867;&#31561;&#12290;&#10;&#10;&#10;QWidget&#30340;&#26500;&#36896;&#20989;&#25968;&#27809;&#26377;2&#20010;&#21442;&#25968;:&#10;&#10;```C++&#10;QWidget * parent=0      // parent&#23601;&#26159;&#25351;&#29238;&#31383;&#21475;&#37096;&#20214;&#65292;&#40664;&#35748;&#20540;&#20026;0&#65292;&#34920;&#26126;&#27809;&#26377;&#29238;&#31383;&#21475;&#12290;</span><br></pre></td></tr></table></figure></p>
+<p>Qt中大部分不仅用作子部件嵌入在别的窗口中，例如程序中的<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10;+ QWidget&#10;&#10;&#25552;&#20379;&#20102;&#32472;&#21046;&#33258;&#24049;&#21644;&#22788;&#29702;&#29992;&#25143;&#36755;&#20837;&#20107;&#20214;&#30340;&#22522;&#26412;&#21151;&#33021;&#65292;Qt&#25552;&#20379;&#30340;&#25152;&#26377;&#30028;&#38754;&#20803;&#32032;&#19981;&#26159;QWidget&#30340;&#23376;&#31867;&#23601;&#26159;&#19982;QWidget&#30340;&#23376;&#31867;&#30456;&#20851;&#32852;&#12290;&#10;&#62;&#35201;&#35774;&#35745;&#33258;&#24049;&#30340;&#31383;&#21475;&#37096;&#20214;&#65292;&#21487;&#20197;&#32487;&#25215;&#33258;QWidget&#25110;&#32773;&#23427;&#30340;&#23376;&#31867;&#31561;&#12290;&#10;&#10;&#10;QWidget&#30340;&#26500;&#36896;&#20989;&#25968;&#27809;&#26377;2&#20010;&#21442;&#25968;:&#10;&#10;```C++&#10;QWidget * parent=0      // parent&#23601;&#26159;&#25351;&#29238;&#31383;&#21475;&#37096;&#20214;&#65292;&#40664;&#35748;&#20540;&#20026;0&#65292;&#34920;&#26126;&#27809;&#26377;&#29238;&#31383;&#21475;&#12290;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 </blockquote>
-</li>
-</ul>
 <p>和</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Qt::WindowFlags f=<span class="number">0</span>     <span class="comment">// f参数是Qt::WindowFlags类型，是一个枚举类型，分为窗口类型WindowType和窗口标志WindowFlags  ?????</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="qDebug"><a href="#qDebug" class="headerlink" title="qDebug()"></a>qDebug()</h2><p>qDebug()函数输出方法：</p>
 <ul>
 <li>直接将字符串当作参数传给qDebug()函数，</li>
+</ul>
+<ul>
 <li>另一种：使用输出流的方式一次输出多个值<blockquote>
 <p>这种方法必须添加头文件<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10;```C++&#10;#include &#60;QtWidgets&#62;&#10;#include&#60;QWidget&#62;&#10;#include&#60;QDebug&#62;&#10;int main(int argc,char *argv[])&#10;&#123;&#10;    QApplication a(argc,argv);&#10;    QWidget widget;&#10;    widget.resize(400,300);     //&#35774;&#32622;&#31383;&#21475;&#22823;&#23567;&#10;    widget.move(200,100);       //&#35774;&#32622;&#31383;&#21475;&#20301;&#32622;&#10;    widget.show();&#10;    int x=widget.x();&#10;    qDebug(&#34;x: %d &#34;,x);  //&#36755;&#20986;x&#30340;&#20540;;  &#30452;&#25509;&#23558;&#23383;&#31526;&#20018;&#24403;&#20316;&#21442;&#25968;&#20256;&#32473;qDebug()&#20989;&#25968;&#65292;&#10;    int y=widget.y();&#10;    qDebug(&#34;y: %d  &#34;,y);&#10;    QRect geometry=widget.geometry();       &#10;    QRect frame=widget.frameGeometry();&#10;    qDebug()&#60;&#60;&#34;geometry:&#34;&#60;&#60;geometry&#60;&#60;&#34;frame:&#34;&#60;&#60;frame;         //&#20351;&#29992;&#36755;&#20986;&#27969;&#30340;&#26041;&#24335;&#19968;&#27425;&#36755;&#20986;&#22810;&#20010;&#20540;&#10;&#10;    qDebug()&#60;&#60;&#34;post:&#34;&#60;&#60;widget.pos()&#60;&#60;endl&#60;&#60;&#34;rect:&#34;&#60;&#60;widget.rect()&#60;&#60;&#10;    endl&#60;&#60;&#34;size:&#34;&#60;&#60;widget.size()&#60;&#60;endl&#60;&#60;&#34;with:&#34;&#60;&#60;widget.width()&#60;&#60;endl&#60;&#60;&#34;height:&#34;&#10;    &#60;&#60;widget.height();&#10;    return a.exec();&#10;&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
