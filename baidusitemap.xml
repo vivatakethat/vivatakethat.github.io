@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/11/16/makefile/</loc>
+    <lastmod>2016-12-01T08:22:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>makefile</title>
+        <pubTime>2016-11-15T16:27:32.000Z</pubTime>
+        
+        <tag>make</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/11/17/C++_memo1/</loc>
     <lastmod>2016-12-01T08:18:50.000Z</lastmod>
     <data>
@@ -379,26 +399,6 @@
            
              
               <breadCrumb title="Record" url="http://www.vivatakethat.com/categories/Record/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/16/makefile/</loc>
-    <lastmod>2016-11-16T15:12:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>makefile</title>
-        <pubTime>2016-11-15T16:27:32.000Z</pubTime>
-        
-        <tag>make</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
           
         </display>
     </data>
