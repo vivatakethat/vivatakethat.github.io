@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Union-Find | take that的博客</title>
+    <title>take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,25 +12,17 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="Steps to developing a usable algorithm
-first step is to model the problem
-Try to understand, basically, what are the main elements of the problem that need to be solved">
+    <meta name="description" content="抽象、封装、类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Union-Find">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/06/22/Coursera-Union-Find/index.html">
+<meta property="og:title" content="take that的博客">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/12/01/类与对象/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="Steps to developing a usable algorithm
-first step is to model the problem
-Try to understand, basically, what are the main elements of the problem that need to be solved">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E3%81%95%E3%81%8F%E3%82%89%E3%80%812.jpg">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Given-a-set-of-n-object.png">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/pq-two-object.png">
-<meta property="og:updated_time" content="2016-11-16T14:13:57.000Z">
+<meta property="og:description" content="抽象、封装、类">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg">
+<meta property="og:updated_time" content="2016-12-01T07:31:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Union-Find">
-<meta name="twitter:description" content="Steps to developing a usable algorithm
-first step is to model the problem
-Try to understand, basically, what are the main elements of the problem that need to be solved">
+<meta name="twitter:title" content="take that的博客">
+<meta name="twitter:description" content="抽象、封装、类">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -94,7 +86,7 @@ Try to understand, basically, what are the main elements of the problem that nee
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/22/Coursera-Union-Find/" title="Union-Find" itemprop="url">Union-Find</a>
+      <a href="/2016/12/01/类与对象/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
@@ -104,7 +96,7 @@ Try to understand, basically, what are the main elements of the problem that nee
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-06-21T18:11:32.000Z" itemprop="datePublished"> 发表于 2016-06-22</time>
+    <time datetime="2016-12-01T07:42:32.000Z" itemprop="datePublished"> 发表于 2016-12-01</time>
     
   </p>
 </header>
@@ -113,60 +105,48 @@ Try to understand, basically, what are the main elements of the problem that nee
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Steps-to-developing-a-usable-algorithm"><span class="toc-number">1.</span> <span class="toc-text">Steps to developing a usable algorithm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dynamic-connectivity"><span class="toc-number">2.</span> <span class="toc-text">dynamic connectivity</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Given-a-set-of-N-objects"><span class="toc-number">2.1.</span> <span class="toc-text">Given a set of N objects.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modeling-the-object"><span class="toc-number">2.2.</span> <span class="toc-text">Modeling the object</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象"><span class="toc-number">1.</span> <span class="toc-text">抽象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类-派生"><span class="toc-number">3.1.</span> <span class="toc-text">子类(派生)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多态"><span class="toc-number">4.</span> <span class="toc-text">多态</span></a></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E3%81%95%E3%81%8F%E3%82%89%E3%80%812.jpg" alt="さくら、" title="さくら"></p>
-<h1 id="Steps-to-developing-a-usable-algorithm"><a href="#Steps-to-developing-a-usable-algorithm" class="headerlink" title="Steps to developing a usable algorithm"></a>Steps to developing a usable algorithm</h1><ol>
-<li>first step is to model the problem<blockquote>
-<p>Try to understand, basically, what are the main elements of the problem that need to be solved</p>
-<a id="more"></a></blockquote>
-</li>
-<li><p>Find an algorithm to solve it.</p>
-</li>
-<li><p>Fast enough? Fits in memory?</p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg" alt="Grand theft dora" title="Grand theft dora"></p>
+<p>抽象、封装、类<br><a id="more"></a></p>
+<h1 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h1><p>抽象与具体相对应,<br>就是找出事物的共性，将相同性质的事物化为一类，而忽略具体细节，</p>
 <blockquote>
-<p>if not ,fiugre out why.</p>
-<p>find a way to address the problem.</p>
+<p>抽象就是面向对象程序设计的基本原则之一</p>
 </blockquote>
-</li>
-<li><p>lterate until satisfied.</p>
-</li>
-</ol>
-<hr>
-<h1 id="dynamic-connectivity"><a href="#dynamic-connectivity" class="headerlink" title="dynamic connectivity"></a>dynamic connectivity</h1><blockquote>
-<p>So, first we’ll talk about the dynamic connectivity<em>动态连接性</em> problem, the model of the problem for union find.</p>
-</blockquote>
-<h2 id="Given-a-set-of-N-objects"><a href="#Given-a-set-of-N-objects" class="headerlink" title="Given a set of N objects."></a>Given a set of N objects.</h2><ul>
-<li>Union Command:<blockquote>
-<p>connect two objects.</p>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>Find/connected query:<blockquote>
-<p>is there a path connecting the two objects?</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Given-a-set-of-n-object.png" alt="N objects" title="N objects"></p>
+<p>类是抽象的描述，是 具有相同的属性和行为 形成的一组对象，一个属于某类的对象称为该类的一个实例。</p>
+<h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><p>利用<code>**类(class)**</code>的形式进行<strong>封装</strong>，通过封装可以将每个对象的数据（属性）和操作（行为）封装在一个类中，使其形成<strong>一个有机的整体</strong>.</p>
 <blockquote>
-<p>union(n,x) 中的两个参数n,x2个数相连</p>
-<p>connected(j,k)判断j,k两个目标是否能相连</p>
+<p>一部分操作或属性作为类与外部的接口，将其他成员隐藏起来，这样可以使用接口访问程序。</p>
+<blockquote>
+<p>使用接口访问程序，使模块化程序之间关系更简单、数据更安全，对程序的修改该也仅限制于内部。</p>
 </blockquote>
-<p><br></p>
-<p>Q. Is there there a path connecting <em>p</em> and <em>q</em>?<br><img src="http://7xsic8.com1.z0.glb.clouddn.com/pq-two-object.png" alt="Connectivity example" title="Connectivity example"></p>
-<h2 id="Modeling-the-object"><a href="#Modeling-the-object" class="headerlink" title="Modeling the object"></a>Modeling the object</h2><ul>
-<li>Pixels in digital photo.</li>
-<li>Computers in a network.</li>
-<li>Friends in a social network.</li>
-<li>Transistors in a computer chip.</li>
-<li>Elements in a mathematical set.</li>
-<li>Variable names in Fortran program</li>
-<li>Metallic sites in a composite system.</li>
-</ul>
-  
+</blockquote>
+<p>将数据和代码封装为一个<strong>可重用</strong>的C++类,在编写代码的时候就可以使用现有的类，而不必了解具体的实现细节。</p>
+<p>电视封装形式：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Television    <span class="comment">//class关键字 类名</span></span><br><span class="line">&#123;               <span class="comment">//边界</span></span><br><span class="line"><span class="keyword">public</span>:          <span class="comment">//外部接口</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetChannel</span><span class="params">(<span class="keyword">int</span> Channe1Num)</span></span>;    <span class="comment">//行为，代码成员</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ShutDown</span><span class="params">()</span></span>;              <span class="comment">//行为，代码成员</span></span><br><span class="line"><span class="keyword">private</span>:                <span class="comment">//特定的访问权限</span></span><br><span class="line">    <span class="keyword">int</span> CurrentChanel;              <span class="comment">//属性，数据成员</span></span><br><span class="line">&#125;;                                  <span class="comment">//边界</span></span><br></pre></td></tr></table></figure></p>
+<p>这是一个C++类的声明，它声明了Television的类，<br>大括号”{ }”中部分成员称为<code>**类体**</code>，类体由<code>**成员**</code>表组成，成员表为    数据定义或函数定义。？？</p>
+<blockquote>
+<p>声明为public和private是利用指定成员的不同访问权限。</p>
+<blockquote>
+<p>声明为Public的函数为类提供了外部接口，外接只能通过这个接口与television类发生联系，.<br>声明为private的整形数据是Television类的私有成员，外接无法直接访问。<br>可以看到，C++中通过类的机制实现了对数据的有效封装。</p>
+</blockquote>
+</blockquote>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>继承(inheritance)将一个类的操作和数据结构提供另一个类，这使得程序员可以使用已有的类建立新类。新类继承了现有类的特性，包裹一些属性和行为,并且可以修改或增加新的属性和行为。 </p>
+<blockquote>
+<p>继承是面向对象技术能够提高软件开发效率的重要原因之一，更好的解决了软件可<code>**重用性**</code>问题。</p>
+</blockquote>
+<h2 id="子类-派生"><a href="#子类-派生" class="headerlink" title="子类(派生)"></a>子类(派生)</h2><p>C++可以声明一个新类作为另一个类的派生。派生类(也叫子类)继承父类的属性和操作。</p>
+<blockquote>
+<p>子类也声明了心得操作和属性，除去了一些不适合于自身用途的继承下来的操作和属性。</p>
+<blockquote>
+<p>继承也可以重用父类的代码，只专注与子类代码的编写。</p>
+<blockquote>
+<p>父类中已经实现的操作，在新的应用中，无需修改傅雷，所做的就是声明其派生类，在子类中做一些增加和修改。这种机制，实现了代码的重用。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1>  
 	</div>
 
 	<!-- css -->
@@ -276,13 +256,13 @@ Try to understand, basically, what are the main elements of the problem that nee
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Coursera/">Coursera</a>
+  <a class="article-category-link" href="/categories/编程/">编程</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Coursera-Algorithms/">Coursera-Algorithms</a>
+  <span></span> <a href="/tags/C/">C++</a>
   </div>
 
 </div>
@@ -291,7 +271,7 @@ Try to understand, basically, what are the main elements of the problem that nee
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/06/22/Coursera-Union-Find/" data-title="Union-Find | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/12/01/类与对象/" data-title="take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -304,19 +284,11 @@ Try to understand, basically, what are the main elements of the problem that nee
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/06/23/Linux系统编程-常见操作/" title="Linux系统编程-常见操作">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Linux系统编程-常见操作</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/06/21/C语言基础（6）-结构体/"  title="C语言基础6:结构体">
+<a href="/2016/11/18/4412_生成设备节点/"  title="4412_生成设备节点">
  <strong>下一篇：</strong><br/> 
- <span>C语言基础6:结构体
+ <span>4412_生成设备节点
 </span>
 </a>
 </div>
@@ -325,7 +297,7 @@ Try to understand, basically, what are the main elements of the problem that nee
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/22/Coursera-Union-Find/" data-title="Union-Find" data-url="http://www.vivatakethat.com/2016/06/22/Coursera-Union-Find/"></div>
+	<div class="ds-thread" data-thread-key="2016/12/01/类与对象/" data-title="" data-url="http://www.vivatakethat.com/2016/12/01/类与对象/"></div>
 </section>
 
 
@@ -335,7 +307,7 @@ Try to understand, basically, what are the main elements of the problem that nee
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Steps-to-developing-a-usable-algorithm"><span class="toc-number">1.</span> <span class="toc-text">Steps to developing a usable algorithm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dynamic-connectivity"><span class="toc-number">2.</span> <span class="toc-text">dynamic connectivity</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Given-a-set-of-N-objects"><span class="toc-number">2.1.</span> <span class="toc-text">Given a set of N objects.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modeling-the-object"><span class="toc-number">2.2.</span> <span class="toc-text">Modeling the object</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象"><span class="toc-number">1.</span> <span class="toc-text">抽象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类-派生"><span class="toc-number">3.1.</span> <span class="toc-text">子类(派生)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多态"><span class="toc-number">4.</span> <span class="toc-text">多态</span></a></li></ol>
  
   </div>
 

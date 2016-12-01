@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
-  <updated>2016-11-28T06:24:10.000Z</updated>
+  <updated>2016-12-01T07:31:11.000Z</updated>
   <id>http://www.vivatakethat.com/</id>
   
   <author>
@@ -14,6 +14,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.vivatakethat.com/2016/12/01/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://www.vivatakethat.com/2016/12/01/类与对象/</id>
+    <published>2016-12-01T07:42:32.000Z</published>
+    <updated>2016-12-01T07:31:11.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg&quot; alt=&quot;Grand theft dora&quot; title=&quot;Grand theft dora&quot;&gt;&lt;/p&gt;
+&lt;p&gt;抽象、封装、类&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;抽象&quot;&gt;&lt;a href=&quot;#抽象&quot; class=&quot;headerlink&quot; title=&quot;抽象&quot;&gt;&lt;/a&gt;抽象&lt;/h1&gt;&lt;p&gt;抽象与具体相对应,&lt;br&gt;就是找出事物的共性，将相同性质的事物化为一类，而忽略具体细节，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;抽象就是面向对象程序设计的基本原则之一&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;类是抽象的描述，是 具有相同的属性和行为 形成的一组对象，一个属于某类的对象称为该类的一个实例。&lt;/p&gt;
+&lt;h1 id=&quot;封装&quot;&gt;&lt;a href=&quot;#封装&quot; class=&quot;headerlink&quot; title=&quot;封装&quot;&gt;&lt;/a&gt;封装&lt;/h1&gt;&lt;p&gt;利用&lt;code&gt;**类(class)**&lt;/code&gt;的形式进行&lt;strong&gt;封装&lt;/strong&gt;，通过封装可以将每个对象的数据（属性）和操作（行为）封装在一个类中，使其形成&lt;strong&gt;一个有机的整体&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一部分操作或属性作为类与外部的接口，将其他成员隐藏起来，这样可以使用接口访问程序。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用接口访问程序，使模块化程序之间关系更简单、数据更安全，对程序的修改该也仅限制于内部。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将数据和代码封装为一个&lt;strong&gt;可重用&lt;/strong&gt;的C++类,在编写代码的时候就可以使用现有的类，而不必了解具体的实现细节。&lt;/p&gt;
+&lt;p&gt;电视封装形式：&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Television    &lt;span class=&quot;comment&quot;&gt;//class关键字 类名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;               &lt;span class=&quot;comment&quot;&gt;//边界&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:          &lt;span class=&quot;comment&quot;&gt;//外部接口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetChannel&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; Channe1Num)&lt;/span&gt;&lt;/span&gt;;    &lt;span class=&quot;comment&quot;&gt;//行为，代码成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ShutDown&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;              &lt;span class=&quot;comment&quot;&gt;//行为，代码成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:                &lt;span class=&quot;comment&quot;&gt;//特定的访问权限&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; CurrentChanel;              &lt;span class=&quot;comment&quot;&gt;//属性，数据成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;                                  &lt;span class=&quot;comment&quot;&gt;//边界&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这是一个C++类的声明，它声明了Television的类，&lt;br&gt;大括号”{ }”中部分成员称为&lt;code&gt;**类体**&lt;/code&gt;，类体由&lt;code&gt;**成员**&lt;/code&gt;表组成，成员表为    数据定义或函数定义。？？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;声明为public和private是利用指定成员的不同访问权限。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;声明为Public的函数为类提供了外部接口，外接只能通过这个接口与television类发生联系，.&lt;br&gt;声明为private的整形数据是Television类的私有成员，外接无法直接访问。&lt;br&gt;可以看到，C++中通过类的机制实现了对数据的有效封装。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;继承&quot;&gt;&lt;a href=&quot;#继承&quot; class=&quot;headerlink&quot; title=&quot;继承&quot;&gt;&lt;/a&gt;继承&lt;/h1&gt;&lt;p&gt;继承(inheritance)将一个类的操作和数据结构提供另一个类，这使得程序员可以使用已有的类建立新类。新类继承了现有类的特性，包裹一些属性和行为,并且可以修改或增加新的属性和行为。 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;继承是面向对象技术能够提高软件开发效率的重要原因之一，更好的解决了软件可&lt;code&gt;**重用性**&lt;/code&gt;问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;子类-派生&quot;&gt;&lt;a href=&quot;#子类-派生&quot; class=&quot;headerlink&quot; title=&quot;子类(派生)&quot;&gt;&lt;/a&gt;子类(派生)&lt;/h2&gt;&lt;p&gt;C++可以声明一个新类作为另一个类的派生。派生类(也叫子类)继承父类的属性和操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;子类也声明了心得操作和属性，除去了一些不适合于自身用途的继承下来的操作和属性。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;继承也可以重用父类的代码，只专注与子类代码的编写。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;父类中已经实现的操作，在新的应用中，无需修改傅雷，所做的就是声明其派生类，在子类中做一些增加和修改。这种机制，实现了代码的重用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;多态&quot;&gt;&lt;a href=&quot;#多态&quot; class=&quot;headerlink&quot; title=&quot;多态&quot;&gt;&lt;/a&gt;多态&lt;/h1&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg&quot; alt=&quot;Grand theft dora&quot; title=&quot;Grand theft dora&quot;&gt;&lt;/p&gt;
+&lt;p&gt;抽象、封装、类&lt;br&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>4412_生成设备节点</title>
@@ -83,7 +143,7 @@
     <link href="http://www.vivatakethat.com/2016/11/18/C++_memo_2/"/>
     <id>http://www.vivatakethat.com/2016/11/18/C++_memo_2/</id>
     <published>2016-11-18T07:42:32.000Z</published>
-    <updated>2016-11-29T02:58:33.327Z</updated>
+    <updated>2016-12-01T06:02:48.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E6%9C%88%E4%BA%AE-2016-11-03.jpg?imageView2/2/h/600&quot; alt=&quot;月_2016-11-03&quot; title=&quot;月_2016-11-03&quot;&gt;&lt;br&gt;C++ 零碎笔记:&lt;br&gt;using &lt;/p&gt;
 &lt;blockquote&gt;
@@ -122,19 +182,6 @@
 &lt;p&gt;动态数组程序&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt;  &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;( )&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt;(*cp)[&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;];	&lt;span class=&quot;comment&quot;&gt;//该语句是定义一个数组指针，指向含5个元素的一维数组。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i, j;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	cp = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt;[&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;][&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;];    &lt;span class=&quot;comment&quot;&gt;//可以这样赋值的吗？&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;; j++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			*(*(cp + i) + j) = &lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt;(i * &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; + j);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;; j++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; cp[i][j] &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;delete&lt;/span&gt;[] cp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;运行结果：&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h1 id=&quot;this&quot;&gt;&lt;a href=&quot;#this&quot; class=&quot;headerlink&quot; title=&quot;this&quot;&gt;&lt;/a&gt;this&lt;/h1&gt;&lt;p&gt;this指针是一个隐含于每一个类成员函数中的特殊指针，它指向正在被成员函数操作对象的本身。&lt;/p&gt;
-&lt;h1 id=&quot;类与对象&quot;&gt;&lt;a href=&quot;#类与对象&quot; class=&quot;headerlink&quot; title=&quot;类与对象&quot;&gt;&lt;/a&gt;类与对象&lt;/h1&gt;&lt;p&gt;抽象就是忽略事物的非本质特征，只注意那些与当前目标有关的本质特征。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;面向对象程序设计方法的核心是类，利用它可以实现对数据和方法的封装&lt;br&gt;类的定义格式如下：&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;   &amp;lt;类名&amp;gt;    &lt;span class=&quot;comment&quot;&gt;//关键字class指明定义了一个类&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:       &lt;span class=&quot;comment&quot;&gt;//定义私有数据成员或成员函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;lt;成员表&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;gt;       &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;；      &lt;span class=&quot;comment&quot;&gt;//定义公有数据成员或成员函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;lt;成员表&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;protected&lt;/span&gt;:       &lt;span class=&quot;comment&quot;&gt;//定义保护数据成员或成员函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;成员表&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;大括号”{ }”中部分成员称为类体，类体由成员表组成，成员表为数据定义或函数定义。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;类中数据与函数称为成员，成员分为3种：私有成员(private)、公有成员(public)与保护成员(protected)进行定义。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;封装&quot;&gt;&lt;a href=&quot;#封装&quot; class=&quot;headerlink&quot; title=&quot;封装&quot;&gt;&lt;/a&gt;封装&lt;/h2&gt;&lt;p&gt;在面向对象程序设计中抽象可以表示它所描述事物的所有属性和操作。将抽象得到的数据和操作组合，形成一个有机的整体，就叫作封装。在C++中，利用类(class)的形式实现封装，通过封装可以将每个对象的数据(属性)和操作(行为)封装在一个类中。&lt;/p&gt;
-&lt;p&gt;电视封装形式：&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Television    &lt;span class=&quot;comment&quot;&gt;//class关键字 类名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;               &lt;span class=&quot;comment&quot;&gt;//边界&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:          &lt;span class=&quot;comment&quot;&gt;//外部接口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetChannel&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; Channe1Num)&lt;/span&gt;&lt;/span&gt;;    &lt;span class=&quot;comment&quot;&gt;//行为，代码成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ShutDown&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;              &lt;span class=&quot;comment&quot;&gt;//行为，代码成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:                &lt;span class=&quot;comment&quot;&gt;//特定的访问权限&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; CurrentChanel;              &lt;span class=&quot;comment&quot;&gt;//属性，数据成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;                                  &lt;span class=&quot;comment&quot;&gt;//边界&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;##　继承&lt;br&gt;继承(inheritance)是指一个新类可以从现有的类派生而来。新类继承了现有类的特性，包括一些属性和行为，并且可以修改该或增加新的属性和行为，使之适合具体的需要。&lt;/p&gt;
-&lt;p&gt;0&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -1146,7 +1193,7 @@
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Super-Heroes-meet-Flemish-Art_batman.jpg&quot; alt=&quot;Super-Heroes-meet-Flemish-Art_batman&quot; title=&quot;Super-Heroes-meet-Flemish-Art_batman&quot;&gt;&lt;br&gt;C语言问题,记录,备忘.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;指针&quot;&gt;&lt;a href=&quot;#指针&quot; class=&quot;headerlink&quot; title=&quot;指针&quot;&gt;&lt;/a&gt;指针&lt;/h1&gt;&lt;p&gt;1.如果i是变量，且p指向i，那么下列哪些表达式是i的别名？&lt;br&gt;&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;a&lt;/span&gt;)&lt;/span&gt;*p   &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;b&lt;/span&gt;)&lt;/span&gt;&amp;amp;p    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;c&lt;/span&gt;)&lt;/span&gt;*&amp;amp;p    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;d&lt;/span&gt;)&lt;/span&gt;&amp;amp;*p   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;e&lt;/span&gt;)&lt;/span&gt;*i   &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;f&lt;/span&gt;)&lt;/span&gt;&amp;amp;i    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;g&lt;/span&gt;)&lt;/span&gt;*&amp;amp;i    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;h&lt;/span&gt;)&lt;/span&gt;&amp;amp;*i&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;只有g是i的别名&lt;/p&gt;
-&lt;p&gt;检验代码:&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; *p = &amp;amp;i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(a)	*p	%d&quot;&lt;/span&gt;, *p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(b)	&amp;amp;p	%d\n&quot;&lt;/span&gt;, &amp;amp;p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(c)	*&amp;amp;p	%d\n&quot;&lt;/span&gt;, *&amp;amp;p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(d)	&amp;amp;*p	%d\n&quot;&lt;/span&gt;, &amp;amp;*p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//printf(&quot;(e)	*i	%d\n&quot;, *i);			/*无法编译,	*i不是指针*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(f)	&amp;amp;i	%d\n&quot;&lt;/span&gt;, &amp;amp;i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(g)	*&amp;amp;i	%d\n&quot;&lt;/span&gt;, *&amp;amp;i);	&lt;span class=&quot;comment&quot;&gt;/*是别名*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//printf(&quot;(h)	&amp;amp;*i	%d&quot;, &amp;amp;*i);				 /*无法编译  *i不是指针*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;检验代码:&lt;br&gt;&lt;figure class=&quot;highlight perl&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; main(void)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; *p = &amp;amp;i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(a)	*p	&lt;span class=&quot;variable&quot;&gt;%d&lt;/span&gt;&quot;&lt;/span&gt;, *p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(b)	&amp;amp;p	&lt;span class=&quot;variable&quot;&gt;%d&lt;/span&gt;\n&quot;&lt;/span&gt;, &amp;amp;p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(c)	*&amp;amp;p	&lt;span class=&quot;variable&quot;&gt;%d&lt;/span&gt;\n&quot;&lt;/span&gt;, *&amp;amp;p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(d)	&amp;amp;*p	&lt;span class=&quot;variable&quot;&gt;%d&lt;/span&gt;\n&quot;&lt;/span&gt;, &amp;amp;*p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;regexp&quot;&gt;//printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(e)	*i	&lt;span class=&quot;variable&quot;&gt;%d&lt;/span&gt;\n&quot;&lt;/span&gt;, *i);			&lt;span class=&quot;regexp&quot;&gt;/*无法编译,	*i不是指针*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(f)	&amp;amp;i	&lt;span class=&quot;variable&quot;&gt;%d&lt;/span&gt;\n&quot;&lt;/span&gt;, &amp;amp;i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(g)	*&amp;amp;i	&lt;span class=&quot;variable&quot;&gt;%d&lt;/span&gt;\n&quot;&lt;/span&gt;, *&amp;amp;i);	&lt;span class=&quot;regexp&quot;&gt;/*是别名*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	//&lt;span class=&quot;keyword&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;(h)	&amp;amp;*i	&lt;span class=&quot;variable&quot;&gt;%d&lt;/span&gt;&quot;&lt;/span&gt;, &amp;amp;*i);				 &lt;span class=&quot;regexp&quot;&gt;/*无法编译  *i不是指针*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;运行结果:&lt;br&gt;&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;a&lt;/span&gt;)&lt;/span&gt;     *p      &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;b&lt;/span&gt;)&lt;/span&gt;    &amp;amp;p      &lt;span class=&quot;number&quot;&gt;9697724&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;c&lt;/span&gt;)&lt;/span&gt;     *&amp;amp;p     &lt;span class=&quot;number&quot;&gt;9697736&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;d&lt;/span&gt;)&lt;/span&gt;     &amp;amp;*p     &lt;span class=&quot;number&quot;&gt;9697736&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;f&lt;/span&gt;)&lt;/span&gt;     &amp;amp;i      &lt;span class=&quot;number&quot;&gt;9697736&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;g&lt;/span&gt;)&lt;/span&gt;     *&amp;amp;i     &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 </content>
     
@@ -1737,198 +1784,6 @@
     
     
       <category term="MCU" scheme="http://www.vivatakethat.com/tags/MCU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>英语周记memo_20161024</title>
-    <link href="http://www.vivatakethat.com/2016/10/24/Y-%E8%8B%B1%E8%AF%AD%E5%91%A8%E8%AE%B0memo2016_10_24-10_28/"/>
-    <id>http://www.vivatakethat.com/2016/10/24/Y-英语周记memo2016_10_24-10_28/</id>
-    <published>2016-10-24T04:35:32.000Z</published>
-    <updated>2016-11-15T06:29:54.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/kirov%20airship2.jpg&quot; alt=&quot;kirov airship2&quot; title=&quot;kirov airship2&quot;&gt;&lt;/p&gt;
-&lt;p&gt;20161024——20161030&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;The-Perfect-Essay&quot;&gt;&lt;a href=&quot;#The-Perfect-Essay&quot; class=&quot;headerlink&quot; title=&quot;The Perfect Essay&quot;&gt;&lt;/a&gt;The Perfect Essay&lt;/h1&gt;&lt;p&gt;A 4-year-old may &lt;strong&gt;protest&lt;/strong&gt; that a sister has more fruit juice when it is only the shapes of the glasses that differ,not the amount of juice.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;protest&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;the child will immediately test your &lt;strong&gt;claim&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;claim宣称、要求&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The author was advised against the improper use of figures of speech.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;improper&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;figures of speech :&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The author’smother taught him a valuable lesson by pointing out lots of flaws in his seemingly perfect essay.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;point out&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;flaw :缺陷、瑕疵&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;essay&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;flawless&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;She had no patience for brilliant but irrelevant figures of speech&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;irrelevant:无关紧要，不重要&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对于那些很好但又不相关的修辞是无法忍耐的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Criticizing someone’s speech is said to be easier than coming up with a better one.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Criticize  (v.)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;criticism  （n.）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The author looks upon his mother as his most demanding and caring instructor.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;look upon&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;demanding  &lt;em&gt;adj&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Constructive criticism gives an author a good start to improve his writing.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Constructive :建设性的批评、提议、评论&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;A writer should polish his writing repeatedly so as to get closer to perfection.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;polish  &lt;em&gt;（adj）&lt;/em&gt;波兰的;  &amp;nbsp; &lt;em&gt;()v&lt;/em&gt;抛光，打磨&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;perfection完美 &lt;em&gt;n&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;just &amp;nbsp; &amp;lt;3 &amp;nbsp; code&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lt;3代表心形 就是喜欢的意思 ;仅仅喜欢code&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Ask questions,get answers,no distractions&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;distraction注意力分散; 精神不集中. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;There’s no chilt-chat&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;chilt-chat闲聊&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Real problems or questions that you’ve encountered&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;encounter遭到，遭遇。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Use comments to ask for more information or clarify a question or answer.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;clarify阐明&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Once you earn 50  reputation,you can comment on anybody’s post.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;reputation声誉&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;She  trimmed back my flowery language,drew lines throught my exclamation marks and argued for the value of restraint in expression.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;trimmed back:消减，调整&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;exclamation marks感叹号&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;restraint约束，克制&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;2016年12月CET4-真题第3-套&quot;&gt;&lt;a href=&quot;#2016年12月CET4-真题第3-套&quot; class=&quot;headerlink&quot; title=&quot;2016年12月CET4 真题第3 套&quot;&gt;&lt;/a&gt;2016年12月CET4 真题第3 套&lt;/h1&gt;&lt;p&gt;Section C&lt;/p&gt;
-&lt;p&gt;Could you reproduce Silicon Valley elsewhere,or is there something unique about it?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;reproduce复制，重现&lt;br&gt;Silicon Valley 硅谷&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Observation bears this out.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Observation观察&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Within the US,towns have become startup hubs if and only if the have both rich people and nerds&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Within the 国家名  :在什么 国家 内&lt;br&gt;nerds:痴迷科研的人&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Whereas  Pittsburgh has the  opposite  problem:plenty of nerds,but no rich people.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;opposite:另一面、对立面，相反的&lt;br&gt;Pittsburgh:匹兹堡市  ，地名&lt;br&gt;whereas:然而，但是&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The top US  Computer  Science departments are said to be MIT,Stanford,Berkely,and Carnegie-Mellon yield in Pittsburgh?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Computer Science departments  计算机科学系&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;department:(政府)部，司；（大学）系&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;MIT yielded Route 128.Standord and Berkeley yielded Silicon Valley.But what did Carnegie-Mellon yield in Pittsburh?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;yield ：&lt;em&gt;v&lt;/em&gt;产生 &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;MIT大学开辟了128路公路区，斯坦福大学和伯克利大学开创了硅谷。但是卡内基-梅隆大学在匹兹堡开辟了什么呢？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Startup investors are a distinct type of rich people.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;distinct:截然不同，明显&lt;br&gt;a distinct type of XXX:截然不同的XXX&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;And   the   fact they  have a personal  stake  in the  outcome  makes them  really pay attention.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;personal stake:个人风险&lt;br&gt;outcome: 结果&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Its fame in high technology is incomparable&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;incomparable:无与伦比&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Lack of incentive for investment.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;incentive:刺激&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;what does the author imply about Boston?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;imply about:暗示，意味着&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The weather is terrible ,particularly in winter,and there’s no interesting old city to make up for it,as there is in Boston.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;make up:弥补，化妆&lt;br&gt;天气很糟糕，尤其在冬天，而且又不像波士顿那样有古老而有趣的城市可以弥补。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;It is an old city with many sites of historcial interest.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;sites of historcial interest:历史遗迹&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;翻译：&lt;br&gt;&amp;nbsp; &amp;nbsp;    今年在长沙举行了一年一度的外国人汉语演讲比赛。这项比赛证明是促进中国和世界其他地区文化交流的好方法。它为世界各地的年轻人提供了更好地了解中国的机会。&lt;/p&gt;
-&lt;p&gt;&amp;nbsp; &amp;nbsp;    来自87个国家共计126位选手聚集在湖南省省会参加了从7月6日到8月5日进行的半决赛和决赛。&lt;/p&gt;
-&lt;p&gt;&amp;nbsp; &amp;nbsp;       比赛并不是唯一的活动。选手们还有寄回参观了中国其他地区的著名景点和历史名胜。&lt;/p&gt;
-&lt;p&gt;翻译提示：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;An annual  一年一度&lt;br&gt;Chinese specch contest:汉语演讲比赛&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;contest:比赛，竞赛&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;contestant:参赛者，参赛选手&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;聚集在:gathered in  XXX&lt;/p&gt;
-&lt;p&gt;a brief description of the picture XXXX&lt;br&gt;&amp;gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/kirov%20airship2.jpg&quot; alt=&quot;kirov airship2&quot; title=&quot;kirov airship2&quot;&gt;&lt;/p&gt;
-&lt;p&gt;20161024——20161030&lt;br&gt;
-    
-    </summary>
-    
-      <category term="memo" scheme="http://www.vivatakethat.com/categories/memo/"/>
-    
-    
-      <category term="English" scheme="http://www.vivatakethat.com/tags/English/"/>
     
   </entry>
   

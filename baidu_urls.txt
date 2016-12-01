@@ -1,5 +1,5 @@
+http://www.vivatakethat.com/2016/12/01/类与对象/
 http://www.vivatakethat.com/2016/11/18/4412_生成设备节点/
 http://www.vivatakethat.com/2016/11/18/C++_memo_2/
 http://www.vivatakethat.com/2016/11/17/C++常用库_函数/
 http://www.vivatakethat.com/2016/11/17/Visual Studio-Error/
-http://www.vivatakethat.com/2016/11/17/C++_memo_1/

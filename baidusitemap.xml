@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/11/14/QWidget%E7%B1%BB_QT5/</loc>
-    <lastmod>2016-11-29T16:43:04.000Z</lastmod>
+    <loc>http://www.vivatakethat.com/2016/12/01/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2016-12-01T07:31:11.000Z</lastmod>
     <data>
         <display>
-        <title>QWidget类_QT5</title>
-        <pubTime>2016-11-13T16:21:32.000Z</pubTime>
+        <title></title>
+        <pubTime>2016-12-01T07:42:32.000Z</pubTime>
         
-        <tag>QT</tag>
+        <tag>C++</tag>
          
          
            
@@ -25,13 +25,33 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/11/18/C++_memo_2/</loc>
-    <lastmod>2016-11-29T02:58:33.327Z</lastmod>
+    <lastmod>2016-12-01T06:02:48.000Z</lastmod>
     <data>
         <display>
         <title>C++_memo_2</title>
         <pubTime>2016-11-18T07:42:32.000Z</pubTime>
         
         <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/11/14/QWidget%E7%B1%BB_QT5/</loc>
+    <lastmod>2016-11-29T16:43:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>QWidget类_QT5</title>
+        <pubTime>2016-11-13T16:21:32.000Z</pubTime>
+        
+        <tag>QT</tag>
          
          
            
