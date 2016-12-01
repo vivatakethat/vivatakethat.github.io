@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Week 0- Welcome to Algorithms, Part I | take that的博客</title>
+    <title>条件编译 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,28 +12,16 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="Algorithms, Part Iby Kevin Wayne, Robert Sedgewick2016-06-17  FRI :start
-
-Week  0
-COurse Introduction">
+    <meta name="description" content="预处理提供条件编译的功能，可以按不同条件去编译不同的程序代码。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Week 0- Welcome to Algorithms, Part I">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/06/17/Coursera-Week 0-Welcome to Algorithms, Part I /index.html">
+<meta property="og:title" content="条件编译">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/12/01/条件编译/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="Algorithms, Part Iby Kevin Wayne, Robert Sedgewick2016-06-17  FRI :start
-
-Week  0
-COurse Introduction">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E5%AF%B9%E6%96%B9%E5%A3%AB%E5%85%B576.jpg">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Network%20connectivity.jpg">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Scientificinquiry.jpg">
-<meta property="og:updated_time" content="2016-11-16T14:14:33.043Z">
+<meta property="og:description" content="预处理提供条件编译的功能，可以按不同条件去编译不同的程序代码。">
+<meta property="og:updated_time" content="2016-12-01T12:02:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Week 0- Welcome to Algorithms, Part I">
-<meta name="twitter:description" content="Algorithms, Part Iby Kevin Wayne, Robert Sedgewick2016-06-17  FRI :start
-
-Week  0
-COurse Introduction">
+<meta name="twitter:title" content="条件编译">
+<meta name="twitter:description" content="预处理提供条件编译的功能，可以按不同条件去编译不同的程序代码。">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -97,7 +85,7 @@ COurse Introduction">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/17/Coursera-Week 0-Welcome to Algorithms, Part I /" title="Week 0- Welcome to Algorithms, Part I" itemprop="url">Week 0- Welcome to Algorithms, Part I</a>
+      <a href="/2016/12/01/条件编译/" title="条件编译" itemprop="url">条件编译</a>
   </h1>
   <p class="article-author">By
        
@@ -107,7 +95,7 @@ COurse Introduction">
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-06-17T02:09:32.000Z" itemprop="datePublished"> 发表于 2016-06-17</time>
+    <time datetime="2016-12-01T11:42:32.000Z" itemprop="datePublished"> 发表于 2016-12-01</time>
     
   </p>
 </header>
@@ -116,121 +104,11 @@ COurse Introduction">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Week-0"><span class="toc-number">1.</span> <span class="toc-text">Week  0</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%AF%B9%E6%96%B9%E5%A3%AB%E5%85%B576.jpg" alt="对方士兵76" title="对方士兵76"></p>
-<blockquote>
-<p>Algorithms, Part I<br>by Kevin Wayne, Robert Sedgewick<br>2016-06-17  FRI :start</p>
-</blockquote>
-<h1 id="Week-0"><a href="#Week-0" class="headerlink" title="Week  0"></a>Week  0</h1><blockquote>
-<p>COurse Introduction</p>
-</blockquote>
-<a id="more"></a>
-<p><strong><code>What is this course?</code></strong></p>
-<ul>
-<li><p>Intermediate-level survey course.</p>
-<blockquote>
-<p>Intermediate-level:中级别的</p>
-</blockquote>
-</li>
-<li><p>Programming and problem solving, with application</p>
-</li>
-<li><p>Algorithm: method for solving a problem.</p>
-</li>
-<li>Data structure: method to store information</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">topic</th>
-<th style="text-align:center">data structures and algorithms</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">data types</td>
-<td style="text-align:center">stack,queue,<strong><code>bag</code></strong>(?),union-find(并查集的数据结构),priority queue(优先队列)</td>
-</tr>
-<tr>
-<td style="text-align:center">sorting</td>
-<td style="text-align:center">quicksort,mergesort<em>(归并排序)</em>,heapsort(堆排序)</td>
-</tr>
-<tr>
-<td style="text-align:center">searching</td>
-<td style="text-align:center">BST,red-black BST,hash table</td>
-</tr>
-<tr>
-<td style="text-align:center">graphs</td>
-<td style="text-align:center">BFS,DFS,Prim,Kruskal,Dijkstra</td>
-</tr>
-<tr>
-<td style="text-align:center">strings</td>
-<td style="text-align:center">radix sorts,tries,KMP,regexps,data compression</td>
-</tr>
-<tr>
-<td style="text-align:center">advanced</td>
-<td style="text-align:center">B-tree,suffix array<em>(后缀数组)</em>,maxflow<em>(最大流增广路算法)</em></td>
-</tr>
-</tbody>
-</table>
-<p><strong><code>1. Their impact is broad</code></strong> <em>影响</em> <strong><code>and far-reaching</code></strong> <em>深远</em> </p>
-<p><strong>Internet.</strong></p>
-<blockquote>
-<p>Web search, packet routing, distributed file sharing, …</p>
-</blockquote>
-<p><strong>Biology.</strong> <em>生物学</em> Human genome project<em>人类基因组计划</em>,protein folding<em>蛋白质折叠</em>,….</p>
-<p><strong>Computers.</strong> Circuit layout<em>电路设计</em>,file system,compilkers,….</p>
-<p><strong>Computer graphics.</strong> Movies,video games,virtual relity,…</p>
-<p><strong>Security.</strong>  Cell phones, e-commerce,voting machines,…</p>
-<p><strong>Multimedia.</strong>  MP3,JPG,DivX,HDTV,face recognition,…</p>
-<p><strong>Social networks.</strong>  Recommendations,news feeds,advertisements,…</p>
-<p><strong>Physics.</strong>  N-body simulation,particle collision simuluations,…</p>
-<p><strong><code>2. Old roots, new opportunities</code></strong></p>
-<ul>
-<li>Study of algorithms dates at least to Euclid. <em>欧几里得</em></li>
-<li>Formalized by Church and Turing in 1930s.</li>
-<li>Some important algorithms were discovered<br>by undergraduates <em>大学生</em>in a course like this!</li>
-</ul>
-<p><strong><code>3. To solve problems that could not otherwise be addressed</code></strong><br>Ex. Network connectivity.[stay tuned]<em>敬请期待</em></p>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Network%20connectivity.jpg" alt="Network Connectivity" title="Network Connectivity"></p>
-<p><strong><code>3. For intellectual stimulation</code></strong></p>
-<ul>
-<li>Francis Sullivan:<blockquote>
-<p>“For me, great algorithms are the poetry<em>n.诗</em> of computation. Just like<br>verse<em>诗篇</em>, they can be terse<em>精练</em>, allusive, dense, and even mysterious.<br>But once unlocked, they cast a brilliant new light on some<br>aspect of computing. ” </p>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>Donald Knuth<blockquote>
-<p>“An algorithm must be seen to be believed. ” </p>
-</blockquote>
-</li>
-</ul>
-<p><strong><code>4. To become a proficient programmer.</code></strong></p>
-<p>Linus Torvalds (creator of Linux):</p>
-<blockquote>
-<p>“ I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his code or his data structures<br>more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships. ”</p>
-</blockquote>
-<ul>
-<li>Niklaus Wirth:<blockquote>
-<p>“Algorithms + Data Structures = Programs. ” </p>
-</blockquote>
-</li>
-</ul>
-<p><strong><code>4.They may unlock the secrets of life and of the universe</code></strong></p>
-<p>Computational models<em>计算模型</em> are replacing math models in scientific inquiry<em>科学探索</em><br><img src="http://7xsic8.com1.z0.glb.clouddn.com/Scientificinquiry.jpg" alt="Scientific inquiry" title="Scientific inquiry"></p>
-<blockquote>
-<p>formula:公式</p>
-</blockquote>
-<p> /*</p>
-<p>It’s an intermediate level survey course on algorithms.We’re going to concentrate on programming and problem solving in the</p>
-<p>Welcome.I’m Bob SDedgewick,professor of computer science at Princetion. </p>
-<blockquote>
-<p>princeton: 普林斯顿</p>
-</blockquote>
-<p>*/</p>
+		<p>预处理提供条件编译的功能，可以按不同条件去编译不同的程序代码。</p>
   
 	</div>
 
@@ -341,13 +219,13 @@ COurse Introduction">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Coursera/">Coursera</a>
+  <a class="article-category-link" href="/categories/编程/">编程</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Coursera-Algorithms/">Coursera-Algorithms</a>
+  <span></span> <a href="/tags/C/">C</a>
   </div>
 
 </div>
@@ -356,7 +234,7 @@ COurse Introduction">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/06/17/Coursera-Week 0-Welcome to Algorithms, Part I /" data-title="Week 0- Welcome to Algorithms, Part I | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/12/01/条件编译/" data-title="条件编译 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -369,19 +247,11 @@ COurse Introduction">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/06/18/C语言基础(一)常量+变量+表达式/" title="C语言基础(一):常量、变量、表达式">
-  <strong>上一篇：</strong><br/>
-  <span>
-  C语言基础(一):常量、变量、表达式</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/06/15/软件测试基础知识/"  title="软件测试基础知识">
+<a href="/2016/12/01/C++_memo-类与对象/"  title="C++_memo-类与对象">
  <strong>下一篇：</strong><br/> 
- <span>软件测试基础知识
+ <span>C++_memo-类与对象
 </span>
 </a>
 </div>
@@ -390,7 +260,7 @@ COurse Introduction">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/17/Coursera-Week 0-Welcome to Algorithms, Part I /" data-title="Week 0- Welcome to Algorithms, Part I" data-url="http://www.vivatakethat.com/2016/06/17/Coursera-Week 0-Welcome to Algorithms, Part I /"></div>
+	<div class="ds-thread" data-thread-key="2016/12/01/条件编译/" data-title="条件编译" data-url="http://www.vivatakethat.com/2016/12/01/条件编译/"></div>
 </section>
 
 
@@ -400,7 +270,7 @@ COurse Introduction">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Week-0"><span class="toc-number">1.</span> <span class="toc-text">Week  0</span></a></li></ol>
+ 
  
   </div>
 
