@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
-  <updated>2016-12-01T12:02:20.000Z</updated>
+  <updated>2016-12-01T09:21:59.000Z</updated>
   <id>http://www.vivatakethat.com/</id>
   
   <author>
@@ -14,30 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>条件编译</title>
-    <link href="http://www.vivatakethat.com/2016/12/01/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91/"/>
-    <id>http://www.vivatakethat.com/2016/12/01/条件编译/</id>
-    <published>2016-12-01T11:42:32.000Z</published>
-    <updated>2016-12-01T12:02:20.000Z</updated>
-    
-    <content type="html">&lt;p&gt;预处理提供条件编译的功能，可以按不同条件去编译不同的程序代码。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;预处理提供条件编译的功能，可以按不同条件去编译不同的程序代码。&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="编程" scheme="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="C" scheme="http://www.vivatakethat.com/tags/C/"/>
-    
-  </entry>
   
   <entry>
     <title>C++_memo-类与对象</title>
@@ -1691,6 +1667,125 @@
     
     
       <category term="English" scheme="http://www.vivatakethat.com/tags/English/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4412_实验</title>
+    <link href="http://www.vivatakethat.com/2016/10/26/4412_%E5%AE%9E%E9%AA%8C%20/"/>
+    <id>http://www.vivatakethat.com/2016/10/26/4412_实验 /</id>
+    <published>2016-10-25T16:35:32.000Z</published>
+    <updated>2016-11-18T10:35:35.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/superheroesshadows5.jpg&quot; alt=&quot;superheroesshadows&quot; title=&quot;superheroesshadows&quot;&gt;&lt;/p&gt;
+&lt;p&gt;4412开发板实验&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/4412%E7%B2%BE%E8%8B%B1%E7%89%88-POP%E6%A0%B8%E5%BF%83%E6%9D%BF.jpg&quot; alt=&quot;4412精英版-POP核心&quot; title=&quot;4412精英版-POP核心&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;开机启动程序&quot;&gt;&lt;a href=&quot;#开机启动程序&quot; class=&quot;headerlink&quot; title=&quot;开机启动程序&quot;&gt;&lt;/a&gt;开机启动程序&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;编辑启动文件&lt;figure class=&quot;highlight autoit&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root&lt;span class=&quot;constant&quot;&gt;@iTOP&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4412&lt;/span&gt;]&lt;span class=&quot;preprocessor&quot;&gt;# vi /etc/init.d/rcS&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在配置文件尾部添加&lt;br&gt;&lt;figure class=&quot;highlight armasm&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/&lt;span class=&quot;keyword&quot;&gt;bin/arm_hello-world &lt;/span&gt;&amp;amp;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;amp;是什么？？？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不用加&amp;amp;也可以，好像跟启动位置有关？？？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;TFTP服务器&quot;&gt;&lt;a href=&quot;#TFTP服务器&quot; class=&quot;headerlink&quot; title=&quot;TFTP服务器&quot;&gt;&lt;/a&gt;TFTP服务器&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在host主机ubuntu安装 xinetd&lt;/p&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-&lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt; install xinetd&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装tftp和tftpd&lt;/p&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-&lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt; install tftp tftpd&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置/etc/xinetd.d/tftp文件&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;service tftp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        socket_&lt;span class=&quot;built_in&quot;&gt;type&lt;/span&gt;     = dgram&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        protocol        = udp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;wait&lt;/span&gt;            = yes&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        user            = root&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        server          = /usr/sbin/in.tftpd&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        server_args     = &lt;span class=&quot;operator&quot;&gt;-s&lt;/span&gt; /var/tftpboot/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt;         = no&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        per_&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt;      = &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cps             = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        flags           = IPv4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建tftp文件中的目录&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/var/tftpboot 是服务器的目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;新建目录&lt;/p&gt;
+&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:~&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# mkdir /var/tftpboot&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加权限 后 重启服务&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root@ubuntu:~# chmod 777 /var/tftpboot&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@ubuntu:~# /etc/init.d/xinetd restart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Rather than invoking init scripts through /etc/init.d, &lt;span class=&quot;operator&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; the service(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;utility, &lt;span class=&quot;keyword&quot;&gt;e&lt;/span&gt;.&lt;span class=&quot;keyword&quot;&gt;g&lt;/span&gt;. service xinetd restart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Since the script you &lt;span class=&quot;keyword&quot;&gt;are&lt;/span&gt; attempting &lt;span class=&quot;keyword&quot;&gt;to&lt;/span&gt; invoke has been converted &lt;span class=&quot;keyword&quot;&gt;to&lt;/span&gt; an&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Upstart job, you may also &lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; the &lt;span class=&quot;keyword&quot;&gt;stop&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;start&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) utilities,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;e&lt;/span&gt;.&lt;span class=&quot;keyword&quot;&gt;g&lt;/span&gt;. &lt;span class=&quot;keyword&quot;&gt;stop&lt;/span&gt; xinetd ;&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;start&lt;/span&gt; xinetd. The restart(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) utility &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; also available.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;xinetd &lt;span class=&quot;keyword&quot;&gt;stop&lt;/span&gt;/waiting&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;xinetd &lt;span class=&quot;keyword&quot;&gt;start&lt;/span&gt;/running, process &lt;span class=&quot;number&quot;&gt;4102&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@ubuntu:~#&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;设置好目标板4412与宿主机机器ubuntu处于统一网段后&lt;/p&gt;
+&lt;p&gt;在目标板4412&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@iTOP-&lt;span class=&quot;number&quot;&gt;4412&lt;/span&gt;]&lt;span class=&quot;preprocessor&quot;&gt;# tftp -g -l test_local -r test_take &lt;span class=&quot;number&quot;&gt;192.168&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.1&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.106&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一个test_local 下载后的文件名&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第二个test_take  宿主机器上ubuntu的服务端的文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;NFS网络文件系统&quot;&gt;&lt;a href=&quot;#NFS网络文件系统&quot; class=&quot;headerlink&quot; title=&quot;NFS网络文件系统&quot;&gt;&lt;/a&gt;NFS网络文件系统&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在宿主机ubuntu安装&lt;/p&gt;
+&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:~&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# apt-get install nfs-kernel-server&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改 /etc/exports&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在最后一样添加&lt;/p&gt;
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/home/minilinux/ *&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;rw&lt;/span&gt;,sync,no_root_squash)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/home/minilinux共享目录&lt;br&gt;*:代表所有的网络段访问&lt;br&gt;rw:是可读写权限&lt;br&gt;ync:资料同步写入内存和硬盘&lt;br&gt;no_root_squash:是ubuntu nfs客户端分享目录使用者的权限，如果客户端使用的是root用户，那么对于该共享目录而言，该客户端就具有root权限。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;重启相关服务&lt;blockquote&gt;
+&lt;p&gt;/etc/init.d/portmap restart&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/etc/init.d/nfs-kernel-server restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;用法&lt;br&gt;在目标机器挂载宿主机器的目录&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mount -t nfs &lt;span class=&quot;number&quot;&gt;192.168&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1.101&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:/home/minilinux/system/mnt&lt;/span&gt;  /usb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果报错&lt;br&gt;&lt;figure class=&quot;highlight gams&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;No&lt;/span&gt; such device&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;请查看目标版内核是否支持nfs&lt;/p&gt;
+&lt;p&gt;cat /proc/filesystems&lt;br&gt;如果显示nodev nfs，表示内核有支持NFS&lt;/p&gt;
+&lt;h2 id=&quot;重新配置内核能行&quot;&gt;&lt;a href=&quot;#重新配置内核能行&quot; class=&quot;headerlink&quot; title=&quot;重新配置内核能行&quot;&gt;&lt;/a&gt;重新配置内核能行&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/yuanlu837/article/details/8461203/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;配置内核支持NFS&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;make menuconfig&lt;br&gt;“Networking support”→“Networking options”→选上“IP: kernel level&lt;br&gt;autoconfiguration”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回到make menuconfig 的初始界面&lt;br&gt;– “File systems”→“Network File Systems”&lt;br&gt;– 选中“NFS client support”，“NFS client support for NFS version 3”，“NFS&lt;br&gt;client support for the NFSv3 ACL protocol extension”，“NFS client support for&lt;br&gt;NFS version4”，“NFS client support for NFSv4.1”，“Root file system on NFS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回到make menuconfig 的初始配置界面&lt;br&gt;– 进入“Boot options”→“Default kernel command”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;配置举例：&lt;br&gt;– root=/dev/nfs rw nfsroot=192.168.1.107:/home/minilinux/nfs&lt;br&gt;ip=192.168.1.105:192.168.1.107:192.168.1.0:255.255.255.0:takethat:eth0:off&lt;br&gt;rootfstype=ext4 init=/linuxrc console=ttySAC2,115200&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;配置时请写成一行&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第二行:第1个IP是开发板的IP,第2个IP是NFS服务器的IP(&lt;em&gt;宿主机ubuntu的IP&lt;/em&gt;)，第3个IP是开发板的网关。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;255.255.255.0 是子网掩码，iTOP 是开发主机的名字（一般无关紧要，可以随便填写），eth0 是网卡设备的名称。&lt;br&gt;&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/superheroesshadows5.jpg&quot; alt=&quot;superheroesshadows&quot; title=&quot;superheroesshadows&quot;&gt;&lt;/p&gt;
+&lt;p&gt;4412开发板实验&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="嵌入式" scheme="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+      <category term="MCU" scheme="http://www.vivatakethat.com/tags/MCU/"/>
     
   </entry>
   
