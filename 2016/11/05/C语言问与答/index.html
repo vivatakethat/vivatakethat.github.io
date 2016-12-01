@@ -112,7 +112,7 @@
 		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Super-Heroes-meet-Flemish-Art_batman.jpg" alt="Super-Heroes-meet-Flemish-Art_batman" title="Super-Heroes-meet-Flemish-Art_batman"><br>C语言问题,记录,备忘.<br><a id="more"></a></p>
 <h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><p>1.如果i是变量，且p指向i，那么下列哪些表达式是i的别名？<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">a</span>)</span>*p   <span class="list">(<span class="keyword">b</span>)</span>&amp;p    <span class="list">(<span class="keyword">c</span>)</span>*&amp;p    <span class="list">(<span class="keyword">d</span>)</span>&amp;*p   </span><br><span class="line"><span class="list">(<span class="keyword">e</span>)</span>*i   <span class="list">(<span class="keyword">f</span>)</span>&amp;i    <span class="list">(<span class="keyword">g</span>)</span>*&amp;i    <span class="list">(<span class="keyword">h</span>)</span>&amp;*i</span><br></pre></td></tr></table></figure></p>
 <p>只有g是i的别名</p>
-<p>检验代码:<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="keyword">int</span> main(void)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">	<span class="keyword">int</span> *p = &amp;i;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">printf</span>(<span class="string">"(a)	*p	<span class="variable">%d</span>"</span>, *p);</span><br><span class="line">	<span class="keyword">printf</span>(<span class="string">"(b)	&amp;p	<span class="variable">%d</span>\n"</span>, &amp;p);</span><br><span class="line">	<span class="keyword">printf</span>(<span class="string">"(c)	*&amp;p	<span class="variable">%d</span>\n"</span>, *&amp;p);</span><br><span class="line">	<span class="keyword">printf</span>(<span class="string">"(d)	&amp;*p	<span class="variable">%d</span>\n"</span>, &amp;*p);</span><br><span class="line">	<span class="regexp">//printf</span>(<span class="string">"(e)	*i	<span class="variable">%d</span>\n"</span>, *i);			<span class="regexp">/*无法编译,	*i不是指针*/</span></span><br><span class="line">	<span class="keyword">printf</span>(<span class="string">"(f)	&amp;i	<span class="variable">%d</span>\n"</span>, &amp;i);</span><br><span class="line">	<span class="keyword">printf</span>(<span class="string">"(g)	*&amp;i	<span class="variable">%d</span>\n"</span>, *&amp;i);	<span class="regexp">/*是别名*/</span></span><br><span class="line">	//<span class="keyword">printf</span>(<span class="string">"(h)	&amp;*i	<span class="variable">%d</span>"</span>, &amp;*i);				 <span class="regexp">/*无法编译  *i不是指针*/</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>检验代码:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">	<span class="keyword">int</span> *p = &amp;i;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"(a)	*p	%d"</span>, *p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"(b)	&amp;p	%d\n"</span>, &amp;p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"(c)	*&amp;p	%d\n"</span>, *&amp;p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"(d)	&amp;*p	%d\n"</span>, &amp;*p);</span><br><span class="line">	<span class="comment">//printf("(e)	*i	%d\n", *i);			/*无法编译,	*i不是指针*/</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"(f)	&amp;i	%d\n"</span>, &amp;i);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"(g)	*&amp;i	%d\n"</span>, *&amp;i);	<span class="comment">/*是别名*/</span></span><br><span class="line">	<span class="comment">//printf("(h)	&amp;*i	%d", &amp;*i);				 /*无法编译  *i不是指针*/</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>运行结果:<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">a</span>)</span>     *p      <span class="number">5</span><span class="list">(<span class="keyword">b</span>)</span>    &amp;p      <span class="number">9697724</span></span><br><span class="line"><span class="list">(<span class="keyword">c</span>)</span>     *&amp;p     <span class="number">9697736</span></span><br><span class="line"><span class="list">(<span class="keyword">d</span>)</span>     &amp;*p     <span class="number">9697736</span></span><br><span class="line"><span class="list">(<span class="keyword">f</span>)</span>     &amp;i      <span class="number">9697736</span></span><br><span class="line"><span class="list">(<span class="keyword">g</span>)</span>     *&amp;i     <span class="number">5</span></span><br></pre></td></tr></table></figure></p>
   
 	</div>
@@ -388,7 +388,7 @@
 			
 		
 			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
 			
 		
 			
@@ -396,7 +396,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
 			
 		
 			
@@ -416,15 +416,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -444,11 +440,11 @@
 			
 		
 			
-				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
 			
@@ -457,6 +453,10 @@
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C++_memo_2 | take that的博客</title>
+    <title>C++_memo-类与对象 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,23 +12,17 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="C++ 零碎笔记:using 
-
-C++ Primer第5版">
+    <meta name="description" content="抽象、封装、类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++_memo_2">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/11/18/C++_memo_2/index.html">
+<meta property="og:title" content="C++_memo-类与对象">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="C++ 零碎笔记:using 
-
-C++ Primer第5版">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E6%9C%88%E4%BA%AE-2016-11-03.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-01T06:02:48.000Z">
+<meta property="og:description" content="抽象、封装、类">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600">
+<meta property="og:updated_time" content="2016-12-01T07:43:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++_memo_2">
-<meta name="twitter:description" content="C++ 零碎笔记:using 
-
-C++ Primer第5版">
+<meta name="twitter:title" content="C++_memo-类与对象">
+<meta name="twitter:description" content="抽象、封装、类">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -92,7 +86,7 @@ C++ Primer第5版">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/11/18/C++_memo_2/" title="C++_memo_2" itemprop="url">C++_memo_2</a>
+      <a href="/2016/12/01/C++_memo-类与对象/" title="C++_memo-类与对象" itemprop="url">C++_memo-类与对象</a>
   </h1>
   <p class="article-author">By
        
@@ -102,7 +96,7 @@ C++ Primer第5版">
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-11-18T07:42:32.000Z" itemprop="datePublished"> 发表于 2016-11-18</time>
+    <time datetime="2016-12-01T07:42:32.000Z" itemprop="datePublished"> 发表于 2016-12-01</time>
     
   </p>
 </header>
@@ -111,48 +105,48 @@ C++ Primer第5版">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">4.</span> <span class="toc-text">new和delete</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#this"><span class="toc-number">5.</span> <span class="toc-text">this</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象"><span class="toc-number">1.</span> <span class="toc-text">抽象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类-派生"><span class="toc-number">3.1.</span> <span class="toc-text">子类(派生)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多态"><span class="toc-number">4.</span> <span class="toc-text">多态</span></a></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E6%9C%88%E4%BA%AE-2016-11-03.jpg?imageView2/2/h/600" alt="月_2016-11-03" title="月_2016-11-03"><br>C++ 零碎笔记:<br>using </p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600" alt="Grand theft dora" title="Grand theft dora"></p>
+<p>抽象、封装、类<br><a id="more"></a></p>
+<h1 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h1><p>抽象与具体相对应,<br>就是找出事物的共性，将相同性质的事物化为一类，而忽略具体细节，</p>
 <blockquote>
-<p>C++ Primer第5版</p>
+<p>抽象就是面向对象程序设计的基本原则之一</p>
 </blockquote>
-<a id="more"></a>
-<h1 id="using"><a href="#using" class="headerlink" title="using"></a>using</h1><p><strong>using声明(using declaration)</strong>:<br>有了using声明就无须专门的前缀(形如命名空间::)也能使用所需的名字了。</p>
-<p>using的声明形式:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span>   <span class="keyword">namespace</span>::name;</span><br></pre></td></tr></table></figure></p>
+<p>类是抽象的描述，是 具有相同的属性和行为 形成的一组对象，一个属于某类的对象称为该类的一个实例。</p>
+<h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><p>利用<code>**类(class)**</code>的形式进行<strong>封装</strong>，通过封装可以将每个对象的数据（属性）和操作（行为）封装在一个类中，使其形成<strong>一个有机的整体</strong>.</p>
 <blockquote>
-<p>一旦声明上了上述语句，就可以直接访问命名空间的名字:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;     </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;i;           <span class="comment">//正确：cin和std::cin含义相同</span></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i;         <span class="comment">//错误：没有对应的using声明，必须使用完整的名字</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;i;   <span class="comment">//正确：显示地从std中使用cout</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>每个名字都需要独立的using声明；</p>
-</blockquote>
-<hr>
-<h1 id="共用体union"><a href="#共用体union" class="headerlink" title="共用体union"></a>共用体union</h1><p>共用体是指将不同类型的数据项存放于同一段内存单元中的一种构造数据类型，也可以称为联合体。</p>
+<p>一部分操作或属性作为类与外部的接口，将其他成员隐藏起来，这样可以使用接口访问程序。</p>
 <blockquote>
-<p>共用体变量所占内存的字节长度等于各个成员最长的成员长度，而结构体变量所占的内存长度等于各个成员长度之和。</p>
+<p>使用接口访问程序，使模块化程序之间关系更简单、数据更安全，对程序的修改该也仅限制于内部。</p>
 </blockquote>
-<p>共用体类型定义的一般格式<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">union</span> uType                 <span class="comment">//共用体uType,4Byte</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span> cValue;           <span class="comment">//字符型变量，1Byte</span></span><br><span class="line">    <span class="keyword">short</span> sValue;       <span class="comment">//短整型变量，2Byte</span></span><br><span class="line">    <span class="keyword">long</span> lValue;        <span class="comment">//长整形变量,4Byte</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h1><p>枚举类型，顾名思义，“枚”作为量词，作“个”讲，那么枚举，就是一个一个的列举，如果一件事情能够被一个一个的列举，那么它的数量肯定就是有限的，否则是不能被一一列举出来的。所以枚举类型即为能被列举的常量的一个集合。</p>
+</blockquote>
+<p>将数据和代码封装为一个<strong>可重用</strong>的C++类,在编写代码的时候就可以使用现有的类，而不必了解具体的实现细节。</p>
+<p>电视封装形式：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Television    <span class="comment">//class关键字 类名</span></span><br><span class="line">&#123;               <span class="comment">//边界</span></span><br><span class="line"><span class="keyword">public</span>:          <span class="comment">//外部接口</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetChannel</span><span class="params">(<span class="keyword">int</span> Channe1Num)</span></span>;    <span class="comment">//行为，代码成员</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ShutDown</span><span class="params">()</span></span>;              <span class="comment">//行为，代码成员</span></span><br><span class="line"><span class="keyword">private</span>:                <span class="comment">//特定的访问权限</span></span><br><span class="line">    <span class="keyword">int</span> CurrentChanel;              <span class="comment">//属性，数据成员</span></span><br><span class="line">&#125;;                                  <span class="comment">//边界</span></span><br></pre></td></tr></table></figure></p>
+<p>这是一个C++类的声明，它声明了Television的类，<br>大括号”{ }”中部分成员称为<code>**类体**</code>，类体由<code>**成员**</code>表组成，成员表为    数据定义或函数定义。？？</p>
 <blockquote>
-<p>在生活中，枚举的例子随处可见，比如礼拜几，那么就可以作为一个枚举变量。这个变量所存储的值，是有限的，且，能被我们所列举。再比较说，性别。它也可以作为一个枚举类型.<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">枚举类型的定义写结构体的定义相似，其形式为：</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> 枚举名&#123; </span></span><br><span class="line">               标识符[=整型常数], </span><br><span class="line">               标识符[=整型常数], </span><br><span class="line"></span><br><span class="line">... </span><br><span class="line">               标识符[=整型常数], </span><br><span class="line"></span><br><span class="line">&#125; 枚举变量;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>如果枚举没有初始化, 即省掉”=整型常数”时, 则从第一个标识符开始,依次次赋给标识符0, 1, 2, …。但当枚举中的某个成员赋值后, 其后的成员按依次 加1的规则确定其值。</p>
-<p>例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="built_in">string</span>&#123;x1, x2, x3, x4&#125;x;</span><br></pre></td></tr></table></figure></p>
+<p>声明为public和private是利用指定成员的不同访问权限。</p>
 <blockquote>
-<p>x1, x2, x3, x4的值分别为0, 1, 2, 3。 </p>
+<p>声明为Public的函数为类提供了外部接口，外接只能通过这个接口与television类发生联系，.<br>声明为private的整形数据是Television类的私有成员，外接无法直接访问。<br>可以看到，C++中通过类的机制实现了对数据的有效封装。</p>
 </blockquote>
-<p> 当定义改变成:<br> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">enum</span> <span class="built_in">string</span> </span><br><span class="line">&#123; </span><br><span class="line">    x1, </span><br><span class="line">    x2=<span class="number">0</span>, </span><br><span class="line">    x3=<span class="number">50</span>, </span><br><span class="line">    x4 </span><br><span class="line">&#125;x;</span><br></pre></td></tr></table></figure></p>
-<p> 则x1=0, x2=0, x3=50, x4=51<br>注意: </p>
-<ol>
-<li>枚举中每个成员(标识符)结束符是<figure class="highlight"><figcaption><span>最后一个成员可省略 ``**,**``</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;2. &#21021;&#22987;&#21270;&#26102;&#21487;&#20197;&#36171;&#36127;&#25968;, &#20197;&#21518;&#30340;&#26631;&#35782;&#31526;&#20173;&#20381;&#27425;&#21152;1&#12290; &#10;&#10;3. &#26522;&#20030;&#21464;&#37327;&#21482;&#33021;&#21462;&#26522;&#20030;&#35828;&#26126;&#32467;&#26500;&#20013;&#30340;&#26576;&#20010;&#26631;&#35782;&#31526;&#24120;&#37327;&#12290; &#10;    &#20363;&#22914;: &#10;```C++&#10;enum string &#10;&#123; &#10;    x1=5, &#10;    x2, &#10;    x3, &#10;    x4, &#10;&#125;; &#10;enum strig x=x3;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>此时, 枚举变量x实际上是7。</p>
-<hr>
-<h1 id="new和delete"><a href="#new和delete" class="headerlink" title="new和delete"></a>new和delete</h1><p>动态内存分配可以保证我们在程序运行过程中按照实际需求盛情适量的内存，使用结束后还可以释放。</p>
-<p>动态数组程序<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span>::<span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span>  <span class="built_in">std</span>::<span class="built_in">string</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">( )</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span>(*cp)[<span class="number">5</span>];	<span class="comment">//该语句是定义一个数组指针，指向含5个元素的一维数组。</span></span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	cp = <span class="keyword">new</span> <span class="keyword">float</span>[<span class="number">3</span>][<span class="number">5</span>];    <span class="comment">//可以这样赋值的吗？</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</span><br><span class="line">			*(*(cp + i) + j) = <span class="keyword">float</span>(i * <span class="number">2</span> + j);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; cp[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[] cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br><span class="line"><span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>this指针是一个隐含于每一个类成员函数中的特殊指针，它指向正在被成员函数操作对象的本身。</p>
-  
+</blockquote>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>继承(inheritance)将一个类的操作和数据结构提供另一个类，这使得程序员可以使用已有的类建立新类。新类继承了现有类的特性，包裹一些属性和行为,并且可以修改或增加新的属性和行为。 </p>
+<blockquote>
+<p>继承是面向对象技术能够提高软件开发效率的重要原因之一，更好的解决了软件可<code>**重用性**</code>问题。</p>
+</blockquote>
+<h2 id="子类-派生"><a href="#子类-派生" class="headerlink" title="子类(派生)"></a>子类(派生)</h2><p>C++可以声明一个新类作为另一个类的派生。派生类(也叫子类)继承父类的属性和操作。</p>
+<blockquote>
+<p>子类也声明了心得操作和属性，除去了一些不适合于自身用途的继承下来的操作和属性。</p>
+<blockquote>
+<p>继承也可以重用父类的代码，只专注与子类代码的编写。</p>
+<blockquote>
+<p>父类中已经实现的操作，在新的应用中，无需修改傅雷，所做的就是声明其派生类，在子类中做一些增加和修改。这种机制，实现了代码的重用。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1>  
 	</div>
 
 	<!-- css -->
@@ -277,7 +271,7 @@ C++ Primer第5版">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/11/18/C++_memo_2/" data-title="C++_memo_2 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/" data-title="C++_memo-类与对象 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -290,19 +284,11 @@ C++ Primer第5版">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/11/18/4412_生成设备节点/" title="4412_生成设备节点">
-  <strong>上一篇：</strong><br/>
-  <span>
-  4412_生成设备节点</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/11/17/C++常用库_函数/"  title="C++常用库_函数">
+<a href="/2016/11/18/4412_生成设备节点/"  title="4412_生成设备节点">
  <strong>下一篇：</strong><br/> 
- <span>C++常用库_函数
+ <span>4412_生成设备节点
 </span>
 </a>
 </div>
@@ -311,7 +297,7 @@ C++ Primer第5版">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/11/18/C++_memo_2/" data-title="C++_memo_2" data-url="http://www.vivatakethat.com/2016/11/18/C++_memo_2/"></div>
+	<div class="ds-thread" data-thread-key="2016/12/01/C++_memo-类与对象/" data-title="C++_memo-类与对象" data-url="http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/"></div>
 </section>
 
 
@@ -321,7 +307,7 @@ C++ Primer第5版">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">4.</span> <span class="toc-text">new和delete</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#this"><span class="toc-number">5.</span> <span class="toc-text">this</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象"><span class="toc-number">1.</span> <span class="toc-text">抽象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类-派生"><span class="toc-number">3.1.</span> <span class="toc-text">子类(派生)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多态"><span class="toc-number">4.</span> <span class="toc-text">多态</span></a></li></ol>
  
   </div>
 
@@ -426,7 +412,7 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
 			
 		
 			
@@ -434,7 +420,7 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>9</sup></a></li>
 			
 		
 			
@@ -454,15 +440,11 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -482,11 +464,11 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
 			
@@ -495,6 +477,10 @@ C++ Primer第5版">
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>
