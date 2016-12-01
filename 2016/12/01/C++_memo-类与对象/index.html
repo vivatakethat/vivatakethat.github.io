@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="抽象、封装、类">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-01T07:43:27.000Z">
+<meta property="og:updated_time" content="2016-12-01T08:07:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo-类与对象">
 <meta name="twitter:description" content="抽象、封装、类">
@@ -116,7 +116,7 @@
 <p>抽象就是面向对象程序设计的基本原则之一</p>
 </blockquote>
 <p>类是抽象的描述，是 具有相同的属性和行为 形成的一组对象，一个属于某类的对象称为该类的一个实例。</p>
-<h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><p>利用<code>**类(class)**</code>的形式进行<strong>封装</strong>，通过封装可以将每个对象的数据（属性）和操作（行为）封装在一个类中，使其形成<strong>一个有机的整体</strong>.</p>
+<h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><p>利用<strong><code>类(class)</code></strong>的形式进行<strong>封装</strong>，通过封装可以将每个对象的数据（属性）和操作（行为）封装在一个类中，使其形成<strong>一个有机的整体</strong>.</p>
 <blockquote>
 <p>一部分操作或属性作为类与外部的接口，将其他成员隐藏起来，这样可以使用接口访问程序。</p>
 <blockquote>
@@ -125,7 +125,7 @@
 </blockquote>
 <p>将数据和代码封装为一个<strong>可重用</strong>的C++类,在编写代码的时候就可以使用现有的类，而不必了解具体的实现细节。</p>
 <p>电视封装形式：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Television    <span class="comment">//class关键字 类名</span></span><br><span class="line">&#123;               <span class="comment">//边界</span></span><br><span class="line"><span class="keyword">public</span>:          <span class="comment">//外部接口</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetChannel</span><span class="params">(<span class="keyword">int</span> Channe1Num)</span></span>;    <span class="comment">//行为，代码成员</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ShutDown</span><span class="params">()</span></span>;              <span class="comment">//行为，代码成员</span></span><br><span class="line"><span class="keyword">private</span>:                <span class="comment">//特定的访问权限</span></span><br><span class="line">    <span class="keyword">int</span> CurrentChanel;              <span class="comment">//属性，数据成员</span></span><br><span class="line">&#125;;                                  <span class="comment">//边界</span></span><br></pre></td></tr></table></figure></p>
-<p>这是一个C++类的声明，它声明了Television的类，<br>大括号”{ }”中部分成员称为<code>**类体**</code>，类体由<code>**成员**</code>表组成，成员表为    数据定义或函数定义。？？</p>
+<p>这是一个C++类的声明，它声明了Television的类，<br>大括号”{ }”中部分成员称为<strong><code>类体</code></strong>，类体由<strong><code>成员</code></strong>表组成，成员表为    数据定义或函数定义。？？</p>
 <blockquote>
 <p>声明为public和private是利用指定成员的不同访问权限。</p>
 <blockquote>
@@ -134,7 +134,7 @@
 </blockquote>
 <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>继承(inheritance)将一个类的操作和数据结构提供另一个类，这使得程序员可以使用已有的类建立新类。新类继承了现有类的特性，包裹一些属性和行为,并且可以修改或增加新的属性和行为。 </p>
 <blockquote>
-<p>继承是面向对象技术能够提高软件开发效率的重要原因之一，更好的解决了软件可<code>**重用性**</code>问题。</p>
+<p>继承是面向对象技术能够提高软件开发效率的重要原因之一，更好的解决了软件可<strong><code>重用性</code></strong>问题。</p>
 </blockquote>
 <h2 id="子类-派生"><a href="#子类-派生" class="headerlink" title="子类(派生)"></a>子类(派生)</h2><p>C++可以声明一个新类作为另一个类的派生。派生类(也叫子类)继承父类的属性和操作。</p>
 <blockquote>
@@ -142,7 +142,7 @@
 <blockquote>
 <p>继承也可以重用父类的代码，只专注与子类代码的编写。</p>
 <blockquote>
-<p>父类中已经实现的操作，在新的应用中，无需修改傅雷，所做的就是声明其派生类，在子类中做一些增加和修改。这种机制，实现了代码的重用。</p>
+<p>父类中已经实现的操作，在新的应用中，无需修改复用，所做的就是声明其派生类，在子类中做一些增加和修改。这种机制，实现了代码的重用。</p>
 </blockquote>
 </blockquote>
 </blockquote>
