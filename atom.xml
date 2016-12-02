@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>take that的博客</title>
-  <subtitle>coding的page出错了，所有文章都是404.不过github路线倒是正常的(但是要翻墙)</subtitle>
+  <subtitle>coding的pages出错了，所有文章都是404.不过github路线倒是正常的(但是要翻墙)</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
