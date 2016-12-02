@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>take that的博客</title>
-  <subtitle>coding的pages出错了，所有文章都是404.不过github路线倒是正常的(但是要翻墙)</subtitle>
+  <subtitle>热 爱 生 活 .</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
-  <updated>2016-12-01T09:21:59.000Z</updated>
+  <updated>2016-12-02T02:43:58.000Z</updated>
   <id>http://www.vivatakethat.com/</id>
   
   <author>
@@ -20,11 +20,18 @@
     <link href="http://www.vivatakethat.com/2016/12/01/C++_memo-class%20/"/>
     <id>http://www.vivatakethat.com/2016/12/01/C++_memo-class /</id>
     <published>2016-12-01T07:42:32.000Z</published>
-    <updated>2016-12-01T09:21:59.000Z</updated>
+    <updated>2016-12-02T02:43:58.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600&quot; alt=&quot;Grand theft dora&quot; title=&quot;Grand theft dora&quot;&gt;&lt;/p&gt;
-&lt;p&gt;抽象、封装、类。&lt;/p&gt;
-&lt;p&gt;C++是一种比较流行的面向对象语言，面向对象语言有三大特性：继承，封装和多态。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;抽象、封装、类。&lt;br&gt;面向对象的核心是类,利用它可以实对&lt;strong&gt;&lt;code&gt;数据&lt;/code&gt;&lt;/strong&gt;和&lt;strong&gt;&lt;code&gt;方法&lt;/code&gt;&lt;/strong&gt;的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;函数是对方法的封装，用于完成特定的功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;类相当于与用于自定义的类型，也可以声明某个类的对象(也叫实例)，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;C++是一种比较流行的面向对象语言，面向对象语言有三大特性：继承，封装和多态。&lt;/p&gt;
 &lt;h1 id=&quot;抽象&quot;&gt;&lt;a href=&quot;#抽象&quot; class=&quot;headerlink&quot; title=&quot;抽象&quot;&gt;&lt;/a&gt;抽象&lt;/h1&gt;&lt;p&gt;抽象与具体相对应,&lt;br&gt;就是找出事物的共性，将相同性质的事物化为一类，而忽略具体细节，&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;抽象就是面向对象程序设计的基本原则之一&lt;/p&gt;
@@ -60,13 +67,20 @@
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;多态&quot;&gt;&lt;a href=&quot;#多态&quot; class=&quot;headerlink&quot; title=&quot;多态&quot;&gt;&lt;/a&gt;多态&lt;/h1&gt;</content>
+&lt;h1 id=&quot;多态&quot;&gt;&lt;a href=&quot;#多态&quot; class=&quot;headerlink&quot; title=&quot;多态&quot;&gt;&lt;/a&gt;多态&lt;/h1&gt;&lt;p&gt;virtual函数(虚函数)表示允许在相同家族中的类有不同的行为。这些不同是引起多态行为的原因。&lt;/p&gt;
+&lt;p&gt;多态性(polymorphism)是指允许不同类的对象对同一消息做出的响应不同。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般类中定义的属性或行为，被特殊类继承后，可以具有不同的语义。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600&quot; alt=&quot;Grand theft dora&quot; title=&quot;Grand theft dora&quot;&gt;&lt;/p&gt;
-&lt;p&gt;抽象、封装、类。&lt;/p&gt;
-&lt;p&gt;C++是一种比较流行的面向对象语言，面向对象语言有三大特性：继承，封装和多态。&lt;br&gt;
+&lt;p&gt;抽象、封装、类。&lt;br&gt;面向对象的核心是类,利用它可以实对&lt;strong&gt;&lt;code&gt;数据&lt;/code&gt;&lt;/strong&gt;和&lt;strong&gt;&lt;code&gt;方法&lt;/code&gt;&lt;/strong&gt;的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;函数是对方法的封装，用于完成特定的功能。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
