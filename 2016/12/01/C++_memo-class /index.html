@@ -12,21 +12,21 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
+    <meta name="description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法(函数)的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
 
 函数是对方法的封装，用于完成特定的功能。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++_memo-类与对象">
 <meta property="og:url" content="http://www.vivatakethat.com/2016/12/01/C++_memo-class /index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
+<meta property="og:description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法(函数)的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
 
 函数是对方法的封装，用于完成特定的功能。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-02T02:43:58.000Z">
+<meta property="og:updated_time" content="2016-12-02T03:25:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo-类与对象">
-<meta name="twitter:description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
+<meta name="twitter:description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法(函数)的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
 
 函数是对方法的封装，用于完成特定的功能。">
 
@@ -54,7 +54,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">热 爱 生 活 .</h2>
+				<h2 class="blog-motto">热 爱 生 活.</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -111,18 +111,21 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象"><span class="toc-number">1.</span> <span class="toc-text">抽象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类-派生"><span class="toc-number">3.1.</span> <span class="toc-text">子类(派生)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多态"><span class="toc-number">4.</span> <span class="toc-text">多态</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象"><span class="toc-number">1.</span> <span class="toc-text">抽象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类-派生"><span class="toc-number">3.1.</span> <span class="toc-text">子类(派生)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多态"><span class="toc-number">4.</span> <span class="toc-text">多态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立类与对象"><span class="toc-number">5.</span> <span class="toc-text">建立类与对象</span></a></li></ol>
 		
 		</div>
 		
 		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600" alt="Grand theft dora" title="Grand theft dora"></p>
-<p>抽象、封装、类。<br>面向对象的核心是类,利用它可以实对<strong><code>数据</code></strong>和<strong><code>方法</code></strong>的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。</p>
+<p>抽象、封装、类。<br>面向对象的核心是类,利用它可以实对<strong><code>数据</code></strong>和<strong><code>方法(函数)</code></strong>的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。</p>
 <blockquote>
-<p>函数是对方法的封装，用于完成特定的功能。</p>
+<p>函数是对方法的封装，用于完成特定的功能。   </p>
 </blockquote>
 <a id="more"></a>
 <ul>
-<li>类相当于与用于自定义的类型，也可以声明某个类的对象(也叫实例)，</li>
+<li>类相当于与用于自定义的类型，也可以声明某个类的对象(也叫实例)，这个声明的过程称为类的实例化。类和基本类却别在于，类类型同时包含了对<strong><code>数据进行操作的函数</code></strong><blockquote>
+<p>所以类由事物的**``数据</p>
+</blockquote>
+</li>
 </ul>
 <p>C++是一种比较流行的面向对象语言，面向对象语言有三大特性：继承，封装和多态。</p>
 <h1 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h1><p>抽象与具体相对应,<br>就是找出事物的共性，将相同性质的事物化为一类，而忽略具体细节，</p>
@@ -138,7 +141,7 @@
 </blockquote>
 </blockquote>
 <p>将数据和代码封装为一个<strong>可重用</strong>的C++类,在编写代码的时候就可以使用现有的类，而不必了解具体的实现细节。</p>
-<p>电视封装形式：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Television    <span class="comment">//class关键字 类名</span></span><br><span class="line">&#123;               <span class="comment">//边界</span></span><br><span class="line"><span class="keyword">public</span>:          <span class="comment">//外部接口</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetChannel</span><span class="params">(<span class="keyword">int</span> Channe1Num)</span></span>;    <span class="comment">//行为，代码成员</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ShutDown</span><span class="params">()</span></span>;              <span class="comment">//行为，代码成员</span></span><br><span class="line"><span class="keyword">private</span>:                <span class="comment">//特定的访问权限</span></span><br><span class="line">    <span class="keyword">int</span> CurrentChanel;              <span class="comment">//属性，数据成员</span></span><br><span class="line">&#125;;                                  <span class="comment">//边界</span></span><br></pre></td></tr></table></figure></p>
+<p>例如：<br>电视封装形式：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Television    <span class="comment">//class关键字 类名</span></span><br><span class="line">&#123;               <span class="comment">//边界</span></span><br><span class="line"><span class="keyword">public</span>:          <span class="comment">//外部接口</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetChannel</span><span class="params">(<span class="keyword">int</span> Channe1Num)</span></span>;    <span class="comment">//行为，代码成员</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ShutDown</span><span class="params">()</span></span>;              <span class="comment">//行为，代码成员</span></span><br><span class="line"><span class="keyword">private</span>:                <span class="comment">//特定的访问权限</span></span><br><span class="line">    <span class="keyword">int</span> CurrentChanel;              <span class="comment">//属性，数据成员</span></span><br><span class="line">&#125;;                                  <span class="comment">//边界</span></span><br></pre></td></tr></table></figure></p>
 <p>这是一个C++类的声明，它声明了Television的类，<br>大括号”{ }”中部分成员称为<strong><code>类体</code></strong>，类体由<strong><code>成员</code></strong>表组成，成员表为    数据定义或函数定义。？？</p>
 <blockquote>
 <p>声明为public和private是利用指定成员的不同访问权限。</p>
@@ -165,6 +168,10 @@
 <blockquote>
 <p>一般类中定义的属性或行为，被特殊类继承后，可以具有不同的语义。</p>
 </blockquote>
+<h1 id="建立类与对象"><a href="#建立类与对象" class="headerlink" title="建立类与对象"></a>建立类与对象</h1><p>类由描述某类事物的数据和处理这些数据的函数组成，是一种导出数据类型，可用于定义对象。要定义对象，首先先定义类。</p>
+<p>类的定义格式如下：<br>```C++<br>class  &lt;类名&gt;<br>{  private:         //定义私有成员或成员函数<br>    &lt;成员表1&gt;<br>    public：     //定义公有数据成员或成员函数<br>    &lt;成员表2&gt;<br>    protected:      //定义保护数据成员或成员函数<br>    &lt;成员表3&gt;<br>};</p>
+<p>例如：声明一个类来描述电视，其形式如下：<br>```C++<br>class  Television<br>{<br>public:<br>    void SetChannel(int ChangelNum);<br>    void Shutdown();<br>    void TurnOn();<br>private:<br>    int CurrentChannel;<br>    bool IsOpen;<br>};</p>
+<p>void Television::SetChannel(int ChannelNum)<br>{<br>    //….<br>    CurrentChannel=<br>}</p>
   
 	</div>
 
@@ -326,7 +333,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象"><span class="toc-number">1.</span> <span class="toc-text">抽象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类-派生"><span class="toc-number">3.1.</span> <span class="toc-text">子类(派生)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多态"><span class="toc-number">4.</span> <span class="toc-text">多态</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象"><span class="toc-number">1.</span> <span class="toc-text">抽象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类-派生"><span class="toc-number">3.1.</span> <span class="toc-text">子类(派生)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多态"><span class="toc-number">4.</span> <span class="toc-text">多态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立类与对象"><span class="toc-number">5.</span> <span class="toc-text">建立类与对象</span></a></li></ol>
  
   </div>
 
