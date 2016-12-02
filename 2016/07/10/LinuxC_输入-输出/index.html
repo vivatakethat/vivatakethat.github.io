@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C语言_输入-输出 | take that的博客</title>
+    <title>LinuxC_输入-输出 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -14,14 +14,14 @@
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
     <meta name="description" content="流  在C语言中术语流(stream)表述任意输入的源或任意输出的目的地。许多小程序都是通过一个流（通常和键盘相关）获得全部输入，并且通过一个流(通常和屏幕相关)写出全部输出.  较大规模的程序可能需要额外的流。这些流通常表示存储在不同介质（如硬盘驱动器、CD、DVD和内存）上的文件，但也通常很容易和不存储的设备日（网络端口、打印机等）相关联。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言_输入-输出">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/07/10/C语言_输入-输出/index.html">
+<meta property="og:title" content="LinuxC_输入-输出">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/07/10/LinuxC_输入-输出/index.html">
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="流  在C语言中术语流(stream)表述任意输入的源或任意输出的目的地。许多小程序都是通过一个流（通常和键盘相关）获得全部输入，并且通过一个流(通常和屏幕相关)写出全部输出.  较大规模的程序可能需要额外的流。这些流通常表示存储在不同介质（如硬盘驱动器、CD、DVD和内存）上的文件，但也通常很容易和不存储的设备日（网络端口、打印机等）相关联。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%AE%80-%E7%A6%8F%E6%96%AF%E7%89%B9.png">
-<meta property="og:updated_time" content="2016-11-17T18:01:14.000Z">
+<meta property="og:updated_time" content="2016-12-02T07:09:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言_输入-输出">
+<meta name="twitter:title" content="LinuxC_输入-输出">
 <meta name="twitter:description" content="流  在C语言中术语流(stream)表述任意输入的源或任意输出的目的地。许多小程序都是通过一个流（通常和键盘相关）获得全部输入，并且通过一个流(通常和屏幕相关)写出全部输出.  较大规模的程序可能需要额外的流。这些流通常表示存储在不同介质（如硬盘驱动器、CD、DVD和内存）上的文件，但也通常很容易和不存储的设备日（网络端口、打印机等）相关联。">
 
     
@@ -86,7 +86,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/10/C语言_输入-输出/" title="C语言_输入-输出" itemprop="url">C语言_输入-输出</a>
+      <a href="/2016/07/10/LinuxC_输入-输出/" title="LinuxC_输入-输出" itemprop="url">LinuxC_输入-输出</a>
   </h1>
   <p class="article-author">By
        
@@ -167,20 +167,10 @@
 </tr>
 </tbody>
 </table>
-<p><code>fopen</code>调用格式如下所示：<br><code>fp=fopen(&quot;in.dat&quot;,&quot;r&quot;);   /*opens in.dat for reading*/</code></p>
+<p><code>fopen</code>调用格式如下所示：<br><figure class="highlight"><figcaption><span> </span><a href="/*opens">in.dat for reading*/```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10;&#10;&#10;&#62;&#20854;&#20013;fp&#26159;FILE*&#31867;&#22411;&#30340;&#21464;&#37327;&#65307;&#10;&#10;&#24403;&#31243;&#24207;&#31245;&#21518;&#35843;&#29992;&#36755;&#20837;&#20989;&#25968;&#20174;&#25991;&#20214;`in.dat`&#20013;&#35835;&#25968;&#25454;&#26102;&#65292;&#23558;&#20250;&#25226;fp&#24403;&#20316;&#19968;&#20010;&#23454;&#38469;&#21442;&#25968;&#12290;&#10;&#62;&#24403;&#26080;&#27861;&#25171;&#24320;&#25991;&#20214;&#26102;&#65292;foopen&#20989;&#25968;&#23601;&#20250;&#36820;&#22238;&#31354;&#25351;&#38024;&#12290;&#36825;&#21487;&#33021;&#26159;&#10;&#62;&#62;1. &#25991;&#20214;&#19981;&#23384;&#22312;&#10;&#62;&#62;2. &#25991;&#20214;&#20301;&#32622;&#19981;&#23545;&#10;&#62;&#62;3. &#27809;&#26377;&#25171;&#24320;&#25991;&#20214;&#30340;&#26435;&#38480;&#10;&#10;&#10;&#10;&#10;# perror&#10;&#23450;&#20041;&#20989;&#25968;&#10;```C&#10;       #include &#60;stdio.h&#62;&#10;&#10;       void perror(const char *s);</span><br></pre></td></tr></table></figure></p>
+<p>perror ( )用 来 将 上 一 个 函 数 发 生 错 误 的 原 因 输 出 到 标 准 设备 (stderr) 。参数 s 所指的字符串会先打印出,后面再加上错误原因字符串。此错误原因依照全局变量error 的值来决定要输出的字符串。　　</p>
 <blockquote>
-<p>其中fp是FILE*类型的变量；</p>
-</blockquote>
-<p>当程序稍后调用输入函数从文件<code>in.dat</code>中读数据时，将会把fp当作一个实际参数。</p>
-<blockquote>
-<p>当无法打开文件时，foopen函数就会返回空指针。这可能是</p>
-<blockquote>
-<ol>
-<li>文件不存在</li>
-<li>文件位置不对</li>
-<li>没有打开文件的权限</li>
-</ol>
-</blockquote>
+<p>在库函数中有个error变量，每个error值对应着以字符串表示的错误类型。当你调用”某些”函数出错时，该函数已经重新设置了error的值。perror函数只是将你输入的一些信息和现在的error所对应的错误一起输出。</p>
 </blockquote>
   
 	</div>
@@ -307,7 +297,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/07/10/C语言_输入-输出/" data-title="C语言_输入-输出 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/07/10/LinuxC_输入-输出/" data-title="LinuxC_输入-输出 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -341,7 +331,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/07/10/C语言_输入-输出/" data-title="C语言_输入-输出" data-url="http://www.vivatakethat.com/2016/07/10/C语言_输入-输出/"></div>
+	<div class="ds-thread" data-thread-key="2016/07/10/LinuxC_输入-输出/" data-title="LinuxC_输入-输出" data-url="http://www.vivatakethat.com/2016/07/10/LinuxC_输入-输出/"></div>
 </section>
 
 

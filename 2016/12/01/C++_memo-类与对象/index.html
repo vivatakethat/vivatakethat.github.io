@@ -17,13 +17,13 @@
 函数是对方法的封装，用于完成特定的功能。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++_memo-类与对象">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/12/01/C++_memo-class /index.html">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/index.html">
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法(函数)的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
 
 函数是对方法的封装，用于完成特定的功能。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-02T03:25:32.000Z">
+<meta property="og:updated_time" content="2016-12-02T17:31:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo-类与对象">
 <meta name="twitter:description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法(函数)的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
@@ -92,7 +92,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/12/01/C++_memo-class /" title="C++_memo-类与对象" itemprop="url">C++_memo-类与对象</a>
+      <a href="/2016/12/01/C++_memo-类与对象/" title="C++_memo-类与对象" itemprop="url">C++_memo-类与对象</a>
   </h1>
   <p class="article-author">By
        
@@ -169,9 +169,7 @@
 <p>一般类中定义的属性或行为，被特殊类继承后，可以具有不同的语义。</p>
 </blockquote>
 <h1 id="建立类与对象"><a href="#建立类与对象" class="headerlink" title="建立类与对象"></a>建立类与对象</h1><p>类由描述某类事物的数据和处理这些数据的函数组成，是一种导出数据类型，可用于定义对象。要定义对象，首先先定义类。</p>
-<p>类的定义格式如下：<br>```C++<br>class  &lt;类名&gt;<br>{  private:         //定义私有成员或成员函数<br>    &lt;成员表1&gt;<br>    public：     //定义公有数据成员或成员函数<br>    &lt;成员表2&gt;<br>    protected:      //定义保护数据成员或成员函数<br>    &lt;成员表3&gt;<br>};</p>
-<p>例如：声明一个类来描述电视，其形式如下：<br>```C++<br>class  Television<br>{<br>public:<br>    void SetChannel(int ChangelNum);<br>    void Shutdown();<br>    void TurnOn();<br>private:<br>    int CurrentChannel;<br>    bool IsOpen;<br>};</p>
-<p>void Television::SetChannel(int ChannelNum)<br>{<br>    //….<br>    CurrentChannel=<br>}</p>
+<p>类的定义格式如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span>  &lt;类名&gt;</span><br><span class="line">&#123;  <span class="keyword">private</span>:         <span class="comment">//定义私有成员或成员函数</span></span><br><span class="line">    &lt;成员表<span class="number">1</span>&gt;</span><br><span class="line">    <span class="keyword">public</span>：     <span class="comment">//定义公有数据成员或成员函数</span></span><br><span class="line">    &lt;成员表<span class="number">2</span>&gt;</span><br><span class="line">    <span class="keyword">protected</span>:      <span class="comment">//定义保护数据成员或成员函数</span></span><br><span class="line">    &lt;成员表<span class="number">3</span>&gt;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">例如：声明一个类来描述电视，其形式如下：</span><br><span class="line">```C++</span><br><span class="line"><span class="keyword">class</span>  Television</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetChannel</span><span class="params">(<span class="keyword">int</span> ChangelNum)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Shutdown</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">TurnOn</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> CurrentChannel;</span><br><span class="line">    <span class="keyword">bool</span> IsOpen;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> Television::SetChannel(<span class="keyword">int</span> ChannelNum)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//....</span></span><br><span class="line">    CurrentChannel=</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
   
 	</div>
 
@@ -297,7 +295,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/12/01/C++_memo-class /" data-title="C++_memo-类与对象 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/" data-title="C++_memo-类与对象 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -323,7 +321,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/12/01/C++_memo-class /" data-title="C++_memo-类与对象" data-url="http://www.vivatakethat.com/2016/12/01/C++_memo-class /"></div>
+	<div class="ds-thread" data-thread-key="2016/12/01/C++_memo-类与对象/" data-title="C++_memo-类与对象" data-url="http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/"></div>
 </section>
 
 
