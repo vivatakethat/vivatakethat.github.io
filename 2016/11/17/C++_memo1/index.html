@@ -23,7 +23,7 @@ c++  Primer第五版">
 
 c++  Primer第五版">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg">
-<meta property="og:updated_time" content="2016-12-01T08:18:50.000Z">
+<meta property="og:updated_time" content="2016-12-03T03:03:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo1">
 <meta name="twitter:description" content="c++零碎笔记：类、函数、引用、指针、const、auto、 constexpr变量、decltype
@@ -66,9 +66,9 @@ c++  Primer第五版">
 					
 						<li><a href="/archives">归档|Archives</a></li>
 					
-						<li><a href="/tags">标签|tags</a></li>
+						<li><a href="/tags">标签|Tags</a></li>
 					
-						<li><a href="/categories">分类|categories</a></li>
+						<li><a href="/categories">分类|Categories</a></li>
 					
 						<li><a href="/about">关于|About</a></li>
 					
@@ -151,22 +151,10 @@ c++  Primer第五版">
 <ul>
 <li>指针的赋值<br>定于了一个指针，只是得到了一个用于存储地址的指针变量，但是变量没有确定的值，其中地址的值是一个随机数。所以定义指针后必须赋值，才可以引用。</li>
 </ul>
-<p>指针的初始化有2种方法<br><strong>1.</strong>定义指针的同进行初始化赋值<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">&lt;数据类型&gt;</span>  <span class="keyword">*</span><span class="variable">&lt;指针变量名&gt;</span>=初始地址</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.</strong>在定义后，单独使用赋值语句<br><figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">指针</span>=<span class="string">地址</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>用变量地址作为初始值必须先声明</p>
-<blockquote>
-<p>指针变量的值必须是地址的常量或变量,不能是普通这人年归属，但可以赋值为整数0，表示空指针。</p>
-<blockquote>
-<p>“地址”中存放的数据类型与指针类型必须相符。指针的类型是它所指向变来那个的类型而不是指针本身的数据类型，任何一个指针的数据值都是unsigned long int型。</p>
-<blockquote>
-<p>允许声明指向void类型的指针。例如</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> *general;</span><br></pre></td></tr></table></figure>
-<p>实例代码：指针的定义、赋值与使用<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">10</span>, j;</span><br><span class="line">	<span class="keyword">int</span> *ptr = &amp;i; <span class="comment">//定义指向整形变量的指针ptr,初始值为i的地址</span></span><br><span class="line">	j = *ptr;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"i="</span> &lt;&lt; i &lt;&lt; <span class="string">",j="</span> &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"*ptr="</span> &lt;&lt; *ptr &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>指针要么是在初始化的时候进行赋值，如：<figure class="highlight"><figcaption><span>*p = "hello world!";```要么在之后将指针指向一个已经初始化的内存空间，因为只定义而未初始化的指针不会指向任何内存空间，是不能对指针指向的地方进行赋值的。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#36825;&#23601;&#26159;&#20026;&#20160;&#20040;&#22914;&#26524;&#21482;&#23450;&#20041;&#20102;&#25351;&#38024;&#65292;&#32780;&#20026;&#21021;&#22987;&#21270;&#26102;&#35201;&#20351;&#29992;Xalloc&#25110;&#32773;new&#26469;&#30003;&#35831;&#31354;&#38388;&#12290; &#10;&#10;&#25351;&#38024;&#30340;&#21021;&#22987;&#21270;&#26377;2&#31181;&#26041;&#27861;&#10;**1.**&#23450;&#20041;&#25351;&#38024;&#30340;&#21516;&#36827;&#34892;&#21021;&#22987;&#21270;&#36171;&#20540;</span><br></pre></td></tr></table></figure></p>
+<p>&lt;数据类型&gt;  *&lt;指针变量名&gt;=初始地址<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>2.<span class="keyword">*</span><span class="keyword">*</span>在定义后，单独使用赋值语句</span><br></pre></td></tr></table></figure></p>
+<p>指针=地址<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;用变量地址作为初始值必须先声明</span><br><span class="line"><span class="prompt">&gt;&gt;</span>指针变量的值必须是地址的常量或变量,不能是普通这人年归属，但可以赋值为整数<span class="number">0</span>，表示空指针。</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt;<span class="string">"地址"</span>中存放的数据类型与指针类型必须相符。指针的类型是它所指向变来那个的类型而不是指针本身的数据类型，任何一个指针的数据值都是unsigned long int型。</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt;&gt;允许声明指向void类型的指针。例如</span><br></pre></td></tr></table></figure></p>
+<p>void *general;<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="cpp"></span><br><span class="line">实例代码：指针的定义、赋值与使用</span><br><span class="line">```C++</span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">10</span>, j;</span><br><span class="line">	<span class="keyword">int</span> *ptr = &amp;i; <span class="comment">//定义指向整形变量的指针ptr,初始值为i的地址</span></span><br><span class="line">	j = *ptr;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"i="</span> &lt;&lt; i &lt;&lt; <span class="string">",j="</span> &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"*ptr="</span> &lt;&lt; *ptr &lt;&lt; endl;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>运行结果<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">10</span>,j=<span class="number">10</span></span><br><span class="line">*ptr=<span class="number">10</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <ul>
@@ -464,7 +452,7 @@ c++  Primer第五版">
 <blockquote>
 <p>类内部定义的名字必须唯一，但是可以与类外部定义的名字重复。</p>
 <blockquote>
-<p>类体的右侧的表示结束的花括号必须写一个<strong>分号</strong>,这是因为类体后面可以紧跟着变量名以表示对该类型对象的定义。</p>
+<p>类体的右侧的表示结束的花括号必须写一个<strong>分号</strong>,这是因为类体后面可以紧跟着变量名以表示对该类型对象的定义。<br>结构体可以作为函数的参数，实现数据传递，还可以作为一个函数的返回值。</p>
 </blockquote>
 </blockquote>
 </blockquote>
