@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="Linux到2.6版本时候改动巨大，2.6版本以前的基本都废弃了。不用关注2.6以前的版本">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%93%A6%E8%82%AF%E4%B8%BE%E6%89%8B%E7%A4%BC.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-05T12:18:24.000Z">
+<meta property="og:updated_time" content="2016-12-05T12:20:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4412_生成设备节点">
 <meta name="twitter:description" content="Linux到2.6版本时候改动巨大，2.6版本以前的基本都废弃了。不用关注2.6以前的版本">
@@ -155,11 +155,15 @@
 <p>file_operations参数非常多，要根据需求选择<br>必选参数</p>
 </blockquote>
 <ul>
-<li><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#62;&#19968;&#33324;&#26159;```THIS_MODULE</span><br></pre></td></tr></table></figure>
-</li>
+<li><code>.owner</code></li>
+</ul>
+<blockquote>
+<p>一般是<code>THIS_MODULE</code></p>
+</blockquote>
+<ul>
 <li><p><code>.open</code>打开文件函数</p>
 </li>
-<li><p><code>.release</code>关闭文件函数</p>
+<li><p>``.release```关闭文件函数</p>
 </li>
 <li><p><code>.unlokced_ioctl</code>对GPIO的操作，应用向底层传值</p>
 </li>

@@ -133,7 +133,7 @@
     <link href="http://www.vivatakethat.com/2016/11/18/4412_%E7%94%9F%E6%88%90%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9/"/>
     <id>http://www.vivatakethat.com/2016/11/18/4412_生成设备节点/</id>
     <published>2016-11-18T10:42:32.000Z</published>
-    <updated>2016-12-05T12:18:24.000Z</updated>
+    <updated>2016-12-05T12:20:42.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%93%A6%E8%82%AF%E4%B8%BE%E6%89%8B%E7%A4%BC.jpg?imageView2/2/h/600&quot; alt=&quot;瓦肯举手礼&quot; title=&quot;瓦肯举手礼&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -181,11 +181,15 @@
 &lt;p&gt;file_operations参数非常多，要根据需求选择&lt;br&gt;必选参数&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#10;&amp;#62;&amp;#19968;&amp;#33324;&amp;#26159;```THIS_MODULE&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.owner&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般是&lt;code&gt;THIS_MODULE&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;.open&lt;/code&gt;打开文件函数&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;.release&lt;/code&gt;关闭文件函数&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;``.release```关闭文件函数&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;.unlokced_ioctl&lt;/code&gt;对GPIO的操作，应用向底层传值&lt;/p&gt;
 &lt;/li&gt;
