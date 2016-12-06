@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
+    <lastmod>2016-12-06T17:01:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>git memo</title>
+        <pubTime>2016-09-17T12:26:32.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web|服务|框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
-    <lastmod>2016-12-06T16:15:37.000Z</lastmod>
+    <lastmod>2016-12-06T17:01:24.000Z</lastmod>
     <data>
         <display>
         <title>在Windows下快速搭建hexo</title>
@@ -16,7 +36,7 @@
          
            
              
-              <breadCrumb title="Web" url="http://www.vivatakethat.com/categories/Web/"/>
+              <breadCrumb title="Web|服务|框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
           
         </display>
     </data>
@@ -25,7 +45,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2016-12-06T16:14:32.000Z</lastmod>
+    <lastmod>2016-12-06T17:01:03.000Z</lastmod>
     <data>
         <display>
         <title>hexo部署过程问题与结局方案</title>
@@ -36,7 +56,7 @@
          
            
              
-              <breadCrumb title="Web" url="http://www.vivatakethat.com/categories/Web/"/>
+              <breadCrumb title="Web|服务|框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
           
         </display>
     </data>
@@ -1679,26 +1699,6 @@
            
              
               <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
-    <lastmod>2016-10-17T10:12:35.908Z</lastmod>
-    <data>
-        <display>
-        <title>git memo</title>
-        <pubTime>2016-09-17T12:26:32.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="git" url="http://www.vivatakethat.com/categories/git/"/>
           
         </display>
     </data>
