@@ -4,8 +4,88 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/08/16/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-12-06T17:07:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>嵌入式Linux基础教程-笔记</title>
+        <pubTime>2016-08-16T01:50:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Book |Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/06/29/1-Fundamentals/</loc>
+    <lastmod>2016-12-06T17:06:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>1-Fundamentals</title>
+        <pubTime>2016-06-29T12:13:32.000Z</pubTime>
+        
+        <tag>Algorithms</tag>
+         
+         
+           
+             
+              <breadCrumb title="Book |Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/06/17/Coursera-Week%200-Welcome%20to%20Algorithms,%20Part%20I%20/</loc>
+    <lastmod>2016-12-06T17:06:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Week 0- Welcome to Algorithms, Part I</title>
+        <pubTime>2016-06-17T02:09:32.000Z</pubTime>
+        
+        <tag>Coursera-Algorithms</tag>
+         
+         
+           
+             
+              <breadCrumb title="Book |Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/06/29/Algorithms3-13/</loc>
+    <lastmod>2016-12-06T17:05:57.838Z</lastmod>
+    <data>
+        <display>
+        <title>Algorithms3-13</title>
+        <pubTime>2016-06-29T12:13:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Book |Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
-    <lastmod>2016-12-06T17:01:44.000Z</lastmod>
+    <lastmod>2016-12-06T17:04:39.000Z</lastmod>
     <data>
         <display>
         <title>git memo</title>
@@ -16,7 +96,7 @@
          
            
              
-              <breadCrumb title="Web|服务|框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
+              <breadCrumb title="Web |服务 |框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
           
         </display>
     </data>
@@ -25,7 +105,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
-    <lastmod>2016-12-06T17:01:24.000Z</lastmod>
+    <lastmod>2016-12-06T17:04:28.000Z</lastmod>
     <data>
         <display>
         <title>在Windows下快速搭建hexo</title>
@@ -36,7 +116,7 @@
          
            
              
-              <breadCrumb title="Web|服务|框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
+              <breadCrumb title="Web |服务 |框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
           
         </display>
     </data>
@@ -45,7 +125,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2016-12-06T17:01:03.000Z</lastmod>
+    <lastmod>2016-12-06T17:04:16.797Z</lastmod>
     <data>
         <display>
         <title>hexo部署过程问题与结局方案</title>
@@ -56,7 +136,7 @@
          
            
              
-              <breadCrumb title="Web|服务|框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
+              <breadCrumb title="Web |服务 |框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
           
         </display>
     </data>
@@ -646,26 +726,6 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/06/17/Coursera-Week%200-Welcome%20to%20Algorithms,%20Part%20I%20/</loc>
-    <lastmod>2016-11-16T14:14:33.043Z</lastmod>
-    <data>
-        <display>
-        <title>Week 0- Welcome to Algorithms, Part I</title>
-        <pubTime>2016-06-17T02:09:32.000Z</pubTime>
-        
-        <tag>Coursera-Algorithms</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coursera" url="http://www.vivatakethat.com/categories/Coursera/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/04/04/PHP%E5%85%A5%E9%97%A8(%E4%B8%80)/</loc>
     <lastmod>2016-11-16T14:14:33.001Z</lastmod>
     <data>
@@ -726,26 +786,6 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/06/29/1-Fundamentals/</loc>
-    <lastmod>2016-11-16T14:14:29.090Z</lastmod>
-    <data>
-        <display>
-        <title>1-Fundamentals</title>
-        <pubTime>2016-06-29T12:13:32.000Z</pubTime>
-        
-        <tag>Algorithms</tag>
-         
-         
-           
-             
-              <breadCrumb title="Book" url="http://www.vivatakethat.com/categories/Book/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/04/01/51%E5%9F%BA%E7%A1%80%EF%BC%88%E9%9B%B6%EF%BC%89/</loc>
     <lastmod>2016-11-16T14:14:23.000Z</lastmod>
     <data>
@@ -759,26 +799,6 @@
            
              
               <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/06/29/Algorithms3-13/</loc>
-    <lastmod>2016-11-16T14:14:12.481Z</lastmod>
-    <data>
-        <display>
-        <title>Algorithms3-13</title>
-        <pubTime>2016-06-29T12:13:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Book" url="http://www.vivatakethat.com/categories/Book/"/>
           
         </display>
     </data>
@@ -1339,26 +1359,6 @@
            
              
               <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/08/16/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2016-11-16T14:09:48.074Z</lastmod>
-    <data>
-        <display>
-        <title>嵌入式Linux基础教程-笔记</title>
-        <pubTime>2016-08-16T01:50:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Book" url="http://www.vivatakethat.com/categories/Book/"/>
           
         </display>
     </data>
