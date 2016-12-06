@@ -4,6 +4,106 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2016-12-06T17:14:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo部署过程问题与结局方案</title>
+        <pubTime>2016-10-17T08:10:32.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
+    <lastmod>2016-12-06T17:14:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>在Windows下快速搭建hexo</title>
+        <pubTime>2016-07-07T07:46:32.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
+    <lastmod>2016-12-06T17:14:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>git memo</title>
+        <pubTime>2016-09-17T12:26:32.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
+    <lastmod>2016-12-06T17:14:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>PHP基础（零）</title>
+        <pubTime>2016-04-01T06:38:32.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/04/04/PHP%E5%85%A5%E9%97%A8(%E4%B8%80)/</loc>
+    <lastmod>2016-12-06T17:13:24.057Z</lastmod>
+    <data>
+        <display>
+        <title>PHP基础（一）</title>
+        <pubTime>2016-04-04T15:54:32.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/06/22/Coursera-Union-Find/</loc>
     <lastmod>2016-12-06T17:09:43.000Z</lastmod>
     <data>
@@ -97,66 +197,6 @@
            
              
               <breadCrumb title="Book |Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
-    <lastmod>2016-12-06T17:04:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>git memo</title>
-        <pubTime>2016-09-17T12:26:32.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web |服务 |框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
-    <lastmod>2016-12-06T17:04:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>在Windows下快速搭建hexo</title>
-        <pubTime>2016-07-07T07:46:32.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web |服务 |框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2016-12-06T17:04:16.797Z</lastmod>
-    <data>
-        <display>
-        <title>hexo部署过程问题与结局方案</title>
-        <pubTime>2016-10-17T08:10:32.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web |服务 |框架" url="http://www.vivatakethat.com/categories/Web-%E6%9C%8D%E5%8A%A1-%E6%A1%86%E6%9E%B6/"/>
           
         </display>
     </data>
@@ -397,26 +437,6 @@
            
              
               <breadCrumb title="memo" url="http://www.vivatakethat.com/categories/memo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
-    <lastmod>2016-11-21T17:28:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>PHP基础（零）</title>
-        <pubTime>2016-04-01T06:38:32.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://www.vivatakethat.com/categories/Web/"/>
           
         </display>
     </data>
@@ -739,26 +759,6 @@
            
              
               <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/04/04/PHP%E5%85%A5%E9%97%A8(%E4%B8%80)/</loc>
-    <lastmod>2016-11-16T14:14:33.001Z</lastmod>
-    <data>
-        <display>
-        <title>PHP基础（一）</title>
-        <pubTime>2016-04-04T15:54:32.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://www.vivatakethat.com/categories/Web/"/>
           
         </display>
     </data>
