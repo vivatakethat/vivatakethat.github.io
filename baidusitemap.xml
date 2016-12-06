@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/06/22/Coursera-Union-Find/</loc>
+    <lastmod>2016-12-06T17:09:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>Union-Find</title>
+        <pubTime>2016-06-21T18:11:32.000Z</pubTime>
+        
+        <tag>Coursera-Algorithms</tag>
+         
+         
+           
+             
+              <breadCrumb title="Book |Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/08/16/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-12-06T17:07:03.000Z</lastmod>
     <data>
@@ -799,26 +819,6 @@
            
              
               <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/06/22/Coursera-Union-Find/</loc>
-    <lastmod>2016-11-16T14:13:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>Union-Find</title>
-        <pubTime>2016-06-21T18:11:32.000Z</pubTime>
-        
-        <tag>Coursera-Algorithms</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coursera" url="http://www.vivatakethat.com/categories/Coursera/"/>
           
         </display>
     </data>
