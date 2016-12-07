@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Linux%E6%80%BB%E7%BA%BF%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E9%80%89%E4%B8%ADLEDS.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E6%B3%A8%E5%86%8C%E8%AE%BE%E5%A4%87.png">
-<meta property="og:updated_time" content="2016-11-16T14:41:15.000Z">
+<meta property="og:updated_time" content="2016-12-07T12:55:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="总线-设备-驱动注册流程">
 <meta name="twitter:description" content="Linux中设备一般要先注册才能注册驱动。
@@ -221,7 +221,7 @@
 <blockquote>
 <p>将之前写的最小<a href="http://vivatakethat.com/2016/11/02/%E6%9C%80%E5%B0%8FLinux%E9%A9%B1%E5%8A%A8-4412/" target="_blank" rel="external">Linux驱动-4412：first_linux_driver添加驱动注册</a> 修改</p>
 </blockquote>
-<p>probe_hello_driver.c<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;linux/init.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*包含初始化宏定义的头文件，代码中的Module_init和module_exit在此文件中*/</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;linux/module.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*包含初始化加载模块的头文件，代码中的MODULE_LICENSE在此头文件中*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*驱动注册的头文件，包含驱动的结构体和注册和卸载的函数*/</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;linux/platform_device.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> DRIVER_NAME <span class="string">"hello_ctl"</span></span></span><br><span class="line"></span><br><span class="line">MODULE_LICENSE(<span class="string">"Dual BSD/GPL"</span>);  <span class="comment">//GPL:声明开源;        Dual BSD:没有版本限制</span></span><br><span class="line"></span><br><span class="line">MODULE_AUTHOR(<span class="string">"takethat"</span>);      <span class="comment">//声明作者信息</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hello_probe</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line">	printk(KERN_EMERG <span class="string">"\tinitialized\n"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hello_remove</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">hello_shutdown</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line">;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hello_suspend</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hello_resume</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> platform_driver hello_driver = &#123;</span><br><span class="line">	.probe = hello_probe,</span><br><span class="line">	.remove = hello_remove,</span><br><span class="line">	.shutdown = hello_shutdown,</span><br><span class="line">	.suspend = hello_suspend,</span><br><span class="line">	.resume = hello_resume,</span><br><span class="line">	.driver = &#123;</span><br><span class="line"></span><br><span class="line">		.name = DRIVER_NAME,</span><br><span class="line"></span><br><span class="line">		.owner = THIS_MODULE,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span>  <span class="keyword">int</span> <span class="title">hello_init</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> DriverState;</span><br><span class="line">        printk(KERN_EMERG <span class="string">"HELLO WORLD takethat,Enter that!\n"</span>);        <span class="comment">//KERN_EMERG 表示紧急的信息,无论你是什么权限都可以打印出来.</span></span><br><span class="line"></span><br><span class="line">	DriverState = platform_driver_register(&amp;hello_driver);</span><br><span class="line"></span><br><span class="line">printk(KERN_EMERG <span class="string">"\tDriverState is %d\n"</span>,DriverState);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">hello_exit</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span><br><span class="line"></span>&#123;</span><br><span class="line">	 printk(KERN_EMERG <span class="string">"So,let's exit !Good bye~\n"</span>);</span><br><span class="line"></span><br><span class="line">	platform_driver_unregister(&amp;hello_driver);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module_init(hello_init);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 初始化函数 */</span></span><br><span class="line"></span><br><span class="line">module_exit(hello_exit);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 卸载函数 */</span></span><br></pre></td></tr></table></figure></p>
+<p>probe_hello_driver.c<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;linux/init.h&gt;</span></span></span><br><span class="line"><span class="comment">/*包含初始化宏定义的头文件，代码中的Module_init和module_exit在此文件中*/</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;linux/module.h&gt;</span></span></span><br><span class="line"><span class="comment">/*包含初始化加载模块的头文件，代码中的MODULE_LICENSE在此头文件中*/</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;linux/platform_device.h&gt;</span></span></span><br><span class="line"><span class="comment">/*驱动注册的头文件platform_device.h，包含</span><br><span class="line">驱动注册使用的结构体  platform_driver</span><br><span class="line">驱动注册：platform_driver_register </span><br><span class="line">驱动卸载：platform_driver_unregister</span><br><span class="line">*/</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> DRIVER_NAME <span class="string">"hello_ctl"</span></span></span><br><span class="line"></span><br><span class="line">MODULE_LICENSE(<span class="string">"Dual BSD/GPL"</span>);  <span class="comment">//GPL:声明开源;        Dual BSD:没有版本限制</span></span><br><span class="line"></span><br><span class="line">MODULE_AUTHOR(<span class="string">"takethat"</span>);      <span class="comment">//声明作者信息</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hello_probe</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line">	printk(KERN_EMERG <span class="string">"\tinitialized\n"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hello_remove</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">hello_shutdown</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line">;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hello_suspend</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hello_resume</span><span class="params">(<span class="keyword">struct</span> platform_device *pdv)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> platform_driver hello_driver = &#123;</span><br><span class="line">	.probe = hello_probe,</span><br><span class="line">	.remove = hello_remove,</span><br><span class="line">	.shutdown = hello_shutdown,</span><br><span class="line">	.suspend = hello_suspend,</span><br><span class="line">	.resume = hello_resume,</span><br><span class="line">	.driver = &#123;</span><br><span class="line"></span><br><span class="line">		.name = DRIVER_NAME,</span><br><span class="line"></span><br><span class="line">		.owner = THIS_MODULE,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span>  <span class="keyword">int</span> <span class="title">hello_init</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> DriverState;</span><br><span class="line">        printk(KERN_EMERG <span class="string">"HELLO WORLD takethat,Enter that!\n"</span>);        <span class="comment">//KERN_EMERG 表示紧急的信息,无论你是什么权限都可以打印出来.</span></span><br><span class="line"></span><br><span class="line">	DriverState = platform_driver_register(&amp;hello_driver);</span><br><span class="line"></span><br><span class="line">printk(KERN_EMERG <span class="string">"\tDriverState is %d\n"</span>,DriverState);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">hello_exit</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span><br><span class="line"></span>&#123;</span><br><span class="line">	 printk(KERN_EMERG <span class="string">"So,let's exit !Good bye~\n"</span>);</span><br><span class="line"></span><br><span class="line">	platform_driver_unregister(&amp;hello_driver);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module_init(hello_init);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 初始化函数 */</span></span><br><span class="line"></span><br><span class="line">module_exit(hello_exit);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 卸载函数 */</span></span><br></pre></td></tr></table></figure></p>
 <p>Makefile文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span><br><span class="line"></span></span><br><span class="line">obj-m +=probe_hello_driver.o</span><br><span class="line"><span class="comment"># obj-m 意思是将后面跟的东东编译成内核模块。相对应还有：</span></span><br><span class="line"><span class="comment"># obj-y 编译进内核</span></span><br><span class="line"><span class="comment"># obj-n 不编译</span></span><br><span class="line"></span><br><span class="line">KDIR := /root/iTop4412_Kernel_3.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">PWD ?= $(shell <span class="built_in">pwd</span>)</span><br><span class="line"></span><br><span class="line">all:</span><br><span class="line">	make -C $(KDIR) M=$(PWD) modules</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">clean:</span><br><span class="line">	rm -rf *.o</span><br></pre></td></tr></table></figure></p>
 <p>执行make生成.ko文件</p>
 <p>再在4412目标板加载.ko模块<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@iTOP-<span class="number">4412</span>]<span class="preprocessor"># insmod probe_hello_driver.ko</span></span><br><span class="line">[  <span class="number">802.231839</span>] HELLO WORLD takethat,Enter that!</span><br><span class="line">[  <span class="number">802.236454</span>]  DriverState is <span class="number">0</span></span><br><span class="line">[root@iTOP-<span class="number">4412</span>]<span class="preprocessor">#</span></span><br></pre></td></tr></table></figure></p>
@@ -367,10 +367,10 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/11/17/C++_memo1/" title="C++_memo1">
+ <a href="/2016/11/17/C++——类+函数+指针/" title="C++:类、函数、指针">
   <strong>上一篇：</strong><br/>
   <span>
-  C++_memo1</span>
+  C++:类、函数、指针</span>
 </a>
 </div>
 
@@ -425,21 +425,25 @@
 		  
 		
 		  
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>18</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/English/" title="English">English<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>12</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>1</sup></a></li>
 		  
 		
 		  
 		
 		  
-			<li><a href="/categories/memo/" title="memo">memo<sup>4</sup></a></li>
+			<li><a href="/categories/memo/" title="memo">memo<sup>3</sup></a></li>
 		  
 		
 		  
@@ -463,7 +467,11 @@
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>24</sup></a></li>
+			<li><a href="/categories/算法-原理/" title="算法 | 原理">算法 | 原理<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>7</sup></a></li>
 		  
 		
 		  
@@ -484,15 +492,11 @@
 			
 		
 			
+				<li><a href="/tags/C/" title="C">C<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -500,15 +504,11 @@
 			
 		
 			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/C/" title="C++">C++<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
@@ -516,11 +516,15 @@
 			
 		
 			
-				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Record/" title="Record">Record<sup>2</sup></a></li>
 			
 		
 			
@@ -532,11 +536,7 @@
 			
 		
 			
-				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -544,7 +544,15 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
 			
 		
 			
@@ -556,7 +564,7 @@
 			
 		
 			
-				<li><a href="/tags/51/" title="51">51<sup>1</sup></a></li>
+				<li><a href="/tags/编程/" title="编程">编程<sup>1</sup></a></li>
 			
 		
 		</ul>

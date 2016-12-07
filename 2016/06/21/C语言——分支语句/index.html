@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>嵌入式Linux-c编程(一) | take that的博客</title>
+    <title>C语言基础(三):分支语句 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,26 +12,17 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="2016-4-20 周三
-天气：阴转晴
-
-GDB调试器、makefile工程管理器">
+    <meta name="description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="嵌入式Linux-c编程(一)">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/04/20/嵌入式Linux-c编程(一)/index.html">
+<meta property="og:title" content="C语言基础(三):分支语句">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/06/21/C语言——分支语句/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="2016-4-20 周三
-天气：阴转晴
-
-GDB调试器、makefile工程管理器">
-<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg">
-<meta property="og:updated_time" content="2016-11-16T14:09:56.531Z">
+<meta property="og:description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/New%20Order%20-%20%E3%80%8AGet%20Ready%E3%80%8B%EF%BC%8C2010.png">
+<meta property="og:updated_time" content="2016-12-07T14:03:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="嵌入式Linux-c编程(一)">
-<meta name="twitter:description" content="2016-4-20 周三
-天气：阴转晴
-
-GDB调试器、makefile工程管理器">
+<meta name="twitter:title" content="C语言基础(三):分支语句">
+<meta name="twitter:description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -95,7 +86,7 @@ GDB调试器、makefile工程管理器">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/04/20/嵌入式Linux-c编程(一)/" title="嵌入式Linux-c编程(一)" itemprop="url">嵌入式Linux-c编程(一)</a>
+      <a href="/2016/06/21/C语言——分支语句/" title="C语言基础(三):分支语句" itemprop="url">C语言基础(三):分支语句</a>
   </h1>
   <p class="article-author">By
        
@@ -105,7 +96,7 @@ GDB调试器、makefile工程管理器">
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-04-20T02:50:32.000Z" itemprop="datePublished"> 发表于 2016-04-20</time>
+    <time datetime="2016-06-21T01:17:32.000Z" itemprop="datePublished"> 发表于 2016-06-21</time>
     
   </p>
 </header>
@@ -114,70 +105,56 @@ GDB调试器、makefile工程管理器">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GDB调试器、makefile工程管理器"><span class="toc-number">1.</span> <span class="toc-text">GDB调试器、makefile工程管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GDB"><span class="toc-number">1.1.</span> <span class="toc-text">GDB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Make"><span class="toc-number">1.2.</span> <span class="toc-text">Make</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Makefile"><span class="toc-number">1.2.1.</span> <span class="toc-text">Makefile</span></a></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-number">1.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else语句"><span class="toc-number">1.1.</span> <span class="toc-text">if/else语句</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg" alt="Red Alert2 concept art:machine gunnerra" title="Red Alert2 concept art:machine gunnerra"></p>
-<p><br></p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/New%20Order%20-%20%E3%80%8AGet%20Ready%E3%80%8B%EF%BC%8C2010.png" alt="New Order - 《Get Ready》,2010" title="    
+New Order - 《Get Ready》,2010"></p>
+<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><p>根据不同的条件执行不同的语句，这种控制流程称为分支<em>Branch</em><br><a id="more"></a></p>
+<p><strong>关系运算符和相等性运算符</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong><code>==</code></strong></td>
+<td style="text-align:center">等于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>!=</code></strong></td>
+<td style="text-align:center">不等于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>&gt;</code></strong></td>
+<td style="text-align:center">大于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>&lt;</code></strong></td>
+<td style="text-align:center">小于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>&gt;=</code></strong></td>
+<td style="text-align:center">大于等于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>&lt;=</code></strong></td>
+<td style="text-align:center">小于或等于</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p>2016-4-20 周三</p>
-<p>天气：阴转晴</p>
+<p><strong><code>==</code></strong>和<strong><code>!=</code></strong>称为相等性运算符<em>(Equality Operator)</em>其余4个称为关系运算符<em>(Relational Operator)</em></p>
+<p>注意这些运算符的2个操作数应该是相同类型的，但2个字符串<strong><code>不能做比较</code></strong>。</p>
+<p><strong><code>%</code></strong>运算符的2个操作数必须是<strong><code>整形</code></strong></p>
+<p>如果a和b是整形，如果b不等于0则表达式<strong><code>(a/b)*b+a%b总等于a</code></strong></p>
+<p><strong><code>%运算符的结果总是与被除数同号</code></strong>(被除数是指/前一个数)</p>
 </blockquote>
-<h1 id="GDB调试器、makefile工程管理器"><a href="#GDB调试器、makefile工程管理器" class="headerlink" title="GDB调试器、makefile工程管理器"></a>GDB调试器、makefile工程管理器</h1><a id="more"></a>
-<h2 id="GDB"><a href="#GDB" class="headerlink" title="GDB"></a>GDB</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> n)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          <span class="keyword">return</span> <span class="function">n*<span class="title">cal</span><span class="params">(n-<span class="number">1</span>)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">5</span>;</span><br><span class="line">n=cal(n);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,n);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>查看源程序<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(gdb) l <span class="number">1</span></span><br><span class="line"><span class="number">1</span>       <span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="number">2</span>       <span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> n)</span></span><br><span class="line">3       </span>&#123;</span><br><span class="line"><span class="number">4</span>               <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line"><span class="number">5</span>                       <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"><span class="number">6</span>               <span class="keyword">else</span></span><br><span class="line"><span class="number">7</span>                 <span class="keyword">return</span> <span class="function">n*<span class="title">cal</span><span class="params">(n-<span class="number">1</span>)</span></span>;</span><br><span class="line"><span class="number">8</span>       &#125;</span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">10</span>      <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(</span></span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<blockquote>
-<p>在GDB输入<code>l   1</code>以10行为单位进行显示,再次输入<code>l</code>就会显示下10行代码。</p>
-</blockquote>
-<ol>
-<li><p>设置断点:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(gdb) b <span class="number">7</span></span><br><span class="line">Breakpoint <span class="number">1</span> at <span class="number">0x400545</span>: file test.c, line <span class="number">7.</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看断点</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(gdb) <span class="preprocessor">info</span> <span class="keyword">b</span><br><span class="line"></span><span class="label">Num</span>     Type           Disp Enb <span class="keyword">Address </span>           What</span><br><span class="line"><span class="number">1</span>       <span class="keyword">breakpoint </span>    <span class="preprocessor">keep</span> y   <span class="number">0x0000000000400545</span> in cal at test.c:<span class="number">7</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行程序</p>
-</li>
-</ol>
-<ul>
-<li>在GDB中输入<code>r</code>,如果遇到断点将会暂停在断点上，继续运行程序则输入<code>c</code></li>
-<li>查看变量。程序暂停后就可以查看变量了。在GDB中输入<code>p    变量名</code>查看当前变量</li>
-<li>继续运行程序,程序停在断点，输入<code>c</code>继续运行程序。</li>
-<li>单步运行<code>s</code>和<code>n</code>,其中<code>s</code>可以发生函数调用时进入函数内部运行，而<code>n</code>不会进入函数内部运行。</li>
-</ul>
-<hr>
-<h2 id="Make"><a href="#Make" class="headerlink" title="Make"></a>Make</h2><p>实际开发中仅仅通过gcc命令对程序进行编译是非常低效的，原因主要有</p>
-<ol>
-<li>程序往往由多个源文件组成，源文件越多，gcc的命令越长，各种编译规则也会加大gcc命令行的复杂度</li>
-<li>在程序开发过程中，调试工作占到70%以上。调试过程中，每次调试一般只会修改一部分源文件。而在gcc命令行编译程序时，gcc会把那些没被修改的源文件一起编译，这样就会影响编译总体效率。</li>
-</ol>
-<p>gcc 提供了半自动化的工程管理器Make。</p>
-<blockquote>
-<p>所谓半自动化是指在使用工程管理器前需要人工编写程序的编译规则，所有的编译规则都保存在<code>Makefile</code>文件中，全自动化的工程管理器在编译程序前会自动生成<code>Makefile</code>文件。</p>
-</blockquote>
-<p>Make 工程管理器的优越性体现在以下2个方面：</p>
-<ol>
-<li><p>使用方便。通过<code>make</code>就可以启动Make工程管理器对程序进行编译，所以不需要每次输入gcc。</p>
-<blockquote>
-<p>Make启动后会根据<code>Makefile</code>文件中的编译规则命令自动对源文件进行编译和链接，最终生成可执行文件。</p>
-</blockquote>
-</li>
-<li><p>调试效率高。为了提高编译程序的效率，Make会检查每个源文件的修改时间(时间戳)。只有在上次编译之后被修改的源文件才会在接下来的编译过程中被编译和连接，这样就嫩那个避免多余的编译工作量。为了保证文件具正确的时间戳，必须保证操作系统时间的正确性(注意VMWare虚拟机的CMOS时间是否正确)</p>
-</li>
-</ol>
-<h3 id="Makefile"><a href="#Makefile" class="headerlink" title="Makefile"></a>Makefile</h3><p>Make工程管理器是完全依据Makefile文件中的编译规则命令进行工作的。Makefile文件由一下3项基本内容组成:</p>
-<ul>
-<li><code>target file</code>：需要生成的目标文件</li>
-<li><code>dependency file</code>：生成目标文件所需要的依赖文件</li>
-<li><code>command</code>:生成目标文件的编译规则命令行</li>
-</ul>
-<p>这3项内容按照如下格式进行组织：</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">target   <span class="built_in">file</span> : dependency  <span class="built_in">file</span></span><br><span class="line"><span class="command"><span class="keyword">command</span></span></span><br></pre></td></tr></table></figure>
-<p><strong>其中Makefile规定在书写command命令行前必须加一个<code>&lt;Tab&gt;键</code></strong></p>
+<h2 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if/else语句"></a>if/else语句</h2><p>%</p>
   
 	</div>
 
@@ -288,13 +265,13 @@ GDB调试器、makefile工程管理器">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/编程/">编程</a>
+  <a class="article-category-link" href="/categories/C-C/">C | C++</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Linux-C/">Linux-C</a>
+  <span></span> <a href="/tags/C/">C</a>
   </div>
 
 </div>
@@ -303,7 +280,7 @@ GDB调试器、makefile工程管理器">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/04/20/嵌入式Linux-c编程(一)/" data-title="嵌入式Linux-c编程(一) | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/06/21/C语言——分支语句/" data-title="C语言基础(三):分支语句 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -317,18 +294,18 @@ GDB调试器、makefile工程管理器">
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/04/21/Linux系统(三)/" title="Linux系统(三)">
+ <a href="/2016/06/22/Coursera-Union-Find/" title="Union-Find">
   <strong>上一篇：</strong><br/>
   <span>
-  Linux系统(三)</span>
+  Union-Find</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/04/18/Linux系统(二)/"  title="Linux系统(二)">
+<a href="/2016/06/21/C语言——结构体/"  title="C语言:结构体">
  <strong>下一篇：</strong><br/> 
- <span>Linux系统(二)
+ <span>C语言:结构体
 </span>
 </a>
 </div>
@@ -337,7 +314,7 @@ GDB调试器、makefile工程管理器">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/04/20/嵌入式Linux-c编程(一)/" data-title="嵌入式Linux-c编程(一)" data-url="http://www.vivatakethat.com/2016/04/20/嵌入式Linux-c编程(一)/"></div>
+	<div class="ds-thread" data-thread-key="2016/06/21/C语言——分支语句/" data-title="C语言基础(三):分支语句" data-url="http://www.vivatakethat.com/2016/06/21/C语言——分支语句/"></div>
 </section>
 
 
@@ -347,7 +324,7 @@ GDB调试器、makefile工程管理器">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GDB调试器、makefile工程管理器"><span class="toc-number">1.</span> <span class="toc-text">GDB调试器、makefile工程管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GDB"><span class="toc-number">1.1.</span> <span class="toc-text">GDB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Make"><span class="toc-number">1.2.</span> <span class="toc-text">Make</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Makefile"><span class="toc-number">1.2.1.</span> <span class="toc-text">Makefile</span></a></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-number">1.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else语句"><span class="toc-number">1.1.</span> <span class="toc-text">if/else语句</span></a></li></ol></li></ol>
  
   </div>
 
@@ -375,21 +352,25 @@ GDB调试器、makefile工程管理器">
 		  
 		
 		  
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>18</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/English/" title="English">English<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>12</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>1</sup></a></li>
 		  
 		
 		  
 		
 		  
-			<li><a href="/categories/memo/" title="memo">memo<sup>4</sup></a></li>
+			<li><a href="/categories/memo/" title="memo">memo<sup>3</sup></a></li>
 		  
 		
 		  
@@ -413,7 +394,11 @@ GDB调试器、makefile工程管理器">
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>24</sup></a></li>
+			<li><a href="/categories/算法-原理/" title="算法 | 原理">算法 | 原理<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>7</sup></a></li>
 		  
 		
 		  
@@ -434,15 +419,11 @@ GDB调试器、makefile工程管理器">
 			
 		
 			
+				<li><a href="/tags/C/" title="C">C<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -450,15 +431,11 @@ GDB调试器、makefile工程管理器">
 			
 		
 			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/C/" title="C++">C++<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
@@ -466,11 +443,15 @@ GDB调试器、makefile工程管理器">
 			
 		
 			
-				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Record/" title="Record">Record<sup>2</sup></a></li>
 			
 		
 			
@@ -482,11 +463,7 @@ GDB调试器、makefile工程管理器">
 			
 		
 			
-				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -494,7 +471,15 @@ GDB调试器、makefile工程管理器">
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
 			
 		
 			
@@ -506,7 +491,7 @@ GDB调试器、makefile工程管理器">
 			
 		
 			
-				<li><a href="/tags/51/" title="51">51<sup>1</sup></a></li>
+				<li><a href="/tags/编程/" title="编程">编程<sup>1</sup></a></li>
 			
 		
 		</ul>

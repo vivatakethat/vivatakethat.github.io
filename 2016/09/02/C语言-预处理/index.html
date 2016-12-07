@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C函数_Memo | take that的博客</title>
+    <title>C语言:预处理 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,17 +12,25 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="fopen、atan">
+    <meta name="description" content="预处理预处理的大户如是一个C语言程序，程序可能包含指令。预处理会执行这个邪指令，并在处理过程中删除这些指令。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C函数_Memo">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/04/03/C函数_Memo/index.html">
+<meta property="og:title" content="C语言:预处理">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/09/02/C语言-预处理/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="fopen、atan">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/command_conquer_red_alert_2_conceptart_8l1tm.jpg">
-<meta property="og:updated_time" content="2016-11-17T09:30:40.000Z">
+<meta property="og:description" content="预处理预处理的大户如是一个C语言程序，程序可能包含指令。预处理会执行这个邪指令，并在处理过程中删除这些指令。">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E9%9D%99%E9%A6%99.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E9%A2%84%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.jpg">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%AE%8Fe-g.jpg">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} y_1,y_2,...,y_n \end{matrix} \right">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} y_1,y_2,...,y_n \end{matrix} \right">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} y_1 \end{matrix} \right">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} x_1 \end{matrix} \right">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} y_2 \end{matrix} \right">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} x_2 \end{matrix} \right">
+<meta property="og:updated_time" content="2016-12-07T14:04:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C函数_Memo">
-<meta name="twitter:description" content="fopen、atan">
+<meta name="twitter:title" content="C语言:预处理">
+<meta name="twitter:description" content="预处理预处理的大户如是一个C语言程序，程序可能包含指令。预处理会执行这个邪指令，并在处理过程中删除这些指令。">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -86,7 +94,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/04/03/C函数_Memo/" title="C函数_Memo" itemprop="url">C函数_Memo</a>
+      <a href="/2016/09/02/C语言-预处理/" title="C语言:预处理" itemprop="url">C语言:预处理</a>
   </h1>
   <p class="article-author">By
        
@@ -96,7 +104,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-04-03T04:02:32.000Z" itemprop="datePublished"> 发表于 2016-04-03</time>
+    <time datetime="2016-09-02T03:25:32.000Z" itemprop="datePublished"> 发表于 2016-09-02</time>
     
   </p>
 </header>
@@ -105,125 +113,66 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#fopen"><span class="toc-number">1.</span> <span class="toc-text">fopen</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#atan与atan2"><span class="toc-number">2.</span> <span class="toc-text">atan与atan2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fabs"><span class="toc-number">3.</span> <span class="toc-text">fabs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fread"><span class="toc-number">4.</span> <span class="toc-text">fread</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预处理"><span class="toc-number">1.</span> <span class="toc-text">预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#与处理器指令"><span class="toc-number">1.1.</span> <span class="toc-text">与处理器指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏定义"><span class="toc-number">1.2.</span> <span class="toc-text">宏定义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#运算"><span class="toc-number">2.</span> <span class="toc-text">#运算</span></a></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/command_conquer_red_alert_2_conceptart_8l1tm.jpg" alt="command_conquer_red_alert_2_conceptart" title="command_conquer_red_alert_2_conceptart"></p>
-<p>fopen、atan</p>
-<a id="more"></a>
-<h1 id="fopen"><a href="#fopen" class="headerlink" title="fopen"></a>fopen</h1><p><strong><code>FILE *fopen(const char * restrict filename,const char * restrict mode);</code></strong></p>
-<blockquote>
-<p>fopen函数的第一个参数是含有要打开文件名的字符串。<em>(“文件名”可能包含关于文件位置的信息，如驱动器符或路径)</em></p>
-<blockquote>
-<p>第2个参数是“模式字符串”，它用来指定打算对文件执行的操作。例如，字符串<code>r</code>表明只读取数据。</p>
-<blockquote>
-<p>注意fopen函数原型中，restrict关键字出现了2次。restrict表明filename和mode所执行的字符串的内存单元不共享。<br><code>fopen</code>函数返回一个文件指针。</p>
-<blockquote>
-<p>程序可以把此指针存储在一个变量中，稍后需要对文件进行操作时使用它。</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><strong>用于文本模式字符串</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字符串</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>r</code></td>
-<td style="text-align:center">只读</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>w</code></td>
-<td style="text-align:center">写（文件不需要存在）</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>a</code></td>
-<td style="text-align:center">打开文件用于追加(文件不需要存在)</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>r+</code></td>
-<td style="text-align:center">打开文件用于读和写(从文件头开始)</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>w+</code></td>
-<td style="text-align:center">打开文件用于读和写(如果文件存在就截去)</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>a+</code></td>
-<td style="text-align:center">打算开文件用于读和写(如果文件存在就追加)</td>
-</tr>
-</tbody>
-</table>
-<h1 id="atan与atan2"><a href="#atan与atan2" class="headerlink" title="atan与atan2"></a>atan与atan2</h1><p>C语言的math.h或C++的cmath有2个求正反切的函数atan(double x)与atan2(double y,double x)它们的返回值是弧度要专为角度再自己处理一下。</p>
-<p><strong><code>atan</code></strong>:接受的是一个正切值（直线的斜率）得到夹角，但是由于正切的规律性本可以有两个角度的但它却只返回一个，因为atan的值域是从-90~90 也就是它只处理一四象限，所以一般不用它。</p>
-<p>相比较ATan，ATan2究竟有什么不同</p>
-<p>对于tan(θ) = y / x:</p>
-<p>θ = ATan(y / x)求出的θ取值范围是[-PI/2, PI/2]。<br><strong><code>atan</code></strong>:接受的是<strong><code>一个正切值</code></strong>（直线的斜率）得到夹角，但是由于正切的规律性本可以有两个角度的但它却只返回一个，因为atan的值域是从-90~90 也就是它只处理一四象限，所以一般不用它。</p>
-<p>θ = ATan2(y, x)求出的θ取值范围是[-PI, PI]。<br><strong><code>atan2</code></strong>:第二个atan2(double y,double x) 其中y代表已知点的Y坐标 同理x ,返回值是此点与远点连线与x轴正方向的夹角，这样它就可以处理四个象限的任意情况了，它的值域相应的也就是-180~180了</p>
-<p>例如：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"atan=%f\n"</span>, <span class="built_in">atan</span>(<span class="number">1.0</span>)*<span class="number">180</span>/<span class="number">3.14</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"atan2=%f\n\n"</span>, <span class="built_in">atan2</span>(<span class="number">15</span>, <span class="number">15</span>) * <span class="number">180</span> / <span class="number">3.14</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>其运行结果：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">atan</span>=<span class="number">45.022825</span></span><br><span class="line"><span class="built_in">atan2</span>=<span class="number">45.022825</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p><strong>各个象限θ范围</strong></p>
-<ol>
-<li><p>当 (x, y) 在第一象限, 0 &lt; θ &lt; PI/2.</p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E9%9D%99%E9%A6%99.jpg" alt="Grand theft dora-静香" title="Grand theft dora-静香"></p>
+<h1 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h1><p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E9%A2%84%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.jpg" alt="预处理流程图" title="预处理流程图"><br>预处理的大户如是一个C语言程序，程序可能包含指令。预处理会执行这个邪指令，并在处理过程中删除这些指令。<br><a id="more"></a></p>
+<h2 id="与处理器指令"><a href="#与处理器指令" class="headerlink" title="与处理器指令"></a>与处理器指令</h2><ol>
+<li>宏定义：<code>#define</code>指定一个宏，<code>#undef</code>指令删除一个宏定义。</li>
+<li>文件包含：  <code>#include</code>指令导致一个吻指定文件的内容包含到程序中。</li>
+<li>条件编译：<code>#if、#ifdef、#elif、#else</code>和<code>#endif</code>指令可以根据预处理器可以测试的条件来确定是将一段文本块包含到程序中还是排除在程序外。</li>
+<li>特殊指令:<code>#error、#line、#pragma</code></li>
+</ol>
+<p>注意：</p>
+<ul>
+<li>指令都以<code>#</code>开始</li>
+<li><p>指令的符号之间可以插入任意数量的空格或水平制表符。例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#     <span class="keyword">define</span>      N   <span class="number">100</span></span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>当 (x, y) 在第二象限 PI/2 &lt; θ≤PI.</p>
+<li><p>指令总是在第一个换行符出结束，除非明确的指令要延续。</p>
+<blockquote>
+<p>如果想在下一行延续指令，我i门必须在当前使用<code>\</code>字符。例如</p>
+</blockquote>
 </li>
-<li><p>当 (x, y) 在第三象限, -PI &lt; θ &lt; -PI/2.</p>
+</ul>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#define DISK_CAPACITY (SIDES *              \</span></span><br><span class="line">                        TRACKS_PER_SIDE <span class="keyword">*</span>   \</span><br><span class="line">                        SECTORS_PER_TRACK <span class="keyword">*</span> \</span><br><span class="line">                        BYTES_PER_SECTOR)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>指令可以出现在程序中任何地方。<blockquote>
+<p>通常将#define和#include指令放在文件开始，其他指令则放在后面，甚至可以放在函数的定义的中间。</p>
+</blockquote>
 </li>
-<li><p>当 (x, y) 在第四象限, -PI/2 &lt; θ &lt; 0.</p>
+</ul>
+<h2 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h2><ol>
+<li><p>简单的宏</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="hexcolor">#def</span>ine指令  (简单的宏) ]                  <span class="hexcolor">#def</span>ine         标示符          替换列表</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>带参数的宏<br>带参数的宏（也称为函数式宏）的定义有如下格式：<br><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%AE%8Fe-g.jpg" alt="带参数的宏" title="带参数的宏"><br>当与处理器遇到带参数的宏时，会将宏定义存储起来以便后面使用。</p>
+<blockquote>
+<p>在后面的程序中，如果任何地方出现了标识符号(<img src="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} y_1,y_2,...,y_n \end{matrix} \right">)格式的宏调用（其中<img src="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} y_1,y_2,...,y_n \end{matrix} \right">是一系列记号），预处理会使用替换列表替换——使用<img src="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} y_1 \end{matrix} \right">替换<img src="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} x_1 \end{matrix} \right"> ,<img src="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} y_2 \end{matrix} \right">  替换  <img src="http://www.forkosh.com/mathtex.cgi? \left  \begin{matrix} x_2 \end{matrix} \right">  ,以此类推。</p>
+</blockquote>
 </li>
 </ol>
-<p><strong>当点(x, y)在象限的边界也就是坐标轴上时:</strong></p>
-<ol>
-<li><p>当 y 是 0，x 为非负值, θ = 0.</p>
+<p>例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> TOUPPER(c)  (<span class="string">'a'</span>&lt;=(c)&amp;&amp;(c)&lt;=<span class="string">'z'</span>?(c)-<span class="string">'a'</span>+<span class="string">'A'</span>:(c))</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%c"</span>, &amp;a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"原本的:%c\t转化为TOUPPER :%c\n"</span>, a, TOUPPER(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个宏检测字符是否在`a`与`z`\之间。</p>
+<blockquote>
+<p>如果在的话这个宏会用c的值减去`a`在加上`A`\，从而计算c所对应的大写字母。如果c不再这个范围内则返回原来的c 。</p>
+</blockquote>
+<p>又如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MAX(x,y)	((x)&gt;(y)?(x):(y))</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> IS_EVEN(n)	((n)%<span class="number">2</span>==<span class="number">0</span>)	<span class="comment">/*如果能被2整除则返回 1 ，为偶数*/</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x, y, n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n%d与%d中,最大的是:%d\n"</span>, x,y,MAX(x, y));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (IS_EVEN(n) == <span class="number">1</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n%d is even!\n\n"</span>,n);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n%d  is odd\n\n  "</span>, n);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ul>
+<li>与处理器仅知道少量C语言问题。因此，在执行指令时有可能会产生非法的错误。可能原始程序没有问题，查找错误非常困难。所以要先确保预处理程序没有问题。</li>
+<li>最好避免使用带有副作用的参数，因为宏运运算可能会产生副作用(它可能会不止一次地计算它的参数)。如：MAX的一个参数会产生副作用。<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n=MAX<span class="list">(<span class="keyword">i++</span>,j)</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>当 y 是 0， x 是 负值, θ = PI.</p>
-</li>
-<li><p>当 y 是 正值， x 是 0, θ = PI/2.</p>
-</li>
-<li><p>当 y 是 负值， x 是 0, θ = -PI/2.</p>
-</li>
-</ol>
-<h1 id="fabs"><a href="#fabs" class="headerlink" title="fabs"></a>fabs</h1><p>求绝对值函数，fabs(x)，求出x的绝对值，和数学上的概念相同</p>
+</ul>
+<p>预处理结果后<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n=<span class="list">(<span class="list">(<span class="keyword">i++</span>)</span>&gt;<span class="list">(<span class="keyword">j</span>)</span>?<span class="list">(<span class="keyword">i++</span>)</span>:<span class="list">(<span class="keyword">j</span>)</span>)</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>调用该函数需要#include<math.h><br>实例：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"fabs(3.5)\t=%f\n"</span>,<span class="built_in">fabs</span>(<span class="number">3.5</span>));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"fabs(-3.5)\t=%f\n"</span>,<span class="built_in">fabs</span>(-<span class="number">3.5</span>));</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></math.h></p>
+<p>如果i大于j，那么i可能会被(错误)增加2次，同时n可能会被赋予错误的值。</p>
 </blockquote>
-<p>运行结果：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fabs</span>(<span class="number">3.5</span>)       =<span class="number">3.500000</span></span><br><span class="line"><span class="built_in">fabs</span>(-<span class="number">3.5</span>)      =<span class="number">3.500000</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="fread"><a href="#fread" class="headerlink" title="fread"></a>fread</h1><p>fread</p>
-<p>函数原型:</p>
-<p><strong>size_t fread(void<em> buff,size_t size,size_t count,FILE</em> stream)</strong></p>
-<p>作用：从文件中读入数据到指定的地址中</p>
-<p>参数：</p>
-<blockquote>
-<p>第一个参数为接收数据的指针(buff),也即数据存储的地址</p>
-<blockquote>
-<p>第二个参数为单个元素的大小，即由指针写入地址的数据大小，注意单位是字节</p>
-<blockquote>
-<p>第三个参数为元素个数，即要读取的数据大小为size的元素个素</p>
-<blockquote>
-<p>第四个参数为提供数据的文件指针，该指针指向文件内部数据</p>
-<blockquote>
-<p>返回值：读取的总数据元素个数</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>例：.<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>  num,<span class="keyword">count</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span>* pr=<span class="keyword">new</span> <span class="keyword">int</span>[num*<span class="keyword">count</span>];</span><br><span class="line"></span><br><span class="line">fread(pr, num*<span class="number">4</span>, <span class="keyword">count</span>, stream);   <span class="comment">// stream为fopen中返回的FILE指针</span></span><br></pre></td></tr></table></figure></p>
-<p>要将数据写入pr中，必须为pr分配内存，一个int为4个字节，所以要x4</p>
-<p>补充：<br><strong>size_t 类型</strong></p>
-<p>size _t 为了增强程序的可移植性，便有了size_t ，不同系统上，定义size_t可能不一样。</p>
-<p>经测试发现，在32位系统中size_t是4字节的，在64位系统中，size_t是8字节的，这样利用该类型可以增加程序移植性。</p>
-<p>size_t一般用来表示一种计数，比如有多少东西被拷贝等。例如：sizeof操作符的结果类型是size_t，该类型保证能容纳实现所建立的最大对象的字节大小。 它的意义大致是“适于计量内存中可容纳的数据项目个数的无符号整数类型”。所以，它在数组下标和内存管理函数之类的地方广泛使用。</p>
-  
+<h1 id="运算"><a href="#运算" class="headerlink" title="#运算"></a><code>#</code>运算</h1>  
 	</div>
 
 	<!-- css -->
@@ -333,13 +282,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Record/">Record</a>
+  <a class="article-category-link" href="/categories/C-C/">C | C++</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/memo/">memo</a>
+  <span></span> <a href="/tags/C/">C</a>
   </div>
 
 </div>
@@ -348,7 +297,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/04/03/C函数_Memo/" data-title="C函数_Memo | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/09/02/C语言-预处理/" data-title="C语言:预处理 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -362,18 +311,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/04/03/C语言基础(零)基本概念/" title="C语言基础(零)基本概念">
+ <a href="/2016/09/04/4412_ADC模数转换/" title="4412_ADC模数转换">
   <strong>上一篇：</strong><br/>
   <span>
-  C语言基础(零)基本概念</span>
+  4412_ADC模数转换</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/04/01/PHP入门(零)/"  title="PHP基础（零）">
+<a href="/2016/08/21/C语言memo_待整理/"  title="C语言memo_待整理">
  <strong>下一篇：</strong><br/> 
- <span>PHP基础（零）
+ <span>C语言memo_待整理
 </span>
 </a>
 </div>
@@ -382,7 +331,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/04/03/C函数_Memo/" data-title="C函数_Memo" data-url="http://www.vivatakethat.com/2016/04/03/C函数_Memo/"></div>
+	<div class="ds-thread" data-thread-key="2016/09/02/C语言-预处理/" data-title="C语言:预处理" data-url="http://www.vivatakethat.com/2016/09/02/C语言-预处理/"></div>
 </section>
 
 
@@ -392,7 +341,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#fopen"><span class="toc-number">1.</span> <span class="toc-text">fopen</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#atan与atan2"><span class="toc-number">2.</span> <span class="toc-text">atan与atan2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fabs"><span class="toc-number">3.</span> <span class="toc-text">fabs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fread"><span class="toc-number">4.</span> <span class="toc-text">fread</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预处理"><span class="toc-number">1.</span> <span class="toc-text">预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#与处理器指令"><span class="toc-number">1.1.</span> <span class="toc-text">与处理器指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏定义"><span class="toc-number">1.2.</span> <span class="toc-text">宏定义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#运算"><span class="toc-number">2.</span> <span class="toc-text">#运算</span></a></li></ol>
  
   </div>
 
@@ -420,21 +369,25 @@
 		  
 		
 		  
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>18</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/English/" title="English">English<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>12</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>1</sup></a></li>
 		  
 		
 		  
 		
 		  
-			<li><a href="/categories/memo/" title="memo">memo<sup>4</sup></a></li>
+			<li><a href="/categories/memo/" title="memo">memo<sup>3</sup></a></li>
 		  
 		
 		  
@@ -458,7 +411,11 @@
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>24</sup></a></li>
+			<li><a href="/categories/算法-原理/" title="算法 | 原理">算法 | 原理<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>7</sup></a></li>
 		  
 		
 		  
@@ -479,15 +436,11 @@
 			
 		
 			
+				<li><a href="/tags/C/" title="C">C<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -495,15 +448,11 @@
 			
 		
 			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/C/" title="C++">C++<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
@@ -511,11 +460,15 @@
 			
 		
 			
-				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Record/" title="Record">Record<sup>2</sup></a></li>
 			
 		
 			
@@ -527,11 +480,7 @@
 			
 		
 			
-				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -539,7 +488,15 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
 			
 		
 			
@@ -551,7 +508,7 @@
 			
 		
 			
-				<li><a href="/tags/51/" title="51">51<sup>1</sup></a></li>
+				<li><a href="/tags/编程/" title="编程">编程<sup>1</sup></a></li>
 			
 		
 		</ul>

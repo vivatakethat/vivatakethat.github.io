@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="Linux到2.6版本时候改动巨大，2.6版本以前的基本都废弃了。不用关注2.6以前的版本">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%93%A6%E8%82%AF%E4%B8%BE%E6%89%8B%E7%A4%BC.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-05T12:20:42.000Z">
+<meta property="og:updated_time" content="2016-12-07T13:35:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4412_生成设备节点">
 <meta name="twitter:description" content="Linux到2.6版本时候改动巨大，2.6版本以前的基本都废弃了。不用关注2.6以前的版本">
@@ -123,10 +123,19 @@
 <li>驱动写起来相对简单<br>如果直接使用封装好的杂项设备，那么就可以减少一步注册主设备号的过程</li>
 </ol>
 <h1 id="杂项设备注册文件"><a href="#杂项设备注册文件" class="headerlink" title="杂项设备注册文件"></a>杂项设备注册文件</h1><ul>
-<li>杂项设备初始化部分源文件<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#36890;&#36807;```drivers/char/Makefile```&#25991;&#20214;&#21487;&#30693;misc.c&#26159;&#24378;&#21046;&#32534;&#35793;&#10;&#10;&#10;+ &#26434;&#39033;&#35774;&#22791;&#27880;&#20876;&#22836;&#25991;&#20214;```include/linux/miscdevice.h</span><br></pre></td></tr></table></figure></li>
+<li>杂项设备初始化部分源文件<code>drivers/char/misc.c</code><blockquote>
+<p>通过<code>drivers/char/Makefile</code>文件可知misc.c是强制编译</p>
+</blockquote>
+</li>
 </ul>
-<p>结构体<strong>miscdevice</strong>以及注册函数:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> device;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> miscdevice  &#123;</span><br><span class="line">        <span class="keyword">int</span> minor;</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">char</span> *name;</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">struct</span> file_operations *fops;</span><br><span class="line">        <span class="keyword">struct</span> list_head <span class="built_in">list</span>;</span><br><span class="line">        <span class="keyword">struct</span> device *parent;</span><br><span class="line">        <span class="keyword">struct</span> device *this_device;</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">char</span> *nodename;</span><br><span class="line">        <span class="keyword">mode_t</span> mode;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">misc_register</span><span class="params">(<span class="keyword">struct</span> miscdevice * misc)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">misc_deregister</span><span class="params">(<span class="keyword">struct</span> miscdevice *misc)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#</span></span><br><span class="line"><span class="preprocessor"># Makefile for the kernel character device drivers.</span></span><br><span class="line"><span class="preprocessor">#</span></span><br><span class="line"></span><br><span class="line">obj-y                           += mem.o random.o</span><br><span class="line">obj-$(CONFIG_TTY_PRINTK)        += ttyprintk.o</span><br><span class="line">obj-y                           += misc.o</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Linux官方出来就自带强制编译，为了一些简单的驱动更容易实现</p>
+</blockquote>
+<ul>
+<li>杂项设备注册头文件<code>include/linux/miscdevice.h</code></li>
+</ul>
+<p>结构体<strong>miscdevice</strong>以及注册函数:<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> device;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> miscdevice  &#123;</span><br><span class="line">        <span class="keyword">int</span> minor;</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">char</span> *name;</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">struct</span> file_operations *fops;</span><br><span class="line">        <span class="keyword">struct</span> list_head <span class="built_in">list</span>;</span><br><span class="line">        <span class="keyword">struct</span> device *parent;</span><br><span class="line">        <span class="keyword">struct</span> device *this_device;</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">char</span> *nodename;</span><br><span class="line">        <span class="keyword">mode_t</span> mode;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">misc_register</span><span class="params">(<span class="keyword">struct</span> miscdevice * misc)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">misc_deregister</span><span class="params">(<span class="keyword">struct</span> miscdevice *misc)</span></span>;</span><br></pre></td></tr></table></figure></p>
 <p>常用参数</p>
 <ul>
 <li><p><code>.minor</code>设备号</p>
@@ -366,21 +375,25 @@
 		  
 		
 		  
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>18</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/English/" title="English">English<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>12</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>1</sup></a></li>
 		  
 		
 		  
 		
 		  
-			<li><a href="/categories/memo/" title="memo">memo<sup>4</sup></a></li>
+			<li><a href="/categories/memo/" title="memo">memo<sup>3</sup></a></li>
 		  
 		
 		  
@@ -404,7 +417,11 @@
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>24</sup></a></li>
+			<li><a href="/categories/算法-原理/" title="算法 | 原理">算法 | 原理<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>7</sup></a></li>
 		  
 		
 		  
@@ -425,15 +442,11 @@
 			
 		
 			
+				<li><a href="/tags/C/" title="C">C<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -441,15 +454,11 @@
 			
 		
 			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/C/" title="C++">C++<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
@@ -457,11 +466,15 @@
 			
 		
 			
-				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Record/" title="Record">Record<sup>2</sup></a></li>
 			
 		
 			
@@ -473,11 +486,7 @@
 			
 		
 			
-				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -485,7 +494,15 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
 			
 		
 			
@@ -497,7 +514,7 @@
 			
 		
 			
-				<li><a href="/tags/51/" title="51">51<sup>1</sup></a></li>
+				<li><a href="/tags/编程/" title="编程">编程<sup>1</sup></a></li>
 			
 		
 		</ul>

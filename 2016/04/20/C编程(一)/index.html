@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C语言基础(一):常量、变量、表达式 | take that的博客</title>
+    <title>C编程(一) | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,23 +12,26 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="Tips: 
+    <meta name="description" content="2016-4-20 周三
+天气：阴转晴
 
-常量变量表达式">
+GDB调试器、makefile工程管理器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言基础(一):常量、变量、表达式">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/06/18/C语言基础(一)常量+变量+表达式/index.html">
+<meta property="og:title" content="C编程(一)">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/04/20/C编程(一)/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="Tips: 
+<meta property="og:description" content="2016-4-20 周三
+天气：阴转晴
 
-常量变量表达式">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%89%AF%E5%B2%AD%E8%A1%97%E5%B0%91%E5%B9%B4.jpeg">
-<meta property="og:updated_time" content="2016-11-16T14:13:21.000Z">
+GDB调试器、makefile工程管理器">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg">
+<meta property="og:updated_time" content="2016-12-07T14:14:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言基础(一):常量、变量、表达式">
-<meta name="twitter:description" content="Tips: 
+<meta name="twitter:title" content="C编程(一)">
+<meta name="twitter:description" content="2016-4-20 周三
+天气：阴转晴
 
-常量变量表达式">
+GDB调试器、makefile工程管理器">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -92,7 +95,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/18/C语言基础(一)常量+变量+表达式/" title="C语言基础(一):常量、变量、表达式" itemprop="url">C语言基础(一):常量、变量、表达式</a>
+      <a href="/2016/04/20/C编程(一)/" title="C编程(一)" itemprop="url">C编程(一)</a>
   </h1>
   <p class="article-author">By
        
@@ -102,7 +105,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-06-17T16:53:32.000Z" itemprop="datePublished"> 发表于 2016-06-18</time>
+    <time datetime="2016-04-20T02:50:32.000Z" itemprop="datePublished"> 发表于 2016-04-20</time>
     
   </p>
 </header>
@@ -111,65 +114,70 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常量"><span class="toc-number">1.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表达式"><span class="toc-number">3.</span> <span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符类型与字符编码"><span class="toc-number">4.</span> <span class="toc-text">字符类型与字符编码</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GDB调试器、makefile工程管理器"><span class="toc-number">1.</span> <span class="toc-text">GDB调试器、makefile工程管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GDB"><span class="toc-number">1.1.</span> <span class="toc-text">GDB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Make"><span class="toc-number">1.2.</span> <span class="toc-text">Make</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Makefile"><span class="toc-number">1.2.1.</span> <span class="toc-text">Makefile</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E7%89%AF%E5%B2%AD%E8%A1%97%E5%B0%91%E5%B9%B4.jpeg" alt="牯岭街少年" title="牯岭街少年"></p>
-<p>Tips: </p>
-<blockquote>
-<p><strong><code>常量</code></strong><br><strong><code>变量</code></strong><br><strong><code>表达式</code></strong><br><a id="more"></a></p>
-</blockquote>
-<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p> <strong><code>常量</code></strong>  <em>Constant</em> :是程序中基本的元素</p>
-<blockquote>
-<p><strong><code>1.</code></strong>字符<em>Character</em>常量</p>
-<p><em>字符常量需要亚用单引号括起来，注意单引号只能括起一个字符，转义字符除外(其实际是一个字符)</em></p>
-<p><strong><code>2.</code></strong>整数<em>Integer</em>常量</p>
-<p><strong><code>3.</code></strong>浮点数<em>Floating Point</em></p>
-<p><strong><code>4.</code></strong>枚举常量<br>.</p>
-</blockquote>
-<hr>
-<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p><strong><code>变量</code>*</strong>Variable*是编程语言中的概念之一。</p>
-<blockquote>
-<p>在程序中变量是一个名字，这个名字在计算机代表是<strong><code>一块存储空间</code></strong>,保存一个值<em>(Value)</em></p>
-<p>其类型决定了所占存储空间的大小</p>
-<p>使用声明<em>(Declaration)</em>来规定变量的名字和类型</p>
-<blockquote>
-<p>C语言的<strong><code>声明</code></strong>有<strong><code>变量声明</code></strong>、<strong><code>函数声明</code></strong>、<strong><code>类型声明</code></strong></p>
-<blockquote>
-<p>也可分为<strong><code>定义(Definition)声明</code></strong>和不是<strong><code>定义的声明</code></strong>。分配存储空间的声明也是定义，不分配存储空间的不是定义。</p>
-<blockquote>
-<p>如果一个函数声明带有函数体，要求编译器为它生成指令，那么个这个声明同时也是函数的定义。</p>
-</blockquote>
-</blockquote>
-<p>注意声明可以出现在函数体内,也可以出现在函数体外。</p>
-</blockquote>
-</blockquote>
+		<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg" alt="Red Alert2 concept art:machine gunnerra" title="Red Alert2 concept art:machine gunnerra"></p>
 <p><br></p>
-<p><strong><code>赋值</code></strong></p>
-<p>定义变量后我们要把值存到他们呢所在的存储空间里，可以用赋值<em>(Assignment)</em>语句实现</p>
 <blockquote>
-<p>定义和赋值可以一步完成，这种称为变量的初始化<strong>(Initialization)</strong></p>
+<p>2016-4-20 周三</p>
+<p>天气：阴转晴</p>
+</blockquote>
+<h1 id="GDB调试器、makefile工程管理器"><a href="#GDB调试器、makefile工程管理器" class="headerlink" title="GDB调试器、makefile工程管理器"></a>GDB调试器、makefile工程管理器</h1><a id="more"></a>
+<h2 id="GDB"><a href="#GDB" class="headerlink" title="GDB"></a>GDB</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> n)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          <span class="keyword">return</span> <span class="function">n*<span class="title">cal</span><span class="params">(n-<span class="number">1</span>)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">5</span>;</span><br><span class="line">n=cal(n);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,n);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>查看源程序<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(gdb) l <span class="number">1</span></span><br><span class="line"><span class="number">1</span>       <span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="number">2</span>       <span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> n)</span></span><br><span class="line">3       </span>&#123;</span><br><span class="line"><span class="number">4</span>               <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line"><span class="number">5</span>                       <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"><span class="number">6</span>               <span class="keyword">else</span></span><br><span class="line"><span class="number">7</span>                 <span class="keyword">return</span> <span class="function">n*<span class="title">cal</span><span class="params">(n-<span class="number">1</span>)</span></span>;</span><br><span class="line"><span class="number">8</span>       &#125;</span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">10</span>      <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <blockquote>
-<p>注意初始化是一种特殊的声明，而不是一种赋值语句。</p>
+<p>在GDB输入<code>l   1</code>以10行为单位进行显示,再次输入<code>l</code>就会显示下10行代码。</p>
 </blockquote>
-</blockquote>
+<ol>
+<li><p>设置断点:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(gdb) b <span class="number">7</span></span><br><span class="line">Breakpoint <span class="number">1</span> at <span class="number">0x400545</span>: file test.c, line <span class="number">7.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看断点</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(gdb) <span class="preprocessor">info</span> <span class="keyword">b</span><br><span class="line"></span><span class="label">Num</span>     Type           Disp Enb <span class="keyword">Address </span>           What</span><br><span class="line"><span class="number">1</span>       <span class="keyword">breakpoint </span>    <span class="preprocessor">keep</span> y   <span class="number">0x0000000000400545</span> in cal at test.c:<span class="number">7</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行程序</p>
+</li>
+</ol>
+<ul>
+<li>在GDB中输入<code>r</code>,如果遇到断点将会暂停在断点上，继续运行程序则输入<code>c</code></li>
+<li>查看变量。程序暂停后就可以查看变量了。在GDB中输入<code>p    变量名</code>查看当前变量</li>
+<li>继续运行程序,程序停在断点，输入<code>c</code>继续运行程序。</li>
+<li>单步运行<code>s</code>和<code>n</code>,其中<code>s</code>可以发生函数调用时进入函数内部运行，而<code>n</code>不会进入函数内部运行。</li>
+</ul>
 <hr>
-<h1 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h1><p>由4个运算符和操作数<em>Operator</em>所组成的算式称为表达式<em>Expression</em></p>
+<h2 id="Make"><a href="#Make" class="headerlink" title="Make"></a>Make</h2><p>实际开发中仅仅通过gcc命令对程序进行编译是非常低效的，原因主要有</p>
+<ol>
+<li>程序往往由多个源文件组成，源文件越多，gcc的命令越长，各种编译规则也会加大gcc命令行的复杂度</li>
+<li>在程序开发过程中，调试工作占到70%以上。调试过程中，每次调试一般只会修改一部分源文件。而在gcc命令行编译程序时，gcc会把那些没被修改的源文件一起编译，这样就会影响编译总体效率。</li>
+</ol>
+<p>gcc 提供了半自动化的工程管理器Make。</p>
 <blockquote>
-<p>任何表达式都有值和类型2个基本属性。</p>
-<p>在任意表达式后面加个；号也是一种语句，称为表达式语句。</p>
+<p>所谓半自动化是指在使用工程管理器前需要人工编写程序的编译规则，所有的编译规则都保存在<code>Makefile</code>文件中，全自动化的工程管理器在编译程序前会自动生成<code>Makefile</code>文件。</p>
 </blockquote>
-<p>有的表达式既可以做左值也可以做右值，而有的表达式只能做右值。</p>
+<p>Make 工程管理器的优越性体现在以下2个方面：</p>
+<ol>
+<li><p>使用方便。通过<code>make</code>就可以启动Make工程管理器对程序进行编译，所以不需要每次输入gcc。</p>
 <blockquote>
-<p>变量可以做左值</p>
+<p>Make启动后会根据<code>Makefile</code>文件中的编译规则命令自动对源文件进行编译和链接，最终生成可执行文件。</p>
 </blockquote>
-<h1 id="字符类型与字符编码"><a href="#字符类型与字符编码" class="headerlink" title="字符类型与字符编码"></a>字符类型与字符编码</h1><p>字符常量或字符型变量也可以当作整数参与运算;<br><strong>因为每个字符在计算机内部用一个整数表示，称为</strong><code>字符编码</code><em>* </em>Character Encoding*</p>
-<blockquote>
-<p>目前最常见的是ASCII码<br>例如：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%c\n"</span>,<span class="string">'a'</span>+<span class="number">1</span>);</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p><br><br><strong><code>Tips:</code></strong></p>
-<p>ASCII码中字符`a`~`z`、`A`~`Z`、`0`~`9`是连续的，<strong><code>所以</code></strong>`a`+25和`z`的值相等。<br>`0`+`9`的值也想等。注意`0`~`9`的ASCII码是16进制的30-39(十进制的48-57)和整数的0~9是不相等的。<br><code>a</code>的ACII是97,字符b是98</p>
+</li>
+<li><p>调试效率高。为了提高编译程序的效率，Make会检查每个源文件的修改时间(时间戳)。只有在上次编译之后被修改的源文件才会在接下来的编译过程中被编译和连接，这样就嫩那个避免多余的编译工作量。为了保证文件具正确的时间戳，必须保证操作系统时间的正确性(注意VMWare虚拟机的CMOS时间是否正确)</p>
+</li>
+</ol>
+<h3 id="Makefile"><a href="#Makefile" class="headerlink" title="Makefile"></a>Makefile</h3><p>Make工程管理器是完全依据Makefile文件中的编译规则命令进行工作的。Makefile文件由一下3项基本内容组成:</p>
+<ul>
+<li><code>target file</code>：需要生成的目标文件</li>
+<li><code>dependency file</code>：生成目标文件所需要的依赖文件</li>
+<li><code>command</code>:生成目标文件的编译规则命令行</li>
+</ul>
+<p>这3项内容按照如下格式进行组织：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">target   <span class="built_in">file</span> : dependency  <span class="built_in">file</span></span><br><span class="line"><span class="command"><span class="keyword">command</span></span></span><br></pre></td></tr></table></figure>
+<p><strong>其中Makefile规定在书写command命令行前必须加一个<code>&lt;Tab&gt;键</code></strong></p>
   
 	</div>
 
@@ -280,7 +288,7 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/编程/">编程</a>
+  <a class="article-category-link" href="/categories/C-C/">C | C++</a>
 </div>
 
 
@@ -295,7 +303,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/06/18/C语言基础(一)常量+变量+表达式/" data-title="C语言基础(一):常量、变量、表达式 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/04/20/C编程(一)/" data-title="C编程(一) | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -309,18 +317,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/06/19/E——计算机英语单词/" title="计算机英语单词">
+ <a href="/2016/04/21/Linux系统(三)/" title="Linux系统(三)">
   <strong>上一篇：</strong><br/>
   <span>
-  计算机英语单词</span>
+  Linux系统(三)</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/06/17/Coursera-Week 0-Welcome to Algorithms, Part I /"  title="Week 0- Welcome to Algorithms, Part I">
+<a href="/2016/04/18/Linux系统(二)/"  title="Linux系统(二)">
  <strong>下一篇：</strong><br/> 
- <span>Week 0- Welcome to Algorithms, Part I
+ <span>Linux系统(二)
 </span>
 </a>
 </div>
@@ -329,7 +337,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/18/C语言基础(一)常量+变量+表达式/" data-title="C语言基础(一):常量、变量、表达式" data-url="http://www.vivatakethat.com/2016/06/18/C语言基础(一)常量+变量+表达式/"></div>
+	<div class="ds-thread" data-thread-key="2016/04/20/C编程(一)/" data-title="C编程(一)" data-url="http://www.vivatakethat.com/2016/04/20/C编程(一)/"></div>
 </section>
 
 
@@ -339,7 +347,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常量"><span class="toc-number">1.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表达式"><span class="toc-number">3.</span> <span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符类型与字符编码"><span class="toc-number">4.</span> <span class="toc-text">字符类型与字符编码</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GDB调试器、makefile工程管理器"><span class="toc-number">1.</span> <span class="toc-text">GDB调试器、makefile工程管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GDB"><span class="toc-number">1.1.</span> <span class="toc-text">GDB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Make"><span class="toc-number">1.2.</span> <span class="toc-text">Make</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Makefile"><span class="toc-number">1.2.1.</span> <span class="toc-text">Makefile</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
@@ -367,21 +375,25 @@
 		  
 		
 		  
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>18</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/English/" title="English">English<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>12</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>1</sup></a></li>
 		  
 		
 		  
 		
 		  
-			<li><a href="/categories/memo/" title="memo">memo<sup>4</sup></a></li>
+			<li><a href="/categories/memo/" title="memo">memo<sup>3</sup></a></li>
 		  
 		
 		  
@@ -405,7 +417,11 @@
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>24</sup></a></li>
+			<li><a href="/categories/算法-原理/" title="算法 | 原理">算法 | 原理<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>7</sup></a></li>
 		  
 		
 		  
@@ -426,15 +442,11 @@
 			
 		
 			
+				<li><a href="/tags/C/" title="C">C<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -442,15 +454,11 @@
 			
 		
 			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/C/" title="C++">C++<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
@@ -458,11 +466,15 @@
 			
 		
 			
-				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Record/" title="Record">Record<sup>2</sup></a></li>
 			
 		
 			
@@ -474,11 +486,7 @@
 			
 		
 			
-				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -486,7 +494,15 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
 			
 		
 			
@@ -498,7 +514,7 @@
 			
 		
 			
-				<li><a href="/tags/51/" title="51">51<sup>1</sup></a></li>
+				<li><a href="/tags/编程/" title="编程">编程<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C语言基础(三):分支语句 | take that的博客</title>
+    <title>C语言:常量、变量、表达式 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,17 +12,23 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
+    <meta name="description" content="Tips: 
+
+常量变量表达式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言基础(三):分支语句">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/06/21/C语言基础(三)-分支语句/index.html">
+<meta property="og:title" content="C语言:常量、变量、表达式">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/06/18/C语言——常量+变量+表达式/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/New%20Order%20-%20%E3%80%8AGet%20Ready%E3%80%8B%EF%BC%8C2010.png">
-<meta property="og:updated_time" content="2016-11-16T14:13:17.780Z">
+<meta property="og:description" content="Tips: 
+
+常量变量表达式">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%89%AF%E5%B2%AD%E8%A1%97%E5%B0%91%E5%B9%B4.jpeg">
+<meta property="og:updated_time" content="2016-12-07T14:04:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言基础(三):分支语句">
-<meta name="twitter:description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
+<meta name="twitter:title" content="C语言:常量、变量、表达式">
+<meta name="twitter:description" content="Tips: 
+
+常量变量表达式">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -86,7 +92,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/21/C语言基础(三)-分支语句/" title="C语言基础(三):分支语句" itemprop="url">C语言基础(三):分支语句</a>
+      <a href="/2016/06/18/C语言——常量+变量+表达式/" title="C语言:常量、变量、表达式" itemprop="url">C语言:常量、变量、表达式</a>
   </h1>
   <p class="article-author">By
        
@@ -96,7 +102,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-06-21T01:17:32.000Z" itemprop="datePublished"> 发表于 2016-06-21</time>
+    <time datetime="2016-06-17T16:53:32.000Z" itemprop="datePublished"> 发表于 2016-06-18</time>
     
   </p>
 </header>
@@ -105,56 +111,65 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-number">1.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else语句"><span class="toc-number">1.1.</span> <span class="toc-text">if/else语句</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常量"><span class="toc-number">1.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表达式"><span class="toc-number">3.</span> <span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符类型与字符编码"><span class="toc-number">4.</span> <span class="toc-text">字符类型与字符编码</span></a></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/New%20Order%20-%20%E3%80%8AGet%20Ready%E3%80%8B%EF%BC%8C2010.png" alt="New Order - 《Get Ready》,2010" title="    
-New Order - 《Get Ready》,2010"></p>
-<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><p>根据不同的条件执行不同的语句，这种控制流程称为分支<em>Branch</em><br><a id="more"></a></p>
-<p><strong>关系运算符和相等性运算符</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">运算符</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong><code>==</code></strong></td>
-<td style="text-align:center">等于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>!=</code></strong></td>
-<td style="text-align:center">不等于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>&gt;</code></strong></td>
-<td style="text-align:center">大于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>&lt;</code></strong></td>
-<td style="text-align:center">小于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>&gt;=</code></strong></td>
-<td style="text-align:center">大于等于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>&lt;=</code></strong></td>
-<td style="text-align:center">小于或等于</td>
-</tr>
-</tbody>
-</table>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E7%89%AF%E5%B2%AD%E8%A1%97%E5%B0%91%E5%B9%B4.jpeg" alt="牯岭街少年" title="牯岭街少年"></p>
+<p>Tips: </p>
 <blockquote>
-<p><strong><code>==</code></strong>和<strong><code>!=</code></strong>称为相等性运算符<em>(Equality Operator)</em>其余4个称为关系运算符<em>(Relational Operator)</em></p>
-<p>注意这些运算符的2个操作数应该是相同类型的，但2个字符串<strong><code>不能做比较</code></strong>。</p>
-<p><strong><code>%</code></strong>运算符的2个操作数必须是<strong><code>整形</code></strong></p>
-<p>如果a和b是整形，如果b不等于0则表达式<strong><code>(a/b)*b+a%b总等于a</code></strong></p>
-<p><strong><code>%运算符的结果总是与被除数同号</code></strong>(被除数是指/前一个数)</p>
+<p><strong><code>常量</code></strong><br><strong><code>变量</code></strong><br><strong><code>表达式</code></strong><br><a id="more"></a></p>
 </blockquote>
-<h2 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if/else语句"></a>if/else语句</h2><p>%</p>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p> <strong><code>常量</code></strong>  <em>Constant</em> :是程序中基本的元素</p>
+<blockquote>
+<p><strong><code>1.</code></strong>字符<em>Character</em>常量</p>
+<p><em>字符常量需要亚用单引号括起来，注意单引号只能括起一个字符，转义字符除外(其实际是一个字符)</em></p>
+<p><strong><code>2.</code></strong>整数<em>Integer</em>常量</p>
+<p><strong><code>3.</code></strong>浮点数<em>Floating Point</em></p>
+<p><strong><code>4.</code></strong>枚举常量<br>.</p>
+</blockquote>
+<hr>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p><strong><code>变量</code>*</strong>Variable*是编程语言中的概念之一。</p>
+<blockquote>
+<p>在程序中变量是一个名字，这个名字在计算机代表是<strong><code>一块存储空间</code></strong>,保存一个值<em>(Value)</em></p>
+<p>其类型决定了所占存储空间的大小</p>
+<p>使用声明<em>(Declaration)</em>来规定变量的名字和类型</p>
+<blockquote>
+<p>C语言的<strong><code>声明</code></strong>有<strong><code>变量声明</code></strong>、<strong><code>函数声明</code></strong>、<strong><code>类型声明</code></strong></p>
+<blockquote>
+<p>也可分为<strong><code>定义(Definition)声明</code></strong>和不是<strong><code>定义的声明</code></strong>。分配存储空间的声明也是定义，不分配存储空间的不是定义。</p>
+<blockquote>
+<p>如果一个函数声明带有函数体，要求编译器为它生成指令，那么个这个声明同时也是函数的定义。</p>
+</blockquote>
+</blockquote>
+<p>注意声明可以出现在函数体内,也可以出现在函数体外。</p>
+</blockquote>
+</blockquote>
+<p><br></p>
+<p><strong><code>赋值</code></strong></p>
+<p>定义变量后我们要把值存到他们呢所在的存储空间里，可以用赋值<em>(Assignment)</em>语句实现</p>
+<blockquote>
+<p>定义和赋值可以一步完成，这种称为变量的初始化<strong>(Initialization)</strong></p>
+<blockquote>
+<p>注意初始化是一种特殊的声明，而不是一种赋值语句。</p>
+</blockquote>
+</blockquote>
+<hr>
+<h1 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h1><p>由4个运算符和操作数<em>Operator</em>所组成的算式称为表达式<em>Expression</em></p>
+<blockquote>
+<p>任何表达式都有值和类型2个基本属性。</p>
+<p>在任意表达式后面加个；号也是一种语句，称为表达式语句。</p>
+</blockquote>
+<p>有的表达式既可以做左值也可以做右值，而有的表达式只能做右值。</p>
+<blockquote>
+<p>变量可以做左值</p>
+</blockquote>
+<h1 id="字符类型与字符编码"><a href="#字符类型与字符编码" class="headerlink" title="字符类型与字符编码"></a>字符类型与字符编码</h1><p>字符常量或字符型变量也可以当作整数参与运算;<br><strong>因为每个字符在计算机内部用一个整数表示，称为</strong><code>字符编码</code><em>* </em>Character Encoding*</p>
+<blockquote>
+<p>目前最常见的是ASCII码<br>例如：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%c\n"</span>,<span class="string">'a'</span>+<span class="number">1</span>);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><br><br><strong><code>Tips:</code></strong></p>
+<p>ASCII码中字符`a`~`z`、`A`~`Z`、`0`~`9`是连续的，<strong><code>所以</code></strong>`a`+25和`z`的值相等。<br>`0`+`9`的值也想等。注意`0`~`9`的ASCII码是16进制的30-39(十进制的48-57)和整数的0~9是不相等的。<br><code>a</code>的ACII是97,字符b是98</p>
   
 	</div>
 
@@ -265,7 +280,7 @@ New Order - 《Get Ready》,2010"></p>
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/编程/">编程</a>
+  <a class="article-category-link" href="/categories/C-C/">C | C++</a>
 </div>
 
 
@@ -280,7 +295,7 @@ New Order - 《Get Ready》,2010"></p>
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/06/21/C语言基础(三)-分支语句/" data-title="C语言基础(三):分支语句 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/06/18/C语言——常量+变量+表达式/" data-title="C语言:常量、变量、表达式 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -294,18 +309,18 @@ New Order - 《Get Ready》,2010"></p>
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/06/22/Coursera-Union-Find/" title="Union-Find">
+ <a href="/2016/06/19/E——计算机英语单词/" title="计算机英语单词">
   <strong>上一篇：</strong><br/>
   <span>
-  Union-Find</span>
+  计算机英语单词</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/06/21/C语言基础（6）-结构体/"  title="C语言基础6:结构体">
+<a href="/2016/06/17/Coursera-Week 0-Welcome to Algorithms, Part I /"  title="Week 0- Welcome to Algorithms, Part I">
  <strong>下一篇：</strong><br/> 
- <span>C语言基础6:结构体
+ <span>Week 0- Welcome to Algorithms, Part I
 </span>
 </a>
 </div>
@@ -314,7 +329,7 @@ New Order - 《Get Ready》,2010"></p>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/21/C语言基础(三)-分支语句/" data-title="C语言基础(三):分支语句" data-url="http://www.vivatakethat.com/2016/06/21/C语言基础(三)-分支语句/"></div>
+	<div class="ds-thread" data-thread-key="2016/06/18/C语言——常量+变量+表达式/" data-title="C语言:常量、变量、表达式" data-url="http://www.vivatakethat.com/2016/06/18/C语言——常量+变量+表达式/"></div>
 </section>
 
 
@@ -324,7 +339,7 @@ New Order - 《Get Ready》,2010"></p>
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-number">1.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else语句"><span class="toc-number">1.1.</span> <span class="toc-text">if/else语句</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常量"><span class="toc-number">1.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表达式"><span class="toc-number">3.</span> <span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符类型与字符编码"><span class="toc-number">4.</span> <span class="toc-text">字符类型与字符编码</span></a></li></ol>
  
   </div>
 
@@ -352,21 +367,25 @@ New Order - 《Get Ready》,2010"></p>
 		  
 		
 		  
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>18</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/English/" title="English">English<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>11</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>12</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>4</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>1</sup></a></li>
 		  
 		
 		  
 		
 		  
-			<li><a href="/categories/memo/" title="memo">memo<sup>4</sup></a></li>
+			<li><a href="/categories/memo/" title="memo">memo<sup>3</sup></a></li>
 		  
 		
 		  
@@ -390,7 +409,11 @@ New Order - 《Get Ready》,2010"></p>
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>24</sup></a></li>
+			<li><a href="/categories/算法-原理/" title="算法 | 原理">算法 | 原理<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程/" title="编程">编程<sup>7</sup></a></li>
 		  
 		
 		  
@@ -411,15 +434,11 @@ New Order - 《Get Ready》,2010"></p>
 			
 		
 			
+				<li><a href="/tags/C/" title="C">C<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -427,15 +446,11 @@ New Order - 《Get Ready》,2010"></p>
 			
 		
 			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/C/" title="C++">C++<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
@@ -443,11 +458,15 @@ New Order - 《Get Ready》,2010"></p>
 			
 		
 			
-				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/English/" title="English">English<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Record/" title="Record">Record<sup>2</sup></a></li>
 			
 		
 			
@@ -459,11 +478,7 @@ New Order - 《Get Ready》,2010"></p>
 			
 		
 			
-				<li><a href="/tags/OS/" title="OS">OS<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux-C/" title="Linux-C">Linux-C<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -471,7 +486,15 @@ New Order - 《Get Ready》,2010"></p>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
 			
 		
 			
@@ -483,7 +506,7 @@ New Order - 《Get Ready》,2010"></p>
 			
 		
 			
-				<li><a href="/tags/51/" title="51">51<sup>1</sup></a></li>
+				<li><a href="/tags/编程/" title="编程">编程<sup>1</sup></a></li>
 			
 		
 		</ul>
