@@ -12,17 +12,17 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="Read-only file system问题描述：C | C++开发板提示Read-only file system，另一台linux主机无法使用scp传输文件(提示Read-only file system)，SecurtFx也无法传输文件。">
+    <meta name="description" content="Read-only file system问题描述：嵌入式开发板提示Read-only file system，另一台linux主机无法使用scp传输文件(提示Read-only file system)，SecurtFx也无法传输文件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="嵌入式开发常见问题">
 <meta property="og:url" content="http://www.vivatakethat.com/2016/06/07/嵌入式开发常见问题/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="Read-only file system问题描述：C | C++开发板提示Read-only file system，另一台linux主机无法使用scp传输文件(提示Read-only file system)，SecurtFx也无法传输文件。">
+<meta property="og:description" content="Read-only file system问题描述：嵌入式开发板提示Read-only file system，另一台linux主机无法使用scp传输文件(提示Read-only file system)，SecurtFx也无法传输文件。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/ZGB%E4%B8%BB%E6%9C%BA85PC%E7%BD%91%E5%85%B3%E6%9D%BF.jpg">
-<meta property="og:updated_time" content="2016-12-07T14:31:03.000Z">
+<meta property="og:updated_time" content="2016-12-07T15:52:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="嵌入式开发常见问题">
-<meta name="twitter:description" content="Read-only file system问题描述：C | C++开发板提示Read-only file system，另一台linux主机无法使用scp传输文件(提示Read-only file system)，SecurtFx也无法传输文件。">
+<meta name="twitter:description" content="Read-only file system问题描述：嵌入式开发板提示Read-only file system，另一台linux主机无法使用scp传输文件(提示Read-only file system)，SecurtFx也无法传输文件。">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -109,10 +109,10 @@
 		
 		</div>
 		
-		<h2 id="Read-only-file-system"><a href="#Read-only-file-system" class="headerlink" title="Read-only file system"></a>Read-only file system</h2><p><strong><code>问题描述</code></strong>：<br><br>C | C++开发板提示Read-only file system，另一台linux主机无法使用scp传输文件(提示Read-only file system)，SecurtFx也无法传输文件。</p>
+		<h2 id="Read-only-file-system"><a href="#Read-only-file-system" class="headerlink" title="Read-only file system"></a>Read-only file system</h2><p><strong><code>问题描述</code></strong>：<br><br>嵌入式开发板提示Read-only file system，另一台linux主机无法使用scp传输文件(提示Read-only file system)，SecurtFx也无法传输文件。</p>
 <a id="more"></a>
 <p>系统信息：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@M28x ~]<span class="preprocessor"># uname -a  #电脑以及操作系统的相关信息</span></span><br><span class="line">Linux M28x <span class="number">2.6</span><span class="number">.35</span><span class="number">.3</span>-<span class="number">571</span>-gcca29a0 <span class="preprocessor">#<span class="number">23</span> PREEMPT Thu Dec <span class="number">17</span> <span class="number">17</span>:<span class="number">21</span>:<span class="number">49</span> CST <span class="number">2015</span> armv5tejl GNU/Linux</span></span><br><span class="line">[root@M28x ~]<span class="preprocessor"># cat /proc/version  #说明正在运行的内核版本</span></span><br><span class="line">Linux version <span class="number">2.6</span><span class="number">.35</span><span class="number">.3</span>-<span class="number">571</span>-gcca29a0 (root@hdp-desktop) (gcc version <span class="number">4.3</span><span class="number">.2</span> (Sourcery G++ Lite <span class="number">2008</span>q3-<span class="number">72</span>) ) <span class="preprocessor">#<span class="number">23</span> PREEMPT Thu Dec <span class="number">17</span> <span class="number">17</span>:<span class="number">21</span>:<span class="number">49</span> CST <span class="number">2015</span></span></span><br><span class="line">[root@M28x ~]<span class="preprocessor"># cat /etc/issue  #显示的是发行版本信息</span></span><br><span class="line">Welcome to ZHIYUAN M28x Board</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/ZGB%E4%B8%BB%E6%9C%BA85PC%E7%BD%91%E5%85%B3%E6%9D%BF.jpg" alt="ZGB网关板" title="ZGB网关板"><br><br><br><code>**解决办法**</code><br>在C | C++开发板执行：<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="constant">@M28x</span> /]<span class="preprocessor"># mount  -o  remount  rw  /</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/ZGB%E4%B8%BB%E6%9C%BA85PC%E7%BD%91%E5%85%B3%E6%9D%BF.jpg" alt="ZGB网关板" title="ZGB网关板"><br><br><br><code>**解决办法**</code><br>在嵌入式开发板执行：<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="constant">@M28x</span> /]<span class="preprocessor"># mount  -o  remount  rw  /</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <p><strong>2. 64位linux无法执行32为编译</strong><br>问题描述<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">09</span>:<span class="number">45</span>:<span class="number">10</span>][root@controller code]<span class="preprocessor"># gcc -m32 hello.c -o hello</span></span><br><span class="line">[<span class="number">09</span>:<span class="number">45</span>:<span class="number">10</span>]In file included from /usr/include/features.h:<span class="number">385</span>,</span><br><span class="line">[<span class="number">09</span>:<span class="number">45</span>:<span class="number">10</span>]                 from /usr/include/stdio.h:<span class="number">28</span>,</span><br><span class="line">[<span class="number">09</span>:<span class="number">45</span>:<span class="number">10</span>]                 from hello.c:<span class="number">1</span>:</span><br><span class="line">[<span class="number">09</span>:<span class="number">45</span>:<span class="number">10</span>]/usr/include/gnu/stubs.h:<span class="number">7</span>:<span class="number">27</span>: error: gnu/stubs-<span class="number">32.</span>h: No such file or directory</span><br></pre></td></tr></table></figure></p>
 <p>解决办法:<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># yum -y install glibc-devel</span></span><br></pre></td></tr></table></figure></p>
@@ -327,7 +327,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>33</sup></a></li>
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>27</sup></a></li>
 		  
 		
 		  
@@ -357,11 +357,15 @@
 		  
 		
 		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>6</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>12</sup></a></li>
 		  
 		
 		  
@@ -373,7 +377,7 @@
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>7</sup></a></li>
+			<li><a href="/categories/编程/" title="编程">编程<sup>6</sup></a></li>
 		  
 		
 		  
