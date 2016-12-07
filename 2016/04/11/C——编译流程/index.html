@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C语言_函数 | take that的博客</title>
+    <title>C:编译流程 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,41 +12,17 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="函数
-main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。
-
-
-同一个函数可以被多次调用；
-可以用一个函数调用第三个函数；
-
-自定义函数函数定义=返回值类型&amp;bnsp;+函数名(参数列表)&amp;nbsp;函数体
-函数原型:声明了一个函数的名字、参数类型、个数、返回值类型。如：">
+    <meta name="description" content="前言:开放、自由和灵活是Linux的魅力所在，而在这一点在GCC上的体现就是程序员通过它能够更好的控制整个编译过程。在使用GCC编译程序时，编译过程可细分为4个阶段">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言_函数">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/06/20/C语言基础(二)-函数/index.html">
+<meta property="og:title" content="C:编译流程">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/04/11/C——编译流程/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="函数
-main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。
-
-
-同一个函数可以被多次调用；
-可以用一个函数调用第三个函数；
-
-自定义函数函数定义=返回值类型&amp;bnsp;+函数名(参数列表)&amp;nbsp;函数体
-函数原型:声明了一个函数的名字、参数类型、个数、返回值类型。如：">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%B6%85%E4%BA%BA.jpg">
-<meta property="og:updated_time" content="2016-12-07T14:29:34.015Z">
+<meta property="og:description" content="前言:开放、自由和灵活是Linux的魅力所在，而在这一点在GCC上的体现就是程序员通过它能够更好的控制整个编译过程。在使用GCC编译程序时，编译过程可细分为4个阶段">
+<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/Linuxc0%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg">
+<meta property="og:updated_time" content="2016-12-07T16:26:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言_函数">
-<meta name="twitter:description" content="函数
-main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。
-
-
-同一个函数可以被多次调用；
-可以用一个函数调用第三个函数；
-
-自定义函数函数定义=返回值类型&amp;bnsp;+函数名(参数列表)&amp;nbsp;函数体
-函数原型:声明了一个函数的名字、参数类型、个数、返回值类型。如：">
+<meta name="twitter:title" content="C:编译流程">
+<meta name="twitter:description" content="前言:开放、自由和灵活是Linux的魅力所在，而在这一点在GCC上的体现就是程序员通过它能够更好的控制整个编译过程。在使用GCC编译程序时，编译过程可细分为4个阶段">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -110,7 +86,7 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/20/C语言基础(二)-函数/" title="C语言_函数" itemprop="url">C语言_函数</a>
+      <a href="/2016/04/11/C——编译流程/" title="C:编译流程" itemprop="url">C:编译流程</a>
   </h1>
   <p class="article-author">By
        
@@ -120,7 +96,7 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-06-20T01:59:32.000Z" itemprop="datePublished"> 发表于 2016-06-20</time>
+    <time datetime="2016-04-11T02:50:32.000Z" itemprop="datePublished"> 发表于 2016-04-11</time>
     
   </p>
 </header>
@@ -129,61 +105,132 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义函数"><span class="toc-number">1.1.</span> <span class="toc-text">自定义函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#形参和实参"><span class="toc-number">1.2.</span> <span class="toc-text">形参和实参</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GCC编译器"><span class="toc-number">1.1.</span> <span class="toc-text">GCC编译器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gcc命令常用选项以及工作流程"><span class="toc-number">1.1.1.</span> <span class="toc-text">gcc命令常用选项以及工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gcc常用命令"><span class="toc-number">1.1.2.</span> <span class="toc-text">gcc常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库的使用"><span class="toc-number">1.2.</span> <span class="toc-text">库的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态链接-静态链接对比"><span class="toc-number">1.2.1.</span> <span class="toc-text">动态链接\静态链接对比</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E8%B6%85%E4%BA%BA.jpg" alt="超人" title="超人"></p>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><blockquote>
-<p>main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。</p>
+		<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/Linuxc0%E6%8A%AC%E5%A4%B4%E5%9B%BE.jpg" alt="攻壳机动队" title="攻壳机动队"></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p><strong>开放、自由和灵活是Linux的魅力所在，而在这一点在GCC上的体现就是程序员通过它能够更好的控制整个编译过程。在使用GCC编译程序时，编译过程可细分为4个阶段</strong></p>
+<a id="more"></a>
+<ol>
+<li><p>预处理（Pre-Processing）</p>
+<blockquote>
+<p>GCC在编译时首先要把头文件如<code>stdio.h</code>中内容加载到源程序首部。</p>
+<p><code>.i</code>已经预处理的C源程序</p>
 </blockquote>
+</li>
+<li><p>编译(Compiling)</p>
+<blockquote>
+<p>必须实现3个步骤<br>词法分析:检查关键字、标示符是否正确；</p>
+<p>语法分析：检查程序中语法是否正确;</p>
+<p>检查程序中逻辑语句是否正确</p>
+<p><code>.s/.S</code>是汇编源程序</p>
+</blockquote>
+</li>
+<li><p>汇编（Assembling）</p>
+<blockquote>
+<p>汇编阶段任务是把汇编程序翻译成CPU可识别的二进制文件（又称为目标文件<code>.o</code>）</p>
+</blockquote>
+</li>
+<li><p>链接（Linking）</p>
+<blockquote>
+<p>目标文件虽然已经可以被CPU直接识别，但是单个目标文件一般是无法运行的，原因在于一个程序往往是由多个源文件组成，每个源文件只对应一个目标文件。</p>
+<p>连接阶段的任务就是把程序的目标文件所需的问价连接在一起，最终生成一个可直接运行的文件，称为可执行文件。</p>
+<p>gcc命令生成的可执行文件有3种：<code>a.out</code>(Assembler and Link editor output)、<code>COFF</code>（Common object file format）、<code>ELF</code>(Executable and linkable format)，其中,a.out 和COF格式都是比较老的格式，现在Linux平台上可执行文件的主流格式是ELF。</p>
+</blockquote>
+</li>
+</ol>
+<p>Linux程序演可以根据自己的需要让GCC在编译的任何阶段结束，以便检查或使用编译器在该阶段的输出信息，或者对最后生成的二进制文件进行控制，以便通过加入不同数量和种类的调试代码来为今后的调试做好准备。和其他常用的编辑器一样，GCC也提供了灵活而强大的代码优化功能，利用它可生成执行效率更高的代码。</p>
+<hr>
+<h2 id="GCC编译器"><a href="#GCC编译器" class="headerlink" title="GCC编译器"></a>GCC编译器</h2><p>GCC(GNU Compile Collection)是Linux平台最流行的编译系统。</p>
 <ul>
-<li>同一个函数可以被多次调用；</li>
-<li>可以用一个函数调用第三个函数；</li>
+<li>GCC可以为x86、ARM、MIPS扽各不同体系架构的硬件平台编译程序。</li>
+<li>GCC可以编译C、C++、Pascal、Java等数十种高级语言。</li>
 </ul>
-<h2 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h2><p>函数定义=返回值类型&bnsp;+函数名(参数列表)&nbsp;函数体</p>
-<p><strong><code>函数原型</code></strong>:声明了一个函数的<strong><code>名字</code></strong>、参数类型、个数、返回值类型。<br>如：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">threelines</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>这种写法只能叫<strong><code>函数声明</code></strong>而不能叫函数定义，只有<strong><code>带函数体</code></strong>的声明才叫函数定义，因为编译器只有见到函数体才能生成指令。</p>
-<blockquote>
-<p>遵守<strong><code>先声明后使用</code></strong></p>
-</blockquote>
-<p>注意：<br><strong><code>声明</code></strong>把函数的名字、函数类型以及形参类型、个数和顺序通知编译系统，以便在调用该函数时系统按此进行对照检查。<br><strong><code>定义</code></strong>是指对函数功能的确立，包括指函数类型、函数名、函数体，他是一个完整的、独立的函数单位。</p>
-<blockquote>
-<p>从程序中可以看到对函数的声明与函数定义中的函数首部基本上是相同的。因此可以简单地照写已定义的函数的首部，再加一个分号，就成为 了对函数的“声明”</p>
-<p>在C语言中，函数声明称为函数原型<em>(function prototype)</em>。使用函数原型是ANSI C的一个重要特点。它的作用主要是利用它在程序的编译阶段对调用函数的合法性进行全面检查。</p>
-</blockquote>
-<p>Tips；</p>
+<hr>
+<h3 id="gcc命令常用选项以及工作流程"><a href="#gcc命令常用选项以及工作流程" class="headerlink" title="gcc命令常用选项以及工作流程"></a>gcc命令常用选项以及工作流程</h3><p>gcc命令的使用格式为:<br><code>gcc [选项] [文件名] [选项] [文件名]</code></p>
+<h3 id="gcc常用命令"><a href="#gcc常用命令" class="headerlink" title="gcc常用命令"></a>gcc常用命令</h3><p>gcc命令拥有强大的编译选项，按类型可分为：</p>
+<p> <strong>1. 总体选项</strong></p>
 <ul>
-<li>如果调用函数时参数列表为空，并且缺少函数原型，则编译器根据根据隐式声明规则认为参数类型为void;</li>
-<li>如果声明函数时参数列表为空，则这个声明属于Old Style C语法，不算函数原型，编译器认为参数类型和个数没有明确指出。</li>
+<li><code>-c      对文件进行编译或汇编</code></li>
+<li><code>-E</code>     对源文件进行预处理</li>
+<li><code>-S</code>     对源文件进行编译</li>
+<li><code>-o  file</code>     输出目标文件file</li>
+<li><code>-v</code>            显示编译阶段命令</li>
 </ul>
-<h2 id="形参和实参"><a href="#形参和实参" class="headerlink" title="形参和实参"></a>形参和实参</h2><p><strong><code>1.</code></strong>局部变量:函数中定义变量称为局部变量<em>lOCAL vARIABLE</em><br>形参也是一种局部变量。</p>
+<hr>
+<p> <strong>2. 语言选项</strong></p>
+<ul>
+<li><code>ansi</code>    支持符合ANSI标准的C程序</li>
+</ul>
+<hr>
+<p> <strong>3. 警告选项</strong></p>
+<ul>
+<li><code>-W</code>      屏蔽所有的警告信息</li>
+<li><code>-Wall</code>   显示所有类型的警告信息</li>
+<li><code>Werror</code>  出现任何警告信息就停止编译</li>
+</ul>
+<hr>
+<p> <strong>4. 调试选项</strong></p>
+<ul>
+<li><code>-g</code>  产生调试信息</li>
+</ul>
+<hr>
+<p> <strong>5. 优化选项:用于对目标进行优化，通常选项如下：</strong><br> <code>-O1</code>      对目标文件的性能优化<br> <code>-O2</code>      在-O1de基础上进一步优化，提高目标文件的运行性<br> <code>-O3</code>      在-O2de基础上进一步优化，支持函数集成优化<br> <code>-O0</code>      不进行优化</p>
+<hr>
+<p><strong>6. 连接器选项:用于控制连接过程，常用选项如下：</strong></p>
+<ul>
+<li><code>static</code>          使用静态连接</li>
+<li><code>library</code>         链接library函数库文件</li>
+<li><code>Ldir</code>           指定链接器的搜索目录dir</li>
+<li><code>Ldir</code>            指定搜索目录dir</li>
+</ul>
+<hr>
+<h2 id="库的使用"><a href="#库的使用" class="headerlink" title="库的使用"></a>库的使用</h2><p>从逻辑上看，程序的主题是由一系列函数组成，所以编写程序的主要工作之一就是实现函数。</p>
 <blockquote>
-<p>一个函数中的定义的变量不能被另一个函数使用<br>每次调用函数时局部变量都表示不同的存储空间。局部变量调用时才分配存储空间，每次函数返回时释放存储空间。</p>
+<p>为了降低编程的工作量，碧昂成系统会把一些非常基本、常用的函数集中到函数库中实现，如<code>信息的打印函数</code>、<code>文件的打开或关闭函数</code>、<code>内存空间的申请与释放函数</code>、<code>数学计算函数</code>；当程序需要使用到函数中某个函数时，就可以直接从库中调用。就好比建造房屋时，建筑队并不需要直接从头开始制造砖瓦和水泥，而只需要从原料市场购买就可以了。</p>
 </blockquote>
-<p><strong><code>2.</code></strong>全局变量<em>Global Variable</em>：全局变量定义在所有的函数体外。</p>
+<p>每种高级编程语言都有各自的函数国库，例如，C语言的C库、Visual C++的MFC、Java的JFC等。函数库中的函数裤脚都是由经验丰富的资深程序员编写的；</p>
 <blockquote>
-<p>它们在程序开始运行时分配存储空间，在程序结束时释放存储空间。</p>
-<p>在任何函数中都可以访问全局变量。</p>
-<p>它的作用域是定义在所有函数体之外的标示符，从定义的位置开始知道源文件结束。而main函数的局部变量的作用域仅限于main函数之中。</p>
+<p>函数库的使用不仅减少编程的工作量，还能有效提高程序的性能和健壮性。在面向对象编程中，函数库被封装在类中，所以含数据库就演变成了类库，但其原理和机制是类似的。</p>
 </blockquote>
-<p><strong><code>3.</code></strong>全局变量只能用<strong><code>常量表达式</code></strong> <em>Constant Expression</em>来初始化。<br>例如：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> pi=<span class="number">3014</span>+<span class="number">0.0016</span>;</span><br></pre></td></tr></table></figure>
+<p><strong>函数库的使用方式分为<code>静态连接</code>和<code>动态连接</code>2种</strong></p>
+<ol>
+<li><p><code>静态连接</code>是指编译系统在链接阶段把程序的目标文件和所需的函数库文件连接在一起，这样生成的可执行文件就可以在没有函数库的情况下运行。</p>
 <blockquote>
-<p>全局变量Pi这样初始化是合法的。</p>
+<p>就好比火箭把燃料和氧料装载一起，就可以在没有空气的太空中飞行。</p>
+<p>在使用静态链接方式产生的可执行文件体积较大，但运行效率较高。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> pi =<span class="built_in">acos</span>(-<span class="number">1.0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>动态链接</code>是指编译系统在连接阶段并不把目标文件和函数库文件链接在一起，而是等到程序在运行过程中需要使用时才链接函数库。</p>
 <blockquote>
-<p>然而局部变量这样初始化确实合法的。</p>
+<p>使用动态链接方式产生的可执行文件由于没有库文件，所以体积小。但由于需要动态加载函数库，所以运行效率要低一点。</p>
 </blockquote>
-<p>这是因为在程序一开始运行<em>(还没有执行main函数中的任何语句之前)</em>就要用初始化值来初始化全局变量。<em>这样main函数的第一条语句就可以取全局变量的初始值来做计算</em>而<code>acos</code>函数必须在调用它才能得到。</p>
-<p>比如这样的初始化：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> minute=<span class="number">360</span>-<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> hour=minute/<span class="number">60</span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong>把</strong>minute初始化成360-10是合法的<em>编译器并不会生成一个系统指令来描述360-10的计算过程并把这些指令保存到可执行文件中，而是把计算结果350保存到可执行文件中。</em></p>
-<p><strong>但</strong><code>minute/60</code>不是常量表达式，不符合语法规定，所以编译器直接报错退出，而不去算这个初始值。</p>
-<p><strong>4.</strong>局部变量一定要在使用前先赋值。因为，局部变量在定义时不初始化则初始值是不确定的。</p>
+</li>
+</ol>
+<hr>
+<p><strong>Glibc(GNU Library C)</strong>是GNU推出的C语言函数库，符合ISO C（International Standard for the C Programming Language）和POSIX(Portable Operating System Interface for Computer Environments)标准。其中，ISO C标准的扩充。因此Glibc可以在各种不同体系架构的计算机平台上使用。<br> Glibc中包含了大量的函数库，其中Libc是最基本的函数库，每个C程序都需要使用libc库。此外，常用的还有数学库libm、加密库libcrypt、POSIX线程库libpthread、网络服务库libnsl、IEEE浮点运算库libieee等。<code>Glibc</code>库为C程序提供了大量功能的强大函数、日期时间函数等。</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> C程序在调用Glibc中的函数库时，需要引用函数库对应的头文件，如stdio.h、<span class="built_in">string</span>.h、time.h等。这些头文件都放在`/usr/include`目录下。同时，在编译命令中需要加入某些函数库的链接参数（在函数库的使用文档中会列出具体的链接库名称参数），并使用符号`-l`进行连接。比如`libm`库函数链接参数为m,libpthread库的链接参数为pthread等。例如：</span><br><span class="line">   </span><br><span class="line">```c</span><br><span class="line"><span class="comment">//test.c</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="built_in">sin</span>(<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# gcc test.c -o test -lm&#10;test.c: In function &#8216;main&#8217;:&#10;test.c:7:1: warning: format &#8216;%d&#8217; expects argument of type &#8216;int&#8217;, but argument 2 has type &#8216;double&#8217; [-Wformat=]&#10; printf(&#34;%d\n&#34;,sin(0));&#10; ^&#10;root@ubuntu:~/test# ./test &#10;2082002856</span><br></pre></td></tr></table></figure>
+<p>在Linux系统中，Glibc分布在/lib和/usr/lib目录下，其中/lib目录中的函数库文件主要是给/bin目录下的系统程序使用的，/usr/bin目录中的函数库文件主要是给/usr目录下的用户程序使用的。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">libdialog</span><span class="class">.a</span>  </span><br><span class="line"><span class="tag">libdumbnet</span><span class="class">.la</span></span><br><span class="line"><span class="tag">libspreadsheet-1</span><span class="class">.12</span><span class="class">.9</span><span class="class">.so</span></span><br><span class="line"><span class="tag">libspreadsheet</span><span class="class">.so</span></span><br></pre></td></tr></table></figure>
+<p>其中后缀为<code>.a</code>的是静态库文件、后缀为<code>.la的是用来记录库文件信息的动态库文件，后缀为</code>.so<code>的是动态库文件。其中</code>libspreadsheet-1.12.9.so<code>是正真的Png动态库文件，而</code>libspreadsheet.so<code>是指向</code>libspreadsheet-1.12.9.so`动态库文件的符号链接符号。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/usr/lib# file libspreadsheet.so &#10;libspreadsheet.so: symbolic link to `libspreadsheet-1.12.9.so&#39;</span><br></pre></td></tr></table></figure>
+<h3 id="动态链接-静态链接对比"><a href="#动态链接-静态链接对比" class="headerlink" title="动态链接\静态链接对比"></a>动态链接\静态链接对比</h3><ul>
+<li>动态链接</li>
+</ul>
+<p>使用动态连接方法编译程序时，动态库的符号链接文件会写入二进制文件中。这样程序运行时就可以通过符号链接文件找到指定的动态库文件了。<br>以gcc  test.c -o test命令生成的可执行文件test，用<code>file</code>查看test文件相关信息：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# file test&#10;test: ELF 64-bit LSB  executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=138f13e9f7019179a87694a18d428296098eb441, not stripped</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>全局变量在定义是不初始化，则初始化值是0</p>
+<p><code>dynamically linked(uses shared libs)</code>表明test文件使用了动态链接库。</p>
 </blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# du -sh test&#10;12K     test</span><br></pre></td></tr></table></figure>
+<p>其文件大小为<code>12k</code></p>
+<ul>
+<li>静态链接<br>用过参数<code>static</code>对文件进行静态链接方式编译,生成test文件<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# file test&#10;test: ELF 64-bit LSB  executable, x86-64, version 1 (GNU/Linux), statically linked, for GNU/Linux 2.6.24, BuildID[sha1]=27c00935a81c38b2bd8a1a72a7037cbb15e88278, not stripped</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其中<code>statically linked</code>表明test文件使用了静态链接库。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~/test# du -sh test&#10;856K    test</span><br></pre></td></tr></table></figure></p>
+<p>其文件大小也增大至856k</p>
   
 	</div>
 
@@ -294,7 +341,7 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/C-C/">C | C++</a>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
 </div>
 
 
@@ -309,7 +356,7 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/06/20/C语言基础(二)-函数/" data-title="C语言_函数 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/04/11/C——编译流程/" data-title="C:编译流程 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -323,18 +370,18 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/06/21/C语言——结构体/" title="C语言:结构体">
+ <a href="/2016/04/12/Linux系统(零)/" title="Linux系统(零)">
   <strong>上一篇：</strong><br/>
   <span>
-  C语言:结构体</span>
+  Linux系统(零)</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/06/19/E——计算机英语单词/"  title="计算机英语单词">
+<a href="/2016/04/09/IaaS基础架设/"  title="IaaS基础架设">
  <strong>下一篇：</strong><br/> 
- <span>计算机英语单词
+ <span>IaaS基础架设
 </span>
 </a>
 </div>
@@ -343,7 +390,7 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/20/C语言基础(二)-函数/" data-title="C语言_函数" data-url="http://www.vivatakethat.com/2016/06/20/C语言基础(二)-函数/"></div>
+	<div class="ds-thread" data-thread-key="2016/04/11/C——编译流程/" data-title="C:编译流程" data-url="http://www.vivatakethat.com/2016/04/11/C——编译流程/"></div>
 </section>
 
 
@@ -353,7 +400,7 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义函数"><span class="toc-number">1.1.</span> <span class="toc-text">自定义函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#形参和实参"><span class="toc-number">1.2.</span> <span class="toc-text">形参和实参</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GCC编译器"><span class="toc-number">1.1.</span> <span class="toc-text">GCC编译器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gcc命令常用选项以及工作流程"><span class="toc-number">1.1.1.</span> <span class="toc-text">gcc命令常用选项以及工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gcc常用命令"><span class="toc-number">1.1.2.</span> <span class="toc-text">gcc常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库的使用"><span class="toc-number">1.2.</span> <span class="toc-text">库的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态链接-静态链接对比"><span class="toc-number">1.2.1.</span> <span class="toc-text">动态链接\静态链接对比</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
@@ -377,11 +424,15 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book |Coursera">Book |Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>31</sup></a></li>
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>23</sup></a></li>
 		  
 		
 		  
@@ -389,7 +440,7 @@ main函数的特殊之处在于执行程序的时候它自动被操作系统调�
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>13</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
 		  
 		
 		  

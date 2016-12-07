@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C语言基础(零)基本概念 | take that的博客</title>
+    <title>C语言基础(三):分支语句 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,41 +12,17 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="位置：信息学院
-
-2016-4-3 周六, 12:07AM   2016-4-3 周六; &amp;nbsp;8：50AM——10:AM
-教材《一站式学习C编程》
-
-
-
-程序的基本概念">
+    <meta name="description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言基础(零)基本概念">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/04/03/C语言基础(零)基本概念/index.html">
+<meta property="og:title" content="C语言基础(三):分支语句">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/06/21/C——分支语句/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="位置：信息学院
-
-2016-4-3 周六, 12:07AM   2016-4-3 周六; &amp;nbsp;8：50AM——10:AM
-教材《一站式学习C编程》
-
-
-
-程序的基本概念">
-<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/shell03-background.jpg">
-<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.1%E7%BC%96%E8%AF%91%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png">
-<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.2j%E8%A7%A3%E9%87%8A%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png">
-<meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.3j%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png">
-<meta property="og:updated_time" content="2016-12-07T14:29:34.028Z">
+<meta property="og:description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/New%20Order%20-%20%E3%80%8AGet%20Ready%E3%80%8B%EF%BC%8C2010.png">
+<meta property="og:updated_time" content="2016-12-07T16:23:18.214Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言基础(零)基本概念">
-<meta name="twitter:description" content="位置：信息学院
-
-2016-4-3 周六, 12:07AM   2016-4-3 周六; &amp;nbsp;8：50AM——10:AM
-教材《一站式学习C编程》
-
-
-
-程序的基本概念">
+<meta name="twitter:title" content="C语言基础(三):分支语句">
+<meta name="twitter:description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -110,7 +86,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/04/03/C语言基础(零)基本概念/" title="C语言基础(零)基本概念" itemprop="url">C语言基础(零)基本概念</a>
+      <a href="/2016/06/21/C——分支语句/" title="C语言基础(三):分支语句" itemprop="url">C语言基础(三):分支语句</a>
   </h1>
   <p class="article-author">By
        
@@ -120,7 +96,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-04-03T04:02:32.000Z" itemprop="datePublished"> 发表于 2016-04-03</time>
+    <time datetime="2016-06-21T01:17:32.000Z" itemprop="datePublished"> 发表于 2016-06-21</time>
     
   </p>
 </header>
@@ -129,64 +105,56 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#程序的基本概念"><span class="toc-number">1.</span> <span class="toc-text">程序的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序语言（Programmming-Language）"><span class="toc-number">1.1.</span> <span class="toc-text">程序语言（Programmming Language）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序执行过程"><span class="toc-number">1.2.</span> <span class="toc-text">程序执行过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#程序的发展演化"><span class="toc-number">1.2.1.</span> <span class="toc-text">程序的发展演化</span></a></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-number">1.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else语句"><span class="toc-number">1.1.</span> <span class="toc-text">if/else语句</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/shell03-background.jpg" alt="攻壳机动队" title="攻壳机动队"><br><br></p>
-<hr>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/New%20Order%20-%20%E3%80%8AGet%20Ready%E3%80%8B%EF%BC%8C2010.png" alt="New Order - 《Get Ready》,2010" title="    
+New Order - 《Get Ready》,2010"></p>
+<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><p>根据不同的条件执行不同的语句，这种控制流程称为分支<em>Branch</em><br><a id="more"></a></p>
+<p><strong>关系运算符和相等性运算符</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong><code>==</code></strong></td>
+<td style="text-align:center">等于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>!=</code></strong></td>
+<td style="text-align:center">不等于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>&gt;</code></strong></td>
+<td style="text-align:center">大于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>&lt;</code></strong></td>
+<td style="text-align:center">小于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>&gt;=</code></strong></td>
+<td style="text-align:center">大于等于</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>&lt;=</code></strong></td>
+<td style="text-align:center">小于或等于</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p>位置：信息学院</p>
-<blockquote>
-<p>2016-4-3 周六, 12:07AM   <br><br>2016-4-3 周六; &nbsp;8：50AM——10:AM</p>
-<p>教材《一站式学习C编程》</p>
+<p><strong><code>==</code></strong>和<strong><code>!=</code></strong>称为相等性运算符<em>(Equality Operator)</em>其余4个称为关系运算符<em>(Relational Operator)</em></p>
+<p>注意这些运算符的2个操作数应该是相同类型的，但2个字符串<strong><code>不能做比较</code></strong>。</p>
+<p><strong><code>%</code></strong>运算符的2个操作数必须是<strong><code>整形</code></strong></p>
+<p>如果a和b是整形，如果b不等于0则表达式<strong><code>(a/b)*b+a%b总等于a</code></strong></p>
+<p><strong><code>%运算符的结果总是与被除数同号</code></strong>(被除数是指/前一个数)</p>
 </blockquote>
-</blockquote>
-<hr>
-<h1 id="程序的基本概念"><a href="#程序的基本概念" class="headerlink" title="程序的基本概念"></a>程序的基本概念</h1><a id="more"></a>
-<ul>
-<li>程序（Program）由一系列指令组成，指令是指示计算机做某种运算的命令。通常包括以下几个指令：</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#9312;&#36755;&#20837;&#65288;Input&#65289;&#10;      &#20174;&#38190;&#30424;&#12289;&#25991;&#20214;&#25110;&#32773;&#20854;&#20182;&#35774;&#22791;&#33719;&#21462;&#25968;&#25454;&#10;&#9313;&#36755;&#20986;&#65288;Output&#65289;&#10;      &#25226;&#25968;&#25454;&#26174;&#31034;&#21040;&#23631;&#24149;&#65292;&#25110;&#32773;&#23384;&#20837;&#19968;&#20010;&#25991;&#20214;&#65292;&#25110;&#32773;&#21457;&#36865;&#21040;&#20854;&#23427;&#35774;&#22791;&#12290;&#10;&#9314;&#22522;&#26412;&#36816;&#31639;&#10;    &#25191;&#34892;&#22522;&#26412;&#30340;&#25968;&#23398;&#36816;&#31639;&#65288;&#21152;&#20943;&#20056;&#38500;&#65289;&#21644;&#25968;&#25454;&#23384;&#21462;&#12290;&#10;&#9315;&#27979;&#35797;&#21644;&#20998;&#25903;&#10;    &#27979;&#35797;&#26576;&#20010;&#26465;&#20214;&#65292;&#28982;&#21518;&#26681;&#25454;&#19981;&#21516;&#30340;&#27979;&#35797;&#32467;&#26524;&#25191;&#34892;&#19981;&#21516;&#30340;&#21518;&#32493;&#25351;&#20196;&#12290;&#10;&#9316;&#24490;&#29615;&#10;    &#37325;&#22797;&#25191;&#34892;&#19968;&#31995;&#21015;&#25805;&#20316;&#12290;</span><br></pre></td></tr></table></figure>
-<p><strong>程序那么复杂，而编写程序的指令只有这么简单的这几种，这中间的落差需要程序去填补。把复杂的<br>任务分解成子任务，把子任务再分解成更简单的任务，层层分解，直到简单得可以用上指令来完成。</strong></p>
-<h2 id="程序语言（Programmming-Language）"><a href="#程序语言（Programmming-Language）" class="headerlink" title="程序语言（Programmming Language）"></a>程序语言（Programmming Language）</h2><ol>
-<li>低级语言（Low-level Language）:直接用计算机指令编写程序，如：机器语言（Machine Language）和汇编语言(Assembly Language)</li>
-<li>高级语言（Assembly Language）用语句（Statement）编写，如:C、C++、Java、Python等；</li>
-</ol>
-<blockquote>
-<p>汇编语言与机器语言的指令是一一对应的，编译器就是做一个简单的替换工作。</p>
-<p>C语言的语句和低级语言的指令不是简单的一一对应关系，如：一条<code>a=a+b;</code>语句要翻译成三条汇编或机器指令，这个过程称为编译<code>（Compile）</code>，由编译器<code>（Compiler）</code>来完成，显然编译器要比汇编器要复杂的多。C语言编写的程序必须经过编译转成机器指令才能被计算机执行。</p>
-<p>C语言是可移植的<code>(Portable)</code>或者称为平台无关的<code>(Platform Independeng)</code>。</p>
-</blockquote>
-<p><strong><em><code>平台</code>这个词有很多种解释，可以指计算机体系架构<code>（Architecture）</code>,也可以指操作系统，也可以开发平台（编译器、连接器等）。不同的计算机体系结构有不同的<code>指令集（Instruction Set）</code>可以识别的机器指令格式是不同的。</em></strong></p>
-<p><br></p>
-<p><br></p>
-<hr>
-<h2 id="程序执行过程"><a href="#程序执行过程" class="headerlink" title="程序执行过程"></a>程序执行过程</h2><p><strong> 编译执行过程</strong></p>
-<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.1%E7%BC%96%E8%AF%91%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="编译执行的过程" title="编译执行的过程"><br><br></p>
-<blockquote>
-<p>源代码<code>(Source Code)</code>或源文件通过运行编译器对它进行编译，编译的过程并不执行程序，而是把源代码全部翻译成机器指令，再生成一个新的文件,如a.out这<br>称为可执行文件，可执行文件可以被操作系统加载运行，计算机执行该文件中由编译器生成的指令。</p>
-</blockquote>
-<p><br><br><br><strong>解释执行过程</strong></p>
-<p><img src="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.2j%E8%A7%A3%E9%87%8A%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="编译执行的过程" title="编译执行的过程"><br><br></p>
-<blockquote>
-<p>有些高级语言以解释(Interpret)的方式执行，解释执行过程和C语言的编译执行过程很不一样。例如写一个Shell脚本script.sh，内容如下：</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh&#10;VAR=1&#10;VAR=$(($VAR+1))&#10;echo $VAR</span><br></pre></td></tr></table></figure>
-<p><em>用Shell程序/bin/sh解释这个脚本，结果如下:</em><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /bin/sh script.sh&#10;2</span><br></pre></td></tr></table></figure></p>
-<p>这里的/bin/sh称为解释器<code>(Interpreter)</code>，它把脚本的每一行当做一条命令解释执行，而不需要先生成可执行文件（可执行文件包含机器指令）。若把脚本的这个三行<br>当作命令直接敲到Shell提示符下，也能取到相同的结果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ VAR=1&#10;$ VAR=$(($VAR+1))&#10;$ echo $VAR&#10;2</span><br></pre></td></tr></table></figure></p>
-<p><br><br><br><strong>编译和解释相结合的方式执行</strong></p>
-<blockquote>
-<p>如Java、Python、Perl等编程语言都采用这种方式。</p>
-</blockquote>
-<p>以Python为例，程序员写的源代码.py文件首先被编译成.pyc文件，称为字节码（Byte COde），然后字节码被Python虚拟机解释执行。字节码是Python虚拟机的指令而非<br>机器指令，所以它是<code>平台无关</code>的。如果把字节码文件从一种平台拷贝到另一种平台上，另一种平台也需要安装Python虚拟机才能运行这个字节码文件。<br><br><br><img src="http://7xsic8.com2.z0.glb.clouddn.com/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E4%B8%80%E2%80%94%E2%80%94%E5%9B%BE1.3j%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="虚拟机执行过程" title="虚拟机执行的过程"><br><br><br><em>虚拟机的定义有2个一种是类似与Vmware的<code>系统虚拟机</code>，另一种则是<code>程序虚拟机</code>如：JVM,CLR</em><br><br><em>程序虚拟机也称作托管运行时环境，运行这个虚拟机时，就好比普通的OS中的一个进程。当这个进程启动时，虚拟机启动，当进程销毁时，虚拟机销毁。<code>使用虚拟机的目的就是提供一个和平台无关的编程环境</code>。</em></p>
-<hr>
-<h3 id="程序的发展演化"><a href="#程序的发展演化" class="headerlink" title="程序的发展演化"></a>程序的发展演化</h3><p>程序语言仍在发展演化。</p>
-<blockquote>
-<p>机器语言称为第一代语言（1GL，1st Generation Programming Language）</p>
-<p>汇编语言称为第二代语言（2GL,2nd Generation Programming Language）</p>
-<p>C、C++、Java、Python等称为第三代语言（3GL,3rd Generation Programming Language）</p>
-</blockquote>
+<h2 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if/else语句"></a>if/else语句</h2><p>%</p>
   
 	</div>
 
@@ -297,7 +265,7 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/C-C/">C | C++</a>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
 </div>
 
 
@@ -312,7 +280,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/04/03/C语言基础(零)基本概念/" data-title="C语言基础(零)基本概念 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/06/21/C——分支语句/" data-title="C语言基础(三):分支语句 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -326,18 +294,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/04/03/嵌入式开发学习（零-概述.）/" title="嵌入式开发学习(零)：概述">
+ <a href="/2016/06/22/Coursera-Union-Find/" title="Union-Find">
   <strong>上一篇：</strong><br/>
   <span>
-  嵌入式开发学习(零)：概述</span>
+  Union-Find</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/04/01/PHP入门(零)/"  title="PHP基础（零）">
+<a href="/2016/06/21/C语言——结构体/"  title="C语言:结构体">
  <strong>下一篇：</strong><br/> 
- <span>PHP基础（零）
+ <span>C语言:结构体
 </span>
 </a>
 </div>
@@ -346,7 +314,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/04/03/C语言基础(零)基本概念/" data-title="C语言基础(零)基本概念" data-url="http://www.vivatakethat.com/2016/04/03/C语言基础(零)基本概念/"></div>
+	<div class="ds-thread" data-thread-key="2016/06/21/C——分支语句/" data-title="C语言基础(三):分支语句" data-url="http://www.vivatakethat.com/2016/06/21/C——分支语句/"></div>
 </section>
 
 
@@ -356,7 +324,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#程序的基本概念"><span class="toc-number">1.</span> <span class="toc-text">程序的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序语言（Programmming-Language）"><span class="toc-number">1.1.</span> <span class="toc-text">程序语言（Programmming Language）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序执行过程"><span class="toc-number">1.2.</span> <span class="toc-text">程序执行过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#程序的发展演化"><span class="toc-number">1.2.1.</span> <span class="toc-text">程序的发展演化</span></a></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-number">1.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else语句"><span class="toc-number">1.1.</span> <span class="toc-text">if/else语句</span></a></li></ol></li></ol>
  
   </div>
 
@@ -380,11 +348,15 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book |Coursera">Book |Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>31</sup></a></li>
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>23</sup></a></li>
 		  
 		
 		  
@@ -392,7 +364,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>13</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
 		  
 		
 		  

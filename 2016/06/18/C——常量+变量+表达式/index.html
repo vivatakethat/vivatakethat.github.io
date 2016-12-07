@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C语言:输入-输出 | take that的博客</title>
+    <title>C语言:常量、变量、表达式 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,17 +12,23 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="流  在C语言中术语流(stream)表述任意输入的源或任意输出的目的地。许多小程序都是通过一个流（通常和键盘相关）获得全部输入，并且通过一个流(通常和屏幕相关)写出全部输出.  较大规模的程序可能需要额外的流。这些流通常表示存储在不同介质（如硬盘驱动器、CD、DVD和内存）上的文件，但也通常很容易和不存储的设备日（网络端口、打印机等）相关联。">
+    <meta name="description" content="Tips: 
+
+常量变量表达式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言:输入-输出">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/07/10/LinuxC_输入-输出/index.html">
+<meta property="og:title" content="C语言:常量、变量、表达式">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/06/18/C——常量+变量+表达式/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="流  在C语言中术语流(stream)表述任意输入的源或任意输出的目的地。许多小程序都是通过一个流（通常和键盘相关）获得全部输入，并且通过一个流(通常和屏幕相关)写出全部输出.  较大规模的程序可能需要额外的流。这些流通常表示存储在不同介质（如硬盘驱动器、CD、DVD和内存）上的文件，但也通常很容易和不存储的设备日（网络端口、打印机等）相关联。">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%AE%80-%E7%A6%8F%E6%96%AF%E7%89%B9.png">
-<meta property="og:updated_time" content="2016-12-07T16:04:15.000Z">
+<meta property="og:description" content="Tips: 
+
+常量变量表达式">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%89%AF%E5%B2%AD%E8%A1%97%E5%B0%91%E5%B9%B4.jpeg">
+<meta property="og:updated_time" content="2016-12-07T16:23:18.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言:输入-输出">
-<meta name="twitter:description" content="流  在C语言中术语流(stream)表述任意输入的源或任意输出的目的地。许多小程序都是通过一个流（通常和键盘相关）获得全部输入，并且通过一个流(通常和屏幕相关)写出全部输出.  较大规模的程序可能需要额外的流。这些流通常表示存储在不同介质（如硬盘驱动器、CD、DVD和内存）上的文件，但也通常很容易和不存储的设备日（网络端口、打印机等）相关联。">
+<meta name="twitter:title" content="C语言:常量、变量、表达式">
+<meta name="twitter:description" content="Tips: 
+
+常量变量表达式">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -86,7 +92,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/10/LinuxC_输入-输出/" title="C语言:输入-输出" itemprop="url">C语言:输入-输出</a>
+      <a href="/2016/06/18/C——常量+变量+表达式/" title="C语言:常量、变量、表达式" itemprop="url">C语言:常量、变量、表达式</a>
   </h1>
   <p class="article-author">By
        
@@ -96,7 +102,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-07-10T13:11:32.000Z" itemprop="datePublished"> 发表于 2016-07-10</time>
+    <time datetime="2016-06-17T16:53:32.000Z" itemprop="datePublished"> 发表于 2016-06-18</time>
     
   </p>
 </header>
@@ -105,73 +111,65 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#流"><span class="toc-number">1.</span> <span class="toc-text">流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件的指针"><span class="toc-number">2.</span> <span class="toc-text">文件的指针</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件的操作"><span class="toc-number">3.</span> <span class="toc-text">文件的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打开文件"><span class="toc-number">3.1.</span> <span class="toc-text">打开文件</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常量"><span class="toc-number">1.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表达式"><span class="toc-number">3.</span> <span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符类型与字符编码"><span class="toc-number">4.</span> <span class="toc-text">字符类型与字符编码</span></a></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E7%AE%80-%E7%A6%8F%E6%96%AF%E7%89%B9.png" alt="简·福斯特" title="简·福斯特"></p>
-<h1 id="流"><a href="#流" class="headerlink" title="流"></a>流</h1><p>  在C语言中术语流<em>(stream)</em>表述任意输入的源或任意输出的目的地。许多小程序都是通过一个流<em>（通常和键盘相关）</em>获得全部输入，并且通过一个流<em>(通常和屏幕相关)</em>写出全部输出.<br>  较大规模的程序可能需要额外的流。这些流通常表示存储在不同介质（如硬盘驱动器、CD、DVD和内存）上的文件，但也通常很容易和不存储的设备日（网络端口、打印机等）相关联。<br><a id="more"></a></p>
-<h1 id="文件的指针"><a href="#文件的指针" class="headerlink" title="文件的指针"></a>文件的指针</h1><p>C程序对流的访问是通过文件指针<em>file pointer</em>。此指针的类型是FILE *</p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E7%89%AF%E5%B2%AD%E8%A1%97%E5%B0%91%E5%B9%B4.jpeg" alt="牯岭街少年" title="牯岭街少年"></p>
+<p>Tips: </p>
 <blockquote>
-<p>FILE类型在<stdio.h>中声明。</stdio.h></p>
+<p><strong><code>常量</code></strong><br><strong><code>变量</code></strong><br><strong><code>表达式</code></strong><br><a id="more"></a></p>
 </blockquote>
-<p>用文件指针表示的特定流具有标准的名字；如果需要还可以声明另外一些指针看，例如，如果程序除了标准流之外的还需要2个流，则可以包含如下声明：<br>FILE *fp1,*fp2;</p>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p> <strong><code>常量</code></strong>  <em>Constant</em> :是程序中基本的元素</p>
 <blockquote>
-<p>虽然操作系统通常会限制可以同时打开流的数量，但程序可以声明任意数量的FILE *类型变量。</p>
+<p><strong><code>1.</code></strong>字符<em>Character</em>常量</p>
+<p><em>字符常量需要亚用单引号括起来，注意单引号只能括起一个字符，转义字符除外(其实际是一个字符)</em></p>
+<p><strong><code>2.</code></strong>整数<em>Integer</em>常量</p>
+<p><strong><code>3.</code></strong>浮点数<em>Floating Point</em></p>
+<p><strong><code>4.</code></strong>枚举常量<br>.</p>
 </blockquote>
-<h1 id="文件的操作"><a href="#文件的操作" class="headerlink" title="文件的操作"></a>文件的操作</h1><h2 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h2><p><strong><code>FILE *fopen(const char * restrict filename,const char * restrict mode);</code></strong></p>
+<hr>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p><strong><code>变量</code>*</strong>Variable*是编程语言中的概念之一。</p>
 <blockquote>
-<p>fopen函数的第一个参数是含有要打开文件名的字符串。<em>(“文件名”可能包含关于文件位置的信息，如驱动器符或路径)</em></p>
+<p>在程序中变量是一个名字，这个名字在计算机代表是<strong><code>一块存储空间</code></strong>,保存一个值<em>(Value)</em></p>
+<p>其类型决定了所占存储空间的大小</p>
+<p>使用声明<em>(Declaration)</em>来规定变量的名字和类型</p>
 <blockquote>
-<p>第2个参数是“模式字符串”，它用来指定打算对文件执行的操作。例如，字符串<code>r</code>表明只读取数据。</p>
+<p>C语言的<strong><code>声明</code></strong>有<strong><code>变量声明</code></strong>、<strong><code>函数声明</code></strong>、<strong><code>类型声明</code></strong></p>
 <blockquote>
-<p>注意fopen函数原型中，restrict关键字出现了2次。restrict表明filename和mode所执行的字符串的内存单元不共享。<br><code>fopen</code>函数返回一个文件指针。</p>
+<p>也可分为<strong><code>定义(Definition)声明</code></strong>和不是<strong><code>定义的声明</code></strong>。分配存储空间的声明也是定义，不分配存储空间的不是定义。</p>
 <blockquote>
-<p>程序可以把此指针存储在一个变量中，稍后需要对文件进行操作时使用它。</p>
+<p>如果一个函数声明带有函数体，要求编译器为它生成指令，那么个这个声明同时也是函数的定义。</p>
 </blockquote>
 </blockquote>
+<p>注意声明可以出现在函数体内,也可以出现在函数体外。</p>
 </blockquote>
 </blockquote>
-<p><strong>用于文本模式字符串</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字符串</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>r</code></td>
-<td style="text-align:center">只读</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>w</code></td>
-<td style="text-align:center">写（文件不需要存在）</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>a</code></td>
-<td style="text-align:center">打开文件用于追加(文件不需要存在)</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>r+</code></td>
-<td style="text-align:center">打开文件用于读和写(从文件头开始)</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>w+</code></td>
-<td style="text-align:center">打开文件用于读和写(如果文件存在就截去)</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>a+</code></td>
-<td style="text-align:center">打算开文件用于读和写(如果文件存在就追加)</td>
-</tr>
-</tbody>
-</table>
-<p><code>fopen</code>调用格式如下所示：<br><figure class="highlight"><figcaption><span> </span><a href="/*opens">in.dat for reading*/```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10;&#10;&#10;&#62;&#20854;&#20013;fp&#26159;FILE*&#31867;&#22411;&#30340;&#21464;&#37327;&#65307;&#10;&#10;&#24403;&#31243;&#24207;&#31245;&#21518;&#35843;&#29992;&#36755;&#20837;&#20989;&#25968;&#20174;&#25991;&#20214;`in.dat`&#20013;&#35835;&#25968;&#25454;&#26102;&#65292;&#23558;&#20250;&#25226;fp&#24403;&#20316;&#19968;&#20010;&#23454;&#38469;&#21442;&#25968;&#12290;&#10;&#62;&#24403;&#26080;&#27861;&#25171;&#24320;&#25991;&#20214;&#26102;&#65292;foopen&#20989;&#25968;&#23601;&#20250;&#36820;&#22238;&#31354;&#25351;&#38024;&#12290;&#36825;&#21487;&#33021;&#26159;&#10;&#62;&#62;1. &#25991;&#20214;&#19981;&#23384;&#22312;&#10;&#62;&#62;2. &#25991;&#20214;&#20301;&#32622;&#19981;&#23545;&#10;&#62;&#62;3. &#27809;&#26377;&#25171;&#24320;&#25991;&#20214;&#30340;&#26435;&#38480;&#10;&#10;&#10;&#10;&#10;# perror&#10;&#23450;&#20041;&#20989;&#25968;&#10;```C&#10;       #include &#60;stdio.h&#62;&#10;&#10;       void perror(const char *s);</span><br></pre></td></tr></table></figure></p>
-<p>perror ( )用 来 将 上 一 个 函 数 发 生 错 误 的 原 因 输 出 到 标 准 设备 (stderr) 。参数 s 所指的字符串会先打印出,后面再加上错误原因字符串。此错误原因依照全局变量error 的值来决定要输出的字符串。　　</p>
+<p><br></p>
+<p><strong><code>赋值</code></strong></p>
+<p>定义变量后我们要把值存到他们呢所在的存储空间里，可以用赋值<em>(Assignment)</em>语句实现</p>
 <blockquote>
-<p>在库函数中有个error变量，每个error值对应着以字符串表示的错误类型。当你调用”某些”函数出错时，该函数已经重新设置了error的值。perror函数只是将你输入的一些信息和现在的error所对应的错误一起输出。</p>
+<p>定义和赋值可以一步完成，这种称为变量的初始化<strong>(Initialization)</strong></p>
+<blockquote>
+<p>注意初始化是一种特殊的声明，而不是一种赋值语句。</p>
 </blockquote>
+</blockquote>
+<hr>
+<h1 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h1><p>由4个运算符和操作数<em>Operator</em>所组成的算式称为表达式<em>Expression</em></p>
+<blockquote>
+<p>任何表达式都有值和类型2个基本属性。</p>
+<p>在任意表达式后面加个；号也是一种语句，称为表达式语句。</p>
+</blockquote>
+<p>有的表达式既可以做左值也可以做右值，而有的表达式只能做右值。</p>
+<blockquote>
+<p>变量可以做左值</p>
+</blockquote>
+<h1 id="字符类型与字符编码"><a href="#字符类型与字符编码" class="headerlink" title="字符类型与字符编码"></a>字符类型与字符编码</h1><p>字符常量或字符型变量也可以当作整数参与运算;<br><strong>因为每个字符在计算机内部用一个整数表示，称为</strong><code>字符编码</code><em>* </em>Character Encoding*</p>
+<blockquote>
+<p>目前最常见的是ASCII码<br>例如：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%c\n"</span>,<span class="string">'a'</span>+<span class="number">1</span>);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><br><br><strong><code>Tips:</code></strong></p>
+<p>ASCII码中字符`a`~`z`、`A`~`Z`、`0`~`9`是连续的，<strong><code>所以</code></strong>`a`+25和`z`的值相等。<br>`0`+`9`的值也想等。注意`0`~`9`的ASCII码是16进制的30-39(十进制的48-57)和整数的0~9是不相等的。<br><code>a</code>的ACII是97,字符b是98</p>
   
 	</div>
 
@@ -282,7 +280,7 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/C-C/">C | C++</a>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
 </div>
 
 
@@ -297,7 +295,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/07/10/LinuxC_输入-输出/" data-title="C语言:输入-输出 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/06/18/C——常量+变量+表达式/" data-title="C语言:常量、变量、表达式 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -311,18 +309,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/07/12/Linux驱动-基础知识预备/" title="Linux驱动-基础知识预备">
+ <a href="/2016/06/19/E——计算机英语单词/" title="计算机英语单词">
   <strong>上一篇：</strong><br/>
   <span>
-  Linux驱动-基础知识预备</span>
+  计算机英语单词</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/07/07/在Windows下快速搭建hexo/"  title="在Windows下快速搭建hexo">
+<a href="/2016/06/17/Coursera-Week 0-Welcome to Algorithms, Part I /"  title="Week 0- Welcome to Algorithms, Part I">
  <strong>下一篇：</strong><br/> 
- <span>在Windows下快速搭建hexo
+ <span>Week 0- Welcome to Algorithms, Part I
 </span>
 </a>
 </div>
@@ -331,7 +329,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/07/10/LinuxC_输入-输出/" data-title="C语言:输入-输出" data-url="http://www.vivatakethat.com/2016/07/10/LinuxC_输入-输出/"></div>
+	<div class="ds-thread" data-thread-key="2016/06/18/C——常量+变量+表达式/" data-title="C语言:常量、变量、表达式" data-url="http://www.vivatakethat.com/2016/06/18/C——常量+变量+表达式/"></div>
 </section>
 
 
@@ -341,7 +339,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#流"><span class="toc-number">1.</span> <span class="toc-text">流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件的指针"><span class="toc-number">2.</span> <span class="toc-text">文件的指针</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件的操作"><span class="toc-number">3.</span> <span class="toc-text">文件的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打开文件"><span class="toc-number">3.1.</span> <span class="toc-text">打开文件</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常量"><span class="toc-number">1.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表达式"><span class="toc-number">3.</span> <span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符类型与字符编码"><span class="toc-number">4.</span> <span class="toc-text">字符类型与字符编码</span></a></li></ol>
  
   </div>
 
@@ -365,11 +363,15 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book |Coursera">Book |Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>31</sup></a></li>
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>23</sup></a></li>
 		  
 		
 		  
@@ -377,7 +379,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>13</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
 		  
 		
 		  

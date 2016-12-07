@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C语言基础(三):分支语句 | take that的博客</title>
+    <title>C:函数 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,17 +12,41 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
+    <meta name="description" content="函数
+main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。
+
+
+同一个函数可以被多次调用；
+可以用一个函数调用第三个函数；
+
+自定义函数函数定义=返回值类型&amp;bnsp;+函数名(参数列表)&amp;nbsp;函数体
+函数原型:声明了一个函数的名字、参数类型、个数、返回值类型。如：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言基础(三):分支语句">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/06/21/C语言——分支语句/index.html">
+<meta property="og:title" content="C:函数">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/06/20/C——函数 /index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/New%20Order%20-%20%E3%80%8AGet%20Ready%E3%80%8B%EF%BC%8C2010.png">
-<meta property="og:updated_time" content="2016-12-07T14:29:34.004Z">
+<meta property="og:description" content="函数
+main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。
+
+
+同一个函数可以被多次调用；
+可以用一个函数调用第三个函数；
+
+自定义函数函数定义=返回值类型&amp;bnsp;+函数名(参数列表)&amp;nbsp;函数体
+函数原型:声明了一个函数的名字、参数类型、个数、返回值类型。如：">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%B6%85%E4%BA%BA.jpg">
+<meta property="og:updated_time" content="2016-12-07T16:25:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言基础(三):分支语句">
-<meta name="twitter:description" content="分支根据不同的条件执行不同的语句，这种控制流程称为分支Branch">
+<meta name="twitter:title" content="C:函数">
+<meta name="twitter:description" content="函数
+main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。
+
+
+同一个函数可以被多次调用；
+可以用一个函数调用第三个函数；
+
+自定义函数函数定义=返回值类型&amp;bnsp;+函数名(参数列表)&amp;nbsp;函数体
+函数原型:声明了一个函数的名字、参数类型、个数、返回值类型。如：">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -86,7 +110,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/21/C语言——分支语句/" title="C语言基础(三):分支语句" itemprop="url">C语言基础(三):分支语句</a>
+      <a href="/2016/06/20/C——函数 /" title="C:函数" itemprop="url">C:函数</a>
   </h1>
   <p class="article-author">By
        
@@ -96,7 +120,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-06-21T01:17:32.000Z" itemprop="datePublished"> 发表于 2016-06-21</time>
+    <time datetime="2016-06-20T01:59:32.000Z" itemprop="datePublished"> 发表于 2016-06-20</time>
     
   </p>
 </header>
@@ -105,56 +129,61 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-number">1.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else语句"><span class="toc-number">1.1.</span> <span class="toc-text">if/else语句</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义函数"><span class="toc-number">1.1.</span> <span class="toc-text">自定义函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#形参和实参"><span class="toc-number">1.2.</span> <span class="toc-text">形参和实参</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/New%20Order%20-%20%E3%80%8AGet%20Ready%E3%80%8B%EF%BC%8C2010.png" alt="New Order - 《Get Ready》,2010" title="    
-New Order - 《Get Ready》,2010"></p>
-<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><p>根据不同的条件执行不同的语句，这种控制流程称为分支<em>Branch</em><br><a id="more"></a></p>
-<p><strong>关系运算符和相等性运算符</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">运算符</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong><code>==</code></strong></td>
-<td style="text-align:center">等于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>!=</code></strong></td>
-<td style="text-align:center">不等于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>&gt;</code></strong></td>
-<td style="text-align:center">大于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>&lt;</code></strong></td>
-<td style="text-align:center">小于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>&gt;=</code></strong></td>
-<td style="text-align:center">大于等于</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>&lt;=</code></strong></td>
-<td style="text-align:center">小于或等于</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong><code>==</code></strong>和<strong><code>!=</code></strong>称为相等性运算符<em>(Equality Operator)</em>其余4个称为关系运算符<em>(Relational Operator)</em></p>
-<p>注意这些运算符的2个操作数应该是相同类型的，但2个字符串<strong><code>不能做比较</code></strong>。</p>
-<p><strong><code>%</code></strong>运算符的2个操作数必须是<strong><code>整形</code></strong></p>
-<p>如果a和b是整形，如果b不等于0则表达式<strong><code>(a/b)*b+a%b总等于a</code></strong></p>
-<p><strong><code>%运算符的结果总是与被除数同号</code></strong>(被除数是指/前一个数)</p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E8%B6%85%E4%BA%BA.jpg" alt="超人" title="超人"></p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><blockquote>
+<p>main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。</p>
 </blockquote>
-<h2 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if/else语句"></a>if/else语句</h2><p>%</p>
+<ul>
+<li>同一个函数可以被多次调用；</li>
+<li>可以用一个函数调用第三个函数；</li>
+</ul>
+<h2 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h2><p>函数定义=返回值类型&bnsp;+函数名(参数列表)&nbsp;函数体</p>
+<p><strong><code>函数原型</code></strong>:声明了一个函数的<strong><code>名字</code></strong>、参数类型、个数、返回值类型。<br>如：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">threelines</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>这种写法只能叫<strong><code>函数声明</code></strong>而不能叫函数定义，只有<strong><code>带函数体</code></strong>的声明才叫函数定义，因为编译器只有见到函数体才能生成指令。</p>
+<blockquote>
+<p>遵守<strong><code>先声明后使用</code></strong></p>
+</blockquote>
+<p>注意：<br><strong><code>声明</code></strong>把函数的名字、函数类型以及形参类型、个数和顺序通知编译系统，以便在调用该函数时系统按此进行对照检查。<br><strong><code>定义</code></strong>是指对函数功能的确立，包括指函数类型、函数名、函数体，他是一个完整的、独立的函数单位。</p>
+<blockquote>
+<p>从程序中可以看到对函数的声明与函数定义中的函数首部基本上是相同的。因此可以简单地照写已定义的函数的首部，再加一个分号，就成为 了对函数的“声明”</p>
+<p>在C语言中，函数声明称为函数原型<em>(function prototype)</em>。使用函数原型是ANSI C的一个重要特点。它的作用主要是利用它在程序的编译阶段对调用函数的合法性进行全面检查。</p>
+</blockquote>
+<p>Tips；</p>
+<ul>
+<li>如果调用函数时参数列表为空，并且缺少函数原型，则编译器根据根据隐式声明规则认为参数类型为void;</li>
+<li>如果声明函数时参数列表为空，则这个声明属于Old Style C语法，不算函数原型，编译器认为参数类型和个数没有明确指出。</li>
+</ul>
+<h2 id="形参和实参"><a href="#形参和实参" class="headerlink" title="形参和实参"></a>形参和实参</h2><p><strong><code>1.</code></strong>局部变量:函数中定义变量称为局部变量<em>lOCAL vARIABLE</em><br>形参也是一种局部变量。</p>
+<blockquote>
+<p>一个函数中的定义的变量不能被另一个函数使用<br>每次调用函数时局部变量都表示不同的存储空间。局部变量调用时才分配存储空间，每次函数返回时释放存储空间。</p>
+</blockquote>
+<p><strong><code>2.</code></strong>全局变量<em>Global Variable</em>：全局变量定义在所有的函数体外。</p>
+<blockquote>
+<p>它们在程序开始运行时分配存储空间，在程序结束时释放存储空间。</p>
+<p>在任何函数中都可以访问全局变量。</p>
+<p>它的作用域是定义在所有函数体之外的标示符，从定义的位置开始知道源文件结束。而main函数的局部变量的作用域仅限于main函数之中。</p>
+</blockquote>
+<p><strong><code>3.</code></strong>全局变量只能用<strong><code>常量表达式</code></strong> <em>Constant Expression</em>来初始化。<br>例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> pi=<span class="number">3014</span>+<span class="number">0.0016</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>全局变量Pi这样初始化是合法的。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> pi =<span class="built_in">acos</span>(-<span class="number">1.0</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>然而局部变量这样初始化确实合法的。</p>
+</blockquote>
+<p>这是因为在程序一开始运行<em>(还没有执行main函数中的任何语句之前)</em>就要用初始化值来初始化全局变量。<em>这样main函数的第一条语句就可以取全局变量的初始值来做计算</em>而<code>acos</code>函数必须在调用它才能得到。</p>
+<p>比如这样的初始化：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> minute=<span class="number">360</span>-<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> hour=minute/<span class="number">60</span>;</span><br></pre></td></tr></table></figure></p>
+<p><strong>把</strong>minute初始化成360-10是合法的<em>编译器并不会生成一个系统指令来描述360-10的计算过程并把这些指令保存到可执行文件中，而是把计算结果350保存到可执行文件中。</em></p>
+<p><strong>但</strong><code>minute/60</code>不是常量表达式，不符合语法规定，所以编译器直接报错退出，而不去算这个初始值。</p>
+<p><strong>4.</strong>局部变量一定要在使用前先赋值。因为，局部变量在定义时不初始化则初始值是不确定的。</p>
+<blockquote>
+<p>全局变量在定义是不初始化，则初始化值是0</p>
+</blockquote>
   
 	</div>
 
@@ -265,7 +294,7 @@ New Order - 《Get Ready》,2010"></p>
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/C-C/">C | C++</a>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
 </div>
 
 
@@ -280,7 +309,7 @@ New Order - 《Get Ready》,2010"></p>
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/06/21/C语言——分支语句/" data-title="C语言基础(三):分支语句 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/06/20/C——函数 /" data-title="C:函数 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -294,18 +323,18 @@ New Order - 《Get Ready》,2010"></p>
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/06/22/Coursera-Union-Find/" title="Union-Find">
+ <a href="/2016/06/21/C语言——结构体/" title="C语言:结构体">
   <strong>上一篇：</strong><br/>
   <span>
-  Union-Find</span>
+  C语言:结构体</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/06/21/C语言——结构体/"  title="C语言:结构体">
+<a href="/2016/06/19/E——计算机英语单词/"  title="计算机英语单词">
  <strong>下一篇：</strong><br/> 
- <span>C语言:结构体
+ <span>计算机英语单词
 </span>
 </a>
 </div>
@@ -314,7 +343,7 @@ New Order - 《Get Ready》,2010"></p>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/21/C语言——分支语句/" data-title="C语言基础(三):分支语句" data-url="http://www.vivatakethat.com/2016/06/21/C语言——分支语句/"></div>
+	<div class="ds-thread" data-thread-key="2016/06/20/C——函数 /" data-title="C:函数" data-url="http://www.vivatakethat.com/2016/06/20/C——函数 /"></div>
 </section>
 
 
@@ -324,7 +353,7 @@ New Order - 《Get Ready》,2010"></p>
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-number">1.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else语句"><span class="toc-number">1.1.</span> <span class="toc-text">if/else语句</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义函数"><span class="toc-number">1.1.</span> <span class="toc-text">自定义函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#形参和实参"><span class="toc-number">1.2.</span> <span class="toc-text">形参和实参</span></a></li></ol></li></ol>
  
   </div>
 
@@ -348,11 +377,15 @@ New Order - 《Get Ready》,2010"></p>
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book |Coursera">Book |Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>31</sup></a></li>
+			<li><a href="/categories/C-C/" title="C | C++">C | C++<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>23</sup></a></li>
 		  
 		
 		  
@@ -360,7 +393,7 @@ New Order - 《Get Ready》,2010"></p>
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>13</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
 		  
 		
 		  
