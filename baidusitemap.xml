@@ -4,6 +4,106 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/09/29/C++%E2%80%94%E2%80%94%E9%97%AE%E7%AD%94%E9%94%A6%E9%9B%86%20/</loc>
+    <lastmod>2016-12-07T16:04:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>C++问答锦集</title>
+        <pubTime>2016-09-29T06:08:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++" url="http://www.vivatakethat.com/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/07/10/LinuxC_%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</loc>
+    <lastmod>2016-12-07T16:04:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>C语言:输入-输出</title>
+        <pubTime>2016-07-10T13:11:32.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++" url="http://www.vivatakethat.com/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/07/02/C%E8%AF%AD%E8%A8%80%E2%80%94%E2%80%94%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2016-12-07T16:03:15.336Z</lastmod>
+    <data>
+        <display>
+        <title>C语言:类型转换</title>
+        <pubTime>2016-07-02T03:17:32.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++" url="http://www.vivatakethat.com/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/11/05/Function-%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2016-12-07T16:02:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Function-功能函数</title>
+        <pubTime>2016-11-05T12:35:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++" url="http://www.vivatakethat.com/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/11/05/C%E8%AF%AD%E8%A8%80%E9%97%AE%E4%B8%8E%E7%AD%94/</loc>
+    <lastmod>2016-12-07T16:01:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>C语言问与答</title>
+        <pubTime>2016-11-05T04:35:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++" url="http://www.vivatakethat.com/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/07/23/%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2016-12-07T15:55:01.000Z</lastmod>
     <data>
@@ -1104,26 +1204,6 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/07/10/LinuxC_%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</loc>
-    <lastmod>2016-12-07T14:29:34.147Z</lastmod>
-    <data>
-        <display>
-        <title>LinuxC_输入-输出</title>
-        <pubTime>2016-07-10T13:11:32.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/04/09/IaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
     <lastmod>2016-12-07T14:29:34.136Z</lastmod>
     <data>
@@ -1217,26 +1297,6 @@
            
              
               <breadCrumb title="C | C++" url="http://www.vivatakethat.com/categories/C-C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/05/Function-%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2016-12-07T14:29:34.096Z</lastmod>
-    <data>
-        <display>
-        <title>Function-功能函数</title>
-        <pubTime>2016-11-05T12:35:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -1364,26 +1424,6 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/11/05/C%E8%AF%AD%E8%A8%80%E9%97%AE%E4%B8%8E%E7%AD%94/</loc>
-    <lastmod>2016-12-07T14:29:34.053Z</lastmod>
-    <data>
-        <display>
-        <title>C语言问与答</title>
-        <pubTime>2016-11-05T04:35:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/06/21/C%E8%AF%AD%E8%A8%80%E2%80%94%E2%80%94%E7%BB%93%E6%9E%84%E4%BD%93/</loc>
     <lastmod>2016-12-07T14:29:34.041Z</lastmod>
     <data>
@@ -1457,26 +1497,6 @@
            
              
               <breadCrumb title="C | C++" url="http://www.vivatakethat.com/categories/C-C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/07/02/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80(%E4%B8%83)-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
-    <lastmod>2016-12-07T14:29:34.009Z</lastmod>
-    <data>
-        <display>
-        <title>C语言基础(七):类型转换</title>
-        <pubTime>2016-07-02T03:17:32.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -1737,26 +1757,6 @@
            
              
               <breadCrumb title="C | C++" url="http://www.vivatakethat.com/categories/C-C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/09/29/C++_2.6%E5%A4%8D%E4%B9%A0%E9%A2%98%20/</loc>
-    <lastmod>2016-12-07T14:29:33.904Z</lastmod>
-    <data>
-        <display>
-        <title>C++问答锦集</title>
-        <pubTime>2016-09-29T06:08:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://www.vivatakethat.com/categories/%E7%BC%96%E7%A8%8B/"/>
           
         </display>
     </data>
