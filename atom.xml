@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
-  <updated>2016-12-07T16:23:18.093Z</updated>
+  <updated>2016-12-07T16:32:13.518Z</updated>
   <id>http://www.vivatakethat.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.vivatakethat.com/2016/12/01/C++_memo-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/"/>
     <id>http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/</id>
     <published>2016-12-01T07:42:32.000Z</published>
-    <updated>2016-12-07T16:23:18.093Z</updated>
+    <updated>2016-12-07T16:32:13.518Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600&quot; alt=&quot;Grand theft dora&quot; title=&quot;Grand theft dora&quot;&gt;&lt;/p&gt;
 &lt;p&gt;抽象、封装、类。&lt;br&gt;面向对象的核心是类,利用它可以实对&lt;strong&gt;&lt;code&gt;数据&lt;/code&gt;&lt;/strong&gt;和&lt;strong&gt;&lt;code&gt;方法(函数)&lt;/code&gt;&lt;/strong&gt;的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。&lt;/p&gt;
@@ -121,7 +121,7 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt-Qt/"/>
     
     
       <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
@@ -133,7 +133,7 @@
     <link href="http://www.vivatakethat.com/2016/11/18/4412_%E7%94%9F%E6%88%90%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9/"/>
     <id>http://www.vivatakethat.com/2016/11/18/4412_生成设备节点/</id>
     <published>2016-11-18T10:42:32.000Z</published>
-    <updated>2016-12-07T16:23:18.059Z</updated>
+    <updated>2016-12-07T16:32:13.490Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%93%A6%E8%82%AF%E4%B8%BE%E6%89%8B%E7%A4%BC.jpg?imageView2/2/h/600&quot; alt=&quot;瓦肯举手礼&quot; title=&quot;瓦肯举手礼&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -227,7 +227,7 @@
     <link href="http://www.vivatakethat.com/2016/11/18/C++_memo2/"/>
     <id>http://www.vivatakethat.com/2016/11/18/C++_memo2/</id>
     <published>2016-11-18T07:42:32.000Z</published>
-    <updated>2016-12-07T16:23:18.085Z</updated>
+    <updated>2016-12-07T16:32:13.508Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E6%9C%88%E4%BA%AE-2016-11-03.jpg?imageView2/2/h/600&quot; alt=&quot;月_2016-11-03&quot; title=&quot;月_2016-11-03&quot;&gt;&lt;br&gt;C++ 零碎笔记:&lt;br&gt;using &lt;/p&gt;
 &lt;blockquote&gt;
@@ -277,7 +277,7 @@
     
     </summary>
     
-      <category term="C | C++" scheme="http://www.vivatakethat.com/categories/C-C/"/>
+      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
       <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
@@ -289,7 +289,7 @@
     <link href="http://www.vivatakethat.com/2016/11/17/C++%E5%B8%B8%E7%94%A8%E5%BA%93_%E5%87%BD%E6%95%B0/"/>
     <id>http://www.vivatakethat.com/2016/11/17/C++常用库_函数/</id>
     <published>2016-11-17T06:02:32.000Z</published>
-    <updated>2016-12-07T16:23:18.109Z</updated>
+    <updated>2016-12-07T16:32:13.528Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%A5%9E%E5%A5%87%E5%A5%B3%E4%BE%A0.png&quot; alt=&quot;神奇女侠&quot; title=&quot;神奇女侠&quot;&gt;&lt;/p&gt;
 &lt;p&gt;C++常用：类、函数快速查阅，备忘.&lt;/p&gt;
@@ -336,7 +336,7 @@
     
     </summary>
     
-      <category term="C | C++" scheme="http://www.vivatakethat.com/categories/C-C/"/>
+      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
       <category term="memo" scheme="http://www.vivatakethat.com/tags/memo/"/>
@@ -348,7 +348,7 @@
     <link href="http://www.vivatakethat.com/2016/11/17/Visual%20Studio-Error/"/>
     <id>http://www.vivatakethat.com/2016/11/17/Visual Studio-Error/</id>
     <published>2016-11-17T05:32:10.000Z</published>
-    <updated>2016-12-07T16:23:18.813Z</updated>
+    <updated>2016-12-07T16:32:14.136Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/angry-hulk-53743-1920x1080.jpg?imageView2/2/h/600&quot; alt=&quot;angry-hulk&quot; title=&quot;angry-hulk&quot;&gt;&lt;br&gt;记录visualstudio日常错误&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -376,7 +376,7 @@
     
     </summary>
     
-      <category term="C | C++" scheme="http://www.vivatakethat.com/categories/C-C/"/>
+      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
       <category term="Record" scheme="http://www.vivatakethat.com/tags/Record/"/>
@@ -388,7 +388,7 @@
     <link href="http://www.vivatakethat.com/2016/11/17/C++%E2%80%94%E2%80%94%E7%B1%BB+%E5%87%BD%E6%95%B0+%E6%8C%87%E9%92%88/"/>
     <id>http://www.vivatakethat.com/2016/11/17/C++——类+函数+指针/</id>
     <published>2016-11-16T16:42:32.000Z</published>
-    <updated>2016-12-07T16:23:18.126Z</updated>
+    <updated>2016-12-07T16:32:13.541Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg&quot; alt=&quot;red alert3-ussr2&quot; title=&quot;red alert3-ussr2&quot;&gt;&lt;br&gt;c++零碎笔记：&lt;br&gt;类、函数、引用、指针、const、auto、 constexpr变量、decltype&lt;/p&gt;
 &lt;blockquote&gt;
@@ -785,7 +785,7 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt-Qt/"/>
     
     
       <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
@@ -797,7 +797,7 @@
     <link href="http://www.vivatakethat.com/2016/11/16/%E6%80%BB%E7%BA%BF-%E8%AE%BE%E5%A4%87-%E9%A9%B1%E5%8A%A8%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B/"/>
     <id>http://www.vivatakethat.com/2016/11/16/总线-设备-驱动注册流程/</id>
     <published>2016-11-16T07:27:32.000Z</published>
-    <updated>2016-12-07T16:23:19.649Z</updated>
+    <updated>2016-12-07T16:32:14.259Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/red%20alert%202boom2.jpg&quot; alt=&quot;red alert 2 : boom&quot; title=&quot;red alert 2 : boom&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Linux中设备一般要先注册才能注册驱动。&lt;/p&gt;
@@ -921,7 +921,7 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt-Qt/"/>
     
     
       <category term="驱动" scheme="http://www.vivatakethat.com/tags/%E9%A9%B1%E5%8A%A8/"/>
@@ -933,7 +933,7 @@
     <link href="http://www.vivatakethat.com/2016/11/16/makefile/"/>
     <id>http://www.vivatakethat.com/2016/11/16/makefile/</id>
     <published>2016-11-15T16:27:32.000Z</published>
-    <updated>2016-12-07T16:23:18.522Z</updated>
+    <updated>2016-12-07T16:32:13.886Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%90%89%E5%A7%86%E9%9B%B7%E8%AF%BA.jpg&quot; alt=&quot;吉姆雷诺&quot; title=&quot;吉姆雷诺&quot;&gt;&lt;/p&gt;
 &lt;p&gt;在linux下编写C程序一般要通过make工程管理器完成编译，编译过程分为&lt;strong&gt;编译、汇编、链接&lt;/strong&gt;3个阶段。在编译过阶段自动读入makefile文件(&lt;em&gt;makefile的内容&lt;/em&gt;)来执行编译工作。同时根据文件时间戳自动发现更新过的文件而减少编译的过程。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E5%9B%BE.png&quot; alt=&quot;linux下软件开发流程&quot; title=&quot;linux下软件开发流程&quot;&gt;&lt;/p&gt;
@@ -1006,7 +1006,7 @@
     <link href="http://www.vivatakethat.com/2016/11/15/Menuconfig%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
     <id>http://www.vivatakethat.com/2016/11/15/Menuconfig的操作/</id>
     <published>2016-11-15T15:35:32.000Z</published>
-    <updated>2016-12-07T16:23:18.528Z</updated>
+    <updated>2016-12-07T16:32:13.892Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/command_conquer_red_alert_2_conceptart_XPGXE.jpg&quot; alt=&quot;command_conquer_red_alert_2_conceptart_XPGXE&quot; title=&quot;command_conquer_red_alert_2_conceptart_XPGXE&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;Menuconfig的配置&quot;&gt;&lt;a href=&quot;#Menuconfig的配置&quot; class=&quot;headerlink&quot; title=&quot;Menuconfig的配置.&quot;&gt;&lt;/a&gt;Menuconfig的配置.&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -1074,7 +1074,7 @@
     
     </summary>
     
-      <category term="C | C++" scheme="http://www.vivatakethat.com/categories/C-C/"/>
+      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
       <category term="OS" scheme="http://www.vivatakethat.com/tags/OS/"/>
@@ -1086,7 +1086,7 @@
     <link href="http://www.vivatakethat.com/2016/11/14/QWidget%E7%B1%BB_QT5/"/>
     <id>http://www.vivatakethat.com/2016/11/14/QWidget类_QT5/</id>
     <published>2016-11-13T16:21:32.000Z</published>
-    <updated>2016-12-07T16:23:18.711Z</updated>
+    <updated>2016-12-07T16:32:14.076Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%A5%9E%E5%A5%87%E5%A5%B3%E4%BE%A04.jpg?imageView2/2/h/600&quot; alt=&quot;神奇女侠&quot; title=&quot;神奇女侠&quot;&gt;&lt;/p&gt;
 &lt;p&gt;QWidget类是所有用户界面对象的基类，是基础窗口部件。&lt;/p&gt;
@@ -1131,7 +1131,7 @@
     
     </summary>
     
-      <category term="C | C++" scheme="http://www.vivatakethat.com/categories/C-C/"/>
+      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
       <category term="QT" scheme="http://www.vivatakethat.com/tags/QT/"/>
@@ -1143,7 +1143,7 @@
     <link href="http://www.vivatakethat.com/2016/11/10/Qt%20Creator-error/"/>
     <id>http://www.vivatakethat.com/2016/11/10/Qt Creator-error/</id>
     <published>2016-11-09T16:04:10.000Z</published>
-    <updated>2016-12-07T16:23:18.690Z</updated>
+    <updated>2016-12-07T16:32:14.053Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Superhero.jpg&quot; alt=&quot;superhero&quot; title=&quot;superhero&quot;&gt;&lt;/p&gt;
 &lt;p&gt;记录Qt Creator日常报错&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1176,7 +1176,7 @@
     <link href="http://www.vivatakethat.com/2016/11/09/%E7%BA%A2%E8%89%B2%E8%AD%A6%E6%88%922%E6%B8%B8%E6%88%8F%E5%85%B5%E7%A7%8D%E5%AF%B9%E7%99%BD/"/>
     <id>http://www.vivatakethat.com/2016/11/09/红色警戒2游戏兵种对白/</id>
     <published>2016-11-09T10:32:10.000Z</published>
-    <updated>2016-12-07T16:23:19.699Z</updated>
+    <updated>2016-12-07T16:32:14.301Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/hq-wall.net%20%285%29.jpg&quot; alt=&quot;RED-ALERT3_Uprising&quot; title=&quot;RED-ALERT3_Uprising&quot;&gt;&lt;/p&gt;
 &lt;p&gt;红色警戒2游戏兵种对白&lt;/p&gt;
@@ -1230,7 +1230,7 @@
     <link href="http://www.vivatakethat.com/2016/11/05/Function-%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0/"/>
     <id>http://www.vivatakethat.com/2016/11/05/Function-功能函数/</id>
     <published>2016-11-05T12:35:32.000Z</published>
-    <updated>2016-12-07T16:23:18.325Z</updated>
+    <updated>2016-12-07T16:32:13.753Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E9%BE%99%E7%8F%A0-%E6%8F%92%E7%94%BB.jpg&quot; alt=&quot;龙珠-插画-Tao Pai Pa&quot; title=&quot;龙珠-插画-Tao Pai Pa&quot;&gt;&lt;br&gt;功能函数备忘，速查。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -1248,7 +1248,7 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt-Qt/"/>
     
     
       <category term="memo" scheme="http://www.vivatakethat.com/tags/memo/"/>
@@ -1260,7 +1260,7 @@
     <link href="http://www.vivatakethat.com/2016/11/05/C%E8%AF%AD%E8%A8%80%E9%97%AE%E4%B8%8E%E7%AD%94/"/>
     <id>http://www.vivatakethat.com/2016/11/05/C语言问与答/</id>
     <published>2016-11-05T04:35:32.000Z</published>
-    <updated>2016-12-07T16:23:18.272Z</updated>
+    <updated>2016-12-07T16:32:13.687Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Super-Heroes-meet-Flemish-Art_batman.jpg&quot; alt=&quot;Super-Heroes-meet-Flemish-Art_batman&quot; title=&quot;Super-Heroes-meet-Flemish-Art_batman&quot;&gt;&lt;br&gt;C语言问题,记录,备忘.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;指针&quot;&gt;&lt;a href=&quot;#指针&quot; class=&quot;headerlink&quot; title=&quot;指针&quot;&gt;&lt;/a&gt;指针&lt;/h1&gt;&lt;p&gt;1.如果i是变量，且p指向i，那么下列哪些表达式是i的别名？&lt;br&gt;&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;a&lt;/span&gt;)&lt;/span&gt;*p   &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;b&lt;/span&gt;)&lt;/span&gt;&amp;amp;p    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;c&lt;/span&gt;)&lt;/span&gt;*&amp;amp;p    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;d&lt;/span&gt;)&lt;/span&gt;&amp;amp;*p   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;e&lt;/span&gt;)&lt;/span&gt;*i   &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;f&lt;/span&gt;)&lt;/span&gt;&amp;amp;i    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;g&lt;/span&gt;)&lt;/span&gt;*&amp;amp;i    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;h&lt;/span&gt;)&lt;/span&gt;&amp;amp;*i&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -1275,7 +1275,7 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt-Qt/"/>
     
     
       <category term="memo" scheme="http://www.vivatakethat.com/tags/memo/"/>
@@ -1287,7 +1287,7 @@
     <link href="http://www.vivatakethat.com/2016/11/03/Linux%E7%BC%96%E8%AF%91%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/"/>
     <id>http://www.vivatakethat.com/2016/11/03/Linux编译日常报错/</id>
     <published>2016-11-03T05:32:10.000Z</published>
-    <updated>2016-12-07T16:23:18.498Z</updated>
+    <updated>2016-12-07T16:32:13.867Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg&quot; alt=&quot;被关在牢笼中的究竟是James还是Mary&quot; title=&quot;被关在牢笼中的究竟是James还是Mary&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Linux编译日常报错,备忘。&lt;/p&gt;
@@ -1321,7 +1321,7 @@
     <link href="http://www.vivatakethat.com/2016/11/02/4412_%E6%9C%80%E5%B0%8FLinux%E9%A9%B1%E5%8A%A8/"/>
     <id>http://www.vivatakethat.com/2016/11/02/4412_最小Linux驱动/</id>
     <published>2016-11-02T14:35:32.000Z</published>
-    <updated>2016-12-07T16:23:18.050Z</updated>
+    <updated>2016-12-07T16:32:13.484Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%A0%A1%E5%9E%92_.jpg&quot; alt=&quot;Bastion&quot; title=&quot;Bastion&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;最小Linux驱动&quot;&gt;&lt;a href=&quot;#最小Linux驱动&quot; class=&quot;headerlink&quot; title=&quot;最小Linux驱动&quot;&gt;&lt;/a&gt;最小Linux驱动&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -1385,7 +1385,7 @@
     <link href="http://www.vivatakethat.com/2016/11/01/E-%E8%8B%B1%E8%AF%AD%E5%91%A8%E8%AE%B0memo_20161101/"/>
     <id>http://www.vivatakethat.com/2016/11/01/E-英语周记memo_20161101/</id>
     <published>2016-11-01T04:35:32.000Z</published>
-    <updated>2016-12-07T16:23:18.298Z</updated>
+    <updated>2016-12-07T16:32:13.726Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/COUPLE.jpg&quot; alt=&quot;couple&quot; title=&quot;couple&quot;&gt;&lt;/p&gt;
 &lt;p&gt;11月的第一周,信息学校的第9周&lt;/p&gt;
@@ -1544,7 +1544,7 @@
     <link href="http://www.vivatakethat.com/2016/10/31/4412_linux%E4%B8%B2%E5%8F%A3%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B/"/>
     <id>http://www.vivatakethat.com/2016/10/31/4412_linux串口应用编程/</id>
     <published>2016-10-31T12:35:32.000Z</published>
-    <updated>2016-12-07T16:23:18.010Z</updated>
+    <updated>2016-12-07T16:32:13.422Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussrALONE.jpg&quot; alt=&quot;red alert3-基诺夫空艇&quot; title=&quot;red alert3-基诺夫空艇&quot;&gt;&lt;/p&gt;
 &lt;p&gt;在单片机串口编程中，用户对寄存器以及串口中断进行操作。但在Linux系统中底层内核驱动以及对寄存器的操作都是写好的.多驱动工程师来说是完全不需要手动去写串口驱动的.&lt;/p&gt;
@@ -1665,7 +1665,7 @@
     <link href="http://www.vivatakethat.com/2016/10/31/E-Breaking%20Bad-%E5%8F%B0%E8%AF%8D/"/>
     <id>http://www.vivatakethat.com/2016/10/31/E-Breaking Bad-台词/</id>
     <published>2016-10-31T04:35:32.000Z</published>
-    <updated>2016-12-07T16:23:18.292Z</updated>
+    <updated>2016-12-07T16:32:13.717Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%BB%9D%E5%91%BD%E6%AF%92%E5%B8%88.jpg&quot; alt=&quot;Breaking Bad&quot; title=&quot;Breaking Bad&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Breaking Bad 绝命毒师台词&lt;/p&gt;
@@ -1745,7 +1745,7 @@
     <link href="http://www.vivatakethat.com/2016/10/26/4412_%E5%AE%9E%E9%AA%8C%20/"/>
     <id>http://www.vivatakethat.com/2016/10/26/4412_实验 /</id>
     <published>2016-10-25T16:35:32.000Z</published>
-    <updated>2016-12-07T16:23:18.041Z</updated>
+    <updated>2016-12-07T16:32:13.478Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/superheroesshadows5.jpg&quot; alt=&quot;superheroesshadows&quot; title=&quot;superheroesshadows&quot;&gt;&lt;/p&gt;
 &lt;p&gt;4412开发板实验&lt;/p&gt;
