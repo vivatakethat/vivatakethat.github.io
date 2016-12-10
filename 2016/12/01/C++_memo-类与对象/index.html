@@ -23,7 +23,7 @@
 
 函数是对方法的封装，用于完成特定的功能。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-07T16:36:57.390Z">
+<meta property="og:updated_time" content="2016-12-09T02:57:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo-类与对象">
 <meta name="twitter:description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法(函数)的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
@@ -197,11 +197,11 @@
 <h2 id="类的成员函数"><a href="#类的成员函数" class="headerlink" title="类的成员函数"></a>类的成员函数</h2><p>类的行为由类的成员函数描述,成员函数是算法实现的部分，是对封装的数据进行的唯一途径。</p>
 <p>实例：定义一个成员函数<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Circle</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetRadius</span><span class="params">(<span class="keyword">float</span> Radius)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		m_Radius = Radius;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">GetCircumference</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span> * m_Radius*<span class="number">3.14159265</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">PrintCircumference</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Circumference:"</span> &lt;&lt; GetCircumference() &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">float</span> m_Radius;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	Circle c;					<span class="comment">//创建一个Circle类的对象</span></span><br><span class="line">	c.SetRadius(<span class="number">5</span>);				<span class="comment">//调用成员函数SetRadius()对对象的数据成员赋值</span></span><br><span class="line">	c.PrintCircumference();		<span class="comment">//调用成员函数 PrintCircumference()输出计算结果</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>内联函数<br>代码<strong><code>相对简单</code></strong>且<strong><code>调用次数频繁</code></strong>的成员函数可以声明为<strong><code>内联函数</code></strong>。也可以采用在函数实现的时候加上<code>inline</code>显式声明的方式。<blockquote>
-<p>类定义的大括号里的3个成员函数是在类的声明部分中定义，</p>
-</blockquote>
-</li>
+<li>内联函数<br>代码<strong><code>相对简单</code></strong>且<strong><code>调用次数频繁</code></strong>的成员函数可以声明为<strong><code>内联函数</code></strong>。也可以采用在函数实现的时候加上<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#62;Circle&#31867;&#23450;&#20041;&#30340;&#22823;&#25324;&#21495;&#37324;&#30340;3&#20010;&#25104;&#21592;&#20989;&#25968;&#26159;&#22312;&#31867;&#30340;&#22768;&#26126;&#37096;&#20998;&#20013;&#23450;&#20041;&#65292;&#23450;&#20041;&#22312;&#31867;&#30340;&#25104;&#21592;&#20989;&#25968;&#19968;&#33324;&#35268;&#27169;&#37117;&#27604;&#36739;&#23567;&#65292;&#21482;&#26377;1~5&#21477;&#65292;&#29305;&#21035;&#26159;&#19981;&#33021;&#20351;&#29992;switch&#35821;&#21477;&#12290;&#10;&#62;&#62;&#22312;C++&#20013;&#65292;&#36890;&#24120;&#22836;&#25991;&#20214;&#37324;&#23450;&#20041;&#31867;&#65292;&#22240;&#27492;&#36825;&#20123;&#25104;&#21592;&#20989;&#25968;&#20063;&#21035;&#20889;&#20837;&#22836;&#25991;&#20214;&#65292;&#36890;&#24120;&#22312;&#22836;&#25991;&#20214;&#20013;&#21482;&#26159;&#22768;&#26126;&#20989;&#25968;&#65292;&#32780;&#20989;&#25968;&#23450;&#20041;&#19981;&#33021;&#22312;&#22836;&#25991;&#20214;&#20102;i&#65292;&#22240;&#20026;&#20182;&#20204;&#20250;&#34987;&#32534;&#35793;&#22810;&#27425;&#12290;&#22914;&#26524;&#26159;&#20316;&#20026;&#20869;&#32852;&#20989;&#25968;&#65292;&#21017;&#20801;&#35768;&#34987;&#21253;&#21547;&#22312;&#22836;&#25991;&#20214;&#20013;&#65292;&#22240;&#20026;&#20869;&#32852;&#20989;&#25968;&#22312;&#28304;&#31243;&#24207;&#20013;&#21407;&#22320;&#25299;&#23637;&#65292;&#36825;&#26679;&#21487;&#20197;&#20943;&#23569;&#35843;&#29992;&#30340;&#24320;&#38144;&#12290;&#10;&#62;&#62;&#62;&#22312;&#31867;&#20013;&#34987;&#23450;&#20041;&#30340;&#25104;&#21592;&#20989;&#25968;&#34987;&#40664;&#35748;&#20026;&#20869;&#32852;&#20989;&#25968;&#65292;&#36825;&#26679;&#23601;&#36991;&#20813;&#20102;&#20989;&#25968;&#23450;&#20041;&#19981;&#33021;&#34987;&#21253;&#21547;&#22312;&#22836;&#25991;&#20214;&#37324;&#12290;&#10;&#10; + &#31867;&#22806;&#23450;&#20041;&#30340;&#25104;&#21592;&#20989;&#25968;&#10;  &#10; C++&#20801;&#35768;&#22312;&#31867;&#22768;&#26126;&#30340;&#21518;&#38754;&#23450;&#20041;&#25104;&#21592;&#20989;&#25968;.&#10;&#22312;&#31867;&#20027;&#20307;&#22806;&#23450;&#20041;&#25104;&#21592;&#20989;&#25968;&#30340;&#26684;&#24335;&#20026;:&#10;```C++&#10;&#60;&#31867;&#22411;&#62; &#9;&#60;&#31867;&#21517;&#62;::   &#60;&#25104;&#21592;&#20989;&#25968;&#21517;&#62;(&#24418;&#21442;&#34920;)      &#123;&#20989;&#25968;&#20307;&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
+<blockquote>
+<p>其中<code>::</code>称为域运算，它指出成员函数是属于类名所指类中的成员函数。</p>
+</blockquote>
   
 	</div>
 
@@ -340,6 +340,14 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2016/12/08/考试1——嵌入式系统应用开发实践/" title="嵌入式系统应用开发实践">
+  <strong>上一篇：</strong><br/>
+  <span>
+  嵌入式系统应用开发实践</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2016/11/18/4412_生成设备节点/"  title="4412_生成设备节点">
@@ -425,7 +433,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>12</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
 		  
 		
 		  
@@ -456,7 +464,7 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
@@ -476,11 +484,15 @@
 			
 		
 			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>3</sup></a></li>
 			
 		
 			
@@ -525,10 +537,6 @@
 		
 			
 				<li><a href="/tags/编程/" title="编程">编程<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
-  <updated>2016-12-07T16:36:57.390Z</updated>
+  <updated>2016-12-08T14:08:02.000Z</updated>
   <id>http://www.vivatakethat.com/</id>
   
   <author>
@@ -16,11 +16,236 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>字符类设备驱动程序框架说明</title>
+    <link href="http://www.vivatakethat.com/2016/12/08/%E5%AD%97%E7%AC%A6%E7%B1%BB%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.vivatakethat.com/2016/12/08/字符类设备驱动程序框架/</id>
+    <published>2016-12-08T14:35:32.000Z</published>
+    <updated>2016-12-08T14:08:02.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%99%BE%E5%90%88%E5%AD%90.jpg&quot; alt=&quot;百合子&quot; title=&quot;百合子&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Linux系统将设备分为3种类型，分别是字符设备、块设备、和网络接口设备。其中字符类设备和块设备难以区分。&lt;br&gt;字符设备可以必须按照先后顺序读写，而块设备则  定位到任意位置。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;字符设备和块设备&quot;&gt;&lt;a href=&quot;#字符设备和块设备&quot; class=&quot;headerlink&quot; title=&quot;字符设备和块设备&quot;&gt;&lt;/a&gt;字符设备和块设备&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.字符设备：&lt;/code&gt;&lt;/strong&gt;字符设备是指那些一个字节一个字节读写数据的设备，不能随机读取设备内存中的某一数据。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其读取数据需要按照先后顺序&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从这点看字符设备是面向数据流的设备，常见的字符设备有&lt;strong&gt;&lt;code&gt;鼠标、串口、控制台 、LED&lt;/code&gt;&lt;/strong&gt;等设备。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.块设备：&lt;/code&gt;&lt;/strong&gt;块设备是指哪些可以从设备的&lt;strong&gt;任意&lt;/strong&gt;位置读取一定长度的数据设备。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其读取设备不必不必按照先后顺序，可以定位到设备的某一具体位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;常见的块设备有硬盘、磁盘、U盘、SD卡等。&lt;/p&gt;
+&lt;p&gt;tips:可以通过&lt;code&gt;ls -l&lt;/code&gt;查询区别字符设备和块设备&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:/dev&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# ls -l&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;total &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/*  一      二  三  四       五      六       七：最后修改时间      八：名称&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;crw-rw----  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; root video    &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,     &lt;span class=&quot;number&quot;&gt;175&lt;/span&gt;     &lt;span class=&quot;constant&quot;&gt;Dec &lt;/span&gt;     &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;       agpgart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;crw-------  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; root root     &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,     &lt;span class=&quot;number&quot;&gt;58&lt;/span&gt;      &lt;span class=&quot;constant&quot;&gt;Dec &lt;/span&gt;     &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;        alarm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一字段 的第一个字符&lt;code&gt;c&lt;/code&gt;表示设备是字符设备。&lt;code&gt;b&lt;/code&gt;是块设备&lt;/li&gt;
+&lt;li&gt;第五、六字段分别表示设备的主设备号和次设备号，第七字段表示文件的最后修改时间。第八字段表示设备的名称&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;c&lt;/code&gt;是字符设备，10是其主设备号，175是其次设备号，最后修改该时间是12月8日，设备名称是:agpart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;设备号&quot;&gt;&lt;a href=&quot;#设备号&quot; class=&quot;headerlink&quot; title=&quot;设备号&quot;&gt;&lt;/a&gt;设备号&lt;/h1&gt;&lt;p&gt;一个字符设备或块设备都有一个主设备号和次设备号。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主/次设备号统称为设备号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;主设备号:用来表示一个特定的驱动程序。&lt;blockquote&gt;
+&lt;p&gt;在嵌入式系统中有2个LED指示灯，LED灯需要独立的打开或关闭。那么可以将2个LED灯主设备号注册为5，次设备号分别为1、2  。这里次设备号就分别表示2个LED灯，通过主设备号5和2个次设备号就可以分别对2个灯进行操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;次设备号：用来表示使用该驱动程序的各设备&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%99%BE%E5%90%88%E5%AD%90.jpg&quot; alt=&quot;百合子&quot; title=&quot;百合子&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Linux系统将设备分为3种类型，分别是字符设备、块设备、和网络接口设备。其中字符类设备和块设备难以区分。&lt;br&gt;字符设备可以必须按照先后顺序读写，而块设备则  定位到任意位置。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="嵌入式" scheme="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+      <category term="字符设备" scheme="http://www.vivatakethat.com/tags/%E5%AD%97%E7%AC%A6%E8%AE%BE%E5%A4%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>嵌入式系统应用开发实践</title>
+    <link href="http://www.vivatakethat.com/2016/12/08/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://www.vivatakethat.com/2016/12/08/考试1——嵌入式系统应用开发实践/</id>
+    <published>2016-12-08T14:35:32.000Z</published>
+    <updated>2016-12-10T04:46:21.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E5%86%B7%E5%92%96%E5%95%A1.jpg&quot; alt=&quot;干了这杯冷咖啡&quot; title=&quot;干了这杯冷咖啡&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;课程名称：《嵌入式系统应用开发实践》&lt;/li&gt;
+&lt;li&gt;考试时间: 2016年12月20日&lt;strong&gt;&lt;code&gt;星期二&lt;/code&gt;&lt;/strong&gt;（14：00——16：00）&lt;/li&gt;
+&lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼1-B205&lt;/code&gt;&lt;/strong&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;一、名词解释&quot;&gt;&lt;a href=&quot;#一、名词解释&quot; class=&quot;headerlink&quot; title=&quot;一、名词解释&quot;&gt;&lt;/a&gt;一、名词解释&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;什么是bootloader?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在嵌入式操作系统中，BootLoader是在操作系统内核运行之前运行。可以初始化硬件设备、建立内存空间映射图，从而将系统的软硬件环境带到一个合适状态，以便为最终调用操作系统内核准备好正确的环境。因此整个系统的加载启动任务就完全由BootLoader来完成。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;什么叫同步通信？什么叫异步通信？根文件系统？UDP？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在QT里什么叫插槽？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一般而言嵌入式系统的架构可以分为4个部分：&lt;br&gt;硬件：处理器、存储器、输入/输出&lt;br&gt;软件：应用软件&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;二、填空&quot;&gt;&lt;a href=&quot;#二、填空&quot; class=&quot;headerlink&quot; title=&quot;二、填空&quot;&gt;&lt;/a&gt;二、填空&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;一般的软件分为操作系统相关和 应用软件  2个主要部分&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;嵌入式系统使用的微处理器可以将嵌入式系统分为&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;嵌入式微控制器&lt;/li&gt;
+&lt;li&gt;嵌入式微处理器&lt;/li&gt;
+&lt;li&gt;嵌入式DSP处理器&lt;/li&gt;
+&lt;li&gt;片上系统(SOC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;操作系统是连接硬件与应用程序的系统程序，其基本功能有：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;进程管理&lt;/li&gt;
+&lt;li&gt;内存管理&lt;/li&gt;
+&lt;li&gt;IO资源管理&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;从嵌入式操作系统特点可以将嵌入式操作系统分为&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;实时操作系统&lt;br&gt;硬实时/软实时 操作系统&lt;/li&gt;
+&lt;li&gt;分时操作系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;内核负责管理各个任务，或者为每个任务分配CPU时间并且负责任务之间的通信，内核的基本服务是：任务的切换。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;嵌入式开发一般采用宿主机和目标机的开发方式，其中宿主机是指 台式机或PC机  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;串口通信中最少需要连接3条线.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;zigbee网络拓扑的3种类型：星形、树形、Mesh型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CC2530 io的反向设置的时候0为输入，1为输出。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;传感器按数据类型可以分为：模拟量、开关量、数字量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Linux操作系统下修改文件属性命令是&lt;br&gt;chmod&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安卓的应用程序开发环境的搭建包括  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;安装JDK 及配置环境变量、Eclipse安装，&lt;/li&gt;
+&lt;li&gt;ADT的安装和安卓SDK的安装和配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;选择题：&quot;&gt;&lt;a href=&quot;#选择题：&quot; class=&quot;headerlink&quot; title=&quot;选择题：&quot;&gt;&lt;/a&gt;选择题：&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;CC2530是片上系统主核采用的是  8051  芯片&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CC2530采用无线通信的协议是： ZigBee&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TCP/IP协议中路由器工作的层次称之为：   网络层&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;CC2530 的处理器SDRAM容量最大是：  8K&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CC2530有 21  个数字IO引脚&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CC2530有   2个  串口（UART）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;光照传感器，当无光线的时候，传感器的阻值是         最大&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;人体的红外传感器是  开关  量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;温湿度传感器是  数字量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Linux中需要加载硬件的需要创建节点，创建节点的命令是:    mknod&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;判断题&quot;&gt;&lt;a href=&quot;#判断题&quot; class=&quot;headerlink&quot; title=&quot;判断题&quot;&gt;&lt;/a&gt;判断题&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;所有的电子设备都属于嵌入式设备  （错）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;冯诺依曼体系结构将被哈佛体系所取代  （错）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;嵌入式Linux操作系统属于免费的操作系统  （对）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;移植操作系统时需要修改操作系统中与处理器直接相关的程序   （对）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;USB2.0接口最大的通信数据最大是12M/S    （错）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;#简答题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;请说出嵌入式linux一般开发流程&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;列举Qt开发中常见的布局方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1）垂直布局&lt;br&gt;2）水平布局&lt;br&gt;3）表格布局&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;请你描述建立一个嵌入式开发平台的步骤&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;简述物联网的架构&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;请你写出串口通信：9600，8,N,1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;9600：波特率&lt;br&gt;8：数据位&lt;br&gt;N：无校验位（奇偶校验）&lt;br&gt;1：有1个停止位&lt;/p&gt;
+&lt;p&gt;/&lt;em&gt; B卷简答题 &lt;/em&gt;/&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;请列举linux中常见的字符设备和块设备名称&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;请你描述QT开发中信号与插槽的特点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;嵌入式开发环境中主要包括哪些组件？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;智能家具系统框架图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;为什么在linux操作系统编译针对ARM处理器的时候，为什么需要引入交叉编译工具？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;程序题目（2题，1个java程序一个C程序）（18分）&quot;&gt;&lt;a href=&quot;#程序题目（2题，1个java程序一个C程序）（18分）&quot; class=&quot;headerlink&quot; title=&quot;程序题目（2题，1个java程序一个C程序）（18分）&quot;&gt;&lt;/a&gt;程序题目（2题，1个java程序一个C程序）（18分）&lt;/h1&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E5%86%B7%E5%92%96%E5%95%A1.jpg&quot; alt=&quot;干了这杯冷咖啡&quot; title=&quot;干了这杯冷咖啡&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;课程名称：《嵌入式系统应用开发实践》&lt;/li&gt;
+&lt;li&gt;考试时间: 2016年12月20日&lt;strong&gt;&lt;code&gt;星期二&lt;/code&gt;&lt;/strong&gt;（14：00——16：00）&lt;/li&gt;
+&lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼1-B205&lt;/code&gt;&lt;/strong&gt;
+    
+    </summary>
+    
+      <category term="嵌入式" scheme="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+      <category term="字符设备" scheme="http://www.vivatakethat.com/tags/%E5%AD%97%E7%AC%A6%E8%AE%BE%E5%A4%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C++_memo-类与对象</title>
     <link href="http://www.vivatakethat.com/2016/12/01/C++_memo-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/"/>
     <id>http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/</id>
     <published>2016-12-01T07:42:32.000Z</published>
-    <updated>2016-12-07T16:36:57.390Z</updated>
+    <updated>2016-12-09T02:57:50.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600&quot; alt=&quot;Grand theft dora&quot; title=&quot;Grand theft dora&quot;&gt;&lt;/p&gt;
 &lt;p&gt;抽象、封装、类。&lt;br&gt;面向对象的核心是类,利用它可以实对&lt;strong&gt;&lt;code&gt;数据&lt;/code&gt;&lt;/strong&gt;和&lt;strong&gt;&lt;code&gt;方法(函数)&lt;/code&gt;&lt;/strong&gt;的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。&lt;/p&gt;
@@ -104,11 +329,11 @@
 &lt;h2 id=&quot;类的成员函数&quot;&gt;&lt;a href=&quot;#类的成员函数&quot; class=&quot;headerlink&quot; title=&quot;类的成员函数&quot;&gt;&lt;/a&gt;类的成员函数&lt;/h2&gt;&lt;p&gt;类的行为由类的成员函数描述,成员函数是算法实现的部分，是对封装的数据进行的唯一途径。&lt;/p&gt;
 &lt;p&gt;实例：定义一个成员函数&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Circle&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetRadius&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; Radius)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		m_Radius = Radius;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;GetCircumference&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * m_Radius*&lt;span class=&quot;number&quot;&gt;3.14159265&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;PrintCircumference&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;Circumference:&quot;&lt;/span&gt; &amp;lt;&amp;lt; GetCircumference() &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; m_Radius;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Circle c;					&lt;span class=&quot;comment&quot;&gt;//创建一个Circle类的对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.SetRadius(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);				&lt;span class=&quot;comment&quot;&gt;//调用成员函数SetRadius()对对象的数据成员赋值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.PrintCircumference();		&lt;span class=&quot;comment&quot;&gt;//调用成员函数 PrintCircumference()输出计算结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;内联函数&lt;br&gt;代码&lt;strong&gt;&lt;code&gt;相对简单&lt;/code&gt;&lt;/strong&gt;且&lt;strong&gt;&lt;code&gt;调用次数频繁&lt;/code&gt;&lt;/strong&gt;的成员函数可以声明为&lt;strong&gt;&lt;code&gt;内联函数&lt;/code&gt;&lt;/strong&gt;。也可以采用在函数实现的时候加上&lt;code&gt;inline&lt;/code&gt;显式声明的方式。&lt;blockquote&gt;
-&lt;p&gt;类定义的大括号里的3个成员函数是在类的声明部分中定义，&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
+&lt;li&gt;内联函数&lt;br&gt;代码&lt;strong&gt;&lt;code&gt;相对简单&lt;/code&gt;&lt;/strong&gt;且&lt;strong&gt;&lt;code&gt;调用次数频繁&lt;/code&gt;&lt;/strong&gt;的成员函数可以声明为&lt;strong&gt;&lt;code&gt;内联函数&lt;/code&gt;&lt;/strong&gt;。也可以采用在函数实现的时候加上&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#10;&amp;#62;Circle&amp;#31867;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#22823;&amp;#25324;&amp;#21495;&amp;#37324;&amp;#30340;3&amp;#20010;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#26159;&amp;#22312;&amp;#31867;&amp;#30340;&amp;#22768;&amp;#26126;&amp;#37096;&amp;#20998;&amp;#20013;&amp;#23450;&amp;#20041;&amp;#65292;&amp;#23450;&amp;#20041;&amp;#22312;&amp;#31867;&amp;#30340;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#19968;&amp;#33324;&amp;#35268;&amp;#27169;&amp;#37117;&amp;#27604;&amp;#36739;&amp;#23567;&amp;#65292;&amp;#21482;&amp;#26377;1~5&amp;#21477;&amp;#65292;&amp;#29305;&amp;#21035;&amp;#26159;&amp;#19981;&amp;#33021;&amp;#20351;&amp;#29992;switch&amp;#35821;&amp;#21477;&amp;#12290;&amp;#10;&amp;#62;&amp;#62;&amp;#22312;C++&amp;#20013;&amp;#65292;&amp;#36890;&amp;#24120;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#37324;&amp;#23450;&amp;#20041;&amp;#31867;&amp;#65292;&amp;#22240;&amp;#27492;&amp;#36825;&amp;#20123;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#20063;&amp;#21035;&amp;#20889;&amp;#20837;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#65292;&amp;#36890;&amp;#24120;&amp;#22312;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#20013;&amp;#21482;&amp;#26159;&amp;#22768;&amp;#26126;&amp;#20989;&amp;#25968;&amp;#65292;&amp;#32780;&amp;#20989;&amp;#25968;&amp;#23450;&amp;#20041;&amp;#19981;&amp;#33021;&amp;#22312;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#20102;i&amp;#65292;&amp;#22240;&amp;#20026;&amp;#20182;&amp;#20204;&amp;#20250;&amp;#34987;&amp;#32534;&amp;#35793;&amp;#22810;&amp;#27425;&amp;#12290;&amp;#22914;&amp;#26524;&amp;#26159;&amp;#20316;&amp;#20026;&amp;#20869;&amp;#32852;&amp;#20989;&amp;#25968;&amp;#65292;&amp;#21017;&amp;#20801;&amp;#35768;&amp;#34987;&amp;#21253;&amp;#21547;&amp;#22312;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#20013;&amp;#65292;&amp;#22240;&amp;#20026;&amp;#20869;&amp;#32852;&amp;#20989;&amp;#25968;&amp;#22312;&amp;#28304;&amp;#31243;&amp;#24207;&amp;#20013;&amp;#21407;&amp;#22320;&amp;#25299;&amp;#23637;&amp;#65292;&amp;#36825;&amp;#26679;&amp;#21487;&amp;#20197;&amp;#20943;&amp;#23569;&amp;#35843;&amp;#29992;&amp;#30340;&amp;#24320;&amp;#38144;&amp;#12290;&amp;#10;&amp;#62;&amp;#62;&amp;#62;&amp;#22312;&amp;#31867;&amp;#20013;&amp;#34987;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#34987;&amp;#40664;&amp;#35748;&amp;#20026;&amp;#20869;&amp;#32852;&amp;#20989;&amp;#25968;&amp;#65292;&amp;#36825;&amp;#26679;&amp;#23601;&amp;#36991;&amp;#20813;&amp;#20102;&amp;#20989;&amp;#25968;&amp;#23450;&amp;#20041;&amp;#19981;&amp;#33021;&amp;#34987;&amp;#21253;&amp;#21547;&amp;#22312;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#37324;&amp;#12290;&amp;#10;&amp;#10; + &amp;#31867;&amp;#22806;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#10;  &amp;#10; C++&amp;#20801;&amp;#35768;&amp;#22312;&amp;#31867;&amp;#22768;&amp;#26126;&amp;#30340;&amp;#21518;&amp;#38754;&amp;#23450;&amp;#20041;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;.&amp;#10;&amp;#22312;&amp;#31867;&amp;#20027;&amp;#20307;&amp;#22806;&amp;#23450;&amp;#20041;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#30340;&amp;#26684;&amp;#24335;&amp;#20026;:&amp;#10;```C++&amp;#10;&amp;#60;&amp;#31867;&amp;#22411;&amp;#62; &amp;#9;&amp;#60;&amp;#31867;&amp;#21517;&amp;#62;::   &amp;#60;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#21517;&amp;#62;(&amp;#24418;&amp;#21442;&amp;#34920;)      &amp;#123;&amp;#20989;&amp;#25968;&amp;#20307;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中&lt;code&gt;::&lt;/code&gt;称为域运算，它指出成员函数是属于类名所指类中的成员函数。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
     
     <summary type="html">
@@ -1321,12 +1546,12 @@
     <link href="http://www.vivatakethat.com/2016/11/02/4412_%E6%9C%80%E5%B0%8FLinux%E9%A9%B1%E5%8A%A8/"/>
     <id>http://www.vivatakethat.com/2016/11/02/4412_最小Linux驱动/</id>
     <published>2016-11-02T14:35:32.000Z</published>
-    <updated>2016-12-07T16:36:57.360Z</updated>
+    <updated>2016-12-08T09:26:07.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%A0%A1%E5%9E%92_.jpg&quot; alt=&quot;Bastion&quot; title=&quot;Bastion&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;最小Linux驱动&quot;&gt;&lt;a href=&quot;#最小Linux驱动&quot; class=&quot;headerlink&quot; title=&quot;最小Linux驱动&quot;&gt;&lt;/a&gt;最小Linux驱动&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E6%9C%80%E5%B0%8F%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97.jpg&quot; alt=&quot;最小驱动模块&quot; title=&quot;最小驱动模块&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;必备的头文件&quot;&gt;&lt;a href=&quot;#必备的头文件&quot; class=&quot;headerlink&quot; title=&quot;必备的头文件&quot;&gt;&lt;/a&gt;必备的头文件&lt;/h1&gt;&lt;ul&gt;
+&lt;h2 id=&quot;必备的头文件&quot;&gt;&lt;a href=&quot;#必备的头文件&quot; class=&quot;headerlink&quot; title=&quot;** 必备的头文件**&quot;&gt;&lt;/a&gt;&lt;code&gt;** 必备的头文件**&lt;/code&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;头文件的位置&lt;blockquote&gt;
 &lt;p&gt;类似#include&lt;linux module.h=&quot;&quot;&gt;的头文件，它们是在Linux源码目录下的include/linux/module.h&lt;/linux&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1345,14 +1570,15 @@
 &lt;p&gt;&lt;strong&gt;&lt;code&gt;modlule_init(x)&lt;/code&gt;&lt;/strong&gt; &amp;nbsp; 入口函数&lt;br&gt;&lt;code&gt;**module_exit(x)**&lt;/code&gt; &amp;nbsp;   出口函数&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;实例-hello驱动&quot;&gt;&lt;a href=&quot;#实例-hello驱动&quot; class=&quot;headerlink&quot; title=&quot;实例 hello驱动&quot;&gt;&lt;/a&gt;实例 hello驱动&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;:https://github.com/vivatakethat/Embedded-System&quot;&gt;源码&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;实例-hello驱动&quot;&gt;&lt;a href=&quot;#实例-hello驱动&quot; class=&quot;headerlink&quot; title=&quot;实例 hello驱动&quot;&gt;&lt;/a&gt;实例 hello驱动&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;:https://github.com/vivatakethat/Embedded-System&quot;&gt;源码&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;first_linux_driver.c&lt;/code&gt;&lt;br&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;linux/init.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*包含初始化宏定义的头文件，代码中的Module_init和module_exit在此文件中*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;linux/module.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*包含初始化加载模块的头文件，代码中的MODULE_LICENSE在此头文件中*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;MODULE_LICENSE(&lt;span class=&quot;string&quot;&gt;&quot;Dual BSD/GPL&quot;&lt;/span&gt;);  &lt;span class=&quot;comment&quot;&gt;//GPL:声明开源;        Dual BSD:没有版本限制&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;MODULE_AUTHOR(&lt;span class=&quot;string&quot;&gt;&quot;takethat&quot;&lt;/span&gt;);      &lt;span class=&quot;comment&quot;&gt;//声明作者信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt;  &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hello_init&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        printk(KERN_EMERG &lt;span class=&quot;string&quot;&gt;&quot;HELLO WORLD ,Enter that!\n&quot;&lt;/span&gt;);        &lt;span class=&quot;comment&quot;&gt;//KERN_EMERG 表示紧急的信息,无论你是什么权限都可以打印出来.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hello_exit&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        printk(KERN_EMERG &lt;span class=&quot;string&quot;&gt;&quot;So,let&#39;s exit !Good bye~\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;module_init(hello_init);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* 初始化函数 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;module_exit(hello_exit);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* 卸载函数 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Makefile&lt;/code&gt;文件&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;shebang&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;obj-m +=first_linux_driver.o&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# obj-m 意思是将后面跟的东东编译成内核模块。相对应还有：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# obj-y 编译进内核&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# obj-n 不编译&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;KDIR := /root/iTop4412_Kernel_3.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PWD ?= $(shell &lt;span class=&quot;built_in&quot;&gt;pwd&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;all:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        make -C $(KDIR) M=$(PWD) modules&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;clean:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        rm -rf *.o&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;执行make&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root@ubuntu:~/mini_linux_module&lt;span class=&quot;preprocessor&quot;&gt;# make&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make -C /root/iTop4412_Kernel_3&lt;span class=&quot;number&quot;&gt;.0&lt;/span&gt; M=/root/mini_linux_module modules&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]: Entering directory `/root/iTop4412_Kernel_3&lt;span class=&quot;number&quot;&gt;.0&lt;/span&gt;&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  CC [M]  /root/mini_linux_module/first_linux_driver.o&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Building modules, stage &lt;span class=&quot;number&quot;&gt;2.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  MODPOST &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; modules&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  CC      /root/mini_linux_module/first_linux_driver.mod.o&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  LD [M]  /root/mini_linux_module/first_linux_driver.ko&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]: Leaving directory `/root/iTop4412_Kernel_3&lt;span class=&quot;number&quot;&gt;.0&lt;/span&gt;&#39;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;在4412目标板子上加载模块&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@iTOP-&lt;span class=&quot;number&quot;&gt;4412&lt;/span&gt;]&lt;span class=&quot;preprocessor&quot;&gt;# insmod first_linux_driver.ko &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[  &lt;span class=&quot;number&quot;&gt;607.854481&lt;/span&gt;] HELLO WORLD ,Enter that!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;查看模块&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@iTOP-&lt;span class=&quot;number&quot;&gt;4412&lt;/span&gt;]&lt;span class=&quot;preprocessor&quot;&gt;# lsmod&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;first_linux_driver &lt;span class=&quot;number&quot;&gt;716&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; - Live &lt;span class=&quot;number&quot;&gt;0xbf000000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;卸载modules&lt;br&gt;&lt;figure class=&quot;highlight golo&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root&lt;span class=&quot;annotation&quot;&gt;@iTOP&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4412&lt;/span&gt;]&lt;span class=&quot;comment&quot;&gt;# rmmod first_linux_driver&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[ &lt;span class=&quot;number&quot;&gt;7691.052385&lt;/span&gt;] So,&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt;&#39;s exit !Good bye~&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;无法卸载modules&quot;&gt;&lt;a href=&quot;#无法卸载modules&quot; class=&quot;headerlink&quot; title=&quot;无法卸载modules&quot;&gt;&lt;/a&gt;无法卸载modules&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id=&quot;bug&quot;&gt;&lt;a href=&quot;#bug&quot; class=&quot;headerlink&quot; title=&quot;bug&quot;&gt;&lt;/a&gt;bug&lt;/h2&gt;&lt;p&gt;无法卸载modules&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;报错&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -1364,6 +1590,7 @@
 &lt;li&gt;‘3.0.15’: No such file or directory&lt;br&gt;解决方法&lt;figure class=&quot;highlight crystal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir /&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;lib&lt;/span&gt;/&lt;span class=&quot;title&quot;&gt;modules&lt;/span&gt;/3.0.15&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
 </content>
     
     <summary type="html">
@@ -1376,7 +1603,7 @@
       <category term="嵌入式" scheme="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
-      <category term="MCU" scheme="http://www.vivatakethat.com/tags/MCU/"/>
+      <category term="字符设备" scheme="http://www.vivatakethat.com/tags/%E5%AD%97%E7%AC%A6%E8%AE%BE%E5%A4%87/"/>
     
   </entry>
   
@@ -1385,12 +1612,32 @@
     <link href="http://www.vivatakethat.com/2016/11/01/E-%E8%8B%B1%E8%AF%AD%E5%91%A8%E8%AE%B0memo_20161101/"/>
     <id>http://www.vivatakethat.com/2016/11/01/E-英语周记memo_20161101/</id>
     <published>2016-11-01T04:35:32.000Z</published>
-    <updated>2016-12-07T16:36:57.563Z</updated>
+    <updated>2016-12-10T08:36:57.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/COUPLE.jpg&quot; alt=&quot;couple&quot; title=&quot;couple&quot;&gt;&lt;/p&gt;
 &lt;p&gt;11月的第一周,信息学校的第9周&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;听力分析&quot;&gt;&lt;a href=&quot;#听力分析&quot; class=&quot;headerlink&quot; title=&quot;听力分析&quot;&gt;&lt;/a&gt;听力分析&lt;/h1&gt;&lt;p&gt; Two French schoolchildren and a Ukrainian tourist  have been killed in an avalanche  at a ski resort in the French Alps.  Three others—two pupils and a teacher— were seriously injured.  All members of the group  have now been accounted for by rescue teams.  The avalanche struck the group, their teacher and the Ukrainian  on a closed piste in the Les Deux Alpes area.  Witnesses said the avalanche  was likely to have been triggered  by groups skiing through the area.  The Bellecombe piste is situated  on a particularly icy north-facing side of mountain.  The piste had been closed  since the beginning of the ski season  because of a lack of snow over the holiday period.  However, large quantities of snow have fallen  on the French Alps in recent days, raising the risk of avalanches, the regional government said.  &lt;/p&gt;
+&lt;h1 id=&quot;听力分析2016-6-3th&quot;&gt;&lt;a href=&quot;#听力分析2016-6-3th&quot; class=&quot;headerlink&quot; title=&quot;听力分析2016-6-3th&quot;&gt;&lt;/a&gt;听力分析2016-6-3th&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;ski resort&lt;/code&gt;&lt;/strong&gt;:滑雪场&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;rescue teams&lt;/code&gt;&lt;/strong&gt;：救援队&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;avalanche&lt;/code&gt;&lt;/strong&gt;:雪崩&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;the Les Deux Alpes area&lt;/code&gt;&lt;/strong&gt;阿尔卑斯山地区&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;French alps&lt;/code&gt;&lt;/strong&gt;法国阿尔卑斯山区&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;Witnesses&lt;/code&gt;&lt;/strong&gt;said：目击者说&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;trigger&lt;/code&gt;&lt;/strong&gt;   引爆、触发&lt;em&gt;(v)&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;The Bellecombe piste&lt;/code&gt;&lt;/strong&gt; Bellecome&lt;strong&gt;&lt;code&gt;滑雪道&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;Ukrainian&lt;/code&gt;&lt;/strong&gt;乌克兰&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;pupils&lt;/code&gt;&lt;/strong&gt;:学生&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; Two French schoolchildren and a Ukrainian tourist  have been killed in an avalanche  at a ski resort in the French Alps.  Three others—two pupils and a teacher— were seriously injured.  All members of the group  have now been accounted for by rescue teams.  The avalanche struck the group, their teacher and the Ukrainian  on a closed piste in the Les Deux Alpes area. &lt;strong&gt;&lt;code&gt;Witnesses said the avalanche  was likely to have been triggered  by groups skiing through the area.&lt;/code&gt;&lt;/strong&gt;The Bellecombe piste is situated  on a particularly icy north-facing side of mountain.  The piste had been closed  since the beginning of the ski season  because of a lack of snow over the holiday period.  However, large quantities of snow have fallen  on the French Alps in recent days, raising the risk of avalanches, the regional government said.  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;ol&gt;
 &lt;li&gt;How many people died in the avalanche? &lt;/li&gt;
@@ -1399,9 +1646,38 @@
 &lt;li&gt;&lt;ol&gt;
 &lt;li&gt;Why had the Bellecombe piste been closed  since the beginning of the ski season?&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Questions 3 and 4 will be based  on the following news item. &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;extra&lt;/code&gt;&lt;/strong&gt;:额外&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;patrol&lt;/code&gt;&lt;/strong&gt;：巡逻&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;threat&lt;/code&gt;&lt;/strong&gt;:构成威胁，威胁&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;Metropolitan&lt;/code&gt;&lt;/strong&gt;:大城市&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Met= the Metropolitan Police&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;commissioner&lt;/code&gt;&lt;/strong&gt;警察局长、专员&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Met Commissioner Sir:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;Scotland Yard&lt;/code&gt;&lt;/strong&gt;伦敦警厅,苏格兰场&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;reassess&lt;/code&gt;&lt;/strong&gt;重新考虑，再次决定&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;respond to&lt;/code&gt;&lt;/strong&gt;对….反应，响应&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;fundamental  principle&lt;/code&gt;&lt;/strong&gt;:基本原则&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;outinely&lt;/code&gt;&lt;/strong&gt;:例行，通常地&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;that police in the UK are not routinely armed,&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; Questions 3 and 4 will be based  on the following news item. &lt;/p&gt;
 &lt;p&gt;Six hundred extra armed officers are to  be trained and patrols will be more than doubled  to help counter the threat of a terrorist attack in London, the Metropolitan Police has announced.  It will bring the total number of armed officers  in the capital to 2 800.  Met Commissioner Sir Bernard Hogan-Howe said:  “It will be an expensive option, but is vital to keeping us safe.”  It comes after Scotland Yard reassessed  its ability to respond to armed attacks  after last year’s Paris terror attacks.  The plan to increase the number  of armed officers—which is already under way— will more than double the Met’s number  of armed response vehicles.  The increase in armed officers  would not change the fundamental principle  that police in the UK are not routinely armed, with about 92% of the Met officers still unarmed, he added.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;ol&gt;
@@ -1414,17 +1690,21 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;the French Alps:法国阿尔卑斯山；alps:高山&lt;br&gt;the regional government:当地政府&lt;br&gt;Ukrainian：乌克兰&lt;br&gt;avalance雪崩&lt;br&gt;ski resort滑雪场&lt;br&gt;pupils 学生；瞳孔&lt;br&gt;The Bellecombe piste&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;piste滑雪场&lt;br&gt;particularly：特别的&lt;br&gt;Witnesses目击者&lt;br&gt;trigger   引爆、触发&lt;em&gt;(v)&lt;/em&gt;  &amp;nbsp; 引爆器&lt;em&gt;(n)&lt;/em&gt;&lt;br&gt;rescue teams&lt;br&gt;a  closed  piste:封闭的滑雪道&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Metropolitan大城市&lt;br&gt;announce:宣告，宣布&lt;br&gt;armed officer武装警察&lt;br&gt;Scotland Yard伦敦警厅,苏格兰场&lt;br&gt;reassess重新考虑，再次决定&lt;br&gt;patrol：巡逻&lt;br&gt;threat:构成威胁，威胁&lt;br&gt;armed forces:武装部队&lt;br&gt;commissioner警察局长、专员&lt;br&gt;Met= the Metropolitan Police&lt;br&gt;What is the fundamental principle for the UK police?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;fundamental:基本&lt;br&gt;principle:原则，法则&lt;br&gt;They don’t routinely carry firearms&lt;br&gt;routinely:例行，通常地&lt;br&gt;firearm &lt;em&gt;便携&lt;/em&gt;枪&lt;/p&gt;
+&lt;p&gt;firearm &lt;em&gt;便携&lt;/em&gt;枪&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;p&gt; Michigan has deployed the National Guard  to distribute bottled water and filters  to residents in Flint who are struggling with a water crisis.  The move ordered by Governor Rick Snyder  comes after recent tests found elevated blood  lead levels in children living in the city.  Old plumbing leaked lead into homes after  the city switched water sources.  More than 30 Guardsmen will be in place by Friday in Flint, which has 99 000 people.  Mr Snyder has described the situation as a crisis  and declared an emergency last week.  The city switched its water source from the city  of Detroit to the Flint River in 2014, in order to save money.  The water from the river leached lead off old plumbing, which then made its way into people’s homes.  They have since switched back to Detroit’s water.  In October, testing revealed increased lead levels  in water supplies and in children’s blood.  Lead exposure can cause learning disabilities  and behavioural problems in children.  According to the Mayo Clinic, young children are especially vulnerable, and exposure can severely affect mental  and physical development. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;michigan&lt;/code&gt;&lt;/strong&gt;：密西根州&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;the National Guard&lt;/code&gt;&lt;/strong&gt;国家警卫队&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;distribute&lt;/code&gt;&lt;/strong&gt;派发&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;residents&lt;/code&gt;&lt;/strong&gt;居民&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;struggling with&lt;/code&gt;&lt;/strong&gt;:   斗争&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Michigan has deployed the National Guard  to distribute bottled water and filters  to residents in Flint who are struggling with a water crisis.  The move ordered by Governor Rick Snyder  comes after recent tests found elevated blood  lead levels in children living in the city.  Old plumbing leaked lead into homes after  the city switched water sources.  More than 30 Guardsmen will be in place by Friday in Flint, which has 99 000 people.  Mr Snyder has described the situation as a crisis  and declared an emergency last week.  The city switched its water source from the city  of Detroit to the Flint River in 2014, in order to save money.  The water from the river leached lead off old plumbing, which then made its way into people’s homes.  They have since switched back to Detroit’s water.  In October, testing revealed increased lead levels  in water supplies and in children’s blood.  Lead exposure can cause learning disabilities  and behavioural problems in children.  According to the Mayo Clinic, young children are especially vulnerable, and exposure can severely affect mental  and physical development. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;ol&gt;
 &lt;li&gt;What can we learn about Mr Snyder from the news report? &lt;/li&gt;
@@ -1437,6 +1717,8 @@
 &lt;li&gt;&lt;ol&gt;
 &lt;li&gt;What is found to be high in children’s blood? &lt;/li&gt;
 &lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt; amenable to对（事物）服从的.&lt;/p&gt;
@@ -1650,205 +1932,6 @@
 &lt;p&gt;linux串口应用编程，直接使用原厂提供的接口，主要进行初始化配置以及发送和接受。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="嵌入式" scheme="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-      <category term="MCU" scheme="http://www.vivatakethat.com/tags/MCU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Breaking Bad-台词</title>
-    <link href="http://www.vivatakethat.com/2016/10/31/E-Breaking%20Bad-%E5%8F%B0%E8%AF%8D/"/>
-    <id>http://www.vivatakethat.com/2016/10/31/E-Breaking Bad-台词/</id>
-    <published>2016-10-31T04:35:32.000Z</published>
-    <updated>2016-12-07T17:15:39.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%BB%9D%E5%91%BD%E6%AF%92%E5%B8%88.jpg&quot; alt=&quot;Breaking Bad&quot; title=&quot;Breaking Bad&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Breaking Bad 绝命毒师台词&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;Breaking-Bad&quot;&gt;&lt;a href=&quot;#Breaking-Bad&quot; class=&quot;headerlink&quot; title=&quot;Breaking Bad&quot;&gt;&lt;/a&gt;Breaking Bad&lt;/h1&gt;&lt;p&gt;I live at 308 Negra AArroyo Lane,Albuquerque,New Mexico,87104.To all law-enforcement entities,this is not admisson of guilt.I am speaking to my family now.&lt;/p&gt;
-&lt;p&gt;对skyler独白：&lt;br&gt;You’re my big man.There are going to be some things that you’ll come to learn about me in the next few days.i just want you know that no matter how it may look.&lt;br&gt;i only had you in my heart.&lt;br&gt;Goody.&lt;br&gt;[SIRENS  APPROACHING]&lt;/p&gt;
-&lt;p&gt;&amp;gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;CRYSTALLOGRAPHY PROJECT LEADER FOR PROTON RADIOGRAPHY 1985&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;CONTRIBUTOR TO RESEARCH AWARED THE NOBEL PRIZE&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;skyler:That is veggie bacon.Believe it or not.Zero cholesterol and you won’t even taste the difference.&lt;/p&gt;
-&lt;p&gt;skyler: I don’t want him dicking you around tonight.&lt;/p&gt;
-&lt;p&gt;w:  &amp;nbsp; How does it feel to be a smart-ass?&lt;/p&gt;
-&lt;p&gt;WALT:You’re all set?&lt;br&gt;Anser: Yeah, I’m fine.&lt;/p&gt;
-&lt;p&gt;WALT: Molecules change their bonds.Elements.They combine and change into compounds.I mean, it’s just – it’s the constant,it’s the cycle.it’s solution,dissolution,just over and over.It is growth,the decay.then transformation.&lt;br&gt;[STUDENTS WHISPERING INDISTINCTLY]&lt;/p&gt;
-&lt;p&gt;I have cancer.Lung cancer.It’s bad&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lung&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;We always took the proper precautions.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;proper precautions.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;ventilation hood &lt;/p&gt;
-&lt;p&gt;We should hire a lawyer&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;hire&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Okay,so first thing tomorrow,I talk to my radiologists,we find you the best the oncology dream team.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;radiologist&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;oncology&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;what happened to your hallway,man?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;hallway&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Did,like,the ceiling fall down,or….?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;ceiling&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Your know,from time to time&lt;/p&gt;
-&lt;p&gt;NO,man,he’s out.His cousin bailed him out&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;cousin&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;bailed  XX out&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Anser the questions by marking the corresponding letter on Answer sheet 2.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;correspond&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%BB%9D%E5%91%BD%E6%AF%92%E5%B8%88.jpg&quot; alt=&quot;Breaking Bad&quot; title=&quot;Breaking Bad&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Breaking Bad 绝命毒师台词&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="English" scheme="http://www.vivatakethat.com/categories/English/"/>
-    
-    
-      <category term="memo" scheme="http://www.vivatakethat.com/tags/memo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>4412_实验</title>
-    <link href="http://www.vivatakethat.com/2016/10/26/4412_%E5%AE%9E%E9%AA%8C%20/"/>
-    <id>http://www.vivatakethat.com/2016/10/26/4412_实验 /</id>
-    <published>2016-10-25T16:35:32.000Z</published>
-    <updated>2016-12-07T16:36:57.354Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/superheroesshadows5.jpg&quot; alt=&quot;superheroesshadows&quot; title=&quot;superheroesshadows&quot;&gt;&lt;/p&gt;
-&lt;p&gt;4412开发板实验&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/4412%E7%B2%BE%E8%8B%B1%E7%89%88-POP%E6%A0%B8%E5%BF%83%E6%9D%BF.jpg&quot; alt=&quot;4412精英版-POP核心&quot; title=&quot;4412精英版-POP核心&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;开机启动程序&quot;&gt;&lt;a href=&quot;#开机启动程序&quot; class=&quot;headerlink&quot; title=&quot;开机启动程序&quot;&gt;&lt;/a&gt;开机启动程序&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;编辑启动文件&lt;figure class=&quot;highlight autoit&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root&lt;span class=&quot;constant&quot;&gt;@iTOP&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4412&lt;/span&gt;]&lt;span class=&quot;preprocessor&quot;&gt;# vi /etc/init.d/rcS&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;在配置文件尾部添加&lt;br&gt;&lt;figure class=&quot;highlight armasm&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/&lt;span class=&quot;keyword&quot;&gt;bin/arm_hello-world &lt;/span&gt;&amp;amp;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;amp;是什么？？？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;不用加&amp;amp;也可以，好像跟启动位置有关？？？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;TFTP服务器&quot;&gt;&lt;a href=&quot;#TFTP服务器&quot; class=&quot;headerlink&quot; title=&quot;TFTP服务器&quot;&gt;&lt;/a&gt;TFTP服务器&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在host主机ubuntu安装 xinetd&lt;/p&gt;
-&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-&lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt; install xinetd&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装tftp和tftpd&lt;/p&gt;
-&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-&lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt; install tftp tftpd&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;配置/etc/xinetd.d/tftp文件&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;service tftp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        socket_&lt;span class=&quot;built_in&quot;&gt;type&lt;/span&gt;     = dgram&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        protocol        = udp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;wait&lt;/span&gt;            = yes&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        user            = root&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        server          = /usr/sbin/in.tftpd&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        server_args     = &lt;span class=&quot;operator&quot;&gt;-s&lt;/span&gt; /var/tftpboot/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt;         = no&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        per_&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt;      = &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cps             = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        flags           = IPv4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;创建tftp文件中的目录&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;/var/tftpboot 是服务器的目录&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;新建目录&lt;/p&gt;
-&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:~&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# mkdir /var/tftpboot&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;添加权限 后 重启服务&lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root@ubuntu:~# chmod 777 /var/tftpboot&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@ubuntu:~# /etc/init.d/xinetd restart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Rather than invoking init scripts through /etc/init.d, &lt;span class=&quot;operator&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; the service(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;utility, &lt;span class=&quot;keyword&quot;&gt;e&lt;/span&gt;.&lt;span class=&quot;keyword&quot;&gt;g&lt;/span&gt;. service xinetd restart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Since the script you &lt;span class=&quot;keyword&quot;&gt;are&lt;/span&gt; attempting &lt;span class=&quot;keyword&quot;&gt;to&lt;/span&gt; invoke has been converted &lt;span class=&quot;keyword&quot;&gt;to&lt;/span&gt; an&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Upstart job, you may also &lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; the &lt;span class=&quot;keyword&quot;&gt;stop&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;start&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) utilities,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;e&lt;/span&gt;.&lt;span class=&quot;keyword&quot;&gt;g&lt;/span&gt;. &lt;span class=&quot;keyword&quot;&gt;stop&lt;/span&gt; xinetd ;&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;start&lt;/span&gt; xinetd. The restart(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) utility &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; also available.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;xinetd &lt;span class=&quot;keyword&quot;&gt;stop&lt;/span&gt;/waiting&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;xinetd &lt;span class=&quot;keyword&quot;&gt;start&lt;/span&gt;/running, process &lt;span class=&quot;number&quot;&gt;4102&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@ubuntu:~#&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;设置好目标板4412与宿主机机器ubuntu处于统一网段后&lt;/p&gt;
-&lt;p&gt;在目标板4412&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@iTOP-&lt;span class=&quot;number&quot;&gt;4412&lt;/span&gt;]&lt;span class=&quot;preprocessor&quot;&gt;# tftp -g -l test_local -r test_take &lt;span class=&quot;number&quot;&gt;192.168&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.1&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.106&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;第一个test_local 下载后的文件名&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;第二个test_take  宿主机器上ubuntu的服务端的文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;NFS网络文件系统&quot;&gt;&lt;a href=&quot;#NFS网络文件系统&quot; class=&quot;headerlink&quot; title=&quot;NFS网络文件系统&quot;&gt;&lt;/a&gt;NFS网络文件系统&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在宿主机ubuntu安装&lt;/p&gt;
-&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:~&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# apt-get install nfs-kernel-server&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;修改 /etc/exports&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在最后一样添加&lt;/p&gt;
-&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/home/minilinux/ *&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;rw&lt;/span&gt;,sync,no_root_squash)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;/home/minilinux共享目录&lt;br&gt;*:代表所有的网络段访问&lt;br&gt;rw:是可读写权限&lt;br&gt;ync:资料同步写入内存和硬盘&lt;br&gt;no_root_squash:是ubuntu nfs客户端分享目录使用者的权限，如果客户端使用的是root用户，那么对于该共享目录而言，该客户端就具有root权限。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;重启相关服务&lt;blockquote&gt;
-&lt;p&gt;/etc/init.d/portmap restart&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;/etc/init.d/nfs-kernel-server restart&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;用法&lt;br&gt;在目标机器挂载宿主机器的目录&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mount -t nfs &lt;span class=&quot;number&quot;&gt;192.168&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1.101&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:/home/minilinux/system/mnt&lt;/span&gt;  /usb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果报错&lt;br&gt;&lt;figure class=&quot;highlight gams&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;No&lt;/span&gt; such device&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;请查看目标版内核是否支持nfs&lt;/p&gt;
-&lt;p&gt;cat /proc/filesystems&lt;br&gt;如果显示nodev nfs，表示内核有支持NFS&lt;/p&gt;
-&lt;h2 id=&quot;重新配置内核能行&quot;&gt;&lt;a href=&quot;#重新配置内核能行&quot; class=&quot;headerlink&quot; title=&quot;重新配置内核能行&quot;&gt;&lt;/a&gt;重新配置内核能行&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/yuanlu837/article/details/8461203/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;配置内核支持NFS&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;make menuconfig&lt;br&gt;“Networking support”→“Networking options”→选上“IP: kernel level&lt;br&gt;autoconfiguration”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;返回到make menuconfig 的初始界面&lt;br&gt;– “File systems”→“Network File Systems”&lt;br&gt;– 选中“NFS client support”，“NFS client support for NFS version 3”，“NFS&lt;br&gt;client support for the NFSv3 ACL protocol extension”，“NFS client support for&lt;br&gt;NFS version4”，“NFS client support for NFSv4.1”，“Root file system on NFS”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;返回到make menuconfig 的初始配置界面&lt;br&gt;– 进入“Boot options”→“Default kernel command”&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;配置举例：&lt;br&gt;– root=/dev/nfs rw nfsroot=192.168.1.107:/home/minilinux/nfs&lt;br&gt;ip=192.168.1.105:192.168.1.107:192.168.1.0:255.255.255.0:takethat:eth0:off&lt;br&gt;rootfstype=ext4 init=/linuxrc console=ttySAC2,115200&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;配置时请写成一行&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;第二行:第1个IP是开发板的IP,第2个IP是NFS服务器的IP(&lt;em&gt;宿主机ubuntu的IP&lt;/em&gt;)，第3个IP是开发板的网关。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;255.255.255.0 是子网掩码，iTOP 是开发主机的名字（一般无关紧要，可以随便填写），eth0 是网卡设备的名称。&lt;br&gt;&amp;gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/superheroesshadows5.jpg&quot; alt=&quot;superheroesshadows&quot; title=&quot;superheroesshadows&quot;&gt;&lt;/p&gt;
-&lt;p&gt;4412开发板实验&lt;/p&gt;
     
     </summary>
     
