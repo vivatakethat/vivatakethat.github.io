@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="Linux系统将设备分为3种类型，分别是字符设备、块设备、和网络接口设备。其中字符类设备和块设备难以区分。字符设备可以必须按照先后顺序读写，而块设备则  定位到任意位置。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%99%BE%E5%90%88%E5%AD%90.jpg">
-<meta property="og:updated_time" content="2016-12-08T14:08:02.000Z">
+<meta property="og:updated_time" content="2016-12-10T13:39:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符类设备驱动程序框架说明">
 <meta name="twitter:description" content="Linux系统将设备分为3种类型，分别是字符设备、块设备、和网络接口设备。其中字符类设备和块设备难以区分。字符设备可以必须按照先后顺序读写，而块设备则  定位到任意位置。">
@@ -105,7 +105,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#字符设备和块设备"><span class="toc-number">1.</span> <span class="toc-text">字符设备和块设备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设备号"><span class="toc-number">2.</span> <span class="toc-text">设备号</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#字符设备和块设备"><span class="toc-number">1.</span> <span class="toc-text">字符设备和块设备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设备号"><span class="toc-number">2.</span> <span class="toc-text">设备号</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设备号的获取"><span class="toc-number">2.1.</span> <span class="toc-text">设备号的获取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分配设备号"><span class="toc-number">2.2.</span> <span class="toc-text">分配设备号</span></a></li></ol></li></ol>
 		
 		</div>
 		
@@ -121,7 +121,8 @@
 <p>其读取设备不必不必按照先后顺序，可以定位到设备的某一具体位置。</p>
 </blockquote>
 <p>常见的块设备有硬盘、磁盘、U盘、SD卡等。</p>
-<p>tips:可以通过<code>ls -l</code>查询区别字符设备和块设备<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:/dev</span><span class="comment"># ls -l</span></span><br><span class="line">total <span class="number">0</span></span><br><span class="line">/*  一      二  三  四       五      六       七：最后修改时间      八：名称</span><br><span class="line">crw-rw----  <span class="number">1</span> root video    <span class="number">10</span>,     <span class="number">175</span>     <span class="constant">Dec </span>     <span class="number">8</span> <span class="number">01</span><span class="symbol">:</span><span class="number">40</span>       agpgart</span><br><span class="line">crw-------  <span class="number">1</span> root root     <span class="number">10</span>,     <span class="number">58</span>      <span class="constant">Dec </span>     <span class="number">8</span> <span class="number">01</span><span class="symbol">:</span><span class="number">40</span>        alarm</span><br></pre></td></tr></table></figure></p>
+<p>tips:</p>
+<p><strong><code>1.</code></strong> 可以通过<code>ls       -l</code>查询区别字符设备和块设备<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:/dev</span><span class="comment"># ls -l</span></span><br><span class="line">total <span class="number">0</span></span><br><span class="line">/*  一      二  三  四       五      六       七：最后修改时间      八：名称</span><br><span class="line">crw-rw----  <span class="number">1</span> root video    <span class="number">10</span>,     <span class="number">175</span>     <span class="constant">Dec </span>     <span class="number">8</span> <span class="number">01</span><span class="symbol">:</span><span class="number">40</span>       agpgart</span><br><span class="line">crw-------  <span class="number">1</span> root root     <span class="number">10</span>,     <span class="number">58</span>      <span class="constant">Dec </span>     <span class="number">8</span> <span class="number">01</span><span class="symbol">:</span><span class="number">40</span>        alarm</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>第一字段 的第一个字符<code>c</code>表示设备是字符设备。<code>b</code>是块设备</li>
 <li>第五、六字段分别表示设备的主设备号和次设备号，第七字段表示文件的最后修改时间。第八字段表示设备的名称<blockquote>
@@ -129,6 +130,7 @@
 </blockquote>
 </li>
 </ul>
+<p><strong><code>2.</code></strong>  查看系统已存在的设备号<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="comment"># cat /proc/devices</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <h1 id="设备号"><a href="#设备号" class="headerlink" title="设备号"></a>设备号</h1><p>一个字符设备或块设备都有一个主设备号和次设备号。</p>
 <blockquote>
@@ -143,6 +145,14 @@
 <ul>
 <li>次设备号：用来表示使用该驱动程序的各设备</li>
 </ul>
+<h2 id="设备号的获取"><a href="#设备号的获取" class="headerlink" title="设备号的获取"></a>设备号的获取</h2><p>使用<code>MAJOR</code>得到设备号。</p>
+<h2 id="分配设备号"><a href="#分配设备号" class="headerlink" title="分配设备号"></a>分配设备号</h2><ul>
+<li>静态分配设备号</li>
+</ul>
+<ul>
+<li>动态分配设备号</li>
+</ul>
+<p>使用<code>alloc_chrdev_region();</code></p>
   
 	</div>
 
@@ -304,7 +314,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#字符设备和块设备"><span class="toc-number">1.</span> <span class="toc-text">字符设备和块设备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设备号"><span class="toc-number">2.</span> <span class="toc-text">设备号</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#字符设备和块设备"><span class="toc-number">1.</span> <span class="toc-text">字符设备和块设备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设备号"><span class="toc-number">2.</span> <span class="toc-text">设备号</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设备号的获取"><span class="toc-number">2.1.</span> <span class="toc-text">设备号的获取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分配设备号"><span class="toc-number">2.2.</span> <span class="toc-text">分配设备号</span></a></li></ol></li></ol>
  
   </div>
 

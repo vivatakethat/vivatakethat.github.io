@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
-  <updated>2016-12-08T14:08:02.000Z</updated>
+  <updated>2016-12-10T13:39:20.000Z</updated>
   <id>http://www.vivatakethat.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.vivatakethat.com/2016/12/08/%E5%AD%97%E7%AC%A6%E7%B1%BB%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6/"/>
     <id>http://www.vivatakethat.com/2016/12/08/字符类设备驱动程序框架/</id>
     <published>2016-12-08T14:35:32.000Z</published>
-    <updated>2016-12-08T14:08:02.000Z</updated>
+    <updated>2016-12-10T13:39:20.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%99%BE%E5%90%88%E5%AD%90.jpg&quot; alt=&quot;百合子&quot; title=&quot;百合子&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Linux系统将设备分为3种类型，分别是字符设备、块设备、和网络接口设备。其中字符类设备和块设备难以区分。&lt;br&gt;字符设备可以必须按照先后顺序读写，而块设备则  定位到任意位置。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -34,7 +34,8 @@
 &lt;p&gt;其读取设备不必不必按照先后顺序，可以定位到设备的某一具体位置。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;常见的块设备有硬盘、磁盘、U盘、SD卡等。&lt;/p&gt;
-&lt;p&gt;tips:可以通过&lt;code&gt;ls -l&lt;/code&gt;查询区别字符设备和块设备&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:/dev&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# ls -l&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;total &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/*  一      二  三  四       五      六       七：最后修改时间      八：名称&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;crw-rw----  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; root video    &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,     &lt;span class=&quot;number&quot;&gt;175&lt;/span&gt;     &lt;span class=&quot;constant&quot;&gt;Dec &lt;/span&gt;     &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;       agpgart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;crw-------  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; root root     &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,     &lt;span class=&quot;number&quot;&gt;58&lt;/span&gt;      &lt;span class=&quot;constant&quot;&gt;Dec &lt;/span&gt;     &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;        alarm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;tips:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.&lt;/code&gt;&lt;/strong&gt; 可以通过&lt;code&gt;ls       -l&lt;/code&gt;查询区别字符设备和块设备&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:/dev&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# ls -l&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;total &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/*  一      二  三  四       五      六       七：最后修改时间      八：名称&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;crw-rw----  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; root video    &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,     &lt;span class=&quot;number&quot;&gt;175&lt;/span&gt;     &lt;span class=&quot;constant&quot;&gt;Dec &lt;/span&gt;     &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;       agpgart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;crw-------  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; root root     &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,     &lt;span class=&quot;number&quot;&gt;58&lt;/span&gt;      &lt;span class=&quot;constant&quot;&gt;Dec &lt;/span&gt;     &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;        alarm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;第一字段 的第一个字符&lt;code&gt;c&lt;/code&gt;表示设备是字符设备。&lt;code&gt;b&lt;/code&gt;是块设备&lt;/li&gt;
 &lt;li&gt;第五、六字段分别表示设备的主设备号和次设备号，第七字段表示文件的最后修改时间。第八字段表示设备的名称&lt;blockquote&gt;
@@ -42,6 +43,7 @@
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.&lt;/code&gt;&lt;/strong&gt;  查看系统已存在的设备号&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;variable&quot;&gt;@ubuntu&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:~&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;# cat /proc/devices&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&quot;设备号&quot;&gt;&lt;a href=&quot;#设备号&quot; class=&quot;headerlink&quot; title=&quot;设备号&quot;&gt;&lt;/a&gt;设备号&lt;/h1&gt;&lt;p&gt;一个字符设备或块设备都有一个主设备号和次设备号。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -56,6 +58,14 @@
 &lt;ul&gt;
 &lt;li&gt;次设备号：用来表示使用该驱动程序的各设备&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&quot;设备号的获取&quot;&gt;&lt;a href=&quot;#设备号的获取&quot; class=&quot;headerlink&quot; title=&quot;设备号的获取&quot;&gt;&lt;/a&gt;设备号的获取&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;MAJOR&lt;/code&gt;得到设备号。&lt;/p&gt;
+&lt;h2 id=&quot;分配设备号&quot;&gt;&lt;a href=&quot;#分配设备号&quot; class=&quot;headerlink&quot; title=&quot;分配设备号&quot;&gt;&lt;/a&gt;分配设备号&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;静态分配设备号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;动态分配设备号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用&lt;code&gt;alloc_chrdev_region();&lt;/code&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -77,7 +87,7 @@
     <link href="http://www.vivatakethat.com/2016/12/08/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/"/>
     <id>http://www.vivatakethat.com/2016/12/08/考试1——嵌入式系统应用开发实践/</id>
     <published>2016-12-08T14:35:32.000Z</published>
-    <updated>2016-12-10T11:35:39.000Z</updated>
+    <updated>2016-12-11T12:40:32.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E5%86%B7%E5%92%96%E5%95%A1.jpg&quot; alt=&quot;干了这杯冷咖啡&quot; title=&quot;干了这杯冷咖啡&quot;&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -89,25 +99,31 @@
 &lt;h1 id=&quot;一、名词解释&quot;&gt;&lt;a href=&quot;#一、名词解释&quot; class=&quot;headerlink&quot; title=&quot;一、名词解释&quot;&gt;&lt;/a&gt;一、名词解释&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;什么是bootloader?&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;在嵌入式操作系统中，BootLoader是在操作系统内核运行之前运行。可以初始化硬件设备、建立内存空间映射图，从而将系统的软硬件环境带到一个合适状态，以便为最终调用操作系统内核准备好正确的环境。因此整个系统的加载启动任务就完全由BootLoader来完成。&lt;/p&gt;
+&lt;p&gt;在嵌入式操作系统中，&lt;code&gt;BootLoader是在操作系统内核运行之前运行。可以初始化硬件设备、建立内存空间映射图，从而将系统的软硬件环境带到一个合适状态，以便为最终调用操作系统内核准备好正确的环境&lt;/code&gt;。因此整个系统的加载启动任务就完全由BootLoader来完成。&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;什么叫同步通信？什么叫异步通信？根文件系统？UDP？&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在QT里什么叫插槽？&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;什么叫同步通信？什么叫异步通信？根文件系统？UDP？&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;一般而言嵌入式系统的架构可以分为4个部分：&lt;br&gt;硬件：处理器、存储器、输入/输出&lt;br&gt;软件：应用软件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同步是指：发送方发出数据后，等接收方发回响应以后才发下一个数据包的通讯方式。 同步是阻塞模 &lt;/li&gt;
+&lt;li&gt;异步是指：发送方发出数据后，不等接收方发回响应，接着发送下个数据包的通讯方式。异步是非阻塞模式&lt;/li&gt;
+&lt;li&gt;根文件系统: Linux只有一个文件树,整个文件系统是以一个树根”/“为起点的,所有的文件和外部设备都以文件的形式挂结在这个文件树上,包括硬盘,软盘,光驱,调制解调器等，这和以”驱动器盘符”为基础的Windows系统是大不相同的。&lt;/li&gt;
+&lt;li&gt;UDP：&lt;code&gt;用户数据报协议&lt;/code&gt;（英语：User Datagram Protocol，缩写为UDP），又称使用者资料包协定，&lt;code&gt;是一个简单的面向数据报的传输层协议&lt;/code&gt;，正式规范为RFC 768。 &lt;code&gt;在TCP/IP模型中，UDP为网络层以上和应用层以下提供了一个简单的接口&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;在QT里什么叫插槽？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;信号和插槽用于2个对象之间的通信，信号和插槽是Qt的核心特征。插槽会在连接它的信号被激发时调用。插槽是普通C++函数。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一般而言，嵌入式系统的构架可以分为4个部分：分别是（  &lt;strong&gt;&lt;code&gt;处理器&lt;/code&gt;&lt;/strong&gt;       ）、存储器、输入/输出和软件，一般软件亦分为操作系统相关和（   &lt;strong&gt;&lt;code&gt;应用软件&lt;/code&gt;&lt;/strong&gt;     ）两个主要部分&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr&gt;
 &lt;h1 id=&quot;二、填空&quot;&gt;&lt;a href=&quot;#二、填空&quot; class=&quot;headerlink&quot; title=&quot;二、填空&quot;&gt;&lt;/a&gt;二、填空&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;一般的软件分为操作系统相关和 应用软件  2个主要部分&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;嵌入式系统使用的微处理器可以将嵌入式系统分为&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;嵌入式系统使用的微处理器可以将嵌入式系统分为&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;嵌入式微控制器&lt;/li&gt;
-&lt;li&gt;嵌入式微处理器&lt;/li&gt;
-&lt;li&gt;嵌入式DSP处理器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;嵌入式微处理器&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;嵌入式DSP处理器&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;片上系统(SOC)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -115,107 +131,159 @@
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;进程管理&lt;/li&gt;
-&lt;li&gt;内存管理&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;内存管理&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;文件系统管理&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;IO资源管理&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;从嵌入式操作系统特点可以将嵌入式操作系统分为&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;实时操作系统&lt;br&gt;硬实时/软实时 操作系统&lt;/li&gt;
-&lt;li&gt;分时操作系统&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;实时操作系统&lt;/code&gt;&lt;br&gt;硬实时/软实时 操作系统&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;分时操作系统&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
-&lt;li&gt;内核负责管理各个任务，或者为每个任务分配CPU时间并且负责任务之间的通信，内核的基本服务是：任务的切换。&lt;/li&gt;
+&lt;li&gt;内核负责管理各个任务，或者为每个任务分配CPU时间并且负责任务之间的通信，内核的基本服务是：&lt;code&gt;任务调度&lt;/code&gt;。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;嵌入式开发一般采用宿主机和目标机的开发方式，其中宿主机是指 台式机或PC机  &lt;/p&gt;
+&lt;li&gt;&lt;p&gt;嵌入式开发一般采用宿主机和目标机的开发方式，其中宿主机是指 &lt;code&gt;台式机或PC机&lt;/code&gt; &lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;串口通信中最少需要连接3条线.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;串口通信中最少需要连接&lt;code&gt;3条&lt;/code&gt;线.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;zigbee网络拓扑的3种类型：星形、树形、Mesh型&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;zigbee网络拓扑的3种类型：&lt;code&gt;星形、树形、Mesh型&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CC2530 io的反向设置的时候0为输入，1为输出。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;CC2530 io的反向设置的时候&lt;code&gt;0为输入，1为输出&lt;/code&gt;。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;传感器按数据类型可以分为：模拟量、开关量、数字量&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;传感器按数据类型可以分为：&lt;code&gt;模拟量、开关量、数字量&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Linux操作系统下修改文件属性命令是&lt;br&gt;chmod&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Linux操作系统下修改文件属性命令是&lt;br&gt;&lt;code&gt;chmod&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;安卓的应用程序开发环境的搭建包括  &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;安装JDK 及配置环境变量、Eclipse安装，&lt;/li&gt;
-&lt;li&gt;ADT的安装和安卓SDK的安装和配置&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;安装JDK&lt;/code&gt; 及配置环境变量、&lt;code&gt;Eclipse安装&lt;/code&gt;，&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ADT的安装&lt;/code&gt;和安卓&lt;code&gt;SDK的安装和配置&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;选择题：&quot;&gt;&lt;a href=&quot;#选择题：&quot; class=&quot;headerlink&quot; title=&quot;选择题：&quot;&gt;&lt;/a&gt;选择题：&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;CC2530是片上系统主核采用的是  8051  芯片&lt;/p&gt;
+&lt;h1 id=&quot;选择题：&quot;&gt;&lt;a href=&quot;#选择题：&quot; class=&quot;headerlink&quot; title=&quot;选择题：&quot;&gt;&lt;/a&gt;&lt;code&gt;选择&lt;/code&gt;题：&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;CC2530是片上系统主核采用的是  &lt;code&gt;8051&lt;/code&gt;  芯片&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CC2530采用无线通信的协议是： ZigBee&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;CC2530采用无线通信的协议是：&lt;code&gt;ZigBee&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;TCP/IP协议中路由器工作的层次称之为：   网络层&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;TCP/IP协议中路由器工作的层次称之为：  &lt;code&gt;网络层&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;CC2530 的处理器SDRAM容量最大是：  8K&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;CC2530 的处理器SDRAM容量最大是： &lt;code&gt;8K&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CC2530有 21  个数字IO引脚&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;CC2530有&lt;code&gt;21&lt;/code&gt; 个数字IO引脚&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CC2530有   2个  串口（UART）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;CC2530有   &lt;code&gt;2个&lt;/code&gt;  串口（UART）&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;光照传感器，当无光线的时候，传感器的阻值是         最大&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;光照传感器，当无光线的时候，传感器的阻值是         &lt;code&gt;最大&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;人体的红外传感器是  开关  量&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;人体的红外传感器是 &lt;code&gt;开关量&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;温湿度传感器是  数字量&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;温湿度传感器是  &lt;code&gt;数字量&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Linux中需要加载硬件的需要创建节点，创建节点的命令是:    mknod&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Linux中需要加载硬件的需要创建节点，创建节点的命令是:    &lt;code&gt;mknod&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h1 id=&quot;判断题&quot;&gt;&lt;a href=&quot;#判断题&quot; class=&quot;headerlink&quot; title=&quot;判断题&quot;&gt;&lt;/a&gt;判断题&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;所有的电子设备都属于嵌入式设备  （错）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;所有的电子设备都属于嵌入式设备  &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;冯诺依曼体系结构将被哈佛体系所取代  （错）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;冯诺依曼体系结构将被哈佛体系所取代  &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;嵌入式Linux操作系统属于免费的操作系统  （对）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;嵌入式Linux操作系统属于免费的操作系统  &lt;code&gt;（对）&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;移植操作系统时需要修改操作系统中与处理器直接相关的程序   （对）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;移植操作系统时需要修改操作系统中与处理器直接相关的程序   &lt;code&gt;（对）&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;USB2.0接口最大的通信数据最大是12M/S    （错）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;USB2.0接口最大的通信数据最大是12M/S    &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;#简答题&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;请说出嵌入式linux一般开发流程&lt;/li&gt;
+&lt;h1 id=&quot;简答题&quot;&gt;&lt;a href=&quot;#简答题&quot; class=&quot;headerlink&quot; title=&quot;简答题&quot;&gt;&lt;/a&gt;简答题&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;请说出嵌入式linux开发的一般流程&lt;/strong&gt;&lt;blockquote&gt;
+&lt;p&gt;请分点回答&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.&lt;/code&gt;&lt;/strong&gt;建立交叉编译器开发环境&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.&lt;/code&gt;&lt;/strong&gt;配置开发主机:MINICOM、NFS网络文件系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;3.&lt;/code&gt;&lt;/strong&gt;建立引导装载程序Bootloader&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;4.&lt;/code&gt;&lt;/strong&gt;下载别人已经移植好的Linux操作系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;5.&lt;/code&gt;&lt;/strong&gt;建立根文件系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;6.&lt;/code&gt;&lt;/strong&gt;建立应用程序的Flash磁盘分区&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;7.&lt;/code&gt;&lt;/strong&gt;开发应用程序&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;8.&lt;/code&gt;&lt;/strong&gt;烧写内核、根文件系统、应用程序&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;列举Qt开发中常见的布局方法&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;1）垂直布局&lt;br&gt;2）水平布局&lt;br&gt;3）表格布局&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（1）使用水平布局类&lt;code&gt;QHBoxLayout&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;（2）使用垂直布局类&lt;code&gt;QVBoxLayout&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;（3）使用网格布局类&lt;code&gt;QGridLayout&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;（4）使用表格布局类&lt;code&gt;QFormLayout&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;（5）使用分组布局类&lt;code&gt;QStackLayout&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;请你描述建立一个嵌入式开发平台的步骤&lt;/li&gt;
 &lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;(1)连接主机和目标板&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（2）使用flash工具烧写bootloader&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(3)配置并启动主机的bootp服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（4）配置并启动主机的tftp服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（5）使用tftp下载内核及根文件系统镜像到目标板，重启目标板&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（6）配置并启动NFS服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（7）在目标板使用mount挂载主机的目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（8）再次使用bootp命令确认bootp服务是否建立，使用tftp命令确认tftp服务建立。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（9）将内核镜像和根文件系统cp到tftp根目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（10）重启目标板，确认嵌入式linux正常启动。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;简述物联网的架构&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;物联网体系架构分为3个层次：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最上层——应用层:根据底层采集的数据，形成与业务需求相适应&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第二层网络层： 实现广阔的互联网功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;底层-感知层：用来感知数据的感知层&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;请你写出串口通信：9600，8,N,1&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;9600：波特率&lt;br&gt;8：数据位&lt;br&gt;N：无校验位（奇偶校验）&lt;br&gt;1：有1个停止位&lt;/p&gt;
+&lt;p&gt;9600：&lt;code&gt;波特率&lt;/code&gt;&lt;br&gt;8：&lt;code&gt;数据位&lt;/code&gt;&lt;br&gt;N：&lt;code&gt;无校验位（奇偶校验）&lt;/code&gt;&lt;br&gt;1：有1个停止位&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;/&lt;em&gt; B卷简答题 &lt;/em&gt;/&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;请列举linux中常见的字符设备和块设备名称&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;字符设备：键盘、鼠标、串口、LED&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;块设备：U盘、硬盘、SD卡&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;请你描述QT开发中信号与插槽的特点&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;当一个信号被发射，它所连接的槽会被立即执行，就像一个普通函数调用一样。 信号/槽机制完全不依赖于任何一种图形用户界面的事件回路。&lt;/code&gt;&lt;br&gt;&lt;code&gt;当所有的槽都返回后 emit也将返回。如果几个槽被连接到一个信号，当信号被发射时，这些槽就会被按任意顺序一个 接一个地执行。&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;嵌入式开发环境中主要包括哪些组件？&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;嵌入式开发环境中主要包括哪些组件？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt; &lt;code&gt;宿主机&lt;/code&gt;&lt;br&gt; &lt;code&gt;目标机（评估电路板）&lt;/code&gt;&lt;br&gt; &lt;code&gt;基于JTAG的ICD仿真器、或调试监控软件、或在线仿真器ICE&lt;/code&gt;&lt;br&gt; &lt;code&gt;运行于宿主机的交叉编译器和链接器、以及开发工具链或软件开发环境  嵌入式操作系统&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;智能家具系统框架图&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;为什么在linux操作系统编译针对ARM处理器的时候，为什么需要引入交叉编译工具？&lt;/p&gt;
