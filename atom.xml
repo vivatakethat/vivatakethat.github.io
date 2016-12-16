@@ -83,237 +83,11 @@
   </entry>
   
   <entry>
-    <title>嵌入式系统应用开发实践——考试</title>
-    <link href="http://www.vivatakethat.com/2016/12/08/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/"/>
-    <id>http://www.vivatakethat.com/2016/12/08/考试1——嵌入式系统应用开发实践/</id>
-    <published>2016-12-08T14:35:32.000Z</published>
-    <updated>2016-12-11T12:40:32.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E5%86%B7%E5%92%96%E5%95%A1.jpg&quot; alt=&quot;干了这杯冷咖啡&quot; title=&quot;干了这杯冷咖啡&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;课程名称：《嵌入式系统应用开发实践》&lt;/li&gt;
-&lt;li&gt;考试时间: 2016年12月20日&lt;strong&gt;&lt;code&gt;星期二&lt;/code&gt;&lt;/strong&gt;（14：00——16：00）&lt;/li&gt;
-&lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼1-B205&lt;/code&gt;&lt;/strong&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;一、名词解释&quot;&gt;&lt;a href=&quot;#一、名词解释&quot; class=&quot;headerlink&quot; title=&quot;一、名词解释&quot;&gt;&lt;/a&gt;一、名词解释&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;什么是bootloader?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;在嵌入式操作系统中，&lt;code&gt;BootLoader是在操作系统内核运行之前运行。可以初始化硬件设备、建立内存空间映射图，从而将系统的软硬件环境带到一个合适状态，以便为最终调用操作系统内核准备好正确的环境&lt;/code&gt;。因此整个系统的加载启动任务就完全由BootLoader来完成。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;什么叫同步通信？什么叫异步通信？根文件系统？UDP？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;同步是指：发送方发出数据后，等接收方发回响应以后才发下一个数据包的通讯方式。 同步是阻塞模 &lt;/li&gt;
-&lt;li&gt;异步是指：发送方发出数据后，不等接收方发回响应，接着发送下个数据包的通讯方式。异步是非阻塞模式&lt;/li&gt;
-&lt;li&gt;根文件系统: Linux只有一个文件树,整个文件系统是以一个树根”/“为起点的,所有的文件和外部设备都以文件的形式挂结在这个文件树上,包括硬盘,软盘,光驱,调制解调器等，这和以”驱动器盘符”为基础的Windows系统是大不相同的。&lt;/li&gt;
-&lt;li&gt;UDP：&lt;code&gt;用户数据报协议&lt;/code&gt;（英语：User Datagram Protocol，缩写为UDP），又称使用者资料包协定，&lt;code&gt;是一个简单的面向数据报的传输层协议&lt;/code&gt;，正式规范为RFC 768。 &lt;code&gt;在TCP/IP模型中，UDP为网络层以上和应用层以下提供了一个简单的接口&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;在QT里什么叫插槽？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;信号和插槽用于2个对象之间的通信，信号和插槽是Qt的核心特征。插槽会在连接它的信号被激发时调用。插槽是普通C++函数。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;一般而言，嵌入式系统的构架可以分为4个部分：分别是（  &lt;strong&gt;&lt;code&gt;处理器&lt;/code&gt;&lt;/strong&gt;       ）、存储器、输入/输出和软件，一般软件亦分为操作系统相关和（   &lt;strong&gt;&lt;code&gt;应用软件&lt;/code&gt;&lt;/strong&gt;     ）两个主要部分&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;二、填空&quot;&gt;&lt;a href=&quot;#二、填空&quot; class=&quot;headerlink&quot; title=&quot;二、填空&quot;&gt;&lt;/a&gt;二、填空&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;嵌入式系统使用的微处理器可以将嵌入式系统分为&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;嵌入式微控制器&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;嵌入式微处理器&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;嵌入式DSP处理器&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;片上系统(SOC)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;操作系统是连接硬件与应用程序的系统程序，其基本功能有：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;进程管理&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;内存管理&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;文件系统管理&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;IO资源管理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;从嵌入式操作系统特点可以将嵌入式操作系统分为&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;实时操作系统&lt;/code&gt;&lt;br&gt;硬实时/软实时 操作系统&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;分时操作系统&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;内核负责管理各个任务，或者为每个任务分配CPU时间并且负责任务之间的通信，内核的基本服务是：&lt;code&gt;任务调度&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;嵌入式开发一般采用宿主机和目标机的开发方式，其中宿主机是指 &lt;code&gt;台式机或PC机&lt;/code&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;串口通信中最少需要连接&lt;code&gt;3条&lt;/code&gt;线.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;zigbee网络拓扑的3种类型：&lt;code&gt;星形、树形、Mesh型&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CC2530 io的反向设置的时候&lt;code&gt;0为输入，1为输出&lt;/code&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;传感器按数据类型可以分为：&lt;code&gt;模拟量、开关量、数字量&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Linux操作系统下修改文件属性命令是&lt;br&gt;&lt;code&gt;chmod&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安卓的应用程序开发环境的搭建包括  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;安装JDK&lt;/code&gt; 及配置环境变量、&lt;code&gt;Eclipse安装&lt;/code&gt;，&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ADT的安装&lt;/code&gt;和安卓&lt;code&gt;SDK的安装和配置&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;选择题：&quot;&gt;&lt;a href=&quot;#选择题：&quot; class=&quot;headerlink&quot; title=&quot;选择题：&quot;&gt;&lt;/a&gt;&lt;code&gt;选择&lt;/code&gt;题：&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;CC2530是片上系统主核采用的是  &lt;code&gt;8051&lt;/code&gt;  芯片&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CC2530采用无线通信的协议是：&lt;code&gt;ZigBee&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;TCP/IP协议中路由器工作的层次称之为：  &lt;code&gt;网络层&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;CC2530 的处理器SDRAM容量最大是： &lt;code&gt;8K&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CC2530有&lt;code&gt;21&lt;/code&gt; 个数字IO引脚&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CC2530有   &lt;code&gt;2个&lt;/code&gt;  串口（UART）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;光照传感器，当无光线的时候，传感器的阻值是         &lt;code&gt;最大&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;人体的红外传感器是 &lt;code&gt;开关量&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;温湿度传感器是  &lt;code&gt;数字量&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Linux中需要加载硬件的需要创建节点，创建节点的命令是:    &lt;code&gt;mknod&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;判断题&quot;&gt;&lt;a href=&quot;#判断题&quot; class=&quot;headerlink&quot; title=&quot;判断题&quot;&gt;&lt;/a&gt;判断题&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;所有的电子设备都属于嵌入式设备  &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;冯诺依曼体系结构将被哈佛体系所取代  &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;嵌入式Linux操作系统属于免费的操作系统  &lt;code&gt;（对）&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;移植操作系统时需要修改操作系统中与处理器直接相关的程序   &lt;code&gt;（对）&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;USB2.0接口最大的通信数据最大是12M/S    &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;简答题&quot;&gt;&lt;a href=&quot;#简答题&quot; class=&quot;headerlink&quot; title=&quot;简答题&quot;&gt;&lt;/a&gt;简答题&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;请说出嵌入式linux开发的一般流程&lt;/strong&gt;&lt;blockquote&gt;
-&lt;p&gt;请分点回答&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.&lt;/code&gt;&lt;/strong&gt;建立交叉编译器开发环境&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.&lt;/code&gt;&lt;/strong&gt;配置开发主机:MINICOM、NFS网络文件系统&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;3.&lt;/code&gt;&lt;/strong&gt;建立引导装载程序Bootloader&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;4.&lt;/code&gt;&lt;/strong&gt;下载别人已经移植好的Linux操作系统&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;5.&lt;/code&gt;&lt;/strong&gt;建立根文件系统&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;6.&lt;/code&gt;&lt;/strong&gt;建立应用程序的Flash磁盘分区&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;7.&lt;/code&gt;&lt;/strong&gt;开发应用程序&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;8.&lt;/code&gt;&lt;/strong&gt;烧写内核、根文件系统、应用程序&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;列举Qt开发中常见的布局方法&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;（1）使用水平布局类&lt;code&gt;QHBoxLayout&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;（2）使用垂直布局类&lt;code&gt;QVBoxLayout&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;（3）使用网格布局类&lt;code&gt;QGridLayout&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;（4）使用表格布局类&lt;code&gt;QFormLayout&lt;/code&gt;;&lt;/li&gt;
-&lt;li&gt;（5）使用分组布局类&lt;code&gt;QStackLayout&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;请你描述建立一个嵌入式开发平台的步骤&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;(1)连接主机和目标板&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;（2）使用flash工具烧写bootloader&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;(3)配置并启动主机的bootp服务&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;（4）配置并启动主机的tftp服务&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;（5）使用tftp下载内核及根文件系统镜像到目标板，重启目标板&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;（6）配置并启动NFS服务&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;（7）在目标板使用mount挂载主机的目录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;（8）再次使用bootp命令确认bootp服务是否建立，使用tftp命令确认tftp服务建立。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;（9）将内核镜像和根文件系统cp到tftp根目录。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;（10）重启目标板，确认嵌入式linux正常启动。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;简述物联网的架构&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;物联网体系架构分为3个层次：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;最上层——应用层:根据底层采集的数据，形成与业务需求相适应&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;第二层网络层： 实现广阔的互联网功能。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;底层-感知层：用来感知数据的感知层&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;请你写出串口通信：9600，8,N,1&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;9600：&lt;code&gt;波特率&lt;/code&gt;&lt;br&gt;8：&lt;code&gt;数据位&lt;/code&gt;&lt;br&gt;N：&lt;code&gt;无校验位（奇偶校验）&lt;/code&gt;&lt;br&gt;1：有1个停止位&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;/&lt;em&gt; B卷简答题 &lt;/em&gt;/&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;请列举linux中常见的字符设备和块设备名称&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;字符设备：键盘、鼠标、串口、LED&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;块设备：U盘、硬盘、SD卡&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;请你描述QT开发中信号与插槽的特点&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;当一个信号被发射，它所连接的槽会被立即执行，就像一个普通函数调用一样。 信号/槽机制完全不依赖于任何一种图形用户界面的事件回路。&lt;/code&gt;&lt;br&gt;&lt;code&gt;当所有的槽都返回后 emit也将返回。如果几个槽被连接到一个信号，当信号被发射时，这些槽就会被按任意顺序一个 接一个地执行。&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;嵌入式开发环境中主要包括哪些组件？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt; &lt;code&gt;宿主机&lt;/code&gt;&lt;br&gt; &lt;code&gt;目标机（评估电路板）&lt;/code&gt;&lt;br&gt; &lt;code&gt;基于JTAG的ICD仿真器、或调试监控软件、或在线仿真器ICE&lt;/code&gt;&lt;br&gt; &lt;code&gt;运行于宿主机的交叉编译器和链接器、以及开发工具链或软件开发环境  嵌入式操作系统&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;智能家具系统框架图&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;为什么在linux操作系统编译针对ARM处理器的时候，为什么需要引入交叉编译工具？&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;程序题目（2题，1个java程序一个C程序）（18分）&quot;&gt;&lt;a href=&quot;#程序题目（2题，1个java程序一个C程序）（18分）&quot; class=&quot;headerlink&quot; title=&quot;程序题目（2题，1个java程序一个C程序）（18分）&quot;&gt;&lt;/a&gt;程序题目（2题，1个java程序一个C程序）（18分）&lt;/h1&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E5%86%B7%E5%92%96%E5%95%A1.jpg&quot; alt=&quot;干了这杯冷咖啡&quot; title=&quot;干了这杯冷咖啡&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;课程名称：《嵌入式系统应用开发实践》&lt;/li&gt;
-&lt;li&gt;考试时间: 2016年12月20日&lt;strong&gt;&lt;code&gt;星期二&lt;/code&gt;&lt;/strong&gt;（14：00——16：00）&lt;/li&gt;
-&lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼1-B205&lt;/code&gt;&lt;/strong&gt;
-    
-    </summary>
-    
-      <category term="嵌入式" scheme="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-      <category term="字符设备" scheme="http://www.vivatakethat.com/tags/%E5%AD%97%E7%AC%A6%E8%AE%BE%E5%A4%87/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C++_memo-类与对象</title>
     <link href="http://www.vivatakethat.com/2016/12/01/C++_memo-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/"/>
     <id>http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/</id>
     <published>2016-12-01T07:42:32.000Z</published>
-    <updated>2016-12-09T02:57:50.000Z</updated>
+    <updated>2016-12-13T15:43:03.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600&quot; alt=&quot;Grand theft dora&quot; title=&quot;Grand theft dora&quot;&gt;&lt;/p&gt;
 &lt;p&gt;抽象、封装、类。&lt;br&gt;面向对象的核心是类,利用它可以实对&lt;strong&gt;&lt;code&gt;数据&lt;/code&gt;&lt;/strong&gt;和&lt;strong&gt;&lt;code&gt;方法(函数)&lt;/code&gt;&lt;/strong&gt;的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。&lt;/p&gt;
@@ -327,8 +101,8 @@
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;C++是一种比较流行的面向对象语言，面向对象语言有三大特性：继承，封装和多态。&lt;/p&gt;
-&lt;h1 id=&quot;抽象&quot;&gt;&lt;a href=&quot;#抽象&quot; class=&quot;headerlink&quot; title=&quot;抽象&quot;&gt;&lt;/a&gt;抽象&lt;/h1&gt;&lt;p&gt;抽象与具体相对应,&lt;br&gt;就是找出事物的共性，将相同性质的事物化为一类，而忽略具体细节，&lt;/p&gt;
+&lt;p&gt;C++是一种比较流行的面向对象语言，面向对象语言有三大特性：&lt;code&gt;继承&lt;/code&gt;，&lt;code&gt;封装&lt;/code&gt;和&lt;code&gt;多态&lt;/code&gt;。&lt;/p&gt;
+&lt;h1 id=&quot;抽象&quot;&gt;&lt;a href=&quot;#抽象&quot; class=&quot;headerlink&quot; title=&quot;抽象&quot;&gt;&lt;/a&gt;抽象&lt;/h1&gt;&lt;p&gt;抽象与具体相对应,&lt;br&gt;就是找出事物的共性，忽略具体细节,将相同性质的事物化为一类，，&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;抽象就是面向对象程序设计的基本原则之一&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -342,7 +116,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;将数据和代码封装为一个&lt;strong&gt;可重用&lt;/strong&gt;的C++类,在编写代码的时候就可以使用现有的类，而不必了解具体的实现细节。&lt;/p&gt;
 &lt;p&gt;例如：&lt;br&gt;电视封装形式：&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Television    &lt;span class=&quot;comment&quot;&gt;//class关键字 类名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;               &lt;span class=&quot;comment&quot;&gt;//边界&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:          &lt;span class=&quot;comment&quot;&gt;//外部接口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetChannel&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; Channe1Num)&lt;/span&gt;&lt;/span&gt;;    &lt;span class=&quot;comment&quot;&gt;//行为，代码成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ShutDown&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;              &lt;span class=&quot;comment&quot;&gt;//行为，代码成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:                &lt;span class=&quot;comment&quot;&gt;//特定的访问权限&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; CurrentChanel;              &lt;span class=&quot;comment&quot;&gt;//属性，数据成员&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;                                  &lt;span class=&quot;comment&quot;&gt;//边界&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;这是一个C++类的声明，它声明了Television的类，&lt;br&gt;大括号”{ }”中部分成员称为&lt;strong&gt;&lt;code&gt;类体&lt;/code&gt;&lt;/strong&gt;，类体由&lt;strong&gt;&lt;code&gt;成员&lt;/code&gt;&lt;/strong&gt;表组成，成员表为    数据定义或函数定义。？？&lt;/p&gt;
+&lt;p&gt;这是一个C++类的声明，它声明了Television的类，&lt;br&gt;大括号”{ }”中部分成员称为&lt;strong&gt;&lt;code&gt;类体&lt;/code&gt;&lt;/strong&gt;，类体由&lt;strong&gt;&lt;code&gt;成员表&lt;/code&gt;&lt;/strong&gt;组成，成员表为    &lt;code&gt;数据定义&lt;/code&gt;或&lt;code&gt;函数定义&lt;/code&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;声明为public和private是利用指定成员的不同访问权限。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -395,12 +169,42 @@
 &lt;li&gt;protected:定义保护成员；值允许本类或子类中函数访问、调用。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;类的成员函数&quot;&gt;&lt;a href=&quot;#类的成员函数&quot; class=&quot;headerlink&quot; title=&quot;类的成员函数&quot;&gt;&lt;/a&gt;类的成员函数&lt;/h2&gt;&lt;p&gt;类的行为由类的成员函数描述,成员函数是算法实现的部分，是对封装的数据进行的唯一途径。&lt;/p&gt;
-&lt;p&gt;实例：定义一个成员函数&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Circle&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetRadius&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; Radius)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		m_Radius = Radius;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;GetCircumference&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * m_Radius*&lt;span class=&quot;number&quot;&gt;3.14159265&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;PrintCircumference&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;Circumference:&quot;&lt;/span&gt; &amp;lt;&amp;lt; GetCircumference() &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; m_Radius;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Circle c;					&lt;span class=&quot;comment&quot;&gt;//创建一个Circle类的对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.SetRadius(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);				&lt;span class=&quot;comment&quot;&gt;//调用成员函数SetRadius()对对象的数据成员赋值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.PrintCircumference();		&lt;span class=&quot;comment&quot;&gt;//调用成员函数 PrintCircumference()输出计算结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;内联函数&lt;br&gt;代码&lt;strong&gt;&lt;code&gt;相对简单&lt;/code&gt;&lt;/strong&gt;且&lt;strong&gt;&lt;code&gt;调用次数频繁&lt;/code&gt;&lt;/strong&gt;的成员函数可以声明为&lt;strong&gt;&lt;code&gt;内联函数&lt;/code&gt;&lt;/strong&gt;。也可以采用在函数实现的时候加上&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#10;&amp;#62;Circle&amp;#31867;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#22823;&amp;#25324;&amp;#21495;&amp;#37324;&amp;#30340;3&amp;#20010;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#26159;&amp;#22312;&amp;#31867;&amp;#30340;&amp;#22768;&amp;#26126;&amp;#37096;&amp;#20998;&amp;#20013;&amp;#23450;&amp;#20041;&amp;#65292;&amp;#23450;&amp;#20041;&amp;#22312;&amp;#31867;&amp;#30340;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#19968;&amp;#33324;&amp;#35268;&amp;#27169;&amp;#37117;&amp;#27604;&amp;#36739;&amp;#23567;&amp;#65292;&amp;#21482;&amp;#26377;1~5&amp;#21477;&amp;#65292;&amp;#29305;&amp;#21035;&amp;#26159;&amp;#19981;&amp;#33021;&amp;#20351;&amp;#29992;switch&amp;#35821;&amp;#21477;&amp;#12290;&amp;#10;&amp;#62;&amp;#62;&amp;#22312;C++&amp;#20013;&amp;#65292;&amp;#36890;&amp;#24120;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#37324;&amp;#23450;&amp;#20041;&amp;#31867;&amp;#65292;&amp;#22240;&amp;#27492;&amp;#36825;&amp;#20123;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#20063;&amp;#21035;&amp;#20889;&amp;#20837;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#65292;&amp;#36890;&amp;#24120;&amp;#22312;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#20013;&amp;#21482;&amp;#26159;&amp;#22768;&amp;#26126;&amp;#20989;&amp;#25968;&amp;#65292;&amp;#32780;&amp;#20989;&amp;#25968;&amp;#23450;&amp;#20041;&amp;#19981;&amp;#33021;&amp;#22312;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#20102;i&amp;#65292;&amp;#22240;&amp;#20026;&amp;#20182;&amp;#20204;&amp;#20250;&amp;#34987;&amp;#32534;&amp;#35793;&amp;#22810;&amp;#27425;&amp;#12290;&amp;#22914;&amp;#26524;&amp;#26159;&amp;#20316;&amp;#20026;&amp;#20869;&amp;#32852;&amp;#20989;&amp;#25968;&amp;#65292;&amp;#21017;&amp;#20801;&amp;#35768;&amp;#34987;&amp;#21253;&amp;#21547;&amp;#22312;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#20013;&amp;#65292;&amp;#22240;&amp;#20026;&amp;#20869;&amp;#32852;&amp;#20989;&amp;#25968;&amp;#22312;&amp;#28304;&amp;#31243;&amp;#24207;&amp;#20013;&amp;#21407;&amp;#22320;&amp;#25299;&amp;#23637;&amp;#65292;&amp;#36825;&amp;#26679;&amp;#21487;&amp;#20197;&amp;#20943;&amp;#23569;&amp;#35843;&amp;#29992;&amp;#30340;&amp;#24320;&amp;#38144;&amp;#12290;&amp;#10;&amp;#62;&amp;#62;&amp;#62;&amp;#22312;&amp;#31867;&amp;#20013;&amp;#34987;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#34987;&amp;#40664;&amp;#35748;&amp;#20026;&amp;#20869;&amp;#32852;&amp;#20989;&amp;#25968;&amp;#65292;&amp;#36825;&amp;#26679;&amp;#23601;&amp;#36991;&amp;#20813;&amp;#20102;&amp;#20989;&amp;#25968;&amp;#23450;&amp;#20041;&amp;#19981;&amp;#33021;&amp;#34987;&amp;#21253;&amp;#21547;&amp;#22312;&amp;#22836;&amp;#25991;&amp;#20214;&amp;#37324;&amp;#12290;&amp;#10;&amp;#10; + &amp;#31867;&amp;#22806;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#10;  &amp;#10; C++&amp;#20801;&amp;#35768;&amp;#22312;&amp;#31867;&amp;#22768;&amp;#26126;&amp;#30340;&amp;#21518;&amp;#38754;&amp;#23450;&amp;#20041;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;.&amp;#10;&amp;#22312;&amp;#31867;&amp;#20027;&amp;#20307;&amp;#22806;&amp;#23450;&amp;#20041;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#30340;&amp;#26684;&amp;#24335;&amp;#20026;:&amp;#10;```C++&amp;#10;&amp;#60;&amp;#31867;&amp;#22411;&amp;#62; &amp;#9;&amp;#60;&amp;#31867;&amp;#21517;&amp;#62;::   &amp;#60;&amp;#25104;&amp;#21592;&amp;#20989;&amp;#25968;&amp;#21517;&amp;#62;(&amp;#24418;&amp;#21442;&amp;#34920;)      &amp;#123;&amp;#20989;&amp;#25968;&amp;#20307;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;内联函数&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代码&lt;strong&gt;&lt;code&gt;相对简单&lt;/code&gt;&lt;/strong&gt;且&lt;strong&gt;&lt;code&gt;调用次数频繁&lt;/code&gt;&lt;/strong&gt;的成员函数可以声明为&lt;strong&gt;&lt;code&gt;内联函数&lt;/code&gt;&lt;/strong&gt;。也可以采用在函数实现的时候加上&lt;code&gt;inline&lt;/code&gt;显式声明的方式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实例：定义一个成员函数&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Circle&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetRadius&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; Radius)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		m_Radius = Radius;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;GetCircumference&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * m_Radius*&lt;span class=&quot;number&quot;&gt;3.14159265&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;PrintCircumference&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;Circumference:&quot;&lt;/span&gt; &amp;lt;&amp;lt; GetCircumference() &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; m_Radius;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Circle c;					&lt;span class=&quot;comment&quot;&gt;//创建一个Circle类的对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.SetRadius(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);				&lt;span class=&quot;comment&quot;&gt;//调用成员函数SetRadius()对对象的数据成员赋值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.PrintCircumference();		&lt;span class=&quot;comment&quot;&gt;//调用成员函数 PrintCircumference()输出计算结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Circle类定义的大括号里的3个成员函数是在类的声明部分中定义，定义在类的成员函数一般规模都比较小，只有1~5句，特别是不能使用switch语句。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在C++中，通常头文件里定义类，因此这些成员函数也别写入头文件，通常在头文件中只是声明函数，而函数定义不能在头文件了i，因为他们会被编译多次。如果是作为内联函数，则允许被包含在头文件中，因为内联函数在源程序中原地拓展，这样可以减少调用的开销。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在类中被定义的成员函数被默认为内联函数，这样就避免了函数定义不能被包含在头文件里。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;类外定义的成员函数&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;C++允许在类声明的后面定义成员函数.&lt;br&gt;在类主体外定义成员函数的格式为:&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;类型&amp;gt; 	&amp;lt;类名&amp;gt;::   &amp;lt;成员函数名&amp;gt;(形参表)      &amp;#123;函数体&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;其中&lt;code&gt;::&lt;/code&gt;称为域运算，它指出成员函数是属于类名所指类中的成员函数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Circle&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetRadius&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; Radius)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;GetCircumference&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;PrintCircumference&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; m_Radius;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;header.h&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; Circle::SetRadius(&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; Radius)   &lt;span class=&quot;comment&quot;&gt;//在类外部定义时，成员函数名前要多家一个类名；如果不加编译器就会认为该函数不是类的成员函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	m_Radius = Radius;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; Circle::GetCircumference()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * m_Radius*&lt;span class=&quot;number&quot;&gt;3.14159265&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; Circle::PrintCircumference()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;Circumference:&quot;&lt;/span&gt; &amp;lt;&amp;lt; GetCircumference() &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Circle c;					&lt;span class=&quot;comment&quot;&gt;//创建一个Circle类的对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.SetRadius(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);				&lt;span class=&quot;comment&quot;&gt;//调用成员函数SetRadius()对对象的数据成员赋值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.PrintCircumference();		&lt;span class=&quot;comment&quot;&gt;//调用成员函数 PrintCircumference()输出计算结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;程序中采用将成员函数的定义和类的定义分开，是目前开发程序最常用的做法。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;类的定义&lt;code&gt;（头文件）&lt;/code&gt;将被堪称类的外部接口，类的成员函数则堪称是类的内部实现。这和标准库的使用道理一致。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;类的成员函数的重载&amp;amp;&amp;amp;类与结构体的关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Car&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetSpeed&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		m_speed = &lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;m_speed=&quot;&lt;/span&gt; &amp;lt;&amp;lt; m_speed &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;----&amp;gt;mark1&quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetSpeed&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; speed)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		m_speed = speed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;m_speed=&quot;&lt;/span&gt; &amp;lt;&amp;lt; m_speed &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;----&amp;gt;mark2&quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; m_speed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Truck&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetSepeed&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; speed)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		m_speed = speed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;m_speed=&quot;&lt;/span&gt; &amp;lt;&amp;lt; m_speed &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;----&amp;gt;mark3&quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; m_speed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SetSpeed&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; speed)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; sp = speed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;sp=&quot;&lt;/span&gt; &amp;lt;&amp;lt; sp &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;----&amp;gt;mark4&quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Car c;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Truck t;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.SetSpeed();    &lt;span class=&quot;comment&quot;&gt;//mark 1    匹配 Car类中的void SetSpeed();&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.SetSpeed(&lt;span class=&quot;number&quot;&gt;10.2&lt;/span&gt;);  &lt;span class=&quot;comment&quot;&gt;//mark2    匹配 Car类中的     void SetSpeed(float speed)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	t.SetSepeed(&lt;span class=&quot;number&quot;&gt;60&lt;/span&gt;);   &lt;span class=&quot;comment&quot;&gt;//mark 3      匹配 Truck类中 void SetSepeed(float speed)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c.SetSpeed(&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;);    &lt;span class=&quot;comment&quot;&gt;// 同mark2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	SetSpeed(&lt;span class=&quot;number&quot;&gt;100.5&lt;/span&gt;);     &lt;span class=&quot;comment&quot;&gt;//mark4    匹配全局函数  void SetSpeed(float speed)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;结构体与类的唯一区别在于：在类中，其成员的缺省存取权限是私有，而在结构体类型中，其成员的缺省权限是公有。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当只需要描述数据结构时，使用结构体较好。而既要描述数据的处理方法时使用类较好。&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
@@ -1680,7 +1484,7 @@
     <link href="http://www.vivatakethat.com/2016/11/01/E-%E8%8B%B1%E8%AF%AD%E5%91%A8%E8%AE%B0memo_20161101/"/>
     <id>http://www.vivatakethat.com/2016/11/01/E-英语周记memo_20161101/</id>
     <published>2016-11-01T04:35:32.000Z</published>
-    <updated>2016-12-10T11:33:13.000Z</updated>
+    <updated>2016-12-13T12:40:20.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/COUPLE.jpg&quot; alt=&quot;couple&quot; title=&quot;couple&quot;&gt;&lt;/p&gt;
 &lt;p&gt;11月的第一周,信息学校的第9周&lt;/p&gt;
@@ -1764,7 +1568,8 @@
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;michigan&lt;/code&gt;&lt;/strong&gt;：密西根州&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;michigan&lt;/code&gt;&lt;/strong&gt;：密西根州&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;resident&lt;/code&gt;&lt;/strong&gt;:居民&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;the National Guard&lt;/code&gt;&lt;/strong&gt;国家警卫队&lt;/p&gt;
 &lt;/li&gt;
@@ -1796,6 +1601,8 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;severely&lt;/code&gt;&lt;/strong&gt;严重&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;mental&lt;/code&gt;&lt;/strong&gt;精神&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;detroit&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt; Michigan has deployed the National Guard  to distribute bottled water and filters  to residents in Flint who are struggling with a water crisis.  The move ordered by Governor Rick Snyder  comes after recent tests found elevated blood  lead levels in children living in the city.  Old plumbing leaked lead into homes after  the city switched water sources.  More than 30 Guardsmen will be in place by Friday in Flint, which has 99 000 people.  Mr Snyder has described the situation as a crisis  and declared an emergency last week.  The city switched its water source from the city  of Detroit to the Flint River in 2014, in order to save money.  The water from the river leached lead off old plumbing, which then made its way into people’s homes.  They have since switched back to Detroit’s water.  In October, testing revealed increased lead levels  in water supplies and in children’s blood.  Lead exposure can cause learning disabilities  and behavioural problems in children.  According to the Mayo Clinic, young children are especially vulnerable, and exposure can severely affect mental  and physical development. &lt;/p&gt;
@@ -2031,6 +1838,86 @@
     
     
       <category term="MCU" scheme="http://www.vivatakethat.com/tags/MCU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Breaking Bad-台词</title>
+    <link href="http://www.vivatakethat.com/2016/10/31/E-Breaking%20Bad-%E5%8F%B0%E8%AF%8D/"/>
+    <id>http://www.vivatakethat.com/2016/10/31/E-Breaking Bad-台词/</id>
+    <published>2016-10-31T04:35:32.000Z</published>
+    <updated>2016-12-07T17:15:39.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%BB%9D%E5%91%BD%E6%AF%92%E5%B8%88.jpg&quot; alt=&quot;Breaking Bad&quot; title=&quot;Breaking Bad&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Breaking Bad 绝命毒师台词&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;Breaking-Bad&quot;&gt;&lt;a href=&quot;#Breaking-Bad&quot; class=&quot;headerlink&quot; title=&quot;Breaking Bad&quot;&gt;&lt;/a&gt;Breaking Bad&lt;/h1&gt;&lt;p&gt;I live at 308 Negra AArroyo Lane,Albuquerque,New Mexico,87104.To all law-enforcement entities,this is not admisson of guilt.I am speaking to my family now.&lt;/p&gt;
+&lt;p&gt;对skyler独白：&lt;br&gt;You’re my big man.There are going to be some things that you’ll come to learn about me in the next few days.i just want you know that no matter how it may look.&lt;br&gt;i only had you in my heart.&lt;br&gt;Goody.&lt;br&gt;[SIRENS  APPROACHING]&lt;/p&gt;
+&lt;p&gt;&amp;gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CRYSTALLOGRAPHY PROJECT LEADER FOR PROTON RADIOGRAPHY 1985&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CONTRIBUTOR TO RESEARCH AWARED THE NOBEL PRIZE&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;skyler:That is veggie bacon.Believe it or not.Zero cholesterol and you won’t even taste the difference.&lt;/p&gt;
+&lt;p&gt;skyler: I don’t want him dicking you around tonight.&lt;/p&gt;
+&lt;p&gt;w:  &amp;nbsp; How does it feel to be a smart-ass?&lt;/p&gt;
+&lt;p&gt;WALT:You’re all set?&lt;br&gt;Anser: Yeah, I’m fine.&lt;/p&gt;
+&lt;p&gt;WALT: Molecules change their bonds.Elements.They combine and change into compounds.I mean, it’s just – it’s the constant,it’s the cycle.it’s solution,dissolution,just over and over.It is growth,the decay.then transformation.&lt;br&gt;[STUDENTS WHISPERING INDISTINCTLY]&lt;/p&gt;
+&lt;p&gt;I have cancer.Lung cancer.It’s bad&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lung&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We always took the proper precautions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;proper precautions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ventilation hood &lt;/p&gt;
+&lt;p&gt;We should hire a lawyer&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hire&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Okay,so first thing tomorrow,I talk to my radiologists,we find you the best the oncology dream team.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;radiologist&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;oncology&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;what happened to your hallway,man?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hallway&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Did,like,the ceiling fall down,or….?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ceiling&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Your know,from time to time&lt;/p&gt;
+&lt;p&gt;NO,man,he’s out.His cousin bailed him out&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cousin&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;bailed  XX out&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Anser the questions by marking the corresponding letter on Answer sheet 2.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;correspond&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%BB%9D%E5%91%BD%E6%AF%92%E5%B8%88.jpg&quot; alt=&quot;Breaking Bad&quot; title=&quot;Breaking Bad&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Breaking Bad 绝命毒师台词&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="English" scheme="http://www.vivatakethat.com/categories/English/"/>
+    
+    
+      <category term="memo" scheme="http://www.vivatakethat.com/tags/memo/"/>
     
   </entry>
   

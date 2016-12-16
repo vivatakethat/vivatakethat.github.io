@@ -23,7 +23,7 @@
 
 函数是对方法的封装，用于完成特定的功能。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E8%83%96%E8%99%8E.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-09T02:57:50.000Z">
+<meta property="og:updated_time" content="2016-12-13T15:43:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo-类与对象">
 <meta name="twitter:description" content="抽象、封装、类。面向对象的核心是类,利用它可以实对数据和方法(函数)的封装，通过类类的继承，能够实现对问题的深入抽象描述。在面向对象程序设计中，程序模块由类构成。
@@ -127,8 +127,8 @@
 </blockquote>
 </li>
 </ul>
-<p>C++是一种比较流行的面向对象语言，面向对象语言有三大特性：继承，封装和多态。</p>
-<h1 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h1><p>抽象与具体相对应,<br>就是找出事物的共性，将相同性质的事物化为一类，而忽略具体细节，</p>
+<p>C++是一种比较流行的面向对象语言，面向对象语言有三大特性：<code>继承</code>，<code>封装</code>和<code>多态</code>。</p>
+<h1 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h1><p>抽象与具体相对应,<br>就是找出事物的共性，忽略具体细节,将相同性质的事物化为一类，，</p>
 <blockquote>
 <p>抽象就是面向对象程序设计的基本原则之一</p>
 </blockquote>
@@ -142,7 +142,7 @@
 </blockquote>
 <p>将数据和代码封装为一个<strong>可重用</strong>的C++类,在编写代码的时候就可以使用现有的类，而不必了解具体的实现细节。</p>
 <p>例如：<br>电视封装形式：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Television    <span class="comment">//class关键字 类名</span></span><br><span class="line">&#123;               <span class="comment">//边界</span></span><br><span class="line"><span class="keyword">public</span>:          <span class="comment">//外部接口</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetChannel</span><span class="params">(<span class="keyword">int</span> Channe1Num)</span></span>;    <span class="comment">//行为，代码成员</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ShutDown</span><span class="params">()</span></span>;              <span class="comment">//行为，代码成员</span></span><br><span class="line"><span class="keyword">private</span>:                <span class="comment">//特定的访问权限</span></span><br><span class="line">    <span class="keyword">int</span> CurrentChanel;              <span class="comment">//属性，数据成员</span></span><br><span class="line">&#125;;                                  <span class="comment">//边界</span></span><br></pre></td></tr></table></figure></p>
-<p>这是一个C++类的声明，它声明了Television的类，<br>大括号”{ }”中部分成员称为<strong><code>类体</code></strong>，类体由<strong><code>成员</code></strong>表组成，成员表为    数据定义或函数定义。？？</p>
+<p>这是一个C++类的声明，它声明了Television的类，<br>大括号”{ }”中部分成员称为<strong><code>类体</code></strong>，类体由<strong><code>成员表</code></strong>组成，成员表为    <code>数据定义</code>或<code>函数定义</code>。</p>
 <blockquote>
 <p>声明为public和private是利用指定成员的不同访问权限。</p>
 <blockquote>
@@ -195,12 +195,42 @@
 <li>protected:定义保护成员；值允许本类或子类中函数访问、调用。</li>
 </ul>
 <h2 id="类的成员函数"><a href="#类的成员函数" class="headerlink" title="类的成员函数"></a>类的成员函数</h2><p>类的行为由类的成员函数描述,成员函数是算法实现的部分，是对封装的数据进行的唯一途径。</p>
-<p>实例：定义一个成员函数<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Circle</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetRadius</span><span class="params">(<span class="keyword">float</span> Radius)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		m_Radius = Radius;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">GetCircumference</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span> * m_Radius*<span class="number">3.14159265</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">PrintCircumference</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Circumference:"</span> &lt;&lt; GetCircumference() &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">float</span> m_Radius;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	Circle c;					<span class="comment">//创建一个Circle类的对象</span></span><br><span class="line">	c.SetRadius(<span class="number">5</span>);				<span class="comment">//调用成员函数SetRadius()对对象的数据成员赋值</span></span><br><span class="line">	c.PrintCircumference();		<span class="comment">//调用成员函数 PrintCircumference()输出计算结果</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>内联函数<br>代码<strong><code>相对简单</code></strong>且<strong><code>调用次数频繁</code></strong>的成员函数可以声明为<strong><code>内联函数</code></strong>。也可以采用在函数实现的时候加上<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#62;Circle&#31867;&#23450;&#20041;&#30340;&#22823;&#25324;&#21495;&#37324;&#30340;3&#20010;&#25104;&#21592;&#20989;&#25968;&#26159;&#22312;&#31867;&#30340;&#22768;&#26126;&#37096;&#20998;&#20013;&#23450;&#20041;&#65292;&#23450;&#20041;&#22312;&#31867;&#30340;&#25104;&#21592;&#20989;&#25968;&#19968;&#33324;&#35268;&#27169;&#37117;&#27604;&#36739;&#23567;&#65292;&#21482;&#26377;1~5&#21477;&#65292;&#29305;&#21035;&#26159;&#19981;&#33021;&#20351;&#29992;switch&#35821;&#21477;&#12290;&#10;&#62;&#62;&#22312;C++&#20013;&#65292;&#36890;&#24120;&#22836;&#25991;&#20214;&#37324;&#23450;&#20041;&#31867;&#65292;&#22240;&#27492;&#36825;&#20123;&#25104;&#21592;&#20989;&#25968;&#20063;&#21035;&#20889;&#20837;&#22836;&#25991;&#20214;&#65292;&#36890;&#24120;&#22312;&#22836;&#25991;&#20214;&#20013;&#21482;&#26159;&#22768;&#26126;&#20989;&#25968;&#65292;&#32780;&#20989;&#25968;&#23450;&#20041;&#19981;&#33021;&#22312;&#22836;&#25991;&#20214;&#20102;i&#65292;&#22240;&#20026;&#20182;&#20204;&#20250;&#34987;&#32534;&#35793;&#22810;&#27425;&#12290;&#22914;&#26524;&#26159;&#20316;&#20026;&#20869;&#32852;&#20989;&#25968;&#65292;&#21017;&#20801;&#35768;&#34987;&#21253;&#21547;&#22312;&#22836;&#25991;&#20214;&#20013;&#65292;&#22240;&#20026;&#20869;&#32852;&#20989;&#25968;&#22312;&#28304;&#31243;&#24207;&#20013;&#21407;&#22320;&#25299;&#23637;&#65292;&#36825;&#26679;&#21487;&#20197;&#20943;&#23569;&#35843;&#29992;&#30340;&#24320;&#38144;&#12290;&#10;&#62;&#62;&#62;&#22312;&#31867;&#20013;&#34987;&#23450;&#20041;&#30340;&#25104;&#21592;&#20989;&#25968;&#34987;&#40664;&#35748;&#20026;&#20869;&#32852;&#20989;&#25968;&#65292;&#36825;&#26679;&#23601;&#36991;&#20813;&#20102;&#20989;&#25968;&#23450;&#20041;&#19981;&#33021;&#34987;&#21253;&#21547;&#22312;&#22836;&#25991;&#20214;&#37324;&#12290;&#10;&#10; + &#31867;&#22806;&#23450;&#20041;&#30340;&#25104;&#21592;&#20989;&#25968;&#10;  &#10; C++&#20801;&#35768;&#22312;&#31867;&#22768;&#26126;&#30340;&#21518;&#38754;&#23450;&#20041;&#25104;&#21592;&#20989;&#25968;.&#10;&#22312;&#31867;&#20027;&#20307;&#22806;&#23450;&#20041;&#25104;&#21592;&#20989;&#25968;&#30340;&#26684;&#24335;&#20026;:&#10;```C++&#10;&#60;&#31867;&#22411;&#62; &#9;&#60;&#31867;&#21517;&#62;::   &#60;&#25104;&#21592;&#20989;&#25968;&#21517;&#62;(&#24418;&#21442;&#34920;)      &#123;&#20989;&#25968;&#20307;&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong><code>内联函数</code></strong></p>
+<p>代码<strong><code>相对简单</code></strong>且<strong><code>调用次数频繁</code></strong>的成员函数可以声明为<strong><code>内联函数</code></strong>。也可以采用在函数实现的时候加上<code>inline</code>显式声明的方式。</p>
+</li>
+</ul>
+<p>实例：定义一个成员函数<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Circle</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetRadius</span><span class="params">(<span class="keyword">float</span> Radius)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		m_Radius = Radius;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">GetCircumference</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span> * m_Radius*<span class="number">3.14159265</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">PrintCircumference</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Circumference:"</span> &lt;&lt; GetCircumference() &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">float</span> m_Radius;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	Circle c;					<span class="comment">//创建一个Circle类的对象</span></span><br><span class="line">	c.SetRadius(<span class="number">5</span>);				<span class="comment">//调用成员函数SetRadius()对对象的数据成员赋值</span></span><br><span class="line">	c.PrintCircumference();		<span class="comment">//调用成员函数 PrintCircumference()输出计算结果</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>Circle类定义的大括号里的3个成员函数是在类的声明部分中定义，定义在类的成员函数一般规模都比较小，只有1~5句，特别是不能使用switch语句。</p>
+<blockquote>
+<p>在C++中，通常头文件里定义类，因此这些成员函数也别写入头文件，通常在头文件中只是声明函数，而函数定义不能在头文件了i，因为他们会被编译多次。如果是作为内联函数，则允许被包含在头文件中，因为内联函数在源程序中原地拓展，这样可以减少调用的开销。</p>
+<blockquote>
+<p>在类中被定义的成员函数被默认为内联函数，这样就避免了函数定义不能被包含在头文件里。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li><p><strong><code>类外定义的成员函数</code></strong></p>
+<p>C++允许在类声明的后面定义成员函数.<br>在类主体外定义成员函数的格式为:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;类型&gt; 	&lt;类名&gt;::   &lt;成员函数名&gt;(形参表)      &#123;函数体&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <blockquote>
 <p>其中<code>::</code>称为域运算，它指出成员函数是属于类名所指类中的成员函数。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Circle</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetRadius</span><span class="params">(<span class="keyword">float</span> Radius)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">GetCircumference</span><span class="params">()</span></span>; </span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">PrintCircumference</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">float</span> m_Radius;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">"header.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">void</span> Circle::SetRadius(<span class="keyword">float</span> Radius)   <span class="comment">//在类外部定义时，成员函数名前要多家一个类名；如果不加编译器就会认为该函数不是类的成员函数</span></span><br><span class="line">&#123;</span><br><span class="line">	m_Radius = Radius;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">float</span> Circle::GetCircumference()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span> * m_Radius*<span class="number">3.14159265</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">void</span> Circle::PrintCircumference()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Circumference:"</span> &lt;&lt; GetCircumference() &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	Circle c;					<span class="comment">//创建一个Circle类的对象</span></span><br><span class="line">	c.SetRadius(<span class="number">5</span>);				<span class="comment">//调用成员函数SetRadius()对对象的数据成员赋值</span></span><br><span class="line">	c.PrintCircumference();		<span class="comment">//调用成员函数 PrintCircumference()输出计算结果</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序中采用将成员函数的定义和类的定义分开，是目前开发程序最常用的做法。</p>
+<blockquote>
+<p>类的定义<code>（头文件）</code>将被堪称类的外部接口，类的成员函数则堪称是类的内部实现。这和标准库的使用道理一致。</p>
+</blockquote>
+<ul>
+<li>类的成员函数的重载&amp;&amp;类与结构体的关系</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">class</span> Car</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetSpeed</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		m_speed = <span class="number">40</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"m_speed="</span> &lt;&lt; m_speed &lt;&lt; <span class="string">"----&gt;mark1"</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetSpeed</span><span class="params">(<span class="keyword">float</span> speed)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		m_speed = speed;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"m_speed="</span> &lt;&lt; m_speed &lt;&lt; <span class="string">"----&gt;mark2"</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">float</span> m_speed;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Truck</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetSepeed</span><span class="params">(<span class="keyword">float</span> speed)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		m_speed = speed;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"m_speed="</span> &lt;&lt; m_speed &lt;&lt; <span class="string">"----&gt;mark3"</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">float</span> m_speed;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SetSpeed</span><span class="params">(<span class="keyword">float</span> speed)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> sp = speed;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"sp="</span> &lt;&lt; sp &lt;&lt; <span class="string">"----&gt;mark4"</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	Car c;</span><br><span class="line">	Truck t;</span><br><span class="line">	c.SetSpeed();    <span class="comment">//mark 1    匹配 Car类中的void SetSpeed();</span></span><br><span class="line">	c.SetSpeed(<span class="number">10.2</span>);  <span class="comment">//mark2    匹配 Car类中的     void SetSpeed(float speed)</span></span><br><span class="line"></span><br><span class="line">	t.SetSepeed(<span class="number">60</span>);   <span class="comment">//mark 3      匹配 Truck类中 void SetSepeed(float speed)</span></span><br><span class="line">	c.SetSpeed(<span class="number">80</span>);    <span class="comment">// 同mark2</span></span><br><span class="line">	SetSpeed(<span class="number">100.5</span>);     <span class="comment">//mark4    匹配全局函数  void SetSpeed(float speed)</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>结构体与类的唯一区别在于：在类中，其成员的缺省存取权限是私有，而在结构体类型中，其成员的缺省权限是公有。</p>
+<blockquote>
+<p>当只需要描述数据结构时，使用结构体较好。而既要描述数据的处理方法时使用类较好。</p>
 </blockquote>
   
 	</div>
@@ -341,10 +371,10 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/12/08/考试1——嵌入式系统应用开发实践/" title="嵌入式系统应用开发实践——考试">
+ <a href="/2016/12/08/字符类设备驱动程序框架/" title="字符类设备驱动程序框架说明">
   <strong>上一篇：</strong><br/>
   <span>
-  嵌入式系统应用开发实践——考试</span>
+  字符类设备驱动程序框架说明</span>
 </a>
 </div>
 
@@ -395,7 +425,7 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>5</sup></a></li>
 		  
 		
 		  
@@ -433,7 +463,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>13</sup></a></li>
 		  
 		
 		  
@@ -460,7 +490,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>17</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
 			
 		
 			
@@ -492,11 +522,11 @@
 			
 		
 			
-				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>3</sup></a></li>
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
 			
 		
 			
@@ -520,10 +550,6 @@
 			
 		
 			
-				<li><a href="/tags/汇编/" title="汇编">汇编<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
 			
 		
@@ -533,6 +559,10 @@
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 			
