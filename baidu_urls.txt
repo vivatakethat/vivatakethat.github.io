@@ -1,5 +1,5 @@
 http://www.vivatakethat.com/2016/12/08/字符类设备驱动程序框架/
+http://www.vivatakethat.com/2016/12/08/考试1——嵌入式系统应用开发实践/
 http://www.vivatakethat.com/2016/12/01/C++_memo-类与对象/
 http://www.vivatakethat.com/2016/11/18/4412_生成设备节点/
 http://www.vivatakethat.com/2016/11/18/C++_memo2/
-http://www.vivatakethat.com/2016/11/17/C++常用库_函数/
