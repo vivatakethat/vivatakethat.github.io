@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Linux驱动-基础知识预备 | take that的博客</title>
+    <title>英语听力练习 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,41 +12,17 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="Linux驱动包含3种：
-
-字符设备驱动字符设备是指能一个字节一个字节读取数据的设备，如：GPIO、按键、LCD、蜂鸣器、串口、声卡等字符设备。
-
-字符设备一般需要在驱动层实现open()、close()、ioctl()等函数。这些函数最终会被文件系统的相关函数调用。
-
-内核为字符设备对应的一个文件，如字符设备文件/dev/console。">
+    <meta name="description" content="要有输入，输出">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux驱动-基础知识预备">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/07/12/Linux驱动-基础知识预备/index.html">
+<meta property="og:title" content="英语听力练习">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/12/23/英语听力练习/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="Linux驱动包含3种：
-
-字符设备驱动字符设备是指能一个字节一个字节读取数据的设备，如：GPIO、按键、LCD、蜂鸣器、串口、声卡等字符设备。
-
-字符设备一般需要在驱动层实现open()、close()、ioctl()等函数。这些函数最终会被文件系统的相关函数调用。
-
-内核为字符设备对应的一个文件，如字符设备文件/dev/console。">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E5%9B%9B%E9%A9%B1%E5%85%84%E5%BC%9F.jpg">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/GPIO.png">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/KP_COL0.png">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E6%9D%BF%E5%AF%B9%E6%9D%BF%E8%BF%9E%E6%8E%A5%E5%99%A8.png">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/SCP4412%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E7%82%B9.png">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/CPU%E6%89%8B%E5%86%8C.png">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/GPL2CON%E5%AF%84%E5%AD%98%E5%99%A8.png">
-<meta property="og:updated_time" content="2016-12-07T16:36:57.707Z">
+<meta property="og:description" content="要有输入，输出">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%BF%99%E6%98%AF%E4%B8%80%E5%A4%B4%E7%89%9B.jpg">
+<meta property="og:updated_time" content="2016-12-24T04:39:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux驱动-基础知识预备">
-<meta name="twitter:description" content="Linux驱动包含3种：
-
-字符设备驱动字符设备是指能一个字节一个字节读取数据的设备，如：GPIO、按键、LCD、蜂鸣器、串口、声卡等字符设备。
-
-字符设备一般需要在驱动层实现open()、close()、ioctl()等函数。这些函数最终会被文件系统的相关函数调用。
-
-内核为字符设备对应的一个文件，如字符设备文件/dev/console。">
+<meta name="twitter:title" content="英语听力练习">
+<meta name="twitter:description" content="要有输入，输出">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -110,7 +86,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/12/Linux驱动-基础知识预备/" title="Linux驱动-基础知识预备" itemprop="url">Linux驱动-基础知识预备</a>
+      <a href="/2016/12/23/英语听力练习/" title="英语听力练习" itemprop="url">英语听力练习</a>
   </h1>
   <p class="article-author">By
        
@@ -120,7 +96,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-07-12T00:57:32.000Z" itemprop="datePublished"> 发表于 2016-07-12</time>
+    <time datetime="2016-12-23T04:35:32.000Z" itemprop="datePublished"> 发表于 2016-12-23</time>
     
   </p>
 </header>
@@ -129,127 +105,21 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#对外部设备的操作"><span class="toc-number">1.</span> <span class="toc-text">对外部设备的操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#虚拟地址"><span class="toc-number">2.</span> <span class="toc-text">虚拟地址</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#架构知识补充"><span class="toc-number">2.1.</span> <span class="toc-text">架构知识补充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指令流水线"><span class="toc-number">2.1.1.</span> <span class="toc-text">指令流水线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux内核子系统"><span class="toc-number">3.</span> <span class="toc-text">Linux内核子系统</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%9B%9B%E9%A9%B1%E5%85%84%E5%BC%9F.jpg" alt="四驱兄弟" title="四驱兄弟"></p>
-<p>Linux驱动包含3种：</p>
-<ul>
-<li><p>字符设备驱动<br>字符设备是指能一个字节一个字节读取数据的设备，如：<br>GPIO、按键、LCD、蜂鸣器、串口、声卡等字符设备。</p>
-<blockquote>
-<p>字符设备一般需要在驱动层实现open()、close()、ioctl()等函数。这些函数最终会被文件系统的相关函数调用。</p>
-<blockquote>
-<p>内核为字符设备对应的一个文件，如字符设备文件/dev/console。</p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E8%BF%99%E6%98%AF%E4%B8%80%E5%A4%B4%E7%89%9B.jpg" alt="这是一头牛" title="这是一头牛"></p>
+<p>要有输入，输出</p>
 <a id="more"></a>
-</blockquote>
-</blockquote>
-</li>
-<li><p>块设备驱动<br>硬盘、存储设备、U盘</p>
-</li>
-<li><p>网络设备驱动<br>以太网、wifi</p>
-</li>
-</ul>
-<p>块设备和网络驱动通常有板级BSP包支持，通常较少开发。</p>
-<p><strong><code>GPIO</code></strong>通用输入输出口<em>General Purpose Input Output Port</em></p>
-<blockquote>
-<p>对寄存器操作</p>
-</blockquote>
-<p><code>MMU</code>内存管理单元</p>
-<blockquote>
-<p>有了内存管理单元，便有了虚拟地址、物理地址<br>MCU微控制器<em>单片机</em>没有MMU这个概念<br>MPU微处理器相比单片机有了内存管理单元</p>
-</blockquote>
-<p>Linux把所有设备看成了文件(opoen，read,write,loctrl,close)</p>
-<blockquote>
-<p>Linux字符设备驱动的编程思想：做一组设备对应的驱动函数</p>
-</blockquote>
-<p>上层应用程序如何对某个外设进行操作</p>
-<p>底层驱动的编写方式以及如何注册到系统(register_chrdev())</p>
-<p>MISC杂设备（混杂设备）</p>
-<p>模块(<em>module</em>)</p>
-<h1 id="对外部设备的操作"><a href="#对外部设备的操作" class="headerlink" title="对外部设备的操作"></a>对外部设备的操作</h1><p>用程序对外部设备的操作有3部曲</p>
+<audio src="http://ogsttsbjh.bkt.clouddn.com/Model%20Test%201_par1.mp3.mp3" controls="controls"><br>Your browser does not support the audio tag.<br></audio>
+
+<p><br>The shooting occurred Thursday in a lecture hall at Northern Illinois University in DeKalb, Illinois, north of Chicago. The gunman entered the hall dressed in black and carrying a shotgun and three handguns and began firing as students sought cover under desks. One student who escaped unharmed told reporters his life had changed as a result of what he experienced. Police say the gunman was Steven Kazmierczak, 27, a former graduate student in Sociology at the school. Police say he purchased the shotgun and two of the handguns on Saturday, indicating he may have planned the attack in advance, but authorities have not determined a motive for the shooting. Kazmierczak had no criminal record and no history of mental illness. Under Illinois state law he would not have been able to purchase a weapon legally if there had been a record of arrests or mental problems. But police say he stopped taking an unspecified medication recently and his behavior became erratic.</p>
 <ol>
-<li>通过原理图找到设备的PIN脚</li>
+<li>What is this news item mainly about?</li>
+<li>What is the reason of the shooting?</li>
 </ol>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/GPIO.png" alt="单片机8051-GPIO" title="GPIO"></p>
-<ol>
-<li>查看数据手册</li>
-</ol>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/KP_COL0.png" alt="KP_COL0" title="KP_COL0"></p>
-<blockquote>
-<p>处理器控制KP_COL0输出一个低电平，就没有电压差LED2就不会亮</p>
-</blockquote>
-<p>KP_COL0连接着  板对板连接器【4组中其中第2组】</p>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E6%9D%BF%E5%AF%B9%E6%9D%BF%E8%BF%9E%E6%8E%A5%E5%99%A8.png" alt="板对板连接器" title="板对板连接器"></p>
-<p>处理器的连接点<br><img src="http://7xsic8.com1.z0.glb.clouddn.com/SCP4412%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E7%82%B9.png" alt="SCP4412处理器对应的连接点，局部图" title="SCP4412处理器对应的连接点，局部图"></p>
-<blockquote>
-<p>对GPL2控制就可以对LED进行亮和灭的控制</p>
-</blockquote>
-<p>CPU手册</p>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/CPU%E6%89%8B%E5%86%8C.png" alt="SEC_Exynos4412_Users Manual_Ver.0.30.00_Preliminary" title="SEC_Exynos4412_Users Manual_Ver.0.30.00_Preliminary"></p>
-<blockquote>
-<p>最终的物理地址=基地址+偏移地址</p>
-<blockquote>
-<p><strong>office</strong>偏移地址<br><strong>基地址*</strong>Base Address*:ox1140_000</p>
-</blockquote>
-</blockquote>
-<p>GPL2CON:配置寄存器，配置这个口不同功能方式</p>
-<p>GPL2DAT:数据寄存器。把它作为输出口，写1则高电平</p>
-<p>GPL2PUD：上拉/下拉寄存器</p>
-<p>GPL2DRV：设置驱动力</p>
-<p>GPL2CONPDN/GPL2PUDPDN：低功耗模式</p>
-<p>GPL2CON，32位寄存器<br><img src="http://7xsic8.com1.z0.glb.clouddn.com/GPL2CON%E5%AF%84%E5%AD%98%E5%99%A8.png" alt="GPL2CON寄存器" title="GPL2CON寄存器"><br>GPL2CON[0]：0-3位设置第0个GPL2CON寄存器</p>
-<p>GPL2CON[1]：第1个GPL2CON寄存器</p>
-<blockquote>
-<p>0则是输入口<br>1则是输出口<br>2<em>GNSS_GPIO[1]</em>则作为GPS功能来用<br>3作为矩阵键盘来使用<em>*KP_COL[1]<br>设置为全1则  &nbsp;0XF &nbsp;  则作为中断来使用  &nbsp;      </em>EXT-INT29[1]* </p>
-</blockquote>
-<ol>
-<li>根据物理地址编程</li>
-</ol>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span>对数据寄存器操作<span class="keyword">*</span>/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"> unsigned int <span class="keyword">*</span> pintx;  /<span class="keyword">*</span>编译后会生成32位，不同位数处理器会生成不同变量的字节数<span class="keyword">*</span>/</span><br><span class="line"> printx=0x11000104;   /<span class="keyword">*</span>GPL2DAT物理地址,led对应的数据寄存器<span class="keyword">*</span>/</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="keyword">*</span>pintx=0;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> /<span class="keyword">*</span>第二种对寄存器赋值<span class="keyword">*</span>/</span><br><span class="line"> <span class="keyword">*</span>(unsigned int <span class="keyword">*</span>) 0x11000104=0/<span class="keyword">*</span>强制把地址转成指针，并赋值<span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
-<h1 id="虚拟地址"><a href="#虚拟地址" class="headerlink" title="虚拟地址"></a>虚拟地址</h1><p> 在ARM-LINUX编程把物理地址转化为虚拟地址，通过虚拟地址对设备进行操作。</p>
-<h2 id="架构知识补充"><a href="#架构知识补充" class="headerlink" title="架构知识补充"></a>架构知识补充</h2><ul>
-<li>CPU（中央处理器）<blockquote>
-<p>遵循冯 诺依曼结构存储程序，<strong>存储程序</strong>的思想，程序放在存储器当中，CPU不断的取指令去执行。</p>
-<blockquote>
-<p>说到底CPU是一套<strong>数字电路</strong>。<em>比如：门电路、与非门、触发器等等电路</em></p>
-<blockquote>
-<p>处理器解析<em>执行</em>一套指令系统。</p>
-<blockquote>
-<p>不断的顺序取指令执行</p>
-<blockquote>
-<p>哈佛结构：对冯 诺依曼结构存的创新。对取指令与取数据同时来操作。</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>指令系统<br>可以看成软硬件的界面；是计算机系统体系结构的思想。<blockquote>
-<p>指令系统可以分为RISC<em>精简指令集</em>&nbsp;CISC<em>复杂指令集</em></p>
-<blockquote>
-<p>RISC：每一条指令，执行的时间、长度是一样的。ARM、MIPS、POWERPC都是采用精简指令集。优势：便于实现流水线，进一步提高性能。</p>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<h3 id="指令流水线"><a href="#指令流水线" class="headerlink" title="指令流水线"></a>指令流水线</h3><p>可以使用一些需要计算机处理的多项操作在时间上重叠进行。</p>
-<h1 id="Linux内核子系统"><a href="#Linux内核子系统" class="headerlink" title="Linux内核子系统"></a>Linux内核子系统</h1><p>Linux内核有许多子系统，包括进程管理、内存管理、文件管理、设备管理和网络管理。</p>
-<p><strong>进程管理</strong><br>进程是程序运行的一个实例，是操作系统分配资源和调度的一个基本单位。分为3个状态</p>
-<ol>
-<li><p>就绪状态</p>
-<blockquote>
-<p>在这种状态中，进程具有处理器外的其他，进程不运行</p>
-</blockquote>
-</li>
-<li><p>执行状态</p>
-</li>
-</ol>
-<ol>
-<li>阻塞状态</li>
-</ol>
+<hr>
   
 	</div>
 
@@ -360,13 +230,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+  <a class="article-category-link" href="/categories/English/">English</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/驱动/">驱动</a>
+  <span></span> <a href="/tags/Record/">Record</a>
   </div>
 
 </div>
@@ -375,7 +245,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/07/12/Linux驱动-基础知识预备/" data-title="Linux驱动-基础知识预备 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/12/23/英语听力练习/" data-title="英语听力练习 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -388,19 +258,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/07/21/proteus元器件memo/" title="proteus小记">
-  <strong>上一篇：</strong><br/>
-  <span>
-  proteus小记</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/07/10/C——输入-输出/"  title="C语言:输入-输出">
+<a href="/2016/12/23/S——算法第四版中文版_memo/"  title="算法第四版中文">
  <strong>下一篇：</strong><br/> 
- <span>C语言:输入-输出
+ <span>算法第四版中文
 </span>
 </a>
 </div>
@@ -409,7 +271,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/07/12/Linux驱动-基础知识预备/" data-title="Linux驱动-基础知识预备" data-url="http://www.vivatakethat.com/2016/07/12/Linux驱动-基础知识预备/"></div>
+	<div class="ds-thread" data-thread-key="2016/12/23/英语听力练习/" data-title="英语听力练习" data-url="http://www.vivatakethat.com/2016/12/23/英语听力练习/"></div>
 </section>
 
 
@@ -419,7 +281,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#对外部设备的操作"><span class="toc-number">1.</span> <span class="toc-text">对外部设备的操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#虚拟地址"><span class="toc-number">2.</span> <span class="toc-text">虚拟地址</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#架构知识补充"><span class="toc-number">2.1.</span> <span class="toc-text">架构知识补充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指令流水线"><span class="toc-number">2.1.1.</span> <span class="toc-text">指令流水线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux内核子系统"><span class="toc-number">3.</span> <span class="toc-text">Linux内核子系统</span></a></li></ol>
+ 
  
   </div>
 
