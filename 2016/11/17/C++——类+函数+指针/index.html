@@ -23,7 +23,7 @@ c++  Primer第五版">
 
 c++  Primer第五版">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg">
-<meta property="og:updated_time" content="2016-12-07T16:36:57.410Z">
+<meta property="og:updated_time" content="2017-02-05T13:01:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++:类、函数、指针">
 <meta name="twitter:description" content="c++零碎笔记：类、函数、引用、指针、const、auto、 constexpr变量、decltype
@@ -151,10 +151,26 @@ c++  Primer第五版">
 <ul>
 <li>指针的赋值<br>定于了一个指针，只是得到了一个用于存储地址的指针变量，但是变量没有确定的值，其中地址的值是一个随机数。所以定义指针后必须赋值，才可以引用。</li>
 </ul>
-<p>指针要么是在初始化的时候进行赋值，如：<figure class="highlight"><figcaption><span>*p = "hello world!";```要么在之后将指针指向一个已经初始化的内存空间，因为只定义而未初始化的指针不会指向任何内存空间，是不能对指针指向的地方进行赋值的。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#36825;&#23601;&#26159;&#20026;&#20160;&#20040;&#22914;&#26524;&#21482;&#23450;&#20041;&#20102;&#25351;&#38024;&#65292;&#32780;&#20026;&#21021;&#22987;&#21270;&#26102;&#35201;&#20351;&#29992;Xalloc&#25110;&#32773;new&#26469;&#30003;&#35831;&#31354;&#38388;&#12290; &#10;&#10;&#25351;&#38024;&#30340;&#21021;&#22987;&#21270;&#26377;2&#31181;&#26041;&#27861;&#10;**1.**&#23450;&#20041;&#25351;&#38024;&#30340;&#21516;&#36827;&#34892;&#21021;&#22987;&#21270;&#36171;&#20540;</span><br></pre></td></tr></table></figure></p>
-<p>&lt;数据类型&gt;  *&lt;指针变量名&gt;=初始地址<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>2.<span class="keyword">*</span><span class="keyword">*</span>在定义后，单独使用赋值语句</span><br></pre></td></tr></table></figure></p>
-<p>指针=地址<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;用变量地址作为初始值必须先声明</span><br><span class="line"><span class="prompt">&gt;&gt;</span>指针变量的值必须是地址的常量或变量,不能是普通这人年归属，但可以赋值为整数<span class="number">0</span>，表示空指针。</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt;<span class="string">"地址"</span>中存放的数据类型与指针类型必须相符。指针的类型是它所指向变来那个的类型而不是指针本身的数据类型，任何一个指针的数据值都是unsigned long int型。</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt;&gt;允许声明指向void类型的指针。例如</span><br></pre></td></tr></table></figure></p>
-<p>void *general;<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="cpp"></span><br><span class="line">实例代码：指针的定义、赋值与使用</span><br><span class="line">```C++</span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">10</span>, j;</span><br><span class="line">	<span class="keyword">int</span> *ptr = &amp;i; <span class="comment">//定义指向整形变量的指针ptr,初始值为i的地址</span></span><br><span class="line">	j = *ptr;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"i="</span> &lt;&lt; i &lt;&lt; <span class="string">",j="</span> &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"*ptr="</span> &lt;&lt; *ptr &lt;&lt; endl;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>指针要么是在初始化的时候进行赋值，如：<code>char *p = &quot;hello world!&quot;;</code>要么在之后将指针指向一个已经初始化的内存空间，因为只定义而未初始化的指针不会指向任何内存空间，是不能对指针指向的地方进行赋值的。</p>
+<blockquote>
+<p>这就是为什么如果只定义了指针，而为初始化时要使用Xalloc或者new来申请空间。 </p>
+</blockquote>
+<p>指针的初始化有2种方法<br><strong>1.</strong>定义指针的同进行初始化赋值<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">&lt;数据类型&gt;</span>  <span class="keyword">*</span><span class="variable">&lt;指针变量名&gt;</span>=初始地址</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.</strong>在定义后，单独使用赋值语句<br><figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">指针</span>=<span class="string">地址</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>用变量地址作为初始值必须先声明</p>
+<blockquote>
+<p>指针变量的值必须是地址的常量或变量,不能是普通整数，但可以赋值为整数0，表示空指针。</p>
+<blockquote>
+<p>“地址”中存放的数据类型与指针类型必须相符。指针的类型是它所指向变来那个的类型而不是指针本身的数据类型，任何一个指针的数据值都是unsigned long int型。</p>
+<blockquote>
+<p>允许声明指向void类型的指针。例如</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> *general;</span><br></pre></td></tr></table></figure>
+<p>实例代码：指针的定义、赋值与使用<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">10</span>, j;</span><br><span class="line">	<span class="keyword">int</span> *ptr = &amp;i; <span class="comment">//定义指向整形变量的指针ptr,初始值为i的地址</span></span><br><span class="line">	j = *ptr;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"i="</span> &lt;&lt; i &lt;&lt; <span class="string">",j="</span> &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"*ptr="</span> &lt;&lt; *ptr &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>运行结果<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">10</span>,j=<span class="number">10</span></span><br><span class="line">*ptr=<span class="number">10</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <ul>
@@ -370,8 +386,10 @@ c++  Primer第五版">
 <p>但是给extern关键字标记的变量赋一个初始值，但这么做也就抵消了extern的作用。extern语句如果包含初始值就不再是声明了，而变成 了定义：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">double</span> pi =<span class="number">3.1416</span>;			<span class="comment">//	定义</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <h1 id="const限定符"><a href="#const限定符" class="headerlink" title="const限定符"></a>const限定符</h1><blockquote>
-<p>对变量进行限定放置程序更改它<br>因为const对象一旦创建后其值就不能再改变了，所以const对象必须初始化。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> bufSize=<span class="number">512</span>;		<span class="comment">//这样就把bufSize定义了一个常量。任何试图为bufSize赋值行为都将引发错误</span></span><br><span class="line"></span><br><span class="line">bufSize=<span class="number">512</span>;		<span class="comment">//错误：视图为bufSize赋值</span></span><br></pre></td></tr></table></figure></p>
+<p>对变量进行限定放置程序更改它</p>
 </blockquote>
+<p>因为const对象一旦创建后其值就不能再改变了，所以const对象必须初始化。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> bufSize=<span class="number">512</span>;		<span class="comment">//这样就把bufSize定义了一个常量。任何试图为bufSize赋值行为都将引发错误</span></span><br><span class="line"></span><br><span class="line">bufSize=<span class="number">512</span>;		<span class="comment">//错误：视图为bufSize赋值</span></span><br></pre></td></tr></table></figure>
 <p>与非const类型所能参与的操作相比，const类型的对象能完成其中大部分，但也不是所有的操作都合适。主要的限制就是只能在const类型的对象上执行不改变其内容的操作。</p>
 <blockquote>
 <p>例如：const int 和普通的int一样都能参与算术运算，也都转换成一个布尔值，等等。</p>
@@ -692,11 +710,11 @@ c++  Primer第五版">
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>30</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
 		  
 		
 		  
@@ -704,7 +722,7 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
 		  
 		
 		  
@@ -714,7 +732,11 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>5</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
 		  
 		
 		  
@@ -730,7 +752,7 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>13</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
 		  
 		
 		  
@@ -757,7 +779,7 @@ c++  Primer第五版">
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
 			
 		
 			
@@ -809,11 +831,15 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
@@ -830,10 +856,6 @@ c++  Primer第五版">
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="Linux编译日常报错,备忘。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg">
-<meta property="og:updated_time" content="2016-12-07T16:36:57.700Z">
+<meta property="og:updated_time" content="2017-01-16T13:40:41.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux编译日常报错">
 <meta name="twitter:description" content="Linux编译日常报错,备忘。">
@@ -105,7 +105,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">1.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">1.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">1.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">1.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数组报错"><span class="toc-number">2.</span> <span class="toc-text">数组报错</span></a></li></ol>
 		
 		</div>
 		
@@ -120,6 +120,10 @@
 <p>  正确应该为:<br>  <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="css"></span><br><span class="line"># <span class="tag">webbench-1</span><span class="class">.5</span></span><br><span class="line"></span><br><span class="line"><span class="tag">OS</span>: <span class="tag">Ubuntu</span> 14<span class="class">.04</span><span class="class">.2</span> <span class="tag">LTS</span> \<span class="tag">n</span> \<span class="tag">l</span></span><br><span class="line"><span class="tag">gcc</span><span class="pseudo">:gcc</span> <span class="tag">version</span> 4<span class="class">.8</span><span class="class">.4</span> (<span class="tag">Ubuntu</span> 4<span class="class">.8</span><span class="class">.4-2ubuntu1</span>~14<span class="class">.04</span><span class="class">.3</span>) </span><br><span class="line">```<span class="tag">make</span></span><br><span class="line"><span class="tag">root</span><span class="at_rule">@<span class="keyword">ubuntu:~/webbench-1.5#</span> make</span><br><span class="line">cc -Wall -ggdb -W -O   -c -o webbench.o webbench.c</span><br><span class="line">webbench.c: In function ‘alarm_handler’:</span><br><span class="line">webbench.c:<span class="number">77</span>:<span class="number">31</span>: warning: unused parameter ‘signal’ [-Wunused-parameter]</span><br><span class="line"> static void <span class="function">alarm_handler</span>(int signal)</span><br><span class="line">                               ^</span><br><span class="line">cc -Wall -ggdb -W -O  -o webbench webbench.o  </span><br><span class="line">ctags *.c</span><br><span class="line">/bin/sh: <span class="number">1</span>: ctags: not found</span><br><span class="line">make: [tags] Error <span class="number">127</span> (ignored)</span></span></span><br></pre></td></tr></table></figure></p>
 <p>没有ctags命令</p>
 <p>解决办法：安装ctages<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:~/webbench-</span><span class="number">1.5</span><span class="comment"># apt-get install ctags</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="数组报错"><a href="#数组报错" class="headerlink" title="数组报错"></a>数组报错</h1><p>unsigned char报错</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">RS232-gx_v4_Flag.cpp: In member function ‘<span class="keyword">void</span> Rs232::register_68()’:</span><br><span class="line">RS232-gx_v4_Flag.cpp:<span class="number">113</span>:<span class="number">33</span>: error: conflicting declaration ‘<span class="keyword">unsigned</span> <span class="keyword">char</span> register68_data [<span class="number">0</span>]’</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">char</span> register68_data[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">                                 ^</span><br><span class="line">RS232-gx_v4_Flag.cpp:<span class="number">95</span>:<span class="number">17</span>: note: previous declaration as ‘<span class="keyword">unsigned</span> <span class="keyword">char</span> register68_data [<span class="number">48</span>]’</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">char</span>  register68_data[<span class="number">48</span>];</span><br></pre></td></tr></table></figure>
+<p>  错误原因<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span>  register68_data[<span class="number">48</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> register68_data[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span>	 register68_data[<span class="number">1</span>]=<span class="number">15</span>;</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span>	 register68_data[<span class="number">2</span>] = <span class="number">10</span>;</span><br></pre></td></tr></table></figure></p>
+<p>这是错误的，赋值的时候不需要在写<code>unsigned char</code></p>
   
 	</div>
 
@@ -289,7 +293,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">1.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">1.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">1.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">1.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数组报错"><span class="toc-number">2.</span> <span class="toc-text">数组报错</span></a></li></ol>
  
   </div>
 
@@ -313,11 +317,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>30</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
 		  
 		
 		  
@@ -325,7 +329,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
 		  
 		
 		  
@@ -335,7 +339,11 @@
 		  
 		
 		  
-			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>5</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
 		  
 		
 		  
@@ -351,7 +359,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>13</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
 		  
 		
 		  
@@ -378,7 +386,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
 			
 		
 			
@@ -430,11 +438,15 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
@@ -451,10 +463,6 @@
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>

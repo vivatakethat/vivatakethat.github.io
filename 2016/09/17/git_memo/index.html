@@ -20,7 +20,7 @@
 <meta property="og:description" content="Git是目前最流行的版本管理系统，学会Git几乎成了开发者的必备技能。本文详细介绍5个Git命令，它们的概念和用法，理解了这些内容，你就会完全掌握Git远程操作。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%8B%E4%B8%80%E5%9C%BA%E6%AF%94%E8%B5%9B%E8%87%B3%E5%85%B3%E9%87%8D%E8%A6%81.jpg">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/git%E8%BF%9C%E7%A8%8B%E5%9B%BE.jpg">
-<meta property="og:updated_time" content="2016-12-07T16:36:57.609Z">
+<meta property="og:updated_time" content="2017-01-23T03:02:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git memo">
 <meta name="twitter:description" content="Git是目前最流行的版本管理系统，学会Git几乎成了开发者的必备技能。本文详细介绍5个Git命令，它们的概念和用法，理解了这些内容，你就会完全掌握Git远程操作。">
@@ -106,7 +106,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#设置windows下git的home目录以及自动跳转"><span class="toc-number">1.</span> <span class="toc-text">设置windows下git的home目录以及自动跳转</span></a></li></ol>
 		
 		</div>
 		
@@ -155,6 +155,7 @@
 <blockquote>
 <p>无解？</p>
 </blockquote>
+<h1 id="设置windows下git的home目录以及自动跳转"><a href="#设置windows下git的home目录以及自动跳转" class="headerlink" title="设置windows下git的home目录以及自动跳转"></a>设置windows下git的home目录以及自动跳转</h1><p>打开Git安装位置\etc\profile文件添加以下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HOME=<span class="string">"D:\github\home"</span></span><br><span class="line">HOME=<span class="string">"<span class="variable">$(cd "D:\github\hexo-blog" ; pwd)</span>"</span></span><br><span class="line"><span class="built_in">cd</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$HOME</span>/bin:<span class="variable">$PATH</span>"</span></span><br></pre></td></tr></table></figure></p>
   
 	</div>
 
@@ -294,10 +295,10 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/09/21/Ubuntu-常用操作memo/" title="Ubuntu-常用操作">
+ <a href="/2016/09/21/Ubuntu-常用操作memo/" title="Ubuntu常用操作">
   <strong>上一篇：</strong><br/>
   <span>
-  Ubuntu-常用操作</span>
+  Ubuntu常用操作</span>
 </a>
 </div>
 
@@ -324,7 +325,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#设置windows下git的home目录以及自动跳转"><span class="toc-number">1.</span> <span class="toc-text">设置windows下git的home目录以及自动跳转</span></a></li></ol>
  
   </div>
 
@@ -348,11 +349,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>30</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
 		  
 		
 		  
@@ -360,7 +361,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
 		  
 		
 		  
@@ -370,7 +371,11 @@
 		  
 		
 		  
-			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>5</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
 		  
 		
 		  
@@ -386,7 +391,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>13</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
 		  
 		
 		  
@@ -413,7 +418,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
 			
 		
 			
@@ -465,11 +470,15 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
@@ -486,10 +495,6 @@
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>

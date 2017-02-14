@@ -4,8 +4,228 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2017-02-11T08:44:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>Win10下配置Java环境</title>
+        <pubTime>2017-02-07T16:42:32.000Z</pubTime>
+        
+        <tag>开发环境配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
+    <lastmod>2017-02-11T08:38:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>在Windows下快速搭建hexo</title>
+        <pubTime>2016-07-07T07:46:32.000Z</pubTime>
+        
+        <tag>开发环境配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/11/17/Visual%20Studio-Error/</loc>
+    <lastmod>2017-02-09T12:29:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>Visual Studio-Error</title>
+        <pubTime>2016-11-17T05:32:10.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="Record" url="http://www.vivatakethat.com/categories/Record/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2017/01/17/Linux-%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2017-02-08T07:18:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>Linux日常</title>
+        <pubTime>2017-01-16T16:21:32.000Z</pubTime>
+        
+        <tag>Rcord</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.vivatakethat.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/09/21/Ubuntu-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9Cmemo/</loc>
+    <lastmod>2017-02-08T06:32:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu常用操作</title>
+        <pubTime>2016-09-21T12:20:32.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.vivatakethat.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/11/17/C++%E2%80%94%E2%80%94%E7%B1%BB+%E5%87%BD%E6%95%B0+%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2017-02-05T13:01:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>C++:类、函数、指针</title>
+        <pubTime>2016-11-16T16:42:32.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/11/10/Qt%20Creator-%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/</loc>
+    <lastmod>2017-01-29T04:46:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Qt Creator-日常报错</title>
+        <pubTime>2016-11-09T16:04:10.000Z</pubTime>
+        
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Record" url="http://www.vivatakethat.com/categories/Record/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/05/22/Linux%E5%91%BD%E4%BB%A4%E5%85%A8%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2017-01-23T03:19:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令全解析</title>
+        <pubTime>2016-05-22T06:48:37.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.vivatakethat.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
+    <lastmod>2017-01-23T03:02:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>git memo</title>
+        <pubTime>2016-09-17T12:26:32.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/10/17/QT_Memo/</loc>
+    <lastmod>2017-01-23T02:00:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>QT creator日常报错</title>
+        <pubTime>2016-10-17T02:21:32.000Z</pubTime>
+        
+        <tag>QT</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/06/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2017-01-16T13:40:42.231Z</lastmod>
+    <data>
+        <display>
+        <title>软件测试基础知识</title>
+        <pubTime>2016-06-15T06:29:32.000Z</pubTime>
+        
+        <tag>软件测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="软件测试" url="http://www.vivatakethat.com/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/12/23/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/</loc>
-    <lastmod>2016-12-24T04:39:47.000Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.226Z</lastmod>
     <data>
         <display>
         <title>英语听力练习</title>
@@ -24,28 +244,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/12/23/S%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88_memo/</loc>
-    <lastmod>2016-12-24T04:08:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>算法第四版中文</title>
-        <pubTime>2016-12-22T18:11:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Book | Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/12/22/%E8%80%83%E8%AF%953%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%A7%BB%E4%BA%92%E8%81%94%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2016-12-22T08:17:48.000Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.222Z</lastmod>
     <data>
         <display>
         <title>嵌入式移互联软件测试——考试</title>
@@ -65,7 +265,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/12/20/%E8%80%83%E8%AF%952%E2%80%94%E2%80%94%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%BF%9E%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2016-12-20T13:22:50.000Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.216Z</lastmod>
     <data>
         <display>
         <title>移动互联应用软件开发——考试</title>
@@ -85,7 +285,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/12/19/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2016-12-20T01:57:39.000Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.211Z</lastmod>
     <data>
         <display>
         <title>嵌入式系统应用开发实践——考试</title>
@@ -104,148 +304,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/12/01/C++_memo-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2016-12-13T15:43:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>C++_memo-类与对象</title>
-        <pubTime>2016-12-01T07:42:32.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/01/E-%E8%8B%B1%E8%AF%AD%E5%91%A8%E8%AE%B0memo_20161101/</loc>
-    <lastmod>2016-12-13T12:40:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>英语周记memo_20161101</title>
-        <pubTime>2016-11-01T04:35:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://www.vivatakethat.com/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/12/08/%E5%AD%97%E7%AC%A6%E7%B1%BB%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2016-12-10T13:39:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>字符类设备驱动程序框架说明</title>
-        <pubTime>2016-12-08T14:35:32.000Z</pubTime>
-        
-        <tag>字符设备</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/02/4412_%E6%9C%80%E5%B0%8FLinux%E9%A9%B1%E5%8A%A8/</loc>
-    <lastmod>2016-12-08T09:26:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>4412_最小Linux驱动</title>
-        <pubTime>2016-11-02T14:35:32.000Z</pubTime>
-        
-        <tag>字符设备</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/17/Visual%20Studio-Error/</loc>
-    <lastmod>2016-12-07T17:20:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Visual Studio-Error</title>
-        <pubTime>2016-11-17T05:32:10.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="Record" url="http://www.vivatakethat.com/categories/Record/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/10/31/E-Breaking%20Bad-%E5%8F%B0%E8%AF%8D/</loc>
-    <lastmod>2016-12-07T17:15:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>Breaking Bad-台词</title>
-        <pubTime>2016-10-31T04:35:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://www.vivatakethat.com/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/10/19/G-%E6%B8%B8%E6%88%8F%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E5%8D%95%E8%AF%8D/</loc>
-    <lastmod>2016-12-07T17:15:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>游戏中出现的词汇</title>
-        <pubTime>2016-10-19T10:32:10.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://www.vivatakethat.com/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/11/09/%E7%BA%A2%E8%89%B2%E8%AD%A6%E6%88%922%E6%B8%B8%E6%88%8F%E5%85%B5%E7%A7%8D%E5%AF%B9%E7%99%BD/</loc>
-    <lastmod>2016-12-07T17:14:52.000Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.203Z</lastmod>
     <data>
         <display>
         <title>红色警戒2游戏兵种对白</title>
@@ -264,28 +324,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/06/13/Record%E2%80%94%E2%80%94%E5%B7%A5%E7%A8%8Bdoor-new/</loc>
-    <lastmod>2016-12-07T17:04:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Record——工程door-new</title>
-        <pubTime>2016-06-13T01:40:32.000Z</pubTime>
-        
-        <tag>编程</tag>
-         
-         
-           
-             
-              <breadCrumb title="工程" url="http://www.vivatakethat.com/categories/%E5%B7%A5%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/06/30/%E7%AE%97%E6%B3%95-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2016-12-07T16:40:17.000Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.198Z</lastmod>
     <data>
         <display>
         <title>算法-顺序结构程序设计</title>
@@ -304,28 +344,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/06/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2016-12-07T16:36:58.110Z</lastmod>
-    <data>
-        <display>
-        <title>软件测试基础知识</title>
-        <pubTime>2016-06-15T06:29:32.000Z</pubTime>
-        
-        <tag>软件测试</tag>
-         
-         
-           
-             
-              <breadCrumb title="软件测试" url="http://www.vivatakethat.com/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/07/23/%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2016-12-07T16:36:58.086Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.195Z</lastmod>
     <data>
         <display>
         <title>硬件基础知识</title>
@@ -345,7 +365,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/29/%E6%B1%87%E7%BC%96%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2016-12-07T16:36:58.079Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.189Z</lastmod>
     <data>
         <display>
         <title>汇编实验</title>
@@ -365,7 +385,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/30/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</loc>
-    <lastmod>2016-12-07T16:36:58.073Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.182Z</lastmod>
     <data>
         <display>
         <title>数学基础概念</title>
@@ -385,7 +405,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/15/%E6%90%AD%E5%BB%BA%E6%9C%80%E5%B0%8F%E7%9A%84Linux%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2016-12-07T16:36:58.068Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.177Z</lastmod>
     <data>
         <display>
         <title>最小系统环境搭建</title>
@@ -405,7 +425,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/11/16/%E6%80%BB%E7%BA%BF-%E8%AE%BE%E5%A4%87-%E9%A9%B1%E5%8A%A8%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B/</loc>
-    <lastmod>2016-12-07T16:36:58.057Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.170Z</lastmod>
     <data>
         <display>
         <title>总线-设备-驱动注册流程</title>
@@ -425,7 +445,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/25/%E5%B8%B8%E7%94%A8%E9%80%BB%E8%BE%91%E7%94%A8%E8%AF%AD/</loc>
-    <lastmod>2016-12-07T16:36:58.046Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.166Z</lastmod>
     <data>
         <display>
         <title>逻辑用语</title>
@@ -445,7 +465,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/08/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2016-12-07T16:36:58.038Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.160Z</lastmod>
     <data>
         <display>
         <title>嵌入式环境搭建</title>
@@ -465,7 +485,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/07/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2016-12-07T16:36:58.032Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.156Z</lastmod>
     <data>
         <display>
         <title>嵌入式开发常见问题</title>
@@ -485,7 +505,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/03/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E9%9B%B6-%E6%A6%82%E8%BF%B0.%EF%BC%89/</loc>
-    <lastmod>2016-12-07T16:36:58.026Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.152Z</lastmod>
     <data>
         <display>
         <title>嵌入式开发学习(零)：概述</title>
@@ -505,7 +525,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/16/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%86%99/</loc>
-    <lastmod>2016-12-07T16:36:58.016Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.148Z</lastmod>
     <data>
         <display>
         <title>嵌入式开发学习(一):系统烧写</title>
@@ -525,7 +545,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/08/16/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2016-12-07T16:36:58.004Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.143Z</lastmod>
     <data>
         <display>
         <title>Linux基础教程-笔记</title>
@@ -545,7 +565,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/13/%E5%B5%8C%E5%85%A5%E5%BC%8FARM%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2016-12-07T16:36:57.996Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.138Z</lastmod>
     <data>
         <display>
         <title>嵌入式ARM知识</title>
@@ -564,19 +584,19 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
-    <lastmod>2016-12-07T16:36:57.990Z</lastmod>
+    <loc>http://www.vivatakethat.com/2016/12/08/%E5%AD%97%E7%AC%A6%E7%B1%BB%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2017-01-16T13:40:42.133Z</lastmod>
     <data>
         <display>
-        <title>在Windows下快速搭建hexo</title>
-        <pubTime>2016-07-07T07:46:32.000Z</pubTime>
+        <title>字符类设备驱动程序框架说明</title>
+        <pubTime>2016-12-08T14:35:32.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>字符设备</tag>
          
          
            
              
-              <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+              <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
           
         </display>
     </data>
@@ -585,7 +605,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/07/ZG%E7%BD%91%E5%85%B3file%E8%84%9A%E6%9C%AC%E8%A7%A3%E8%AF%BB/</loc>
-    <lastmod>2016-12-07T16:36:57.981Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.120Z</lastmod>
     <data>
         <display>
         <title>ZG网关file脚本解读</title>
@@ -605,7 +625,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/05/vi%E5%9F%BA%E7%A1%80(%E9%9B%B6)/</loc>
-    <lastmod>2016-12-07T16:36:57.973Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.115Z</lastmod>
     <data>
         <display>
         <title>vi基础(零)</title>
@@ -624,28 +644,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/09/21/Ubuntu-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9Cmemo/</loc>
-    <lastmod>2016-12-07T16:36:57.952Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu-常用操作</title>
-        <pubTime>2016-09-21T12:20:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.vivatakethat.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/05/22/Shell%E8%84%9A%E6%9C%AC%E8%A7%A3%E8%AF%BB/</loc>
-    <lastmod>2016-12-07T16:36:57.947Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.095Z</lastmod>
     <data>
         <display>
         <title>Shell脚本解读</title>
@@ -665,7 +665,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/05/03/Shell%E5%9F%BA%E7%A1%80(%E3%80%87)/</loc>
-    <lastmod>2016-12-07T16:36:57.942Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.091Z</lastmod>
     <data>
         <display>
         <title>Shell基础学习(零)</title>
@@ -685,7 +685,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/25/RHC/</loc>
-    <lastmod>2016-12-07T16:36:57.928Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.084Z</lastmod>
     <data>
         <display>
         <title>RHC</title>
@@ -704,8 +704,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/06/13/Record%E2%80%94%E2%80%94%E5%B7%A5%E7%A8%8Bdoor-new/</loc>
+    <lastmod>2017-01-16T13:40:42.076Z</lastmod>
+    <data>
+        <display>
+        <title>Record——工程door-new</title>
+        <pubTime>2016-06-13T01:40:32.000Z</pubTime>
+        
+        <tag>编程</tag>
+         
+         
+           
+             
+              <breadCrumb title="工程" url="http://www.vivatakethat.com/categories/%E5%B7%A5%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/11/14/QWidget%E7%B1%BB_QT5/</loc>
-    <lastmod>2016-12-07T16:36:57.905Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.070Z</lastmod>
     <data>
         <display>
         <title>QWidget类_QT5</title>
@@ -725,7 +745,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/05/19/Qucik%E2%80%94PaaS/</loc>
-    <lastmod>2016-12-07T16:36:57.898Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.065Z</lastmod>
     <data>
         <display>
         <title>Quick-PaaS</title>
@@ -744,48 +764,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/10/17/QT_Memo/</loc>
-    <lastmod>2016-12-07T16:36:57.889Z</lastmod>
-    <data>
-        <display>
-        <title>QT memo</title>
-        <pubTime>2016-10-17T02:21:32.000Z</pubTime>
-        
-        <tag>QT</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/10/Qt%20Creator-error/</loc>
-    <lastmod>2016-12-07T16:36:57.882Z</lastmod>
-    <data>
-        <display>
-        <title>Qt Creator-error</title>
-        <pubTime>2016-11-09T16:04:10.000Z</pubTime>
-        
-        <tag>IDE</tag>
-         
-         
-           
-             
-              <breadCrumb title="Record" url="http://www.vivatakethat.com/categories/Record/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/07/21/proteus%E5%85%83%E5%99%A8%E4%BB%B6memo/</loc>
-    <lastmod>2016-12-07T16:36:57.876Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.049Z</lastmod>
     <data>
         <display>
         <title>proteus小记</title>
@@ -805,7 +785,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
-    <lastmod>2016-12-07T16:36:57.810Z</lastmod>
+    <lastmod>2017-01-16T13:40:42.044Z</lastmod>
     <data>
         <display>
         <title>PHP基础（零）</title>
@@ -825,7 +805,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/04/PHP%E5%85%A5%E9%97%A8(%E4%B8%80)/</loc>
-    <lastmod>2016-12-07T16:36:57.778Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.997Z</lastmod>
     <data>
         <display>
         <title>PHP基础（一）</title>
@@ -844,28 +824,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/05/20/PaaS%E2%80%94%E2%80%94%E8%BF%90%E7%BB%B4/</loc>
-    <lastmod>2016-12-07T16:36:57.772Z</lastmod>
-    <data>
-        <display>
-        <title>PaaS运维</title>
-        <pubTime>2016-05-20T12:29:32.000Z</pubTime>
-        
-        <tag>PaaS</tag>
-         
-         
-           
-             
-              <breadCrumb title="云计算" url="http://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/05/16/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA%E4%BA%8C/</loc>
-    <lastmod>2016-12-07T16:36:57.766Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.976Z</lastmod>
     <data>
         <display>
         <title>PaaS应用搭建(二)</title>
@@ -884,28 +844,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/04/15/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA-Moodle%E7%94%B5%E5%AD%90%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2016-12-07T16:36:57.760Z</lastmod>
-    <data>
-        <display>
-        <title>PaaS应用搭建,Moodle电子学习系统</title>
-        <pubTime>2016-04-15T08:07:32.000Z</pubTime>
-        
-        <tag>PaaS</tag>
-         
-         
-           
-             
-              <breadCrumb title="云计算" url="http://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/04/13/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2016-12-07T16:36:57.749Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.967Z</lastmod>
     <data>
         <display>
         <title>PaaS应用搭建</title>
@@ -924,8 +864,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/04/15/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA-Moodle%E7%94%B5%E5%AD%90%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2017-01-16T13:40:41.962Z</lastmod>
+    <data>
+        <display>
+        <title>PaaS应用搭建,Moodle电子学习系统</title>
+        <pubTime>2016-04-15T08:07:32.000Z</pubTime>
+        
+        <tag>PaaS</tag>
+         
+         
+           
+             
+              <breadCrumb title="云计算" url="http://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/04/09/PaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
-    <lastmod>2016-12-07T16:36:57.740Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.958Z</lastmod>
     <data>
         <display>
         <title>PaaS基础架设</title>
@@ -944,8 +904,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/05/20/PaaS%E2%80%94%E2%80%94%E8%BF%90%E7%BB%B4/</loc>
+    <lastmod>2017-01-16T13:40:41.952Z</lastmod>
+    <data>
+        <display>
+        <title>PaaS运维</title>
+        <pubTime>2016-05-20T12:29:32.000Z</pubTime>
+        
+        <tag>PaaS</tag>
+         
+         
+           
+             
+              <breadCrumb title="云计算" url="http://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/05/18/PaaS-JavaEE/</loc>
-    <lastmod>2016-12-07T16:36:57.733Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.948Z</lastmod>
     <data>
         <display>
         <title>JavaEE-PaaS应用</title>
@@ -965,7 +945,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/05/18/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2016-12-07T16:36:57.726Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.943Z</lastmod>
     <data>
         <display>
         <title>MongoDB数据库</title>
@@ -985,7 +965,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/11/15/Menuconfig%E7%9A%84%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2016-12-07T16:36:57.720Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.939Z</lastmod>
     <data>
         <display>
         <title>Menuconfig的操作</title>
@@ -1005,7 +985,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/11/16/makefile/</loc>
-    <lastmod>2016-12-07T16:36:57.712Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.934Z</lastmod>
     <data>
         <display>
         <title>makefile</title>
@@ -1025,7 +1005,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/07/12/Linux%E9%A9%B1%E5%8A%A8-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87/</loc>
-    <lastmod>2016-12-07T16:36:57.707Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.930Z</lastmod>
     <data>
         <display>
         <title>Linux驱动-基础知识预备</title>
@@ -1045,7 +1025,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/11/03/Linux%E7%BC%96%E8%AF%91%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/</loc>
-    <lastmod>2016-12-07T16:36:57.700Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.924Z</lastmod>
     <data>
         <display>
         <title>Linux编译日常报错</title>
@@ -1065,7 +1045,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/09/23/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2016-12-07T16:36:57.690Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.920Z</lastmod>
     <data>
         <display>
         <title>Linux系统编程-文件操作</title>
@@ -1085,7 +1065,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/23/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2016-12-07T16:36:57.684Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.915Z</lastmod>
     <data>
         <display>
         <title>Linux系统编程-常见操作</title>
@@ -1105,7 +1085,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/07/27/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E8%BF%94%E5%9B%9E%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2016-12-07T16:36:57.679Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.912Z</lastmod>
     <data>
         <display>
         <title>Linux系统编程-代码运行返回信息</title>
@@ -1125,7 +1105,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/12/Linux%E7%B3%BB%E7%BB%9F(%E9%9B%B6)/</loc>
-    <lastmod>2016-12-07T16:36:57.669Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.907Z</lastmod>
     <data>
         <display>
         <title>Linux系统(零)</title>
@@ -1145,7 +1125,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/18/Linux%E7%B3%BB%E7%BB%9F(%E4%BA%8C)/</loc>
-    <lastmod>2016-12-07T16:36:57.659Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.903Z</lastmod>
     <data>
         <display>
         <title>Linux系统(二)</title>
@@ -1165,7 +1145,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/21/Linux%E7%B3%BB%E7%BB%9F(%E4%B8%89)/</loc>
-    <lastmod>2016-12-07T16:36:57.653Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.898Z</lastmod>
     <data>
         <display>
         <title>Linux系统(三)</title>
@@ -1185,7 +1165,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/14/Linux%E7%B3%BB%E7%BB%9F(%E4%B8%80)/</loc>
-    <lastmod>2016-12-07T16:36:57.643Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.894Z</lastmod>
     <data>
         <display>
         <title>Linux系统(一)</title>
@@ -1204,28 +1184,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/05/22/Linux%E5%91%BD%E4%BB%A4%E5%85%A8%E8%A7%A3%E6%9E%90/</loc>
-    <lastmod>2016-12-07T16:36:57.637Z</lastmod>
-    <data>
-        <display>
-        <title>Linux命令全解析</title>
-        <pubTime>2016-05-22T06:48:37.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.vivatakethat.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/04/09/IaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
-    <lastmod>2016-12-07T16:36:57.627Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.885Z</lastmod>
     <data>
         <display>
         <title>IaaS基础架设</title>
@@ -1245,7 +1205,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2016-12-07T16:36:57.620Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.880Z</lastmod>
     <data>
         <display>
         <title>hexo部署过程问题与结局方案</title>
@@ -1264,28 +1224,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
-    <lastmod>2016-12-07T16:36:57.609Z</lastmod>
-    <data>
-        <display>
-        <title>git memo</title>
-        <pubTime>2016-09-17T12:26:32.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/09/06/gcc%E5%8F%82%E6%95%B0/</loc>
-    <lastmod>2016-12-07T16:36:57.598Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.870Z</lastmod>
     <data>
         <display>
         <title>gcc参数</title>
@@ -1304,8 +1244,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/10/19/G-%E6%B8%B8%E6%88%8F%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E5%8D%95%E8%AF%8D/</loc>
+    <lastmod>2017-01-16T13:40:41.866Z</lastmod>
+    <data>
+        <display>
+        <title>游戏中出现的词汇</title>
+        <pubTime>2016-10-19T10:32:10.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://www.vivatakethat.com/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/11/05/Function-%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2016-12-07T16:36:57.591Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.861Z</lastmod>
     <data>
         <display>
         <title>Function-功能函数</title>
@@ -1325,7 +1285,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/19/E%E2%80%94%E2%80%94%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/</loc>
-    <lastmod>2016-12-07T16:36:57.586Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.856Z</lastmod>
     <data>
         <display>
         <title>计算机英语单词</title>
@@ -1345,7 +1305,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/09/26/E%E2%80%94%E2%80%94%E8%8B%B1%E8%AF%AD%E5%BA%94%E7%94%A8%E7%9F%AD%E6%96%87/</loc>
-    <lastmod>2016-12-07T16:36:57.575Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.851Z</lastmod>
     <data>
         <display>
         <title>英语应用短文</title>
@@ -1364,8 +1324,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/11/01/E-%E8%8B%B1%E8%AF%AD%E5%91%A8%E8%AE%B0memo_20161101/</loc>
+    <lastmod>2017-01-16T13:40:41.846Z</lastmod>
+    <data>
+        <display>
+        <title>英语周记memo_20161101</title>
+        <pubTime>2016-11-01T04:35:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://www.vivatakethat.com/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/10/24/E-%E8%8B%B1%E8%AF%AD%E5%91%A8%E8%AE%B0memo2016_10_24-10_28/</loc>
-    <lastmod>2016-12-07T16:36:57.569Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.842Z</lastmod>
     <data>
         <display>
         <title>英语周记memo_20161024</title>
@@ -1384,39 +1364,19 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/07/10/C%E2%80%94%E2%80%94%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</loc>
-    <lastmod>2016-12-07T16:36:57.552Z</lastmod>
+    <loc>http://www.vivatakethat.com/2016/10/31/E-Breaking%20Bad-%E5%8F%B0%E8%AF%8D/</loc>
+    <lastmod>2017-01-16T13:40:41.837Z</lastmod>
     <data>
         <display>
-        <title>C语言:输入-输出</title>
-        <pubTime>2016-07-10T13:11:32.000Z</pubTime>
+        <title>Breaking Bad-台词</title>
+        <pubTime>2016-10-31T04:35:32.000Z</pubTime>
         
-        <tag>C</tag>
+        <tag>memo</tag>
          
          
            
              
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/09/02/C%E8%AF%AD%E8%A8%80-%E9%A2%84%E5%A4%84%E7%90%86/</loc>
-    <lastmod>2016-12-07T16:36:57.542Z</lastmod>
-    <data>
-        <display>
-        <title>C语言:预处理</title>
-        <pubTime>2016-09-02T03:25:32.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+              <breadCrumb title="English" url="http://www.vivatakethat.com/categories/English/"/>
           
         </display>
     </data>
@@ -1425,7 +1385,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/11/05/C%E8%AF%AD%E8%A8%80%E9%97%AE%E4%B8%8E%E7%AD%94/</loc>
-    <lastmod>2016-12-07T16:36:57.537Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.832Z</lastmod>
     <data>
         <display>
         <title>C语言问与答</title>
@@ -1445,7 +1405,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/21/C%E8%AF%AD%E8%A8%80%E2%80%94%E2%80%94%E7%BB%93%E6%9E%84%E4%BD%93/</loc>
-    <lastmod>2016-12-07T16:36:57.527Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.828Z</lastmod>
     <data>
         <display>
         <title>C语言:结构体</title>
@@ -1465,7 +1425,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/07/02/C%E8%AF%AD%E8%A8%80%E2%80%94%E2%80%94%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
-    <lastmod>2016-12-07T16:36:57.517Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.823Z</lastmod>
     <data>
         <display>
         <title>C语言:类型转换</title>
@@ -1484,8 +1444,48 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/09/02/C%E8%AF%AD%E8%A8%80-%E9%A2%84%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2017-01-16T13:40:41.819Z</lastmod>
+    <data>
+        <display>
+        <title>C语言:预处理</title>
+        <pubTime>2016-09-02T03:25:32.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/07/10/C%E2%80%94%E2%80%94%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</loc>
+    <lastmod>2017-01-16T13:40:41.814Z</lastmod>
+    <data>
+        <display>
+        <title>C语言:输入-输出</title>
+        <pubTime>2016-07-10T13:11:32.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/04/11/C%E2%80%94%E2%80%94%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/</loc>
-    <lastmod>2016-12-07T16:36:57.508Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.809Z</lastmod>
     <data>
         <display>
         <title>C:编译流程</title>
@@ -1505,7 +1505,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/18/C%E2%80%94%E2%80%94%E5%B8%B8%E9%87%8F+%E5%8F%98%E9%87%8F+%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
-    <lastmod>2016-12-07T16:36:57.499Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.805Z</lastmod>
     <data>
         <display>
         <title>C语言:常量、变量、表达式</title>
@@ -1525,7 +1525,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/03/C%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
-    <lastmod>2016-12-07T16:36:57.492Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.801Z</lastmod>
     <data>
         <display>
         <title>C:基本概念</title>
@@ -1545,7 +1545,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/21/C%E2%80%94%E2%80%94%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/</loc>
-    <lastmod>2016-12-07T16:36:57.483Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.796Z</lastmod>
     <data>
         <display>
         <title>C语言基础(三):分支语句</title>
@@ -1565,7 +1565,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/08/21/C%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2016-12-07T16:36:57.473Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.790Z</lastmod>
     <data>
         <display>
         <title>C语言:函数分析</title>
@@ -1585,7 +1585,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/20/C%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0%20/</loc>
-    <lastmod>2016-12-07T16:36:57.463Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.786Z</lastmod>
     <data>
         <display>
         <title>C:函数</title>
@@ -1604,8 +1604,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/08/21/C%E2%80%94%E2%80%94memo_%E5%BE%85%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2017-01-16T13:40:41.782Z</lastmod>
+    <data>
+        <display>
+        <title>C语言memo_待整理</title>
+        <pubTime>2016-08-21T15:52:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/06/17/Coursera-Week%200-Welcome%20to%20Algorithms,%20Part%20I%20/</loc>
-    <lastmod>2016-12-07T16:36:57.457Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.777Z</lastmod>
     <data>
         <display>
         <title>Week 0- Welcome to Algorithms, Part I</title>
@@ -1625,7 +1645,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/22/Coursera-Union-Find/</loc>
-    <lastmod>2016-12-07T16:36:57.451Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.773Z</lastmod>
     <data>
         <display>
         <title>Union-Find</title>
@@ -1644,28 +1664,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/08/21/C%E2%80%94%E2%80%94memo_%E5%BE%85%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2016-12-07T16:36:57.443Z</lastmod>
-    <data>
-        <display>
-        <title>C语言memo_待整理</title>
-        <pubTime>2016-08-21T15:52:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/05/18/centos%E8%BF%90%E7%BB%B4memo/</loc>
-    <lastmod>2016-12-07T16:36:57.435Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.768Z</lastmod>
     <data>
         <display>
         <title>centos运维memo</title>
@@ -1684,8 +1684,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/11/17/C++%E5%B8%B8%E7%94%A8%E5%BA%93_%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2017-01-16T13:40:41.764Z</lastmod>
+    <data>
+        <display>
+        <title>C++:常用库_函数</title>
+        <pubTime>2016-11-17T06:02:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/09/29/C++%E2%80%94%E2%80%94%E9%97%AE%E7%AD%94%E9%94%A6%E9%9B%86%20/</loc>
-    <lastmod>2016-12-07T16:36:57.429Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.760Z</lastmod>
     <data>
         <display>
         <title>C++问答锦集</title>
@@ -1705,7 +1725,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/09/07/C++%E2%80%94%E2%80%94%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</loc>
-    <lastmod>2016-12-07T16:36:57.420Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.756Z</lastmod>
     <data>
         <display>
         <title>C++:输入输出</title>
@@ -1724,48 +1744,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/11/17/C++%E2%80%94%E2%80%94%E7%B1%BB+%E5%87%BD%E6%95%B0+%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2016-12-07T16:36:57.410Z</lastmod>
-    <data>
-        <display>
-        <title>C++:类、函数、指针</title>
-        <pubTime>2016-11-16T16:42:32.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/11/17/C++%E5%B8%B8%E7%94%A8%E5%BA%93_%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2016-12-07T16:36:57.397Z</lastmod>
-    <data>
-        <display>
-        <title>C++:常用库_函数</title>
-        <pubTime>2016-11-17T06:02:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/11/18/C++_memo2/</loc>
-    <lastmod>2016-12-07T16:36:57.384Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.747Z</lastmod>
     <data>
         <display>
         <title>C++_memo2</title>
@@ -1784,8 +1764,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/12/01/C++_memo-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2017-01-16T13:40:41.742Z</lastmod>
+    <data>
+        <display>
+        <title>C++_memo-类与对象</title>
+        <pubTime>2016-12-01T07:42:32.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/06/29/Algorithms3-13/</loc>
-    <lastmod>2016-12-07T16:36:57.379Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.738Z</lastmod>
     <data>
         <display>
         <title>Algorithms3-13</title>
@@ -1805,7 +1805,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/04/01/51%E5%9F%BA%E7%A1%80%EF%BC%88%E9%9B%B6%EF%BC%89/</loc>
-    <lastmod>2016-12-07T16:36:57.371Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.734Z</lastmod>
     <data>
         <display>
         <title>51单片机</title>
@@ -1816,7 +1816,7 @@
          
            
              
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+              <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
           
         </display>
     </data>
@@ -1825,7 +1825,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/11/18/4412_%E7%94%9F%E6%88%90%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9/</loc>
-    <lastmod>2016-12-07T16:36:57.365Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.730Z</lastmod>
     <data>
         <display>
         <title>4412_生成设备节点</title>
@@ -1844,8 +1844,28 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/11/02/4412_%E6%9C%80%E5%B0%8FLinux%E9%A9%B1%E5%8A%A8/</loc>
+    <lastmod>2017-01-16T13:40:41.723Z</lastmod>
+    <data>
+        <display>
+        <title>4412_最小Linux驱动</title>
+        <pubTime>2016-11-02T14:35:32.000Z</pubTime>
+        
+        <tag>字符设备</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2016/10/26/4412_%E5%AE%9E%E9%AA%8C%20/</loc>
-    <lastmod>2016-12-07T16:36:57.354Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.718Z</lastmod>
     <data>
         <display>
         <title>4412_实验</title>
@@ -1865,7 +1885,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/10/31/4412_linux%E4%B8%B2%E5%8F%A3%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2016-12-07T16:36:57.301Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.713Z</lastmod>
     <data>
         <display>
         <title>4412_linux串口应用编程</title>
@@ -1885,7 +1905,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/09/04/4412_ADC%E6%A8%A1%E6%95%B0%E8%BD%AC%E6%8D%A2/</loc>
-    <lastmod>2016-12-07T16:36:57.293Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.707Z</lastmod>
     <data>
         <display>
         <title>4412_ADC模数转换</title>
@@ -1905,7 +1925,7 @@
     
   <url>
     <loc>http://www.vivatakethat.com/2016/06/29/1-Fundamentals/</loc>
-    <lastmod>2016-12-07T16:36:57.279Z</lastmod>
+    <lastmod>2017-01-16T13:40:41.701Z</lastmod>
     <data>
         <display>
         <title>1-Fundamentals</title>

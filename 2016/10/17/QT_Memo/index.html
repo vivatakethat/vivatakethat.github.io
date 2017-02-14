@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>QT memo | take that的博客</title>
+    <title>QT creator日常报错 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -14,14 +14,14 @@
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
     <meta name="description" content="QT_Memo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QT memo">
+<meta property="og:title" content="QT creator日常报错">
 <meta property="og:url" content="http://www.vivatakethat.com/2016/10/17/QT_Memo/index.html">
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="QT_Memo">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/1922601.jpg">
-<meta property="og:updated_time" content="2016-12-07T16:36:57.889Z">
+<meta property="og:updated_time" content="2017-01-23T02:00:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QT memo">
+<meta name="twitter:title" content="QT creator日常报错">
 <meta name="twitter:description" content="QT_Memo">
 
     
@@ -86,7 +86,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/17/QT_Memo/" title="QT memo" itemprop="url">QT memo</a>
+      <a href="/2016/10/17/QT_Memo/" title="QT creator日常报错" itemprop="url">QT creator日常报错</a>
   </h1>
   <p class="article-author">By
        
@@ -115,6 +115,9 @@
 <p><strong>1. </strong>Hello,QT<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;QLabel&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="function">QApplication <span class="title">app</span><span class="params">(argc, argv)</span></span>;<span class="comment">// 创建一个QApplication类的实例,QApplication实际上是QCoreApplication的子类。）</span></span><br><span class="line"></span><br><span class="line">    <span class="function">QLabel <span class="title">label</span><span class="params">(<span class="string">"Hello, world"</span>)</span></span>;<span class="comment">//创建一个QLabel对象，构造函数赋值“Hello, world”，当然就是能够在QLabel上面显示这行文本</span></span><br><span class="line">    label.show();<span class="comment">//最后调用QLabel的show()函数将其显示出来。</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> app.exec();  <span class="comment">//调用app.exec()，开启事件循环</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>解决方法：<br>1、首先在.pro文件里面添加<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QT       += core gui</span><br><span class="line">greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</span><br></pre></td></tr></table></figure></p>
 <p>2、把所有.cpp文件里面的<code>#include &lt;QtGui&gt;</code>改成<code>#include &lt;QtWidgets&gt;</code><br>按上述两步操作后，可以正常执行程序。</p>
+<blockquote>
+<p>第二步可不操作</p>
+</blockquote>
 <hr>
   
 	</div>
@@ -241,7 +244,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/10/17/QT_Memo/" data-title="QT memo | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2016/10/17/QT_Memo/" data-title="QT creator日常报错 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -275,7 +278,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/10/17/QT_Memo/" data-title="QT memo" data-url="http://www.vivatakethat.com/2016/10/17/QT_Memo/"></div>
+	<div class="ds-thread" data-thread-key="2016/10/17/QT_Memo/" data-title="QT creator日常报错" data-url="http://www.vivatakethat.com/2016/10/17/QT_Memo/"></div>
 </section>
 
 
@@ -309,11 +312,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>30</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
 		  
 		
 		  
@@ -321,7 +324,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
 		  
 		
 		  
@@ -331,7 +334,11 @@
 		  
 		
 		  
-			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>5</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
 		  
 		
 		  
@@ -347,7 +354,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>13</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
 		  
 		
 		  
@@ -374,7 +381,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
 			
 		
 			
@@ -426,11 +433,15 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
@@ -447,10 +458,6 @@
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>

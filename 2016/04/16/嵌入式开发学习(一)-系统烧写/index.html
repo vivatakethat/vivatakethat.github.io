@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/red%20alert%203.jpg">
 <meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/HyperTerminal%E6%B3%A2%E7%89%B9%E7%8E%87%E8%AE%BE%E7%BD%AE.jpg">
 <meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E5%99%A8%E7%AB%AF%E5%8F%A3%E6%B3%A2%E7%89%B9%E7%8E%87%E8%AE%BE%E7%BD%AE.png">
-<meta property="og:updated_time" content="2016-12-07T16:36:58.016Z">
+<meta property="og:updated_time" content="2017-01-16T13:40:42.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="嵌入式开发学习(一):系统烧写">
 <meta name="twitter:description" content="位置：信息学院
@@ -303,9 +303,16 @@
 <p>操作完后TF卡只剩下  11.6G，格式为FAT32</p>
 <p>在PC上的ubuntu识别TF卡分区<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">topeet@ubuntu:~$ df -l</span><br><span class="line">Filesystem     <span class="number">1</span>K-blocks    Used Available Use% Mounted on</span><br><span class="line">/dev/sda1       <span class="number">60894268</span> <span class="number">9292296</span>  <span class="number">48508724</span>  <span class="number">17</span>% /</span><br><span class="line">udev             <span class="number">1747508</span>       <span class="number">4</span>   <span class="number">1747504</span>   <span class="number">1</span>% /dev</span><br><span class="line">tmpfs             <span class="number">702712</span>     <span class="number">852</span>    <span class="number">701860</span>   <span class="number">1</span>% /run</span><br><span class="line">none                <span class="number">5120</span>       <span class="number">0</span>      <span class="number">5120</span>   <span class="number">0</span>% /run/lock</span><br><span class="line">none             <span class="number">1756776</span>     <span class="number">152</span>   <span class="number">1756624</span>   <span class="number">1</span>% /run/shm</span><br><span class="line">/dev/sdc3          <span class="number">49584</span>    <span class="number">4140</span>     <span class="number">42884</span>   <span class="number">9</span>% /media/<span class="number">48037</span>b11-e7dd-<span class="number">53</span>aa-<span class="number">85</span>b8-b8c6ead456a1</span><br><span class="line">/dev/sdc4          <span class="number">49584</span>    <span class="number">4140</span>     <span class="number">42884</span>   <span class="number">9</span>% /media/b980254d-<span class="number">585</span>b-c427-f635-<span class="number">620295108e60</span></span><br><span class="line">/dev/sdc2        <span class="number">2721368</span>   <span class="number">69664</span>   <span class="number">2513464</span>   <span class="number">3</span>% /media/fbeb2efa-<span class="number">9</span>ac6-ccd4-ffe2-<span class="number">6</span>baf9ebd0a8a</span><br><span class="line">/dev/sdc1       <span class="number">12220736</span>      <span class="number">24</span>  <span class="number">12220712</span>   <span class="number">1</span>% /media/<span class="number">0000</span>-<span class="number">3333</span></span><br></pre></td></tr></table></figure></p>
 <ol>
-<li><p>ubuntu文件系统拷贝到PC下的ubuntu内，并拷贝到TF卡内</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:/home/topeet</span><span class="comment"># cp -r iTOP4412_ubuntu_12.04_for_HDMI_20141230.tar.gz  /media/fbeb2efa-9ac6-ccd4-ffe2-6baf9ebd0a8a/</span></span><br></pre></td></tr></table></figure>
+<li>ubuntu文件系统拷贝到PC下的ubuntu内，并拷贝到TF卡内<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:/home/topeet</span><span class="comment"># cp -r iTOP4412_ubuntu_12.04_for_HDMI_20141230.tar.gz  /media/fbeb2efa-9ac6-ccd4-ffe2-6baf9ebd0a8a/</span></span><br></pre></td></tr></table></figure>
 </li>
+</ol>
+<blockquote>
+<p>主要拷贝错误的位置，请拷贝到2.7G里,可以执行<code>df -m</code>以MB查看空间</p>
+<blockquote>
+<p>如何少写完程序，开发板老是重新启动 很有可能是这部操作错误</p>
+</blockquote>
+</blockquote>
+<ol>
 <li><p>直接在TF卡目录下解压</p>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:/media/fbeb2efa-</span><span class="number">9</span>ac6-ccd4-ffe2-<span class="number">6</span>baf9ebd0a8a<span class="comment"># tar -vxf iTop4412_Kernel_3.0_20150403.tar.gz</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -334,6 +341,9 @@
 </ol>
 <hr>
 <p>在超级中断进入ubuntu：进入MMC中的sdupdate文件中<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">root@iTOP4412-ubuntu-desktop:~<span class="preprocessor"># df -l</span></span><br><span class="line">Filesystem     <span class="number">1</span>K-blocks    Used Available Use% Mounted on</span><br><span class="line">/dev/root        <span class="number">2721368</span> <span class="number">2026316</span>    <span class="number">556812</span>  <span class="number">79</span>% /</span><br><span class="line">none              <span class="number">323312</span>       <span class="number">4</span>    <span class="number">323308</span>   <span class="number">1</span>% /dev</span><br><span class="line">none               <span class="number">64664</span>     <span class="number">684</span>     <span class="number">63980</span>   <span class="number">2</span>% /run</span><br><span class="line">none                <span class="number">5120</span>       <span class="number">0</span>      <span class="number">5120</span>   <span class="number">0</span>% /run/lock</span><br><span class="line">none              <span class="number">323312</span>      <span class="number">24</span>    <span class="number">323288</span>   <span class="number">1</span>% /run/shm</span><br><span class="line">/dev/mmcblk0p1    <span class="number">398208</span>       <span class="number">4</span>    <span class="number">398204</span>   <span class="number">1</span>% /media/<span class="number">0000</span>-<span class="number">3333</span></span><br><span class="line">/dev/mmcblk1p1  <span class="number">12220736</span>  <span class="number">524216</span>  <span class="number">11696520</span>   <span class="number">5</span>% /media/<span class="number">0000</span>-<span class="number">3333</span>_</span><br><span class="line">/dev/mmcblk0p3    <span class="number">299780</span>   <span class="number">16576</span>    <span class="number">267732</span>   <span class="number">6</span>% /media/<span class="number">83f</span>fefcb-<span class="number">22</span>da-c864-fa72-<span class="number">2</span>c81994dcb5b</span><br><span class="line">/dev/mmcblk1p4     <span class="number">49584</span>    <span class="number">4140</span>     <span class="number">42884</span>   <span class="number">9</span>% /media/b980254d-<span class="number">585</span>b-c427-f635-<span class="number">620295108e60</span></span><br><span class="line">/dev/mmcblk1p3     <span class="number">49584</span>    <span class="number">4140</span>     <span class="number">42884</span>   <span class="number">9</span>% /media/<span class="number">48037</span>b11-e7dd-<span class="number">53</span>aa-<span class="number">85</span>b8-b8c6ead456a1</span><br><span class="line">/dev/mmcblk0p2   <span class="number">2723396</span>   <span class="number">69664</span>   <span class="number">2515388</span>   <span class="number">3</span>% /media/a7da13a7-<span class="number">46</span>b5-b281-e48f-<span class="number">505</span>c836ab578</span><br><span class="line">/dev/mmcblk0p4    <span class="number">299780</span>   <span class="number">16576</span>    <span class="number">267732</span>   <span class="number">6</span>% /media/<span class="number">0</span>aaa3cb8-<span class="number">6f</span>c6-db92-<span class="number">475f</span>-<span class="number">796</span>de6391848</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>如果没有/media挂在，请重复执行<code>df -l</code>刷新查看</p>
+</blockquote>
 <p>迅速查找相关文件<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@iTOP4412-ubuntu-desktop:/media<span class="preprocessor"># find / -name iT*</span></span><br><span class="line">/iTOP4412_ubuntu_12<span class="number">.04</span>_for_LCD_20141230.tar.gz</span><br><span class="line">/media/<span class="number">0000</span>-<span class="number">3333</span>_/sdupdate/iTOP4412_ubuntu_12<span class="number">.04</span>_for_LCD_20141230.tar.gz</span><br></pre></td></tr></table></figure></p>
 <p>将sdupdate下的iTOP4412_ubuntu_12.04_for_LCD_20141230.tar.gz拷贝到2.7G的eMMC<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/dev/mmcblk0p2   <span class="number">2723396</span>   <span class="number">69664</span>   <span class="number">2515388</span>   <span class="number">3</span>% /media/a7da13a7-<span class="number">46</span>b5-b281-e48f-<span class="number">505</span>c836ab578</span><br></pre></td></tr></table></figure></p>
 <p>并解压</p>
@@ -608,11 +618,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>30</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
 		  
 		
 		  
@@ -620,7 +630,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
 		  
 		
 		  
@@ -630,7 +640,11 @@
 		  
 		
 		  
-			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>5</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
 		  
 		
 		  
@@ -646,7 +660,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>13</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
 		  
 		
 		  
@@ -673,7 +687,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
 			
 		
 			
@@ -725,11 +739,15 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
@@ -746,10 +764,6 @@
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>

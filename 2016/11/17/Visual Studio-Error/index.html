@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="记录visualstudio日常错误">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/angry-hulk-53743-1920x1080.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2016-12-07T17:20:13.000Z">
+<meta property="og:updated_time" content="2017-02-09T12:29:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Visual Studio-Error">
 <meta name="twitter:description" content="记录visualstudio日常错误">
@@ -105,7 +105,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#无法解析到函数"><span class="toc-number">1.</span> <span class="toc-text">无法解析到函数</span></a></li></ol>
 		
 		</div>
 		
@@ -127,6 +127,10 @@
 <p>解决方法：<br>检查函数声明  &nbsp;与使用过程中函数是否一致。</p>
 <p>cout 重载输入出运算符使用错误</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Severity	Code	Description	Project	File	Line	Suppression State</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;char,_Traits&gt; &amp;,signed char &amp;)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;char,_Traits&gt; &amp;,signed char *)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;char,_Traits&gt; &amp;,unsigned char &amp;)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;_Elem,_Traits&gt; &amp;&amp;,_Ty &amp;)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;&amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;char,_Traits&gt; &amp;,unsigned char *)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;_Elem,_Traits&gt; &amp;,_Elem &amp;)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error (active)		no operator <span class="string">"&gt;&gt;"</span> matches these operands	c++_<span class="built_in">test</span>	d:\Project_VS\C++\C++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_Source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2676	binary <span class="string">'&gt;&gt;'</span>: <span class="string">'std::ostream'</span> does not define this operator or a conversion to a <span class="built_in">type</span> acceptable to the predefined operator	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;_Elem,_Traits&gt; &amp;,_Elem *)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span></span><br></pre></td></tr></table></figure>
+<h1 id="无法解析到函数"><a href="#无法解析到函数" class="headerlink" title="无法解析到函数"></a>无法解析到函数</h1><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LNK1120	1 unresolved externals	c-test_share	D:<span class="command">\gx</span>_workspace<span class="command">\share</span>_gx-linux<span class="command">\VS</span>_share<span class="command">\C</span><span class="command">\c</span>-test_share<span class="command">\Debug</span><span class="command">\c</span>-test_share.exe	1</span><br><span class="line"></span><br><span class="line">LNK2019	unresolved external symbol _factoriald referenced in function _main	c-test_share	D:<span class="command">\gx</span>_workspace<span class="command">\share</span>_gx-linux<span class="command">\vs</span>_share<span class="command">\c</span><span class="command">\c</span>-test_share<span class="command">\c</span>-test_share<span class="command">\c</span>-test_share.obj	1	</span><br><span class="line"></span><br><span class="line">```	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">检查factoriald 函数，是main函数里这个函数名打错，导致编译器找不到函数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="special">#</span> 不支持默认整型</span><br></pre></td></tr></table></figure>
+<p>1&gt;d:\gx_workspace\share_gx-linux\vs_share\c++_test_source.cpp(6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int<br>```</p>
+<p>分析:代码中函数没有写返回值类型，编译器将其视为默认整型。但是visualstudio不支持默认整型。</p>
+<p>填写代码函数返回类型(可以写void)</p>
   
 	</div>
 
@@ -296,7 +300,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#无法解析到函数"><span class="toc-number">1.</span> <span class="toc-text">无法解析到函数</span></a></li></ol>
  
   </div>
 
@@ -320,11 +324,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>5</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>30</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
 		  
 		
 		  
@@ -332,7 +336,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>14</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
 		  
 		
 		  
@@ -342,7 +346,11 @@
 		  
 		
 		  
-			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>5</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
 		  
 		
 		  
@@ -358,7 +366,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>13</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
 		  
 		
 		  
@@ -385,7 +393,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
 			
 		
 			
@@ -437,11 +445,15 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
@@ -458,10 +470,6 @@
 		
 			
 				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
 			
 		
 		</ul>
