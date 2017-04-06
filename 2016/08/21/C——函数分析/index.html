@@ -20,7 +20,7 @@
 <meta property="og:description" content="main函数传参数">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/scanf_0.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/scanf.png">
-<meta property="og:updated_time" content="2017-01-16T13:40:41.790Z">
+<meta property="og:updated_time" content="2017-02-25T06:49:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言:函数分析">
 <meta name="twitter:description" content="main函数传参数">
@@ -128,6 +128,8 @@
 </blockquote>
 </li>
 </ul>
+<p>实例:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[])</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (argc==<span class="number">5</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt; argc&lt;&lt;<span class="built_in">std</span>::endl;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="keyword">sizeof</span>(argv);i++)</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;argv[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="built_in">std</span>::endl;</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>【OutPut】<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost test]<span class="preprocessor"># ./now <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>           </span></span><br><span class="line"><span class="number">5</span></span><br><span class="line">./now <span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure></p>
 <p>附一段 K&amp;R C 原话</p>
 <p>In environments that support C, there is a way to pass command-line arguments or parameters to a program when it begins executing. When main is called, it is called with two arguments. The first (conventionally called argc, for argument count) is the number of command-line （注意所在位置，是WIN命令提示符中，或LINUX命令行中）arguments the program was invoked with; the second (argv, for argument vector) is a pointer to an array of character strings that contain the arguments, one per string. We customarily use multiple levels of pointers to manipulate these character strings.</p>
 <hr>
@@ -504,11 +506,11 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -524,9 +526,11 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -538,7 +542,11 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -573,7 +581,11 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -581,11 +593,11 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -597,7 +609,7 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -609,11 +621,19 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -625,10 +645,6 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -637,19 +653,11 @@ ENOTTY The specified request does not apply to the kind of object that the descr
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>

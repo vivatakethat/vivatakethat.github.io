@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/eg2-config.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90.jpg">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E9%80%89%E4%B8%ADLEDS.png">
-<meta property="og:updated_time" content="2017-01-16T13:40:41.934Z">
+<meta property="og:updated_time" content="2017-03-01T07:39:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="makefile">
 <meta name="twitter:description" content="在linux下编写C程序一般要通过make工程管理器完成编译，编译过程分为编译、汇编、链接3个阶段。在编译过阶段自动读入makefile文件(makefile的内容)来执行编译工作。同时根据文件时间戳自动发现更新过的文件而减少编译的过程。">
@@ -109,7 +109,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内核源码中的make"><span class="toc-number">1.</span> <span class="toc-text">内核源码中的make</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内核源码中的make"><span class="toc-number">1.</span> <span class="toc-text">内核源码中的make</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#makefile实例解读"><span class="toc-number">3.</span> <span class="toc-text">makefile实例解读</span></a></li></ol>
 		
 		</div>
 		
@@ -163,6 +163,7 @@
 <p>在目标板上查询<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="constant">@iTOP</span>-<span class="number">4412</span>]<span class="preprocessor"># ls /dev/led*</span></span><br><span class="line">/dev/leds</span><br></pre></td></tr></table></figure></p>
 <p>如果重新在menuconfig不选择<br><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="list">[<span class="keyword"><span class="built_in">*</span></span>] Enable LEDS config</span></span><br></pre></td></tr></table></figure></p>
 <p>  则在重新给开发板烧写zImage是则不能查询到leds<br>  <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  [root@iTOP-<span class="number">4412</span>]<span class="comment"># ls /dev/led*</span></span><br><span class="line">ls: /dev/led*: No such <span class="built_in">file</span> <span class="operator">or</span> <span class="built_in">directory</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="makefile实例解读"><a href="#makefile实例解读" class="headerlink" title="makefile实例解读"></a>makefile实例解读</h1><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">TARGET</span>          = ../../debug/libGate_Gunnebo.so</span><br><span class="line"><span class="constant">CFLAG</span>           = -g -D __LINUX__ -D linux  -std=gnu++11 -lpthread</span><br><span class="line"><span class="constant">LIBCREATE</span>       =  -shared -fPIC </span><br><span class="line"><span class="constant">LDFLAG</span>          =  -L. -lZBLCommunication  -Wl,-rpath,./</span><br><span class="line"><span class="comment">#两个功能；          一个是加载./libZBLCommunication.so     两个功能，一个是加载./libZBLCommunication.so</span></span><br><span class="line"><span class="constant">SOURCE</span>          = CGate_Gunnebo.cpp   gate.cpp  </span><br><span class="line"></span><br><span class="line"><span class="constant">HEADER</span> = CGate_Gunnebo.h  pch.h gate.h </span><br><span class="line"></span><br><span class="line">$(TARGET):$(SOURCE) $(HEADER)  libZBLCommunication.so</span><br><span class="line">	g++ <span class="variable">$(CFLAG)</span> <span class="variable">$(LIBCREATE)</span> <span class="variable">$(LDFLAG)</span> <span class="variable">$(SOURCE)</span>  -o $@ </span><br><span class="line">                                               <span class="comment">#` $@` 等价于 `$TARGET`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#CGate_Gunnebo.o:CGate_Gunnebo.cpp</span></span><br><span class="line"><span class="comment">#	g++ $^ $(CFLAG) -c CGate_Gunnebo.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#gate.o:gate.cpp</span></span><br><span class="line"><span class="comment">#	g++ $^ $(CFLAG) -c gate.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="title">clean:</span></span><br><span class="line">	rm *.o</span><br></pre></td></tr></table></figure>
   
 	</div>
 
@@ -332,7 +333,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内核源码中的make"><span class="toc-number">1.</span> <span class="toc-text">内核源码中的make</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内核源码中的make"><span class="toc-number">1.</span> <span class="toc-text">内核源码中的make</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#makefile实例解读"><span class="toc-number">3.</span> <span class="toc-text">makefile实例解读</span></a></li></ol>
  
   </div>
 
@@ -356,11 +357,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -376,9 +377,11 @@
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -390,7 +393,11 @@
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -425,7 +432,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -433,11 +444,11 @@
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -449,7 +460,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -461,11 +472,19 @@
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -477,10 +496,6 @@
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -489,19 +504,11 @@
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -1,0 +1,920 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Linux下编译日常 | take that的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="takethat">
+    
+
+    
+	<meta name="keywords" content="嵌入式, C++, C, Linux">
+    <meta name="description" content="Linux编译日常备忘。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux下编译日常">
+<meta property="og:url" content="http://www.vivatakethat.com/2016/11/03/Linux编译日常/index.html">
+<meta property="og:site_name" content="take that的博客">
+<meta property="og:description" content="Linux编译日常备忘。">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg">
+<meta property="og:image" content="http://www.cnblogs.com/ggjucheng/archive/2011/12/15/2289291.html">
+<meta property="og:updated_time" content="2017-03-15T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux下编译日常">
+<meta name="twitter:description" content="Linux编译日常备忘。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/batman.jpg" alt="take that的博客" title="take that的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
+				<h2 class="blog-motto">要有输入，输出</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|Tags</a></li>
+					
+						<li><a href="/categories">分类|Categories</a></li>
+					
+						<li><a href="/about">关于|About</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 12341059951958788027 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/11/03/Linux编译日常/" title="Linux下编译日常" itemprop="url">Linux下编译日常</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-11-03T05:32:10.000Z" itemprop="datePublished"> 发表于 2016-11-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封成库文件"><span class="toc-number">2.</span> <span class="toc-text">封成库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">3.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">3.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#格式不正确"><span class="toc-number">4.</span> <span class="toc-text">格式不正确</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程序在目标机运行错误"><span class="toc-number">5.</span> <span class="toc-text">程序在目标机运行错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">6.</span> <span class="toc-text">g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">7.</span> <span class="toc-text">g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li></ol>
+		
+		</div>
+		
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg" alt="被关在牢笼中的究竟是James还是Mary" title="被关在牢笼中的究竟是James还是Mary"></p>
+<p>Linux编译日常备忘。</p>
+<a id="more"></a>
+<h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>[g++编译参数]</p>
+<p><a href="http://blog.csdn.net/dingzuoer/article/details/44650941" target="_blank" rel="external">g++编译参数</a></p>
+<p>[gcc编译参数]<br><a href="http://www.cnblogs.com/cy163/archive/2009/03/12/1409434.html" target="_blank" rel="external">gcc编译参数</a></p>
+<ul>
+<li><p>查看程序含有什么动态函式库<br><strong><code>ldd</code></strong>命令用于判断某个可执行的 binary 档案含有什么动态函式库</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby">-version　　打印ldd的版本号</span><br><span class="line"></span>-<span class="ruby">v --verbose　　打印所有信息，例如包括符号的版本信息</span><br><span class="line"></span>-<span class="ruby">d --data-relocs　　执行符号重部署，并报告缺少的目标对象（只对<span class="constant">ELF</span>格式适用）</span><br><span class="line"></span>-<span class="ruby">r --function-relocs　　对目标对象和函数执行重新部署，并报告缺少的目标对象和函数（只对<span class="constant">ELF</span>格式适用）</span><br><span class="line"></span>-<span class="ruby">-help 用法信息</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>nm</code>查看静态库有哪些模块</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>][root@localhost liaoxi]<span class="preprocessor"># nm libgpio.a        </span></span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">00000000</span> b base</span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">00000000</span> t inb</span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">0000006</span>e T init_gpio</span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">0000001</span>d t inl</span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">00000039</span> t outb</span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">00000057</span> t outl</span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]         U <span class="built_in">printf</span></span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]         U <span class="built_in">puts</span></span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">00000999</span> T read_gpio</span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">000000</span>a5 T read_pca9534_register</span><br><span class="line">[<span class="number">13</span>:<span class="number">37</span>:<span class="number">47</span>]<span class="number">000002e1</span> T write_gpio</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看程序返回值</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># echo $?</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>显示上一个执行的命令（或程序）的返回值，这个值通常在0~255之间，0表示一切正常。</p>
+<hr>
+<h1 id="封成库文件"><a href="#封成库文件" class="headerlink" title="封成库文件"></a>封成库文件</h1><p><a href="(http://blog.chinaunix.net/uid-23069658-id-3142046.html)">参考博文</a></p>
+<ul>
+<li>静态连接库</li>
+</ul>
+<ol>
+<li><p>将类.cpp跟头文件.h生成.so文件 </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ RS232<span class="class">.h</span> RS232-gx_v4_Flag<span class="class">.cpp</span> -fPIC -shared -o libRS232.so</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>g++编译<br>g++ libRS232.so main.cpp -o run</p>
+</li>
+<li><p>将生成的run文件和.so文件拷贝到目标机<br>将.so文件拷贝到/ust/lib下</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp  libRS232.so  /usr/<span class="class"><span class="keyword">lib</span>/</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="Linux驱动"><a href="#Linux驱动" class="headerlink" title="Linux驱动"></a>Linux驱动</h1><h2 id="声明报错"><a href="#声明报错" class="headerlink" title="声明报错"></a>声明报错</h2><ol>
+<li><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/root/mini_linux_module/first_linux_driver.c:<span class="number">6</span>: <span class="keyword">error</span>: expected declaration specifiers <span class="keyword">or</span> '...' <span class="keyword">before</span> <span class="type">string</span> <span class="type">constant</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解决方法<br>错误源码:<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">6 <span class="title">MODULE_LINCESE</span><span class="params">(<span class="string">"Dual BSD/GPL"</span>)</span></span>;  <span class="comment">//GPL:声明开源;        Dual BSD:没有版本限制</span></span><br></pre></td></tr></table></figure></p>
+<p>  正确应该为:<br>  <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="css"></span><br><span class="line"># <span class="tag">webbench-1</span><span class="class">.5</span></span><br><span class="line"></span><br><span class="line"><span class="tag">OS</span>: <span class="tag">Ubuntu</span> 14<span class="class">.04</span><span class="class">.2</span> <span class="tag">LTS</span> \<span class="tag">n</span> \<span class="tag">l</span></span><br><span class="line"><span class="tag">gcc</span><span class="pseudo">:gcc</span> <span class="tag">version</span> 4<span class="class">.8</span><span class="class">.4</span> (<span class="tag">Ubuntu</span> 4<span class="class">.8</span><span class="class">.4-2ubuntu1</span>~14<span class="class">.04</span><span class="class">.3</span>) </span><br><span class="line">```<span class="tag">make</span></span><br><span class="line"><span class="tag">root</span><span class="at_rule">@<span class="keyword">ubuntu:~/webbench-1.5#</span> make</span><br><span class="line">cc -Wall -ggdb -W -O   -c -o webbench.o webbench.c</span><br><span class="line">webbench.c: In function ‘alarm_handler’:</span><br><span class="line">webbench.c:<span class="number">77</span>:<span class="number">31</span>: warning: unused parameter ‘signal’ [-Wunused-parameter]</span><br><span class="line"> static void <span class="function">alarm_handler</span>(int signal)</span><br><span class="line">                               ^</span><br><span class="line">cc -Wall -ggdb -W -O  -o webbench webbench.o  </span><br><span class="line">ctags *.c</span><br><span class="line">/bin/sh: <span class="number">1</span>: ctags: not found</span><br><span class="line">make: [tags] Error <span class="number">127</span> (ignored)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>没有ctags命令</p>
+<p>解决办法：安装ctages<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ubuntu</span><span class="symbol">:~/webbench-</span><span class="number">1.5</span><span class="comment"># apt-get install ctags</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><p>C++中函数名不能带 “-”吗？<br>解答：不行；<strong><code>C++命名只能是大小写英文字母、下划线或数字；</code></strong><br><img src="http://www.cnblogs.com/ggjucheng/archive/2011/12/15/2289291.html" alt=""></p>
+</li>
+<li><p>main定义不对<br>g++编译报错：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@ACER</span><span class="symbol">:/home/takethat/workspace/gx_WSL</span><span class="comment"># g++ RS232-gx.cpp -o RS232_run</span></span><br><span class="line"><span class="constant">RS232-</span>gx.<span class="symbol">cpp:</span><span class="number">36</span><span class="symbol">:</span><span class="number">15</span><span class="symbol">:</span> <span class="symbol">error:</span> ‘<span class="symbol">:</span><span class="symbol">:main</span>’ must <span class="keyword">return</span> ‘int’</span><br><span class="line"> void main(void)</span><br><span class="line">               ^</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解决：<br>将void main（）改为int main（）就行了。原因:<br> C++98中定义了如下两种main函数的定义方式：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( )</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><p>数组非法赋值<br>g++编译报错：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RS232-gx.cpp:<span class="number">42</span>:<span class="number">5</span>: error: assigning to an <span class="built_in">array</span> from an initializer <span class="built_in">list</span></span><br><span class="line"> data=&#123;<span class="number">0x21</span>,<span class="number">0x60</span>,<span class="number">0x90</span>,<span class="number">0x90</span>,<span class="number">0x81</span>,<span class="number">0x83</span>,<span class="number">0xA8</span>,<span class="number">0xB3</span>,<span class="number">0xC0</span>&#125;;</span><br></pre></td></tr></table></figure>
+<p>data是数组名，是首地址;<br>正确的写法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> data[<span class="number">9</span>] = &#123; <span class="number">0x21</span>,<span class="number">0x60</span>,<span class="number">0x90</span>,<span class="number">0x90</span>,<span class="number">0x81</span>,<span class="number">0x83</span>,<span class="number">0xA8</span>,<span class="number">0xB3</span>,<span class="number">0xC0</span> &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>类函数调非法调用<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">RS232-gx</span><span class="class">.cpp</span><span class="pseudo">:69</span><span class="pseudo">:21</span>: <span class="tag">error</span>: <span class="tag">statement</span> <span class="tag">cannot</span> <span class="tag">resolve</span> <span class="tag">address</span> <span class="tag">of</span> <span class="tag">overloaded</span> <span class="tag">function</span></span><br><span class="line"><span class="tag">operatorser</span><span class="class">.out_door</span>;</span><br><span class="line">                    ^</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>正确写法:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">operatorser.out_door();</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>语法错误<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">error: expected <span class="function"><span class="keyword">constructor</span>, <span class="title">destructor</span>, <span class="title">or</span> <span class="title">type</span> <span class="title">conversion</span> <span class="title">before</span> ‘=’ <span class="title">token</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p> 原因:<br> C++中,全局域只能声明,初始化变量,不能对变量进行赋值,运算,调用函数等操作,谨记</p>
+<ol>
+<li><p>类作用域问题</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">oot<span class="variable">@ACER</span><span class="symbol">:/home/takethat/workspace/gx_WSL</span><span class="comment"># gcc RS232-gx.cpp -o RS232_run</span></span><br><span class="line"><span class="constant">RS232-</span>gx.<span class="symbol">cpp:</span><span class="number">27</span><span class="symbol">:</span><span class="number">15</span><span class="symbol">:</span> <span class="symbol">warning:</span> deprecated conversion from string constant to ‘char*’ [-<span class="constant">Wwrite-</span>strings]</span><br><span class="line"> char *uart3 = <span class="string">"/dev/ttys3"</span>;   <span class="regexp">//</span>串口位置</span><br><span class="line">               ^</span><br><span class="line"><span class="regexp">/tmp/ccff</span>AwXc.<span class="symbol">o:</span> <span class="constant">In </span>function `main<span class="string">':</span><br><span class="line">RS232-gx.cpp:(.text+0x10): undefined reference to `Rs232::open_com_init_opt()'</span></span><br><span class="line"><span class="constant">RS232-</span>gx.<span class="symbol">cpp:</span>(.text+<span class="number">0x1c</span>)<span class="symbol">:</span> undefined reference to `<span class="constant">Rs232:</span><span class="symbol">:in_door</span>()<span class="string">'</span><br><span class="line">RS232-gx.cpp:(.text+0x28): undefined reference to `Rs232::out_door()'</span></span><br><span class="line">/tmp/ccffAwXc.<span class="symbol">o:</span> <span class="constant">In </span>function `<span class="constant">__static_initialization_and_destruction_0(</span>int, int)<span class="string">':</span><br><span class="line">RS232-gx.cpp:(.text+0x58a): undefined reference to `std::ios_base::Init::Init()'</span></span><br><span class="line"><span class="constant">RS232-</span>gx.<span class="symbol">cpp:</span>(.text+<span class="number">0x599</span>)<span class="symbol">:</span> undefined reference to `<span class="symbol">std:</span><span class="symbol">:ios_base</span><span class="symbol">:</span><span class="symbol">:Init</span><span class="symbol">:</span><span class="symbol">:~Init</span>()<span class="string">'</span><br><span class="line">collect2: error: ld returned 1 exit status</span></span><br></pre></td></tr></table></figure>
+<p>解决:<br>原因：在类外部定义时，成员函数名前要多加一个类名；如果不加编译器就会认为该函数不是类的成员函数</p>
+</li>
+</ol>
+<ol>
+<li><ul>
+<li>字符常量要加const<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> root@ubuntu:~/gx<span class="preprocessor"># g++ RS232-gx.cpp -o RS232_RUN</span></span><br><span class="line">RS232-gx.cpp:<span class="number">27</span>: warning: deprecated conversion <span class="keyword">from</span> <span class="built_in">string</span> constant <span class="keyword">to</span> ‘<span class="built_in">char</span>*’</span><br><span class="line">/usr/<span class="keyword">lib</span>/gcc/x86_64-linux-gnu/<span class="number">4.4</span><span class="number">.7</span>/../../../x86_64-linux-gnu/crt1.o: <span class="keyword">In</span> <span class="keyword">function</span> `_start<span class="comment">':</span></span><br><span class="line">(.<span class="keyword">text</span>+<span class="number">0x20</span>): undefined reference <span class="keyword">to</span> `main</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<p>const<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="number">10.</span> <span class="keyword">operator</span>是C++关键字不能作为函数名!! </span><br><span class="line">&gt;vi下关键字是黄色</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 数组报错</span></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span>报错</span><br></pre></td></tr></table></figure></p>
+<p>RS232-gx_v4_Flag.cpp: In member function ‘void Rs232::register_68()’:<br>RS232-gx_v4_Flag.cpp:113:33: error: conflicting declaration ‘unsigned char register68_data [0]’<br>  unsigned char register68_data[0]=0;<br>                                 ^<br>RS232-gx_v4_Flag.cpp:95:17: note: previous declaration as ‘unsigned char register68_data [48]’<br>  unsigned char  register68_data[48];<br>  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">错误原因</span><br></pre></td></tr></table></figure></p>
+<p>unsigned char  register68_data[48];</p>
+<p>unsigned char register68_data[0]=0;<br>unsigned char     register68_data<a href="(http://blog.chinaunix.net/uid-23069658-id-3142046.html)">1</a>=15;<br>unsigned char     register68_data[2] = 10;<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">这是错误的，赋值的时候不需要在写``unsigned <span class="built_in">char</span>``</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 编译线程程序报错</span></span><br><span class="line"></span><br><span class="line">```Linux</span><br><span class="line">[root@localhost test_]<span class="preprocessor"># gcc threadl1.c </span></span><br><span class="line">/tmp/cceEaXN0.o: <span class="keyword">In</span> <span class="keyword">function</span> `main<span class="comment">':</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0x22</span>): undefined reference <span class="keyword">to</span> `pthread_create<span class="comment">'</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0x68</span>): undefined reference <span class="keyword">to</span> `pthread_join<span class="comment">'</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0xae</span>): undefined reference <span class="keyword">to</span> `pthread_join<span class="comment">'</span></span><br><span class="line">collect2: <span class="keyword">error</span>: ld returned <span class="number">1</span> <span class="keyword">exit</span> status</span><br></pre></td></tr></table></figure></p>
+<p>解决办法:要链接线程库<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -pthread -o <span class="tag">a</span> threadl1.c</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>线程有一套完整的与其相关的函数库调用，在程序头文要包含<code>pthread.h</code>并且在编译程序的时候要用选项<code>-pthread</code></p>
+</blockquote>
+<h1 id="格式不正确"><a href="#格式不正确" class="headerlink" title="格式不正确"></a>格式不正确</h1><ol>
+<li>注释不完整</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thread1--.c:42:1: error: unterminated comment</span><br></pre></td></tr></table></figure>
+<p>解决办法:<br>将错误的那行注释写完;<br>不只写 <code>/*</code></p>
+<h1 id="程序在目标机运行错误"><a href="#程序在目标机运行错误" class="headerlink" title="程序在目标机运行错误"></a>程序在目标机运行错误</h1><p>Segmentation fault (core dumped)一般是对内存操作不当造成的，常见的有：<br><strong><code>（1）数组超出范围。</code></strong></p>
+<p>（2）修改了只读内存。</p>
+<p>（3）还有本例也是修改了只读内存。</p>
+<ul>
+<li>ulimit -c unlimited 调试错误的core<br><strong><code>1.</code></strong> <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ulimit -c unlimited  </span><br><span class="line"><span class="escape">``</span><span class="escape">` </span></span><br><span class="line">个命令的时候主要是为了产生core文件，就是程序运行发行段错误时的文件</span><br><span class="line"></span><br><span class="line">**<span class="escape">``</span><span class="number">2</span>.<span class="escape">``</span>**<span class="escape">`然</span>后再执行gdb调试core文件找出具体错误</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>gdb RS232_RUN core<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;格式为<span class="symbol">:<span class="string">``</span>gdb</span>   程序名  core文件<span class="string">``</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**<span class="string">``</span><span class="number">3</span>.<span class="string">``</span>**在gdb中执行<span class="string">``</span>bt<span class="string">``</span>调出列出调用栈</span><br><span class="line">&gt;bt（backtrace）</span><br></pre></td></tr></table></figure></p>
+<p>root@ubuntu:~/gx# gdb RS232_RUN core<br>GNU gdb (Ubuntu/Linaro 7.4-2012.04-0ubuntu2.1) 7.4-2012.04<br>Copyright (C) 2012 Free Software Foundation, Inc.<br>License GPLv3+: GNU GPL version 3 or later <a href="http://gnu.org/licenses/gpl.html" target="_blank" rel="external">http://gnu.org/licenses/gpl.html</a><br>This is free software: you are free to change and redistribute it.<br>There is NO WARRANTY, to the extent permitted by law.  Type “show copying”<br>and “show warranty” for details.<br>This GDB was configured as “x86_64-linux-gnu”.<br>For bug reporting instructions, please see:<br><a href="http://bugs.launchpad.net/gdb-linaro/" target="_blank" rel="external">http://bugs.launchpad.net/gdb-linaro/</a>…<br>Reading symbols from /root/gx/RS232_RUN…(no debugging symbols found)…done.<br>[New LWP 3277]</p>
+<p>warning: Can’t read pathname for load map: Input/output error.<br>Core was generated by `./RS232_RUN’.<br>Program terminated with signal 11, Segmentation fault.</p>
+<p>#0  0x0000000000400a92 in Rs232::in_door() ()<br>(gdb) bt              //列出调用栈</p>
+<p>#0  0x0000000000400a92 in Rs232::in_door() ()</p>
+<p>#1  0x0000000000400a64 in main ()<br>(gdb)<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> &#10;&#10;&#10;# linux&#19979;&#32534;&#35793;boost::thread&#31243;&#24207;&#10;&#10;&#27491;&#30830;&#38142;&#25509;&#24211;</span><br></pre></td></tr></table></figure></p>
+<h1 id="g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><a href="#g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib" class="headerlink" title="g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib"></a>g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">运行正确</span><br></pre></td></tr></table></figure>
+<h1 id="g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><a href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib" class="headerlink" title="g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib"></a>g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</h1><p>```</p>
+<blockquote>
+<p>gcc编译链接动态库时，很有可能编译通过，但是执行时，找不到动态链接库，那是因为-L选项指定的路径只在编译时有效，编译出来的可执行文件不知道-L选项后面的值，通过<code>-Wl,rpath=&lt;your_lib_dir&gt;</code>，或<code>-Wl,-rpath,&lt;your_lib_dir&gt;</code>使得execute记住链接库的位置</p>
+</blockquote>
+  
+	</div>
+
+	<!-- css -->
+	<style type="text/css">
+	    .center {
+	        text-align: center;
+	    }
+	    .hidden {
+	        display: none;
+	    }
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+			_background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+
+			<!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+			     因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+	    <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+			
+		
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+    
+	<div id="donate_guide" class="donate_bar center hidden">
+        <br>
+	    ------------------------------------------------------------------------------------------------------------------------------
+	    <br>
+	    
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_wechar.png" title="微信打赏 Donate" height="190px" width="auto"/>
+		</a>
+        
+        &nbsp;&nbsp;
+
+		<a href="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+			<img src="http://7xsic8.com1.z0.glb.clouddn.com/qr_alipay0.jpg" title="支付宝打赏 Donate" height="190px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			打赏我的人,运气都不会太差~
+		</span>
+
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function() {
+			$('#donate_board').addClass('hidden');
+	    $('#donate_guide').removeClass('hidden');
+		}
+
+		function donate_on_web(){
+			$('#donate').submit();
+        }
+
+		var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+		}
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Linux/">Linux</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Record/">Record</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.vivatakethat.com/2016/11/03/Linux编译日常/" data-title="Linux下编译日常 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/11/05/C语言问与答/" title="C语言问与答">
+  <strong>上一篇：</strong><br/>
+  <span>
+  C语言问与答</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/11/02/4412_最小Linux驱动/"  title="4412_最小Linux驱动">
+ <strong>下一篇：</strong><br/> 
+ <span>4412_最小Linux驱动
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/11/03/Linux编译日常/" data-title="Linux下编译日常" data-url="http://www.vivatakethat.com/2016/11/03/Linux编译日常/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封成库文件"><span class="toc-number">2.</span> <span class="toc-text">封成库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">3.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">3.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#格式不正确"><span class="toc-number">4.</span> <span class="toc-text">格式不正确</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程序在目标机运行错误"><span class="toc-number">5.</span> <span class="toc-text">程序在目标机运行错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">6.</span> <span class="toc-text">g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">7.</span> <span class="toc-text">g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="vivatakethat" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/English/" title="English">English<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Record/" title="Record">Record<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/云计算/" title="云计算">云计算<sup>10</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/基础学科/" title="基础学科">基础学科<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程/" title="工程">工程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/算法-结构/" title="算法 | 结构">算法 | 结构<sup>1</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Record/" title="Record">Record<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/QT/" title="QT">QT<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com/" target="_blank" title="一个面向程序员交流分享的新一代社区">Stack overflow</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.fiochen.me" target="_blank" title=" 甜甜哥哥的博客">思华的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/example440982" target="_blank" title="  庆威的博客">轻微的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/qq_31803503" target="_blank" title=" 俊城的博客">JC. Lin的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <p class="asidetitle">热评文章</p>
+<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vivatakethat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer>
+<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Take That in here <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/vivatakethat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:vivatakethat@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015.4-2017
+		
+		<a href="/about" target="_blank" title="takethat">takethat</a>
+		
+
+		</p>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Xd__7-Q-nUc6axwJDfV5','2.0.0');
+</script>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_pv">
+      Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+    You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    $('#toc.toc-aside').css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"vivatakethat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6f10d7c2f9fab5591ab7b7c322e0a114";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  </body>
+</html>
+

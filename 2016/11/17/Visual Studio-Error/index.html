@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="记录visualstudio日常错误">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/angry-hulk-53743-1920x1080.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2017-02-09T12:29:33.000Z">
+<meta property="og:updated_time" content="2017-04-04T03:29:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Visual Studio-Error">
 <meta name="twitter:description" content="记录visualstudio日常错误">
@@ -128,9 +128,17 @@
 <p>cout 重载输入出运算符使用错误</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Severity	Code	Description	Project	File	Line	Suppression State</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;char,_Traits&gt; &amp;,signed char &amp;)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;char,_Traits&gt; &amp;,signed char *)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;char,_Traits&gt; &amp;,unsigned char &amp;)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;_Elem,_Traits&gt; &amp;&amp;,_Ty &amp;)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;&amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;char,_Traits&gt; &amp;,unsigned char *)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;char,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;_Elem,_Traits&gt; &amp;,_Elem &amp;)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error (active)		no operator <span class="string">"&gt;&gt;"</span> matches these operands	c++_<span class="built_in">test</span>	d:\Project_VS\C++\C++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_Source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2676	binary <span class="string">'&gt;&gt;'</span>: <span class="string">'std::ostream'</span> does not define this operator or a conversion to a <span class="built_in">type</span> acceptable to the predefined operator	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span>	</span><br><span class="line">Error	C2784	<span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;std::operator &gt;&gt;(std::basic_istream&lt;_Elem,_Traits&gt; &amp;,_Elem *)'</span>: could not deduce template argument <span class="keyword">for</span> <span class="string">'std::basic_istream&lt;_Elem,_Traits&gt; &amp;'</span> from <span class="string">'std::ostream'</span>	c++_<span class="built_in">test</span>	d:\project_vs\c++\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>\c++_<span class="built_in">test</span>_source.cpp	<span class="number">9</span></span><br></pre></td></tr></table></figure>
 <h1 id="无法解析到函数"><a href="#无法解析到函数" class="headerlink" title="无法解析到函数"></a>无法解析到函数</h1><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LNK1120	1 unresolved externals	c-test_share	D:<span class="command">\gx</span>_workspace<span class="command">\share</span>_gx-linux<span class="command">\VS</span>_share<span class="command">\C</span><span class="command">\c</span>-test_share<span class="command">\Debug</span><span class="command">\c</span>-test_share.exe	1</span><br><span class="line"></span><br><span class="line">LNK2019	unresolved external symbol _factoriald referenced in function _main	c-test_share	D:<span class="command">\gx</span>_workspace<span class="command">\share</span>_gx-linux<span class="command">\vs</span>_share<span class="command">\c</span><span class="command">\c</span>-test_share<span class="command">\c</span>-test_share<span class="command">\c</span>-test_share.obj	1	</span><br><span class="line"></span><br><span class="line">```	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">检查factoriald 函数，是main函数里这个函数名打错，导致编译器找不到函数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="special">#</span> 不支持默认整型</span><br></pre></td></tr></table></figure>
-<p>1&gt;d:\gx_workspace\share_gx-linux\vs_share\c++_test_source.cpp(6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int<br>```</p>
-<p>分析:代码中函数没有写返回值类型，编译器将其视为默认整型。但是visualstudio不支持默认整型。</p>
-<p>填写代码函数返回类型(可以写void)</p>
+<p>1&gt;d:\gx_workspace\share_gx-linux\vs_share\c++_test_source.cpp(6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="vala">分析:代码中函数没有写返回值类型，编译器将其视为默认整型。但是visualstudio不支持默认整型。</span><br><span class="line"></span><br><span class="line">填写代码函数返回类型(可以写<span class="keyword">void</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># v120 cannot be found</span></span><br><span class="line"></span><br><span class="line">错误代码`The build tools <span class="keyword">for</span> v120 (Platform Toolset = <span class="string">'v120'</span>) cannot be found`</span></span><br></pre></td></tr></table></figure></p>
+<p>1&gt;—— Build started: Project: MainProcess, Configuration: Debug Win32 ——<br>1&gt;C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v120 (Platform Toolset = ‘v120’) cannot be found. To build using the v120 build tools, please install v120 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting “Retarget solution”.<br>========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="label">解决办法:</span></span><br><span class="line"></span><br><span class="line"><span class="label">在工程鼠标右键点击:</span></span><br><span class="line"><span class="escape">`P</span>roperites<span class="escape">`-</span>-&gt;<span class="escape">`C</span>onfiguration Properties<span class="escape">`-</span>-&gt;<span class="escape">`G</span>eneral<span class="escape">`-</span>-&gt;<span class="escape">`P</span>latform Toolset<span class="escape">`-</span>-&gt;Visual Studio <span class="number">2012</span>(v110)  即可</span><br><span class="line">如果在<span class="escape">`P</span>latform Toolset<span class="escape">`提</span>示<span class="escape">`V</span>isual Studio <span class="number">2013</span>(v120)(no installed)<span class="escape">`则</span>....不知道怎么办(待解决)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 没有找到头文件</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. Canot open include file:<span class="escape">`f</span>stream.h<span class="escape">`:</span>No such file <span class="literal">or</span> directory</span><br></pre></td></tr></table></figure></p>
+<p>fatal error C1083: Cannot open include file: ‘fstream.h’: No such file or directory<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">解决办法:</span><br><span class="line">```<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fstream.h&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>改成<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>install v141 build tools</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Severity	Code	Description	Project	File	Line	Suppression State</span><br><span class="line">Error	MSB8020	The build tools <span class="keyword">for</span> v141 (Platform Toolset = <span class="string">'v141'</span>) cannot be found. To build <span class="keyword">using</span> <span class="operator">the</span> v141 build tools, please install v141 build tools.  Alternatively, you may upgrade <span class="built_in">to</span> <span class="operator">the</span> current Visual Studio tools <span class="keyword">by</span> selecting <span class="operator">the</span> Project menu <span class="operator">or</span> <span class="constant">right</span>-click <span class="operator">the</span> solution, <span class="operator">and</span> <span class="keyword">then</span> selecting <span class="string">"Retarget solution"</span>.	test_win32	C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4<span class="number">.0</span>\V140\Microsoft.Cpp.Platform.targets	<span class="number">57</span></span><br></pre></td></tr></table></figure>
+<p>解决办法：</p>
+<p>选中工程项目，鼠标右键<code>properties</code> —&gt;<code>Configuration properties</code>–&gt;<code>General</code>—&gt;<code>Platform Toolset</code></p>
+<p>平台工具集的本质是<code>msbuuild</code>其目录在<code>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0</code></p>
   
 	</div>
 
@@ -279,9 +287,9 @@
 
 
 <div class="next">
-<a href="/2016/11/17/C++——类+函数+指针/"  title="C++:类、函数、指针">
+<a href="/2016/11/16/总线-设备-驱动注册流程/"  title="总线-设备-驱动注册流程">
  <strong>下一篇：</strong><br/> 
- <span>C++:类、函数、指针
+ <span>总线-设备-驱动注册流程
 </span>
 </a>
 </div>
@@ -324,11 +332,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -344,9 +352,11 @@
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -358,7 +368,11 @@
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -393,7 +407,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -401,11 +419,11 @@
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -417,7 +435,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -429,11 +447,19 @@
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -445,10 +471,6 @@
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -457,19 +479,11 @@
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>

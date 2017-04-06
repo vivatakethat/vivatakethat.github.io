@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C++:类、函数、指针 | take that的博客</title>
+    <title>C++:类、函数、指针、构造函数 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,21 +12,21 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="c++零碎笔记：类、函数、引用、指针、const、auto、 constexpr变量、decltype
+    <meta name="description" content="c++零碎笔记：类、函数、引用、指针、const(指针)、auto、 constexpr变量、decltype
 
 c++  Primer第五版">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++:类、函数、指针">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/11/17/C++——类+函数+指针/index.html">
+<meta property="og:title" content="C++:类、函数、指针、构造函数">
+<meta property="og:url" content="http://www.vivatakethat.com/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="c++零碎笔记：类、函数、引用、指针、const、auto、 constexpr变量、decltype
+<meta property="og:description" content="c++零碎笔记：类、函数、引用、指针、const(指针)、auto、 constexpr变量、decltype
 
 c++  Primer第五版">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg">
-<meta property="og:updated_time" content="2017-02-05T13:01:24.000Z">
+<meta property="og:updated_time" content="2017-03-06T06:33:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++:类、函数、指针">
-<meta name="twitter:description" content="c++零碎笔记：类、函数、引用、指针、const、auto、 constexpr变量、decltype
+<meta name="twitter:title" content="C++:类、函数、指针、构造函数">
+<meta name="twitter:description" content="c++零碎笔记：类、函数、引用、指针、const(指针)、auto、 constexpr变量、decltype
 
 c++  Primer第五版">
 
@@ -92,7 +92,7 @@ c++  Primer第五版">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/11/17/C++——类+函数+指针/" title="C++:类、函数、指针" itemprop="url">C++:类、函数、指针</a>
+      <a href="/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/" title="C++:类、函数、指针、构造函数" itemprop="url">C++:类、函数、指针、构造函数</a>
   </h1>
   <p class="article-author">By
        
@@ -102,7 +102,7 @@ c++  Primer第五版">
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-11-16T16:42:32.000Z" itemprop="datePublished"> 发表于 2016-11-17</time>
+    <time datetime="2017-03-04T16:42:32.000Z" itemprop="datePublished"> 发表于 2017-03-05</time>
     
   </p>
 </header>
@@ -115,19 +115,39 @@ c++  Primer第五版">
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg" alt="red alert3-ussr2" title="red alert3-ussr2"><br>c++零碎笔记：<br>类、函数、引用、指针、const、auto、 constexpr变量、decltype</p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg" alt="red alert3-ussr2" title="red alert3-ussr2"><br>c++零碎笔记：<br>类、函数、引用、指针、const(指针)、auto、 constexpr变量、decltype</p>
 <blockquote>
 <p><strong><code>c++  Primer第五版</code></strong></p>
 <p><meta name="google-site-verification" content="YoJE5CfO6UU_9gJHPc61c2_8CUnSrhQWfPQimdOKTz0"><br><a id="more"></a></p>
 </blockquote>
-<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1><p>类是C++中面向对象编程OOP的核心概念之一。类是用户定义的一种数据类型。</p>
+<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1><p>类是C++中面向对象编程OOP的核心概念之一,是用户定义的一种<code>数据类型</code>。</p>
 <blockquote>
+<p>其类型名就是类名</p>
+<blockquote>
+<p>类的作者决定了类类型对象可以使用的所有操作。</p>
+<blockquote>
+<p>类和基本类却别在于，类类型同时包含了对<strong><code>数据进行操作的函数</code></strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>类的基本思想是<code>数据抽象</code>(data abstraction)和<code>封装</code>(encapsulation)。<br>数据抽象是一种依赖于接口(interface)和实现的编程技术。</p>
+<blockquote>
+<p><code>接口</code>:包括用户所能执行的操作；</p>
+<blockquote>
+<p>类的<code>实现</code>包括类的数据成员、负责接口实现的函数体以及定义类所需的各种私有函数。</p>
+<blockquote>
+<p><code>封装</code>实现了类的接口和实现的分离。封装后的类<code>隐藏了它的实现细节</code>，也就是说类的用户只能使用接口而无法访问实现部分。</p>
+</blockquote>
+</blockquote>
 <p>要定义类描述的是数据格式及其用法，而对象则应对于对象实例或实例变量。</p>
 </blockquote>
 <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数用于创建模块。C++中函数分为2中：1. 有返回至。2.没返回值<br>在使用函数之前，C++编译器必须知道函数的参数类型和返回值类型。</p>
 <blockquote>
 <p>C++程序应当为程序中每个函数提供函数原型。</p>
 </blockquote>
+<ul>
+<li>默认实参<br>某些函数有这样一种形参，在函数的很多次调用中他们都被赋予一个相同的值，此时，我们把这个反复出现的值称为函数的默认实参(default argument)。</li>
+</ul>
 <h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>引用即别名：它只是为一个已经存在的对象所起的另一个名字。</p>
 <blockquote>
 <p>引用类型引另外一种类型<br>定义了一个引用之后，对其进行的所有的操作都是在于之<strong>绑定的对象</strong>上进行的:<br>一旦定义了引用，就无法令其再绑定到另外的对象，之后每次使用这个引用都是访问它最初绑定那个对象</p>
@@ -174,8 +194,18 @@ c++  Primer第五版">
 <p>运行结果<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">10</span>,j=<span class="number">10</span></span><br><span class="line">*ptr=<span class="number">10</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <ul>
-<li><p>const指针<br><strong>1.</strong> 常量指针<br>此时不能通过指针改变所指对象的值，但指针本身可以改变。例如：</p>
+<li>指针作为参数<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> N <span class="number">10</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">max_min</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n, <span class="keyword">int</span> *max, <span class="keyword">int</span> *min)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[N], i, big, small;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Enter %d numbers:"</span>, N);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;b[i]);</span><br><span class="line"></span><br><span class="line">	max_min(b, N, &amp;big, &amp;small);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Largetst: %d\n"</span>, big);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Smallest:%d\n"</span>, small);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">max_min</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n, <span class="keyword">int</span> *max, <span class="keyword">int</span> *min)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line"></span><br><span class="line">	*max = *min = a[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (a[i &gt; *max])</span><br><span class="line">			*max = a[i];</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (a[i] &lt; *min)</span><br><span class="line">			*min = a[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>找出数组中最大元素和最小元素</p>
+</blockquote>
+<ul>
+<li><p>const指针</p>
+<blockquote>
+<p><em>P56</em><br>与引用一样,指针可以指向常量或非常量,指向常量的指针(pointer to const)不能用于改变所指对象的值。要想存放常量对象的地址，只能使用指向常量的指针。<br><strong>1.</strong> 常量指针<br>此时不能通过指针改变所指对象的值，但指针本身可以改变。例如：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a=<span class="number">20</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> b=<span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p=&amp;a;    <span class="comment">//指针类型前加const表示p为常量指针</span></span><br><span class="line"></span><br><span class="line">*p=<span class="number">30</span>;      <span class="comment">//错，不能那个通过P修改指针指向常量</span></span><br><span class="line">p=&amp;b;       <span class="comment">//对，指针本身的值可以修改</span></span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 <li><p>指针和数组</p>
 </li>
@@ -263,7 +293,13 @@ c++  Primer第五版">
 <p><strong>3.指向函数的指针</strong></p>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="title">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">add</span>(<span class="params"><span class="keyword">double</span> x, <span class="keyword">double</span> y</span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (x + y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">sub</span>(<span class="params"><span class="keyword">double</span> x, <span class="keyword">double</span> y</span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (x - y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">oper</span>(<span class="params"><span class="keyword">double</span>(*pfun</span>)(<span class="params"><span class="keyword">double</span>, <span class="keyword">double</span></span>), <span class="keyword">double</span> a, <span class="keyword">double</span> b)</span><br><span class="line"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">"a="</span> &lt;&lt; a &lt;&lt; <span class="string">",b="</span> &lt;&lt; b &lt;&lt; <span class="string">",result="</span> &lt;&lt; pfun(a, b) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span>(<span class="params"></span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">"add:"</span>;</span><br><span class="line">	oper(add, <span class="number">3</span>, <span class="number">7</span>);</span><br><span class="line">	cout &lt;&lt; <span class="string">"sub:"</span>;</span><br><span class="line">	oper(sub, <span class="number">3</span>, <span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行结果:<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add:a=<span class="number">3</span>,b=<span class="number">7</span>,<span class="literal">result</span>=<span class="number">10</span></span><br><span class="line">sub:a=<span class="number">3</span>,b=<span class="number">7</span>,<span class="literal">result</span>=-<span class="number">4</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><p>C++允许用户按一定规则进行数据类型的构造，如定义：数组类型、枚举类型、构造体类型和共用体类型。这些类型统称为构造类型。</p>
+<h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><p>类是是一种自己定义的数据类型，类需要通过一个或几个特殊的成员函数来控制其对象的初始化过程，这些函数叫作构造函数(constructor)。<br><code>构造函数的任务是初始化类的数据成员，无论何时只要类的对象被创建，就会执行构造函数。</code></p>
+<p>注意:构造函数也是成员函数，必须是共有函数。构造函数没有返回值且与函数名相同;</p>
+<blockquote>
+<p>构造函数是在声明对象时由系统自动调用的。</p>
+</blockquote>
+<p>构造函数实例程序:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">class</span> one</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">char</span> m_Version[<span class="number">30</span>];</span><br><span class="line"></span><br><span class="line">	one();</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line">one::one()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">sprintf</span>(m_Version, <span class="string">"V3.0.0.001"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	one *two;</span><br><span class="line">	two = <span class="keyword">new</span> one();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Client vesion is %s\n"</span>, two-&gt;m_Version);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Output:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Client vesion is V3<span class="number">.0</span><span class="number">.0</span><span class="number">.001</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <h1 id="类的声明与实现"><a href="#类的声明与实现" class="headerlink" title="类的声明与实现"></a>类的声明与实现</h1><p>类相当于一种用户自定义的类型，同样也可以声明某个类类型的变量，这个变量就称为类的对象(也叫实例),这个声明的过程称为实例化。类和基本类型的区别在于，类类型中同时包含了对数据进行操作的函数。</p>
 <p>类由描述某类事物的数据和处理这些数据的函数组成，是一种到处数据类型，可定义对象。要定义对象，首先必须定义类。</p>
@@ -642,7 +678,7 @@ c++  Primer第五版">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/11/17/C++——类+函数+指针/" data-title="C++:类、函数、指针 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/" data-title="C++:类、函数、指针、构造函数 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -656,18 +692,18 @@ c++  Primer第五版">
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/11/17/Visual Studio-Error/" title="Visual Studio-Error">
+ <a href="/2017/03/13/W_微信开发_环境搭建/" title="搭建微信开发环境">
   <strong>上一篇：</strong><br/>
   <span>
-  Visual Studio-Error</span>
+  搭建微信开发环境</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/11/16/总线-设备-驱动注册流程/"  title="总线-设备-驱动注册流程">
+<a href="/2017/03/03/位运算/"  title="位运算">
  <strong>下一篇：</strong><br/> 
- <span>总线-设备-驱动注册流程
+ <span>位运算
 </span>
 </a>
 </div>
@@ -676,7 +712,7 @@ c++  Primer第五版">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/11/17/C++——类+函数+指针/" data-title="C++:类、函数、指针" data-url="http://www.vivatakethat.com/2016/11/17/C++——类+函数+指针/"></div>
+	<div class="ds-thread" data-thread-key="2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/" data-title="C++:类、函数、指针、构造函数" data-url="http://www.vivatakethat.com/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/"></div>
 </section>
 
 
@@ -710,11 +746,11 @@ c++  Primer第五版">
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -730,9 +766,11 @@ c++  Primer第五版">
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -744,7 +782,11 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -779,7 +821,11 @@ c++  Primer第五版">
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -787,11 +833,11 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -803,7 +849,7 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -815,11 +861,19 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -831,10 +885,6 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -843,19 +893,11 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>

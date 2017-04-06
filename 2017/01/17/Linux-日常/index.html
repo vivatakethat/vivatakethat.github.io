@@ -12,20 +12,20 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description">
+    <meta name="description" content="Linux配置，shell脚本…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux日常">
 <meta property="og:url" content="http://www.vivatakethat.com/2017/01/17/Linux-日常/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description">
+<meta property="og:description" content="Linux配置，shell脚本…">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Matrix%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%80%85-%E5%BB%BA%E7%AD%91%E5%B8%88.jpg?imageView2/2/h/600">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/vm%E7%BD%91%E5%8D%A1%E7%BC%96%E8%BE%91%E6%88%AA%E5%9B%BE.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/linuxIP%E8%AE%BE%E7%BD%AE.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/root%E8%87%AA%E5%8A%A8%E7%99%BB%E5%85%A5.png">
-<meta property="og:updated_time" content="2017-02-08T07:18:20.000Z">
+<meta property="og:updated_time" content="2017-03-04T08:04:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux日常">
-<meta name="twitter:description">
+<meta name="twitter:description" content="Linux配置，shell脚本…">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -108,11 +108,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vmware下虚拟机网络问题"><span class="toc-number">1.</span> <span class="toc-text">vmware下虚拟机网络问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eno16777736更名"><span class="toc-number">2.</span> <span class="toc-text">eno16777736更名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fedora更新源"><span class="toc-number">3.</span> <span class="toc-text">fedora更新源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dnf-makecache"><span class="toc-number">4.</span> <span class="toc-text">dnf makecache</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置开机启动命令、vm下与主机共享目录-mark"><span class="toc-number">5.</span> <span class="toc-text">设置开机启动命令、vm下与主机共享目录    //mark</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置默认进入文本模式"><span class="toc-number">6.</span> <span class="toc-text">设置默认进入文本模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fedora设置root用户自动登入"><span class="toc-number">7.</span> <span class="toc-text">fedora设置root用户自动登入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ssh登不上"><span class="toc-number">8.</span> <span class="toc-text">ssh登不上</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vmware下虚拟机网络问题"><span class="toc-number">1.</span> <span class="toc-text">vmware下虚拟机网络问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eno16777736更名"><span class="toc-number">2.</span> <span class="toc-text">eno16777736更名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fedora更新源"><span class="toc-number">3.</span> <span class="toc-text">fedora更新源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dnf-makecache"><span class="toc-number">4.</span> <span class="toc-text">dnf makecache</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置开机启动命令、vm下与主机共享目录-mark"><span class="toc-number">5.</span> <span class="toc-text">设置开机启动命令、vm下与主机共享目录    //mark</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置默认进入文本模式"><span class="toc-number">6.</span> <span class="toc-text">设置默认进入文本模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fedora设置root用户自动登入"><span class="toc-number">7.</span> <span class="toc-text">fedora设置root用户自动登入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ssh登不上"><span class="toc-number">8.</span> <span class="toc-text">ssh登不上</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux杀死进程指令"><span class="toc-number">9.</span> <span class="toc-text">linux杀死进程指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#批量解压包脚本"><span class="toc-number">10.</span> <span class="toc-text">批量解压包脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux下boost"><span class="toc-number">11.</span> <span class="toc-text">linux下boost</span></a></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Matrix%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%80%85-%E5%BB%BA%E7%AD%91%E5%B8%88.jpg?imageView2/2/h/600" alt="Matrix的设计者-建筑师" title="Matrix的设计者-建筑师"><br><a id="more"></a></p>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Matrix%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%80%85-%E5%BB%BA%E7%AD%91%E5%B8%88.jpg?imageView2/2/h/600" alt="Matrix的设计者-建筑师" title="Matrix的设计者-建筑师"><br>Linux配置，shell脚本…<br><a id="more"></a></p>
 <h1 id="vmware下虚拟机网络问题"><a href="#vmware下虚拟机网络问题" class="headerlink" title="vmware下虚拟机网络问题"></a>vmware下虚拟机网络问题</h1><ol>
 <li>仅主机模式<br><img src="http://7xsic8.com1.z0.glb.clouddn.com/vm%E7%BD%91%E5%8D%A1%E7%BC%96%E8%BE%91%E6%88%AA%E5%9B%BE.png" alt="vm网卡编辑" title="VM网卡编辑"></li>
 </ol>
@@ -168,6 +168,30 @@
 <h1 id="ssh登不上"><a href="#ssh登不上" class="headerlink" title="ssh登不上"></a>ssh登不上</h1><p>情况一:VM下host能与虚拟机互相Ping通，但是SSH却登不上提示密码错误(实际密码没错错误)</p>
 <p>实际解决<br>VM下Linux与宿主win10系统的以太网卡IP相同，导致SSH登入不上</p>
 <p>注意:如果Linux桥接的网卡有设网关，VM下Linux网卡要手动设置网关和IP；如:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">TYPE=Ethernet</span><br><span class="line">DEVICE=eth0</span><br><span class="line">BOOTPROTO=<span class="keyword">static</span></span><br><span class="line">ONBOOT=yes</span><br><span class="line">IPADDR=<span class="number">10.8</span><span class="number">.3</span><span class="number">.200</span></span><br><span class="line"><span class="preprocessor">#NETMASK=<span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span></span><br><span class="line"><span class="preprocessor">#GATEWAY=<span class="number">10.8</span><span class="number">.3</span><span class="number">.254</span></span></span><br><span class="line"><span class="preprocessor"># BROADCAST=<span class="number">10.8</span><span class="number">.1</span><span class="number">.255</span></span></span><br><span class="line">HWADDR=<span class="number">00</span>:<span class="number">0</span>C:<span class="number">29</span>:<span class="number">44</span>:a0:<span class="number">6</span>c</span><br><span class="line">GATEWAY=<span class="number">10.8</span><span class="number">.3</span><span class="number">.254</span></span><br><span class="line"><span class="preprocessor">#PEERDNS=yes</span></span><br><span class="line"><span class="preprocessor">#DNS1=<span class="number">10.8</span><span class="number">.3</span><span class="number">.254</span></span></span><br><span class="line"><span class="preprocessor">#USERCTL=no</span></span><br><span class="line"><span class="preprocessor">#NM_CONTROLLED=no</span></span><br><span class="line"><span class="preprocessor">#IPV6INIT=no</span></span><br><span class="line"><span class="preprocessor">#IPV6ADDR=FD55:faaf:e1ab:<span class="number">1</span>B0D:<span class="number">10</span>:<span class="number">14</span>:<span class="number">24</span>:<span class="number">106</span>/<span class="number">64</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="linux杀死进程指令"><a href="#linux杀死进程指令" class="headerlink" title="linux杀死进程指令"></a>linux杀死进程指令</h1><p>用 ps -e<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">kill</span> -<span class="number">9</span>   <span class="string">`进程ID`</span></span><br></pre></td></tr></table></figure></p>
+<p>跟<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall  <span class="escape">`进</span>程名称`</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>可以用<code>ps -e | grep run</code>找出带run字符的进程名字</p>
+</blockquote>
+<p>查找相关进程<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="preprocessor"># ps -ef | grep SLE</span></span><br><span class="line">root     <span class="number">16445</span>  <span class="number">4393</span>  <span class="number">0</span> <span class="number">16</span>:<span class="number">02</span> pts/<span class="number">0</span>    <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span> ./SLE_take</span><br><span class="line">root     <span class="number">16449</span> <span class="number">16281</span>  <span class="number">0</span> <span class="number">16</span>:<span class="number">02</span> pts/<span class="number">1</span>    <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span> grep --color=<span class="keyword">auto</span> SLE</span><br><span class="line">[root@localhost ~]<span class="preprocessor"># kill -<span class="number">9</span> <span class="number">16445</span></span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><code>ps -ef | grep SLE</code>找出带SLE的进程名字</p>
+<blockquote>
+<p><code>kill -9</code> + <code>PID</code>杀死进程</p>
+</blockquote>
+</blockquote>
+<h1 id="批量解压包脚本"><a href="#批量解压包脚本" class="headerlink" title="批量解压包脚本"></a>批量解压包脚本</h1><ul>
+<li>批量解压目录下所有.tgz包<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># &#35299;&#21387;&#26412;&#30446;&#24405;&#25152;&#26377;.zxvf&#25991;&#20214;&#10;for tar in *.tgz;  do tar xvf $tar; done</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压本目录所有.tar.gz文件</span></span><br><span class="line"><span class="keyword">for</span> tar <span class="keyword">in</span> *.gz;  <span class="keyword">do</span> tar xzvf <span class="variable">$tar</span>; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>mark:脚本有错，只能一条一条的运行，2个语句块放到一起会报错，想想如何解决写到一起??</p>
+</blockquote>
+<h1 id="linux下boost"><a href="#linux下boost" class="headerlink" title="linux下boost"></a>linux下boost</h1><ol>
+<li>查看boost版本:<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># find / -name libboost*</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
   
 	</div>
 
@@ -337,7 +361,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vmware下虚拟机网络问题"><span class="toc-number">1.</span> <span class="toc-text">vmware下虚拟机网络问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eno16777736更名"><span class="toc-number">2.</span> <span class="toc-text">eno16777736更名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fedora更新源"><span class="toc-number">3.</span> <span class="toc-text">fedora更新源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dnf-makecache"><span class="toc-number">4.</span> <span class="toc-text">dnf makecache</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置开机启动命令、vm下与主机共享目录-mark"><span class="toc-number">5.</span> <span class="toc-text">设置开机启动命令、vm下与主机共享目录    //mark</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置默认进入文本模式"><span class="toc-number">6.</span> <span class="toc-text">设置默认进入文本模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fedora设置root用户自动登入"><span class="toc-number">7.</span> <span class="toc-text">fedora设置root用户自动登入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ssh登不上"><span class="toc-number">8.</span> <span class="toc-text">ssh登不上</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vmware下虚拟机网络问题"><span class="toc-number">1.</span> <span class="toc-text">vmware下虚拟机网络问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eno16777736更名"><span class="toc-number">2.</span> <span class="toc-text">eno16777736更名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fedora更新源"><span class="toc-number">3.</span> <span class="toc-text">fedora更新源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dnf-makecache"><span class="toc-number">4.</span> <span class="toc-text">dnf makecache</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置开机启动命令、vm下与主机共享目录-mark"><span class="toc-number">5.</span> <span class="toc-text">设置开机启动命令、vm下与主机共享目录    //mark</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置默认进入文本模式"><span class="toc-number">6.</span> <span class="toc-text">设置默认进入文本模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fedora设置root用户自动登入"><span class="toc-number">7.</span> <span class="toc-text">fedora设置root用户自动登入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ssh登不上"><span class="toc-number">8.</span> <span class="toc-text">ssh登不上</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux杀死进程指令"><span class="toc-number">9.</span> <span class="toc-text">linux杀死进程指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#批量解压包脚本"><span class="toc-number">10.</span> <span class="toc-text">批量解压包脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux下boost"><span class="toc-number">11.</span> <span class="toc-text">linux下boost</span></a></li></ol>
  
   </div>
 
@@ -361,11 +385,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -381,9 +405,11 @@
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -395,7 +421,11 @@
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -430,7 +460,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -438,11 +472,11 @@
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -454,7 +488,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -466,11 +500,19 @@
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -482,10 +524,6 @@
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -494,19 +532,11 @@
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>

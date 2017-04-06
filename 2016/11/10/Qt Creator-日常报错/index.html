@@ -20,7 +20,7 @@
 <meta property="og:description" content="记录Qt Creator日常报错">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Superhero.jpg">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Qtcreator%E6%8A%A5%E9%94%99.png">
-<meta property="og:updated_time" content="2017-01-29T04:46:19.000Z">
+<meta property="og:updated_time" content="2017-04-01T09:45:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Qt Creator-日常报错">
 <meta name="twitter:description" content="记录Qt Creator日常报错">
@@ -128,13 +128,15 @@
 <p><a href="http://bbs.csdn.net/topics/391878342" target="_blank" rel="external">http://bbs.csdn.net/topics/391878342</a></p>
 <p><a href="http://www.itnpc.com/news/web/146163065659641.html" target="_blank" rel="external">http://www.itnpc.com/news/web/146163065659641.html</a></p>
 <ol>
-<li>error: C2001: newline in constant</li>
+<li>newline in constant<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">error</span>: C2001: newline <span class="keyword">in</span> <span class="type">constant</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<ol>
-<li>qt creator无法编译Empty qmake project工程</li>
-</ol>
-<p>检查.pro、源文件(.cpp)以及缺失存在QApplication文件存在之后仍然报以下错<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot <span class="built_in">open</span> <span class="built_in">include</span> <span class="built_in">file</span>: <span class="string">'QApplication'</span>: No such <span class="built_in">file</span> <span class="operator">or</span> <span class="built_in">directory</span></span><br></pre></td></tr></table></figure></p>
-<p>解决办法:<br>执行qmake</p>
+<p>错误原因:输入了中文字符<br>例如:<br>编译器会报错的源码:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> MainWindow::on_pushButton_13_clicked()  <span class="comment">//`-`按键</span></span><br><span class="line">&#123;</span><br><span class="line">    what =<span class="number">1</span>;</span><br><span class="line">    next=pre;</span><br><span class="line">    pre=<span class="string">" "</span>;</span><br><span class="line">    QString str;</span><br><span class="line">    str=str.append(<span class="string">"——"</span>);   <span class="comment">//错误位置</span></span><br><span class="line">    ui-&gt;Input-&gt;setText(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>把<figure class="highlight"><figcaption><span>```改成```str=str.append("-");```即可</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10; 4. qt creator&#26080;&#27861;&#32534;&#35793;Empty qmake project&#24037;&#31243;&#10;&#10;&#26816;&#26597;.pro&#12289;&#28304;&#25991;&#20214;(.cpp)&#20197;&#21450;&#32570;&#22833;&#23384;&#22312;QApplication&#25991;&#20214;&#23384;&#22312;&#20043;&#21518;&#20173;&#28982;&#25253;&#20197;&#19979;&#38169;</span><br></pre></td></tr></table></figure></p>
+<p> Cannot open include file: ‘QApplication’: No such file or directory<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">解决办法:</span><br><span class="line">执行qmake</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="number">5.</span> <span class="string">'cl'</span> 命令不识别</span><br></pre></td></tr></table></figure></p>
+<p>‘cl’ is not recognized as an internal or external command,<br>operable program or batch file.<br>jom: C:\Qt\Qt5.8.0\Examples\Qt-5.8\widgets\widgets\build-analogclock-Desktop_Qt_5_8_0_MSVC2015_64bit-Debug\Makefile.Debug [debug\main.obj] Error 1<br>jom: C:\Qt\Qt5.8.0\Examples\Qt-5.8\widgets\widgets\build-analogclock-Desktop_Qt_5_8_0_MSVC2015_64bit-Debug\Makefile [debug] Error 2<br>16:07:35: The process “C:\Qt\Qt5.8.0\Tools\QtCreator\bin\jom.exe” exited with code 2.<br>Error while building/deploying project analogclock (kit: Desktop Qt 5.8.0 MSVC2015_64bit)<br>The kit Desktop Qt 5.8.0 MSVC2015_64bit has configuration issues which might be the root cause for this problem.<br>When executing step “Make”<br>16:07:35: Elapsed time: 00:00.<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">同时打开对应版本的`<span class="javascript"></span>`Developer Command Prompt <span class="keyword">for</span> VS2015`<span class="javascript"></span>`</span><br></pre></td></tr></table></figure></p>
+<p>‘“C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VCVarsQueryRegistry.bat”‘ is not recognized as an internal or external command,<br>operable program or batch file.<br>ERROR: Cannot determine the location of the VS installation.<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="cpp"><span class="number">6.</span> 没有头文件</span></span><br></pre></td></tr></table></figure></p>
+<p>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\crtdefs.h:10: error: C1083: Cannot open include file: ‘corecrt.h’: No such file or directory<br>```</p>
   
 	</div>
 
@@ -328,11 +330,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -348,9 +350,11 @@
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -362,7 +366,11 @@
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -397,7 +405,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -405,11 +417,11 @@
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -421,7 +433,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -433,11 +445,19 @@
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -449,10 +469,6 @@
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -461,19 +477,11 @@
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>

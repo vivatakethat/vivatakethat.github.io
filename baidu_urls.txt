@@ -1,5 +1,5 @@
-http://www.vivatakethat.com/2017/02/08/Win10下配置开发环境/
-http://www.vivatakethat.com/2017/01/17/Linux-日常/
-http://www.vivatakethat.com/2016/12/23/英语听力练习/
-http://www.vivatakethat.com/2016/12/22/考试3——嵌入式移互联软件测试/
-http://www.vivatakethat.com/2016/12/20/考试2——移动互连应用软件开发/
+http://www.vivatakethat.com/2017/03/31/C++primer_名词解释/
+http://www.vivatakethat.com/2017/03/25/c++内置类型/
+http://www.vivatakethat.com/2017/03/24/编程建议/
+http://www.vivatakethat.com/2017/03/13/W_微信开发_环境搭建/
+http://www.vivatakethat.com/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/

@@ -23,7 +23,7 @@ C++ Primer第5版">
 
 C++ Primer第5版">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E6%9C%88%E4%BA%AE-2016-11-03.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2017-01-16T13:40:41.747Z">
+<meta property="og:updated_time" content="2017-02-21T13:58:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++_memo2">
 <meta name="twitter:description" content="C++ 零碎笔记:using 
@@ -111,7 +111,7 @@ C++ Primer第5版">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">4.</span> <span class="toc-text">new和delete</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#this"><span class="toc-number">5.</span> <span class="toc-text">this</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">4.</span> <span class="toc-text">new和delete</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#this、const常量成员函数"><span class="toc-number">5.</span> <span class="toc-text">this、const常量成员函数</span></a></li></ol>
 		
 		</div>
 		
@@ -151,7 +151,16 @@ C++ Primer第5版">
 <h1 id="new和delete"><a href="#new和delete" class="headerlink" title="new和delete"></a>new和delete</h1><p>动态内存分配可以保证我们在程序运行过程中按照实际需求盛情适量的内存，使用结束后还可以释放。</p>
 <p>动态数组程序<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span>::<span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span>  <span class="built_in">std</span>::<span class="built_in">string</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">( )</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span>(*cp)[<span class="number">5</span>];	<span class="comment">//该语句是定义一个数组指针，指向含5个元素的一维数组。</span></span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	cp = <span class="keyword">new</span> <span class="keyword">float</span>[<span class="number">3</span>][<span class="number">5</span>];    <span class="comment">//可以这样赋值的吗？</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</span><br><span class="line">			*(*(cp + i) + j) = <span class="keyword">float</span>(i * <span class="number">2</span> + j);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; cp[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[] cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>运行结果：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br><span class="line"><span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>this指针是一个隐含于每一个类成员函数中的特殊指针，它指向正在被成员函数操作对象的本身。</p>
+<h1 id="this、const常量成员函数"><a href="#this、const常量成员函数" class="headerlink" title="this、const常量成员函数"></a>this、const常量成员函数</h1><blockquote>
+<p><em>(P231)</em></p>
+</blockquote>
+<ol>
+<li>this指针是一个隐含于每一个类成员函数中的特殊指针，它指向正在被成员函数操作对象的本身。</li>
+</ol>
+<p>任何对类成员的直接访问都被看作this的隐式引用，this是一个<strong><code>常量指针</code></strong>  </p>
+<ol>
+<li>C++语言允许把const关键字放在成员函数的参数列表之后，此时，紧跟在参数列表后面的const表示this是一个指向常量的指针。这样使用const的成员函数被称作常量成员函数(const member function)</li>
+</ol>
   
 	</div>
 
@@ -321,7 +330,7 @@ C++ Primer第5版">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">4.</span> <span class="toc-text">new和delete</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#this"><span class="toc-number">5.</span> <span class="toc-text">this</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#using"><span class="toc-number">1.</span> <span class="toc-text">using</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共用体union"><span class="toc-number">2.</span> <span class="toc-text">共用体union</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#枚举类型"><span class="toc-number">3.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">4.</span> <span class="toc-text">new和delete</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#this、const常量成员函数"><span class="toc-number">5.</span> <span class="toc-text">this、const常量成员函数</span></a></li></ol>
  
   </div>
 
@@ -345,11 +354,11 @@ C++ Primer第5版">
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -365,9 +374,11 @@ C++ Primer第5版">
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -379,7 +390,11 @@ C++ Primer第5版">
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -414,7 +429,11 @@ C++ Primer第5版">
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -422,11 +441,11 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -438,7 +457,7 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -450,11 +469,19 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -466,10 +493,6 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -478,19 +501,11 @@ C++ Primer第5版">
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>

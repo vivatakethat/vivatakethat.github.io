@@ -86,7 +86,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/02/08/Win10下配置开发环境/" title="Win10下配置开发环境" itemprop="url">Win10下配置开发环境</a>
+      <a href="/2017/03/31/C++primer_名词解释/" title="C++primer名词解释" itemprop="url">C++primer名词解释</a>
   </h1>
   <p class="article-author">By
        
@@ -96,240 +96,190 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2017-02-07T16:42:32.000Z" itemprop="datePublished"> 发表于 2017-02-08</time>
+    <time datetime="2017-03-31T04:35:32.000Z" itemprop="datePublished"> 发表于 2017-03-31</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h2 id="添加系统变量"><a href="#添加系统变量" class="headerlink" title="添加系统变量"></a>添加系统变量</h2><ol>
-<li>变量名<code>JAVA_HOME</code></li>
+        <ol>
+<li>语句块block</li>
 </ol>
-<p>变量值:<code>C:\Program Files\Java\jdk1.8.0_121</code></p>
+<p>就是用花括号包围的零条或多条语句的序列。语句块就是语句的一种，任何要求使用语句块的地方都可以使用语句块。</p>
+<ol>
+<li><p>成员函数(member function)<br>成员函数是定义类的一部分函数，有时也被称为方法(method)</p>
+</li>
+<li><p>点运算符(.)<br>点运算只能用于类类型的对象，右侧运算对象必须是该类型的一个成员函数名，运算结果为右侧运算对象指定的成员。</p>
+</li>
+<li><p>字面值常量(literal)</p>
+</li>
+</ol>
+<p>每个字面值常量对应一种数据类型，字面值常量的形式和值距诶的那个了它的数据类型。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C++</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2017/03/31/C++primer_名词解释/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/03/31/C++primer_名词解释/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/03/25/c++内置类型/" title="C++_基本内置类型" itemprop="url">C++_基本内置类型</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2017-03-25T07:42:32.000Z" itemprop="datePublished"> 发表于 2017-03-25</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>C++中基本内置类型指:算术类型(arthmetic type)、和空类型(void)</p>
+<ol>
+<li>算术类型:字符、整型数、布尔值、浮点数</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using std::cout;</span><br><span class="line">using std::endl;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	unsigned char i = -1;</span><br><span class="line">	printf("%d\n", i);</span><br><span class="line"></span><br><span class="line">	printf("******\n");</span><br><span class="line">	cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	printf("*****************************\n");</span><br><span class="line">	unsigned char j = '-1';</span><br><span class="line">	printf("%d\n", j);</span><br><span class="line">	cout &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>空类型:用于特殊的场合，例如最常见的是，当函数不返回任何值时使用空类型最为返回类型。</li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C++</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2017/03/25/c++内置类型/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/03/25/c++内置类型/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/03/24/编程建议/" title="编程建议" itemprop="url">编程建议</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2017-03-24T04:21:32.000Z" itemprop="datePublished"> 发表于 2017-03-24</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ol>
+<li>如何选择类型</li>
+</ol>
+<ul>
+<li>当明确知晓数值不可能为负时，选用无符号类型。</li>
+<li>如果数值超过了int的表达范围，选用long long。</li>
+<li><p>在算术表达式中不要使用char或bool,只有在存放字符或布尔值时才使用他们。</p>
 <blockquote>
-<p>jdk的目录</p>
+<p>因为类型char在一些机器上是有符号的，而在另一写机器上又是无符号的。</p>
+<blockquote>
+<p>如果你需要使用一个不大的整数，那么明确它的类型是signed char或者unsigned char </p>
 </blockquote>
-<ol>
-<li>添加变量名<code>CLASSPATH</code></li>
-</ol>
-<p>变量值:<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></p>
-<ol>
-<li><p>在Path添加<br>添加<code>%JAVA_HOME%\bin</code>和<code>%JAVA_HOME%\jre\bin</code>两个系统变量。Path使得系统可以在任何路径下识别java命令</p>
+</blockquote>
 </li>
-<li><p>检查是否正确正确配置<br>在CMD下执行<code>java -version</code></p>
+<li><p>执行浮点数运算选用double,这是因为float通常精度不够而且，双精度数和单位精度浮点数的计算代价相差无几。事实上，对于某些机器来说,双精度运算甚至比单精度还快。</p>
+<blockquote>
+<p>long double提供的精度在一般情况下是没有必要的，况且它带来的运行时消耗也不容忽视。</p>
+</blockquote>
 </li>
-</ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Windows相关/">Windows相关</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/开发环境配置/">开发环境配置</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/02/08/Win10下配置开发环境/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/02/08/Win10下配置开发环境/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/17/Linux-日常/" title="Linux日常" itemprop="url">Linux日常</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2017-01-16T16:21:32.000Z" itemprop="datePublished"> 发表于 2017-01-17</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Matrix%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%80%85-%E5%BB%BA%E7%AD%91%E5%B8%88.jpg?imageView2/2/h/600" alt="Matrix的设计者-建筑师" title="Matrix的设计者-建筑师"><br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2017/01/17/Linux-日常/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Linux/">Linux</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Rcord/">Rcord</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/01/17/Linux-日常/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/01/17/Linux-日常/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/12/23/英语听力练习/" title="英语听力练习" itemprop="url">英语听力练习</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2016-12-23T04:35:32.000Z" itemprop="datePublished"> 发表于 2016-12-23</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E8%BF%99%E6%98%AF%E4%B8%80%E5%A4%B4%E7%89%9B.jpg?imageView2/2/h/600" alt="这是一头牛" title="这是一头牛"></p>
-<p>要有输入，输出</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/12/23/英语听力练习/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/English/">English</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Record/">Record</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/12/23/英语听力练习/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/12/23/英语听力练习/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/12/22/考试3——嵌入式移互联软件测试/" title="嵌入式移互联软件测试——考试" itemprop="url">嵌入式移互联软件测试——考试</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2016-12-22T14:35:32.000Z" itemprop="datePublished"> 发表于 2016-12-22</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/GTA5-%E8%87%AA%E6%8B%8D.jpg?imageView2/2/h/600" alt="自拍_GTA5" title="自拍_GTA5"></p>
-<ul>
-<li>课程名称：《嵌入式移互联软件测试》</li>
-<li>考试时间: 2016年12月22日<strong><code>星期四</code></strong>（14：00——16：00）</li>
-<li>考试地点：<strong><code>学思楼4-C210</code></strong></li>
 </ul>
+<ol>
+<li>切勿用带符号类型和无符号类型<br>如果表达式里既有符号类型又有无符号类型，当带符号类型取值为负时会出现异常结果，这是因为带符号数会自动转成无符号数。</li>
+</ol>
+
         
         
         <p class="article-more-link">
-          
-            <a href="/2016/12/22/考试3——嵌入式移互联软件测试/#more">Read More</a>
           
        </p>
     </div>
@@ -344,7 +294,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Record/">Record</a>
+  <span></span> <a href="/tags/计算机/">计算机</a>
   </div>
 
 </div>
@@ -355,7 +305,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2016/12/22/考试3——嵌入式移互联软件测试/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/12/22/考试3——嵌入式移互联软件测试/" data-count-type="comments">&nbsp;</a>
+		<a href="/2017/03/24/编程建议/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/03/24/编程建议/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -375,7 +325,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/12/20/考试2——移动互连应用软件开发/" title="移动互联应用软件开发——考试" itemprop="url">移动互联应用软件开发——考试</a>
+      <a href="/2017/03/13/W_微信开发_环境搭建/" title="搭建微信开发环境" itemprop="url">搭建微信开发环境</a>
   </h1>
   <p class="article-author">By
        
@@ -385,23 +335,28 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-12-20T14:35:32.000Z" itemprop="datePublished"> 发表于 2016-12-20</time>
+    <time datetime="2017-03-13T14:42:32.000Z" itemprop="datePublished"> 发表于 2017-03-13</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/the%20die%20is%20cast.jpg?imageView2/2/h/600" alt="the die is cas" title="the die is cas"></p>
-<ul>
-<li>课程名称：《移动互联应用软件开发》</li>
-<li>考试时间: 2016年12月22日<strong><code>星期四</code></strong>（09：00——11：00）</li>
-<li>考试地点：<strong><code>学思楼2-A302</code></strong></li>
-</ul>
+        <h1 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h1><ol>
+<li>HTTP服务软件<br>Apache</li>
+</ol>
+<ol>
+<li>网页程序设计语言<br>PHP</li>
+</ol>
+<ol>
+<li>数据库管理系统软件<br>MySQL</li>
+</ol>
+<ol>
+<li>图形界面的数据管理软件<br>phpMyAdmin</li>
+</ol>
+
         
         
         <p class="article-more-link">
-          
-            <a href="/2016/12/20/考试2——移动互连应用软件开发/#more">Read More</a>
           
        </p>
     </div>
@@ -410,13 +365,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/原理-理论/">原理 | 理论</a>
+  <a class="article-category-link" href="/categories/互联网开发/">互联网开发</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Record/">Record</a>
+  <span></span> <a href="/tags/微信/">微信</a>
   </div>
 
 </div>
@@ -427,7 +382,77 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2016/12/20/考试2——移动互连应用软件开发/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/12/20/考试2——移动互连应用软件开发/" data-count-type="comments">&nbsp;</a>
+		<a href="/2017/03/13/W_微信开发_环境搭建/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/03/13/W_微信开发_环境搭建/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/" title="C++:类、函数、指针、构造函数" itemprop="url">C++:类、函数、指针、构造函数</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2017-03-04T16:42:32.000Z" itemprop="datePublished"> 发表于 2017-03-05</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg" alt="red alert3-ussr2" title="red alert3-ussr2"><br>c++零碎笔记：<br>类、函数、引用、指针、const(指针)、auto、 constexpr变量、decltype</p>
+<blockquote>
+<p><strong><code>c++  Primer第五版</code></strong></p>
+<p><meta name="google-site-verification" content="YoJE5CfO6UU_9gJHPc61c2_8CUnSrhQWfPQimdOKTz0" /><br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C++</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -443,7 +468,7 @@
 
 
   <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
@@ -469,11 +494,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -489,9 +514,11 @@
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -503,7 +530,11 @@
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -538,7 +569,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -546,11 +581,11 @@
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -562,7 +597,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -574,11 +609,19 @@
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -590,10 +633,6 @@
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -602,19 +641,11 @@
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>

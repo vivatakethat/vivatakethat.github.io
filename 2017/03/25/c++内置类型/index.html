@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>数学基础概念 | take that的博客</title>
+    <title>C++_基本内置类型 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,21 +12,28 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="最大公约数
-Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公因子，指两个或多个整数共有约数中最大的一个。a，b的最大公约数记为（a，b），同样的，a，b，c的最大公约数记为（a，b，c），多个整数的最大公约数也有同样的记号。与最大公约数相对应的概念是最小公倍数，a，b的最小公倍数记为[a，b]">
+    <meta name="description" content="C++中基本内置类型指:算术类型(arthmetic type)、和空类型(void)
+
+算术类型:字符、整型数、布尔值、浮点数
+
+1234567891011121314151617181920#include &amp;lt;iostream&amp;gt;using std::cout;using std::endl;int main()&amp;#123;	unsigned char i = -1;	printf(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数学基础概念">
-<meta property="og:url" content="http://www.vivatakethat.com/2016/06/30/数学基础概念/index.html">
+<meta property="og:title" content="C++_基本内置类型">
+<meta property="og:url" content="http://www.vivatakethat.com/2017/03/25/c++内置类型/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="最大公约数
-Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公因子，指两个或多个整数共有约数中最大的一个。a，b的最大公约数记为（a，b），同样的，a，b，c的最大公约数记为（a，b，c），多个整数的最大公约数也有同样的记号。与最大公约数相对应的概念是最小公倍数，a，b的最小公倍数记为[a，b]">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E5%BE%85%E3%81%A1%E6%99%82%E9%96%93.jpg">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%9F%AD%E9%99%A4%E6%B3%95.jpg">
-<meta property="og:updated_time" content="2017-01-16T13:40:42.182Z">
+<meta property="og:description" content="C++中基本内置类型指:算术类型(arthmetic type)、和空类型(void)
+
+算术类型:字符、整型数、布尔值、浮点数
+
+1234567891011121314151617181920#include &amp;lt;iostream&amp;gt;using std::cout;using std::endl;int main()&amp;#123;	unsigned char i = -1;	printf(">
+<meta property="og:updated_time" content="2017-03-25T05:51:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数学基础概念">
-<meta name="twitter:description" content="最大公约数
-Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公因子，指两个或多个整数共有约数中最大的一个。a，b的最大公约数记为（a，b），同样的，a，b，c的最大公约数记为（a，b，c），多个整数的最大公约数也有同样的记号。与最大公约数相对应的概念是最小公倍数，a，b的最小公倍数记为[a，b]">
+<meta name="twitter:title" content="C++_基本内置类型">
+<meta name="twitter:description" content="C++中基本内置类型指:算术类型(arthmetic type)、和空类型(void)
+
+算术类型:字符、整型数、布尔值、浮点数
+
+1234567891011121314151617181920#include &amp;lt;iostream&amp;gt;using std::cout;using std::endl;int main()&amp;#123;	unsigned char i = -1;	printf(">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -90,7 +97,7 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/30/数学基础概念/" title="数学基础概念" itemprop="url">数学基础概念</a>
+      <a href="/2017/03/25/c++内置类型/" title="C++_基本内置类型" itemprop="url">C++_基本内置类型</a>
   </h1>
   <p class="article-author">By
        
@@ -100,7 +107,7 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-06-30T04:07:32.000Z" itemprop="datePublished"> 发表于 2016-06-30</time>
+    <time datetime="2017-03-25T07:42:32.000Z" itemprop="datePublished"> 发表于 2017-03-25</time>
     
   </p>
 </header>
@@ -109,41 +116,18 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#最大公约数"><span class="toc-number">1.</span> <span class="toc-text">最大公约数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#极坐标系"><span class="toc-number">2.</span> <span class="toc-text">极坐标系</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#坐标转化"><span class="toc-number">2.2.</span> <span class="toc-text">坐标转化</span></a></li></ol></li></ol>
+			
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%BE%85%E3%81%A1%E6%99%82%E9%96%93.jpg" alt="待ち時間" title="待ち時間"></p>
-<h1 id="最大公约数"><a href="#最大公约数" class="headerlink" title="最大公约数"></a>最大公约数</h1><blockquote>
-<p>Greatest Common Divisor(GCD)<br>最大公因数，也称最大公约数、最大公因子，指两个或多个整数共有约数中最大的一个。a，b的最大公约数记为（a，b），同样的，a，b，c的最大公约数记为（a，b，c），多个整数的最大公约数也有同样的记号。与最大公约数相对应的概念是最小公倍数，a，b的最小公倍数记为<code>[a，b]</code></p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<p>如果数a能被数b整除，a就叫做b的倍数，b就叫做a的约数。约数和倍数都表示一个整数与另一个整数的关系，不能单独存在。如只能说16是某数的倍数，2是某数的约数，而不能孤立地说16是倍数，2是约数</p>
-</blockquote>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E7%9F%AD%E9%99%A4%E6%B3%95.jpg" alt="短除法求最大公约数" title="短除法求最大公约数"></p>
-<p><strong>程序实现</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">* 最大公约数的递归：</span><br><span class="line">* 1、若a可以整除b，则最大公约数是b</span><br><span class="line">* 2、如果1不成立，最大公约数便是b与a%b的最大公约数</span><br><span class="line">* 示例：求(140,21)</span><br><span class="line">* 140%21 = 14</span><br><span class="line">* 21%14 = 7</span><br><span class="line">* 14%7 = 0</span><br><span class="line">* 返回7</span><br><span class="line">* */</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (a%b == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> b;</span><br><span class="line">	<span class="keyword">return</span> gcd(b, a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a, b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"GCD: A=&gt;%d, B=&gt;%d (A,B)=%d\n"</span>, a, b, gcd(a, b));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="极坐标系"><a href="#极坐标系" class="headerlink" title="极坐标系"></a>极坐标系</h1><p>极坐标系<em>（polar coordinates）</em>是指在平面内由极点、极轴和极径组成的坐标系。在平面上取定一点O，称为极点。从O出发引一条射线Ox，称为<strong><code>极轴</code></strong>。再取定一个长度单位，通常规定角度取逆时针方向为正。</p>
-<blockquote>
-<p>这样，平面上任一点P的位置就可以用线段OP的长度ρ以及从Ox到OP的角度θ来确定，有序数对（ρ，θ）就称为P点的极坐标，记为P（ρ，θ）；ρ称为P点的极径，θ称为P点的极角。</p>
-</blockquote>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>当限制ρ≥0，0≤θ&lt;2π时，平面上除极点Ο以外，其他每一点都有唯一的一个极坐标。极点的极径为零 ，极角任意。若除去上述限制，平面上每一点都有无数多组极坐标，一般地 ，如果（ρ，θ）是一个点的极坐标 ，那么（ρ，θ+2nπ），（－ρ，θ+（2n+1）π），都可作为它的极坐标，这里n 是任意正整数。</p>
-<h2 id="坐标转化"><a href="#坐标转化" class="headerlink" title="坐标转化"></a>坐标转化</h2><p>在极坐标系与平面直角坐标系（笛卡尔坐标系）间转换　极坐标系中的两个坐标 ρ和 θ可以由下面的公式转换为 直角坐标系下的坐标值。</p>
-<ul>
-<li>x=ρcosθ</li>
-<li>y=ρsinθ</li>
-</ul>
-<blockquote>
-<p>由上述二公式，可得到从直角坐标系中x和 y两坐标如何计算出极坐标下的坐标</p>
-</blockquote>
-<p><strong><code>θ=arctan  y/x</code></strong> ( x不等于0)</p>
-<blockquote>
-<p>arctan反正切</p>
-</blockquote>
-<p>在 x= 0的情况下：若 y为正数 θ= 90° (π/2 <em>radians</em>)；若 y为负，则 θ= 270° (3π/2 <em>radians</em>).</p>
-<blockquote>
-<p>radians弧度</p>
-</blockquote>
+		<p>C++中基本内置类型指:算术类型(arthmetic type)、和空类型(void)</p>
+<ol>
+<li>算术类型:字符、整型数、布尔值、浮点数</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using std::cout;</span><br><span class="line">using std::endl;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	unsigned char i = -1;</span><br><span class="line">	printf("%d\n", i);</span><br><span class="line"></span><br><span class="line">	printf("******\n");</span><br><span class="line">	cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	printf("*****************************\n");</span><br><span class="line">	unsigned char j = '-1';</span><br><span class="line">	printf("%d\n", j);</span><br><span class="line">	cout &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>空类型:用于特殊的场合，例如最常见的是，当函数不返回任何值时使用空类型最为返回类型。</li>
+</ol>
   
 	</div>
 
@@ -254,13 +238,13 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/基础学科/">基础学科</a>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/数学/">数学</a>
+  <span></span> <a href="/tags/C/">C++</a>
   </div>
 
 </div>
@@ -269,7 +253,7 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.vivatakethat.com/2016/06/30/数学基础概念/" data-title="数学基础概念 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://www.vivatakethat.com/2017/03/25/c++内置类型/" data-title="C++_基本内置类型 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -283,18 +267,18 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/06/30/算法-顺序结构程序设计/" title="算法-顺序结构程序设计">
+ <a href="/2017/03/31/C++primer_名词解释/" title="C++primer名词解释">
   <strong>上一篇：</strong><br/>
   <span>
-  算法-顺序结构程序设计</span>
+  C++primer名词解释</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/06/29/1-Fundamentals/"  title="1-Fundamentals">
+<a href="/2017/03/24/编程建议/"  title="编程建议">
  <strong>下一篇：</strong><br/> 
- <span>1-Fundamentals
+ <span>编程建议
 </span>
 </a>
 </div>
@@ -303,7 +287,7 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/30/数学基础概念/" data-title="数学基础概念" data-url="http://www.vivatakethat.com/2016/06/30/数学基础概念/"></div>
+	<div class="ds-thread" data-thread-key="2017/03/25/c++内置类型/" data-title="C++_基本内置类型" data-url="http://www.vivatakethat.com/2017/03/25/c++内置类型/"></div>
 </section>
 
 
@@ -313,7 +297,7 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#最大公约数"><span class="toc-number">1.</span> <span class="toc-text">最大公约数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#极坐标系"><span class="toc-number">2.</span> <span class="toc-text">极坐标系</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#坐标转化"><span class="toc-number">2.2.</span> <span class="toc-text">坐标转化</span></a></li></ol></li></ol>
+ 
  
   </div>
 
@@ -337,11 +321,11 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 		<ul>
 		
 		  
-			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>4</sup></a></li>
+			<li><a href="/categories/Book-Coursera/" title="Book | Coursera">Book | Coursera<sup>6</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>29</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
 		  
 		
 		  
@@ -357,9 +341,11 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 		  
 		
 		  
+			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>2</sup></a></li>
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
 		  
 		
 		  
@@ -371,7 +357,11 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 		  
 		
 		  
-			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>4</sup></a></li>
+			<li><a href="/categories/互联网开发/" title="互联网开发">互联网开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理-理论/" title="原理 | 理论">原理 | 理论<sup>6</sup></a></li>
 		  
 		
 		  
@@ -406,7 +396,11 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/memo/" title="memo">memo<sup>16</sup></a></li>
+				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
 			
 		
 			
@@ -414,11 +408,11 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 			
 		
 			
-				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>9</sup></a></li>
+				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
 			
 		
 			
@@ -430,7 +424,7 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>5</sup></a></li>
+				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>3</sup></a></li>
 			
 		
 			
@@ -442,11 +436,19 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -458,10 +460,6 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 			
 		
 			
-				<li><a href="/tags/开发环境配置/" title="开发环境配置">开发环境配置<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
@@ -470,19 +468,11 @@ Greatest Common Divisor(GCD)最大公因数，也称最大公约数、最大公�
 			
 		
 			
-				<li><a href="/tags/数学/" title="数学">数学<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/软件测试/" title="软件测试">软件测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 		</ul>
