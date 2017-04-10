@@ -18,7 +18,8 @@
 <meta property="og:url" content="http://www.vivatakethat.com/2017/02/18/Windows日常/index.html">
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="磁盘修复">
-<meta property="og:updated_time" content="2017-04-06T02:38:18.790Z">
+<meta property="og:image" content="http://ofkarhqoq.bkt.clouddn.com/windowsscripthost-error.JPG">
+<meta property="og:updated_time" content="2017-04-07T14:58:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows日常">
 <meta name="twitter:description" content="磁盘修复">
@@ -104,7 +105,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows修复磁盘"><span class="toc-number">1.</span> <span class="toc-text">Windows修复磁盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#telnet远程登入"><span class="toc-number">2.</span> <span class="toc-text">telnet远程登入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x80096004"><span class="toc-number">3.</span> <span class="toc-text">0x80096004</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#清空DNS缓存"><span class="toc-number">4.</span> <span class="toc-text">清空DNS缓存</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CMD日常"><span class="toc-number">5.</span> <span class="toc-text">CMD日常</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows修复磁盘"><span class="toc-number">1.</span> <span class="toc-text">Windows修复磁盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#telnet远程登入"><span class="toc-number">2.</span> <span class="toc-text">telnet远程登入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x80096004"><span class="toc-number">3.</span> <span class="toc-text">0x80096004</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#清空DNS缓存"><span class="toc-number">4.</span> <span class="toc-text">清空DNS缓存</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CMD日常"><span class="toc-number">5.</span> <span class="toc-text">CMD日常</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#win10查看版本号"><span class="toc-number">6.</span> <span class="toc-text">win10查看版本号</span></a></li></ol>
 		
 		</div>
 		
@@ -141,6 +142,10 @@
 </blockquote>
 </blockquote>
 </blockquote>
+<p><img src="http://ofkarhqoq.bkt.clouddn.com/windowsscripthost-error.JPG" alt="无法执行脚本" title="无法执行脚本"><br>解决办法： </p>
+<p>~~1 新建文本文档.txt (填写以下内容)<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">Windows</span> <span class="tag">Registry</span> <span class="tag">Editor</span> <span class="tag">Version</span> 5<span class="class">.00</span><span class="attr_selector">[HKEY_CLASSES_ROOT\WScript.Shell]</span> <span class="at_rule">@<span class="keyword">="Windows</span> Script Host Shell Object<span class="string">"[HKEY_CLASSES_ROOT\WScript.Shell\CLSID] @="</span></span>&#123;72<span class="tag">C24DD5-D70A-438B-8A42-98424B88AFB8</span>&#125;"<span class="attr_selector">[HKEY_CLASSES_ROOT\WScript.Shell\CurVer]</span> <span class="at_rule">@<span class="keyword">="WScript.Shell.1"</span></span></span><br></pre></td></tr></table></figure></p>
+<p>2 保存并重命名为 WScript.reg<br>3 把 WScript.reg 导入注册表<br>4 在“开始→ 运行”里输入“regsvr32 WSHom.Ocx”（不包括双引号），确定。<br>就可以回复正常了~~</p>
+<h1 id="win10查看版本号"><a href="#win10查看版本号" class="headerlink" title="win10查看版本号"></a>win10查看版本号</h1><p>CMD下输入:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr/dlv</span><br></pre></td></tr></table></figure></p>
   
 	</div>
 
@@ -310,7 +315,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows修复磁盘"><span class="toc-number">1.</span> <span class="toc-text">Windows修复磁盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#telnet远程登入"><span class="toc-number">2.</span> <span class="toc-text">telnet远程登入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x80096004"><span class="toc-number">3.</span> <span class="toc-text">0x80096004</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#清空DNS缓存"><span class="toc-number">4.</span> <span class="toc-text">清空DNS缓存</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CMD日常"><span class="toc-number">5.</span> <span class="toc-text">CMD日常</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows修复磁盘"><span class="toc-number">1.</span> <span class="toc-text">Windows修复磁盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#telnet远程登入"><span class="toc-number">2.</span> <span class="toc-text">telnet远程登入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x80096004"><span class="toc-number">3.</span> <span class="toc-text">0x80096004</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#清空DNS缓存"><span class="toc-number">4.</span> <span class="toc-text">清空DNS缓存</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CMD日常"><span class="toc-number">5.</span> <span class="toc-text">CMD日常</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#win10查看版本号"><span class="toc-number">6.</span> <span class="toc-text">win10查看版本号</span></a></li></ol>
  
   </div>
 
@@ -570,8 +575,6 @@ var duoshuoQuery = {short_name:"vivatakethat"};
 		
 		
 		
-		
-		<a href="http://www.zhihu.com/people/vivatakethat" target="_blank" class="icon-zhihu" title="知乎"></a>
 		
 		
 		
