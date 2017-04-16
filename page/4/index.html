@@ -86,6 +86,139 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/02/08/Win10下配置开发环境/" title="Win10下配置开发环境" itemprop="url">Win10下配置开发环境</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2017-02-07T16:42:32.000Z" itemprop="datePublished"> 发表于 2017-02-08</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h2 id="添加系统变量"><a href="#添加系统变量" class="headerlink" title="添加系统变量"></a>添加系统变量</h2><ol>
+<li>变量名<code>JAVA_HOME</code></li>
+</ol>
+<p>变量值:<code>C:\Program Files\Java\jdk1.8.0_121</code></p>
+<blockquote>
+<p>jdk的目录</p>
+</blockquote>
+<ol>
+<li>添加变量名<code>CLASSPATH</code></li>
+</ol>
+<p>变量值:<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></p>
+<ol>
+<li><p>在Path添加<br>添加<code>%JAVA_HOME%\bin</code>和<code>%JAVA_HOME%\jre\bin</code>两个系统变量。Path使得系统可以在任何路径下识别java命令</p>
+</li>
+<li><p>检查是否正确正确配置<br>在CMD下执行<code>java -version</code></p>
+</li>
+</ol>
+<h1 id="WSL-win10子系统"><a href="#WSL-win10子系统" class="headerlink" title="WSL win10子系统"></a>WSL win10子系统</h1><ul>
+<li>子系统路径:<br>子系统目录在<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">%</span>USERPROFILE<span class="preprocessor">%</span>\AppData\Local\lxss</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>换个说法<br><code>C:\Users\你的用户名\AppData\Local\lxss</code></p>
+<p>如果downloading from the windows store总是失败可以，在windows10地区选台湾/香港 再下载试试</p>
+<p><a href="(https://jingyan.baidu.com/article/bea41d4386bbf2b4c51be6bc.html)">或者离线下载</a></p>
+<hr>
+<ul>
+<li>卡机自动启动WSL，并自动开启ssh</li>
+</ul>
+<p>l.  首先是需要修改的sshd_config内容其实只有这几项：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">Port</span> （随便改一个就行）</span><br><span class="line">UsePrivilegeSeparation <span class="built_in">no</span> （因为WSL默认不提供chroot）</span><br><span class="line">PasswordAuthentication <span class="built_in">yes</span></span><br><span class="line">StrictModes <span class="built_in">no</span></span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>添加两条针对你那条端口的规则（传入的和传出的），允许你那个端口的TCP连接。                 </li>
+</ol>
+<ol>
+<li>接下来生成新的密钥<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh-keygen -<span class="literal">A</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>最后重启一下ssh服务<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> service ssh restart</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>添加计划任务，具体操作:<br>保存一下文本为<code>hide.vbe</code>并扔进<code>System32</code>里<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set ws = <span class="function"><span class="title">CreateObject</span><span class="params">(<span class="string">"Wscript.Shell"</span>)</span></span> </span><br><span class="line">ws<span class="class">.run</span> <span class="string">"bash /usr/boot.sh"</span>,vbhide</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p><code>WScript.Shell</code>是一个对象，可以执行操作系统外壳常用的操作:比如运行程序、读写注册表、环境变量等</p>
+</blockquote>
+<p>再在控制版面创建<code>Create Basic Task</code>——-&gt;选择<code>trigger</code>方式<code>when I log on</code>——&gt;<code>Start a program</code>填写<code>hide.vbe</code></p>
+<ol>
+<li>在WSL创建一个shell脚本<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line">service ssh start</span><br><span class="line"><span class="variable">$SHELL</span>  <span class="comment">#这句很重要，挂起当前脚本进程, 进而维持 base.exe 一直打开</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>再赋权限<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># chmod <span class="number">777</span>     /usr/boot.sh</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="(https://www.zhihu.com/question/50664903)">参考了</a></p>
+<hr>
+<ul>
+<li>备份WSL</li>
+</ul>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.备份原来的数据源配置文件</span></span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list_backup</span><br><span class="line"><span class="comment"># 2.编辑数据源配置文件</span></span><br><span class="line">vim /etc/apt/sources.list</span><br><span class="line"><span class="comment"># 在这里我使用的是阿里云的数据源：</span></span><br><span class="line"><span class="comment">#==============================================================================================</span></span><br><span class="line"> deb <span class="symbol">http:</span>/<span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line">#===============================================================================================</span><br><span class="line"># 3.更新配置</span><br><span class="line">apt-get update</span></span><br></pre></td></tr></table></figure>
+<h1 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h1><ol>
+<li>HTTP服务软件<br>Apache</li>
+</ol>
+<ol>
+<li>网页程序设计语言<br>PHP</li>
+</ol>
+<ol>
+<li>数据库管理系统软件<br>MySQL</li>
+</ol>
+<ol>
+<li>图形界面的数据管理软件<br>phpMyAdmin</li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Windows相关/">Windows相关</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/开发环境配置/">开发环境配置</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2017/02/08/Win10下配置开发环境/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/02/08/Win10下配置开发环境/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/01/17/Linux-日常/" title="Linux日常" itemprop="url">Linux日常</a>
   </h1>
   <p class="article-author">By
@@ -359,78 +492,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/12/19/考试1——嵌入式系统应用开发实践/" title="嵌入式系统应用开发实践——考试" itemprop="url">嵌入式系统应用开发实践——考试</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2016-12-19T03:33:32.000Z" itemprop="datePublished"> 发表于 2016-12-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E5%86%B7%E5%92%96%E5%95%A1.jpg?imageView2/2/h/600" alt="干了这杯冷咖啡" title="干了这杯冷咖啡"></p>
-<ul>
-<li>课程名称：《嵌入式系统应用开发实践》</li>
-<li>考试时间: 2016年12月20日<strong><code>星期二</code></strong>（14：00——16：00）</li>
-<li>考试地点：<strong><code>学思楼1-B205</code></strong><blockquote>
-<p>A+B卷，复习更全面</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/12/19/考试1——嵌入式系统应用开发实践/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/原理-理论/">原理 | 理论</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Record/">Record</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/12/19/考试1——嵌入式系统应用开发实践/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/12/19/考试1——嵌入式系统应用开发实践/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/3/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/5/">Next<span></span></a>
@@ -479,15 +540,13 @@
 		  
 		
 		  
-			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		
+		  
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>5</sup></a></li>
 		  
 		
 		  
@@ -586,7 +645,7 @@
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -598,7 +657,7 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			

@@ -2,9 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.vivatakethat.com/2017/04/16/git%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/</loc>
+    
+    <lastmod>2017-04-16T13:20:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.vivatakethat.com/2017/02/18/Windows%E6%97%A5%E5%B8%B8/</loc>
+    
+    <lastmod>2017-04-16T13:10:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.vivatakethat.com/2017/01/17/Linux-%E6%97%A5%E5%B8%B8/</loc>
+    
+    <lastmod>2017-04-16T13:06:45.390Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
+    
+    <lastmod>2017-04-16T13:06:22.200Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.vivatakethat.com/2016/09/29/C++%E2%80%94%E2%80%94%E9%97%AE%E7%AD%94%E9%94%A6%E9%9B%86%20/</loc>
+    
+    <lastmod>2017-04-16T08:24:11.843Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.vivatakethat.com/2017/02/23/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2017-04-15T13:39:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.vivatakethat.com/2017/02/11/S%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88_memo/</loc>
+    
+    <lastmod>2017-04-15T13:34:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.vivatakethat.com/2017/03/13/W_%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2017-04-15T13:34:41.921Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     
-    <lastmod>2017-04-13T14:00:35.000Z</lastmod>
+    <lastmod>2017-04-15T13:34:39.000Z</lastmod>
     
   </url>
   
@@ -26,13 +82,6 @@
     <loc>http://www.vivatakethat.com/2017/03/31/C++primer_%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</loc>
     
     <lastmod>2017-04-09T08:47:34.667Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.vivatakethat.com/2017/02/18/Windows%E6%97%A5%E5%B8%B8/</loc>
-    
-    <lastmod>2017-04-07T14:58:05.000Z</lastmod>
     
   </url>
   
@@ -72,13 +121,6 @@
   </url>
   
   <url>
-    <loc>http://www.vivatakethat.com/2016/09/29/C++%E2%80%94%E2%80%94%E9%97%AE%E7%AD%94%E9%94%A6%E9%9B%86%20/</loc>
-    
-    <lastmod>2017-03-24T15:27:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.vivatakethat.com/2016/07/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</loc>
     
     <lastmod>2017-03-24T04:20:15.000Z</lastmod>
@@ -96,13 +138,6 @@
     <loc>http://www.vivatakethat.com/2016/11/03/Linux%E7%BC%96%E8%AF%91%E6%97%A5%E5%B8%B8/</loc>
     
     <lastmod>2017-03-15T08:26:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.vivatakethat.com/2017/03/13/W_%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    
-    <lastmod>2017-03-14T13:46:02.001Z</lastmod>
     
   </url>
   
@@ -128,13 +163,6 @@
   </url>
   
   <url>
-    <loc>http://www.vivatakethat.com/2017/01/17/Linux-%E6%97%A5%E5%B8%B8/</loc>
-    
-    <lastmod>2017-03-04T08:04:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.vivatakethat.com/2016/11/16/makefile/</loc>
     
     <lastmod>2017-03-01T07:39:52.000Z</lastmod>
@@ -152,13 +180,6 @@
     <loc>http://www.vivatakethat.com/2016/06/30/S_%E6%95%B0%E5%AD%A6/</loc>
     
     <lastmod>2017-02-24T06:55:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.vivatakethat.com/2017/02/23/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E5%9F%BA%E7%A1%80/</loc>
-    
-    <lastmod>2017-02-23T08:45:16.000Z</lastmod>
     
   </url>
   
@@ -198,13 +219,6 @@
   </url>
   
   <url>
-    <loc>http://www.vivatakethat.com/2017/02/11/S%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88_memo/</loc>
-    
-    <lastmod>2017-02-15T00:46:46.317Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.vivatakethat.com/2017/02/13/%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
     
     <lastmod>2017-02-13T13:29:34.000Z</lastmod>
@@ -222,13 +236,6 @@
     <loc>http://www.vivatakethat.com/2016/05/22/Linux%E5%91%BD%E4%BB%A4%E5%85%A8%E8%A7%A3%E6%9E%90/</loc>
     
     <lastmod>2017-01-23T03:19:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.vivatakethat.com/2016/09/17/git_memo/</loc>
-    
-    <lastmod>2017-01-23T03:02:15.000Z</lastmod>
     
   </url>
   

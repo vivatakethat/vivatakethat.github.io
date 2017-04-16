@@ -42,7 +42,7 @@ jdk的目录
 变量值:.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
 
 在Path添加添加%JAVA_HOME%\bin和%JAVA_HOME%\jre\bin两个系统变量。">
-<meta property="og:updated_time" content="2017-04-13T14:00:35.000Z">
+<meta property="og:updated_time" content="2017-04-15T13:34:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win10下配置开发环境">
 <meta name="twitter:description" content="JAVA安装添加系统变量
@@ -140,7 +140,7 @@ jdk的目录
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA"><span class="toc-number">1.</span> <span class="toc-text">JAVA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加系统变量"><span class="toc-number">1.2.</span> <span class="toc-text">添加系统变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WSL-win10子系统"><span class="toc-number">2.</span> <span class="toc-text">WSL win10子系统</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA"><span class="toc-number">1.</span> <span class="toc-text">JAVA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加系统变量"><span class="toc-number">1.2.</span> <span class="toc-text">添加系统变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WSL-win10子系统"><span class="toc-number">2.</span> <span class="toc-text">WSL win10子系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建环境"><span class="toc-number">3.</span> <span class="toc-text">搭建环境</span></a></li></ol>
 		
 		</div>
 		
@@ -199,7 +199,20 @@ jdk的目录
 <ul>
 <li>备份WSL</li>
 </ul>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.备份原来的数据源配置文件</span></span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list_backup</span><br><span class="line"><span class="comment"># 2.编辑数据源配置文件</span></span><br><span class="line">vim /etc/apt/sources.list</span><br><span class="line"><span class="comment"># 在这里我使用的是阿里云的数据源：</span></span><br><span class="line"><span class="comment">#==============================================================================================</span></span><br><span class="line"> deb <span class="symbol">http:</span>/<span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line">#===============================================================================================</span><br><span class="line"># 3.更新配置</span><br><span class="line">apt-get update</span></span><br></pre></td></tr></table></figure>  
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.备份原来的数据源配置文件</span></span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list_backup</span><br><span class="line"><span class="comment"># 2.编辑数据源配置文件</span></span><br><span class="line">vim /etc/apt/sources.list</span><br><span class="line"><span class="comment"># 在这里我使用的是阿里云的数据源：</span></span><br><span class="line"><span class="comment">#==============================================================================================</span></span><br><span class="line"> deb <span class="symbol">http:</span>/<span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line">#===============================================================================================</span><br><span class="line"># 3.更新配置</span><br><span class="line">apt-get update</span></span><br></pre></td></tr></table></figure>
+<h1 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h1><ol>
+<li>HTTP服务软件<br>Apache</li>
+</ol>
+<ol>
+<li>网页程序设计语言<br>PHP</li>
+</ol>
+<ol>
+<li>数据库管理系统软件<br>MySQL</li>
+</ol>
+<ol>
+<li>图形界面的数据管理软件<br>phpMyAdmin</li>
+</ol>
+  
 	</div>
 
 	<!-- css -->
@@ -368,7 +381,7 @@ jdk的目录
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA"><span class="toc-number">1.</span> <span class="toc-text">JAVA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加系统变量"><span class="toc-number">1.2.</span> <span class="toc-text">添加系统变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WSL-win10子系统"><span class="toc-number">2.</span> <span class="toc-text">WSL win10子系统</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA"><span class="toc-number">1.</span> <span class="toc-text">JAVA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加系统变量"><span class="toc-number">1.2.</span> <span class="toc-text">添加系统变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WSL-win10子系统"><span class="toc-number">2.</span> <span class="toc-text">WSL win10子系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建环境"><span class="toc-number">3.</span> <span class="toc-text">搭建环境</span></a></li></ol>
  
   </div>
 
@@ -412,15 +425,13 @@ jdk的目录
 		  
 		
 		  
-			<li><a href="/categories/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+		
+		  
+			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Windows相关/" title="Windows相关">Windows相关<sup>3</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>4</sup></a></li>
+			<li><a href="/categories/php-git-hexo/" title="php | git | hexo">php | git | hexo<sup>5</sup></a></li>
 		  
 		
 		  
@@ -519,7 +530,7 @@ jdk的目录
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -531,7 +542,7 @@ jdk的目录
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
