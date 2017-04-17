@@ -1236,7 +1236,7 @@ else
     <link href="http://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     <id>http://www.vivatakethat.com/2017/02/08/Win10下配置开发环境/</id>
     <published>2017-02-07T16:42:32.000Z</published>
-    <updated>2017-04-15T13:34:39.000Z</updated>
+    <updated>2017-04-17T08:57:51.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;JAVA&quot;&gt;&lt;a href=&quot;#JAVA&quot; class=&quot;headerlink&quot; title=&quot;JAVA&quot;&gt;&lt;/a&gt;JAVA&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h2 id=&quot;添加系统变量&quot;&gt;&lt;a href=&quot;#添加系统变量&quot; class=&quot;headerlink&quot; title=&quot;添加系统变量&quot;&gt;&lt;/a&gt;添加系统变量&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;变量名&lt;code&gt;JAVA_HOME&lt;/code&gt;&lt;/li&gt;
@@ -1261,7 +1261,7 @@ else
 &lt;/ul&gt;
 &lt;p&gt;换个说法&lt;br&gt;&lt;code&gt;C:\Users\你的用户名\AppData\Local\lxss&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;如果downloading from the windows store总是失败可以，在windows10地区选台湾/香港 再下载试试&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;(https://jingyan.baidu.com/article/bea41d4386bbf2b4c51be6bc.html)&quot;&gt;或者离线下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jingyan.baidu.com/article/bea41d4386bbf2b4c51be6bc.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;或者离线下载&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;卡机自动启动WSL，并自动开启ssh&lt;/li&gt;
@@ -1288,7 +1288,7 @@ else
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;再赋权限&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;# chmod &lt;span class=&quot;number&quot;&gt;777&lt;/span&gt;     /usr/boot.sh&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;(https://www.zhihu.com/question/50664903)&quot;&gt;参考了&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/50664903&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考了&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;备份WSL&lt;/li&gt;
