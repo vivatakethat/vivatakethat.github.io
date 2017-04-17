@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/06/30/S_%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2017-04-17T08:52:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>数学</title>
+        <pubTime>2016-06-30T04:07:32.000Z</pubTime>
+        
+        <tag>数学</tag>
+         
+         
+           
+             
+              <breadCrumb title="基础学科" url="http://www.vivatakethat.com/categories/%E5%9F%BA%E7%A1%80%E5%AD%A6%E7%A7%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2017/04/16/git%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/</loc>
     <lastmod>2017-04-16T13:20:02.000Z</lastmod>
     <data>
@@ -497,26 +517,6 @@
            
              
               <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/06/30/S_%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2017-02-24T06:55:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>数学</title>
-        <pubTime>2016-06-30T04:07:32.000Z</pubTime>
-        
-        <tag>数学</tag>
-         
-         
-           
-             
-              <breadCrumb title="基础学科" url="http://www.vivatakethat.com/categories/%E5%9F%BA%E7%A1%80%E5%AD%A6%E7%A7%91/"/>
           
         </display>
     </data>
