@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="在Windows下快速搭建hexo">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%A6%8F%E5%8E%9F%E7%88%B1.jpg">
-<meta property="og:updated_time" content="2017-04-06T04:15:08.736Z">
+<meta property="og:updated_time" content="2017-04-25T08:04:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Windows下快速搭建hexo">
 <meta name="twitter:description" content="在Windows下快速搭建hexo">
@@ -124,7 +124,8 @@
 <h2 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh-keygen</span><br></pre></td></tr></table></figure>
 <p>在网页上添加公钥<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@git<span class="class">.coding</span><span class="class">.net</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh -<span class="constant">T</span> git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>
-<p>调试：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh -<span class="constant">T</span> -v git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure></p>
+<p>调试github：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh -<span class="constant">T</span> -v git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure></p>
+<p>调试：git.coding.net<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -vT git@git<span class="class">.coding</span><span class="class">.net</span></span><br></pre></td></tr></table></figure></p>
 <p><strong><code>注意如果公钥存储位置不是默认位置</code></strong>则SSH配置也应该更改</p>
 <blockquote>
 <p>修改D:\Program\Git\etc\ssh\ssh_config</p>

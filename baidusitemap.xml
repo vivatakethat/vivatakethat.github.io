@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
+    <lastmod>2017-04-25T08:04:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>在Windows下快速搭建hexo</title>
+        <pubTime>2016-07-07T07:46:32.000Z</pubTime>
+        
+        <tag>开发环境配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2017-04-17T08:57:51.000Z</lastmod>
     <data>
@@ -257,26 +277,6 @@
            
              
               <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
-    <lastmod>2017-04-06T04:15:08.736Z</lastmod>
-    <data>
-        <display>
-        <title>在Windows下快速搭建hexo</title>
-        <pubTime>2016-07-07T07:46:32.000Z</pubTime>
-        
-        <tag>开发环境配置</tag>
-         
-         
-           
-             
-              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
           
         </display>
     </data>
