@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="git 无法clone123456789takethat@acer_v5573g MINGW32 /d/Project/Qt_project$ git clone git@github.com:vivatakethat/Qt_Project.gitCloning into &apos;Qt_Project&apos;...Warning: Permanently added the RSA host key for">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/batman8.jpg">
-<meta property="og:updated_time" content="2017-04-16T13:20:02.000Z">
+<meta property="og:updated_time" content="2017-04-26T08:56:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git日常报错">
 <meta name="twitter:description" content="git 无法clone123456789takethat@acer_v5573g MINGW32 /d/Project/Qt_project$ git clone git@github.com:vivatakethat/Qt_Project.gitCloning into &apos;Qt_Project&apos;...Warning: Permanently added the RSA host key for">
@@ -115,6 +115,12 @@
 </li>
 </ol>
 <p>解决:<br>添加公钥到github</p>
+<ol>
+<li>ssh-add报错<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">takethat@acer_v5573g MINGW32 /d/github/hexo_lifeSpring</span><br><span class="line">$ ssh-<span class="built_in">add</span> /c/Users/takethat/.ssh/id_rsa_lifespring</span><br><span class="line">Could <span class="operator">not</span> <span class="built_in">open</span> <span class="operator">a</span> connection <span class="built_in">to</span> your authentication agent.</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解决：请先执行<br>You might need to start ssh-agent before you run the ssh-add command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">eval</span> `ssh-agent <span class="operator">-s</span>`</span><br></pre></td></tr></table></figure></p>
+<p>再执行<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-<span class="keyword">add</span></span><br></pre></td></tr></table></figure></p>
   
 	</div>
 
