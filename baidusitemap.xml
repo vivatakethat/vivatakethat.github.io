@@ -4,28 +4,8 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
-    <lastmod>2017-04-26T09:24:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>在Windows下快速搭建hexo</title>
-        <pubTime>2016-07-07T07:46:32.000Z</pubTime>
-        
-        <tag>开发环境配置</tag>
-         
-         
-           
-             
-              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2017/04/16/git%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/</loc>
-    <lastmod>2017-04-26T08:56:04.000Z</lastmod>
+    <lastmod>2017-04-26T09:36:25.000Z</lastmod>
     <data>
         <display>
         <title>Git日常报错</title>
@@ -37,6 +17,46 @@
            
              
               <breadCrumb title="php | git | hexo" url="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/07/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2017-04-26T09:36:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>计算机原理</title>
+        <pubTime>2016-07-23T01:59:32.000Z</pubTime>
+        
+        <tag>计算机</tag>
+         
+         
+           
+             
+              <breadCrumb title="原理 | 理论" url="http://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
+    <lastmod>2017-04-26T09:30:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>在Windows下快速搭建hexo</title>
+        <pubTime>2016-07-07T07:46:32.000Z</pubTime>
+        
+        <tag>开发环境配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
           
         </display>
     </data>
@@ -204,26 +224,6 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2017/03/13/W_%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2017-04-15T13:34:41.921Z</lastmod>
-    <data>
-        <display>
-        <title>搭建微信开发环境</title>
-        <pubTime>2017-03-13T14:42:32.000Z</pubTime>
-        
-        <tag>微信</tag>
-         
-         
-           
-             
-              <breadCrumb title="互联网开发" url="http://www.vivatakethat.com/categories/%E4%BA%92%E8%81%94%E7%BD%91%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2016/11/10/Qt%20Creator-%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/</loc>
     <lastmod>2017-04-13T02:00:31.000Z</lastmod>
     <data>
@@ -357,26 +357,6 @@
            
              
               <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2016/07/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2017-03-24T04:20:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>计算机原理</title>
-        <pubTime>2016-07-23T01:59:32.000Z</pubTime>
-        
-        <tag>计算机</tag>
-         
-         
-           
-             
-              <breadCrumb title="原理 | 理论" url="http://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
           
         </display>
     </data>

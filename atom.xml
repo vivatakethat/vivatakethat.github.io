@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.vivatakethat.com/"/>
-  <updated>2017-04-26T08:56:04.000Z</updated>
+  <updated>2017-04-26T09:36:25.000Z</updated>
   <id>http://www.vivatakethat.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://www.vivatakethat.com/2017/04/16/git%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/"/>
     <id>http://www.vivatakethat.com/2017/04/16/git日常报错/</id>
     <published>2017-04-16T07:42:32.000Z</published>
-    <updated>2017-04-26T08:56:04.000Z</updated>
+    <updated>2017-04-26T09:36:25.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/batman8.jpg&quot; alt=&quot;batman&quot; title=&quot;batman&quot;&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;ol&gt;
 &lt;li&gt;git 无法clone&lt;figure class=&quot;highlight livecodeserver&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;takethat@acer_v5573g MINGW32 /d/Project/Qt_project&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git clone git@github.com:vivatakethat/Qt_Project.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Cloning &lt;span class=&quot;keyword&quot;&gt;into&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;Qt_Project&#39;&lt;/span&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Warning: Permanently added &lt;span class=&quot;operator&quot;&gt;the&lt;/span&gt; RSA host key &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; IP address &lt;span class=&quot;string&quot;&gt;&#39;192.30.255.113&#39;&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;the&lt;/span&gt; list &lt;span class=&quot;operator&quot;&gt;of&lt;/span&gt; known hosts.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Permission denied (publickey).&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fatal: Could &lt;span class=&quot;operator&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;from&lt;/span&gt; remote repository.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Please make sure you have &lt;span class=&quot;operator&quot;&gt;the&lt;/span&gt; correct access rights&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;operator&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;the&lt;/span&gt; repository exists.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
@@ -39,8 +40,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/batman8.jpg&quot; alt=&quot;batman&quot; title=&quot;batman&quot;&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;git 无法clone&lt;figure class=&quot;highligh
     
     </summary>
     
@@ -179,26 +178,6 @@
     
     
       <category term="计算机" scheme="http://www.vivatakethat.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建微信开发环境</title>
-    <link href="http://www.vivatakethat.com/2017/03/13/W_%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://www.vivatakethat.com/2017/03/13/W_微信开发_环境搭建/</id>
-    <published>2017-03-13T14:42:32.000Z</published>
-    <updated>2017-04-15T13:34:41.921Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="互联网开发" scheme="http://www.vivatakethat.com/categories/%E4%BA%92%E8%81%94%E7%BD%91%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="微信" scheme="http://www.vivatakethat.com/tags/%E5%BE%AE%E4%BF%A1/"/>
     
   </entry>
   
@@ -1697,6 +1676,226 @@ else
 &lt;li&gt;考试时间: 2016年12月22日&lt;strong&gt;&lt;code&gt;星期四&lt;/code&gt;&lt;/strong&gt;（09：00——11：00）&lt;/li&gt;
 &lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼2-A302&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="原理 | 理论" scheme="http://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+    
+    
+      <category term="Record" scheme="http://www.vivatakethat.com/tags/Record/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>嵌入式系统应用开发实践——考试</title>
+    <link href="http://www.vivatakethat.com/2016/12/19/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://www.vivatakethat.com/2016/12/19/考试1——嵌入式系统应用开发实践/</id>
+    <published>2016-12-19T03:33:32.000Z</published>
+    <updated>2017-01-16T13:40:42.211Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E5%86%B7%E5%92%96%E5%95%A1.jpg?imageView2/2/h/600&quot; alt=&quot;干了这杯冷咖啡&quot; title=&quot;干了这杯冷咖啡&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;课程名称：《嵌入式系统应用开发实践》&lt;/li&gt;
+&lt;li&gt;考试时间: 2016年12月20日&lt;strong&gt;&lt;code&gt;星期二&lt;/code&gt;&lt;/strong&gt;（14：00——16：00）&lt;/li&gt;
+&lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼1-B205&lt;/code&gt;&lt;/strong&gt;&lt;blockquote&gt;
+&lt;p&gt;A+B卷，复习更全面&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.)&lt;/code&gt;&lt;/strong&gt; 什么是bootloader?&lt;/p&gt;
+&lt;p&gt;在嵌入式操作系统中，&lt;code&gt;BootLoader是在操作系统内核运行之前运行。可以初始化硬件设备、建立内存空间映射图，从而将系统的软硬件环境带到一个合适状态,&lt;/code&gt;以便为最终调用操作系统内核准备好正确的环境``。因此整个系统的加载启动任务就完全由BootLoader来完成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.)&lt;/code&gt;&lt;/strong&gt;  什么叫同步通信？什么叫异步通信？根文件系统？UDP？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同步是指：发送方发出数据后，等接收方发回响应以后才发下一个数据包的通讯方式。 同步是阻塞模式 &lt;/li&gt;
+&lt;li&gt;异步是指：发送方发出数据后，不等接收方发回响应，接着发送下个数据包的通讯方式。异步是非阻塞模式&lt;/li&gt;
+&lt;li&gt;根文件系统: Linux只有一个文件树,整个文件系统是以一个树根”/“为起点的,所有的文件和外部设备都以文件的形式挂结在这个文件树上,包括硬盘,软盘,光驱,调制解调器等，这和以”驱动器盘符”为基础的Windows系统是大不相同的。&lt;/li&gt;
+&lt;li&gt;UDP：&lt;code&gt;用户数据报协议&lt;/code&gt;（英语：User Datagram Protocol，缩写为UDP），又称使用者资料包协定，&lt;code&gt;是一个简单的面向数据报的传输层协议&lt;/code&gt;，正式规范为RFC 768。 &lt;code&gt;在TCP/IP模型中，UDP为网络层以上和应用层以下提供了一个简单的接口&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;3.)&lt;/code&gt;&lt;/strong&gt; 在QT里什么叫插槽？&lt;/p&gt;
+&lt;p&gt;信号和插槽用于2个对象之间的通信，信号和插槽是Qt的核心特征。插槽会在连接它的信号被激发时调用。插槽是普通C++函数。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;填空&quot;&gt;&lt;a href=&quot;#填空&quot; class=&quot;headerlink&quot; title=&quot;填空&quot;&gt;&lt;/a&gt;填空&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.)&lt;/code&gt;&lt;/strong&gt;  一般而言，嵌入式系统的构架可以分为4个部分：分别是（  &lt;strong&gt;&lt;code&gt;处理器&lt;/code&gt;&lt;/strong&gt;       ）、存储器、输入/输出和软件，一般软件亦分为操作系统相关和（   &lt;strong&gt;&lt;code&gt;应用软件&lt;/code&gt;&lt;/strong&gt;     ）两个主要部分&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.)&lt;/code&gt;&lt;/strong&gt; 嵌入式系统使用的微处理器可以将嵌入式系统分为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;嵌入式微控制器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;嵌入式微处理器&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;嵌入式DSP处理器&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;片上系统(SOC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;3)&lt;/code&gt;&lt;/strong&gt; 操作系统是连接硬件与应用程序的系统程序，其基本功能有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进程管理&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;内存管理&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;文件系统管理&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;IO资源管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;4.)&lt;/code&gt;&lt;/strong&gt; 从嵌入式操作系统特点可以将嵌入式操作系统分为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;实时操作系统&lt;/code&gt;&lt;br&gt;硬实时/软实时 操作系统&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;分时操作系统&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;6.)&lt;/code&gt;&lt;/strong&gt; 内核负责管理各个任务，或者为每个任务分配CPU时间并且负责任务之间的通信，内核的基本服务是：&lt;code&gt;任务调度&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;7.)&lt;/code&gt;&lt;/strong&gt; 嵌入式开发一般采用宿主机和目标机的开发方式，其中宿主机是指 &lt;code&gt;台式机或PC机&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;8.)&lt;/code&gt;&lt;/strong&gt; 串口通信中最少需要连接&lt;code&gt;3条&lt;/code&gt;线.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;9.)&lt;/code&gt;&lt;/strong&gt; zigbee网络拓扑的3种类型：&lt;code&gt;星形、树形、Mesh型&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;10.)&lt;/code&gt;&lt;/strong&gt; CC2530 io的反向设置的时候&lt;code&gt;0为输入，1为输出&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;11.)&lt;/code&gt;&lt;/strong&gt; 传感器按数据类型可以分为：&lt;code&gt;模拟量、开关量、数字量&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;12.)&lt;/code&gt;&lt;/strong&gt; Linux操作系统下修改文件属性命令是&lt;br&gt;&lt;code&gt;chmod&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;13.)&lt;/code&gt;&lt;/strong&gt; 安卓的应用程序开发环境的搭建包括&lt;br&gt;安装JDK 及配置环境变量、Eclipse安装,&lt;br&gt; &lt;code&gt;ADT的安装&lt;/code&gt;和安卓&lt;code&gt;SDK的安装和配置&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;&lt;code&gt;14.)&lt;/code&gt;&lt;/strong&gt; 嵌入式系统的设计过程包括：&lt;code&gt;需求分析、规格说明、体系结构设计、构件设计、系统集成和系统测试。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;15.)&lt;/code&gt;&lt;/strong&gt;按操作系统的分类可以知道DOS操作属于顺序&lt;code&gt;顺序执行&lt;/code&gt;的操作系统，UNIX操作系统属于&lt;code&gt;分时操作系统&lt;/code&gt;,VxWorks 属于&lt;code&gt;实时操作系统&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;16.)&lt;/code&gt;&lt;/strong&gt; 插槽用来接受信号可以看作是&lt;code&gt;普通成员函数&lt;/code&gt; 可以直接被调用支持&lt;code&gt;public、protect、private&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;17.)&lt;/code&gt;&lt;/strong&gt;B/S架构的全称是  &lt;code&gt;Browser/Server&lt;/code&gt;, 即浏览器/服务器结构.B/S的三层架构指的是：客户浏览端、Web端、服务器端&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;送分题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;18.)&lt;/code&gt;&lt;/strong&gt;CC2530 IO口功能设置的时候1为通用，0为专用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;19.)&lt;/code&gt;&lt;/strong&gt; 传感器按数据类型分类的话，分别是模拟量类型、开关量、数字量&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;20.)&lt;/code&gt;&lt;/strong&gt; Linux建立一个文件目录的命令是：&lt;code&gt;mkdir&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;选择题：&quot;&gt;&lt;a href=&quot;#选择题：&quot; class=&quot;headerlink&quot; title=&quot;选择题：&quot;&gt;&lt;/a&gt;选择题：&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.)&lt;/code&gt;&lt;/strong&gt; CC2530是片上系统主核采用的是  &lt;code&gt;8051&lt;/code&gt;  芯片&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.)&lt;/code&gt;&lt;/strong&gt; CC2530采用无线通信的协议是：&lt;code&gt;ZigBee&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;3.)&lt;/code&gt;&lt;/strong&gt;TCP/IP协议中路由器工作的层次称之为：  &lt;code&gt;网络层&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;4.)&lt;/code&gt;&lt;/strong&gt;  CC2530 的处理器SDRAM容量最大是： &lt;code&gt;8K&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;5.)&lt;/code&gt;&lt;/strong&gt; CC2530有&lt;code&gt;21&lt;/code&gt; 个数字IO引脚&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;6.)&lt;/code&gt;&lt;/strong&gt; CC2530有   &lt;code&gt;2个&lt;/code&gt;  串口（UART）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;7.)&lt;/code&gt;&lt;/strong&gt; 光照传感器，当无光线的时候，传感器的阻值是         &lt;code&gt;最大&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;8.)&lt;/code&gt;&lt;/strong&gt; 人体的红外传感器是 &lt;code&gt;开关量&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;9.)&lt;/code&gt;&lt;/strong&gt; 温湿度传感器是  &lt;code&gt;数字量&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;10.)&lt;/code&gt;&lt;/strong&gt; Linux中需要加载硬件的需要创建节点，创建节点的命令是:    &lt;code&gt;mknod&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;11.)&lt;/code&gt;&lt;/strong&gt;近距离小于15m的通信采用有线的方式有：&lt;code&gt;RS22&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;12.)&lt;/code&gt;&lt;/strong&gt; TCP/IP协议中双绞线工作的层次称作为&lt;code&gt;物理层&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;13.)&lt;/code&gt;&lt;/strong&gt; 异步通信是靠起始位和&lt;code&gt;停止位&lt;/code&gt;来实现字符的界定。故称为起止式协议&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;判断题&quot;&gt;&lt;a href=&quot;#判断题&quot; class=&quot;headerlink&quot; title=&quot;判断题&quot;&gt;&lt;/a&gt;判断题&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.)&lt;/code&gt;&lt;/strong&gt; 所有的电子设备都属于嵌入式设备  &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.)&lt;/code&gt;&lt;/strong&gt;冯诺依曼体系结构将被哈佛体系所取代  &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;3.)&lt;/code&gt;&lt;/strong&gt; 嵌入式Linux操作系统属于免费的操作系统  &lt;code&gt;（对）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;4.)&lt;/code&gt;&lt;/strong&gt; 移植操作系统时需要修改操作系统中与处理器直接相关的程序   &lt;code&gt;（对）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;5.)&lt;/code&gt;&lt;/strong&gt;  USB2.0接口最大的通信数据最大是12M/S    &lt;code&gt;（错）&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;简答题&quot;&gt;&lt;a href=&quot;#简答题&quot; class=&quot;headerlink&quot; title=&quot;简答题&quot;&gt;&lt;/a&gt;简答题&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.)&lt;/code&gt;&lt;/strong&gt; &lt;strong&gt;请说出嵌入式linux开发的一般流程&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请分点回答&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.&lt;/code&gt;&lt;/strong&gt;建立交叉编译器开发环境&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.&lt;/code&gt;&lt;/strong&gt;配置开发主机:MINICOM、NFS网络文件系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;3.&lt;/code&gt;&lt;/strong&gt;建立引导装载程序Bootloader&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;4.&lt;/code&gt;&lt;/strong&gt;下载别人已经移植好的Linux操作系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;5.&lt;/code&gt;&lt;/strong&gt;建立根文件系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;6.&lt;/code&gt;&lt;/strong&gt;建立应用程序的Flash磁盘分区&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;7.&lt;/code&gt;&lt;/strong&gt;开发应用程序&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;8.&lt;/code&gt;&lt;/strong&gt;烧写内核、根文件系统、应用程序&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.)&lt;/code&gt;&lt;/strong&gt; 列举Qt开发中常见的布局方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（1）使用水平布局类&lt;code&gt;QHBoxLayout&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;（2）使用垂直布局类&lt;code&gt;QVBoxLayout&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;（3）使用网格布局类&lt;code&gt;QGridLayout&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;（4）使用表格布局类&lt;code&gt;QFormLayout&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;（5）使用分组布局类&lt;code&gt;QStackLayout&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;3.)&lt;/code&gt;&lt;/strong&gt; 请你描述建立一个嵌入式开发平台的步骤&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;(1)连接主机和目标板&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（2）使用flash工具烧写bootloader&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(3)配置并启动主机的bootp服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（4）配置并启动主机的tftp服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（5）使用tftp下载内核及根文件系统镜像到目标板，重启目标板&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（6）配置并启动NFS服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（7）在目标板使用mount挂载主机的目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（8）再次使用bootp命令确认bootp服务是否建立，使用tftp命令确认tftp服务建立。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（9）将内核镜像和根文件系统cp到tftp根目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（10）重启目标板，确认嵌入式linux正常启动。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;4.)&lt;/code&gt;&lt;/strong&gt; 简述物联网的架构&lt;/p&gt;
+&lt;p&gt;物联网体系架构分为3个层次：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最上层——应用层:根据底层采集的数据，形成与业务需求相适应&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第二层网络层： 实现广阔的互联网功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;底层-感知层：用来感知数据的感知层&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;5.)&lt;/code&gt;&lt;/strong&gt; 请你写出串口通信：9600，8,N,1&lt;/p&gt;
+&lt;p&gt;9600：&lt;code&gt;波特率&lt;/code&gt;&lt;br&gt;8：&lt;code&gt;数据位&lt;/code&gt;&lt;br&gt;N：&lt;code&gt;无校验位（奇偶校验）&lt;/code&gt;&lt;br&gt;1：有1个停止位&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;/&lt;em&gt; B卷简答题 &lt;/em&gt;/&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.)&lt;/code&gt;&lt;/strong&gt; 请列举linux中常见的字符设备和块设备名称&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;字符设备：键盘、鼠标、串口、LED&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;块设备：U盘、硬盘、SD卡&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.)&lt;/code&gt;&lt;/strong&gt; 请你描述QT开发中信号与插槽的特点&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;当一个信号被发射，它所连接的槽会被立即执行，就像一个普通函数调用一样。 信号/槽机制完全不依赖于任何一种图形用户界面的事件回路。&lt;/code&gt;&lt;br&gt;&lt;code&gt;当所有的槽都返回后 emit也将返回。如果几个槽被连接到一个信号，当信号被发射时，这些槽就会被按任意顺序一个 接一个地执行。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;3.)&lt;/code&gt;&lt;/strong&gt; 嵌入式开发环境中主要包括哪些组件？&lt;/p&gt;
+&lt;p&gt; &lt;code&gt;宿主机&lt;/code&gt;&lt;br&gt; &lt;code&gt;目标机（评估电路板）&lt;/code&gt;&lt;br&gt; &lt;code&gt;基于JTAG的ICD仿真器、或调试监控软件、或在线仿真器ICE&lt;/code&gt;&lt;br&gt; &lt;code&gt;运行于宿主机的交叉编译器和链接器、以及开发工具链或软件开发环境  嵌入式操作系统&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;4.)&lt;/code&gt;&lt;/strong&gt; 列出一个智能家具系统框架图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%80%83%E6%B3%95.jpg&quot; alt=&quot;智能系统框架图&quot; title=&quot;智能系统框架图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;5.)&lt;/code&gt;&lt;/strong&gt; 为什么在linux操作系统编译针对ARM处理器的时候，为什么需要引入交叉编译工具？&lt;/p&gt;
+&lt;p&gt;因为&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;1.&lt;/code&gt;&lt;/strong&gt;在ARM上使用本地的编译器来编译程序会产生大量的中间文件，这会占用很大的内存和磁盘空间，&lt;code&gt;通常ARM的CPU处理速度达不到编译程序的要求&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2.&lt;/code&gt;&lt;/strong&gt;宿主机和目标机的体系结构不同，在宿主机X86平台上可以运行的程序在目标机ARM平台上无法运行&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;程序题目&quot;&gt;&lt;a href=&quot;#程序题目&quot; class=&quot;headerlink&quot; title=&quot;程序题目&quot;&gt;&lt;/a&gt;程序题目&lt;/h1&gt;&lt;p&gt;&lt;em&gt;（2题，1个java程序一个C程序）（18分）&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;java程序&quot;&gt;&lt;a href=&quot;#java程序&quot; class=&quot;headerlink&quot; title=&quot;java程序&quot;&gt;&lt;/a&gt;java程序&lt;/h2&gt;&lt;p&gt;&lt;em&gt;阅读下面问题，回答问题(10分)&lt;/em&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; com.suninfoch2_1.R;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; android.os.Bundle;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;LoginActivity&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Activity&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	privae EdiText userName,passWord;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; SharedPreferences sp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;annotation&quot;&gt;@SuppressWarnings&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;deprecation&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;annotation&quot;&gt;@Override&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(Bundle savedInstanceState)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt;.onCreate(savedInsanceState);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.requestWindowFeature(Window.FEATURE_NO_TITLE);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		setContentView(R.layout.activity_login);	&lt;span class=&quot;comment&quot;&gt;//获取实例对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		sp=&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.getSharedPreferences(&lt;span class=&quot;string&quot;&gt;&quot;userInfo&quot;&lt;/span&gt;,Context.MODE_WORLD_READABLE);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		userName=(EdiText)findViewById(R.id.edt_userName);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			......&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; Intent intent=&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Intent(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;,SecondActivity.class);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;//判断记住密码多选框的状态&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	......&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(userNameValue.equals(&lt;span class=&quot;string&quot;&gt;&quot;admin&quot;&lt;/span&gt;)&amp;amp;pwdValue.equals(&lt;span class=&quot;string&quot;&gt;&quot;admin&quot;&lt;/span&gt;))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			Toast.makeText(LoginActivity.&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;登入成功&quot;&lt;/span&gt;,Toast.LENGTH_SHORT).show();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			startActivity(intent);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;//登入成功且保存密码为选中状态时保存用户信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(rem_pw.isChecked())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			Editor editor=sp.edit();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			......&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			editor.commit();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				......&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				auto_login.setOnCheckedChangeListener(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; OnCheckedChangeListener()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;          &lt;span class=&quot;annotation&quot;&gt;@Override&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;onCheckedChanged&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(CompoundButton buttonView,&lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; isChecked)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(auto_login.isChecked())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;自动登入已选中&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			sp.edit().putBoolean(&lt;span class=&quot;string&quot;&gt;&quot;AUTO_ISCHECK&quot;&lt;/span&gt;,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;).commit();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;自动登入没有选中&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			sp.edit().puBoolean(&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;).commit();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&amp;#125;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://7xsic8.com1.z0.glb.clouddn.com/java_01.jpg&quot; title=&quot;java题目照片01&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;java题目照片01&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://7xsic8.com1.z0.glb.clouddn.com/java_03.jpg&quot; title=&quot;java题目照片02&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;java题目照片02&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;（1）&lt;/code&gt;&lt;/strong&gt; 语句&lt;code&gt;final intent intent=new Intent(this,SecondActivity.class)&lt;/code&gt;中Intent是什么意思？发回它作用的语句是什么?&lt;br&gt;答：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Intent&lt;/code&gt;：意图，主要用于android应用的各个组件之间的通讯。它包含发生请求的组件中的一组信息送给被请求的对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;发回它作用的语句是&lt;code&gt;startActivity(intent);&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;（2）&lt;/code&gt;&lt;/strong&gt;该程序是通过什么方式存储用户和密码的？定义它的语句是什么，存储密码的语句是什么？&lt;br&gt;答：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;该程序使用&lt;code&gt;使用SharedPreferences&lt;/code&gt;储存用户名和密码;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;定义它的语句是&lt;code&gt;private SharedPreferences sp;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;存储密码的语句&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(rem_pw.isChecked())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		Editor editor=sp.edit();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		......&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		editor.commit();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;B卷问题&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;&lt;code&gt;（1）&lt;/code&gt;&lt;/strong&gt; &lt;strong&gt;语句&lt;/strong&gt; &lt;code&gt;setContenView&lt;/code&gt;&lt;strong&gt;启什么作用？&lt;/strong&gt;&lt;br&gt;答：&lt;br&gt;setContenView:&lt;/p&gt;
+&lt;p&gt;是设置一个Activity的显示界面，这句话就是设置这个这句话所在的Activity采用R.layout下的main布局文件进行布局,把登入窗体显示出来&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;（2）&lt;/code&gt;&lt;/strong&gt;   &lt;code&gt;private SharedPreferences sp;&lt;/code&gt;的作用是什么？&lt;/p&gt;
+&lt;p&gt;答：使用这个&lt;code&gt;SharedPreferences&lt;/code&gt;接口可以很容易的实现对设置值得保存和获取&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;(3)&lt;/code&gt;&lt;/strong&gt;  &lt;code&gt;SecondActivity.class&lt;/code&gt;在什么情况下会启动？启动它的语句是什么？&lt;br&gt;答：登入成功时会启动;启动它的语句是&lt;code&gt;startActivity(intent);&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;C语言程&quot;&gt;&lt;a href=&quot;#C语言程&quot; class=&quot;headerlink&quot; title=&quot;C语言程&quot;&gt;&lt;/a&gt;C语言程&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/C_%E4%BB%A3%E7%A0%81.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;（1）&lt;/code&gt;&lt;/strong&gt;接收到什么字符串就停止接受？为什么？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;答：&lt;/strong&gt;接收到&lt;code&gt;quite&lt;/code&gt;就退出因为strncmp将输入的缓冲流buff与quit对比如果相同则返回0，则结束循环关闭fd&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;（2）&lt;/code&gt;&lt;/strong&gt;就本程序而言需要定义哪些宏？各代表什么意思？&lt;br&gt;&lt;strong&gt;答：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BUFFER_SIZE:buff数组长度&lt;/li&gt;
+&lt;li&gt;TARGET_COM_PORT:宏定义具体端口号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;(3)&lt;/code&gt;&lt;/strong&gt; &lt;code&gt;read&lt;/code&gt;函数是什么功能？buff的数据来源于什么地方？4个参数的含义？&lt;br&gt;答：&lt;code&gt;read&lt;/code&gt;是读函数，buff通过read函数读入；&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E5%86%B7%E5%92%96%E5%95%A1.jpg?imageView2/2/h/600&quot; alt=&quot;干了这杯冷咖啡&quot; title=&quot;干了这杯冷咖啡&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;课程名称：《嵌入式系统应用开发实践》&lt;/li&gt;
+&lt;li&gt;考试时间: 2016年12月20日&lt;strong&gt;&lt;code&gt;星期二&lt;/code&gt;&lt;/strong&gt;（14：00——16：00）&lt;/li&gt;
+&lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼1-B205&lt;/code&gt;&lt;/strong&gt;&lt;blockquote&gt;
+&lt;p&gt;A+B卷，复习更全面&lt;/p&gt;
     
     </summary>
     
