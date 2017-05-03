@@ -169,29 +169,12 @@
 </header>
     <div class="article-content">
         
-        <ol>
-<li>语句块block</li>
-</ol>
-<p>就是用花括号包围的零条或多条语句的序列。语句块就是语句的一种，任何要求使用语句块的地方都可以使用语句块。</p>
-<ol>
-<li><p>成员函数(member function)<br>成员函数是定义类的一部分函数，有时也被称为方法(method)</p>
-</li>
-<li><p>点运算符(.)<br>点运算只能用于类类型的对象，右侧运算对象必须是该类型的一个成员函数名，运算结果为右侧运算对象指定的成员。</p>
-</li>
-<li><p>字面值常量(literal)</p>
-</li>
-</ol>
-<p>每个字面值常量对应一种数据类型，字面值常量的形式和值距诶的那个了它的数据类型。</p>
-<ol>
-<li>声明符(declarator)<blockquote>
-<p>p45<br>声明符就是变量名;</p>
-</blockquote>
-</li>
-</ol>
-
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/2012%E5%B9%B4%E7%9A%84%E5%A4%8F%E5%A4%A9%EF%BC%8C%E5%8B%87%E5%9C%A8%E6%88%91%E7%A7%9F%E7%9A%84%E6%88%BF%E5%AD%90%E9%87%8C%E5%86%99%E4%BD%9C%E4%B8%9A.jpg?imageView2/2/h/600" alt="2012年的夏天，勇在我租的房子里写作业" title="2012年的夏天，勇在我租的房子里写作业"></p>
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/03/31/C++primer_名词解释/#more">Read More</a>
           
        </p>
     </div>
@@ -253,18 +236,13 @@
 </header>
     <div class="article-content">
         
-        <p>C++中基本内置类型指:算术类型(arthmetic type)、和空类型(void)</p>
-<ol>
-<li>算术类型:字符、整型数、布尔值、浮点数</li>
-</ol>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using std::cout;</span><br><span class="line">using std::endl;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	unsigned char i = -1;</span><br><span class="line">	printf("%d\n", i);</span><br><span class="line"></span><br><span class="line">	printf("******\n");</span><br><span class="line">	cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	printf("*****************************\n");</span><br><span class="line">	unsigned char j = '-1';</span><br><span class="line">	printf("%d\n", j);</span><br><span class="line">	cout &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>空类型:用于特殊的场合，例如最常见的是，当函数不返回任何值时使用空类型最为返回类型。</li>
-</ol>
-
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/command_conquer_red_alert_2_conceptart_8l1tm.jpg?imageView2/2/h/600" alt="command_conquer_red_alert_2_conceptart_8l1tm" title="command_conquer_red_alert_2_conceptart_8l1tm"></p>
+<p>C++中基本内置类型指:算术类型(arthmetic type)、和空类型(void)<br>
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/03/25/c++内置类型/#more">Read More</a>
           
        </p>
     </div>
@@ -326,33 +304,12 @@
 </header>
     <div class="article-content">
         
-        <ol>
-<li>如何选择类型</li>
-</ol>
-<ul>
-<li>当明确知晓数值不可能为负时，选用无符号类型。</li>
-<li>如果数值超过了int的表达范围，选用long long。</li>
-<li><p>在算术表达式中不要使用char或bool,只有在存放字符或布尔值时才使用他们。</p>
-<blockquote>
-<p>因为类型char在一些机器上是有符号的，而在另一写机器上又是无符号的。</p>
-<blockquote>
-<p>如果你需要使用一个不大的整数，那么明确它的类型是signed char或者unsigned char </p>
-</blockquote>
-</blockquote>
-</li>
-<li><p>执行浮点数运算选用double,这是因为float通常精度不够而且，双精度数和单位精度浮点数的计算代价相差无几。事实上，对于某些机器来说,双精度运算甚至比单精度还快。</p>
-<blockquote>
-<p>long double提供的精度在一般情况下是没有必要的，况且它带来的运行时消耗也不容忽视。</p>
-</blockquote>
-</li>
-</ul>
-<ol>
-<li>切勿用带符号类型和无符号类型<br>如果表达式里既有符号类型又有无符号类型，当带符号类型取值为负时会出现异常结果，这是因为带符号数会自动转成无符号数。</li>
-</ol>
-
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/AC130.jpg?imageView2/2/h/600" alt="AC130" title="AC130."></p>
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/03/24/编程建议/#more">Read More</a>
           
        </p>
     </div>

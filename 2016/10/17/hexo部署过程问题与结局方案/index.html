@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Invincible%20Iron%20Man%20%282015-%29%20010-000.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2017-01-16T13:40:41.880Z">
+<meta property="og:updated_time" content="2017-05-03T13:55:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo部署过程问题与结局方案">
 <meta name="twitter:description">
@@ -105,7 +105,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将hexo根目录移动后提示少插件"><span class="toc-number">1.</span> <span class="toc-text">将hexo根目录移动后提示少插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo文章标签数目不对"><span class="toc-number">2.</span> <span class="toc-text">hexo文章标签数目不对</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七牛imageView接口"><span class="toc-number">3.</span> <span class="toc-text">七牛imageView接口</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将hexo根目录移动后提示少插件"><span class="toc-number">1.</span> <span class="toc-text">将hexo根目录移动后提示少插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo文章标签数目不对"><span class="toc-number">2.</span> <span class="toc-text">hexo文章标签数目不对</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七牛imageView接口"><span class="toc-number">3.</span> <span class="toc-text">七牛imageView接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#建议"><span class="toc-number">3.1.</span> <span class="toc-text">建议</span></a></li></ol></li></ol>
 		
 		</div>
 		
@@ -119,8 +119,11 @@
 <hr>
 <h1 id="hexo文章标签数目不对"><a href="#hexo文章标签数目不对" class="headerlink" title="hexo文章标签数目不对"></a>hexo文章标签数目不对</h1><p>先移除博客根目录下的<strong>.deploy_git文件夹</strong>和 <strong>db.json文件</strong>，然</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> clean     <span class="comment">#清除缓存</span></span><br><span class="line">hexo g         <span class="comment">#生成静态网页</span></span><br><span class="line">hexo s         <span class="comment">#启动服务预览</span></span><br><span class="line">hexo d         <span class="comment">#开始部署</span></span><br></pre></td></tr></table></figure>
-<h1 id="七牛imageView接口"><a href="#七牛imageView接口" class="headerlink" title="七牛imageView接口"></a>七牛imageView接口</h1><p>• 在列表等页面，针对图片地址，加上 <figure class="highlight"><figcaption><span>宽200px、高100px、质量为原图的90%进行展示；</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#8226; &#22312;&#20135;&#21697;&#30340;&#35814;&#24773;&#39029;&#65292;&#38024;&#23545;&#22270;&#29255;&#22320;&#22336;&#65292;&#21152;&#19978; ```?imageView2/2/w/600/q/95```&#65292;&#36825;&#26679;&#65292;&#22312;&#35814;&#24773;&#39029;&#38754;&#65292;&#20250;&#23545;&#29992;&#25143;&#19978;&#20256;&#30340;&#22270;&#29255;&#65292;&#25353;&#29031;&#23485;&#26368;&#22810;&#20026;600px&#12289;&#39640;&#33258;&#36866;&#24212;&#12289;&#36136;&#37327;95%&#36827;&#34892;&#23637;&#31034;&#65307;&#10;&#10;&#10;## &#24314;&#35758;&#10;&#10;&#24314;&#35758;PC&#31471;&#29992;</span><br></pre></td></tr></table></figure></p>
-<p>?imageView2/2/h/600<br>```</p>
+<h1 id="七牛imageView接口"><a href="#七牛imageView接口" class="headerlink" title="七牛imageView接口"></a>七牛imageView接口</h1><p>• 在列表等页面，针对图片地址，加上 <code>?imageView2/3/w/200/h/100/q/90</code>，这样，在列表页，会对用户上传的图片，在列表页上按照 宽200px、高100px、质量为原图的90%进行展示；</p>
+<p>• 在产品的详情页，针对图片地址，加上 <code>?imageView2/2/w/600/q/95</code>，这样，在详情页面，会对用户上传的图片，按照宽最多为600px、高自适应、质量95%进行展示；</p>
+<hr>
+<h2 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h2><p>建议PC端用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?imageView2/<span class="number">2</span>/h/<span class="number">600</span></span><br></pre></td></tr></table></figure>
 <p>进行裁剪图片</p>
 <p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html" target="_blank" rel="external">参考</a></p>
   
@@ -292,7 +295,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将hexo根目录移动后提示少插件"><span class="toc-number">1.</span> <span class="toc-text">将hexo根目录移动后提示少插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo文章标签数目不对"><span class="toc-number">2.</span> <span class="toc-text">hexo文章标签数目不对</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七牛imageView接口"><span class="toc-number">3.</span> <span class="toc-text">七牛imageView接口</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将hexo根目录移动后提示少插件"><span class="toc-number">1.</span> <span class="toc-text">将hexo根目录移动后提示少插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo文章标签数目不对"><span class="toc-number">2.</span> <span class="toc-text">hexo文章标签数目不对</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七牛imageView接口"><span class="toc-number">3.</span> <span class="toc-text">七牛imageView接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#建议"><span class="toc-number">3.1.</span> <span class="toc-text">建议</span></a></li></ol></li></ol>
  
   </div>
 

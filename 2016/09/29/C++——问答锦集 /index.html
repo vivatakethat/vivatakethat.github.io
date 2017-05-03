@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/never%20eat%20alone.jpg">
-<meta property="og:updated_time" content="2017-04-16T08:24:11.843Z">
+<meta property="og:updated_time" content="2017-05-03T09:26:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++问答锦集">
 <meta name="twitter:description">
@@ -240,6 +240,15 @@
 </ol>
 <p>指针是变量，指针不一定在声明时赋初值，而引用则在声明时赋初值;</p>
 <p>指针可以再次被赋值其它变量，而应用一旦绑定变量则不能再绑定其它变量;</p>
+<ol>
+<li>指针赋值问题<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::endl;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line">	<span class="keyword">int</span> change = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*1. 常量指针*/</span></span><br><span class="line">	<span class="comment">//const int  * b = &amp;a;</span></span><br><span class="line">	<span class="keyword">int</span>  *b;</span><br><span class="line">	*b= <span class="number">23</span>;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; *b &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"************************************************"</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这段代码有什么错误？在WSL/VS2015下不能运行，但是在fedora环境下却又可以正常运行</p>
+<p>答:<br>指针要么是在初始化的时候进行赋值，如：<code>char *p = &quot;hello world!&quot;;</code>要么在之后将指针指向一个已经初始化的内存空间，因为只定义而未初始化的指针不会指向任何内存空间，是不能对指针指向的地方进行赋值的。</p>
+<blockquote>
+<p>这就是为什么如果只定义了指针，而为初始化时要使用Xalloc或者new来申请空间。 </p>
+</blockquote>
   
 	</div>
 
