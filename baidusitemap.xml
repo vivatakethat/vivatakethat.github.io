@@ -4,8 +4,48 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2017/02/23/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2017-05-03T14:30:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>第一章:基础</title>
+        <pubTime>2017-02-23T12:54:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Book | Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2017/02/23/temp2017-2-23/</loc>
+    <lastmod>2017-05-03T14:26:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>temp2017-2-23</title>
+        <pubTime>2017-02-22T16:42:32.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2017/03/24/%E7%BC%96%E7%A8%8B%E5%BB%BA%E8%AE%AE/</loc>
-    <lastmod>2017-05-03T13:58:24.000Z</lastmod>
+    <lastmod>2017-05-03T14:02:31.000Z</lastmod>
     <data>
         <display>
         <title>编程建议</title>
@@ -284,26 +324,6 @@
 
     
   <url>
-    <loc>http://www.vivatakethat.com/2017/02/23/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2017-04-15T13:39:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>Thu Feb 23 2017 00:00:00 GMT+0800 (China Standard Time)</title>
-        <pubTime>2017-02-23T12:54:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Book | Coursera" url="http://www.vivatakethat.com/categories/Book-Coursera/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.vivatakethat.com/2017/02/11/S%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88_memo/</loc>
     <lastmod>2017-04-15T13:34:43.000Z</lastmod>
     <data>
@@ -437,26 +457,6 @@
            
              
               <breadCrumb title="English" url="http://www.vivatakethat.com/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2017/02/23/2017-2-23/</loc>
-    <lastmod>2017-03-10T01:02:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Thu Feb 23 2017 00:00:00 GMT+0800 (China Standard Time)</title>
-        <pubTime>2017-02-22T16:42:32.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
           
         </display>
     </data>

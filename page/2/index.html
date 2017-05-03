@@ -168,7 +168,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/02/23/第一章_基础/" title="Thu Feb 23 2017 00:00:00 GMT+0800 (China Standard Time)" itemprop="url">Thu Feb 23 2017 00:00:00 GMT+0800 (China Standard Time)</a>
+      <a href="/2017/02/23/第一章_基础/" title="第一章:基础" itemprop="url">第一章:基础</a>
   </h1>
   <p class="article-author">By
        
@@ -184,70 +184,15 @@
 </header>
     <div class="article-content">
         
-        <h1 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h1><ol>
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/1354996.jpg?imageView2/2/h/600" alt="1354996" title="1354996"></p>
+<h1 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h1><ol>
 <li>静态方法:即函数;<br>方法封装了一系列语句 所描述的运算</li>
 </ol>
-<ol>
-<li>实例方法:</li>
-</ol>
-<h1 id="java基础语法"><a href="#java基础语法" class="headerlink" title="java基础语法"></a>java基础语法</h1><ol>
-<li>获取数组长度<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> N = a.length;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<blockquote>
-<p>如果为多位数组，则N为行数;</p>
-</blockquote>
-<ol>
-<li>起别名<br>数组名表示的是整个数组，如果我们将一个数组变量赋予另一个变量，那么这2个变量将会指向同一个数组，例如:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">takethat</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[][] a = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;, &#123;<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>&#125;, &#123;<span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> M = a.length;  <span class="comment">//行</span></span><br><span class="line">        <span class="keyword">int</span> N = a[<span class="number">0</span>].length;   <span class="comment">//列</span></span><br><span class="line">        <span class="keyword">int</span>[][] b = a;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; b[<span class="number">0</span>].length; j++)</span><br><span class="line">            System.out.print(b[i][j] + <span class="string">", "</span>);</span><br><span class="line">            System.out.print(<span class="string">"\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="存疑"><a href="#存疑" class="headerlink" title="存疑"></a>存疑</h1><ol>
-<li>二维数组下标<br>C++里二维数组必须有下表才能赋值，一维数组则不需要下标则能使用</li>
-</ol>
-<pre><code><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[][] = &#123; &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125; &#125;;</span><br></pre></td></tr></table></figure>
-</code></pre><p> VS2015 会报错<br>    <figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">error</span> C2087: <span class="comment">'a': missing subscrip</span></span><br><span class="line"><span class="keyword">error</span> C2078: too many initializers</span><br></pre></td></tr></table></figure></p>
-<pre><code>int a[]= {  1,2,3 ,4,5,6  };
-</code></pre><p>输出数组实例<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">takethat</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span>[] a = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> N = a.length;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">double</span>[] b = <span class="keyword">new</span> <span class="keyword">double</span>[N];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">            b[i] = a[i];</span><br><span class="line">        </span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;b.length; i++)</span><br><span class="line">           System.out.print(b[i]+<span class="string">", "</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (q == <span class="number">0</span>) <span class="keyword">return</span> p;</span><br><span class="line">      <span class="keyword">int</span> r = p % q;</span><br><span class="line">      <span class="keyword">return</span> gcd(q, r);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p><strong><code>典型数组处理代码</code></strong></p>
-<ul>
-<li><p>颠倒数组元素顺序<br>C++实现代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a为数组</span></span><br><span class="line"><span class="keyword">int</span> N = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N / <span class="number">2</span>; i++)        </span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> temp = a[i];</span><br><span class="line">	a[i] = a[N - <span class="number">1</span> - i];</span><br><span class="line">	a[N - <span class="number">1</span> - i] = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>找出数组最大元素</p>
-</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a为数组</span></span><br><span class="line">	<span class="keyword">int</span> N = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line"><span class="keyword">int</span> max=a[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(a[i]&gt;max)</span><br><span class="line">	max=a[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>矩阵方程<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> a_row  <span class="number">2</span>   <span class="comment">//a矩阵的行</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> N  <span class="number">4</span>       <span class="comment">//a矩阵的列</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> N  <span class="number">4</span>                 <span class="comment">//  b矩阵的行</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> b_column <span class="number">2</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[a_row][N]  = &#123; &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,<span class="number">4</span> &#125;,&#123; <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>,<span class="number">8</span> &#125; &#125;;</span><br><span class="line">	<span class="keyword">int</span> b[N][b_column]  = &#123; &#123; <span class="number">1</span>, <span class="number">1</span> &#125;,&#123; <span class="number">1</span>, <span class="number">1</span> &#125;,&#123; <span class="number">1</span>, <span class="number">1</span> &#125;,&#123; <span class="number">1</span>, <span class="number">1</span> &#125; &#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> c[a_row][b_column];		<span class="comment">//结果矩阵： c矩阵的 行:a矩阵的行, 列:b矩阵的列</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;a_row; i++)  <span class="comment">// a 矩阵的行数</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; b_column; j++) &#123;      <span class="comment">//  b矩阵的列数</span></span><br><span class="line">			c[i][j] = <span class="number">0</span>;	 <span class="comment">//  每次使用数组变量都要初始化一下，如果没有这个会输出错误的结果</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; N; k++)    <span class="comment">// </span></span><br><span class="line">			&#123;</span><br><span class="line">				c[i][j] = c[i][j] + a[i][k] * b[k][j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a_row; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; b_column ; j++) &#123;</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; c[i][j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>【output】<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> <span class="number">10</span></span><br><span class="line"><span class="number">26</span> <span class="number">26</span></span><br></pre></td></tr></table></figure></p>
-<p><strong><code>典型静态方法实现</code></strong></p>
-<ol>
-<li>计算一个整数的绝对值<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">abs</span><span class="params">(<span class="keyword">int</span> x)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">abs</span><span class="params">(<span class="keyword">int</span> x)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (x&lt;<span class="number">0</span>)<span class="keyword">return</span> -x;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt;a;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">abs</span>(a)&lt;&lt;<span class="built_in">std</span>::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<blockquote>
-<p>计算一个浮点数的绝对值，也是类似的方法</p>
-</blockquote>
-<ol>
-<li>判定一个数是否是素数<br>```C++<br>#include<iostream><br>bool isPrime(int);<br>bool isPrime(int N)<br>{<br>if (N &lt; 2)    return false;<br>for (int i = 2; i*i &lt;= N; i++)<br> if (N%i == 0)    return false;<br>return true;<br>}</iostream></li>
-</ol>
-<p>int main()<br>{<br>    int n;<br>    scanf(“%d”, &amp;n);</p>
-<pre><code>if (isPrime(n))
-    std::cout &lt;&lt; &quot;isPrimer&quot;;
-else
-    std::cout &lt;&lt; &quot;not Primer&quot;;
-</code></pre><p>}<br>```  </p>
-<ol>
-<li>计算平方根(牛顿迭代法)<br><a href="(http://blog.csdn.net/young_gy/article/details/45766433)">可参考</a></li>
-</ol>
-<p>……..</p>
-<h1 id="P25"><a href="#P25" class="headerlink" title="P25"></a>P25</h1>
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/02/23/第一章_基础/#more">Read More</a>
           
        </p>
     </div>
@@ -293,7 +238,7 @@ else
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/02/23/2017-2-23/" title="Thu Feb 23 2017 00:00:00 GMT+0800 (China Standard Time)" itemprop="url">Thu Feb 23 2017 00:00:00 GMT+0800 (China Standard Time)</a>
+      <a href="/2017/02/23/temp2017-2-23/" title="temp2017-2-23" itemprop="url">temp2017-2-23</a>
   </h1>
   <p class="article-author">By
        
@@ -309,12 +254,12 @@ else
 </header>
     <div class="article-content">
         
-        <p>数组、<code>-&gt;(指向结构体成员运算符)</code>、  <code>new</code> 、<code>vector</code></p>
+        <p>数组、<code>-&gt;(指向结构体成员运算符)</code>、  <code>new</code> 、<code>vector</code><br><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%93%AA%E5%90%92.jpg?imageView2/2/h/600" alt="哪咤" title="哪咤"></p>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/02/23/2017-2-23/#more">Read More</a>
+            <a href="/2017/02/23/temp2017-2-23/#more">Read More</a>
           
        </p>
     </div>
@@ -340,7 +285,7 @@ else
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2017/02/23/2017-2-23/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/02/23/2017-2-23/" data-count-type="comments">&nbsp;</a>
+		<a href="/2017/02/23/temp2017-2-23/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/02/23/temp2017-2-23/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -701,10 +646,6 @@ else
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
@@ -713,11 +654,15 @@ else
 			
 		
 			
+				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -729,15 +674,15 @@ else
 			
 		
 			
+				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>

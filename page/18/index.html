@@ -356,7 +356,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/05/18/centos运维memo/" title="centos运维memo" itemprop="url">centos运维memo</a>
+      <a href="/2016/05/18/MongoDB数据库/" title="MongoDB数据库" itemprop="url">MongoDB数据库</a>
   </h1>
   <p class="article-author">By
        
@@ -372,47 +372,12 @@
 </header>
     <div class="article-content">
         
-        <h1 id="centos运维memo"><a href="#centos运维memo" class="headerlink" title="centos运维memo"></a>centos运维memo</h1><h2 id="分区使用率100"><a href="#分区使用率100" class="headerlink" title="分区使用率100%"></a>分区使用率100%</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@node tmp]<span class="preprocessor"># df -h</span></span><br><span class="line">Filesystem                    Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/mapper/VolGroup-lv_root  <span class="number">6.7</span>G  <span class="number">6.6</span>G     <span class="number">0</span> <span class="number">100</span>% /</span><br><span class="line">tmpfs                         <span class="number">939</span>M     <span class="number">0</span>  <span class="number">939</span>M   <span class="number">0</span>% /dev/shm</span><br><span class="line">/dev/vda1                     <span class="number">485</span>M   <span class="number">32</span>M  <span class="number">428</span>M   <span class="number">7</span>% /boot</span><br></pre></td></tr></table></figure>
-<p>解决办法:</p>
-<p>找出哪个文件夹最占硬盘,<code>du  -sh  ./*</code></p>
-<blockquote>
-<p>在<code>/</code>目录下查询<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@<span class="keyword">node</span><span class="identifier"> </span><span class="title">/]# du</span> -sh /*</span><br><span class="line"></span><br><span class="line"><span class="number">1.7</span>G    /usr</span><br><span class="line"><span class="number">3.7</span>G    /var</span><br><span class="line">[root@<span class="keyword">node</span><span class="identifier"> </span><span class="title">/]# cd</span> /var</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>查询哪个目录层数最多<br> <code>du -h --max-depth=1du</code></p>
-<blockquote>
-<p>用于统计Linux中文件或目录所占磁盘空间的大小参数<br>-h：以K、M、G为单位查询结果<br>–max-depth=1其中,数字1是指查询结果中显示的目录才能使，智这里指最多显示一层目录</p>
-</blockquote>
-<h2 id="inode用完了"><a href="#inode用完了" class="headerlink" title="inode用完了"></a>inode用完了</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># df  -i</span></span><br></pre></td></tr></table></figure>
-<p>查看 inode用完了，磁盘无法创建心得内容了，这个是某些临时的小文件太多，</p>
-<p>解决方法：</p>
-<p>或者 卸载100%的分区</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="applescript"></span><br><span class="line">[root@node spool]<span class="comment"># umount /</span></span><br><span class="line">umount: /: device <span class="keyword">is</span> busy.</span><br><span class="line">        (In <span class="keyword">some</span> cases useful info <span class="keyword">about</span> processes <span class="keyword">that</span> use</span><br><span class="line">         <span class="keyword">the</span> device <span class="keyword">is</span> found <span class="keyword">by</span> lsof(<span class="number">8</span>) <span class="keyword">or</span> fuser(<span class="number">1</span>))</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="Mysql无法重启"><a href="#Mysql无法重启" class="headerlink" title="Mysql无法重启"></a>Mysql无法重启</h2><p>查看 /var/log/mysqld.log<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@node mygit]# tail /<span class="keyword">var</span>/<span class="keyword">log</span>/mysqld.<span class="keyword">log</span> </span><br><span class="line">160517  4:32:49  InnoDB: Started; <span class="keyword">log</span> sequence number 0 44233</span><br><span class="line">160517  4:32:49 [<span class="keyword">ERROR</span>] Can't start server: Bind <span class="keyword">on</span> TCP/IP port: Address already <span class="keyword">in</span> <span class="keyword">use</span></span><br><span class="line">160517  4:32:49 [<span class="keyword">ERROR</span>] <span class="keyword">Do</span> you already have another mysqld server running <span class="keyword">on</span> port: 3306 ?</span><br><span class="line">160517  4:32:49 [<span class="keyword">ERROR</span>] Aborting</span><br><span class="line"></span><br><span class="line">160517  4:32:49  InnoDB: Starting shutdown...</span><br><span class="line">160517  4:32:55  InnoDB: Shutdown completed; <span class="keyword">log</span> sequence number 0 44233</span><br><span class="line">160517  4:32:55 [<span class="keyword">Note</span>] /usr/libexec/mysqld: Shutdown complete</span><br><span class="line"></span><br><span class="line">160517 04:32:55 mysqld_safe mysqld from pid <span class="keyword">file</span> /<span class="keyword">var</span>/<span class="keyword">run</span>/mysqld/mysqld.pid ended</span><br></pre></td></tr></table></figure></p>
-<p><strong>解决方法</strong></p>
-<ol>
-<li>查看端口<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@node mygit]<span class="preprocessor"># netstat -nltp|grep mysql</span></span><br><span class="line">tcp        <span class="number">0</span>      <span class="number">0</span> <span class="number">127.1</span><span class="number">.244</span><span class="number">.130</span>:<span class="number">3306</span>          <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:*                   LISTEN      <span class="number">15550</span>/mysqld</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>端口被另一个mysqld占用？？</p>
-<ol>
-<li>修改默认端口<blockquote>
-<h1 id="vi-etc-my-cnf"><a href="#vi-etc-my-cnf" class="headerlink" title="vi /etc/my.cnf"></a>vi /etc/my.cnf</h1></blockquote>
-</li>
-</ol>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[mysqld]</span></span><br><span class="line"><span class="setting">port=<span class="value"><span class="number">3307</span></span></span></span><br><span class="line"><span class="setting">datadir=<span class="value">/var/lib/mysql</span></span></span><br><span class="line"><span class="setting">socket=<span class="value">/var/lib/mysql/mysql.sock</span></span></span><br><span class="line"><span class="setting">user=<span class="value">mysql</span></span></span><br><span class="line"><span class="comment"># Disabling symbolic-links is recommended to prevent assorted security risks</span></span><br><span class="line"><span class="setting">symbolic-links=<span class="value"><span class="number">0</span></span></span></span><br></pre></td></tr></table></figure>
-<p>如果仍无法重启，请查看日志</p>
-<blockquote>
-<p>tail /var/log/mysqld.log </p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">160517  4:44:28  InnoDB: Started; log sequence number 0 44233</span><br><span class="line">160517  4:44:28 [ERROR] Can't <span class="operator"><span class="keyword">start</span> <span class="keyword">server</span>: Bind <span class="keyword">on</span> TCP/IP port: Permission denied</span><br><span class="line"><span class="number">160517</span>  <span class="number">4</span>:<span class="number">44</span>:<span class="number">28</span> [<span class="keyword">ERROR</span>] <span class="keyword">Do</span> you already have another mysqld <span class="keyword">server</span> running <span class="keyword">on</span> port: <span class="number">3307</span> ?</span><br><span class="line"><span class="number">160517</span>  <span class="number">4</span>:<span class="number">44</span>:<span class="number">28</span> [<span class="keyword">ERROR</span>] Aborting</span></span><br></pre></td></tr></table></figure>
-<p>则<code>setenforce 0</code>暂时管理selinux,再重启mysqld。在setenforce 1</p>
-<h3 id="ntp无法同步"><a href="#ntp无法同步" class="headerlink" title="ntp无法同步"></a>ntp无法同步</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span> Sep <span class="number">09</span>:<span class="number">35</span>:<span class="number">09</span> ntpdate[<span class="number">30210</span>]: the NTP socket is in use, exiting</span><br></pre></td></tr></table></figure>
-<p>解决方法：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># .    /etc/init.d/ntpd  stop</span></span><br><span class="line"><span class="preprocessor"># ntpdate  <span class="number">192.168</span><span class="number">.200</span><span class="number">.10</span></span></span><br></pre></td></tr></table></figure></p>
-
+        <h1 id="MongoDB数据库"><a href="#MongoDB数据库" class="headerlink" title="MongoDB数据库"></a>MongoDB数据库</h1>
         
         
         <p class="article-more-link">
+          
+            <a href="/2016/05/18/MongoDB数据库/#more">Read More</a>
           
        </p>
     </div>
@@ -421,13 +386,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  <a class="article-category-link" href="/categories/云计算/">云计算</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Linux/">Linux</a>
+  <span></span> <a href="/tags/PaaS/">PaaS</a>
   </div>
 
 </div>
@@ -438,7 +403,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2016/05/18/centos运维memo/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/18/centos运维memo/" data-count-type="comments">&nbsp;</a>
+		<a href="/2016/05/18/MongoDB数据库/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/18/MongoDB数据库/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -589,10 +554,6 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
@@ -601,11 +562,15 @@
 			
 		
 			
+				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/字符设备/" title="字符设备">字符设备<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -617,15 +582,15 @@
 			
 		
 			
+				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/逻辑/" title="逻辑">逻辑<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/gcc/" title="gcc">gcc<sup>1</sup></a></li>
+				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>
