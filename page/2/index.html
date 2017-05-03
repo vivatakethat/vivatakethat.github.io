@@ -321,7 +321,7 @@
 </header>
     <div class="article-content">
         
-        <p>Boost库日常使用<br>
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E3%80%8CLittle%20boy%E3%80%8D%E5%92%8C%E3%80%8CFat%20man%E3%80%8D.jpg?imageView2/2/h/600" alt="「Little boy」和「Fat man」" title="「Little boy」和「Fat man」"><br>Boost库日常使用<br>
         
         
         <p class="article-more-link">
@@ -394,82 +394,12 @@
 <li>进程跟线程的关系？</li>
 <li>引进线程的优点？</li>
 </ol>
-<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p><code>preemptive multitasking</code>抢先式多任务:意思是操作系统能够强迫应用程序把CPU分享给其他人，程序员不需要额外的努力。</p>
-<p><code>程序</code>只是一组指令的有序集合，它本身没有任何运行的含义，只是一个静态实体.</p>
-<p><code>进程Process</code>是正在执行的程序实例。进程是程序在某个数据集上的执行，是一个动态实体。所以进程因创建才会产生，调度才会运行，所以进程会因等待资源或事件而被处于等待状态，一旦完成任务而被撤消，<code>进程反映了一个程序在一定的数据集上运行的全部动态过程</code>。</p>
-<p>逻辑上将一个进程划分为一下几段:</p>
-<ul>
-<li><p>文本:程序的指令</p>
-</li>
-<li><p>数据:程序使用的静态变量</p>
-</li>
-<li><p>堆:程序可以从该区域动态分配额外内存</p>
-</li>
-<li><p>栈:随函数调用、返回而增减的一片内存，用于为局部变量和函数调用链接信息分配存储空间</p>
-</li>
-</ul>
-<p><code>thread</code>线程:是进程的一个实体，在一个程序中的多个执行路线就叫做线程。<strong><code>每个线程都会执行相同的程序代码，共享统一数据区域和堆。可是每个线程都拥有自己的栈，用来状态本地变量和函数调用的链接信息.</code></strong>  线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。</p>
-<blockquote>
-<p>线程之间可通过共享的全局变量进行通信。借助于线程API所提供的条件变量和互斥机制,进程所属的线程之间得以相互通信并同步行为————尤其实在对共享变量的使用方面。</p>
-</blockquote>
-<p><code>线程和进程的关系是</code>:线程是属于进程的，是CPU调度和分派的基本单位。<strong><code>线程运行在进程空间内，同一进程所产生的线程共享同一内存空间，当进程退出时该进程所产生的线程都会被强制退出并清除。</code></strong></p>
-<blockquote>
-<p>线程可与属于同一进程的其它线程共享进程所拥有的全部资源，但是其本身基本上不拥有系统资源，只拥有一点在运行中必不可少的信息(如程序计数器、一组寄存器和栈)。</p>
-<blockquote>
-<p>所有的进程至少有一个执行线程。</p>
-</blockquote>
-</blockquote>
-<p><strong><code>多线程，使程序得以将其工作分开，独立运作，不互相影响</code></strong></p>
-<hr>
-<h1 id="线程函数、实例程序说明"><a href="#线程函数、实例程序说明" class="headerlink" title="线程函数、实例程序说明"></a>线程函数、实例程序说明</h1><ul>
-<li><strong><code>pthread_create</code></strong><br><code>pthread_create</code> 作用是创建一个新线程;<br>函数原型<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;pthread.h&gt;</span><br><span class="line"></span><br><span class="line">int pthread_create(pthread_t *thread,pthread_attr_t *attr,void *<span class="comment">(*start_routine)(void *)</span>,void *arg);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>第一个参数<code>pthread_t *thread</code>:线程被创建时候这个指针指向的变量中将被写入一个线程号，我们用线程号来引用新的线程。</p>
-<blockquote>
-<p>第二个参数<code>pthread_attr_t *attr</code>用于设置线程的属性；一般不需要设置特殊的属性，所以我们设置该参数为NULL</p>
-<blockquote>
-<p>最后2个参数分别告诉线程将要启动执行的函数<code>void *(*start_routine)(void *)</code> 该函数以一个指向void的指针为参数，返回的也是一个指向void的指针。因此可以传递一个任一类型的参数并返回一个任一类型的指针。<br>和:传递给函数的参数<code>void *arg</code></p>
-<blockquote>
-<p>该函数调用成功时返回值是0，如果失败则返回错误代码</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<ul>
-<li><strong><code>pthread_join</code></strong><br><code>prhread_join</code> <strong>的作用是使一个线程等待另一个线程结束</strong>。这个函数的定义如下:<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_join</span><span class="params">(pthread_t  th,<span class="keyword">void</span> **thread_return )</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>第1个参数:指定了将要等待的线程，线程通过pthread_crtate返回的标识符来指定。</p>
-<blockquote>
-<p>第2个参数:是一个指针，它指向另一个指针，而后者指向线程的返回值。与<code>pthread_create</code>类似，这个函数在成功时返回0，失败时返回错误代码。</p>
-</blockquote>
-</blockquote>
-<p>在Linux中，新建的线程并不是在原先的进程中，而是系统通过一个系统调用clone()。该系统copy了一个和原先进程完全一样的进程，并在这个进程中执行线程函数。不过这个copy过程和fork不一样。 copy后的进程和原先的进程共享了所有的变量，运行环境。这样，原先进程中的变量变动在copy后的进程中便能体现出来。</p>
-<p>代码中如果没有pthread_join主线程会很快结束从而使整个进程结束，从而使创建的线程没有机会开始执行就结束了。加入pthread_join后，主线程会一直等待直到等待的线程结束自己才结束，使创建的线程有机会执行。</p>
-<p>所有线程都有一个线程号，也就是Thread ID。其类型为pthread_t。通过调用pthread_self()函数可以获得自身的线程号。</p>
-<ul>
-<li><strong><code>pthread_exit</code></strong><br>线程通过<code>pthread_exit</code>函数终止执行;这个函数的作用是，终止调用它的线程并返回一个指向对象的指针。</li>
-</ul>
-<p>函数原型<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pthread_exit</span><span class="params">(<span class="keyword">void</span> *retval)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>简单的线程程序:</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*这个程序创建了一个新线程，新线程与原先的线程共享变量，并在结束的时候向原先的线程返回一个结果*/</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">thread_function</span><span class="params">(<span class="keyword">void</span> *arg)</span></span>;   <span class="comment">//需要启动的函数原型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> message[] = <span class="string">"Hello World"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res;</span><br><span class="line">    <span class="keyword">pthread_t</span> a_thread;  <span class="comment">// 指向pthread_t类型数据的指针</span></span><br><span class="line">    <span class="keyword">void</span> *thread_result;</span><br><span class="line">    res = pthread_create(&amp;a_thread, <span class="literal">NULL</span>, thread_function, (<span class="keyword">void</span> *)message);   <span class="comment">//创建一个新的线程;新线程从 thread_function开始执行</span></span><br><span class="line">    <span class="keyword">if</span> (res != <span class="number">0</span>) &#123;      <span class="comment">//如果创建失败</span></span><br><span class="line">        perror(<span class="string">"Thread creation failed"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(EXIT_FAILURE);   <span class="comment">//eixt  退出,退出整个程序;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Waiting for thread to finish...\n"</span>);</span><br><span class="line">    res = pthread_join(a_thread, &amp;thread_result);  <span class="comment">//这个函数等待它所指定的线程结束后才返回。参数:&amp;thread_result是指向线程返回的指针,也就是指向 thread_function函数内的  pthread_exit;</span></span><br><span class="line">    <span class="keyword">if</span> (res != <span class="number">0</span>) &#123;</span><br><span class="line">        perror(<span class="string">"Thread join failed"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Thread joined, it returned %s\n"</span>, (<span class="keyword">char</span> *)thread_result);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Message is now %s\n"</span>, message);   <span class="comment">// 数组message已经被新线程修改,但主线程仍能访问</span></span><br><span class="line">    <span class="built_in">exit</span>(EXIT_SUCCESS);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">thread_function</span><span class="params">(<span class="keyword">void</span> *arg)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"thread_function is running. Argument was %s\n"</span>, (<span class="keyword">char</span> *)arg);</span><br><span class="line">    sleep(<span class="number">3</span>);			<span class="comment">//睡3秒</span></span><br><span class="line">    <span class="built_in">strcpy</span>(message, <span class="string">"Bye!"</span>);  <span class="comment">//更新全局变量</span></span><br><span class="line">    pthread_exit(<span class="string">"*****Thank you for the CPU time"</span>);   <span class="comment">//线程通过pthread_exit函数终止执行,这个函数退出并主动向 主线程 返回一个字符串;这个函数的作用是，终止调用它的线程并返回一个指向某个对象的指针。</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">	这个程序 一开始	用	pthread_create 创建一个线程(thread_function),如果这个线程调用成功将会有2个线程,	1个线程是main另一个线程是	thread_function函数</span><br><span class="line"></span><br><span class="line">	原先的线程在查明新线程启动后，将调用pthread_join函数;</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>2个线程同时执行<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">thread_function</span><span class="params">(<span class="keyword">void</span> *arg)</span></span>;</span><br><span class="line"><span class="keyword">int</span> run_now = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">char</span> message[] = <span class="string">"Hello World"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res;</span><br><span class="line">    <span class="keyword">pthread_t</span> a_thread;</span><br><span class="line">    <span class="keyword">void</span> *thread_result;</span><br><span class="line">    <span class="keyword">int</span> print_count1 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    res = pthread_create(&amp;a_thread, <span class="literal">NULL</span>, thread_function, (<span class="keyword">void</span> *)message);</span><br><span class="line">    <span class="keyword">if</span> (res != <span class="number">0</span>) &#123;</span><br><span class="line">        perror(<span class="string">"Thread creation failed"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(print_count1++ &lt; <span class="number">20</span>) &#123;		<span class="comment">//	这个while循环 只输出1次 1 </span></span><br><span class="line">        <span class="keyword">if</span> (run_now == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"1"</span>);  </span><br><span class="line">            run_now = <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            sleep(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\nWaiting for thread to finish...\n"</span>);</span><br><span class="line">    res = pthread_join(a_thread, &amp;thread_result);</span><br><span class="line">    <span class="keyword">if</span> (res != <span class="number">0</span>) &#123;</span><br><span class="line">        perror(<span class="string">"Thread join failed"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Thread joined %s\n"</span>, (<span class="keyword">char</span> *)thread_result);</span><br><span class="line">    <span class="built_in">exit</span>(EXIT_SUCCESS);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">thread_function</span><span class="params">(<span class="keyword">void</span> *arg)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> print_count2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(print_count2++ &lt; <span class="number">20</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (run_now == <span class="number">2</span>) &#123;				</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"2"</span>);</span><br><span class="line">            run_now = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            sleep(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    sleep(<span class="number">3</span>);</span><br><span class="line">	pthread_exit(<span class="string">"*******EOF*****"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>每个线程通过设置run_now变量的方法通知另一个线程开始运行，然后，它会等待另一个线程改变了这个变量的值后再次运行。</p>
-<blockquote>
-<p>这2个线程共享run_now变量</p>
-</blockquote>
-
+<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/overlord%20tank.jpg?imageView2/2/h/600" alt="overlord tank" title="overlord tank"></p>
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/02/20/多线程/#more">Read More</a>
           
        </p>
     </div>
