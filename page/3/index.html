@@ -376,78 +376,11 @@
     <div class="article-content">
         
         <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E5%B0%8F%E5%A4%AB.jpg?imageView2/2/h/600" alt="Grand theft dora-小夫" title="Grand theft dora-小夫"></p>
-<h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h2 id="添加系统变量"><a href="#添加系统变量" class="headerlink" title="添加系统变量"></a>添加系统变量</h2><ol>
-<li>变量名<code>JAVA_HOME</code></li>
-</ol>
-<p>变量值:<code>C:\Program Files\Java\jdk1.8.0_121</code></p>
-<blockquote>
-<p>jdk的目录</p>
-</blockquote>
-<ol>
-<li>添加变量名<code>CLASSPATH</code></li>
-</ol>
-<p>变量值:<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></p>
-<ol>
-<li><p>在Path添加<br>添加<code>%JAVA_HOME%\bin</code>和<code>%JAVA_HOME%\jre\bin</code>两个系统变量。Path使得系统可以在任何路径下识别java命令</p>
-</li>
-<li><p>检查是否正确正确配置<br>在CMD下执行<code>java -version</code></p>
-</li>
-</ol>
-<h1 id="WSL-win10子系统"><a href="#WSL-win10子系统" class="headerlink" title="WSL win10子系统"></a>WSL win10子系统</h1><ul>
-<li>子系统路径:<br>子系统目录在<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">%</span>USERPROFILE<span class="preprocessor">%</span>\AppData\Local\lxss</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>换个说法<br><code>C:\Users\你的用户名\AppData\Local\lxss</code></p>
-<p>如果downloading from the windows store总是失败可以，在windows10地区选台湾/香港 再下载试试</p>
-<p><a href="https://jingyan.baidu.com/article/bea41d4386bbf2b4c51be6bc.html" target="_blank" rel="external">或者离线下载</a></p>
-<hr>
-<ul>
-<li>卡机自动启动WSL，并自动开启ssh</li>
-</ul>
-<p>l.  首先是需要修改的sshd_config内容其实只有这几项：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">Port</span> （随便改一个就行）</span><br><span class="line">UsePrivilegeSeparation <span class="built_in">no</span> （因为WSL默认不提供chroot）</span><br><span class="line">PasswordAuthentication <span class="built_in">yes</span></span><br><span class="line">StrictModes <span class="built_in">no</span></span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>添加两条针对你那条端口的规则（传入的和传出的），允许你那个端口的TCP连接。                 </li>
-</ol>
-<ol>
-<li>接下来生成新的密钥<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh-keygen -<span class="literal">A</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>最后重启一下ssh服务<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> service ssh restart</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>添加计划任务，具体操作:<br>保存一下文本为<code>hide.vbe</code>并扔进<code>System32</code>里<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set ws = <span class="function"><span class="title">CreateObject</span><span class="params">(<span class="string">"Wscript.Shell"</span>)</span></span> </span><br><span class="line">ws<span class="class">.run</span> <span class="string">"bash /usr/boot.sh"</span>,vbhide</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<blockquote>
-<p><code>WScript.Shell</code>是一个对象，可以执行操作系统外壳常用的操作:比如运行程序、读写注册表、环境变量等</p>
-</blockquote>
-<p>再在控制版面创建<code>Create Basic Task</code>——-&gt;选择<code>trigger</code>方式<code>when I log on</code>——&gt;<code>Start a program</code>填写<code>hide.vbe</code></p>
-<ol>
-<li>在WSL创建一个shell脚本<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line">service ssh start</span><br><span class="line"><span class="variable">$SHELL</span>  <span class="comment">#这句很重要，挂起当前脚本进程, 进而维持 base.exe 一直打开</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>再赋权限<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># chmod <span class="number">777</span>     /usr/boot.sh</span></span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.zhihu.com/question/50664903" target="_blank" rel="external">参考了</a></p>
-<hr>
-<ul>
-<li>备份WSL</li>
-</ul>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.备份原来的数据源配置文件</span></span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list_backup</span><br><span class="line"><span class="comment"># 2.编辑数据源配置文件</span></span><br><span class="line">vim /etc/apt/sources.list</span><br><span class="line"><span class="comment"># 在这里我使用的是阿里云的数据源：</span></span><br><span class="line"><span class="comment">#==============================================================================================</span></span><br><span class="line"> deb <span class="symbol">http:</span>/<span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line">#===============================================================================================</span><br><span class="line"># 3.更新配置</span><br><span class="line">apt-get update</span></span><br></pre></td></tr></table></figure>
-<h1 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h1><ol>
-<li>HTTP服务软件<br>Apache</li>
-</ol>
-<ol>
-<li>网页程序设计语言<br>PHP</li>
-</ol>
-<ol>
-<li>数据库管理系统软件<br>MySQL</li>
-</ol>
-<ol>
-<li>图形界面的数据管理软件<br>phpMyAdmin</li>
-</ol>
-
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/02/08/Win10下配置开发环境/#more">Read More</a>
           
        </p>
     </div>
