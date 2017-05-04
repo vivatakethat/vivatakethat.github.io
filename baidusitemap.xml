@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2017-05-04T11:37:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>Win10下配置开发环境</title>
+        <pubTime>2017-02-07T16:42:32.000Z</pubTime>
+        
+        <tag>开发环境配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2017/02/13/%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
     <lastmod>2017-05-04T11:34:30.000Z</lastmod>
     <data>
@@ -310,26 +330,6 @@
         <display>
         <title>在Windows下快速搭建hexo</title>
         <pubTime>2016-07-07T07:46:32.000Z</pubTime>
-        
-        <tag>开发环境配置</tag>
-         
-         
-           
-             
-              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2017-04-17T08:57:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>Win10下配置开发环境</title>
-        <pubTime>2017-02-07T16:42:32.000Z</pubTime>
         
         <tag>开发环境配置</tag>
          
