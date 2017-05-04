@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://www.vivatakethat.com/2017/02/13/%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    <lastmod>2017-05-04T11:34:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>作用域</title>
+        <pubTime>2017-02-12T16:42:32.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.vivatakethat.com/2017/02/14/IDE%E9%85%8D%E7%BD%AE_%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2017-05-04T11:32:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>IDE配置快捷键</title>
+        <pubTime>2017-02-13T16:42:32.000Z</pubTime>
+        
+        <tag>开发环境配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.vivatakethat.com/2017/02/18/Windows%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2017-05-03T14:41:11.016Z</lastmod>
     <data>
@@ -597,46 +637,6 @@
            
              
               <breadCrumb title="嵌入式" url="http://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2017/02/14/IDE%E9%85%8D%E7%BD%AE_%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2017-02-18T06:36:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>IDE配置快捷键</title>
-        <pubTime>2017-02-13T16:42:32.000Z</pubTime>
-        
-        <tag>开发环境配置</tag>
-         
-         
-           
-             
-              <breadCrumb title="Windows相关" url="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.vivatakethat.com/2017/02/13/%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
-    <lastmod>2017-02-13T13:29:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>作用域</title>
-        <pubTime>2017-02-12T16:42:32.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="http://www.vivatakethat.com/categories/C-C-Qt/"/>
           
         </display>
     </data>

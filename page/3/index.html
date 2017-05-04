@@ -170,42 +170,13 @@
 </header>
     <div class="article-content">
         
-        <h1 id="VisualStudio"><a href="#VisualStudio" class="headerlink" title="VisualStudio"></a>VisualStudio</h1><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>全局查找: <code>SHIFT</code>+<code>Ctrl</code>+<code>F</code></p>
-<p><a href="http://www.cnblogs.com/xtxtx/p/5368065.html" target="_blank" rel="external">http://www.cnblogs.com/xtxtx/p/5368065.html</a></p>
-<p><a href="http://blog.csdn.net/liuqiyao_01/article/details/47404165" target="_blank" rel="external">http://blog.csdn.net/liuqiyao_01/article/details/47404165</a></p>
-<ul>
-<li>书签:<br>在代码中设置书签<br>Visual Studio 2015 其他版本 </li>
-</ul>
-<p>若要了解有关 Visual Studio 2017 RC 的最新文档，请参阅 Visual Studio 2017 RC 文档。<br>可以使用书签标记代码行，以便能够快速返回到特定位置并在不同位置间来回跳转。<br>有两个位置提供书签命令和图标：书签窗口（视图/书签窗口）和文本编辑器工具栏。<br>管理书签<br>若要添加书签，请将光标置于要添加书签的行上。 单击“切换”按钮或按 CTRL+K。 这样便可添加书签。 再次单击“切换”按钮（或按 CTRL+K），将会删除该书签。 也可以单击书签窗口中的“删除”按钮来删除书签。</p>
-<p><code>Ctrl</code> + <code>K</code>  <code>Ctrl</code> + <code>K</code> = 将当前行添加书签<br>　　<br><code>Ctrl</code> + <code>K</code>  <code>Ctrl</code> + <code>N</code> = 导航至下一个书签</p>
-<ul>
-<li>代码自动对齐</li>
-</ul>
-<p><code>CTRL</code>      +     <code>K</code> +   <code>F</code></p>
-<ul>
-<li>全屏显示\退出</li>
-</ul>
-<p>使用组合键<code>SHIFT</code> + <code>ALT</code> + <code>ENTER</code></p>
-<ul>
-<li>跳转光标位置<br><code>Ctrl</code>+ <code>-</code><br>回退到上次光标位置 </li>
-</ul>
-<p><code>CTRL</code> + <code>SHIFT</code> + <code>-</code><br>反之</p>
-<h2 id="vs2015编译boost库"><a href="#vs2015编译boost库" class="headerlink" title="vs2015编译boost库"></a>vs2015编译boost库</h2><ol>
-<li><a href="http://www.boost.org/" target="_blank" rel="external">去官网下载</a></li>
-</ol>
-<ol>
-<li><p>将压缩包解压到某个盘里</p>
-</li>
-<li><p>用visualstudio2015编译器编译<br>vs2015用</p>
-</li>
-</ol>
-<h1 id="idea"><a href="#idea" class="headerlink" title="idea"></a>idea</h1><ol>
-<li>快速注释/取消注释 代码<br><code>ctrl</code>  +  <code>/</code></li>
-</ol>
-
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Daro%20Majole.png?imageView2/2/h/600" alt="Daro Majole" title="Daro Majole"></p>
+<p>vs快捷键、配置<br>
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/02/14/IDE配置_快捷键/#more">Read More</a>
           
        </p>
     </div>
@@ -267,11 +238,12 @@
 </header>
     <div class="article-content">
         
-        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"Sales_item.h"</span>			/*Sales_item类的作用是表示一本书的总销售额、销售册数、平均售价*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> reused = <span class="number">42</span>;		<span class="comment">//reused拥有全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> unique = <span class="number">0</span>;		<span class="comment">//块作用域</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; reused &lt;&lt; <span class="string">" "</span> &lt;&lt; unique &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="keyword">int</span> reused = <span class="number">0</span>;		<span class="comment">//新建局部变reused,覆盖了全局变量reused</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; reused &lt;&lt; <span class="string">" "</span> &lt;&lt; unique &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">    <span class="comment">//输出#3:显示地访问全局变量reused;输出42 0</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; ::reused &lt;&lt; <span class="string">" "</span> &lt;&lt; unique &lt;&lt; <span class="built_in">std</span>::endl;  <span class="comment">//显示地访问全局变量reused</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/man.jpg?imageView2/2/h/600" alt="man" title="man"></p>
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/02/13/作用域/#more">Read More</a>
           
        </p>
     </div>
