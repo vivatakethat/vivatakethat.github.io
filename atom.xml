@@ -4,9 +4,9 @@
   <subtitle>最后的意志？</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.vivatakethat.com/"/>
+  <link href="https://www.vivatakethat.com/"/>
   <updated>2017-04-26T09:36:25.000Z</updated>
-  <id>http://www.vivatakethat.com/</id>
+  <id>https://www.vivatakethat.com/</id>
   
   <author>
     <name>takethat</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Git日常报错</title>
-    <link href="http://www.vivatakethat.com/2017/04/16/git%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/"/>
-    <id>http://www.vivatakethat.com/2017/04/16/git日常报错/</id>
+    <link href="https://www.vivatakethat.com/2017/04/16/git%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/"/>
+    <id>https://www.vivatakethat.com/2017/04/16/git日常报错/</id>
     <published>2017-04-16T07:42:32.000Z</published>
     <updated>2017-04-26T09:36:25.000Z</updated>
     
@@ -43,17 +43,17 @@
     
     </summary>
     
-      <category term="php | git | hexo" scheme="http://www.vivatakethat.com/categories/php-git-hexo/"/>
+      <category term="php | git | hexo" scheme="https://www.vivatakethat.com/categories/php-git-hexo/"/>
     
     
-      <category term="git" scheme="http://www.vivatakethat.com/tags/git/"/>
+      <category term="git" scheme="https://www.vivatakethat.com/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>C++primer名词解释</title>
-    <link href="http://www.vivatakethat.com/2017/03/31/C++primer_%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
-    <id>http://www.vivatakethat.com/2017/03/31/C++primer_名词解释/</id>
+    <link href="https://www.vivatakethat.com/2017/03/31/C++primer_%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
+    <id>https://www.vivatakethat.com/2017/03/31/C++primer_名词解释/</id>
     <published>2017-03-31T04:35:32.000Z</published>
     <updated>2017-05-03T13:54:08.000Z</updated>
     
@@ -86,17 +86,17 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
-      <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
+      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++_基本内置类型</title>
-    <link href="http://www.vivatakethat.com/2017/03/25/c++%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://www.vivatakethat.com/2017/03/25/c++内置类型/</id>
+    <link href="https://www.vivatakethat.com/2017/03/25/c++%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://www.vivatakethat.com/2017/03/25/c++内置类型/</id>
     <published>2017-03-25T07:42:32.000Z</published>
     <updated>2017-05-03T13:57:22.000Z</updated>
     
@@ -118,17 +118,17 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
-      <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
+      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>编程建议</title>
-    <link href="http://www.vivatakethat.com/2017/03/24/%E7%BC%96%E7%A8%8B%E5%BB%BA%E8%AE%AE/"/>
-    <id>http://www.vivatakethat.com/2017/03/24/编程建议/</id>
+    <link href="https://www.vivatakethat.com/2017/03/24/%E7%BC%96%E7%A8%8B%E5%BB%BA%E8%AE%AE/"/>
+    <id>https://www.vivatakethat.com/2017/03/24/编程建议/</id>
     <published>2017-03-24T04:21:32.000Z</published>
     <updated>2017-05-03T14:02:31.000Z</updated>
     
@@ -165,17 +165,17 @@
     
     </summary>
     
-      <category term="原理 | 理论" scheme="http://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+      <category term="原理 | 理论" scheme="https://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
     
     
-      <category term="计算机" scheme="http://www.vivatakethat.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://www.vivatakethat.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>C++:类、函数、指针、构造函数</title>
-    <link href="http://www.vivatakethat.com/2017/03/05/C++_%E7%B1%BB+%E5%87%BD%E6%95%B0+%E5%BC%95%E7%94%A8+%E6%8C%87%E9%92%88+const(%E6%8C%87%E9%92%88)+auto+constexpr%E5%8F%98%E9%87%8F+decltype/"/>
-    <id>http://www.vivatakethat.com/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/</id>
+    <link href="https://www.vivatakethat.com/2017/03/05/C++_%E7%B1%BB+%E5%87%BD%E6%95%B0+%E5%BC%95%E7%94%A8+%E6%8C%87%E9%92%88+const(%E6%8C%87%E9%92%88)+auto+constexpr%E5%8F%98%E9%87%8F+decltype/"/>
+    <id>https://www.vivatakethat.com/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/</id>
     <published>2017-03-04T16:42:32.000Z</published>
     <updated>2017-05-03T13:45:38.000Z</updated>
     
@@ -649,17 +649,17 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
-      <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
+      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>位运算</title>
-    <link href="http://www.vivatakethat.com/2017/03/03/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    <id>http://www.vivatakethat.com/2017/03/03/位运算/</id>
+    <link href="https://www.vivatakethat.com/2017/03/03/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    <id>https://www.vivatakethat.com/2017/03/03/位运算/</id>
     <published>2017-03-02T16:42:32.000Z</published>
     <updated>2017-02-13T07:25:31.000Z</updated>
     
@@ -724,17 +724,17 @@
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
-      <category term="C" scheme="http://www.vivatakethat.com/tags/C/"/>
+      <category term="C" scheme="https://www.vivatakethat.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>第一章:基础</title>
-    <link href="http://www.vivatakethat.com/2017/02/23/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E5%9F%BA%E7%A1%80/"/>
-    <id>http://www.vivatakethat.com/2017/02/23/第一章_基础/</id>
+    <link href="https://www.vivatakethat.com/2017/02/23/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E5%9F%BA%E7%A1%80/"/>
+    <id>https://www.vivatakethat.com/2017/02/23/第一章_基础/</id>
     <published>2017-02-23T12:54:32.000Z</published>
     <updated>2017-05-03T14:30:04.000Z</updated>
     
@@ -811,17 +811,17 @@ else
     
     </summary>
     
-      <category term="Book | Coursera" scheme="http://www.vivatakethat.com/categories/Book-Coursera/"/>
+      <category term="Book | Coursera" scheme="https://www.vivatakethat.com/categories/Book-Coursera/"/>
     
     
-      <category term="memo" scheme="http://www.vivatakethat.com/tags/memo/"/>
+      <category term="memo" scheme="https://www.vivatakethat.com/tags/memo/"/>
     
   </entry>
   
   <entry>
     <title>temp2017-2-23</title>
-    <link href="http://www.vivatakethat.com/2017/02/23/temp2017-2-23/"/>
-    <id>http://www.vivatakethat.com/2017/02/23/temp2017-2-23/</id>
+    <link href="https://www.vivatakethat.com/2017/02/23/temp2017-2-23/"/>
+    <id>https://www.vivatakethat.com/2017/02/23/temp2017-2-23/</id>
     <published>2017-02-22T16:42:32.000Z</published>
     <updated>2017-05-03T14:26:12.000Z</updated>
     
@@ -897,17 +897,17 @@ else
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
-      <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
+      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>Boost日常使用</title>
-    <link href="http://www.vivatakethat.com/2017/02/21/Boost%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.vivatakethat.com/2017/02/21/Boost日常使用/</id>
+    <link href="https://www.vivatakethat.com/2017/02/21/Boost%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/"/>
+    <id>https://www.vivatakethat.com/2017/02/21/Boost日常使用/</id>
     <published>2017-02-21T02:21:32.000Z</published>
     <updated>2017-05-03T14:38:15.000Z</updated>
     
@@ -926,17 +926,17 @@ else
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
-      <category term="C++" scheme="http://www.vivatakethat.com/tags/C/"/>
+      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>多线程</title>
-    <link href="http://www.vivatakethat.com/2017/02/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    <id>http://www.vivatakethat.com/2017/02/20/多线程/</id>
+    <link href="https://www.vivatakethat.com/2017/02/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>https://www.vivatakethat.com/2017/02/20/多线程/</id>
     <published>2017-02-20T13:07:32.000Z</published>
     <updated>2017-05-03T14:39:57.493Z</updated>
     
@@ -1034,17 +1034,17 @@ else
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
-      <category term="系统编程" scheme="http://www.vivatakethat.com/tags/%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/"/>
+      <category term="系统编程" scheme="https://www.vivatakethat.com/tags/%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Windows日常</title>
-    <link href="http://www.vivatakethat.com/2017/02/18/Windows%E6%97%A5%E5%B8%B8/"/>
-    <id>http://www.vivatakethat.com/2017/02/18/Windows日常/</id>
+    <link href="https://www.vivatakethat.com/2017/02/18/Windows%E6%97%A5%E5%B8%B8/"/>
+    <id>https://www.vivatakethat.com/2017/02/18/Windows日常/</id>
     <published>2017-02-17T16:21:32.000Z</published>
     <updated>2017-05-03T14:41:11.016Z</updated>
     
@@ -1095,17 +1095,17 @@ else
     
     </summary>
     
-      <category term="Windows相关" scheme="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
+      <category term="Windows相关" scheme="https://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="Rcord" scheme="http://www.vivatakethat.com/tags/Rcord/"/>
+      <category term="Rcord" scheme="https://www.vivatakethat.com/tags/Rcord/"/>
     
   </entry>
   
   <entry>
     <title>IDE配置快捷键</title>
-    <link href="http://www.vivatakethat.com/2017/02/14/IDE%E9%85%8D%E7%BD%AE_%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://www.vivatakethat.com/2017/02/14/IDE配置_快捷键/</id>
+    <link href="https://www.vivatakethat.com/2017/02/14/IDE%E9%85%8D%E7%BD%AE_%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>https://www.vivatakethat.com/2017/02/14/IDE配置_快捷键/</id>
     <published>2017-02-13T16:42:32.000Z</published>
     <updated>2017-05-04T11:32:41.000Z</updated>
     
@@ -1152,17 +1152,17 @@ else
     
     </summary>
     
-      <category term="Windows相关" scheme="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
+      <category term="Windows相关" scheme="https://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="开发环境配置" scheme="http://www.vivatakethat.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="开发环境配置" scheme="https://www.vivatakethat.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>作用域</title>
-    <link href="http://www.vivatakethat.com/2017/02/13/%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    <id>http://www.vivatakethat.com/2017/02/13/作用域/</id>
+    <link href="https://www.vivatakethat.com/2017/02/13/%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>https://www.vivatakethat.com/2017/02/13/作用域/</id>
     <published>2017-02-12T16:42:32.000Z</published>
     <updated>2017-05-04T11:34:30.000Z</updated>
     
@@ -1177,17 +1177,17 @@ else
     
     </summary>
     
-      <category term="C | C++ | Qt" scheme="http://www.vivatakethat.com/categories/C-C-Qt/"/>
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
     
     
-      <category term="C" scheme="http://www.vivatakethat.com/tags/C/"/>
+      <category term="C" scheme="https://www.vivatakethat.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>算法第四版memo</title>
-    <link href="http://www.vivatakethat.com/2017/02/11/S%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88_memo/"/>
-    <id>http://www.vivatakethat.com/2017/02/11/S——算法第四版中文版_memo/</id>
+    <link href="https://www.vivatakethat.com/2017/02/11/S%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88_memo/"/>
+    <id>https://www.vivatakethat.com/2017/02/11/S——算法第四版中文版_memo/</id>
     <published>2017-02-11T12:54:32.000Z</published>
     <updated>2017-04-15T13:34:43.000Z</updated>
     
@@ -1220,17 +1220,17 @@ else
     
     </summary>
     
-      <category term="Book | Coursera" scheme="http://www.vivatakethat.com/categories/Book-Coursera/"/>
+      <category term="Book | Coursera" scheme="https://www.vivatakethat.com/categories/Book-Coursera/"/>
     
     
-      <category term="memo" scheme="http://www.vivatakethat.com/tags/memo/"/>
+      <category term="memo" scheme="https://www.vivatakethat.com/tags/memo/"/>
     
   </entry>
   
   <entry>
     <title>Win10下配置开发环境</title>
-    <link href="http://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    <id>http://www.vivatakethat.com/2017/02/08/Win10下配置开发环境/</id>
+    <link href="https://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    <id>https://www.vivatakethat.com/2017/02/08/Win10下配置开发环境/</id>
     <published>2017-02-07T16:42:32.000Z</published>
     <updated>2017-05-04T11:40:07.000Z</updated>
     
@@ -1312,17 +1312,17 @@ else
     
     </summary>
     
-      <category term="Windows相关" scheme="http://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
+      <category term="Windows相关" scheme="https://www.vivatakethat.com/categories/Windows%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="开发环境配置" scheme="http://www.vivatakethat.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="开发环境配置" scheme="https://www.vivatakethat.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>Linux日常</title>
-    <link href="http://www.vivatakethat.com/2017/01/17/Linux-%E6%97%A5%E5%B8%B8/"/>
-    <id>http://www.vivatakethat.com/2017/01/17/Linux-日常/</id>
+    <link href="https://www.vivatakethat.com/2017/01/17/Linux-%E6%97%A5%E5%B8%B8/"/>
+    <id>https://www.vivatakethat.com/2017/01/17/Linux-日常/</id>
     <published>2017-01-16T16:21:32.000Z</published>
     <updated>2017-04-16T13:06:45.390Z</updated>
     
@@ -1415,17 +1415,17 @@ else
     
     </summary>
     
-      <category term="Linux" scheme="http://www.vivatakethat.com/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.vivatakethat.com/categories/Linux/"/>
     
     
-      <category term="Rcord" scheme="http://www.vivatakethat.com/tags/Rcord/"/>
+      <category term="Rcord" scheme="https://www.vivatakethat.com/tags/Rcord/"/>
     
   </entry>
   
   <entry>
     <title>英语听力练习</title>
-    <link href="http://www.vivatakethat.com/2016/12/23/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    <id>http://www.vivatakethat.com/2016/12/23/英语听力练习/</id>
+    <link href="https://www.vivatakethat.com/2016/12/23/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
+    <id>https://www.vivatakethat.com/2016/12/23/英语听力练习/</id>
     <published>2016-12-23T04:35:32.000Z</published>
     <updated>2017-01-16T13:40:42.226Z</updated>
     
@@ -1460,17 +1460,17 @@ else
     
     </summary>
     
-      <category term="English" scheme="http://www.vivatakethat.com/categories/English/"/>
+      <category term="English" scheme="https://www.vivatakethat.com/categories/English/"/>
     
     
-      <category term="Record" scheme="http://www.vivatakethat.com/tags/Record/"/>
+      <category term="Record" scheme="https://www.vivatakethat.com/tags/Record/"/>
     
   </entry>
   
   <entry>
     <title>嵌入式移互联软件测试——考试</title>
-    <link href="http://www.vivatakethat.com/2016/12/22/%E8%80%83%E8%AF%953%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%A7%BB%E4%BA%92%E8%81%94%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    <id>http://www.vivatakethat.com/2016/12/22/考试3——嵌入式移互联软件测试/</id>
+    <link href="https://www.vivatakethat.com/2016/12/22/%E8%80%83%E8%AF%953%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%A7%BB%E4%BA%92%E8%81%94%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    <id>https://www.vivatakethat.com/2016/12/22/考试3——嵌入式移互联软件测试/</id>
     <published>2016-12-22T14:35:32.000Z</published>
     <updated>2017-01-16T13:40:42.222Z</updated>
     
@@ -1587,17 +1587,17 @@ else
     
     </summary>
     
-      <category term="原理 | 理论" scheme="http://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+      <category term="原理 | 理论" scheme="https://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
     
     
-      <category term="Record" scheme="http://www.vivatakethat.com/tags/Record/"/>
+      <category term="Record" scheme="https://www.vivatakethat.com/tags/Record/"/>
     
   </entry>
   
   <entry>
     <title>移动互联应用软件开发——考试</title>
-    <link href="http://www.vivatakethat.com/2016/12/20/%E8%80%83%E8%AF%952%E2%80%94%E2%80%94%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%BF%9E%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
-    <id>http://www.vivatakethat.com/2016/12/20/考试2——移动互连应用软件开发/</id>
+    <link href="https://www.vivatakethat.com/2016/12/20/%E8%80%83%E8%AF%952%E2%80%94%E2%80%94%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%BF%9E%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    <id>https://www.vivatakethat.com/2016/12/20/考试2——移动互连应用软件开发/</id>
     <published>2016-12-20T14:35:32.000Z</published>
     <updated>2017-01-16T13:40:42.216Z</updated>
     
@@ -1692,17 +1692,17 @@ else
     
     </summary>
     
-      <category term="原理 | 理论" scheme="http://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+      <category term="原理 | 理论" scheme="https://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
     
     
-      <category term="Record" scheme="http://www.vivatakethat.com/tags/Record/"/>
+      <category term="Record" scheme="https://www.vivatakethat.com/tags/Record/"/>
     
   </entry>
   
   <entry>
     <title>嵌入式系统应用开发实践——考试</title>
-    <link href="http://www.vivatakethat.com/2016/12/19/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/"/>
-    <id>http://www.vivatakethat.com/2016/12/19/考试1——嵌入式系统应用开发实践/</id>
+    <link href="https://www.vivatakethat.com/2016/12/19/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/"/>
+    <id>https://www.vivatakethat.com/2016/12/19/考试1——嵌入式系统应用开发实践/</id>
     <published>2016-12-19T03:33:32.000Z</published>
     <updated>2017-01-16T13:40:42.211Z</updated>
     
@@ -1912,10 +1912,10 @@ else
     
     </summary>
     
-      <category term="原理 | 理论" scheme="http://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+      <category term="原理 | 理论" scheme="https://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
     
     
-      <category term="Record" scheme="http://www.vivatakethat.com/tags/Record/"/>
+      <category term="Record" scheme="https://www.vivatakethat.com/tags/Record/"/>
     
   </entry>
   
