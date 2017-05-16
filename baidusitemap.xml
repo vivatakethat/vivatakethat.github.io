@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2017-05-15T15:06:55.902Z</lastmod>
+    <data>
+        <display>
+        <title>hexo部署过程问题与结局方案</title>
+        <pubTime>2016-10-17T08:10:32.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="https://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2017-05-04T11:40:07.000Z</lastmod>
     <data>
@@ -197,26 +217,6 @@
            
              
               <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/10/17/hexo%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E4%B8%8E%E7%BB%93%E5%B1%80%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2017-05-03T13:55:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo部署过程问题与结局方案</title>
-        <pubTime>2016-10-17T08:10:32.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="php | git | hexo" url="https://www.vivatakethat.com/categories/php-git-hexo/"/>
           
         </display>
     </data>

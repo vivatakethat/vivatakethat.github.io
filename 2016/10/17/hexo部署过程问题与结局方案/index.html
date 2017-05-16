@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Invincible%20Iron%20Man%20%282015-%29%20010-000.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2017-05-03T13:55:25.000Z">
+<meta property="og:updated_time" content="2017-05-15T15:06:55.902Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo部署过程问题与结局方案">
 <meta name="twitter:description">
@@ -105,7 +105,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将hexo根目录移动后提示少插件"><span class="toc-number">1.</span> <span class="toc-text">将hexo根目录移动后提示少插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo文章标签数目不对"><span class="toc-number">2.</span> <span class="toc-text">hexo文章标签数目不对</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七牛imageView接口"><span class="toc-number">3.</span> <span class="toc-text">七牛imageView接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#建议"><span class="toc-number">3.1.</span> <span class="toc-text">建议</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将hexo根目录移动后提示少插件"><span class="toc-number">1.</span> <span class="toc-text">将hexo根目录移动后提示少插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo文章标签数目不对"><span class="toc-number">2.</span> <span class="toc-text">hexo文章标签数目不对</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七牛imageView接口"><span class="toc-number">3.</span> <span class="toc-text">七牛imageView接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#建议"><span class="toc-number">3.1.</span> <span class="toc-text">建议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#npm问题"><span class="toc-number">4.</span> <span class="toc-text">npm问题</span></a></li></ol>
 		
 		</div>
 		
@@ -126,7 +126,19 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?imageView2/<span class="number">2</span>/h/<span class="number">600</span></span><br></pre></td></tr></table></figure>
 <p>进行裁剪图片</p>
 <p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html" target="_blank" rel="external">参考</a></p>
-  
+<hr>
+<h1 id="npm问题"><a href="#npm问题" class="headerlink" title="npm问题"></a>npm问题</h1><ol>
+<li>npm换源，<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -gd express --<span class="keyword">registry</span>=<span class="keyword">http</span>://<span class="keyword">registry</span>.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>只需要使用–registry参数指定镜像服务器地址，为了避免每次安装都需要–registry参数，可以使用如下命令进行永久设置：<br><figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="keyword">set</span> <span class="keyword">registry</span> <span class="keyword">http</span>://<span class="keyword">registry</span>.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li></li>
+</ol>
+<p><a href="http://www.cnblogs.com/2050/p/4198792.html" target="_blank" rel="external">前端构建工具gulpjs的使用介绍及技巧</a></p>
+<p>gulp失败<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">takethat@acer_v5573g MINGW32 /d/github/resume_takethat/resume_takethat/test_new/<span class="keyword">Resume</span></span><br><span class="line">$ gulp</span><br><span class="line"><span class="keyword">module</span>.js:<span class="number">471</span></span><br><span class="line">    <span class="keyword">throw</span> err;</span><br><span class="line">    ^</span><br><span class="line"></span><br><span class="line"><span class="keyword">Error</span>: Cannot find <span class="keyword">module</span> <span class="comment">'gulp-sass'</span></span><br><span class="line">    at <span class="keyword">Function</span>.<span class="keyword">Module</span>._resolveFilename (<span class="keyword">module</span>.js:<span class="number">469</span>:<span class="number">15</span>)</span><br><span class="line">    at <span class="keyword">Function</span>.<span class="keyword">Module</span>._load (<span class="keyword">module</span>.js:<span class="number">417</span>:<span class="number">25</span>)</span><br><span class="line">    at <span class="keyword">Module</span>.require (<span class="keyword">module</span>.js:<span class="number">497</span>:<span class="number">17</span>)</span><br><span class="line">    at require (internal/<span class="keyword">module</span>.js:<span class="number">20</span>:<span class="number">19</span>)</span><br><span class="line">    at <span class="built_in">Object</span>.&lt;anonymous&gt; (D:\github\resume_takethat\resume_takethat\test_new\<span class="keyword">Resume</span>\gulpfile.js:<span class="number">2</span>:<span class="number">19</span>)</span><br><span class="line">    at <span class="keyword">Module</span>._compile (<span class="keyword">module</span>.js:<span class="number">570</span>:<span class="number">32</span>)</span><br><span class="line">    at <span class="built_in">Object</span>.<span class="keyword">Module</span>._extensions..js (<span class="keyword">module</span>.js:<span class="number">579</span>:<span class="number">10</span>)</span><br><span class="line">    at <span class="keyword">Module</span>.load (<span class="keyword">module</span>.js:<span class="number">487</span>:<span class="number">32</span>)</span><br><span class="line">    at tryModuleLoad (<span class="keyword">module</span>.js:<span class="number">446</span>:<span class="number">12</span>)</span><br><span class="line">    at <span class="keyword">Function</span>.<span class="keyword">Module</span>._load (<span class="keyword">module</span>.js:<span class="number">438</span>:<span class="number">3</span>)</span><br></pre></td></tr></table></figure></p>
+<pre><code>解决:
+</code></pre>  
 	</div>
 
 	<!-- css -->
@@ -297,7 +309,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将hexo根目录移动后提示少插件"><span class="toc-number">1.</span> <span class="toc-text">将hexo根目录移动后提示少插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo文章标签数目不对"><span class="toc-number">2.</span> <span class="toc-text">hexo文章标签数目不对</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七牛imageView接口"><span class="toc-number">3.</span> <span class="toc-text">七牛imageView接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#建议"><span class="toc-number">3.1.</span> <span class="toc-text">建议</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将hexo根目录移动后提示少插件"><span class="toc-number">1.</span> <span class="toc-text">将hexo根目录移动后提示少插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo文章标签数目不对"><span class="toc-number">2.</span> <span class="toc-text">hexo文章标签数目不对</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七牛imageView接口"><span class="toc-number">3.</span> <span class="toc-text">七牛imageView接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#建议"><span class="toc-number">3.1.</span> <span class="toc-text">建议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#npm问题"><span class="toc-number">4.</span> <span class="toc-text">npm问题</span></a></li></ol>
  
   </div>
 
