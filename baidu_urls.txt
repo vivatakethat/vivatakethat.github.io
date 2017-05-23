@@ -1,5 +1,5 @@
+https://www.vivatakethat.com/2017/05/17/C++模版/
+https://www.vivatakethat.com/2017/05/17/C++模版-typename/
 https://www.vivatakethat.com/2017/04/16/git日常报错/
 https://www.vivatakethat.com/2017/03/31/C++primer_名词解释/
 https://www.vivatakethat.com/2017/03/25/c++内置类型/
-https://www.vivatakethat.com/2017/03/24/编程建议/
-https://www.vivatakethat.com/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/

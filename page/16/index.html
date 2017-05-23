@@ -86,6 +86,191 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/06/21/C语言——结构体/" title="C语言:结构体" itemprop="url">C语言:结构体</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-06-21T01:17:32.000Z" itemprop="datePublished"> 发表于 2016-06-21</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E9%92%A2%E9%93%81%E4%BE%A0.png" alt="无敌铁人" title="无敌铁人"></p>
+<h1 id="复合类型与结构体"><a href="#复合类型与结构体" class="headerlink" title="复合类型与结构体"></a>复合类型与结构体</h1><blockquote>
+<p>结构体，通俗讲就像是打包封装，把一些有共同特征（比如同属于某一类事物的属性，往往是某种业务相关属性的聚合）的变量封装在内部，通过一定方法访问修改内部变量。只不过它是一种符合类型。<br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2016/06/21/C语言——结构体/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/06/21/C语言——结构体/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/06/20/C——函数 /" title="C:函数" itemprop="url">C:函数</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-06-20T01:59:32.000Z" itemprop="datePublished"> 发表于 2016-06-20</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E8%B6%85%E4%BA%BA.jpg" alt="超人" title="超人"></p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><blockquote>
+<p>main函数的特殊之处在于执行程序的时候它自动被操作系统调用，做系统就认准了main这个名字。其返回值是给操作系统看的，通常程序执行成功就返回0，在执行过程中出错就返回一个非零值。</p>
+</blockquote>
+<ul>
+<li>同一个函数可以被多次调用；</li>
+<li>可以用一个函数调用第三个函数；</li>
+</ul>
+<h2 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h2><p>函数定义=返回值类型&bnsp;+函数名(参数列表)&nbsp;函数体</p>
+<p><strong><code>函数原型</code></strong>:声明了一个函数的<strong><code>名字</code></strong>、参数类型、个数、返回值类型。<br>如：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">threelines</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>这种写法只能叫<strong><code>函数声明</code></strong>而不能叫函数定义，只有<strong><code>带函数体</code></strong>的声明才叫函数定义，因为编译器只有见到函数体才能生成指令。</p>
+<blockquote>
+<p>遵守<strong><code>先声明后使用</code></strong></p>
+</blockquote>
+<p>注意：<br><strong><code>声明</code></strong>把函数的名字、函数类型以及形参类型、个数和顺序通知编译系统，以便在调用该函数时系统按此进行对照检查。<br><strong><code>定义</code></strong>是指对函数功能的确立，包括指函数类型、函数名、函数体，他是一个完整的、独立的函数单位。</p>
+<blockquote>
+<p>从程序中可以看到对函数的声明与函数定义中的函数首部基本上是相同的。因此可以简单地照写已定义的函数的首部，再加一个分号，就成为 了对函数的“声明”</p>
+<p>在C语言中，函数声明称为函数原型<em>(function prototype)</em>。使用函数原型是ANSI C的一个重要特点。它的作用主要是利用它在程序的编译阶段对调用函数的合法性进行全面检查。</p>
+</blockquote>
+<p>Tips；</p>
+<ul>
+<li>如果调用函数时参数列表为空，并且缺少函数原型，则编译器根据根据隐式声明规则认为参数类型为void;</li>
+<li>如果声明函数时参数列表为空，则这个声明属于Old Style C语法，不算函数原型，编译器认为参数类型和个数没有明确指出。</li>
+</ul>
+<h2 id="形参和实参"><a href="#形参和实参" class="headerlink" title="形参和实参"></a>形参和实参</h2><p><strong><code>1.</code></strong>局部变量:函数中定义变量称为局部变量<em>lOCAL vARIABLE</em><br>形参也是一种局部变量。</p>
+<blockquote>
+<p>一个函数中的定义的变量不能被另一个函数使用<br>每次调用函数时局部变量都表示不同的存储空间。局部变量调用时才分配存储空间，每次函数返回时释放存储空间。</p>
+</blockquote>
+<p><strong><code>2.</code></strong>全局变量<em>Global Variable</em>：全局变量定义在所有的函数体外。</p>
+<blockquote>
+<p>它们在程序开始运行时分配存储空间，在程序结束时释放存储空间。</p>
+<p>在任何函数中都可以访问全局变量。</p>
+<p>它的作用域是定义在所有函数体之外的标示符，从定义的位置开始知道源文件结束。而main函数的局部变量的作用域仅限于main函数之中。</p>
+</blockquote>
+<p><strong><code>3.</code></strong>全局变量只能用<strong><code>常量表达式</code></strong> <em>Constant Expression</em>来初始化。<br>例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> pi=<span class="number">3014</span>+<span class="number">0.0016</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>全局变量Pi这样初始化是合法的。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> pi =<span class="built_in">acos</span>(-<span class="number">1.0</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>然而局部变量这样初始化确实合法的。</p>
+</blockquote>
+<p>这是因为在程序一开始运行<em>(还没有执行main函数中的任何语句之前)</em>就要用初始化值来初始化全局变量。<em>这样main函数的第一条语句就可以取全局变量的初始值来做计算</em>而<code>acos</code>函数必须在调用它才能得到。</p>
+<p>比如这样的初始化：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> minute=<span class="number">360</span>-<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> hour=minute/<span class="number">60</span>;</span><br></pre></td></tr></table></figure></p>
+<p><strong>把</strong>minute初始化成360-10是合法的<em>编译器并不会生成一个系统指令来描述360-10的计算过程并把这些指令保存到可执行文件中，而是把计算结果350保存到可执行文件中。</em></p>
+<p><strong>但</strong><code>minute/60</code>不是常量表达式，不符合语法规定，所以编译器直接报错退出，而不去算这个初始值。</p>
+<p><strong>4.</strong>局部变量一定要在使用前先赋值。因为，局部变量在定义时不初始化则初始值是不确定的。</p>
+<blockquote>
+<p>全局变量在定义是不初始化，则初始化值是0</p>
+</blockquote>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/06/20/C——函数 /#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/06/19/E——计算机英语单词/" title="计算机英语单词" itemprop="url">计算机英语单词</a>
   </h1>
   <p class="article-author">By
@@ -290,142 +475,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/15/软件测试基础知识/" title="软件测试基础知识" itemprop="url">软件测试基础知识</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2016-06-15T06:29:32.000Z" itemprop="datePublished"> 发表于 2016-06-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E6%B5%A9%E5%85%8B.jpg" alt="浩克" title="浩克"></p>
-<h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><p>测试用例的定义——IEEE1990<br>   是一组测试输入、执行条件和预期结果，目的是要满足一个特定的目标，比如执行一条特定的程序路径或检验是否符合一个特定的需求。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/06/15/软件测试基础知识/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/软件测试/">软件测试</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/软件测试/">软件测试</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/06/15/软件测试基础知识/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/15/搭建最小的Linux系统/" title="最小系统环境搭建" itemprop="url">最小系统环境搭建</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2016-06-14T17:44:32.000Z" itemprop="datePublished"> 发表于 2016-06-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E5%8F%8D%E6%B5%A9%E5%85%8B%E6%9C%BA%E7%94%B2.jpg" alt="反浩克机甲" title="反浩克机甲"></p>
-<h1 id="搭建最小的Linux系统"><a href="#搭建最小的Linux系统" class="headerlink" title="搭建最小的Linux系统"></a>搭建最小的Linux系统</h1>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/06/15/搭建最小的Linux系统/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/MCU/">MCU</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/06/15/搭建最小的Linux系统/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/15/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/17/">Next<span></span></a>
@@ -458,7 +507,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>36</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>38</sup></a></li>
 		  
 		
 		  
@@ -531,15 +580,15 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/C/" title="C++">C++<sup>9</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>11</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/PaaS/" title="PaaS">PaaS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
