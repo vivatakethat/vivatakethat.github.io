@@ -86,108 +86,6 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/02/C语言——类型转换/" title="C语言:类型转换" itemprop="url">C语言:类型转换</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2016-07-02T03:17:32.000Z" itemprop="datePublished"> 发表于 2016-07-02</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/Burt%20Ward%20Robin.jpg" alt="Burt Ward Robin" title="Burt Ward Robin"></p>
-<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><p>计算机执行算术运算，通常要求操作数有相同的大小(即<strong><code>位数量</code></strong>相同)，并且要求<strong><code>存储的方式</code></strong>也相同。</p>
-<blockquote>
-<p>计算机不能直接将16位整数和32位3整数相加，也不能直接将32位整数和32位浮点数相加。</p>
-</blockquote>
-<h2 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h2><p>C语言允许在表达式中混合使用基本类型。在单个表达式中可以组合整数、浮点数、甚至是字符。当然，在这种情况下需要C编译器可能需要生成一些指令将某些操作数换成不同类型，因为编译器可以自动处理这些转换而无需程序员介入，所以这类转换称为<strong><code>隐式转换</code></strong> <em>implicit conversion</em>C语言还允许程序员使用强制运算符执行<strong><code>显示转换</code></strong> <em>explicit conversion</em>  </p>
-<p>当发生下列情况时会进行隐式转换</p>
-<ol>
-<li>常用算术转换</li>
-</ol>
-<ul>
-<li>任意操作数的类型是浮点类型的情况</li>
-</ul>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E4%BB%BB%E4%B8%80%E6%93%8D%E4%BD%9C%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%98%AF%E6%B5%AE%E7%82%B9%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%83%85%E5%86%B5.png" alt="任意操作数的类型是浮点类型的情况" title="任意操作数的类型是浮点类型的情况"></p>
-<blockquote>
-<p>如果一个操作数的类型是long double那么另外一个操作数的类型转换成long double类型。</p>
-<blockquote>
-<p>否则，如果一个操作数是的类型为double类型，那么另外一个操作数转化成double类型</p>
-<blockquote>
-<p>否则，如果一个操作数是float类型，那么把另外一个操作数转化为float类型。</p>
-<blockquote>
-<p>注意这些规则涵盖了混合整数和浮点类型的情况，例如把一个操作数的类型是long  int类型，并且另一个操作数的类型是double类型，那么把long int类型的操作数转化为double类型</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><br></p>
-<ul>
-<li>两个操作数的类型都不是浮点类型的情况<blockquote>
-<p>首先对两个操作数进行整体值提升(保证没有一个操作数是字符类型或短整形)。然后按照下图对类型较狭小的操作数进行提升：</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/2%E4%B8%AA%E6%93%8D%E4%BD%9C%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B%E9%83%BD%E4%B8%8D%E6%98%AF%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%83%85%E5%86%B52%E4%B8%AA%E6%93%8D%E4%BD%9C%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B%E9%83%BD%E4%B8%8D%E6%98%AF%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%83%85%E5%86%B5.png" alt="2个操作数的类型都不是浮点数的情况" title="2个操作数的类型都不是浮点数的情况"></p>
-<blockquote>
-<p>有一种特殊情况，只有在long int类型和 unsigned int类型长度(比如32位)相同时才回发生。在这类型情况下，如果一个操作数的类型是long int,而另外一个的类型是unsigned int，那么两个操作数都会转化为unsigned long int 类型。</p>
-</blockquote>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/C/">C</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/07/02/C语言——类型转换/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
       <a href="/2016/06/30/算法-顺序结构程序设计/" title="算法-顺序结构程序设计" itemprop="url">算法-顺序结构程序设计</a>
   </h1>
   <p class="article-author">By
@@ -455,6 +353,76 @@
 
 
 
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/06/29/汇编小程序/" title="汇编实验" itemprop="url">汇编实验</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-06-29T04:02:32.000Z" itemprop="datePublished"> 发表于 2016-06-29</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E4%B8%9C%E4%BA%AC%EF%BC%8C%E4%B8%8A%E9%87%8E.jpg" alt="东京，上野" title="东京，上野"></p>
+<h1 id="ADS开发环境实验"><a href="#ADS开发环境实验" class="headerlink" title="ADS开发环境实验"></a>ADS开发环境实验</h1><blockquote>
+<p>IDE:ARM Developer Suite v1.2</p>
+</blockquote>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2016/06/29/汇编小程序/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/嵌入式/">嵌入式</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/汇编/">汇编</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/06/29/汇编小程序/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/13/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/15/">Next<span></span></a>
@@ -487,7 +455,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>38</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>37</sup></a></li>
 		  
 		
 		  
@@ -560,7 +528,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>11</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>10</sup></a></li>
 			
 		
 			

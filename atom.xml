@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.vivatakethat.com/"/>
-  <updated>2017-05-22T04:13:16.484Z</updated>
+  <updated>2017-05-23T03:30:48.174Z</updated>
   <id>https://www.vivatakethat.com/</id>
   
   <author>
@@ -17,38 +17,15 @@
   
   <entry>
     <title>C++:模版</title>
-    <link href="https://www.vivatakethat.com/2017/05/17/C++%E6%A8%A1%E7%89%88/"/>
-    <id>https://www.vivatakethat.com/2017/05/17/C++模版/</id>
+    <link href="https://www.vivatakethat.com/2017/05/17/C++%E6%A8%A1%E7%89%88-typename/"/>
+    <id>https://www.vivatakethat.com/2017/05/17/C++模版-typename/</id>
     <published>2017-05-17T09:53:32.000Z</published>
-    <updated>2017-05-22T04:13:16.484Z</updated>
+    <updated>2017-05-23T03:30:48.174Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/District%209%EF%BC%882009.jpg?imageView2/2/h/600&quot; alt=&quot;District 9（2009&quot; title=&quot;District 9（2009&quot;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;typename&lt;br&gt;“typename”是一个C++程序设计语言中的关键字。当用于泛型编程时是另一术语”class”的同义词。[1]这个关键字用于指出模板声明（或定义）中的非独立名称（dependent names）是类型名，而非变量名。以下是对于泛型编程中typename两种迥然不同的用法的解释。&lt;/li&gt;
 &lt;/ol&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/District%209%EF%BC%882009.jpg?imageView2/2/h/600&quot; alt=&quot;District 9（2009&quot; title=&quot;District 9
-    
-    </summary>
-    
-      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-    
-    
-      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++:模版</title>
-    <link href="https://www.vivatakethat.com/2017/05/17/C++%E6%A8%A1%E7%89%88-typename/"/>
-    <id>https://www.vivatakethat.com/2017/05/17/C++模版-typename/</id>
-    <published>2017-05-17T09:53:32.000Z</published>
-    <updated>2017-05-17T09:55:40.107Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/District%209%EF%BC%882009.jpg?imageView2/2/h/600&quot; alt=&quot;District 9（2009&quot; title=&quot;District 9（2009&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -1635,6 +1612,111 @@ else
 &lt;li&gt;课程名称：《嵌入式移互联软件测试》&lt;/li&gt;
 &lt;li&gt;考试时间: 2016年12月22日&lt;strong&gt;&lt;code&gt;星期四&lt;/code&gt;&lt;/strong&gt;（14：00——16：00）&lt;/li&gt;
 &lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼4-C210&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="原理 | 理论" scheme="https://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+    
+    
+      <category term="Record" scheme="https://www.vivatakethat.com/tags/Record/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动互联应用软件开发——考试</title>
+    <link href="https://www.vivatakethat.com/2016/12/20/%E8%80%83%E8%AF%952%E2%80%94%E2%80%94%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%BF%9E%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    <id>https://www.vivatakethat.com/2016/12/20/考试2——移动互连应用软件开发/</id>
+    <published>2016-12-20T14:35:32.000Z</published>
+    <updated>2017-01-16T13:40:42.216Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/the%20die%20is%20cast.jpg?imageView2/2/h/600&quot; alt=&quot;the die is cas&quot; title=&quot;the die is cas&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;课程名称：《移动互联应用软件开发》&lt;/li&gt;
+&lt;li&gt;考试时间: 2016年12月22日&lt;strong&gt;&lt;code&gt;星期四&lt;/code&gt;&lt;/strong&gt;（09：00——11：00）&lt;/li&gt;
+&lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼2-A302&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;填空&quot;&gt;&lt;a href=&quot;#填空&quot; class=&quot;headerlink&quot; title=&quot;填空&quot;&gt;&lt;/a&gt;填空&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Spring是一个开源框架，Spring是于2003 年兴起的一个轻量级的Java 开发框架，由Rod Johnson 在其著作Expert One-On-One J2EE Development and Design中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。 简单来说，Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;MyBatis 本是apache的一个开源项目&lt;strong&gt;&lt;code&gt;iBatis&lt;/code&gt;&lt;/strong&gt;, 2010年这个项目由apache software foundation 迁移到了google code，并且改名为&lt;strong&gt;&lt;code&gt;MyBatis&lt;/code&gt;&lt;/strong&gt; 。MyBatis是一个基于Java的持久层框架。iBATIS提供的&lt;strong&gt;&lt;code&gt;持久层&lt;/code&gt;&lt;/strong&gt;框架包括SQL Maps和Data Access Objects（DAO）MyBatis 消除了几乎所有的JDBC代码和参数的手工设置以及结果集的检索。MyBatis 使用简单的 XML或注解用于配置和原始映射，将接口和 Java 的POJOs（Plain Old Java Objects，普通的 Java对象）映射成数据库中的记录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;名词解释：&quot;&gt;&lt;a href=&quot;#名词解释：&quot; class=&quot;headerlink&quot; title=&quot;名词解释：&quot;&gt;&lt;/a&gt;名词解释：&lt;/h1&gt;&lt;p&gt;1、IOC&lt;br&gt;&lt;strong&gt;&lt;code&gt;控制反转，控制权的转移，应用程序本身不负责依赖对象的创建和维护，而是由外部容器进行创建和维护&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Di&lt;br&gt;&lt;strong&gt;&lt;code&gt;依赖注入，是ioc的一种实现方式，目的是创建对象并组装对象之间的关系&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;AOP&lt;br&gt;&lt;strong&gt;&lt;code&gt;面向切面的编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dao&lt;br&gt;DAO设计模式是属于J2EE数据层的操作，使用DAO设计模式可以简化大量代码，增强程序的可移植性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Json&lt;br&gt;JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。它使得人们很容易的进行阅读和编写。同时也方便了机器进行解析和生成。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;MVC&lt;br&gt;MVC 是一种使用 MVC（Model View Controller 模型-视图-控制器）设计创建 Web 应用程序的模式。Model表示应用程序核心。View显示数据。Controller处理输入。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Java Bean&lt;br&gt;JavaBean是用Java语言描述的软件组件模型，其实际上是一个类。这些类遵循一个接口格式，以便于使函数命名、底层行为以及继承或实现的行为，可以把类看作标准的JavaBean组件进行构造和应用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Maven&lt;br&gt;Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;简述运行咕饥后台生成工具需要的开发环境及步骤。&lt;/strong&gt;&lt;br&gt;（1）    开发环境&lt;br&gt;JDK&lt;br&gt;Spring tools suite（或Eclipse IDE）&lt;br&gt;Apache Tomcat服务器&lt;br&gt;MySQL数据库&lt;br&gt;Navicat Premium（可选）&lt;br&gt;（2）    一键生成工具的使用步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开数据库，在数据库中建立好所需要的表&lt;/li&gt;
+&lt;li&gt;打开STS，新建一个动态WEB项目&lt;/li&gt;
+&lt;li&gt;将咕饥源代码中的pom.xml及web.xml文件拷入新建的动态WEB项目中&lt;/li&gt;
+&lt;li&gt;利用ctrl + f将配置文件中的项目名全部替换成新建的动态WEB的项目名&lt;/li&gt;
+&lt;li&gt;将该项目从STS中删除，然后以导入maven项目的方式的导入该项目&lt;/li&gt;
+&lt;li&gt;右键src，选择Bulid Path，然后点击remove将它移出项目路径&lt;/li&gt;
+&lt;li&gt;打开项目项目目录，将生成工具main文件夹拷入新项目中并建立一个code文件夹用于存放代码&lt;/li&gt;
+&lt;li&gt;回到STS中右键项目名选择Refresh刷新列表&lt;/li&gt;
+&lt;li&gt;将code文件夹以及main文件夹中的java和resource文件夹，右键选择Build Path将它添加到项目路径中&lt;/li&gt;
+&lt;li&gt;点击src/main/java—resources，打开generator及jdbc.properties修改数据库链接信息&lt;/li&gt;
+&lt;li&gt;找到util中的main函数，右键选择Run As——java application运行java代码&lt;/li&gt;
+&lt;li&gt;将缺少的文件拷入新项目中&lt;/li&gt;
+&lt;li&gt;选中项目单击右键，点击properties，然后选择Deployment,点击add导入maven。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后将项目放入tomcat服务器中运行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;简述Mybatis的基本使用方法。&lt;/strong&gt;&lt;br&gt;(1)    所需要Jar包，将 mybatis-x.x.x.jar 文件置于 classpath 中即可。&lt;br&gt;(2)    建立数据库并插入数据&lt;br&gt;(3)    建立Web项目把Jar包引入项目&lt;br&gt;(4)    建立实体类并完成实体类的接口&lt;br&gt;(5)    配置db.properties（数据库链接）&lt;br&gt;(6)    建立映射文件并配置configuration.xml&lt;br&gt;(7)    实现根据ID查询表单的功能&lt;br&gt;(8)    在mapper.xml中使用resultMap&lt;br&gt;(9)    在接口中增加增删改查的方法&lt;br&gt;(10)    在mapper.xml中增加相应的映射&lt;br&gt;(11)    编写测试程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mybatis解决了原生JDBC的哪些问题。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1、    数据库链接创建、释放频繁造成系统资源浪费从而影响系统性能，如果使用数据库链接池可解决此问题。&lt;br&gt;解决：在SqlMapConfig.xml中配置数据链接池，使用连接池管理数据库链接。&lt;br&gt;2、    Sql语句写在代码中造成代码不易维护，实际应用sql变化的可能较大，sql变动需要改变java代码。&lt;br&gt;解决：将Sql语句配置在XXXXmapper.xml文件中与java代码分离。&lt;br&gt;3、    向sql语句传参数麻烦，因为sql语句的where条件不一定，可能多也可能少，占位符需要和参数一一对应。&lt;br&gt;解决：Mybatis自动将java对象映射至sql语句，通过statement中的parameterType定义输入参数的类型。&lt;br&gt;4、    对结果集解析麻烦，sql变化导致解析代码变化，且解析前需要遍历，如果能将数据库记录封装成pojo对象解析比较方便。&lt;br&gt;解决：Mybatis自动将sql执行结果映射至java对象，通过statement中的resultType定义输出结果的类型。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Java中的注解是什么，写出你知道的常用注解。&lt;/strong&gt;&lt;br&gt;@Controller 负责注册一个bean 到spring 上下文中。&lt;br&gt;@RequestMapping 注解为控制器指定可以处理哪些 URL 请求。&lt;br&gt;@RequestBody 该注解用于读取Request请求的body部分数据，使用系统默认配置的HttpMessageConverter进行解析，然后把相应的数据绑定到要返回的对象上 ，再把HttpMessageConverter返回的对象数据绑定到 controller中方法的参数上。 @ResponseBody 该注解用于将Controller的方法返回的对象，通过适当的HttpMessageConverter转换为指定格式后，写入到Response对象的body数据区。 @ModelAttribute 　 在方法定义上使用&lt;br&gt;@ModelAttribute 注解：Spring MVC 在调用目标处理方法前，会先逐个调用在方法级上标注了&lt;br&gt;@ModelAttribute 的方法。 在方法的入参前使用&lt;br&gt;@ModelAttribute 注解：可以从隐含对象中获取隐含的模型数据中获取对象，再将请求参数–绑定到对象中，再传入入参将方法入参对象添加到模型中。&lt;br&gt;@RequestParam　 在处理方法入参处使用&lt;br&gt;@RequestParam 可以把请求参 数传递给请求方法。&lt;br&gt;@PathVariable 绑定 URL 占位符到入参。&lt;br&gt;@ExceptionHandler 注解到方法上，出现异常时会执行该方法。&lt;br&gt;@ControllerAdvice 使一个Contoller成为全局的异常处理类，类中用&lt;br&gt;@ExceptionHandler方法注解的方法可以处理所有Controller发生的异常。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;@RequestMapping&lt;/code&gt;有那些属性，作用是什么？&lt;br&gt;RequestMapping注解有六个属性，下面我们把她分成三类进行说明。&lt;br&gt;1、 value， method；&lt;br&gt;value：     指定请求的实际地址，指定的地址可以是URI Template 模式（后面将会说明）；&lt;br&gt;method：  指定请求的method类型， GET、POST、PUT、DELETE等；&lt;br&gt;2、 consumes，produces；&lt;br&gt;consumes： 指定处理请求的提交内容类型（Content-Type），例如application/json, text/html;&lt;br&gt;produces:    指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回；&lt;br&gt;3、 params，headers；&lt;br&gt;params： 指定request中必须包含某些参数值是，才让该方法处理。&lt;br&gt;headers： 指定request中必须包含某些指定的header值，才能让该方法处理请求。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;SSM框架的工作流程是什么？&lt;/strong&gt;&lt;br&gt;1.先写实体类entity，定义对象的属性，（可以参照数据库中表的字段来设置，数据库的设计应该在所有编码开始之前）。&lt;br&gt;2.写Mapper.xml（Mybatis），其中定义你的功能，对应要对数据库进行的那些操作，比如 insert、selectAll、selectByKey、delete、update等。&lt;br&gt;3.写Mapper.java，将Mapper.xml中的操作按照id映射成Java函数。&lt;br&gt;4.写Service.java，为控制层提供服务，接受控制层的参数，完成相应的功能，并返回给控制层。&lt;br&gt;5.写Controller.java，连接页面请求和服务层，获取页面请求的参数，通过自动装配，映射不同的URL到相应的处理函数，并获取参数，对参数进行处理，之后传给服务层。&lt;br&gt;写JSP页面调用，请求哪些参数，需要获取什么数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;对一个简单的商城项目进行需求分析（画出用例图及类图）&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;1）用户管理&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86.jpg&quot; alt=&quot;用户管理&quot; title=&quot;用户管理&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;2）购物管理&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/%E8%B4%AD%E7%89%A9%E7%AE%A1%E7%90%86full.jpg&quot; alt=&quot;购物管理&quot; title=&quot;购物管理&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;画出Spring的层次框架图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/Spring%E7%9A%84%E5%B1%82%E6%AC%A1%E6%A1%86%E6%9E%B6%E5%9B%BE.jpg&quot; alt=&quot;Spring的层次框架图&quot; title=&quot;Spring的层次框架图&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;画出springmvc+mybaits的系统架构&lt;br&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/springmvc+mybaits%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.jpg&quot; alt=&quot;springmvc+mybaits的系统架构&quot; title=&quot;springmvc+mybaits的系统架构&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;谈谈你在搭建开发环境以及运行Web项目时遇到的坑以及你是如何解决的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/the%20die%20is%20cast.jpg?imageView2/2/h/600&quot; alt=&quot;the die is cas&quot; title=&quot;the die is cas&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;课程名称：《移动互联应用软件开发》&lt;/li&gt;
+&lt;li&gt;考试时间: 2016年12月22日&lt;strong&gt;&lt;code&gt;星期四&lt;/code&gt;&lt;/strong&gt;（09：00——11：00）&lt;/li&gt;
+&lt;li&gt;考试地点：&lt;strong&gt;&lt;code&gt;学思楼2-A302&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
