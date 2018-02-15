@@ -40,60 +40,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://www.vivatakethat.com/2018/02/11/Q%E9%9C%80%E8%A6%81%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://www.vivatakethat.com/2018/02/11/Q需要解决的问题/</id>
-    <published>2018-02-11T07:03:50.000Z</published>
-    <updated>2018-02-11T07:03:50.000Z</updated>
-    
-    <content type="html">&lt;ol&gt;
-&lt;li&gt;c++输入  cin 跟cin.get 异同&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;在没有装oracel客户端的系统里运行occiLib 程序？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;同样的代码，在C:\Users\sky\Desktop\设备监控子系统\eof&lt;em&gt;Testproject&lt;/em&gt; 无法法实现更新表操作，有时候还会阻塞？？？？？&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;深圳7号线代码中Makefile,其中一个.cpp文件编译报错，但仍然能成功生成.so文件？？&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iCurrentTime = localtime(&amp;#38;iTime);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;怎么用？什么意思？&lt;br&gt;‘&lt;/p&gt;
- &lt;figure class=&quot;highlight groovy&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root&lt;span class=&quot;annotation&quot;&gt;@linaro&lt;/span&gt;-&lt;span class=&quot;string&quot;&gt;alip:&lt;/span&gt;&lt;span class=&quot;regexp&quot;&gt;/# tar -zxvf updateSoftware.tar.gz -C /&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;读懂脚本&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&amp;#10;&amp;#10;#&amp;#24314;&amp;#31435;&amp;#36719;&amp;#20214;&amp;#21253;&amp;#10;&amp;#10;mkdir Gate&amp;#10;&amp;#10;#&amp;#22797;&amp;#21046;&amp;#25991;&amp;#20214;&amp;#22841;&amp;#21040;&amp;#36719;&amp;#20214;&amp;#21253;&amp;#10;&amp;#10;cp -rf ./AGM_Picture ./Gate/&amp;#10;cp -rf ./AGM_PictureCD ./Gate/&amp;#10;cp -rf ./AGM_PictureMaintenance ./Gate/&amp;#10;cp -rf ./WAV_CH ./Gate/&amp;#10;cp -rf ./timesyn ./Gate/&amp;#10;cp -rf ./DeviceBin ./Gate/&amp;#10;cp -rf ./SOFTWARE_PACKAGE_DEBUG ./Gate/Client&amp;#10;&amp;#10;#&amp;#36755;&amp;#20837;&amp;#29256;&amp;#26412;&amp;#10;&amp;#10;var=1&amp;#10;$var -le $#&amp;#10;touch app.version&amp;#10;(&amp;#10;cat &amp;#60;&amp;#60;EOF&amp;#10;[$&amp;#123;!var&amp;#125;]&amp;#10;VersionID = $&amp;#123;!var&amp;#125;&amp;#10;EOF&amp;#10;) &amp;#62;&amp;#62;app.version&amp;#10;&amp;#10;&amp;#10;#&amp;#21387;&amp;#32553;&amp;#25991;&amp;#20214;&amp;#10;&amp;#10;tar -zcvf $&amp;#123;!var&amp;#125; ./Gate ./app.version&amp;#10;&amp;#10;#&amp;#21024;&amp;#38500;&amp;#21387;&amp;#32553;&amp;#27531;&amp;#30041;&amp;#10;&amp;#10;rm -rf Gate app.version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;g++编译  &lt;code&gt;__stdcall&lt;/code&gt; 不通过&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;char* 指向内容不能修改的问题&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/yylqinghao/archive/2010/04/27/1721752.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.cnblogs.com/yylqinghao/archive/2010/04/27/1721752.html&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;c++输入  cin 跟cin.get 异同&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;在没有装oracel客户端的系统里运行occiLib 程序？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;同样的代码，在C:\Users\sky\Desktop\设备监控子系
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>operator用法</title>
     <link href="https://www.vivatakethat.com/2018/02/02/operator/"/>
     <id>https://www.vivatakethat.com/2018/02/02/operator/</id>
@@ -273,6 +219,30 @@
   </entry>
   
   <entry>
+    <title>QLineEdit</title>
+    <link href="https://www.vivatakethat.com/2018/01/05/Qt5_memo/"/>
+    <id>https://www.vivatakethat.com/2018/01/05/Qt5_memo/</id>
+    <published>2018-01-04T16:42:32.000Z</published>
+    <updated>2018-02-06T13:20:02.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;QLineEdit&quot;&gt;&lt;a href=&quot;#QLineEdit&quot; class=&quot;headerlink&quot; title=&quot;QLineEdit&quot;&gt;&lt;/a&gt;QLineEdit&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.ithao123.cn/content-10026001.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ithao123.cn/content-10026001.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/hmsiwtv/article/details/7566128&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/hmsiwtv/article/details/7566128&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;QLineEdit&quot;&gt;&lt;a href=&quot;#QLineEdit&quot; class=&quot;headerlink&quot; title=&quot;QLineEdit&quot;&gt;&lt;/a&gt;QLineEdit&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.ithao123.cn/content-10
+    
+    </summary>
+    
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
+    
+    
+      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>c++虚函数经</title>
     <link href="https://www.vivatakethat.com/2018/01/05/OOP_%E8%99%9A%E6%9E%84%E5%87%BD%E6%95%B0/"/>
     <id>https://www.vivatakethat.com/2018/01/05/OOP_虚构函数/</id>
@@ -287,30 +257,6 @@
     
       &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/luwei-coder/archive/2012/11/30/cppcode3.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;c++虚函数经典例子演示&lt;/a&gt;   &lt;/p&gt;
 &lt;p&gt; 
-    
-    </summary>
-    
-      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-    
-    
-      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QLineEdit</title>
-    <link href="https://www.vivatakethat.com/2018/01/05/Qt5_memo/"/>
-    <id>https://www.vivatakethat.com/2018/01/05/Qt5_memo/</id>
-    <published>2018-01-04T16:42:32.000Z</published>
-    <updated>2018-02-06T13:20:02.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;QLineEdit&quot;&gt;&lt;a href=&quot;#QLineEdit&quot; class=&quot;headerlink&quot; title=&quot;QLineEdit&quot;&gt;&lt;/a&gt;QLineEdit&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.ithao123.cn/content-10026001.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ithao123.cn/content-10026001.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/hmsiwtv/article/details/7566128&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/hmsiwtv/article/details/7566128&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;QLineEdit&quot;&gt;&lt;a href=&quot;#QLineEdit&quot; class=&quot;headerlink&quot; title=&quot;QLineEdit&quot;&gt;&lt;/a&gt;QLineEdit&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.ithao123.cn/content-10
     
     </summary>
     
@@ -1334,6 +1280,93 @@
     
     
       <category term="C" scheme="https://www.vivatakethat.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一章:基础</title>
+    <link href="https://www.vivatakethat.com/2017/02/23/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E5%9F%BA%E7%A1%80/"/>
+    <id>https://www.vivatakethat.com/2017/02/23/第一章_基础/</id>
+    <published>2017-02-23T12:54:32.000Z</published>
+    <updated>2017-05-03T14:30:04.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/1354996.jpg?imageView2/2/h/600&quot; alt=&quot;1354996&quot; title=&quot;1354996&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;名词&quot;&gt;&lt;a href=&quot;#名词&quot; class=&quot;headerlink&quot; title=&quot;名词&quot;&gt;&lt;/a&gt;名词&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;静态方法:即函数;&lt;br&gt;方法封装了一系列语句 所描述的运算&lt;/li&gt;
+&lt;/ol&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;实例方法:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;java基础语法&quot;&gt;&lt;a href=&quot;#java基础语法&quot; class=&quot;headerlink&quot; title=&quot;java基础语法&quot;&gt;&lt;/a&gt;java基础语法&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;获取数组长度&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; N = a.length;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果为多位数组，则N为行数;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;起别名&lt;br&gt;数组名表示的是整个数组，如果我们将一个数组变量赋予另一个变量，那么这2个变量将会指向同一个数组，例如:&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;takethat&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[][] a = &amp;#123;&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&amp;#125;, &amp;#123;&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;&amp;#125;, &amp;#123;&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;&amp;#125;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; M = a.length;  &lt;span class=&quot;comment&quot;&gt;//行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; N = a[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].length;   &lt;span class=&quot;comment&quot;&gt;//列&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[][] b = a;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; b.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; b[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].length; j++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            System.out.print(b[i][j] + &lt;span class=&quot;string&quot;&gt;&quot;, &quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            System.out.print(&lt;span class=&quot;string&quot;&gt;&quot;\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;存疑&quot;&gt;&lt;a href=&quot;#存疑&quot; class=&quot;headerlink&quot; title=&quot;存疑&quot;&gt;&lt;/a&gt;存疑&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;二维数组下标&lt;br&gt;C++里二维数组必须有下表才能赋值，一维数组则不需要下标则能使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a[][] = &amp;#123; &amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&amp;#125;,&amp;#123;&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;&amp;#125; &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; VS2015 会报错&lt;br&gt;    &lt;figure class=&quot;highlight vbnet&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;error&lt;/span&gt; C2087: &lt;span class=&quot;comment&quot;&gt;&#39;a&#39;: missing subscrip&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;error&lt;/span&gt; C2078: too many initializers&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int a[]= {  1,2,3 ,4,5,6  };
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;输出数组实例&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;takethat&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt;[] a = &amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; N = a.length;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt;[] b = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt;[N];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; N; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            b[i] = a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i&amp;lt;b.length; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           System.out.print(b[i]+&lt;span class=&quot;string&quot;&gt;&quot;, &quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; p, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; q)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (q == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; p;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; r = p % q;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; gcd(q, r);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;典型数组处理代码&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;颠倒数组元素顺序&lt;br&gt;C++实现代码&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//a为数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; N = &lt;span class=&quot;keyword&quot;&gt;sizeof&lt;/span&gt;(a) / &lt;span class=&quot;keyword&quot;&gt;sizeof&lt;/span&gt;(a[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; N / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; i++)        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; temp = a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	a[i] = a[N - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; - i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	a[N - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; - i] = temp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;找出数组最大元素&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//a为数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; N = &lt;span class=&quot;keyword&quot;&gt;sizeof&lt;/span&gt;(a) / &lt;span class=&quot;keyword&quot;&gt;sizeof&lt;/span&gt;(a[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; max=a[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;i&amp;lt;N;i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[i]&amp;gt;max)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	max=a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;矩阵方程&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;define&lt;/span&gt; a_row  &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;comment&quot;&gt;//a矩阵的行&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;define&lt;/span&gt; N  &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;       &lt;span class=&quot;comment&quot;&gt;//a矩阵的列&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;define&lt;/span&gt; N  &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;                 &lt;span class=&quot;comment&quot;&gt;//  b矩阵的行&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;define&lt;/span&gt; b_column &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a[a_row][N]  = &amp;#123; &amp;#123; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; &amp;#125;,&amp;#123; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt; &amp;#125; &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; b[N][b_column]  = &amp;#123; &amp;#123; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;#125;,&amp;#123; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;#125;,&amp;#123; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;#125;,&amp;#123; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;#125; &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; c[a_row][b_column];		&lt;span class=&quot;comment&quot;&gt;//结果矩阵： c矩阵的 行:a矩阵的行, 列:b矩阵的列&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt;a_row; i++)  &lt;span class=&quot;comment&quot;&gt;// a 矩阵的行数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; b_column; j++) &amp;#123;      &lt;span class=&quot;comment&quot;&gt;//  b矩阵的列数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			c[i][j] = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;	 &lt;span class=&quot;comment&quot;&gt;//  每次使用数组变量都要初始化一下，如果没有这个会输出错误的结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; k &amp;lt; N; k++)    &lt;span class=&quot;comment&quot;&gt;// &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				c[i][j] = c[i][j] + a[i][k] * b[k][j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; a_row; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; b_column ; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; c[i][j]&amp;lt;&amp;lt;&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;【output】&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;典型静态方法实现&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算一个整数的绝对值&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (x&amp;lt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; -x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt; &amp;gt;&amp;gt;a;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;abs&lt;/span&gt;(a)&amp;lt;&amp;lt;&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;计算一个浮点数的绝对值，也是类似的方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;判定一个数是否是素数&lt;br&gt;```C++&lt;br&gt;#include&lt;iostream&gt;&lt;br&gt;bool isPrime(int);&lt;br&gt;bool isPrime(int N)&lt;br&gt;{&lt;br&gt;if (N &amp;lt; 2)    return false;&lt;br&gt;for (int i = 2; i*i &amp;lt;= N; i++)&lt;br&gt; if (N%i == 0)    return false;&lt;br&gt;return true;&lt;br&gt;}&lt;/iostream&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;int main()&lt;br&gt;{&lt;br&gt;    int n;&lt;br&gt;    scanf(“%d”, &amp;amp;n);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if (isPrime(n))
+    std::cout &amp;lt;&amp;lt; &amp;quot;isPrimer&amp;quot;;
+else
+    std::cout &amp;lt;&amp;lt; &amp;quot;not Primer&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;}&lt;br&gt;```  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算平方根(牛顿迭代法)&lt;br&gt;&lt;a href=&quot;(http://blog.csdn.net/young_gy/article/details/45766433)&quot;&gt;可参考&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;……..&lt;/p&gt;
+&lt;h1 id=&quot;P25&quot;&gt;&lt;a href=&quot;#P25&quot; class=&quot;headerlink&quot; title=&quot;P25&quot;&gt;&lt;/a&gt;P25&lt;/h1&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xsic8.com1.z0.glb.clouddn.com/1354996.jpg?imageView2/2/h/600&quot; alt=&quot;1354996&quot; title=&quot;1354996&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;名词&quot;&gt;&lt;a href=&quot;#名词&quot; class=&quot;headerlink&quot; title=&quot;名词&quot;&gt;&lt;/a&gt;名词&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;静态方法:即函数;&lt;br&gt;方法封装了一系列语句 所描述的运算&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Book | Coursera" scheme="https://www.vivatakethat.com/categories/Book-Coursera/"/>
+    
+    
+      <category term="memo" scheme="https://www.vivatakethat.com/tags/memo/"/>
     
   </entry>
   

@@ -86,86 +86,6 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/04/4412_ADC模数转换/" title="4412_ADC模数转换" itemprop="url">4412_ADC模数转换</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2016-09-04T02:59:32.000Z" itemprop="datePublished"> 发表于 2016-09-04</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>模数转换需要read读函数</p>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/4412_AD%E5%8E%9F%E7%90%86%E5%9B%BE.png" alt=""></p>
-<p>滑动变阻器2，往3方向拨动，XadcAIN0最多能读到1.8V，往1方向拨动则最多可以读到0V</p>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/AD_datasheet_4412.png" alt="AD_datasheet_4412" title="AD_datasheet_4412"></p>
-<blockquote>
-<p>模拟输入电压 0-1.8V<em>Analog Input Range:0 to 1.8V</em></p>
-</blockquote>
-<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/AD%E5%AF%84%E5%AD%98%E5%99%A8_data.png" alt="寄存器dsatasheet" title="寄存器datasheet"></p>
-<blockquote>
-<p>AD寄存器AD DAT最大为0XFFF,最小为0</p>
-<blockquote>
-<p>电阻最大为10K,最下为0</p>
-</blockquote>
-</blockquote>
-<p>示例程序<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;termios.h&gt;</span></span></span><br><span class="line"><span class="comment">//#include &lt;android/log.h&gt;</span></span><br><span class="line"><span class="comment">//#include &lt;sys/ioctl.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fd;</span><br><span class="line">	<span class="keyword">char</span> *adc = <span class="string">"/dev/adc"</span>;</span><br><span class="line">	<span class="keyword">char</span> buffer[<span class="number">512</span>];</span><br><span class="line">	<span class="keyword">int</span> len=<span class="number">0</span>, r=<span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">memset</span>(buffer,<span class="number">0</span>,<span class="keyword">sizeof</span>(buffer));	<span class="comment">//将s所指向的某一块内存中的每个字节的内容全部设置为ch指定的ASCII值,块的大小由第三个参数指定,这个函数通常为新申请的内存做初始化工作</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"adc ready!\n"</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>((fd = open(adc, O_RDWR|O_NOCTTY|O_NDELAY))&lt;<span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"open adc err!\n"</span>);</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"open adc success!\n"</span>);</span><br><span class="line">		</span><br><span class="line">		len=read(fd,buffer,<span class="number">10</span>);	</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(len == <span class="number">0</span>)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"return null\n"</span>);</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			r = atoi(buffer);</span><br><span class="line">			r = (<span class="keyword">int</span>)(r*<span class="number">10000</span>/<span class="number">4095</span>);	<span class="comment">//Datas  transition to Res  注意OXFFF对应的数值10000</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"res value is %d\n"</span>,r);</span><br><span class="line">		&#125;			</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/嵌入式/">嵌入式</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/MCU/">MCU</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/09/04/4412_ADC模数转换/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
       <a href="/2016/09/02/C语言-预处理/" title="C语言:预处理" itemprop="url">C语言:预处理</a>
   </h1>
   <p class="article-author">By
@@ -416,6 +336,79 @@
 	
 	  	<span></span>
 		<a href="/2016/08/16/嵌入式Linux基础教程-笔记/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/07/27/Linux系统编程-代码运行返回信息/" title="Linux系统编程-代码运行返回信息" itemprop="url">Linux系统编程-代码运行返回信息</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2016-07-27T07:50:32.000Z" itemprop="datePublished"> 发表于 2016-07-27</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/%E3%82%A6%E3%83%A9%E3%83%AB%E5%B1%B1%E3%81%AE%E8%8A%B1%E8%BC%AA2.jpg" alt="ウラル山の花輪" title="ウラル山の花輪"></p>
+<p>代码运行返回信息</p>
+<ol>
+<li><p>启动信息</p>
+<p>操作系统启动后会在终端打印硬件信息以及驱动程序信息</p>
+</li>
+</ol>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2016/07/27/Linux系统编程-代码运行返回信息/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Linux/">Linux</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Record/">Record</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/07/27/Linux系统编程-代码运行返回信息/#disqus_thread" class="comments-count-link">Comments</a>
 	
 </div>
 
