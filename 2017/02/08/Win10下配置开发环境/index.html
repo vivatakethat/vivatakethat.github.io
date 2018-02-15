@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Grand%20theft%20dora-%E5%B0%8F%E5%A4%AB.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2017-05-23T03:28:22.254Z">
+<meta property="og:updated_time" content="2018-02-14T11:18:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win10下配置开发环境">
 <meta name="twitter:description">
@@ -48,7 +48,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">最后的意志？</h2>
+				<h2 class="blog-motto">Buiding ....</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -134,12 +134,12 @@
 </ul>
 <p>换个说法<br><code>C:\Users\你的用户名\AppData\Local\lxss</code></p>
 <p>如果downloading from the windows store总是失败可以，在windows10地区选台湾/香港 再下载试试</p>
-<p><a href="https://jingyan.baidu.com/article/bea41d4386bbf2b4c51be6bc.html" target="_blank" rel="external">或者离线下载</a></p>
+<p><a href="https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/c" target="_blank" rel="external">或者离线下载</a></p>
 <hr>
 <ul>
 <li>卡机自动启动WSL，并自动开启ssh</li>
 </ul>
-<p>l.  首先是需要修改的sshd_config内容其实只有这几项：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">Port</span> （随便改一个就行）</span><br><span class="line">UsePrivilegeSeparation <span class="built_in">no</span> （因为WSL默认不提供chroot）</span><br><span class="line">PasswordAuthentication <span class="built_in">yes</span></span><br><span class="line">StrictModes <span class="built_in">no</span></span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
+<p>l.  首先是需要修改的sshd_config内容其实只有这几项：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">Port</span> （随便改一个就行）</span><br><span class="line">UsePrivilegeSeparation <span class="built_in">no</span> （因为WSL默认不提供chroot）</span><br><span class="line">PasswordAuthentication <span class="built_in">yes</span></span><br><span class="line">StrictModes <span class="built_in">no</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span></span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
 <ol>
 <li>添加两条针对你那条端口的规则（传入的和传出的），允许你那个端口的TCP连接。                 </li>
 </ol>
@@ -149,18 +149,25 @@
 </ol>
 <p>最后重启一下ssh服务<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> service ssh restart</span><br></pre></td></tr></table></figure></p>
 <ol>
-<li>添加计划任务，具体操作:<br>保存一下文本为<code>hide.vbe</code>并扔进<code>System32</code>里<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set ws = <span class="function"><span class="title">CreateObject</span><span class="params">(<span class="string">"Wscript.Shell"</span>)</span></span> </span><br><span class="line">ws<span class="class">.run</span> <span class="string">"bash /usr/boot.sh"</span>,vbhide</span><br></pre></td></tr></table></figure>
+<li>添加计划任务，具体操作:<br>保存一下文本为<code>hide.vbe</code>并扔进<code>C:\Windows\System32\</code>里<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set ws = <span class="function"><span class="title">CreateObject</span><span class="params">(<span class="string">"Wscript.Shell"</span>)</span></span> </span><br><span class="line">ws<span class="class">.run</span> <span class="string">"bash /usr/boot.sh"</span>,vbhide</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <blockquote>
 <p><code>WScript.Shell</code>是一个对象，可以执行操作系统外壳常用的操作:比如运行程序、读写注册表、环境变量等</p>
 </blockquote>
-<p>再在控制版面创建<code>Create Basic Task</code>——-&gt;选择<code>trigger</code>方式<code>when I log on</code>——&gt;<code>Start a program</code>填写<code>hide.vbe</code></p>
+<p>再在控制版面中<code>Task Scheduler</code>创建<code>Create Basic Task</code>——-&gt;选择<code>trigger</code>方式<code>when I log on</code>——&gt;<code>Start a program</code>填写<code>hide.vbe</code></p>
 <ol>
-<li>在WSL创建一个shell脚本<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line">service ssh start</span><br><span class="line"><span class="variable">$SHELL</span>  <span class="comment">#这句很重要，挂起当前脚本进程, 进而维持 base.exe 一直打开</span></span><br></pre></td></tr></table></figure>
+<li>在WSL创建一个shell脚本<br>如果 默认启动用户不是root,记得切换成root<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">lxrun</span> /setdefaultuser root</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line">service ssh start</span><br><span class="line"><span class="variable">$SHELL</span>  <span class="comment">#这句很重要，挂起当前脚本进程, 进而维持 base.exe 一直打开</span></span><br></pre></td></tr></table></figure>
 <p>再赋权限<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># chmod <span class="number">777</span>     /usr/boot.sh</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>在CMD中设置  <code>ubuntu config --default-user root</code> 不然普通用户无法执行脚本</p>
+<blockquote>
+<p>如果提示’ubuntu’ is not recognized as an internal or external command,<br>operable program or batch file.则应该用这个命令: <code>lxrun /setdefaultuser root</code></p>
+</blockquote>
+</blockquote>
 <ol>
 <li>存疑<br>笔记本电脑不插适配器开机，这个开机自启脚本无效,怎么解决？</li>
 </ol>
@@ -169,7 +176,20 @@
 <ul>
 <li>备份WSL</li>
 </ul>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.备份原来的数据源配置文件</span></span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list_backup</span><br><span class="line"><span class="comment"># 2.编辑数据源配置文件</span></span><br><span class="line">vim /etc/apt/sources.list</span><br><span class="line"><span class="comment"># 在这里我使用的是阿里云的数据源：</span></span><br><span class="line"><span class="comment">#==============================================================================================</span></span><br><span class="line"> deb <span class="symbol">http:</span>/<span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-security main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-updates main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-proposed main restricted universe multiverse</span><br><span class="line"> deb-src http:/</span><span class="regexp">/mirrors.aliyun.com/ubuntu</span><span class="regexp">/ trusty-backports main restricted universe multiverse</span><br><span class="line">#===============================================================================================</span><br><span class="line"># 3.更新配置</span><br><span class="line">apt-get update</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># 1.备份原来的数据源配置文件</span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list_backup</span><br><span class="line"># 2.编辑数据源配置文件</span><br><span class="line">vim /etc/apt/sources.list</span><br><span class="line"># 在这里我使用的是阿里云的数据源：</span><br><span class="line">#==============================================================================================</span><br><span class="line"># deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - <span class="operator"><span class="keyword">Release</span> amd64 (<span class="number">20160420.1</span>)]/ xenial <span class="keyword">main</span> <span class="keyword">restricted</span></span><br><span class="line">deb-src <span class="keyword">http</span>://<span class="keyword">archive</span>.ubuntu.com/ubuntu xenial <span class="keyword">main</span> <span class="keyword">restricted</span> #Added <span class="keyword">by</span> software-properties</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial <span class="keyword">main</span> <span class="keyword">restricted</span></span><br><span class="line">deb-src <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial <span class="keyword">main</span> <span class="keyword">restricted</span> multiverse universe #Added <span class="keyword">by</span> software-properties</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-updates <span class="keyword">main</span> <span class="keyword">restricted</span></span><br><span class="line">deb-src <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-updates <span class="keyword">main</span> <span class="keyword">restricted</span> multiverse universe #Added <span class="keyword">by</span> software-properties</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial universe</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-updates universe</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial multiverse</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-backports <span class="keyword">main</span> <span class="keyword">restricted</span> universe multiverse</span><br><span class="line">deb-src <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-backports <span class="keyword">main</span> <span class="keyword">restricted</span> universe multiverse #Added <span class="keyword">by</span> software-properties</span><br><span class="line">deb <span class="keyword">http</span>://<span class="keyword">archive</span>.canonical.com/ubuntu xenial partner</span><br><span class="line">deb-src <span class="keyword">http</span>://<span class="keyword">archive</span>.canonical.com/ubuntu xenial partner</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-<span class="keyword">security</span> <span class="keyword">main</span> <span class="keyword">restricted</span></span><br><span class="line">deb-src <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-<span class="keyword">security</span> <span class="keyword">main</span> <span class="keyword">restricted</span> multiverse universe #Added <span class="keyword">by</span> software-properties</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-<span class="keyword">security</span> universe</span><br><span class="line">deb <span class="keyword">http</span>://mirrors.aliyun.com/ubuntu/ xenial-<span class="keyword">security</span> multiverse</span><br><span class="line">#===============================================================================================</span><br><span class="line"># <span class="number">3.</span>更新配置</span><br><span class="line">apt-<span class="keyword">get</span> <span class="keyword">update</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>WSL挂在移动硬盘</li>
+</ul>
+<p><a href="https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/c" target="_blank" rel="external">看这篇文章</a></p>
+<p>Mounting DrvFs<br>In order to mount a Windows drive using DrvFs, you can use the regular Linux mount command. For example, to mount a removable drive D: as /mnt/d directory, run the following commands:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="keyword">mkdir</span> /mnt/<span class="literal">d</span></span><br><span class="line">$ sudo mount -t drvfs <span class="keyword">D</span>: /mnt/<span class="literal">d</span></span><br></pre></td></tr></table></figure></p>
+<p>Now, you will be able to access the files of your D: drive under /mnt/d. When you wish to unmount the drive, for example so you can safely remove it, run the following command:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo umount /mnt/d</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>wsl中文乱码<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="groovy"></span><br><span class="line">+  执行scp用tab键补全:</span><br><span class="line">-<span class="string">bash:</span> <span class="string">warning:</span> <span class="string">setlocale:</span> <span class="string">LC_CTYPE:</span> cannot change locale (zh_CN.UTF-<span class="number">8</span>)</span><br><span class="line">解决方法：</span><br><span class="line"></span><br><span class="line">编辑`` ～<span class="regexp">/.bashrc``文件或``~/</span>.profile文件``（修改<span class="regexp">/etc/</span>profile文件也可以，但是会影响全局的设置）</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>vim ～/.bahsrc<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在文件尾部添加一语句：</span><br></pre></td></tr></table></figure></p>
+<p>export LC_CTYPE=”en_US.UTF-8”</p>
+<p>```</p>
 <h1 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h1><ol>
 <li>HTTP服务软件<br>Apache</li>
 </ol>
@@ -381,7 +401,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>37</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -389,11 +409,11 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>16</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>2</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>3</sup></a></li>
 		  
 		
 		  
@@ -446,6 +466,10 @@
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
 			
 		
@@ -454,7 +478,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>10</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
@@ -462,15 +486,15 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Linux/" title="Linux">Linux<sup>8</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Record/" title="Record">Record<sup>6</sup></a></li>
+				<li><a href="/tags/Record/" title="Record">Record<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
 			
 		
 			
@@ -482,15 +506,7 @@
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -498,11 +514,15 @@
 			
 		
 			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
@@ -514,15 +534,15 @@
 			
 		
 			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -548,12 +568,6 @@
           <li>
             
             	<a href="http://blog.csdn.net/example440982" target="_blank" title="  庆威的博客">轻微的博客</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://blog.csdn.net/qq_31803503" target="_blank" title=" 俊城的博客">JC. Lin的博客</a>
             
           </li>
         

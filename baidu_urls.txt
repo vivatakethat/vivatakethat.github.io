@@ -1,5 +1,5 @@
-https://www.vivatakethat.com/2017/05/17/C++模版-typename/
-https://www.vivatakethat.com/2017/04/16/git日常报错/
-https://www.vivatakethat.com/2017/03/31/C++primer_名词解释/
-https://www.vivatakethat.com/2017/03/25/c++内置类型/
-https://www.vivatakethat.com/2017/03/24/编程建议/
+https://www.vivatakethat.com/2018/10/11/回调函数/
+https://www.vivatakethat.com/2018/02/11/Q需要解决的问题/
+https://www.vivatakethat.com/2018/02/02/operator/
+https://www.vivatakethat.com/2018/02/01/ADO数据库操作/
+https://www.vivatakethat.com/2018/01/25/Windows编译/

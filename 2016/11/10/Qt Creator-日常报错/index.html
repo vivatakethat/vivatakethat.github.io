@@ -20,7 +20,7 @@
 <meta property="og:description" content="记录Qt Creator日常报错">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Superhero.jpg">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Qtcreator%E6%8A%A5%E9%94%99.png">
-<meta property="og:updated_time" content="2017-04-13T02:00:31.000Z">
+<meta property="og:updated_time" content="2017-08-19T01:22:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Qt Creator-日常报错">
 <meta name="twitter:description" content="记录Qt Creator日常报错">
@@ -49,7 +49,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">最后的意志？</h2>
+				<h2 class="blog-motto">Buiding ....</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -106,7 +106,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#windeployqt-exe-发布程序"><span class="toc-number">1.</span> <span class="toc-text">windeployqt.exe 发布程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境问题"><span class="toc-number">2.</span> <span class="toc-text">环境问题</span></a></li></ol>
 		
 		</div>
 		
@@ -136,7 +136,26 @@
 <p> Cannot open include file: ‘QApplication’: No such file or directory<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">解决办法:</span><br><span class="line">执行qmake</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="number">5.</span> <span class="string">'cl'</span> 命令不识别</span><br></pre></td></tr></table></figure></p>
 <p>‘cl’ is not recognized as an internal or external command,<br>operable program or batch file.<br>jom: C:\Qt\Qt5.8.0\Examples\Qt-5.8\widgets\widgets\build-analogclock-Desktop_Qt_5_8_0_MSVC2015_64bit-Debug\Makefile.Debug [debug\main.obj] Error 1<br>jom: C:\Qt\Qt5.8.0\Examples\Qt-5.8\widgets\widgets\build-analogclock-Desktop_Qt_5_8_0_MSVC2015_64bit-Debug\Makefile [debug] Error 2<br>16:07:35: The process “C:\Qt\Qt5.8.0\Tools\QtCreator\bin\jom.exe” exited with code 2.<br>Error while building/deploying project analogclock (kit: Desktop Qt 5.8.0 MSVC2015_64bit)<br>The kit Desktop Qt 5.8.0 MSVC2015_64bit has configuration issues which might be the root cause for this problem.<br>When executing step “Make”<br>16:07:35: Elapsed time: 00:00.<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">同时打开对应版本的`<span class="javascript"></span>`Developer Command Prompt <span class="keyword">for</span> VS2015`<span class="javascript"></span>`</span><br></pre></td></tr></table></figure></p>
 <p>‘“C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VCVarsQueryRegistry.bat”‘ is not recognized as an internal or external command,<br>operable program or batch file.<br>ERROR: Cannot determine the location of the VS installation.<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="cpp"><span class="number">6.</span> 没有头文件,环境问题</span></span><br></pre></td></tr></table></figure></p>
-<p>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\crtdefs.h:10: error: C1083: Cannot open include file: ‘corecrt.h’: No such file or directory<br>```</p>
+<p>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\crtdefs.h:10: error: C1083: Cannot open include file: ‘corecrt.h’: No such file or directory<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="http"></span><br><span class="line"></span><br><span class="line"><span class="cpp"></span><br><span class="line"><span class="number">7.</span> Qt动态加载dll</span></span></span><br></pre></td></tr></table></figure></p>
+<p>D:\gx<em>2017\2017-07\0\TVM</em>\Qt_CTicketTransportI_TVM\Qt_CTicketTransportI_TVM\main.cpp:-1: warning: C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss<br>D:\gx<em>2017\2017-07\0\TVM</em>\Qt_CTicketTransportI_TVM\Qt_CTicketTransportI_TVM\main.cpp:27: error: C2664: ‘HMODULE LoadLibraryW(LPCWSTR)’: cannot convert argument 1 from ‘const char [34]’ to ‘LPCWSTR’<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="label">解决:</span></span><br><span class="line"><span class="escape">``</span><span class="escape">`C</span>++</span><br><span class="line">    LPCWSTR dllname=L<span class="string">"equ_TicketTransportImpl_token.dll"</span><span class="comment">;</span></span><br><span class="line">HINSTANCE hInst = LoadLibrary(dllname)<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>报错: 常量中有换行符换行符</li>
+</ol>
+<p>解决:<br>在中文末尾加<code>|</code>即可消除中文编码报错的问题</p>
+<ol>
+<li>Cannot retrieve debugging output<br>解决：<br>开了2个Qt Creator;只留一个即可</li>
+</ol>
+<hr>
+<ul>
+<li>链接错误  LNK2019: 无法解析的外部符号 “public: __thiscall</li>
+</ul>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">09:16:29</span>: <span class="string">为项目Qt_CCardRecycle_SZ7A执行步骤 ...</span></span><br><span class="line"><span class="attribute">09:16:29</span>: <span class="string">配置没有改变, 跳过 qmake 步骤。</span></span><br><span class="line"><span class="attribute">09:16:29</span>: <span class="string">正在启动 "C:\Qt\Qt5.8.0\Tools\QtCreator\bin\jom.exe" </span></span><br><span class="line"></span><br><span class="line"><span class="less">	<span class="attribute">C</span>:\Qt\Qt5.<span class="number">8.0</span>\Tools\QtCreator\bin\jom.exe -f Makefile.Debug</span><br><span class="line">	cl -c -nologo <span class="attribute">-Zc</span>:wchar_t -FS -Zi -MDd -GR -W3 -w34100 -w34189 -w44996 -EHsc /Fddebug\Qt_CCardRecycle_SZ7A.vc.pdb -DUNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I..\Qt_CCardRecycle_SZ7A -I. <span class="attribute">-IC</span>:\Qt\Qt5.<span class="number">8.0</span>\<span class="number">5.8</span>\msvc2013\include <span class="attribute">-IC</span>:\Qt\Qt5.<span class="number">8.0</span>\<span class="number">5.8</span>\msvc2013\include\QtWidgets <span class="attribute">-IC</span>:\Qt\Qt5.<span class="number">8.0</span>\<span class="number">5.8</span>\msvc2013\include\QtGui <span class="attribute">-IC</span>:\Qt\Qt5.<span class="number">8.0</span>\<span class="number">5.8</span>\msvc2013\include\QtANGLE <span class="attribute">-IC</span>:\Qt\Qt5.<span class="number">8.0</span>\<span class="number">5.8</span>\msvc2013\include\QtCore -Idebug -I. <span class="attribute">-IC</span>:\Qt\Qt5.<span class="number">8.0</span>\<span class="number">5.8</span>\msvc2013\mkspecs\win32-msvc2013 -Fodebug\ <span class="variable">@C</span>:\Users\sky\AppData\Local\Temp\mainwindow.obj.<span class="number">4524.31</span>.jom</span><br><span class="line">mainwindow.cpp</span><br><span class="line">..\Qt_CCardRecycle_SZ7A\mainwindow.<span class="function">cpp</span>(<span class="number">23</span>) : warning <span class="attribute">C4189</span>: “carrecyle”: 局部变量已初始化但不引用</span><br><span class="line">	link /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /<span class="attribute">SUBSYSTEM</span>:WINDOWS <span class="string">"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"</span> /<span class="attribute">MANIFEST</span>:embed /<span class="attribute">OUT</span>:debug\Qt_CCardRecycle_SZ7A.exe <span class="variable">@C</span>:\Users\sky\AppData\Local\Temp\Qt_CCardRecycle_SZ7A.exe.<span class="number">4524.5085</span>.jom</span><br><span class="line">   正在创建库 debug\Qt_CCardRecycle_SZ7A.lib 和对象 debug\Qt_CCardRecycle_SZ7A.exp</span><br><span class="line">mainwindow.<span class="attribute">obj </span>: error <span class="attribute">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: __thiscall CCardRecycle_SZ7A::CCardRecycle_SZ7A(void)"</span> (??<span class="number">0</span>CCardRecycle_SZ7A<span class="variable">@@QAE</span><span class="variable">@XZ</span>)，该符号在函数 <span class="string">"public: __thiscall MainWindow::MainWindow(class QWidget *)"</span> (??<span class="number">0</span>MainWindow<span class="variable">@@QAE</span><span class="variable">@PAVQWidget</span>@<span class="variable">@@Z</span>) 中被引用</span><br><span class="line">debug\Qt_CCardRecycle_SZ7A.<span class="attribute">exe </span>: fatal error <span class="attribute">LNK1120</span>: <span class="number">1</span> 个无法解析的外部命令</span><br><span class="line"><span class="attribute">jom</span>: <span class="attribute">C</span>:\Users\sky\Desktop\ICardRecycleImpl_SZ7A\Qt_CCardRecycle_SZ7A\build-Qt_CCardRecycle_SZ7A-Desktop_Qt_5_8_0_MSVC2013_32bit-Debug\Makefile.Debug [debug\Qt_CCardRecycle_SZ7A.exe] Error <span class="number">1120</span></span><br><span class="line"><span class="attribute">jom</span>: <span class="attribute">C</span>:\Users\sky\Desktop\ICardRecycleImpl_SZ7A\Qt_CCardRecycle_SZ7A\build-Qt_CCardRecycle_SZ7A-Desktop_Qt_5_8_0_MSVC2013_32bit-Debug\Makefile [debug] Error <span class="number">2</span></span><br><span class="line"><span class="number">09</span>:<span class="number">16</span>:<span class="number">35</span>: 进程<span class="string">"C:\Qt\Qt5.8.0\Tools\QtCreator\bin\jom.exe"</span>退出，退出代码 <span class="number">2</span> 。</span><br><span class="line">Error while building/deploying project Qt_CCardRecycle_SZ7A (<span class="attribute">kit</span>: Desktop Qt <span class="number">5.8</span>.<span class="number">0</span> MSVC2013 <span class="number">32</span>bit)</span><br><span class="line">The kit Desktop Qt <span class="number">5.8</span>.<span class="number">0</span> MSVC2013 <span class="number">32</span>bit has configuration issues which might be the root cause for this problem.</span><br><span class="line">When executing step <span class="string">"Make"</span></span><br><span class="line"><span class="number">09</span>:<span class="number">16</span>:<span class="number">35</span>: Elapsed <span class="attribute">time</span>: <span class="number">00</span>:<span class="number">06</span>.</span></span><br></pre></td></tr></table></figure>
+<h1 id="windeployqt-exe-发布程序"><a href="#windeployqt-exe-发布程序" class="headerlink" title="windeployqt.exe 发布程序"></a>windeployqt.exe 发布程序</h1><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:<span class="command">\Qt</span><span class="command">\Qt</span>5.4.1\5.4<span class="command">\msvc</span>2013<span class="command">\bin</span>&gt;windeployqt.exe D:<span class="command">\gx</span>_2017\2017-07\0<span class="command">\TVM</span>_<span class="command">\Qt</span>_CTicketTransportI_TVM<span class="command">\build</span>-Qt_CTicketTransportI_TVM-Desktop_Qt_5_4_1_MSVC2013_32bit-Debug<span class="command">\debug</span><span class="command">\Qt</span>_CTicketTransportI_TVM.exe</span><br><span class="line">Qt: Untested Windows version 10.0 detected!</span><br><span class="line">D:<span class="command">\gx</span>_2017\2017-07\0<span class="command">\TVM</span>_<span class="command">\Qt</span>_CTicketTransportI_TVM<span class="command">\build</span>-Qt_CTicketTransportI_TVM-Desktop_Qt_5_4_1_MSVC2013_32bit-Debug<span class="command">\debug</span><span class="command">\Qt</span>_CTicketTransportI_TVM.exe 32 bit, debug executable</span><br><span class="line">Unable to locate ICU library icuin53.dl</span><br></pre></td></tr></table></figure>
+<p>解决:</p>
+<h1 id="环境问题"><a href="#环境问题" class="headerlink" title="环境问题"></a>环境问题</h1><ol>
+<li>缺少core.h文件</li>
+</ol>
+<p>[][]<br><a href="http://blog.csdn.net/geekkernel/article/details/52428164" target="_blank" rel="external"></a></p>
   
 	</div>
 
@@ -308,7 +327,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#windeployqt-exe-发布程序"><span class="toc-number">1.</span> <span class="toc-text">windeployqt.exe 发布程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境问题"><span class="toc-number">2.</span> <span class="toc-text">环境问题</span></a></li></ol>
  
   </div>
 
@@ -336,7 +355,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>37</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -344,11 +363,11 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>16</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>2</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>3</sup></a></li>
 		  
 		
 		  
@@ -401,6 +420,10 @@
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
 			
 		
@@ -409,7 +432,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>10</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
@@ -417,15 +440,15 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Linux/" title="Linux">Linux<sup>8</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Record/" title="Record">Record<sup>6</sup></a></li>
+				<li><a href="/tags/Record/" title="Record">Record<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
 			
 		
 			
@@ -437,15 +460,7 @@
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -453,11 +468,15 @@
 			
 		
 			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
@@ -469,15 +488,15 @@
 			
 		
 			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -503,12 +522,6 @@
           <li>
             
             	<a href="http://blog.csdn.net/example440982" target="_blank" title="  庆威的博客">轻微的博客</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://blog.csdn.net/qq_31803503" target="_blank" title=" 俊城的博客">JC. Lin的博客</a>
             
           </li>
         

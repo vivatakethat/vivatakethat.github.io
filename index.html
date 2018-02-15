@@ -46,7 +46,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">最后的意志？</h2>
+				<h2 class="blog-motto">Buiding ....</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -86,7 +86,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/05/17/C++模版-typename/" title="C++:模版" itemprop="url">C++:模版</a>
+      <a href="/2018/10/11/回调函数/" title="回调函数" itemprop="url">回调函数</a>
   </h1>
   <p class="article-author">By
        
@@ -96,16 +96,195 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2017-05-17T09:53:32.000Z" itemprop="datePublished"> 发表于 2017-05-17</time>
+    <time datetime="2018-10-10T16:04:10.000Z" itemprop="datePublished"> 发表于 2018-10-11</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/District%209%EF%BC%882009.jpg?imageView2/2/h/600" alt="District 9（2009" title="District 9（2009"></p>
-<ol>
-<li>typename<br>“typename”是一个C++程序设计语言中的关键字。当用于泛型编程时是另一术语”class”的同义词。[1]这个关键字用于指出模板声明（或定义）中的非独立名称（dependent names）是类型名，而非变量名。以下是对于泛型编程中typename两种迥然不同的用法的解释。</li>
+        <p><a href="http://blog.csdn.net/callmeback/article/details/4242260/" target="_blank" rel="external">http://blog.csdn.net/callmeback/article/details/4242260/</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">void printWelcome(int len)</span><br><span class="line">&#123;</span><br><span class="line">	printf("欢迎欢迎 -- %d/n", len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printGoodbye(int len)</span><br><span class="line">&#123;</span><br><span class="line">	printf("送客送客 -- %d/n", len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void callback(int times, void(*print)(int))</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	for (i = 0; i &lt; times; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		print(i);</span><br><span class="line">	&#125;</span><br><span class="line">	printf("/n我不知道你是迎客还是送客!/n/n");</span><br><span class="line">&#125;</span><br><span class="line">void main(void)</span><br><span class="line">&#123;</span><br><span class="line">	callback(10, printWelcome);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	std::cout &lt;&lt; std::endl&lt;&lt; "--------------------------------------------------------------------------------------------" &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	callback(10, printGoodbye);</span><br><span class="line">	std::cout &lt;&lt; std::endl &lt;&lt; "--------------------------------------------------------------------------------------------" &lt;&lt; std::endl;</span><br><span class="line">	printWelcome(5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Record/">Record</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/IDE/">IDE</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/10/11/回调函数/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/02/11/Q需要解决的问题/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2018-02-11T07:03:50.000Z" itemprop="datePublished"> 发表于 2018-02-11</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ol>
+<li>c++输入  cin 跟cin.get 异同</li>
 </ol>
+<ol>
+<li>在没有装oracel客户端的系统里运行occiLib 程序？</li>
+</ol>
+<ol>
+<li><p>同样的代码，在C:\Users\sky\Desktop\设备监控子系统\eof<em>Testproject</em> 无法法实现更新表操作，有时候还会阻塞？？？？？</p>
+</li>
+<li><p>深圳7号线代码中Makefile,其中一个.cpp文件编译报错，但仍然能成功生成.so文件？？</p>
+</li>
+</ol>
+<ol>
+<li><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iCurrentTime = localtime(&#38;iTime);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>怎么用？什么意思？<br>‘</p>
+ <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root<span class="annotation">@linaro</span>-<span class="string">alip:</span><span class="regexp">/# tar -zxvf updateSoftware.tar.gz -C /</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>读懂脚本</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash&#10;&#10;#&#24314;&#31435;&#36719;&#20214;&#21253;&#10;&#10;mkdir Gate&#10;&#10;#&#22797;&#21046;&#25991;&#20214;&#22841;&#21040;&#36719;&#20214;&#21253;&#10;&#10;cp -rf ./AGM_Picture ./Gate/&#10;cp -rf ./AGM_PictureCD ./Gate/&#10;cp -rf ./AGM_PictureMaintenance ./Gate/&#10;cp -rf ./WAV_CH ./Gate/&#10;cp -rf ./timesyn ./Gate/&#10;cp -rf ./DeviceBin ./Gate/&#10;cp -rf ./SOFTWARE_PACKAGE_DEBUG ./Gate/Client&#10;&#10;#&#36755;&#20837;&#29256;&#26412;&#10;&#10;var=1&#10;$var -le $#&#10;touch app.version&#10;(&#10;cat &#60;&#60;EOF&#10;[$&#123;!var&#125;]&#10;VersionID = $&#123;!var&#125;&#10;EOF&#10;) &#62;&#62;app.version&#10;&#10;&#10;#&#21387;&#32553;&#25991;&#20214;&#10;&#10;tar -zcvf $&#123;!var&#125; ./Gate ./app.version&#10;&#10;#&#21024;&#38500;&#21387;&#32553;&#27531;&#30041;&#10;&#10;rm -rf Gate app.version</span><br></pre></td></tr></table></figure>
+<ul>
+<li>g++编译  <code>__stdcall</code> 不通过</li>
+</ul>
+<ol>
+<li>char* 指向内容不能修改的问题</li>
+</ol>
+<p><a href="https://www.cnblogs.com/yylqinghao/archive/2010/04/27/1721752.html" target="_blank" rel="external">https://www.cnblogs.com/yylqinghao/archive/2010/04/27/1721752.html</a></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/02/11/Q需要解决的问题/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/02/02/operator/" title="operator用法" itemprop="url">operator用法</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2018-02-02T02:21:32.000Z" itemprop="datePublished"> 发表于 2018-02-02</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="operator用法"><a href="#operator用法" class="headerlink" title="operator用法"></a>operator用法</h1><p>示例:</p>
+<ul>
+<li><p>main.cpp</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"operator_test.h"</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">MyInt::MyInt(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span><br><span class="line">&#123;</span><br><span class="line">	m_a = a;</span><br><span class="line">	m_b=b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MyInt::<span class="keyword">operator</span> -()</span><br><span class="line">&#123;</span><br><span class="line">	m_a = -m_a;</span><br><span class="line">	m_b = -m_b;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MyInt::print()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"m_a="</span> &lt;&lt; m_a &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"m_b="</span> &lt;&lt; m_b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="function">MyInt <span class="title">F</span><span class="params">(<span class="number">14</span>, -<span class="number">25</span>)</span></span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"取负前:"</span> &lt;&lt; endl;</span><br><span class="line">	F.print();</span><br><span class="line">	-F;	<span class="comment">//相当于:    F.operator-();</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"取负后:"</span> &lt;&lt; endl;</span><br><span class="line">	F.print();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>operator_test.h</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> MyInt</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> m_a;</span><br><span class="line">	<span class="keyword">int</span> m_b;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	MyInt(<span class="keyword">int</span> a, <span class="keyword">int</span> b);</span><br><span class="line">	<span class="keyword">void</span>  <span class="keyword">operator</span> - ();</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="函数重载与定义"><a href="#函数重载与定义" class="headerlink" title="函数重载与定义"></a>函数重载与定义</h1><ol>
+<li>函数重载示例</li>
+</ol>
+<ul>
+<li><p>mian.cpp</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"overload.h"</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Tdate::Tdate()</span><br><span class="line">&#123;</span><br><span class="line">	month = <span class="number">6</span>;</span><br><span class="line">	day = <span class="number">20</span>;</span><br><span class="line">	year = <span class="number">2002</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; month &lt;&lt; <span class="string">"/"</span> &lt;&lt; day &lt;&lt; <span class="string">"/"</span> &lt;&lt; year &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Tdate::Tdate(<span class="keyword">int</span> m, <span class="keyword">int</span> d)</span><br><span class="line">&#123;</span><br><span class="line">	month = m; day = d; year = <span class="number">1979</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; month &lt;&lt; <span class="string">"/"</span> &lt;&lt; day &lt;&lt; <span class="string">"/"</span> &lt;&lt; year &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Tdate::Tdate(<span class="keyword">int</span> m, <span class="keyword">int</span> d, <span class="keyword">int</span> y)</span><br><span class="line">&#123;</span><br><span class="line">	month = m; day = d; year = y;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; month &lt;&lt; <span class="string">"/"</span> &lt;&lt; day &lt;&lt; <span class="string">"/"</span> &lt;&lt; year &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	Tdate adate;</span><br><span class="line">	<span class="function">Tdate <span class="title">bdate</span><span class="params">(<span class="number">7</span>, <span class="number">2</span>)</span></span>;</span><br><span class="line">	<span class="function">Tdate <span class="title">cdate</span><span class="params">(<span class="number">4</span>, <span class="number">20</span>, <span class="number">2006</span>)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>overload.h</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Tdate</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> month;</span><br><span class="line">	<span class="keyword">int</span> day;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Tdate();</span><br><span class="line">	Tdate(<span class="keyword">int</span> m, <span class="keyword">int</span>  d);</span><br><span class="line">	Tdate(<span class="keyword">int</span> m, <span class="keyword">int</span> d, <span class="keyword">int</span> y);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>函数再定义</li>
+</ol>
+<ul>
+<li><p>RefinitionFunction.h</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">class</span> Student</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Student::display()"</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> MiddleStudent :<span class="keyword">public</span> Student</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"MiddleStudent::display()"</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> GraduateStudent :<span class="keyword">public</span> MiddleStudent</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"GraduateStudent::displayu()"</span> &lt;&lt; endl;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>main.cpp</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"RefinitionFunction.h"</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	Student s;</span><br><span class="line">	MiddleStudent ms;</span><br><span class="line"></span><br><span class="line">	GraduateStudent gs;</span><br><span class="line">	s.display();</span><br><span class="line">	ms.display();</span><br><span class="line">	gs.display();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; endl;</span><br><span class="line">	Student *ps;</span><br><span class="line">	ps = &amp;s;</span><br><span class="line">	ps-&gt;display();</span><br><span class="line">	ps = &amp;ms;</span><br><span class="line">	ps-&gt;display();</span><br><span class="line">	ps = &amp;gs;</span><br><span class="line">	ps-&gt;display();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	MiddleStudent *take;</span><br><span class="line">	take = &amp;ms;</span><br><span class="line">	take-&gt;display();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>【OutPut】<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Student::<span class="function"><span class="title">display</span><span class="params">()</span></span></span><br><span class="line">MiddleStudent::<span class="function"><span class="title">display</span><span class="params">()</span></span></span><br><span class="line">GraduateStudent::<span class="function"><span class="title">displayu</span><span class="params">()</span></span></span><br><span class="line">------------------------------</span><br><span class="line">Student::<span class="function"><span class="title">display</span><span class="params">()</span></span></span><br><span class="line">Student::<span class="function"><span class="title">display</span><span class="params">()</span></span></span><br><span class="line">Student::<span class="function"><span class="title">display</span><span class="params">()</span></span></span><br><span class="line">------------------------------</span><br><span class="line">MiddleStudent::<span class="function"><span class="title">display</span><span class="params">()</span></span></span><br><span class="line">Press any key to continue . . .</span><br></pre></td></tr></table></figure></p>
 
         
         
@@ -135,7 +314,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2017/05/17/C++模版-typename/#disqus_thread" class="comments-count-link">Comments</a>
+		<a href="/2018/02/02/operator/#disqus_thread" class="comments-count-link">Comments</a>
 	
 </div>
 
@@ -155,7 +334,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/16/git日常报错/" title="Git日常报错" itemprop="url">Git日常报错</a>
+      <a href="/2018/02/01/ADO数据库操作/" title="ADO对数据库操作" itemprop="url">ADO对数据库操作</a>
   </h1>
   <p class="article-author">By
        
@@ -165,85 +344,17 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2017-04-16T07:42:32.000Z" itemprop="datePublished"> 发表于 2017-04-16</time>
+    <time datetime="2018-02-01T07:46:32.000Z" itemprop="datePublished"> 发表于 2018-02-01</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/batman8.jpg" alt="batman" title="batman"></p>
+        <p><a href="http://blog.csdn.net/csfreebird/article/details/424900" target="_blank" rel="external">ADO编程实用宝典</a><br><a href="http://blog.csdn.net/haizhongyun/article/details/7461273" target="_blank" rel="external">ADO技术简介(完全攻略)</a></p>
+
         
         
         <p class="article-more-link">
-          
-            <a href="/2017/04/16/git日常报错/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/php-git-hexo/">php | git | hexo</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/git/">git</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/04/16/git日常报错/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/03/31/C++primer_名词解释/" title="C++primer名词解释" itemprop="url">C++primer名词解释</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2017-03-31T04:35:32.000Z" itemprop="datePublished"> 发表于 2017-03-31</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/2012%E5%B9%B4%E7%9A%84%E5%A4%8F%E5%A4%A9%EF%BC%8C%E5%8B%87%E5%9C%A8%E6%88%91%E7%A7%9F%E7%9A%84%E6%88%BF%E5%AD%90%E9%87%8C%E5%86%99%E4%BD%9C%E4%B8%9A.jpg?imageView2/2/h/600" alt="2012年的夏天，勇在我租的房子里写作业" title="2012年的夏天，勇在我租的房子里写作业"></p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2017/03/31/C++primer_名词解释/#more">Read More</a>
           
        </p>
     </div>
@@ -269,7 +380,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2017/03/31/C++primer_名词解释/#disqus_thread" class="comments-count-link">Comments</a>
+		<a href="/2018/02/01/ADO数据库操作/#disqus_thread" class="comments-count-link">Comments</a>
 	
 </div>
 
@@ -289,7 +400,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/03/25/c++内置类型/" title="C++_基本内置类型" itemprop="url">C++_基本内置类型</a>
+      <a href="/2018/01/25/Windows编译/" title="Windows编译" itemprop="url">Windows编译</a>
   </h1>
   <p class="article-author">By
        
@@ -299,19 +410,34 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2017-03-25T07:42:32.000Z" itemprop="datePublished"> 发表于 2017-03-25</time>
+    <time datetime="2018-01-25T05:32:10.000Z" itemprop="datePublished"> 发表于 2018-01-25</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/command_conquer_red_alert_2_conceptart_8l1tm.jpg?imageView2/2/h/600" alt="command_conquer_red_alert_2_conceptart_8l1tm" title="command_conquer_red_alert_2_conceptart_8l1tm"></p>
-<p>C++中基本内置类型指:算术类型(arthmetic type)、和空类型(void)<br>
+        <ol>
+<li><code>This function or variable may be unsafe</code><br>vs2015报错:<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Severity	Code	Description	Project	File	Line	Suppression State</span><br><span class="line">Error	C4996	'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, <span class="operator"><span class="keyword">use</span> _CRT_SECURE_NO_WARNINGS. See <span class="keyword">online</span> <span class="keyword">help</span> <span class="keyword">for</span> details.	DLL_ZBLCommunication	<span class="keyword">d</span>:\gx_2017\<span class="number">2017</span>-<span class="number">07</span>\<span class="number">0</span>\dll_zblcommunication\dll_zblcommunication\zblcommunication.cpp	<span class="number">156</span>	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Severity	Code	Description	<span class="keyword">Project</span>	<span class="keyword">File</span>	Line	Suppression State</span><br><span class="line"><span class="keyword">Error</span>	C4996	<span class="string">'fopen'</span>: This <span class="keyword">function</span> <span class="keyword">or</span> <span class="keyword">variable</span> may be <span class="keyword">unsafe</span>. <span class="keyword">Consider</span> <span class="keyword">using</span> fopen_s instead. <span class="keyword">To</span> <span class="keyword">disable</span> deprecation, <span class="keyword">use</span> _CRT_SECURE_NO_WARNINGS. See <span class="keyword">online</span> <span class="keyword">help</span> <span class="keyword">for</span> details.	DLL_ZBLCommunication	<span class="keyword">d</span>:\gx_2017\<span class="number">2017</span>-<span class="number">07</span>\<span class="number">0</span>\dll_zblcommunication\dll_zblcommunication\zblcommunication.cpp	<span class="number">504</span>	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Severity	Code	Description	<span class="keyword">Project</span>	<span class="keyword">File</span>	Line	Suppression State</span><br><span class="line"><span class="keyword">Error</span>	C4996	<span class="string">'fopen'</span>: This <span class="keyword">function</span> <span class="keyword">or</span> <span class="keyword">variable</span> may be <span class="keyword">unsafe</span>. <span class="keyword">Consider</span> <span class="keyword">using</span> fopen_s instead. <span class="keyword">To</span> <span class="keyword">disable</span> deprecation, <span class="keyword">use</span> _CRT_SECURE_NO_WARNINGS. See <span class="keyword">online</span> <span class="keyword">help</span> <span class="keyword">for</span> details.	DLL_ZBLCommunication	<span class="keyword">d</span>:\gx_2017\<span class="number">2017</span>-<span class="number">07</span>\<span class="number">0</span>\dll_zblcommunication\dll_zblcommunication\zblcommunication.cpp	<span class="number">531</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>解决</strong>:</p>
+<ol>
+<li>工程属性添加预处理命令<br>在属性页面中找到“C/C++”——”预处理器“，按下图操作单击箭头指向处的按钮</li>
+</ol>
+<p>在下面的编辑窗口中添加一句命令：<code>_CRT_SECURE_NO_WARNINGS</code><br>添加完成后应用并退出</p>
+<ol>
+<li><p>我在代码开头添加</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>unexpected token(s)  preceding;&#39;</code>、<code>type &#39;int&#39; unexpected</code>、<code>this  declaration has no storage class or type specifer</code></p>
+</li>
+</ol>
+<p>解决:在出错代码前加<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;Windows.h&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<hr>
+
         
         
         <p class="article-more-link">
-          
-            <a href="/2017/03/25/c++内置类型/#more">Read More</a>
           
        </p>
     </div>
@@ -337,74 +463,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2017/03/25/c++内置类型/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/03/24/编程建议/" title="编程建议" itemprop="url">编程建议</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2017-03-24T04:21:32.000Z" itemprop="datePublished"> 发表于 2017-03-24</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/AC130.jpg?imageView2/2/h/600" alt="AC130" title="AC130."></p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2017/03/24/编程建议/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/原理-理论/">原理 | 理论</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/计算机/">计算机</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/03/24/编程建议/#disqus_thread" class="comments-count-link">Comments</a>
+		<a href="/2018/01/25/Windows编译/#disqus_thread" class="comments-count-link">Comments</a>
 	
 </div>
 
@@ -420,7 +479,7 @@
 
 
   <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
@@ -450,7 +509,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>37</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -458,11 +517,11 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>16</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>2</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>3</sup></a></li>
 		  
 		
 		  
@@ -515,6 +574,10 @@
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
 			
 		
@@ -523,7 +586,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>10</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
@@ -531,15 +594,15 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Linux/" title="Linux">Linux<sup>8</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Record/" title="Record">Record<sup>6</sup></a></li>
+				<li><a href="/tags/Record/" title="Record">Record<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
 			
 		
 			
@@ -551,15 +614,7 @@
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -567,11 +622,15 @@
 			
 		
 			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
@@ -583,15 +642,15 @@
 			
 		
 			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -617,12 +676,6 @@
           <li>
             
             	<a href="http://blog.csdn.net/example440982" target="_blank" title="  庆威的博客">轻微的博客</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://blog.csdn.net/qq_31803503" target="_blank" title=" 俊城的博客">JC. Lin的博客</a>
             
           </li>
         

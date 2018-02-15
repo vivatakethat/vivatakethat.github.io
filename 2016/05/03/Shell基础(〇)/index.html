@@ -24,7 +24,7 @@
 教材《Linux Shell命令行及脚本编程实例详解》">
 <meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/%E9%A3%9E%E8%A1%8C%E5%99%A8.jpg">
 <meta property="og:image" content="http://7xsic8.com2.z0.glb.clouddn.com/shell%E4%B8%8Elinux%E5%85%B3%E7%B3%BB%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-01-16T13:40:42.091Z">
+<meta property="og:updated_time" content="2018-01-25T06:59:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell基础学习(零)">
 <meta name="twitter:description" content="2016-05-03,周二(假期)
@@ -55,7 +55,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">最后的意志？</h2>
+				<h2 class="blog-motto">Buiding ....</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -112,7 +112,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Shell简介"><span class="toc-number">1.</span> <span class="toc-text">Shell简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell中的变量"><span class="toc-number">1.1.</span> <span class="toc-text">Shell中的变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell脚本"><span class="toc-number">1.2.</span> <span class="toc-text">shell脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义变量"><span class="toc-number">1.2.1.</span> <span class="toc-text">定义变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量的引用"><span class="toc-number">1.2.2.</span> <span class="toc-text">变量的引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SHell环境进阶"><span class="toc-number">1.3.</span> <span class="toc-text">SHell环境进阶</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Shell简介"><span class="toc-number">1.</span> <span class="toc-text">Shell简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell中的变量"><span class="toc-number">1.1.</span> <span class="toc-text">Shell中的变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell脚本"><span class="toc-number">1.2.</span> <span class="toc-text">shell脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义变量"><span class="toc-number">1.2.1.</span> <span class="toc-text">定义变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量的引用"><span class="toc-number">1.2.2.</span> <span class="toc-text">变量的引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SHell环境进阶"><span class="toc-number">1.3.</span> <span class="toc-text">SHell环境进阶</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shell脚本编写"><span class="toc-number">2.</span> <span class="toc-text">shell脚本编写</span></a></li></ol>
 		
 		</div>
 		
@@ -299,6 +299,9 @@
 <p><strong>!<code>COMMAND</code></strong>回调最<code>近一次</code>执行的以指定字符开头的命令<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/home/takethat/scripts<span class="preprocessor"># !up</span></span><br><span class="line">uptime</span><br><span class="line"> <span class="number">19</span>:<span class="number">48</span>:<span class="number">54</span> up <span class="number">34</span> min,  <span class="number">1</span> user,  load average: <span class="number">0.00</span>, <span class="number">0.01</span>, <span class="number">0.05</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>使用<code>history</code>列出列表的行号来重新调用历史命令</strong></p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 2030  <span class="keyword">ls</span></span><br><span class="line"> 2031  <span class="keyword">cd</span> ..</span><br><span class="line"> 2032  <span class="keyword">ls</span></span><br><span class="line"> 2033  history</span><br><span class="line">root@ubuntu:/home/takethat# !2032</span><br><span class="line"><span class="keyword">ls</span></span><br><span class="line">1          arm   code     Documents  end2         Installer  <span class="keyword">one</span>       scripts   <span class="keyword">shell</span>   temp       test1  UDP-<span class="keyword">test</span></span><br><span class="line">1.txt      bash  core     Downloads  gdb-simple   Music      Pictures  server    shell2  Templates  <span class="keyword">two</span>    userdata</span><br><span class="line">algorithm  C     Desktop  end        githublocal  ncre2      Public    server.c  socket  <span class="keyword">test</span>       UDP    Videos</span><br></pre></td></tr></table></figure>
+<h1 id="shell脚本编写"><a href="#shell脚本编写" class="headerlink" title="shell脚本编写"></a>shell脚本编写</h1><ol>
+<li>shell脚本传参数</li>
+</ol>
   
 	</div>
 
@@ -470,7 +473,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Shell简介"><span class="toc-number">1.</span> <span class="toc-text">Shell简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell中的变量"><span class="toc-number">1.1.</span> <span class="toc-text">Shell中的变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell脚本"><span class="toc-number">1.2.</span> <span class="toc-text">shell脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义变量"><span class="toc-number">1.2.1.</span> <span class="toc-text">定义变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量的引用"><span class="toc-number">1.2.2.</span> <span class="toc-text">变量的引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SHell环境进阶"><span class="toc-number">1.3.</span> <span class="toc-text">SHell环境进阶</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Shell简介"><span class="toc-number">1.</span> <span class="toc-text">Shell简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell中的变量"><span class="toc-number">1.1.</span> <span class="toc-text">Shell中的变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell脚本"><span class="toc-number">1.2.</span> <span class="toc-text">shell脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义变量"><span class="toc-number">1.2.1.</span> <span class="toc-text">定义变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量的引用"><span class="toc-number">1.2.2.</span> <span class="toc-text">变量的引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SHell环境进阶"><span class="toc-number">1.3.</span> <span class="toc-text">SHell环境进阶</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shell脚本编写"><span class="toc-number">2.</span> <span class="toc-text">shell脚本编写</span></a></li></ol>
  
   </div>
 
@@ -498,7 +501,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>37</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -506,11 +509,11 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>16</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>2</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>3</sup></a></li>
 		  
 		
 		  
@@ -563,6 +566,10 @@
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
 			
 		
@@ -571,7 +578,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>10</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
@@ -579,15 +586,15 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Linux/" title="Linux">Linux<sup>8</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Record/" title="Record">Record<sup>6</sup></a></li>
+				<li><a href="/tags/Record/" title="Record">Record<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
 			
 		
 			
@@ -599,15 +606,7 @@
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -615,11 +614,15 @@
 			
 		
 			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
@@ -631,15 +634,15 @@
 			
 		
 			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -665,12 +668,6 @@
           <li>
             
             	<a href="http://blog.csdn.net/example440982" target="_blank" title="  庆威的博客">轻微的博客</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://blog.csdn.net/qq_31803503" target="_blank" title=" 俊城的博客">JC. Lin的博客</a>
             
           </li>
         

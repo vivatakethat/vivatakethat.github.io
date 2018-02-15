@@ -23,7 +23,7 @@ c++  Primer第五版">
 
 c++  Primer第五版">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg">
-<meta property="og:updated_time" content="2017-05-03T13:45:38.000Z">
+<meta property="og:updated_time" content="2017-08-08T02:33:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++:类、函数、指针、构造函数">
 <meta name="twitter:description" content="c++零碎笔记：类、函数、引用、指针、const(指针)、auto、 constexpr变量、decltype
@@ -54,7 +54,7 @@ c++  Primer第五版">
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">最后的意志？</h2>
+				<h2 class="blog-motto">Buiding ....</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -156,7 +156,7 @@ c++  Primer第五版">
 <ul>
 <li>const的引用</li>
 </ul>
-<p>把引用绑定到const对象上，就想绑定到其它对象上，我们称之为<code>对象的引用(reference to const)</code></p>
+<p>把引用绑定到const对象上，就像绑定到其它对象上，我们称之为<code>对象的引用(reference to const)</code></p>
 <blockquote>
 <p>与普通引用不一样的是，对常量的引用不能被用作修改它所绑定的对象</p>
 </blockquote>
@@ -225,7 +225,7 @@ c++  Primer第五版">
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line">Press any key to <span class="keyword">continue</span> . . .</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><a href="http://blog.csdn.net/melody_fhm/article/details/6683504" target="_blank" rel="external">参考博文</a></p>
+<p><a href="http://blog.chinaunix.net/uid-21375345-id-3321186.html" target="_blank" rel="external">参考博文</a></p>
 <ul>
 <li>指针和数组</li>
 </ul>
@@ -265,7 +265,7 @@ c++  Primer第五版">
 <blockquote>
 <p>array是二维数组名，array代表整个二维数组首地址，也是二维数组第0个元素的首地址。</p>
 <blockquote>
-<p>array+1代表array<a href="http://blog.csdn.net/melody_fhm/article/details/6683504" target="_blank" rel="external">1</a>的首地址。将array分解为2个一维数组，即array[0],array<a href="http://blog.csdn.net/melody_fhm/article/details/6683504" target="_blank" rel="external">1</a></p>
+<p>array+1代表array<a href="http://blog.chinaunix.net/uid-21375345-id-3321186.html" target="_blank" rel="external">1</a>的首地址。将array分解为2个一维数组，即array[0],array<a href="http://blog.chinaunix.net/uid-21375345-id-3321186.html" target="_blank" rel="external">1</a></p>
 </blockquote>
 </blockquote>
 <p>实例代码:二维数组和指针<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">2</span>][<span class="number">3</span>] = &#123; &#123; <span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span> &#125;,&#123; <span class="number">21</span>,<span class="number">22</span>,<span class="number">23</span> &#125; &#125;;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; *(<span class="built_in">array</span> + i) &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; *(*(<span class="built_in">array</span> + i) + j) &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">int</span>(*p)[<span class="number">3</span>];	<span class="comment">//指向包含3个元素的一维数组</span></span><br><span class="line">	p = <span class="built_in">array</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; *(*(p + i) + j) &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -473,6 +473,11 @@ c++  Primer第五版">
 </ul>
 <p><strong><code>注意</code></strong>:定义一个引用之后，对其所有的操作都是在与之绑定的对象上进行的：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">"Sales_item.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">int</span> &amp;c = a;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> d = <span class="number">44</span>;</span><br><span class="line"></span><br><span class="line">	c = d;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; c &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>【output】<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">44</span></span><br><span class="line"><span class="number">44</span></span><br><span class="line">Press any key to <span class="keyword">continue</span> . . .</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>const用在函数后面</li>
+</ul>
+<p><a href="http://blog.chinaunix.net/uid-21375345-id-3321186.html" target="_blank" rel="external">函数后面加一个const的作用（转</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> temp</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">temp(<span class="keyword">int</span> age);</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setNum</span><span class="params">(<span class="keyword">int</span> num)</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line">temp::temp(<span class="keyword">int</span> age)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">this</span>-&gt;age = age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> temp::getAge() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//age+=10; // #Error...error C2166: l-value specifies const object #</span></span><br><span class="line"><span class="keyword">return</span>  age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="function">temp <span class="title">a</span><span class="params">(<span class="number">22</span>)</span></span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"age= "</span> &lt;&lt; a.getAge() &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="指针和const"><a href="#指针和const" class="headerlink" title="指针和const"></a>指针和const</h2><p>指向常量的指针<em>(poinger to const)</em>不能用于改变其所指对象的值。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> pi=<span class="number">3.14</span>;		<span class="comment">//pi是一个常量，它的值不能改变</span></span><br><span class="line"><span class="keyword">double</span> *ptr=&amp;pi;			<span class="comment">//错误：ptr是一个普通的指针</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> *cptr=&amp;pi;		<span class="comment">//正确：cptr可以指向一个双精度常量</span></span><br><span class="line">*ptr=<span class="number">42</span>;</span><br></pre></td></tr></table></figure></p>
 <h2 id="const指针"><a href="#const指针" class="headerlink" title="const指针"></a>const指针</h2><p>指针是对象而引用不是，因此指针本上可定位常量。<strong>常量指针(const point)</strong>必须初始化。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> errNumb=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> *<span class="keyword">const</span> curErr=&amp;errNumb;		<span class="comment">//curErr将一直指向errNumb</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> pi=<span class="number">3.14159</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> *<span class="keyword">const</span> pip=&amp;pi;	<span class="comment">//pip是一个指向常量对象的常量指针;无论pip所指的对象值还是pip自己存储的那个地址都不能改变。</span></span><br><span class="line"></span><br><span class="line">	*pip = <span class="number">2.723</span>;			<span class="comment">//错误，pip是一个指向常量的指针</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (*curErr) &#123;				<span class="comment">//如果curErr所指的对象(也就是errNum)不为0则执行花括号内的</span></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt;<span class="string">"mark"</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="顶层const"><a href="#顶层const" class="headerlink" title="顶层const"></a>顶层const</h3><p>指针本身是不是常量以及指针所指的是不是一个常量是2个互相独立的问题。用名词<strong>顶层const</strong>(top-level const)表示指针本身是个常量，而用名词<strong>底层const</strong>(low-level const)表示指针所指的对象是一个常量。</p>
@@ -773,7 +778,7 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>37</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -781,11 +786,11 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>16</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>2</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>3</sup></a></li>
 		  
 		
 		  
@@ -838,6 +843,10 @@ c++  Primer第五版">
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
 			
 		
@@ -846,7 +855,7 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>10</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
@@ -854,15 +863,15 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Linux/" title="Linux">Linux<sup>8</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Record/" title="Record">Record<sup>6</sup></a></li>
+				<li><a href="/tags/Record/" title="Record">Record<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
 			
 		
 			
@@ -874,15 +883,7 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -890,11 +891,15 @@ c++  Primer第五版">
 			
 		
 			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
@@ -906,15 +911,15 @@ c++  Primer第五版">
 			
 		
 			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -940,12 +945,6 @@ c++  Primer第五版">
           <li>
             
             	<a href="http://blog.csdn.net/example440982" target="_blank" title="  庆威的博客">轻微的博客</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://blog.csdn.net/qq_31803503" target="_blank" title=" 俊城的博客">JC. Lin的博客</a>
             
           </li>
         

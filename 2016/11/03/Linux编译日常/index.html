@@ -20,7 +20,7 @@
 <meta property="og:description" content="Linux编译日常备忘。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg">
 <meta property="og:image" content="http://www.cnblogs.com/ggjucheng/archive/2011/12/15/2289291.html">
-<meta property="og:updated_time" content="2017-03-15T08:26:16.000Z">
+<meta property="og:updated_time" content="2017-08-14T09:22:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下编译日常">
 <meta name="twitter:description" content="Linux编译日常备忘。">
@@ -49,7 +49,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">最后的意志？</h2>
+				<h2 class="blog-motto">Buiding ....</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -106,7 +106,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封成库文件"><span class="toc-number">2.</span> <span class="toc-text">封成库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">3.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">3.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#格式不正确"><span class="toc-number">4.</span> <span class="toc-text">格式不正确</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程序在目标机运行错误"><span class="toc-number">5.</span> <span class="toc-text">程序在目标机运行错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">6.</span> <span class="toc-text">g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">7.</span> <span class="toc-text">g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封成库文件"><span class="toc-number">2.</span> <span class="toc-text">封成库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多文件编译实例"><span class="toc-number">3.</span> <span class="toc-text">多文件编译实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">4.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">4.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#格式不正确"><span class="toc-number">5.</span> <span class="toc-text">格式不正确</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程序在目标机运行错误"><span class="toc-number">6.</span> <span class="toc-text">程序在目标机运行错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">7.</span> <span class="toc-text">g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">8.</span> <span class="toc-text">g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li></ol>
 		
 		</div>
 		
@@ -141,6 +141,22 @@
 </li>
 <li><p>将生成的run文件和.so文件拷贝到目标机<br>将.so文件拷贝到/ust/lib下</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp  libRS232.so  /usr/<span class="class"><span class="keyword">lib</span>/</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>g++  Self_IO.h  Self_IO.c    -fPIC -shared -o libSELF_IO.so</p>
+<h1 id="多文件编译实例"><a href="#多文件编译实例" class="headerlink" title="多文件编译实例"></a>多文件编译实例</h1><ol>
+<li><p>功能函数<br><code>add.cpp</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a + b;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>头文件<br><code>function.h</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::endl;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用的主函数</p>
+</li>
+</ol>
+<p><code>main.cpp</code><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"function.h"</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; add(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>编译<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># <span class="tag">g</span>++ <span class="tag">main</span><span class="class">.cpp</span> <span class="tag">add</span><span class="class">.cpp</span> <span class="tag">-o</span> <span class="tag">add</span><span class="class">.out</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h1 id="Linux驱动"><a href="#Linux驱动" class="headerlink" title="Linux驱动"></a>Linux驱动</h1><h2 id="声明报错"><a href="#声明报错" class="headerlink" title="声明报错"></a>声明报错</h2><ol>
@@ -206,7 +222,7 @@
 <p>（2）修改了只读内存。</p>
 <p>（3）还有本例也是修改了只读内存。</p>
 <ul>
-<li>ulimit -c unlimited 调试错误的core<br><strong><code>1.</code></strong> <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ulimit -c unlimited  </span><br><span class="line"><span class="escape">``</span><span class="escape">` </span></span><br><span class="line">个命令的时候主要是为了产生core文件，就是程序运行发行段错误时的文件</span><br><span class="line"></span><br><span class="line">**<span class="escape">``</span><span class="number">2</span>.<span class="escape">``</span>**<span class="escape">`然</span>后再执行gdb调试core文件找出具体错误</span><br></pre></td></tr></table></figure></li>
+<li>ulimit -c unlimited 调试错误的core<br><strong><code>1.</code></strong> <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ulimit -c unlimited  </span><br><span class="line"><span class="escape">``</span><span class="escape">` </span></span><br><span class="line">个命令的时候主要是为了产生core文件，就是程序运行发行段错误时的文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">注意如果执行<span class="escape">`u</span>limit -c unlimited<span class="escape">`没</span>有生成<span class="escape">`c</span>ore<span class="escape">`文</span>件则先检查</span><br><span class="line"></span><br><span class="line">**<span class="escape">``</span><span class="number">2</span>.<span class="escape">``</span>**<span class="escape">`然</span>后再执行gdb调试core文件找出具体错误</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>gdb RS232_RUN core<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;格式为<span class="symbol">:<span class="string">``</span>gdb</span>   程序名  core文件<span class="string">``</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**<span class="string">``</span><span class="number">3</span>.<span class="string">``</span>**在gdb中执行<span class="string">``</span>bt<span class="string">``</span>调出列出调用栈</span><br><span class="line">&gt;bt（backtrace）</span><br></pre></td></tr></table></figure></p>
 <p>root@ubuntu:~/gx# gdb RS232_RUN core<br>GNU gdb (Ubuntu/Linaro 7.4-2012.04-0ubuntu2.1) 7.4-2012.04<br>Copyright (C) 2012 Free Software Foundation, Inc.<br>License GPLv3+: GNU GPL version 3 or later <a href="http://gnu.org/licenses/gpl.html" target="_blank" rel="external">http://gnu.org/licenses/gpl.html</a><br>This is free software: you are free to change and redistribute it.<br>There is NO WARRANTY, to the extent permitted by law.  Type “show copying”<br>and “show warranty” for details.<br>This GDB was configured as “x86_64-linux-gnu”.<br>For bug reporting instructions, please see:<br><a href="http://bugs.launchpad.net/gdb-linaro/" target="_blank" rel="external">http://bugs.launchpad.net/gdb-linaro/</a>…<br>Reading symbols from /root/gx/RS232_RUN…(no debugging symbols found)…done.<br>[New LWP 3277]</p>
@@ -215,10 +231,8 @@
 <p>#0  0x0000000000400a92 in Rs232::in_door() ()</p>
 <p>#1  0x0000000000400a64 in main ()<br>(gdb)<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> &#10;&#10;&#10;# linux&#19979;&#32534;&#35793;boost::thread&#31243;&#24207;&#10;&#10;&#27491;&#30830;&#38142;&#25509;&#24211;</span><br></pre></td></tr></table></figure></p>
 <h1 id="g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><a href="#g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib" class="headerlink" title="g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib"></a>g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">运行正确</span><br></pre></td></tr></table></figure>
-<h1 id="g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><a href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib" class="headerlink" title="g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib"></a>g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</h1><p>```</p>
-<blockquote>
-<p>gcc编译链接动态库时，很有可能编译通过，但是执行时，找不到动态链接库，那是因为-L选项指定的路径只在编译时有效，编译出来的可执行文件不知道-L选项后面的值，通过<code>-Wl,rpath=&lt;your_lib_dir&gt;</code>，或<code>-Wl,-rpath,&lt;your_lib_dir&gt;</code>使得execute记住链接库的位置</p>
-</blockquote>
+<h1 id="g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><a href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib" class="headerlink" title="g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib"></a>g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</h1><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;gcc编译链接动态库时，很有可能编译通过，但是执行时，找不到动态链接库，那是因为-L选项指定的路径只在编译时有效，编译出来的可执行文件不知道-L选项后面的值，通过<span class="escape">``</span>-Wl,rpath=&lt;your_lib_dir&gt;<span class="escape">``</span>，或<span class="escape">``</span><span class="escape">`-</span>Wl,-rpath,&lt;your_lib_dir&gt;<span class="escape">``</span><span class="escape">`使</span>得execute记住链接库的位置</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ ulimit -c ulimited  报错</span><br></pre></td></tr></table></figure>
+<p>[root@localhost Test]# ulimit -c ulimited<br>-bash: ulimit: ulimited: invalid number<br>```</p>
   
 	</div>
 
@@ -390,7 +404,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封成库文件"><span class="toc-number">2.</span> <span class="toc-text">封成库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">3.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">3.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#格式不正确"><span class="toc-number">4.</span> <span class="toc-text">格式不正确</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程序在目标机运行错误"><span class="toc-number">5.</span> <span class="toc-text">程序在目标机运行错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">6.</span> <span class="toc-text">g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">7.</span> <span class="toc-text">g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封成库文件"><span class="toc-number">2.</span> <span class="toc-text">封成库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多文件编译实例"><span class="toc-number">3.</span> <span class="toc-text">多文件编译实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux驱动"><span class="toc-number">4.</span> <span class="toc-text">Linux驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#声明报错"><span class="toc-number">4.1.</span> <span class="toc-text">声明报错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#格式不正确"><span class="toc-number">5.</span> <span class="toc-text">格式不正确</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程序在目标机运行错误"><span class="toc-number">6.</span> <span class="toc-text">程序在目标机运行错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-I-inlcude-L-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">7.</span> <span class="toc-text">g++ -I./inlcude -L./lib first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#g-Ilibboost-thread-so-1-59-0-L-usr-local-lib-first-cpp-lboost-thread-lboost-system-o-example-Wl-rpath-usr-local-lib"><span class="toc-number">8.</span> <span class="toc-text">g++ -Ilibboost_thread.so.1.59.0 -L./usr/local/lib/ first.cpp -lboost_thread -lboost_system -o example -Wl,-rpath,/usr/local/lib</span></a></li></ol>
  
   </div>
 
@@ -418,7 +432,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>37</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -426,11 +440,11 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>16</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>2</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>3</sup></a></li>
 		  
 		
 		  
@@ -483,6 +497,10 @@
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
 			
 		
@@ -491,7 +509,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>10</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
@@ -499,15 +517,15 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Linux/" title="Linux">Linux<sup>8</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Record/" title="Record">Record<sup>6</sup></a></li>
+				<li><a href="/tags/Record/" title="Record">Record<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
 			
 		
 			
@@ -519,15 +537,7 @@
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -535,11 +545,15 @@
 			
 		
 			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
@@ -551,15 +565,15 @@
 			
 		
 			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -585,12 +599,6 @@
           <li>
             
             	<a href="http://blog.csdn.net/example440982" target="_blank" title="  庆威的博客">轻微的博客</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://blog.csdn.net/qq_31803503" target="_blank" title=" 俊城的博客">JC. Lin的博客</a>
             
           </li>
         

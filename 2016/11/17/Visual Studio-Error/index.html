@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="记录visualstudio日常错误">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/angry-hulk-53743-1920x1080.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2017-04-04T03:29:56.000Z">
+<meta property="og:updated_time" content="2018-01-03T02:16:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Visual Studio-Error">
 <meta name="twitter:description" content="记录visualstudio日常错误">
@@ -48,7 +48,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">最后的意志？</h2>
+				<h2 class="blog-motto">Buiding ....</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -105,7 +105,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#无法解析到函数"><span class="toc-number">1.</span> <span class="toc-text">无法解析到函数</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#无法解析到函数"><span class="toc-number">1.</span> <span class="toc-text">无法解析到函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#无法解析的外部符号-链接错误"><span class="toc-number">2.</span> <span class="toc-text">无法解析的外部符号 链接错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#visualstudio已停止工作系列"><span class="toc-number">3.</span> <span class="toc-text">visualstudio已停止工作系列</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#visualstudio无法停留在断点或者-运行程序-一闪而过"><span class="toc-number">4.</span> <span class="toc-text">visualstudio无法停留在断点或者 运行程序 一闪而过</span></a></li></ol>
 		
 		</div>
 		
@@ -139,6 +139,59 @@
 <p>解决办法：</p>
 <p>选中工程项目，鼠标右键<code>properties</code> —&gt;<code>Configuration properties</code>–&gt;<code>General</code>—&gt;<code>Platform Toolset</code></p>
 <p>平台工具集的本质是<code>msbuuild</code>其目录在<code>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0</code></p>
+<ul>
+<li><code>Cannot open include file: &#39;stdafx.h</code></li>
+</ul>
+<ol>
+<li>在项目中添加文件StdAfx.h；</li>
+</ol>
+<p>注意到:要将这个文件添加进去即可，该文件的内容可以是空的，什么都没有，只要有这个文件即可；有这个文件就可以通过编译了。(而事实上，在项目文件夹中看不到这个文件，系统将其隐藏了！！！！)</p>
+<pre><code>[参考了网上博文][]
+
+
+
+
+[参考了网上博文]: http://blog.163.com/yuyang_tech/blog/static/216050083201211310210206
+</code></pre><ul>
+<li><p><code>_tmain</code>问题<br>VS2015报错</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> Severity	Code	Description	Project	<span class="keyword">File</span>	Line	Suppression State</span><br><span class="line">Error	LNK2019	unresolved <span class="keyword">external</span> symbol _main referenced <span class="keyword">in</span> <span class="function"><span class="keyword">function</span> "<span class="title">int</span> __<span class="title">cdecl</span> <span class="title">invoke_main</span><span class="params">(void)</span>" <span class="params">(?invoke_main@@YAHXZ)</span>	<span class="title">Client</span>	<span class="title">D</span>:</span>\gx_2017\<span class="number">0</span>_2017-<span class="number">05</span>\socket_first\Client\Client\MSVCRTD.lib(exe_main.obj)	<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>解决</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> <span class="keyword">int</span> _<span class="function">cdecl <span class="title">wmain</span><span class="params">(<span class="keyword">int</span> argc, wchar_t* argv[])</span></span>&#123; ......</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.cnblogs.com/snake-hand/archive/2013/06/08/3127602.html" target="_blank" rel="external">参考网页</a></p>
+</li>
+</ul>
+<ul>
+<li>Cannot open include file: ‘iostream.h’<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">D</span>:\Users\takethat\Desktop\temp\dll_temp&gt;<span class="keyword">cl</span> /c dll_nolib.cpp</span><br><span class="line">Microsoft (R) C/C++ Optimizing Compiler <span class="keyword">Version</span> 19.00.24215.1 <span class="keyword">for</span> x86</span><br><span class="line"><span class="keyword">Copyright</span> (C) Microsoft Corporation.  All rights reserved.</span><br><span class="line"></span><br><span class="line">dll_nolib.cpp</span><br><span class="line">dll_nolib.cpp(2): fatal <span class="keyword">error</span> C1083: Cannot <span class="keyword">open</span> <span class="keyword">include</span> <span class="keyword">file</span>: 'iostream.<span class="keyword">h</span>': <span class="keyword">No</span> such <span class="keyword">file</span> or directory</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>报错代码<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;objbase.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure></p>
+<p>中<code>#include&lt;iostream.h&gt;</code>是VC6以前的写法<br>应该用标准库的写法<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream &gt;</span> </span></span><br><span class="line"><span class="keyword">using</span>  <span class="keyword">namespace</span>  <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details</code></li>
+</ul>
+<p>解决:在报错代码顶部添加<figure class="highlight"><figcaption><span>_CRT_SECURE_NO_WARNINGS```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10;&#10;&#10;&#10;+ LPTSTR&#39; to &#39;const char &#38382;&#39064;</span><br></pre></td></tr></table></figure></p>
+<p>Severity    Code    Description    Project    File    Line    Suppression State<br>Error    C2664    ‘char <em>strcpy(char </em>,const char <em>)’: cannot convert argument 2 from ‘LPTSTR’ to ‘const char </em>‘    DLL_ICardRecycleImpl    d:\gx_2017\2017-07\0\dll_icardrecycleimpl\dll_icardrecycleimpl\windowsserial.cpp    301<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">解决：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ The build tools <span class="keyword">for</span> v140 (<span class="keyword">Platform</span> Toolset = <span class="string">'v140'</span>) cannot be found.</span><br></pre></td></tr></table></figure></p>
+<p>错误    1    error MSB8020: The build tools for v140 (Platform Toolset = ‘v140’) cannot be found. To build using the v140 build tools, please install v140 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting “Upgrade Solution…”.    C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.Cpp.Platform.targets    64    5    DLL_ZBLCommunication<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="http"></span><br><span class="line"></span><br><span class="line"><span class="http"></span><br><span class="line"></span><br><span class="line"><span class="cpp">+ 无法将参数 <span class="number">2</span> 从“LPTSTR”转换为“<span class="keyword">const</span> <span class="keyword">char</span> *”</span></span></span></span><br></pre></td></tr></table></figure></p>
+<p>错误    1    error C2664: “char <em>strcpy(char </em>,const char <em>)”: 无法将参数 2 从“LPTSTR”转换为“const char </em>”    C:\Users\sky\Desktop\ICardRecycleImpl_SZ7A\DLL_ICardRecycleImpl\DLL_ICardRecycleImpl\WindowsSerial.cpp    301    1    DLL_ICardRecycleImpl<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码报错的那条语句</span><br></pre></td></tr></table></figure></p>
+<pre><code>strcpy(c_ALLShow_ComName,lpszPortName);
+</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">参数原型:</span><br><span class="line">```C++</span><br><span class="line"> <span class="keyword">char</span> c_ALLShow_ComName[<span class="number">30</span>];<span class="comment">//显示用既串口名</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span>   CSerial::OpenPort(LPTSTR   lpszPortName,<span class="keyword">int</span> i_BaudRate)</span><br></pre></td></tr></table></figure>
+<p>在vs2015(v140)却不会报这个错，在vs2013(v120)却会报这个错</p>
+<ul>
+<li>项目字符编码问题<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>&gt;g:\vs_project\vs2017_temp\test_2017\test_2017\test_source.cpp(<span class="number">19</span>): error C2440: <span class="string">'initializing'</span>: cannot convert <span class="keyword">from</span> <span class="string">'WCHAR [260]'</span> <span class="keyword">to</span> <span class="string">'std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt;&gt;'</span></span><br><span class="line"><span class="number">1</span>&gt;g:\vs_project\vs2017_temp\test_2017\test_2017\test_source.cpp(<span class="number">19</span>): note: No <span class="function"><span class="keyword">constructor</span> <span class="title">could</span> <span class="title">take</span> <span class="title">the</span> <span class="title">source</span> <span class="title">type</span>, <span class="title">or</span> <span class="title">constructor</span> <span class="title">overload</span> <span class="title">resolution</span> <span class="title">was</span> <span class="title">ambiguous</span></span><br><span class="line">1&gt;<span class="title">Done</span> <span class="title">building</span> <span class="title">project</span> "<span class="title">Test_2017</span>.<span class="title">vcxproj</span>" -- <span class="title">FAILED</span>.</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>实际解决:</p>
+<p>是将Project Properties中的Configureation Properties-&gt;General-&gt;Character Set = Not Set，重新编译即可</p>
+<blockquote>
+<p>请阅读这篇文章 <a href="http://blog.csdn.net/luoweifu/article/details/49382969" target="_blank" rel="external">http://blog.csdn.net/luoweifu/article/details/49382969</a></p>
+</blockquote>
+<h1 id="无法解析的外部符号-链接错误"><a href="#无法解析的外部符号-链接错误" class="headerlink" title="无法解析的外部符号 链接错误"></a>无法解析的外部符号 链接错误</h1><p>已经在工程属性中添加了lib文件，但是仍然提示连接错误：<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>&gt;------ 已启动全部重新生成:  项目: <span class="variable">DLL_ICardRecycleImpl</span>, 配置: <span class="variable">Debug</span> <span class="function_or_atom">x64</span> ------</span><br><span class="line"><span class="prompt">1&gt; </span> <span class="function_or_atom">stdafx</span>.<span class="function_or_atom">cpp</span></span><br><span class="line"><span class="prompt">1&gt; </span> <span class="variable">WindowsSerial</span>.<span class="function_or_atom">cpp</span></span><br><span class="line"><span class="prompt">1&gt; </span> <span class="variable">DLL_ICardRecycleImpl</span>.<span class="function_or_atom">cpp</span></span><br><span class="line"><span class="prompt">1&gt; </span> <span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">cpp</span></span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">cpp</span>(<span class="number">383</span>): <span class="function_or_atom">warning</span> <span class="variable">C4800</span>: “<span class="function_or_atom">int</span>”: 将值强制为布尔值“<span class="function_or_atom">true</span>”或“<span class="function_or_atom">false</span>”(性能警告)</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">cpp</span>(<span class="number">385</span>): <span class="function_or_atom">warning</span> <span class="variable">C4800</span>: “<span class="function_or_atom">int</span>”: 将值强制为布尔值“<span class="function_or_atom">true</span>”或“<span class="function_or_atom">false</span>”(性能警告)</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">cpp</span>(<span class="number">388</span>): <span class="function_or_atom">warning</span> <span class="variable">C4800</span>: “<span class="function_or_atom">int</span>”: 将值强制为布尔值“<span class="function_or_atom">true</span>”或“<span class="function_or_atom">false</span>”(性能警告)</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">cpp</span>(<span class="number">942</span>): <span class="function_or_atom">warning</span> <span class="variable">C4390</span>: “;”: 找到空的受控语句；这是否是有意的?</span><br><span class="line"><span class="prompt">1&gt; </span> 正在生成代码...</span><br><span class="line"><span class="prompt">1&gt; </span> <span class="function_or_atom">dllmain</span>.<span class="function_or_atom">cpp</span></span><br><span class="line"><span class="prompt">1&gt; </span>    正在创建库 <span class="variable">C</span>:\<span class="variable">Users</span>\<span class="function_or_atom">sky</span>\<span class="variable">Desktop</span>\<span class="variable">ICardRecycleImpl_SZ7A</span>\<span class="variable">DLL_ICardRecycleImpl</span>\<span class="function_or_atom">x64</span>\<span class="variable">Debug</span>\<span class="variable">DLL_ICardRecycleImpl</span>.<span class="function_or_atom">lib</span> 和对象 <span class="variable">C</span>:\<span class="variable">Users</span>\<span class="function_or_atom">sky</span>\<span class="variable">Desktop</span>\<span class="variable">ICardRecycleImpl_SZ7A</span>\<span class="variable">DLL_ICardRecycleImpl</span>\<span class="function_or_atom">x64</span>\<span class="variable">Debug</span>\<span class="variable">DLL_ICardRecycleImpl</span>.<span class="function_or_atom">exp</span></span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: __cdecl CMITDLL::CMITDLL(void)"</span> (??<span class="number">0</span><span class="variable">CMITDLL</span>@@<span class="variable">QEAA</span>@<span class="variable">XZ</span>)，该符号在函数 <span class="string">"public: __cdecl CCardRecycle_SZ7A::CCardRecycle_SZ7A(void)"</span> (??<span class="number">0</span><span class="variable">CCardRecycle_SZ7A</span>@@<span class="variable">QEAA</span>@<span class="variable">XZ</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: virtual __cdecl CMITDLL::~CMITDLL(void)"</span> (??<span class="number">1</span><span class="variable">CMITDLL</span>@@<span class="variable">UEAA</span>@<span class="variable">XZ</span>)，该符号在函数 <span class="string">"public: virtual void * __cdecl CMITDLL::`vector deleting destructor'(unsigned int)"</span> (??_<span class="variable">ECMITDLL</span>@@<span class="variable">UEAAPEAXI</span>@<span class="variable">Z</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: void __cdecl CMITDLL::fnTestShow(int)"</span> (?<span class="function_or_atom">fnTestShow</span>@<span class="variable">CMITDLL</span>@@<span class="variable">QEAAXH</span>@<span class="variable">Z</span>)，该符号在函数 <span class="string">"public: int __cdecl CCardRecycle_SZ7A::setLogWorkMode(int,int)"</span> (?<span class="function_or_atom">setLogWorkMode</span>@<span class="variable">CCardRecycle_SZ7A</span>@@<span class="variable">QEAAHHH</span>@<span class="variable">Z</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: int __cdecl CMITDLL::fnOpenCom(unsigned char *,int,int)"</span> (?<span class="function_or_atom">fnOpenCom</span>@<span class="variable">CMITDLL</span>@@<span class="variable">QEAAHPEAEHH</span>@<span class="variable">Z</span>)，该符号在函数 <span class="string">"public: int __cdecl CCardRecycle_SZ7A::initialization(char *,int)"</span> (?<span class="function_or_atom">initialization</span>@<span class="variable">CCardRecycle_SZ7A</span>@@<span class="variable">QEAAHPEADH</span>@<span class="variable">Z</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: int __cdecl CMITDLL::fnCloseCom(void)"</span> (?<span class="function_or_atom">fnCloseCom</span>@<span class="variable">CMITDLL</span>@@<span class="variable">QEAAHXZ</span>)，该符号在函数 <span class="string">"public: int __cdecl CCardRecycle_SZ7A::initialization(char *,int)"</span> (?<span class="function_or_atom">initialization</span>@<span class="variable">CCardRecycle_SZ7A</span>@@<span class="variable">QEAAHPEADH</span>@<span class="variable">Z</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: int __cdecl CMITDLL::Communication_SendRecv(unsigned char,unsigned char,unsigned char *,unsigned char *,int,int)"</span> (<span class="constant">?Communication_SendRecv</span>@<span class="variable">CMITDLL</span>@@<span class="variable">QEAAHEEPEAE0HH</span>@<span class="variable">Z</span>)，该符号在函数 <span class="string">"public: int __cdecl CCardRecycle_SZ7A::getStatus(struct stCardRecycleStatus &amp;)"</span> (?<span class="function_or_atom">getStatus</span>@<span class="variable">CCardRecycle_SZ7A</span>@@<span class="variable">QEAAHAEAUstCardRecycleStatus</span>@@@<span class="variable">Z</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: int __cdecl CMITDLL::MIT_Arm7DownloadProgram(char *,char *)"</span> (<span class="constant">?MIT_Arm7DownloadProgram</span>@<span class="variable">CMITDLL</span>@@<span class="variable">QEAAHPEAD0</span>@<span class="variable">Z</span>)，该符号在函数 <span class="string">"public: int __cdecl CCardRecycle_SZ7A::updateEquipmentBin(char *,char *)"</span> (?<span class="function_or_atom">updateEquipmentBin</span>@<span class="variable">CCardRecycle_SZ7A</span>@@<span class="variable">QEAAHPEAD0</span>@<span class="variable">Z</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: void __cdecl CMITDLL::EnterProtect(void)"</span> (<span class="constant">?EnterProtect</span>@<span class="variable">CMITDLL</span>@@<span class="variable">QEAAXXZ</span>)，该符号在函数 <span class="string">"public: int __cdecl CCardRecycle_SZ7A::getStatus(struct stCardRecycleStatus &amp;)"</span> (?<span class="function_or_atom">getStatus</span>@<span class="variable">CCardRecycle_SZ7A</span>@@<span class="variable">QEAAHAEAUstCardRecycleStatus</span>@@@<span class="variable">Z</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">CCardRecycle_SZ7A</span>.<span class="function_or_atom">obj</span> : <span class="function_or_atom">error</span> <span class="variable">LNK2019</span>: 无法解析的外部符号 <span class="string">"public: void __cdecl CMITDLL::LeaveProtect(void)"</span> (<span class="constant">?LeaveProtect</span>@<span class="variable">CMITDLL</span>@@<span class="variable">QEAAXXZ</span>)，该符号在函数 <span class="string">"public: int __cdecl CCardRecycle_SZ7A::getStatus(struct stCardRecycleStatus &amp;)"</span> (?<span class="function_or_atom">getStatus</span>@<span class="variable">CCardRecycle_SZ7A</span>@@<span class="variable">QEAAHAEAUstCardRecycleStatus</span>@@@<span class="variable">Z</span>) 中被引用</span><br><span class="line"><span class="number">1</span>&gt;<span class="variable">C</span>:\<span class="variable">Users</span>\<span class="function_or_atom">sky</span>\<span class="variable">Desktop</span>\<span class="variable">ICardRecycleImpl_SZ7A</span>\<span class="variable">DLL_ICardRecycleImpl</span>\<span class="function_or_atom">x64</span>\<span class="variable">Debug</span>\<span class="variable">DLL_ICardRecycleImpl</span>.<span class="function_or_atom">dll</span> : <span class="function_or_atom">fatal</span> <span class="function_or_atom">error</span> <span class="variable">LNK1120</span>: <span class="number">9</span> 个无法解析的外部命令</span><br><span class="line">========== 全部重新生成:  成功 <span class="number">0</span> 个，失败 <span class="number">1</span> 个，跳过 <span class="number">0</span> 个 ==========</span><br></pre></td></tr></table></figure></p>
+<p>解决：</p>
+<p>编译模式方式不同，lib、dll文件是win32编译生成的，使用的工程代码也要用win32才行喔</p>
+<p><a href="http://blog.csdn.net/vis_stu/article/details/52839438" target="_blank" rel="external"> 导致“无法解析的外部符号”的可能情况</a></p>
+<hr>
+<h1 id="visualstudio已停止工作系列"><a href="#visualstudio已停止工作系列" class="headerlink" title="visualstudio已停止工作系列"></a>visualstudio已停止工作系列</h1><p>  使用vs自带<code>Developer Command Prompt for VS2015</code>输入<code>devenv /safemod</code></p>
+<h1 id="visualstudio无法停留在断点或者-运行程序-一闪而过"><a href="#visualstudio无法停留在断点或者-运行程序-一闪而过" class="headerlink" title="visualstudio无法停留在断点或者 运行程序 一闪而过"></a>visualstudio无法停留在断点或者 运行程序 一闪而过</h1><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The thread <span class="number">0</span>x206c <span class="keyword">has</span> exited <span class="keyword">with</span> code <span class="number">0</span> (<span class="number">0</span>x0).</span><br><span class="line">The program <span class="string">'[7692] DateExample.exe'</span> <span class="keyword">has</span> exited <span class="keyword">with</span> code <span class="number">0</span> (<span class="number">0</span>x0).</span><br></pre></td></tr></table></figure>
   
 	</div>
 
@@ -310,7 +363,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#无法解析到函数"><span class="toc-number">1.</span> <span class="toc-text">无法解析到函数</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#无法解析到函数"><span class="toc-number">1.</span> <span class="toc-text">无法解析到函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#无法解析的外部符号-链接错误"><span class="toc-number">2.</span> <span class="toc-text">无法解析的外部符号 链接错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#visualstudio已停止工作系列"><span class="toc-number">3.</span> <span class="toc-text">visualstudio已停止工作系列</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#visualstudio无法停留在断点或者-运行程序-一闪而过"><span class="toc-number">4.</span> <span class="toc-text">visualstudio无法停留在断点或者 运行程序 一闪而过</span></a></li></ol>
  
   </div>
 
@@ -338,7 +391,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>37</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -346,11 +399,11 @@
 		  
 		
 		  
-			<li><a href="/categories/Linux/" title="Linux">Linux<sup>15</sup></a></li>
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>16</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/Record/" title="Record">Record<sup>2</sup></a></li>
+			<li><a href="/categories/Record/" title="Record">Record<sup>3</sup></a></li>
 		  
 		
 		  
@@ -403,6 +456,10 @@
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/memo/" title="memo">memo<sup>18</sup></a></li>
 			
 		
@@ -411,7 +468,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>10</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
 			
 		
 			
@@ -419,15 +476,15 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Linux/" title="Linux">Linux<sup>8</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Record/" title="Record">Record<sup>6</sup></a></li>
+				<li><a href="/tags/Record/" title="Record">Record<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
 			
 		
 			
@@ -439,15 +496,7 @@
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
 			
@@ -455,11 +504,15 @@
 			
 		
 			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Rcord/" title="Rcord">Rcord<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+				<li><a href="/tags/计算机/" title="计算机">计算机<sup>2</sup></a></li>
 			
 		
 			
@@ -471,15 +524,15 @@
 			
 		
 			
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/make/" title="make">make<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ARM/" title="ARM">ARM<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -505,12 +558,6 @@
           <li>
             
             	<a href="http://blog.csdn.net/example440982" target="_blank" title="  庆威的博客">轻微的博客</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://blog.csdn.net/qq_31803503" target="_blank" title=" 俊城的博客">JC. Lin的博客</a>
             
           </li>
         
