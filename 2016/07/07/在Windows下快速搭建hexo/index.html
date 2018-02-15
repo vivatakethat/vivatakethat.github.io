@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="在Windows下快速搭建hexo">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E7%A6%8F%E5%8E%9F%E7%88%B1.jpg">
-<meta property="og:updated_time" content="2018-02-15T06:36:58.000Z">
+<meta property="og:updated_time" content="2018-02-15T11:48:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Windows下快速搭建hexo">
 <meta name="twitter:description" content="在Windows下快速搭建hexo">
@@ -48,7 +48,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="take that的博客">take that的博客</a></h1>
-				<h2 class="blog-motto">Buiulding ...</h2>
+				<h2 class="blog-motto">Building ...</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -169,6 +169,11 @@
 <blockquote>
 <p>这个可以不安装，因为安装会报错</p>
 </blockquote>
+<p>配置github仓库地址:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">    <span class="attribute">type</span>: git</span><br><span class="line">    <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/vivatakethat/vivatakethat.github.io.git</span></span><br><span class="line">    <span class="attribute">branch</span>: master</span><br><span class="line">#      <span class="attribute">coding</span>: </span><br><span class="line">#        git<span class="variable">@id_rsa</span>.git.coding.<span class="attribute">net</span>:vivatakethat/vivatakethat.git,coding-pages</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>这种配置需要输入帐号和密码</p>
+</blockquote>
+<p>免帐号/密码登入:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">    <span class="attribute">type</span>: git</span><br><span class="line">    <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:vivatakethat/vivatakethat.github.io.git</span><br><span class="line">    <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
 <h1 id="一台PC配置配置多个git博客"><a href="#一台PC配置配置多个git博客" class="headerlink" title="一台PC配置配置多个git博客"></a>一台PC配置配置多个git博客</h1><ol>
 <li>生成另一个博客账户的公钥<figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="char">$ </span>ssh-keygen -t rsa -<span class="class">C</span> <span class="comment">"your-email-address"</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -214,6 +219,7 @@
 <p>解决方法:<br>设置Git的user name和email</p>
 <p>git config –global user.name “yourname”<br>git config –global user.email “youremail”<br>生成SSH密钥</p>
 <p>查看是否已经有了ssh密钥：cd ~/.ssh<br>如果没有密钥则不会有此文件夹，有则备份删除<br>生存密钥：<br>ssh-keygen -t rsa -C “haiyan.xu.vip@gmail.com”<br>按3个回车，密码为空。<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.<br>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>………………<br>最后得到了两个文件：id_rsa和id_rsa.pub</p>
+<p><a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank" rel="external">可参考文章</a></p>
   
 	</div>
 
