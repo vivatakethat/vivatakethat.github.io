@@ -1,5 +1,5 @@
 https://www.vivatakethat.com/2018/10/11/回调函数/
-https://www.vivatakethat.com/2018/02/02/operator/
-https://www.vivatakethat.com/2018/02/01/ADO数据库操作/
-https://www.vivatakethat.com/2018/01/25/Windows编译/
-https://www.vivatakethat.com/2018/01/10/Qt_coding_memo/
+https://www.vivatakethat.com/2018/06/05/C++函数对象operator/cecequthread/memo_/
+https://www.vivatakethat.com/2018/06/05/q_结束符号问题/
+https://www.vivatakethat.com/2018/06/05/gtk编程入门0/
+https://www.vivatakethat.com/2018/06/05/c++写文件日志/

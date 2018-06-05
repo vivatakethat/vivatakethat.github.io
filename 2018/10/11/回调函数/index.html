@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="http://blog.csdn.net/callmeback/article/details/4242260/
 1234567891011121314151617181920212223242526272829303132333435#include &amp;lt;stdio.h&amp;gt;#include&amp;lt;iostream&amp;gt;void printWelcome(int len)&amp;#123;	p">
-<meta property="og:updated_time" content="2018-02-06T13:30:46.000Z">
+<meta property="og:updated_time" content="2018-03-26T16:45:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="回调函数">
 <meta name="twitter:description" content="http://blog.csdn.net/callmeback/article/details/4242260/
@@ -113,6 +113,18 @@
 		
 		<p><a href="http://blog.csdn.net/callmeback/article/details/4242260/" target="_blank" rel="external">http://blog.csdn.net/callmeback/article/details/4242260/</a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">void printWelcome(int len)</span><br><span class="line">&#123;</span><br><span class="line">	printf("欢迎欢迎 -- %d/n", len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printGoodbye(int len)</span><br><span class="line">&#123;</span><br><span class="line">	printf("送客送客 -- %d/n", len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void callback(int times, void(*print)(int))</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	for (i = 0; i &lt; times; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		print(i);</span><br><span class="line">	&#125;</span><br><span class="line">	printf("/n我不知道你是迎客还是送客!/n/n");</span><br><span class="line">&#125;</span><br><span class="line">void main(void)</span><br><span class="line">&#123;</span><br><span class="line">	callback(10, printWelcome);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	std::cout &lt;&lt; std::endl&lt;&lt; "--------------------------------------------------------------------------------------------" &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	callback(10, printGoodbye);</span><br><span class="line">	std::cout &lt;&lt; std::endl &lt;&lt; "--------------------------------------------------------------------------------------------" &lt;&lt; std::endl;</span><br><span class="line">	printWelcome(5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>注册回调函数<br><a href="https://blog.csdn.net/mrailence/article/details/52251201" target="_blank" rel="external">https://blog.csdn.net/mrailence/article/details/52251201</a></li>
+</ol>
+<ol>
+<li>回调函数demo</li>
+</ol>
+<ol>
+<li><p>回调函数demo2</p>
+</li>
+<li><p>关于回调函数</p>
+</li>
+</ol>
   
 	</div>
 
@@ -253,9 +265,9 @@
  
 
 <div class="next">
-<a href="/2018/02/02/operator/"  title="operator用法">
+<a href="/2018/06/05/C++函数对象operator/cecequthread/memo_/"  title="">
  <strong>下一篇：</strong><br/> 
- <span>operator用法
+ <span>(no title)
 </span>
 </a>
 </div>
@@ -304,7 +316,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>46</sup></a></li>
 		  
 		
 		  
@@ -342,7 +354,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>15</sup></a></li>
 		  
 		
 		  
@@ -369,7 +381,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>19</sup></a></li>
 			
 		
 			
@@ -381,7 +393,7 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
 			
 		
 			

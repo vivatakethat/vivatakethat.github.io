@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C++:输入输出 | take that的博客</title>
+    <title>take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,17 +12,16 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="C++语言没有定义输入输出(IO)语句，取而代之，包含了全面标准库(standard library)来提供IO机制。">
+    <meta name="description" content="Adapter适配器模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++:输入输出">
-<meta property="og:url" content="https://www.vivatakethat.com/2016/09/07/C++——输入输出/index.html">
+<meta property="og:title" content="take that的博客">
+<meta property="og:url" content="https://www.vivatakethat.com/2018/06/05/设计模式/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="C++语言没有定义输入输出(IO)语句，取而代之，包含了全面标准库(standard library)来提供IO机制。">
-<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/1926%E5%B9%B4%EF%BC%8C%E4%BC%A6%E6%95%A6%E6%B5%B7%E5%BE%B7%E5%85%AC%E5%9B%AD%EF%BC%8C%E4%B8%80%E4%B8%AA%E8%AD%A6%E5%AF%9F%E8%BF%BD%E8%B5%B6%E4%B8%80%E7%BE%A4%E5%B0%8F%E5%B1%81%E5%AD%A9.jpg">
-<meta property="og:updated_time" content="2018-02-14T11:32:24.000Z">
+<meta property="og:description" content="Adapter适配器模式">
+<meta property="og:updated_time" content="2018-04-04T05:07:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++:输入输出">
-<meta name="twitter:description" content="C++语言没有定义输入输出(IO)语句，取而代之，包含了全面标准库(standard library)来提供IO机制。">
+<meta name="twitter:title" content="take that的博客">
+<meta name="twitter:description" content="Adapter适配器模式">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -86,7 +85,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/07/C++——输入输出/" title="C++:输入输出" itemprop="url">C++:输入输出</a>
+      <a href="/2018/06/05/设计模式/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
@@ -96,7 +95,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2016-09-07T02:59:32.000Z" itemprop="datePublished"> 发表于 2016-09-07</time>
+    <time datetime="2018-06-04T18:10:28.220Z" itemprop="datePublished"> 发表于 2018-06-05</time>
     
   </p>
 </header>
@@ -109,47 +108,9 @@
 		
 		</div>
 		
-		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/1926%E5%B9%B4%EF%BC%8C%E4%BC%A6%E6%95%A6%E6%B5%B7%E5%BE%B7%E5%85%AC%E5%9B%AD%EF%BC%8C%E4%B8%80%E4%B8%AA%E8%AD%A6%E5%AF%9F%E8%BF%BD%E8%B5%B6%E4%B8%80%E7%BE%A4%E5%B0%8F%E5%B1%81%E5%AD%A9.jpg" alt="1926年，伦敦海德公园，一个警察追赶一群小屁孩" title="1926年，伦敦海德公园，一个警察追赶一群小屁孩"></p>
-<p>C++语言没有定义输入输出(IO)语句，取而代之，包含了全面标准库(<em>standard library</em>)来提供IO机制。<br><a id="more"></a><br>iostream库</p>
-<blockquote>
-<p>iostream库包含了两个基础类型<strong>1</strong>istream和<strong>2</strong>ostream,分别表示输入流和输出流。</p>
-<blockquote>
-<p>一个流就是一个字符序列，是从IO设备读出或写入IO设备。</p>
-<blockquote>
-<p>属于流<em>(stream)</em>想要表达是随着时间推移，字符是顺序生成或消耗。</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>标准库定义了4个IO对象。</p>
-<ul>
-<li><code>cin</code> &nbsp; 标准输入输出<em>standard input</em><blockquote>
-<p>istream类型的对象</p>
-</blockquote>
-</li>
-<li><code>cout</code>&nbsp;标准输出<em>standard output</em><blockquote>
-<p>ostream类型的对象</p>
-</blockquote>
-</li>
-<li><code>cerr</code>&nbsp; 标准错误<em>standard error</em><blockquote>
-<p>ostream对象</p>
-</blockquote>
-</li>
-<li><code>clog</code> &nbsp;输出程序运行时一般性信息。<blockquote>
-<p>ostream对象</p>
-</blockquote>
-</li>
-</ul>
-<p>示例：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Enter two numbers:"</span> &lt;&lt; <span class="built_in">std</span>::endl; </span><br><span class="line">    <span class="comment">/*  &lt;&lt;输出运算符接受2个运算对象：左侧对象必须是一个ostream对象，右侧预算对象是要打印的值   */</span></span><br><span class="line">    <span class="comment">/*   输出运算符的计算机结果就是左侧运算对象   */</span></span><br><span class="line">	<span class="keyword">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"The sum of"</span>  &lt;&lt; <span class="string">" "</span>&lt;&lt;v1 &lt;&lt;<span class="string">" "</span>&lt;&lt;  <span class="string">"and"</span>  &lt;&lt;<span class="string">" "</span>&lt;&lt; v2&lt;&lt;<span class="string">" "</span> &lt;&lt; <span class="string">"is"</span> &lt;&lt;<span class="string">" "</span> &lt;&lt;v1 + v2&lt;&lt;<span class="string">" "</span> &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>第一条语句用了2次&lt;&lt;运算符。因此次运算符返回其左侧的运算对象，因此第一个运算符的结果成为了第二个运算符左侧的运算对象。这样将输出结果连接起来，因此我们的表达式等价于</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Enter two numbers:"</span>)&lt;&lt;<span class="built_in">std</span>::endl;</span><br></pre></td></tr></table></figure>
-<p>程序运行结果：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Enter two numbers:</span><br><span class="line"><span class="number">3</span> <span class="number">7</span></span><br><span class="line">The sum of <span class="number">3</span> and <span class="number">7</span> is <span class="number">10</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>io输入流4种状态</li>
-</ul>
-<p><a href="http://blog.csdn.net/ygj149078299/article/details/538998" target="_blank" rel="external">关于if (!cin)</a></p>
-<p><a href="http://blog.csdn.net/wateryouyo/article/details/60874005" target="_blank" rel="external">C++中 cin的深入理解</a></p>
+		<ol>
+<li>Adapter适配器模式</li>
+</ol>
   
 	</div>
 
@@ -258,16 +219,6 @@
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/C/">C++</a>
-  </div>
 
 </div>
 
@@ -275,7 +226,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://www.vivatakethat.com/2016/09/07/C++——输入输出/" data-title="C++:输入输出 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="https://www.vivatakethat.com/2018/06/05/设计模式/" data-title="take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -289,18 +240,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/09/17/git_memo/" title="git memo">
+ <a href="/2018/06/05/c++写文件日志/" title="">
   <strong>上一篇：</strong><br/>
   <span>
-  git memo</span>
+  (no title)</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/09/06/gcc参数/"  title="gcc参数">
+<a href="/2018/06/05/C++函数对象operator/C++函数对象operator/"  title="">
  <strong>下一篇：</strong><br/> 
- <span>gcc参数
+ <span>(no title)
 </span>
 </a>
 </div>
@@ -349,7 +300,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>46</sup></a></li>
 		  
 		
 		  
@@ -387,7 +338,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>15</sup></a></li>
 		  
 		
 		  
@@ -414,7 +365,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>19</sup></a></li>
 			
 		
 			
@@ -426,7 +377,7 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
 			
 		
 			

@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/vm%E7%BD%91%E5%8D%A1%E7%BC%96%E8%BE%91%E6%88%AA%E5%9B%BE.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/linuxIP%E8%AE%BE%E7%BD%AE.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/root%E8%87%AA%E5%8A%A8%E7%99%BB%E5%85%A5.png">
-<meta property="og:updated_time" content="2017-10-23T02:20:30.000Z">
+<meta property="og:updated_time" content="2018-05-28T10:55:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux日常">
 <meta name="twitter:description" content="Linux配置，shell脚本…">
@@ -197,10 +197,21 @@
 </li>
 </ol>
 <ul>
-<li>取出.sh脚本里的^M<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">敲出^M字符的方法，ctrl+v然后ctrl+m就可以了。</span><br><span class="line"><span class="id">#sed</span> -<span class="tag">i</span> <span class="string">'s/^M//g'</span> filename</span><br></pre></td></tr></table></figure>
+<li>去除.sh脚本里的^M<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">敲出^M字符的方法，ctrl+v然后ctrl+m就可以了。</span><br><span class="line"><span class="id">#sed</span> -<span class="tag">i</span> <span class="string">'s/^M//g'</span> filename</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
+<ul>
+<li>ubuntu18.04安装 synergy</li>
+</ul>
+<ul>
+<li>ubuntu18.04安装shadows</li>
+</ul>
+<p><a href="https://blog.csdn.net/bingyu9875/article/details/54600691" target="_blank" rel="external">https://blog.csdn.net/bingyu9875/article/details/54600691</a></p>
+<p>报错:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">takethat@t470p:~$ sslocal -c /home/takethat/shadowsocks.json&#10;INFO: loading config from /home/takethat/shadowsocks.json&#10;2018-05-28 18:32:33 INFO     loading libcrypto from libcrypto.so.1.1&#10;Traceback (most recent call last):&#10;  File &#34;/usr/local/bin/sslocal&#34;, line 11, in &#60;module&#62;&#10;    sys.exit(main())&#10;  File &#34;/usr/local/lib/python2.7/dist-packages/shadowsocks/local.py&#34;, line 39, in main&#10;    config = shell.get_config(True)&#10;  File &#34;/usr/local/lib/python2.7/dist-packages/shadowsocks/shell.py&#34;, line 262, in get_config&#10;    check_config(config, is_local)&#10;  File &#34;/usr/local/lib/python2.7/dist-packages/shadowsocks/shell.py&#34;, line 124, in check_config&#10;    encrypt.try_cipher(config[&#39;password&#39;], config[&#39;method&#39;])&#10;  File &#34;/usr/local/lib/python2.7/dist-packages/shadowsocks/encrypt.py&#34;, line 44, in try_cipher&#10;    Encryptor(key, method)&#10;  File &#34;/usr/local/lib/python2.7/dist-packages/shadowsocks/encrypt.py&#34;, line 83, in __init__&#10;    random_string(self._method_info[1]))&#10;  File &#34;/usr/local/lib/python2.7/dist-packages/shadowsocks/encrypt.py&#34;, line 109, in get_cipher&#10;    return m[2](method, key, iv, op)&#10;  File &#34;/usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py&#34;, line 76, in __init__&#10;    load_openssl()&#10;  File &#34;/usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py&#34;, line 52, in load_openssl&#10;    libcrypto.EVP_CIPHER_CTX_cleanup.argtypes = (c_void_p,)&#10;  File &#34;/usr/lib/python2.7/ctypes/__init__.py&#34;, line 379, in __getattr__&#10;    func = self.__getitem__(name)&#10;  File &#34;/usr/lib/python2.7/ctypes/__init__.py&#34;, line 384, in __getitem__&#10;    func = self._FuncPtr((name_or_ordinal, self))&#10;AttributeError: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup&#10;takethat@t470p:~$</span><br></pre></td></tr></table></figure></p>
+<p>解决办法<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> vi /usr/local/lib/python2.<span class="number">7</span>/dist-packages/shadowsocks/crypto/openssl<span class="class">.py</span></span><br><span class="line">将第<span class="number">52</span>行libcrypto<span class="class">.EVP_CIPHER_CTX_cleanup</span><span class="class">.argtypes</span> = (c_void_p,)</span><br><span class="line">改为libcrypto<span class="class">.EVP_CIPHER_CTX_reset</span><span class="class">.argtypes</span> = (c_void_p,)</span><br><span class="line">将第<span class="number">111</span>行libcrypto.<span class="function"><span class="title">EVP_CIPHER_CTX_cleanup</span><span class="params">(self._ctx)</span></span></span><br><span class="line">改为libcrypto.<span class="function"><span class="title">EVP_CIPHER_CTX_reset</span><span class="params">(self._ctx)</span></span></span><br><span class="line"></span><br><span class="line">然后再次尝试启动。</span><br></pre></td></tr></table></figure></p>
+<p>ubuntu删除firefox</p>
+<p><a href="https://blog.csdn.net/qqduxingzhe/article/details/79894563" target="_blank" rel="external">https://blog.csdn.net/qqduxingzhe/article/details/79894563</a></p>
   
 	</div>
 
@@ -400,7 +411,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>46</sup></a></li>
 		  
 		
 		  
@@ -438,7 +449,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>15</sup></a></li>
 		  
 		
 		  
@@ -465,7 +476,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>19</sup></a></li>
 			
 		
 			
@@ -477,7 +488,7 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
 			
 		
 			

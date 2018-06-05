@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/batman8.jpg">
-<meta property="og:updated_time" content="2017-04-26T09:36:26.000Z">
+<meta property="og:updated_time" content="2018-03-22T15:07:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git日常报错">
 <meta name="twitter:description">
@@ -122,6 +122,18 @@
 </ol>
 <p>解决：请先执行<br>You might need to start ssh-agent before you run the ssh-add command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">eval</span> `ssh-agent <span class="operator">-s</span>`</span><br></pre></td></tr></table></figure></p>
 <p>再执行<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-<span class="keyword">add</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>clone仓库时候<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">fatal</span>: <span class="string">Could not read from remote repository.</span></span><br><span class="line"></span><br><span class="line"><span class="fortran">Please make sure you have the correct <span class="keyword">access</span> rights</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解决办法:</p>
+<ul>
+<li>生成key<br>root@t470p:~/.ssh# ssh-keygen -t rsa -C vivatakethat@foxmail.com</li>
+</ul>
+<p>把key上传到github网站上</p>
+<blockquote>
+<p>参考这片文章<a href="https://www.cnblogs.com/wmr95/p/7852832.html" target="_blank" rel="external">https://www.cnblogs.com/wmr95/p/7852832.html</a></p>
+</blockquote>
   
 	</div>
 
@@ -321,7 +333,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>46</sup></a></li>
 		  
 		
 		  
@@ -359,7 +371,7 @@
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>15</sup></a></li>
 		  
 		
 		  
@@ -386,7 +398,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>19</sup></a></li>
 			
 		
 			
@@ -398,7 +410,7 @@
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
 			
 		
 			

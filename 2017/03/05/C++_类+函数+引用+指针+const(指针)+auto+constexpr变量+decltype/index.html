@@ -23,7 +23,7 @@ c++  Primer第五版">
 
 c++  Primer第五版">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/red%20alert3-ussr2.jpg">
-<meta property="og:updated_time" content="2017-08-08T02:33:12.000Z">
+<meta property="og:updated_time" content="2018-03-07T11:17:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++:类、函数、指针、构造函数">
 <meta name="twitter:description" content="c++零碎笔记：类、函数、引用、指针、const(指针)、auto、 constexpr变量、decltype
@@ -440,7 +440,9 @@ c++  Primer第五版">
 <p>如果只想声明一个变量而非定义它，他在变量名前添加关键字<strong>extern</strong>,而且不要显示第初始化<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> i;				<span class="comment">//	声明i而定义i</span></span><br><span class="line"><span class="keyword">int</span> j;						<span class="comment">//  声明并定义j</span></span><br></pre></td></tr></table></figure></p>
 <p>但是给extern关键字标记的变量赋一个初始值，但这么做也就抵消了extern的作用。extern语句如果包含初始值就不再是声明了，而变成 了定义：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">double</span> pi =<span class="number">3.1416</span>;			<span class="comment">//	定义</span></span><br></pre></td></tr></table></figure></p>
 <hr>
-<h1 id="const限定符"><a href="#const限定符" class="headerlink" title="const限定符"></a>const限定符</h1><blockquote>
+<h1 id="const限定符"><a href="#const限定符" class="headerlink" title="const限定符"></a>const限定符</h1><p><a href="http://blog.chinaunix.net/uid-21375345-id-3321186.html" target="_blank" rel="external">const T、const T<em>、T </em>const、const T&amp;、const T*&amp; 的区别</a></p>
+<p><a href="http://blog.csdn.net/zhangfuliang123/article/details/52504001" target="_blank" rel="external"> const的用法及其重要性</a></p>
+<blockquote>
 <p>对变量进行限定放置程序更改它</p>
 </blockquote>
 <p>因为const对象一旦创建后其值就不能再改变了，所以const对象必须初始化。</p>
@@ -490,6 +492,14 @@ c++  Primer第五版">
 <p>声明为constexpr的变量一定是一个常量，而且必须用常量表达式初始化:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> mf=<span class="number">20</span>;		<span class="comment">//	20是常量表达式</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> limit =mf+<span class="number">1</span>;			<span class="comment">//mf+1是常量表达式</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> sz=size();		<span class="comment">//只有当szie是一个contexpr函数时，才是一条正确的声明语句</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="指针和constexpr"><a href="#指针和constexpr" class="headerlink" title="指针和constexpr"></a>指针和constexpr</h2><p>在constexpr声明中如果定义了一个指针，限定符constexpr仅对指针有效，与指针所指的对象无关：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p=<span class="literal">nullptr</span>;		<span class="comment">//p是一个指向类型常量的指针</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> *q=<span class="literal">nullptr</span>;		<span class="comment">//而q是一个指向整数的常量指针,其中的关键在于constexpr把它所定义的对象置为了顶层const</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>指针与函数名</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	 </span><br><span class="line">	<span class="comment">//printf("address of add-function  %x\n",add);</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> a=(*add)(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"sum=%d\n"</span>,a);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>回调函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*PRINTS)</span><span class="params">(<span class="keyword">int</span> )</span></span>;  </span><br><span class="line">PRINTS a = <span class="literal">NULL</span> ;  </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">callbacks</span><span class="params">(PRINTS b)</span></span>;  </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">callbacks</span><span class="params">(PRINTS b)</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">    a = b;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printWelcome</span><span class="params">(<span class="keyword">int</span> len)</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"欢迎欢迎 -- %d\n"</span>, len);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printGoodbye</span><span class="params">(<span class="keyword">int</span> len)</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"送客送客 -- %d\n"</span>, len);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">   callbacks(printWelcome);  <span class="comment">// 给</span></span><br><span class="line">    (*a)(<span class="number">6</span>);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h1 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h1><p><strong>类型别名(type alias)</strong>是一个名字，它是某种类型的同义词。<br>有2中方法可以用于定义类型别名。<br><strong>1.</strong>  typedef<br>传统方法使用关键字typedef:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">double</span> wages;		<span class="comment">//wages是double的同义词</span></span><br><span class="line"><span class="keyword">typedef</span> wages base, *p; 	<span class="comment">//base是double的同义词，p是double*的同义词</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>含有typedef的声明语句定义的不再是变量而是类型别名。和以前的声明语句一样，这里的声明符也可以包含类型修饰，从而也能由基本数据类型构造出复合类型来。</p>
@@ -778,7 +788,7 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>46</sup></a></li>
 		  
 		
 		  
@@ -816,7 +826,7 @@ c++  Primer第五版">
 		  
 		
 		  
-			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>14</sup></a></li>
+			<li><a href="/categories/嵌入式/" title="嵌入式">嵌入式<sup>15</sup></a></li>
 		  
 		
 		  
@@ -843,7 +853,7 @@ c++  Primer第五版">
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>19</sup></a></li>
 			
 		
 			
@@ -855,7 +865,7 @@ c++  Primer第五版">
 			
 		
 			
-				<li><a href="/tags/MCU/" title="MCU">MCU<sup>9</sup></a></li>
+				<li><a href="/tags/MCU/" title="MCU">MCU<sup>10</sup></a></li>
 			
 		
 			
