@@ -13,49 +13,46 @@
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
     <meta name="description" content="vs创建DLL/使用
+知识:
 
-Windows关键字
-
-1BOOL APIENTRY DllMain(HANDLE hModule,DOWRD dwReason,void * lpReserved)
-
-APIENTRY:表明此函数是应用程序的入口点，相当于c的main()函数
+Linux 动态库剖析https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html
 
 
-visualstudio2015加载DLL
+linux下动态链接库(.so)的显式调用和隐式调用
 
-将编译好的DLL_AGM.lib和DLL_AGM.dll还有头文件DLL_AGM">
+https://blog.csdn.net/lc_910927/article/details/42393121
+
+DLL中类的显式链接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Win&Linux_编写&加载_动态库-共享库">
 <meta property="og:url" content="https://www.vivatakethat.com/2017/06/20/Win&Linux_编写&加载_动态库-共享库/index.html">
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="vs创建DLL/使用
+知识:
 
-Windows关键字
-
-1BOOL APIENTRY DllMain(HANDLE hModule,DOWRD dwReason,void * lpReserved)
-
-APIENTRY:表明此函数是应用程序的入口点，相当于c的main()函数
+Linux 动态库剖析https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html
 
 
-visualstudio2015加载DLL
+linux下动态链接库(.so)的显式调用和隐式调用
 
-将编译好的DLL_AGM.lib和DLL_AGM.dll还有头文件DLL_AGM">
+https://blog.csdn.net/lc_910927/article/details/42393121
+
+DLL中类的显式链接">
 <meta property="og:image" content="http://ofkarhqoq.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0lib%E6%96%87%E4%BB%B6.png">
-<meta property="og:updated_time" content="2017-09-08T06:35:24.000Z">
+<meta property="og:updated_time" content="2018-06-22T05:43:17.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win&Linux_编写&加载_动态库-共享库">
 <meta name="twitter:description" content="vs创建DLL/使用
+知识:
 
-Windows关键字
-
-1BOOL APIENTRY DllMain(HANDLE hModule,DOWRD dwReason,void * lpReserved)
-
-APIENTRY:表明此函数是应用程序的入口点，相当于c的main()函数
+Linux 动态库剖析https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html
 
 
-visualstudio2015加载DLL
+linux下动态链接库(.so)的显式调用和隐式调用
 
-将编译好的DLL_AGM.lib和DLL_AGM.dll还有头文件DLL_AGM">
+https://blog.csdn.net/lc_910927/article/details/42393121
+
+DLL中类的显式链接">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -143,6 +140,17 @@ visualstudio2015加载DLL
 		</div>
 		
 		<p><a href="http://blog.chinaunix.net/xmlrpc.php?r=blog/article&amp;uid=29121609&amp;id=3851844" target="_blank" rel="external">vs创建DLL/使用</a></p>
+<p>知识:</p>
+<ol>
+<li>Linux 动态库剖析<br><a href="https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html" target="_blank" rel="external">https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html</a></li>
+</ol>
+<ol>
+<li>linux下动态链接库(.so)的显式调用和隐式调用</li>
+</ol>
+<p><a href="https://blog.csdn.net/lc_910927/article/details/42393121" target="_blank" rel="external">https://blog.csdn.net/lc_910927/article/details/42393121</a></p>
+<ol>
+<li>DLL中类的显式链接<br><a href="http://www.moon-soft.com/doc/14639.htm" target="_blank" rel="external">http://www.moon-soft.com/doc/14639.htm</a></li>
+</ol>
 <ol>
 <li>Windows关键字</li>
 </ol>
@@ -157,7 +165,9 @@ visualstudio2015加载DLL
 <blockquote>
 <p>每次更改代码都要替换.dll以及.lib文件，如修改.h文件也要替换.h文件</p>
 </blockquote>
-<h1 id="Linux下编写so"><a href="#Linux下编写so" class="headerlink" title="Linux下编写so"></a>Linux下编写so</h1><ol>
+<h1 id="Linux下编写so"><a href="#Linux下编写so" class="headerlink" title="Linux下编写so"></a>Linux下编写so</h1><p>参考文章:</p>
+<p><a href="https://blog.csdn.net/cbbbc/article/details/45102861" target="_blank" rel="external">linux与windows调用动态库so dll文件</a></p>
+<ol>
 <li><p>add.cpp</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"add.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> sum;</span><br><span class="line">   sum=a+b;</span><br><span class="line"><span class="comment">//std::cout&lt;&lt;sum&lt;&lt;std::endl;</span></span><br><span class="line"><span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -199,6 +209,27 @@ visualstudio2015加载DLL
 </li>
 </ul>
 <p><img src="http://ofkarhqoq.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0lib%E6%96%87%E4%BB%B6.png" alt="工程添加lib" title="工程添加lib"></p>
+<hr>
+<p>2018-06-22 </p>
+<p>隐式加载</p>
+<ul>
+<li><p>add_header.h </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*      add_header.h  */</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">const</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(cosnt <span class="keyword">int</span> a, <span class="keyword">const</span> <span class="keyword">int</span> b)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>libadd_source.cpp</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> a, <span class="keyword">const</span> <span class="keyword">int</span> b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>编译指令:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -shared -fPIC libadd_source.cpp -o libadd.so</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>main_test.cpp<blockquote>
+<p>隐式加载</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"add_header.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">3</span>;</span><br><span class="line">	<span class="keyword">int</span> 	b = <span class="number">7</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;a&lt;&lt;<span class="string">"+"</span>&lt;&lt;b&lt;&lt;<span class="string">"="</span>&lt;&lt;add(a,b)&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编译指令:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o a.out main_test.cpp  -L. -ladd -Wl,-rpath,./</span><br></pre></td></tr></table></figure>
   
 	</div>
 

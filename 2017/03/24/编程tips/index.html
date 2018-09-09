@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>take that的博客</title>
+    <title>编程tips | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -12,16 +12,17 @@
 
     
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
-    <meta name="description" content="Adapter适配器模式">
+    <meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="take that的博客">
-<meta property="og:url" content="https://www.vivatakethat.com/2018/06/05/设计模式/index.html">
+<meta property="og:title" content="编程tips">
+<meta property="og:url" content="https://www.vivatakethat.com/2017/03/24/编程tips/index.html">
 <meta property="og:site_name" content="take that的博客">
-<meta property="og:description" content="Adapter适配器模式">
-<meta property="og:updated_time" content="2018-04-04T05:07:50.000Z">
+<meta property="og:description">
+<meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/AC130.jpg?imageView2/2/h/600">
+<meta property="og:updated_time" content="2018-06-23T16:15:03.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="take that的博客">
-<meta name="twitter:description" content="Adapter适配器模式">
+<meta name="twitter:title" content="编程tips">
+<meta name="twitter:description">
 
     
     <link rel="alternative" href="/atom.xml" title="take that的博客" type="application/atom+xml">
@@ -85,7 +86,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/06/05/设计模式/" title="" itemprop="url"></a>
+      <a href="/2017/03/24/编程tips/" title="编程tips" itemprop="url">编程tips</a>
   </h1>
   <p class="article-author">By
        
@@ -95,7 +96,7 @@
   <span id="busuanzi_container_page_pv">
     总阅读<span id="busuanzi_value_page_pv"></span>次
 </span>
-    <time datetime="2018-06-04T18:10:28.220Z" itemprop="datePublished"> 发表于 2018-06-05</time>
+    <time datetime="2017-03-24T04:21:32.000Z" itemprop="datePublished"> 发表于 2017-03-24</time>
     
   </p>
 </header>
@@ -104,13 +105,43 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#typedef-定义函数类型，用法"><span class="toc-number">1.</span> <span class="toc-text">typedef 定义函数类型，用法</span></a></li></ol>
 		
 		</div>
 		
-		<ol>
-<li>Adapter适配器模式</li>
+		<p><img src="http://7xsic8.com1.z0.glb.clouddn.com/AC130.jpg?imageView2/2/h/600" alt="AC130" title="AC130."></p>
+<a id="more"></a>
+<ol>
+<li>如何选择类型</li>
 </ol>
+<ul>
+<li>当明确知晓数值不可能为负时，选用无符号类型。</li>
+<li>如果数值超过了int的表达范围，选用long long。</li>
+<li><p>在算术表达式中不要使用char或bool,只有在存放字符或布尔值时才使用他们。</p>
+<blockquote>
+<p>因为类型char在一些机器上是有符号的，而在另一写机器上又是无符号的。</p>
+<blockquote>
+<p>如果你需要使用一个不大的整数，那么明确它的类型是signed char或者unsigned char </p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>执行浮点数运算选用double,这是因为float通常精度不够而且，双精度数和单位精度浮点数的计算代价相差无几。事实上，对于某些机器来说,双精度运算甚至比单精度还快。</p>
+<blockquote>
+<p>long double提供的精度在一般情况下是没有必要的，况且它带来的运行时消耗也不容忽视。</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>切勿用带符号类型和无符号类型<br>如果表达式里既有符号类型又有无符号类型，当带符号类型取值为负时会出现异常结果，这是因为带符号数会自动转成无符号数。</li>
+</ol>
+<hr>
+<ul>
+<li>不建议使用从字符串常量到‘char*’的转换</li>
+</ul>
+<p><a href="https://blog.csdn.net/chenqiai0/article/details/8886604" target="_blank" rel="external">https://blog.csdn.net/chenqiai0/article/details/8886604</a></p>
+<hr>
+<h1 id="typedef-定义函数类型，用法"><a href="#typedef-定义函数类型，用法" class="headerlink" title="typedef 定义函数类型，用法"></a>typedef 定义函数类型，用法</h1><p>typedef定义函数类型:</p>
+<p> <a href="https://blog.csdn.net/todd911/article/details/11599657" target="_blank" rel="external">https://blog.csdn.net/todd911/article/details/11599657</a></p>
   
 	</div>
 
@@ -219,6 +250,16 @@
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/原理-理论/">原理 | 理论</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/计算机/">计算机</a>
+  </div>
 
 </div>
 
@@ -226,7 +267,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://www.vivatakethat.com/2018/06/05/设计模式/" data-title="take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="https://www.vivatakethat.com/2017/03/24/编程tips/" data-title="编程tips | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -240,18 +281,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2018/06/05/c++写文件日志/" title="">
+ <a href="/2017/03/25/c++内置类型/" title="C++_基本内置类型">
   <strong>上一篇：</strong><br/>
   <span>
-  (no title)</span>
+  C++_基本内置类型</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2018/06/05/C++函数对象operator/C++函数对象operator/"  title="">
+<a href="/2017/03/05/C++_类+函数+引用+指针+const(指针)+auto+constexpr变量+decltype/"  title="C++:类、函数、指针、构造函数">
  <strong>下一篇：</strong><br/> 
- <span>(no title)
+ <span>C++:类、函数、指针、构造函数
 </span>
 </a>
 </div>
@@ -272,7 +313,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#typedef-定义函数类型，用法"><span class="toc-number">1.</span> <span class="toc-text">typedef 定义函数类型，用法</span></a></li></ol>
  
   </div>
 

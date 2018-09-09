@@ -86,6 +86,73 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/01/05/Qt5_memo/" title="QLineEdit" itemprop="url">QLineEdit</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2018-01-04T16:42:32.000Z" itemprop="datePublished"> 发表于 2018-01-05</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="QLineEdit"><a href="#QLineEdit" class="headerlink" title="QLineEdit"></a>QLineEdit</h1><p><a href="http://www.ithao123.cn/content-10026001.html" target="_blank" rel="external">http://www.ithao123.cn/content-10026001.html</a></p>
+<p><a href="http://blog.csdn.net/hmsiwtv/article/details/7566128" target="_blank" rel="external">http://blog.csdn.net/hmsiwtv/article/details/7566128</a></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C++</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/01/05/Qt5_memo/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/01/01/char_chart指针/" title="char_chart指针" itemprop="url">char_chart指针</a>
   </h1>
   <p class="article-author">By
@@ -244,6 +311,17 @@
     <div class="article-content">
         
         <p><a href="http://blog.chinaunix.net/xmlrpc.php?r=blog/article&amp;uid=29121609&amp;id=3851844" target="_blank" rel="external">vs创建DLL/使用</a></p>
+<p>知识:</p>
+<ol>
+<li>Linux 动态库剖析<br><a href="https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html" target="_blank" rel="external">https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html</a></li>
+</ol>
+<ol>
+<li>linux下动态链接库(.so)的显式调用和隐式调用</li>
+</ol>
+<p><a href="https://blog.csdn.net/lc_910927/article/details/42393121" target="_blank" rel="external">https://blog.csdn.net/lc_910927/article/details/42393121</a></p>
+<ol>
+<li>DLL中类的显式链接<br><a href="http://www.moon-soft.com/doc/14639.htm" target="_blank" rel="external">http://www.moon-soft.com/doc/14639.htm</a></li>
+</ol>
 <ol>
 <li>Windows关键字</li>
 </ol>
@@ -258,7 +336,9 @@
 <blockquote>
 <p>每次更改代码都要替换.dll以及.lib文件，如修改.h文件也要替换.h文件</p>
 </blockquote>
-<h1 id="Linux下编写so"><a href="#Linux下编写so" class="headerlink" title="Linux下编写so"></a>Linux下编写so</h1><ol>
+<h1 id="Linux下编写so"><a href="#Linux下编写so" class="headerlink" title="Linux下编写so"></a>Linux下编写so</h1><p>参考文章:</p>
+<p><a href="https://blog.csdn.net/cbbbc/article/details/45102861" target="_blank" rel="external">linux与windows调用动态库so dll文件</a></p>
+<ol>
 <li><p>add.cpp</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"add.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> sum;</span><br><span class="line">   sum=a+b;</span><br><span class="line"><span class="comment">//std::cout&lt;&lt;sum&lt;&lt;std::endl;</span></span><br><span class="line"><span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -300,6 +380,27 @@
 </li>
 </ul>
 <p><img src="http://ofkarhqoq.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0lib%E6%96%87%E4%BB%B6.png" alt="工程添加lib" title="工程添加lib"></p>
+<hr>
+<p>2018-06-22 </p>
+<p>隐式加载</p>
+<ul>
+<li><p>add_header.h </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*      add_header.h  */</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">const</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(cosnt <span class="keyword">int</span> a, <span class="keyword">const</span> <span class="keyword">int</span> b)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>libadd_source.cpp</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> a, <span class="keyword">const</span> <span class="keyword">int</span> b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>编译指令:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -shared -fPIC libadd_source.cpp -o libadd.so</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>main_test.cpp<blockquote>
+<p>隐式加载</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">"add_header.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">3</span>;</span><br><span class="line">	<span class="keyword">int</span> 	b = <span class="number">7</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;a&lt;&lt;<span class="string">"+"</span>&lt;&lt;b&lt;&lt;<span class="string">"="</span>&lt;&lt;add(a,b)&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编译指令:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o a.out main_test.cpp  -L. -ladd -Wl,-rpath,./</span><br></pre></td></tr></table></figure>
 
         
         
@@ -503,75 +604,6 @@
 	
 	  	<span></span>
 		<a href="/2017/05/25/win32 c++ socket /#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/05/17/C++模版-typename/" title="C++:模版" itemprop="url">C++:模版</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2017-05-17T09:53:32.000Z" itemprop="datePublished"> 发表于 2017-05-17</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xsic8.com1.z0.glb.clouddn.com/District%209%EF%BC%882009.jpg?imageView2/2/h/600" alt="District 9（2009" title="District 9（2009"></p>
-<ol>
-<li>typename<br>“typename”是一个C++程序设计语言中的关键字。当用于泛型编程时是另一术语”class”的同义词。[1]这个关键字用于指出模板声明（或定义）中的非独立名称（dependent names）是类型名，而非变量名。以下是对于泛型编程中typename两种迥然不同的用法的解释。</li>
-</ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/C/">C++</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/05/17/C++模版-typename/#disqus_thread" class="comments-count-link">Comments</a>
 	
 </div>
 

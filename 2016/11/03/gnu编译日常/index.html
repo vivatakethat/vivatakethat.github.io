@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Linux下编译日常 | take that的博客</title>
+    <title>gnu编译日常 | take that的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="takethat">
@@ -14,15 +14,15 @@
 	<meta name="keywords" content="嵌入式, C++, C, Linux">
     <meta name="description" content="Linux编译日常备忘。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux下编译日常">
-<meta property="og:url" content="https://www.vivatakethat.com/2016/11/03/Linux编译日常/index.html">
+<meta property="og:title" content="gnu编译日常">
+<meta property="og:url" content="https://www.vivatakethat.com/2016/11/03/gnu编译日常/index.html">
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="Linux编译日常备忘。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg">
 <meta property="og:image" content="http://www.cnblogs.com/ggjucheng/archive/2011/12/15/2289291.html">
-<meta property="og:updated_time" content="2018-05-27T09:57:38.000Z">
+<meta property="og:updated_time" content="2018-06-22T03:12:48.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux下编译日常">
+<meta name="twitter:title" content="gnu编译日常">
 <meta name="twitter:description" content="Linux编译日常备忘。">
 
     
@@ -87,7 +87,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/11/03/Linux编译日常/" title="Linux下编译日常" itemprop="url">Linux下编译日常</a>
+      <a href="/2016/11/03/gnu编译日常/" title="gnu编译日常" itemprop="url">gnu编译日常</a>
   </h1>
   <p class="article-author">By
        
@@ -250,8 +250,21 @@
 <li>报错:g++: 错误：当输入来自标准输入设备时，需要 -E 或 -x<br>编译指令加了<code>-</code>但是没有加参数‘’</li>
 </ul>
 <ul>
-<li>GDG调试报错<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost SOFTWARE_PACKAGE_DEBUG]# gdb ./AGM_Client core.7544.1527411160</span><br><span class="line">GNU gdb Red Hat Linux (6.6-8.fc7rh)</span><br><span class="line">Copyright (C) 2006 Free Software Foundation, Inc.</span><br><span class="line">GDB is free software, covered by the GNU General Public License, and you are</span><br><span class="line">welcome to <span class="operator"><span class="keyword">change</span> it <span class="keyword">and</span>/<span class="keyword">or</span> <span class="keyword">distribute</span> copies <span class="keyword">of</span> it <span class="keyword">under</span> certain conditions.</span><br><span class="line"><span class="keyword">Type</span> <span class="string">"show copying"</span> <span class="keyword">to</span> see the conditions.</span><br><span class="line">There <span class="keyword">is</span> absolutely <span class="keyword">no</span> warranty <span class="keyword">for</span> GDB.  <span class="keyword">Type</span> <span class="string">"show warranty"</span> <span class="keyword">for</span> details.</span><br><span class="line">This GDB was configured <span class="keyword">as</span> <span class="string">"i386-redhat-linux-gnu"</span>...</span><br><span class="line">Dwarf <span class="keyword">Error</span>: wrong <span class="keyword">version</span> <span class="keyword">in</span> compilation unit header (<span class="keyword">is</span> <span class="number">4</span>, should be <span class="number">2</span>) [<span class="keyword">in</span> <span class="keyword">module</span> /home/AGM_CD/SOFTWARE_PACKAGE_DEBUG/AGM_Client]</span><br><span class="line">/home/AGM_CD/SOFTWARE_PACKAGE_DEBUG/core<span class="number">.7544</span><span class="number">.1527411160</span>: <span class="keyword">No</span> such <span class="keyword">file</span> <span class="keyword">or</span> <span class="keyword">directory</span>.</span></span><br></pre></td></tr></table></figure>
+<li><p>GDG调试报错</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost SOFTWARE_PACKAGE_DEBUG]# gdb ./AGM_Client core.7544.1527411160</span><br><span class="line">GNU gdb Red Hat Linux (6.6-8.fc7rh)</span><br><span class="line">Copyright (C) 2006 Free Software Foundation, Inc.</span><br><span class="line">GDB is free software, covered by the GNU General Public License, and you are</span><br><span class="line">welcome to <span class="operator"><span class="keyword">change</span> it <span class="keyword">and</span>/<span class="keyword">or</span> <span class="keyword">distribute</span> copies <span class="keyword">of</span> it <span class="keyword">under</span> certain conditions.</span><br><span class="line"><span class="keyword">Type</span> <span class="string">"show copying"</span> <span class="keyword">to</span> see the conditions.</span><br><span class="line">There <span class="keyword">is</span> absolutely <span class="keyword">no</span> warranty <span class="keyword">for</span> GDB.  <span class="keyword">Type</span> <span class="string">"show warranty"</span> <span class="keyword">for</span> details.</span><br><span class="line">This GDB was configured <span class="keyword">as</span> <span class="string">"i386-redhat-linux-gnu"</span>...</span><br><span class="line">Dwarf <span class="keyword">Error</span>: wrong <span class="keyword">version</span> <span class="keyword">in</span> compilation unit header (<span class="keyword">is</span> <span class="number">4</span>, should be <span class="number">2</span>) [<span class="keyword">in</span> <span class="keyword">module</span> /home/AGM_CD/SOFTWARE_PACKAGE_DEBUG/AGM_Client]</span><br><span class="line">/home/AGM_CD/SOFTWARE_PACKAGE_DEBUG/core<span class="number">.7544</span><span class="number">.1527411160</span>: <span class="keyword">No</span> such <span class="keyword">file</span> <span class="keyword">or</span> <span class="keyword">directory</span>.</span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p>cannot allocate an object of abstract type</p>
+<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">error: cannot allocate an object <span class="keyword">of</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">type</span> ‘<span class="title">test1</span>’</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> test1;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>错误：无法分配对象的抽象类型</p>
+<p>原因：在基类中声明的虚函数，没有在继承类中继承、实现。</p>
+<p>解决：将基类中声明的虚函数在继承类中继承实现，就可以new一个派生类了。</p>
+<ul>
+<li>“undefined reference to” 问题汇总及解决方法<br><a href="https://blog.csdn.net/stpeace/article/details/73302833" target="_blank" rel="external">https://blog.csdn.net/stpeace/article/details/73302833</a></li>
+</ul>
+<ul>
+<li>linux链接器 -Wl 参数的用法<br><a href="https://blog.csdn.net/season_hangzhou/article/details/16945679" target="_blank" rel="external">https://blog.csdn.net/season_hangzhou/article/details/16945679</a></li>
 </ul>
   
 	</div>
@@ -378,7 +391,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://www.vivatakethat.com/2016/11/03/Linux编译日常/" data-title="Linux下编译日常 | take that的博客" data-tsina="undefined" class="share clearfix">
+	  <div data-url="https://www.vivatakethat.com/2016/11/03/gnu编译日常/" data-title="gnu编译日常 | take that的博客" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>

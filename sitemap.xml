@@ -2,37 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
+    <loc>https://www.vivatakethat.com/2018/01/25/Windows%E7%BC%96%E8%AF%91/</loc>
     
-    <lastmod>2018-06-05T13:40:55.022Z</lastmod>
+    <lastmod>2018-08-29T02:15:18.502Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2017/02/21/Boost%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2018-08-28T15:59:27.483Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.vivatakethat.com/2017/02/08/Win10%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     
-    <lastmod>2018-06-03T04:10:46.000Z</lastmod>
+    <lastmod>2018-08-17T11:03:38.050Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2017/02/18/Windows%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://www.vivatakethat.com/2016/09/21/Ubuntu-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9Cmemo/</loc>
     
-    <lastmod>2018-05-29T03:20:02.000Z</lastmod>
+    <lastmod>2018-08-15T05:35:21.236Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.vivatakethat.com/2017/01/17/Linux-%E6%97%A5%E5%B8%B8/</loc>
     
-    <lastmod>2018-05-28T10:55:24.000Z</lastmod>
+    <lastmod>2018-08-07T02:25:26.126Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/11/03/Linux%E7%BC%96%E8%AF%91%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://www.vivatakethat.com/2018/08/02/QuickUp_C++/</loc>
     
-    <lastmod>2018-05-27T09:57:38.000Z</lastmod>
+    <lastmod>2018-08-02T11:07:01.736Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2018/02/01/ADO%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2018-07-28T08:58:20.400Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2017/02/18/Windows%E6%97%A5%E5%B8%B8/</loc>
+    
+    <lastmod>2018-07-14T02:44:57.211Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/06/30/%E7%AE%97%E6%B3%95-%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2018-06-25T16:03:02.382Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2018/06/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    
+    <lastmod>2018-06-25T02:59:51.987Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2017/03/24/%E7%BC%96%E7%A8%8Btips/</loc>
+    
+    <lastmod>2018-06-23T16:15:03.378Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2017/06/20/Win&Linux_%E7%BC%96%E5%86%99&%E5%8A%A0%E8%BD%BD_%E5%8A%A8%E6%80%81%E5%BA%93-%E5%85%B1%E4%BA%AB%E5%BA%93/</loc>
+    
+    <lastmod>2018-06-22T05:43:17.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/11/03/gnu%E7%BC%96%E8%AF%91%E6%97%A5%E5%B8%B8/</loc>
+    
+    <lastmod>2018-06-22T03:12:48.241Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/11/16/makefile/</loc>
+    
+    <lastmod>2018-06-16T06:36:52.299Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/07/07/%E5%9C%A8Windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo/</loc>
+    
+    <lastmod>2018-06-05T13:40:55.022Z</lastmod>
     
   </url>
   
@@ -65,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/11/16/makefile/</loc>
-    
-    <lastmod>2018-05-04T12:10:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.vivatakethat.com/2018/06/05/c++%E5%86%99%E6%96%87%E4%BB%B6%E6%97%A5%E5%BF%97/</loc>
     
     <lastmod>2018-04-20T16:40:28.000Z</lastmod>
@@ -96,13 +159,6 @@
     <loc>https://www.vivatakethat.com/2016/11/18/C++_memo2/</loc>
     
     <lastmod>2018-04-17T16:55:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2018/06/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    
-    <lastmod>2018-04-04T05:07:50.000Z</lastmod>
     
   </url>
   
@@ -135,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2018/01/25/Windows%E7%BC%96%E8%AF%91/</loc>
-    
-    <lastmod>2018-03-06T14:08:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.vivatakethat.com/2016/09/17/git_memo/</loc>
     
     <lastmod>2018-02-15T07:46:54.000Z</lastmod>
@@ -152,13 +201,6 @@
     <loc>https://www.vivatakethat.com/Q%E9%9C%80%E8%A6%81%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98.html</loc>
     
     <lastmod>2018-02-11T07:03:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2017/02/21/Boost%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2018-02-09T12:20:38.000Z</lastmod>
     
   </url>
   
@@ -205,13 +247,6 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2018/02/01/ADO%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2018-02-06T13:11:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.vivatakethat.com/2016/06/30/S_%E6%95%B0%E5%AD%A6/</loc>
     
     <lastmod>2018-02-05T06:11:08.000Z</lastmod>
@@ -254,23 +289,9 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2017/06/20/Win&Linux_%E7%BC%96%E5%86%99&%E5%8A%A0%E8%BD%BD_%E5%8A%A8%E6%80%81%E5%BA%93-%E5%85%B1%E4%BA%AB%E5%BA%93/</loc>
-    
-    <lastmod>2017-09-08T06:35:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.vivatakethat.com/2016/11/10/Qt%20Creator-%E6%97%A5%E5%B8%B8%E6%8A%A5%E9%94%99/</loc>
     
     <lastmod>2017-08-19T01:22:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2017/03/24/%E7%BC%96%E7%A8%8B%E5%BB%BA%E8%AE%AE/</loc>
-    
-    <lastmod>2017-08-18T13:34:52.000Z</lastmod>
     
   </url>
   
@@ -359,13 +380,6 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/09/21/Ubuntu-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9Cmemo/</loc>
-    
-    <lastmod>2017-04-06T01:12:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.vivatakethat.com/2016/10/31/E-Breaking%20Bad-%E5%8F%B0%E8%AF%8D/</loc>
     
     <lastmod>2017-03-15T12:43:16.000Z</lastmod>
@@ -429,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/06/13/%E5%B5%8C%E5%85%A5%E5%BC%8FARM%E7%9F%A5%E8%AF%86/</loc>
+    <loc>https://www.vivatakethat.com/2016/04/05/vi%E5%9F%BA%E7%A1%80(%E9%9B%B6)/</loc>
     
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     
@@ -450,70 +464,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/06/07/ZG%E7%BD%91%E5%85%B3file%E8%84%9A%E6%9C%AC%E8%A7%A3%E8%AF%BB/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/06/29/%E6%B1%87%E7%BC%96%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/07/23/%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/06/30/%E7%AE%97%E6%B3%95-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/11/09/%E7%BA%A2%E8%89%B2%E8%AD%A6%E6%88%922%E6%B8%B8%E6%88%8F%E5%85%B5%E7%A7%8D%E5%AF%B9%E7%99%BD/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/04/03/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E9%9B%B6-%E6%A6%82%E8%BF%B0.%EF%BC%89/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.vivatakethat.com/2016/07/21/proteus%E5%85%83%E5%99%A8%E4%BB%B6memo/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/08/16/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/06/07/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/04/16/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%86%99/</loc>
     
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     
@@ -534,49 +485,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/12/19/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.vivatakethat.com/2016/06/25/%E5%B8%B8%E7%94%A8%E9%80%BB%E8%BE%91%E7%94%A8%E8%AF%AD/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/06/13/Record%E2%80%94%E2%80%94%E5%B7%A5%E7%A8%8Bdoor-new/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/12/20/%E8%80%83%E8%AF%952%E2%80%94%E2%80%94%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%BF%9E%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/12/22/%E8%80%83%E8%AF%953%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%A7%BB%E4%BA%92%E8%81%94%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/12/08/%E5%AD%97%E7%AC%A6%E7%B1%BB%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6/</loc>
-    
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/05/19/Qucik%E2%80%94PaaS/</loc>
     
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     
@@ -590,14 +499,14 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/05/vi%E5%9F%BA%E7%A1%80(%E9%9B%B6)/</loc>
+    <loc>https://www.vivatakethat.com/2016/06/07/ZG%E7%BD%91%E5%85%B3file%E8%84%9A%E6%9C%AC%E8%A7%A3%E8%AF%BB/</loc>
     
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/12/23/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/</loc>
+    <loc>https://www.vivatakethat.com/2016/12/08/%E5%AD%97%E7%AC%A6%E7%B1%BB%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6/</loc>
     
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     
@@ -611,7 +520,105 @@
   </url>
   
   <url>
+    <loc>https://www.vivatakethat.com/2016/06/13/Record%E2%80%94%E2%80%94%E5%B7%A5%E7%A8%8Bdoor-new/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.vivatakethat.com/2016/04/25/RHC/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/06/29/%E6%B1%87%E7%BC%96%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/07/23/%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/06/13/%E5%B5%8C%E5%85%A5%E5%BC%8FARM%E7%9F%A5%E8%AF%86/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/05/19/Qucik%E2%80%94PaaS/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/08/16/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/11/09/%E7%BA%A2%E8%89%B2%E8%AD%A6%E6%88%922%E6%B8%B8%E6%88%8F%E5%85%B5%E7%A7%8D%E5%AF%B9%E7%99%BD/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/16/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%86%99/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/12/19/%E8%80%83%E8%AF%951%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/12/20/%E8%80%83%E8%AF%952%E2%80%94%E2%80%94%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%BF%9E%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/03/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E9%9B%B6-%E6%A6%82%E8%BF%B0.%EF%BC%89/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/12/22/%E8%80%83%E8%AF%953%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%A7%BB%E4%BA%92%E8%81%94%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/12/23/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/</loc>
+    
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/06/07/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     
@@ -625,7 +632,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/05/20/PaaS%E2%80%94%E2%80%94%E8%BF%90%E7%BB%B4/</loc>
+    <loc>https://www.vivatakethat.com/2016/04/09/PaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -646,7 +653,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/09/06/gcc%E5%8F%82%E6%95%B0/</loc>
+    <loc>https://www.vivatakethat.com/404.html</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -674,7 +681,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/404.html</loc>
+    <loc>https://www.vivatakethat.com/2016/05/18/PaaS-JavaEE/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -716,7 +723,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/04/PHP%E5%85%A5%E9%97%A8(%E4%B8%80)/</loc>
+    <loc>https://www.vivatakethat.com/2016/05/18/centos%E8%BF%90%E7%BB%B4memo/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -744,7 +751,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/05/18/centos%E8%BF%90%E7%BB%B4memo/</loc>
+    <loc>https://www.vivatakethat.com/2016/04/04/PHP%E5%85%A5%E9%97%A8(%E4%B8%80)/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -779,7 +786,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/05/18/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://www.vivatakethat.com/2016/09/06/gcc%E5%8F%82%E6%95%B0/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -787,6 +794,13 @@
   
   <url>
     <loc>https://www.vivatakethat.com/2016/11/17/C++%E5%B8%B8%E7%94%A8%E5%BA%93_%E5%87%BD%E6%95%B0/</loc>
+    
+    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.vivatakethat.com/2016/05/18/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -801,13 +815,6 @@
   
   <url>
     <loc>https://www.vivatakethat.com/2016/07/12/Linux%E9%A9%B1%E5%8A%A8-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87/</loc>
-    
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.vivatakethat.com/2016/05/16/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA%E4%BA%8C/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -891,7 +898,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/13/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://www.vivatakethat.com/2016/05/16/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA%E4%BA%8C/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -905,7 +912,7 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/15/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA-Moodle%E7%94%B5%E5%AD%90%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://www.vivatakethat.com/2016/04/13/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
@@ -975,14 +982,14 @@
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/09/PaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
+    <loc>https://www.vivatakethat.com/2016/04/15/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA-Moodle%E7%94%B5%E5%AD%90%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.vivatakethat.com/2016/05/18/PaaS-JavaEE/</loc>
+    <loc>https://www.vivatakethat.com/2016/05/20/PaaS%E2%80%94%E2%80%94%E8%BF%90%E7%BB%B4/</loc>
     
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     

@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/eg2-config.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90.jpg">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E9%80%89%E4%B8%ADLEDS.png">
-<meta property="og:updated_time" content="2018-05-04T12:10:54.000Z">
+<meta property="og:updated_time" content="2018-06-16T06:36:52.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="makefile">
 <meta name="twitter:description" content="在linux下编写C程序一般要通过make工程管理器完成编译，编译过程分为编译、汇编、链接3个阶段。在编译过阶段自动读入makefile文件(makefile的内容)来执行编译工作。同时根据文件时间戳自动发现更新过的文件而减少编译的过程。">
@@ -109,7 +109,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内核源码中的make"><span class="toc-number">1.</span> <span class="toc-text">内核源码中的make</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#makefile实例解读"><span class="toc-number">3.</span> <span class="toc-text">makefile实例解读</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#make中报错"><span class="toc-number">4.</span> <span class="toc-text">make中报错</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内核源码中的make"><span class="toc-number">1.</span> <span class="toc-text">内核源码中的make</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#makefile实例解读"><span class="toc-number">3.</span> <span class="toc-text">makefile实例解读</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#make中报错"><span class="toc-number">4.</span> <span class="toc-text">make中报错</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tipsl"><span class="toc-number">5.</span> <span class="toc-text">tipsl:</span></a></li></ol>
 		
 		</div>
 		
@@ -173,11 +173,21 @@
 <p>makefile里面的文件依赖关系有问题，导致头文件找不到。</p>
 <p>解决办法：<br>把<code>MIS_Commonality/MIS_Commonality.cpp</code>这个目录文件放到相应的位置，即可</p>
 <ul>
+<li><code>No rule to make target</code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@vmubuntu:/home/takethat/test_so/class_dynamic# make&#10;rm -rf *.so a.out b.out&#10;make: *** No rule to make target `test_1.o&#39;, needed by `test_1.so&#39;.  Stop.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解决:<br>目标文件的依赖文件不存在</p>
+<blockquote>
+<p>也可能是依赖文件名对不上</p>
+</blockquote>
+<ul>
 <li>make j* make j4 make j8 区别<br><a href="https://blog.csdn.net/androiddeveloper_lee/article/details/32136261" target="_blank" rel="external">https://blog.csdn.net/androiddeveloper_lee/article/details/32136261</a></li>
 </ul>
 <ul>
 <li>make -f<br><a href="https://www.cnblogs.com/nosadness/p/5136652.html" target="_blank" rel="external">https://www.cnblogs.com/nosadness/p/5136652.html</a></li>
 </ul>
+<hr>
+<h1 id="tipsl"><a href="#tipsl" class="headerlink" title="tipsl:"></a>tipsl:</h1><p><a href="http://haohetao.iteye.com/blog/1484315" target="_blank" rel="external">shell脚本及makefile中的特殊变量</a></p>
   
 	</div>
 
@@ -349,7 +359,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内核源码中的make"><span class="toc-number">1.</span> <span class="toc-text">内核源码中的make</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#makefile实例解读"><span class="toc-number">3.</span> <span class="toc-text">makefile实例解读</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#make中报错"><span class="toc-number">4.</span> <span class="toc-text">make中报错</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内核源码中的make"><span class="toc-number">1.</span> <span class="toc-text">内核源码中的make</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#makefile实例解读"><span class="toc-number">3.</span> <span class="toc-text">makefile实例解读</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#make中报错"><span class="toc-number">4.</span> <span class="toc-text">make中报错</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tipsl"><span class="toc-number">5.</span> <span class="toc-text">tipsl:</span></a></li></ol>
  
   </div>
 
