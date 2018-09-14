@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/vm%E7%BD%91%E5%8D%A1%E7%BC%96%E8%BE%91%E6%88%AA%E5%9B%BE.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/linuxIP%E8%AE%BE%E7%BD%AE.png">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/root%E8%87%AA%E5%8A%A8%E7%99%BB%E5%85%A5.png">
-<meta property="og:updated_time" content="2018-08-07T02:25:26.126Z">
+<meta property="og:updated_time" content="2018-09-14T14:37:39.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux日常">
 <meta name="twitter:description" content="Linux配置，shell脚本…">
@@ -273,6 +273,10 @@
 </ul>
 <p>原因:</p>
 <p><code>sbs_n455_dio_set</code>这个函数有声明，但是没有定义,可能这个函数是定义在另一个动态库里;</p>
+<ul>
+<li>ssh别的主机失败，但是别的主机SSH过来却可以<br>scp命令也是相同的情况</li>
+</ul>
+<p>报错:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ssh 192.168.242.132&#10;ssh: connect to host 192.168.242.132 port 22: Connection timed out</span><br></pre></td></tr></table></figure></p>
   
 	</div>
 

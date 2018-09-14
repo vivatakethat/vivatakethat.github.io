@@ -4,6 +4,206 @@
 
     
   <url>
+    <loc>https://www.vivatakethat.com/2016/04/03/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E9%9B%B6-%E6%A6%82%E8%BF%B0.%EF%BC%89/</loc>
+    <lastmod>2018-09-14T16:43:29.583Z</lastmod>
+    <data>
+        <display>
+        <title>嵌入式开发学习(零)：概述</title>
+        <pubTime>2016-04-03T10:02:32.000Z</pubTime>
+        
+        <tag>MCU</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/16/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%86%99/</loc>
+    <lastmod>2018-09-14T16:43:20.497Z</lastmod>
+    <data>
+        <display>
+        <title>嵌入式开发学习(一):系统烧写</title>
+        <pubTime>2016-04-16T09:22:32.000Z</pubTime>
+        
+        <tag>MCU</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
+    <lastmod>2018-09-14T16:43:12.801Z</lastmod>
+    <data>
+        <display>
+        <title>PHP基础（零）</title>
+        <pubTime>2016-04-01T06:38:32.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="https://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/04/PHP%E5%85%A5%E9%97%A8(%E4%B8%80)/</loc>
+    <lastmod>2018-09-14T16:43:03.003Z</lastmod>
+    <data>
+        <display>
+        <title>PHP基础（一）</title>
+        <pubTime>2016-04-04T15:54:32.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="php | git | hexo" url="https://www.vivatakethat.com/categories/php-git-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/13/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2018-09-14T16:42:54.237Z</lastmod>
+    <data>
+        <display>
+        <title>PaaS应用搭建</title>
+        <pubTime>2016-04-13T08:07:32.000Z</pubTime>
+        
+        <tag>PaaS</tag>
+         
+         
+           
+             
+              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/09/PaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
+    <lastmod>2018-09-14T16:42:43.379Z</lastmod>
+    <data>
+        <display>
+        <title>PaaS基础架设</title>
+        <pubTime>2016-04-09T05:52:32.000Z</pubTime>
+        
+        <tag>PaaS</tag>
+         
+         
+           
+             
+              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/09/IaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
+    <lastmod>2018-09-14T16:42:33.203Z</lastmod>
+    <data>
+        <display>
+        <title>IaaS基础架设</title>
+        <pubTime>2016-04-09T07:32:32.000Z</pubTime>
+        
+        <tag>IaaS</tag>
+         
+         
+           
+             
+              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/03/C%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
+    <lastmod>2018-09-14T16:42:21.274Z</lastmod>
+    <data>
+        <display>
+        <title>C:基本概念</title>
+        <pubTime>2016-04-03T04:02:32.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/01/51%E5%9F%BA%E7%A1%80%EF%BC%88%E9%9B%B6%EF%BC%89/</loc>
+    <lastmod>2018-09-14T16:42:07.316Z</lastmod>
+    <data>
+        <display>
+        <title>51单片机</title>
+        <pubTime>2016-04-01T01:15:32.000Z</pubTime>
+        
+        <tag>MCU</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2017/01/17/Linux-%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2018-09-14T14:37:39.802Z</lastmod>
+    <data>
+        <display>
+        <title>Linux日常</title>
+        <pubTime>2017-01-16T16:21:32.000Z</pubTime>
+        
+        <tag>Rcord</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.vivatakethat.com/2018/01/25/Windows%E7%BC%96%E8%AF%91/</loc>
     <lastmod>2018-08-29T02:15:18.502Z</lastmod>
     <data>
@@ -72,26 +272,6 @@
         <pubTime>2016-09-21T12:20:32.000Z</pubTime>
         
         <tag>ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2017/01/17/Linux-%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2018-08-07T02:25:26.126Z</lastmod>
-    <data>
-        <display>
-        <title>Linux日常</title>
-        <pubTime>2017-01-16T16:21:32.000Z</pubTime>
-        
-        <tag>Rcord</tag>
          
          
            
@@ -1185,146 +1365,6 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/11/14/QWidget%E7%B1%BB_QT5/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>QWidget类_QT5</title>
-        <pubTime>2016-11-13T16:21:32.000Z</pubTime>
-        
-        <tag>QT</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/04/05/vi%E5%9F%BA%E7%A1%80(%E9%9B%B6)/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>vi基础(零)</title>
-        <pubTime>2016-04-05T15:54:32.000Z</pubTime>
-        
-        <tag>vi</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/06/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>软件测试基础知识</title>
-        <pubTime>2016-06-15T06:29:32.000Z</pubTime>
-        
-        <tag>软件测试</tag>
-         
-         
-           
-             
-              <breadCrumb title="软件测试" url="https://www.vivatakethat.com/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/04/01/PHP%E5%85%A5%E9%97%A8(%E9%9B%B6)/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>PHP基础（零）</title>
-        <pubTime>2016-04-01T06:38:32.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-         
-           
-             
-              <breadCrumb title="php | git | hexo" url="https://www.vivatakethat.com/categories/php-git-hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/07/21/proteus%E5%85%83%E5%99%A8%E4%BB%B6memo/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>proteus小记</title>
-        <pubTime>2016-07-21T07:29:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/05/22/Shell%E8%84%9A%E6%9C%AC%E8%A7%A3%E8%AF%BB/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>Shell脚本解读</title>
-        <pubTime>2016-05-22T06:56:43.000Z</pubTime>
-        
-        <tag>Shell</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/06/08/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>嵌入式环境搭建</title>
-        <pubTime>2016-06-07T17:34:43.000Z</pubTime>
-        
-        <tag>MCU</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.vivatakethat.com/2016/06/25/%E5%B8%B8%E7%94%A8%E9%80%BB%E8%BE%91%E7%94%A8%E8%AF%AD/</loc>
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
@@ -1365,14 +1405,34 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/06/07/ZG%E7%BD%91%E5%85%B3file%E8%84%9A%E6%9C%AC%E8%A7%A3%E8%AF%BB/</loc>
+    <loc>https://www.vivatakethat.com/2016/06/15/%E6%90%AD%E5%BB%BA%E6%9C%80%E5%B0%8F%E7%9A%84Linux%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
         <display>
-        <title>ZG网关file脚本解读</title>
-        <pubTime>2016-06-07T03:34:43.000Z</pubTime>
+        <title>最小系统环境搭建</title>
+        <pubTime>2016-06-14T17:44:32.000Z</pubTime>
         
-        <tag>Shell</tag>
+        <tag>MCU</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/05/vi%E5%9F%BA%E7%A1%80(%E9%9B%B6)/</loc>
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>vi基础(零)</title>
+        <pubTime>2016-04-05T15:54:32.000Z</pubTime>
+        
+        <tag>vi</tag>
          
          
            
@@ -1405,14 +1465,14 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/06/15/%E6%90%AD%E5%BB%BA%E6%9C%80%E5%B0%8F%E7%9A%84Linux%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://www.vivatakethat.com/2016/11/14/QWidget%E7%B1%BB_QT5/</loc>
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
         <display>
-        <title>最小系统环境搭建</title>
-        <pubTime>2016-06-14T17:44:32.000Z</pubTime>
+        <title>QWidget类_QT5</title>
+        <pubTime>2016-11-13T16:21:32.000Z</pubTime>
         
-        <tag>MCU</tag>
+        <tag>QT</tag>
          
          
            
@@ -1425,39 +1485,19 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/06/13/Record%E2%80%94%E2%80%94%E5%B7%A5%E7%A8%8Bdoor-new/</loc>
+    <loc>https://www.vivatakethat.com/2016/06/07/ZG%E7%BD%91%E5%85%B3file%E8%84%9A%E6%9C%AC%E8%A7%A3%E8%AF%BB/</loc>
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
         <display>
-        <title>Record——工程door-new</title>
-        <pubTime>2016-06-13T01:40:32.000Z</pubTime>
+        <title>ZG网关file脚本解读</title>
+        <pubTime>2016-06-07T03:34:43.000Z</pubTime>
         
-        <tag>编程</tag>
+        <tag>Shell</tag>
          
          
            
              
-              <breadCrumb title="工程" url="https://www.vivatakethat.com/categories/%E5%B7%A5%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/04/25/RHC/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>RHC</title>
-        <pubTime>2016-04-25T08:07:32.000Z</pubTime>
-        
-        <tag>PaaS</tag>
-         
-         
-           
-             
-              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+              <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
           
         </display>
     </data>
@@ -1473,46 +1513,6 @@
         <pubTime>2016-06-29T04:02:32.000Z</pubTime>
         
         <tag>汇编</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/07/23/%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>硬件基础知识</title>
-        <pubTime>2016-07-23T01:59:32.000Z</pubTime>
-        
-        <tag>51</tag>
-         
-         
-           
-             
-              <breadCrumb title="原理 | 理论" url="https://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/06/13/%E5%B5%8C%E5%85%A5%E5%BC%8FARM%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>嵌入式ARM知识</title>
-        <pubTime>2016-06-13T15:21:32.000Z</pubTime>
-        
-        <tag>ARM</tag>
          
          
            
@@ -1545,6 +1545,46 @@
 
     
   <url>
+    <loc>https://www.vivatakethat.com/2016/06/13/%E5%B5%8C%E5%85%A5%E5%BC%8FARM%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>嵌入式ARM知识</title>
+        <pubTime>2016-06-13T15:21:32.000Z</pubTime>
+        
+        <tag>ARM</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/07/23/%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>硬件基础知识</title>
+        <pubTime>2016-07-23T01:59:32.000Z</pubTime>
+        
+        <tag>51</tag>
+         
+         
+           
+             
+              <breadCrumb title="原理 | 理论" url="https://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.vivatakethat.com/2016/08/16/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
@@ -1558,6 +1598,66 @@
            
              
               <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/06/13/Record%E2%80%94%E2%80%94%E5%B7%A5%E7%A8%8Bdoor-new/</loc>
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Record——工程door-new</title>
+        <pubTime>2016-06-13T01:40:32.000Z</pubTime>
+        
+        <tag>编程</tag>
+         
+         
+           
+             
+              <breadCrumb title="工程" url="https://www.vivatakethat.com/categories/%E5%B7%A5%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/06/07/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>嵌入式开发常见问题</title>
+        <pubTime>2016-06-07T01:27:32.000Z</pubTime>
+        
+        <tag>MCU</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/06/08/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>嵌入式环境搭建</title>
+        <pubTime>2016-06-07T17:34:43.000Z</pubTime>
+        
+        <tag>MCU</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
           
         </display>
     </data>
@@ -1585,19 +1685,19 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/16/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%86%99/</loc>
+    <loc>https://www.vivatakethat.com/2016/05/22/Shell%E8%84%9A%E6%9C%AC%E8%A7%A3%E8%AF%BB/</loc>
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
         <display>
-        <title>嵌入式开发学习(一):系统烧写</title>
-        <pubTime>2016-04-16T09:22:32.000Z</pubTime>
+        <title>Shell脚本解读</title>
+        <pubTime>2016-05-22T06:56:43.000Z</pubTime>
         
-        <tag>MCU</tag>
+        <tag>Shell</tag>
          
          
            
              
-              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+              <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
           
         </display>
     </data>
@@ -1645,26 +1745,6 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/03/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E9%9B%B6-%E6%A6%82%E8%BF%B0.%EF%BC%89/</loc>
-    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>嵌入式开发学习(零)：概述</title>
-        <pubTime>2016-04-03T10:02:32.000Z</pubTime>
-        
-        <tag>MCU</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.vivatakethat.com/2016/12/22/%E8%80%83%E8%AF%953%E2%80%94%E2%80%94%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%A7%BB%E4%BA%92%E8%81%94%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
@@ -1678,6 +1758,26 @@
            
              
               <breadCrumb title="原理 | 理论" url="https://www.vivatakethat.com/categories/%E5%8E%9F%E7%90%86-%E7%90%86%E8%AE%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/04/25/RHC/</loc>
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>RHC</title>
+        <pubTime>2016-04-25T08:07:32.000Z</pubTime>
+        
+        <tag>PaaS</tag>
+         
+         
+           
+             
+              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
           
         </display>
     </data>
@@ -1705,92 +1805,12 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/06/07/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://www.vivatakethat.com/2016/07/21/proteus%E5%85%83%E5%99%A8%E4%BB%B6memo/</loc>
     <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
         <display>
-        <title>嵌入式开发常见问题</title>
-        <pubTime>2016-06-07T01:27:32.000Z</pubTime>
-        
-        <tag>MCU</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/04/09/IaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>IaaS基础架设</title>
-        <pubTime>2016-04-09T07:32:32.000Z</pubTime>
-        
-        <tag>IaaS</tag>
-         
-         
-           
-             
-              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/04/09/PaaS%E5%9F%BA%E7%A1%80%E6%9E%B6%E8%AE%BE/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>PaaS基础架设</title>
-        <pubTime>2016-04-09T05:52:32.000Z</pubTime>
-        
-        <tag>PaaS</tag>
-         
-         
-           
-             
-              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/10/19/G-%E6%B8%B8%E6%88%8F%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E5%8D%95%E8%AF%8D/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>游戏中出现的词汇</title>
-        <pubTime>2016-10-19T10:32:10.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="https://www.vivatakethat.com/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/11/05/Function-%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Function-功能函数</title>
-        <pubTime>2016-11-05T12:35:32.000Z</pubTime>
+        <title>proteus小记</title>
+        <pubTime>2016-07-21T07:29:32.000Z</pubTime>
         
         <tag>memo</tag>
          
@@ -1804,21 +1824,20 @@
     </url>
 
     
-    
   <url>
-    <loc>https://www.vivatakethat.com/2016/09/26/E%E2%80%94%E2%80%94%E8%8B%B1%E8%AF%AD%E5%BA%94%E7%94%A8%E7%9F%AD%E6%96%87/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    <loc>https://www.vivatakethat.com/2016/06/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2017-01-16T13:40:44.000Z</lastmod>
     <data>
         <display>
-        <title>英语应用短文</title>
-        <pubTime>2016-09-25T16:35:32.000Z</pubTime>
+        <title>软件测试基础知识</title>
+        <pubTime>2016-06-15T06:29:32.000Z</pubTime>
         
-        <tag>memo</tag>
+        <tag>软件测试</tag>
          
          
            
              
-              <breadCrumb title="English" url="https://www.vivatakethat.com/categories/English/"/>
+              <breadCrumb title="软件测试" url="https://www.vivatakethat.com/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
           
         </display>
     </data>
@@ -1866,12 +1885,12 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/05/18/PaaS-JavaEE/</loc>
+    <loc>https://www.vivatakethat.com/2016/05/18/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
         <display>
-        <title>JavaEE-PaaS应用</title>
-        <pubTime>2016-05-18T04:25:32.000Z</pubTime>
+        <title>MongoDB数据库</title>
+        <pubTime>2016-05-18T08:07:32.000Z</pubTime>
         
         <tag>PaaS</tag>
          
@@ -1986,19 +2005,19 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/05/18/centos%E8%BF%90%E7%BB%B4memo/</loc>
+    <loc>https://www.vivatakethat.com/2016/11/15/Menuconfig%E7%9A%84%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
         <display>
-        <title>centos运维memo</title>
-        <pubTime>2016-05-18T08:07:32.000Z</pubTime>
+        <title>Menuconfig的操作</title>
+        <pubTime>2016-11-15T15:35:32.000Z</pubTime>
         
-        <tag>Linux</tag>
+        <tag>OS</tag>
          
          
            
              
-              <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
+              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
           
         </display>
     </data>
@@ -2026,14 +2045,14 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/03/C%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
+    <loc>https://www.vivatakethat.com/2016/07/12/Linux%E9%A9%B1%E5%8A%A8-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
         <display>
-        <title>C:基本概念</title>
-        <pubTime>2016-04-03T04:02:32.000Z</pubTime>
+        <title>Linux驱动-基础知识预备</title>
+        <pubTime>2016-07-12T00:57:32.000Z</pubTime>
         
-        <tag>C</tag>
+        <tag>驱动</tag>
          
          
            
@@ -2066,19 +2085,19 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/04/PHP%E5%85%A5%E9%97%A8(%E4%B8%80)/</loc>
+    <loc>https://www.vivatakethat.com/2016/09/23/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
         <display>
-        <title>PHP基础（一）</title>
-        <pubTime>2016-04-04T15:54:32.000Z</pubTime>
+        <title>Linux系统编程-文件操作</title>
+        <pubTime>2016-09-23T07:50:32.000Z</pubTime>
         
-        <tag>PHP</tag>
+        <tag>Linux</tag>
          
          
            
              
-              <breadCrumb title="php | git | hexo" url="https://www.vivatakethat.com/categories/php-git-hexo/"/>
+              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
           
         </display>
     </data>
@@ -2166,14 +2185,14 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/09/06/gcc%E5%8F%82%E6%95%B0/</loc>
+    <loc>https://www.vivatakethat.com/2016/06/23/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
         <display>
-        <title>gcc参数</title>
-        <pubTime>2016-09-06T15:27:32.000Z</pubTime>
+        <title>Linux系统编程-常见操作</title>
+        <pubTime>2016-06-23T12:19:32.000Z</pubTime>
         
-        <tag>gcc</tag>
+        <tag>Linux</tag>
          
          
            
@@ -2194,106 +2213,6 @@
         <pubTime>2016-11-17T06:02:32.000Z</pubTime>
         
         <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/05/18/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>MongoDB数据库</title>
-        <pubTime>2016-05-18T08:07:32.000Z</pubTime>
-        
-        <tag>PaaS</tag>
-         
-         
-           
-             
-              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/11/15/Menuconfig%E7%9A%84%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Menuconfig的操作</title>
-        <pubTime>2016-11-15T15:35:32.000Z</pubTime>
-        
-        <tag>OS</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/07/12/Linux%E9%A9%B1%E5%8A%A8-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux驱动-基础知识预备</title>
-        <pubTime>2016-07-12T00:57:32.000Z</pubTime>
-        
-        <tag>驱动</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/09/23/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux系统编程-文件操作</title>
-        <pubTime>2016-09-23T07:50:32.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/06/23/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux系统编程-常见操作</title>
-        <pubTime>2016-06-23T12:19:32.000Z</pubTime>
-        
-        <tag>Linux</tag>
          
          
            
@@ -2366,26 +2285,6 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/06/29/Algorithms3-13/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Algorithms3-13</title>
-        <pubTime>2016-06-29T12:13:32.000Z</pubTime>
-        
-        <tag>memo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Book | Coursera" url="https://www.vivatakethat.com/categories/Book-Coursera/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.vivatakethat.com/2016/04/21/Linux%E7%B3%BB%E7%BB%9F(%E4%B8%89)/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
@@ -2399,46 +2298,6 @@
            
              
               <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/04/01/51%E5%9F%BA%E7%A1%80%EF%BC%88%E9%9B%B6%EF%BC%89/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>51单片机</title>
-        <pubTime>2016-04-01T01:15:32.000Z</pubTime>
-        
-        <tag>MCU</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.vivatakethat.com/2016/11/18/4412_%E7%94%9F%E6%88%90%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9/</loc>
-    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>4412_生成设备节点</title>
-        <pubTime>2016-11-18T10:42:32.000Z</pubTime>
-        
-        <tag>驱动</tag>
-         
-         
-           
-             
-              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
           
         </display>
     </data>
@@ -2466,19 +2325,79 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/10/26/4412_%E5%AE%9E%E9%AA%8C%20/</loc>
+    <loc>https://www.vivatakethat.com/2016/05/18/centos%E8%BF%90%E7%BB%B4memo/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
         <display>
-        <title>4412_实验</title>
-        <pubTime>2016-10-25T16:35:32.000Z</pubTime>
+        <title>centos运维memo</title>
+        <pubTime>2016-05-18T08:07:32.000Z</pubTime>
         
-        <tag>MCU</tag>
+        <tag>Linux</tag>
          
          
            
              
-              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+              <breadCrumb title="Linux" url="https://www.vivatakethat.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/09/06/gcc%E5%8F%82%E6%95%B0/</loc>
+    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>gcc参数</title>
+        <pubTime>2016-09-06T15:27:32.000Z</pubTime>
+        
+        <tag>gcc</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/05/18/PaaS-JavaEE/</loc>
+    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaEE-PaaS应用</title>
+        <pubTime>2016-05-18T04:25:32.000Z</pubTime>
+        
+        <tag>PaaS</tag>
+         
+         
+           
+             
+              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/06/29/Algorithms3-13/</loc>
+    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Algorithms3-13</title>
+        <pubTime>2016-06-29T12:13:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Book | Coursera" url="https://www.vivatakethat.com/categories/Book-Coursera/"/>
           
         </display>
     </data>
@@ -2499,6 +2418,87 @@
            
              
               <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/11/18/4412_%E7%94%9F%E6%88%90%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9/</loc>
+    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>4412_生成设备节点</title>
+        <pubTime>2016-11-18T10:42:32.000Z</pubTime>
+        
+        <tag>驱动</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/10/19/G-%E6%B8%B8%E6%88%8F%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E5%8D%95%E8%AF%8D/</loc>
+    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>游戏中出现的词汇</title>
+        <pubTime>2016-10-19T10:32:10.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="https://www.vivatakethat.com/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/10/26/4412_%E5%AE%9E%E9%AA%8C%20/</loc>
+    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>4412_实验</title>
+        <pubTime>2016-10-25T16:35:32.000Z</pubTime>
+        
+        <tag>MCU</tag>
+         
+         
+           
+             
+              <breadCrumb title="嵌入式" url="https://www.vivatakethat.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.vivatakethat.com/2016/11/05/Function-%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2017-01-16T13:40:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Function-功能函数</title>
+        <pubTime>2016-11-05T12:35:32.000Z</pubTime>
+        
+        <tag>memo</tag>
+         
+         
+           
+             
+              <breadCrumb title="C | C++ | Qt" url="https://www.vivatakethat.com/categories/C-C-Qt/"/>
           
         </display>
     </data>
@@ -2526,12 +2526,12 @@
 
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/13/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://www.vivatakethat.com/2016/04/15/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA-Moodle%E7%94%B5%E5%AD%90%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
         <display>
-        <title>PaaS应用搭建</title>
-        <pubTime>2016-04-13T08:07:32.000Z</pubTime>
+        <title>PaaS应用搭建,Moodle电子学习系统</title>
+        <pubTime>2016-04-15T08:07:32.000Z</pubTime>
         
         <tag>PaaS</tag>
          
@@ -2575,19 +2575,19 @@
     
     
   <url>
-    <loc>https://www.vivatakethat.com/2016/04/15/PaaS%E5%BA%94%E7%94%A8%E6%90%AD%E5%BB%BA-Moodle%E7%94%B5%E5%AD%90%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://www.vivatakethat.com/2016/09/26/E%E2%80%94%E2%80%94%E8%8B%B1%E8%AF%AD%E5%BA%94%E7%94%A8%E7%9F%AD%E6%96%87/</loc>
     <lastmod>2017-01-16T13:40:42.000Z</lastmod>
     <data>
         <display>
-        <title>PaaS应用搭建,Moodle电子学习系统</title>
-        <pubTime>2016-04-15T08:07:32.000Z</pubTime>
+        <title>英语应用短文</title>
+        <pubTime>2016-09-25T16:35:32.000Z</pubTime>
         
-        <tag>PaaS</tag>
+        <tag>memo</tag>
          
          
            
              
-              <breadCrumb title="云计算" url="https://www.vivatakethat.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+              <breadCrumb title="English" url="https://www.vivatakethat.com/categories/English/"/>
           
         </display>
     </data>
