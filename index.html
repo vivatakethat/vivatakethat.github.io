@@ -86,6 +86,64 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/10/28/BUG/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2018-10-28T14:07:21.675Z" itemprop="datePublished"> 发表于 2018-10-28</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ol>
+<li>C++动态库编译连接一个C语言静态库，调用崩溃<br>解决:<br>在C静态库，每个函数逐个再封装一层函数，并且在外面嵌套一层<code>extern c</code></li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/10/28/BUG/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/10/11/回调函数/" title="回调函数" itemprop="url">回调函数</a>
   </h1>
   <p class="article-author">By
@@ -165,6 +223,135 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/10/04/CRC_/" title="CRC校验" itemprop="url">CRC校验</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2018-10-04T01:59:32.000Z" itemprop="datePublished"> 发表于 2018-10-04</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><ul>
+<li>LSB<br>英文： Least Significant Bit<br>中文： 最低有效位<br>介绍： 对于一个给定的数据串（整数），如二进制的1001或者十进制351，其最低有效位就是拥有最小单位数值的那一位。比如二进制1001的最右一位，拥有数值1，在该整数中代表最低位，该位的值可以决定整数是奇数（为1）还是偶数（为0），十进制数同理。</li>
+</ul>
+<p>一般LSB就是一个整数的最右一位，所以似乎该概念有些多余，==但是凡事都有例外，某些数据传输或是处理器恰恰相反，最左一位是LSB==，所以在计算领域就定义了这个最低有效位以明确说明数据格式。<br>注：相应的也有MSB - 最高有效位。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C++</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/10/04/CRC_/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/09/21/程序报错崩溃/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2018-09-21T05:20:41.513Z" itemprop="datePublished"> 发表于 2018-09-21</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ul>
+<li>QT程序崩溃:Segmentation fault</li>
+</ul>
+<p>描述:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The inferior stopped because <span class="keyword">it</span> received <span class="operator">a</span> signal <span class="built_in">from</span> <span class="operator">the</span> operating <span class="keyword">system</span>.</span><br><span class="line"></span><br><span class="line">Signal name: SIGSEGV</span><br><span class="line">Signal meaning: Segmentation fault</span><br></pre></td></tr></table></figure></p>
+<p>出错代码:</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/09/21/程序报错崩溃/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/08/02/QuickUp_C++/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
@@ -214,177 +401,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/06/25/设计模式/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2018-06-25T02:59:51.987Z" itemprop="datePublished"> 发表于 2018-06-25</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="Adapter适配器模式"><a href="#Adapter适配器模式" class="headerlink" title="Adapter适配器模式"></a>Adapter适配器模式</h1><h1 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h1>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2018/06/25/设计模式/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/06/05/C++函数对象operator/cecequthread/memo_/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2018-06-04T18:10:28.251Z" itemprop="datePublished"> 发表于 2018-06-05</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <ol>
-<li>对比opeartor</li>
-</ol>
-<p>[root@localhost cecequthread]#  g++ -g -w -D linux -std=c++11 -D <strong>LINUX</strong>  -o a.out  main_demo.cpp CEquThread.cpp -lboost_container -lboost_thread -lboost_system -Wl,-rpath,./<br>In file included from /usr/local/include/boost/thread/thread_only.hpp:22:0,<br>                 from /usr/local/include/boost/thread/thread.hpp:12,<br>                 from /usr/local/include/boost/thread.hpp:13,<br>                 from CEquThread.cpp:10:<br>/usr/local/include/boost/thread/detail/thread.hpp: In instantiation of ‘void boost::detail::thread_data<f>::run() [with F = thread_adapter]’:<br>CEquThread.cpp:182:1:   required from here<br>/usr/local/include/boost/thread/detail/thread.hpp:116:17: 错误：对‘(thread_adapter) ()’的调用没有匹配</f></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2018/06/05/C++函数对象operator/cecequthread/memo_/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/06/05/q_结束符号问题/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2018-06-04T18:10:28.220Z" itemprop="datePublished"> 发表于 2018-06-05</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>char 数组长度不能存储’\0’,导致 后面的字符贴上来了</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">define</span>  _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span>  <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> U8;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> stInitMode &#123;</span><br><span class="line">	<span class="keyword">char</span> chModeStartTime[<span class="number">15</span>];	    <span class="comment">// IN,模式发生时间(YYYYMMDDhh24mmss);</span></span><br><span class="line">	U8 ucModeID;					<span class="comment">// IN,模式ID (参见第4分册“3.2.11 降级运营模式ID”)</span></span><br><span class="line">&#125;_stInitMode;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> stInitReaderInfo_CD</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">char</span> chLineNumber[<span class="number">3</span>];				<span class="comment">// IN,线路编码</span></span><br><span class="line">	<span class="keyword">char</span> chStationNumber[<span class="number">3</span>];			<span class="comment">// IN,车站编码</span></span><br><span class="line">	<span class="keyword">char</span> chEquipType[<span class="number">3</span>];				<span class="comment">// IN,设备类型</span></span><br><span class="line">	<span class="keyword">char</span> chEquipNumber[<span class="number">4</span>];				<span class="comment">// IN,3bytes设备编号</span></span><br><span class="line">	U8 EquipWorkMode;					<span class="comment">// IN,设备工作模式(读写器工作模式：0x00——使用指令中的工作模式;0x10——ES;0x20——非付费区BOM;0x21——付费区BOM;0x22——TVM;0x23——TCM;0x24——PCA;0x40——进站AGM;0x41——出站AGM)</span></span><br><span class="line">	U8 DownWorkModenum;					<span class="comment">// IN,模式数量</span></span><br><span class="line">	<span class="keyword">char</span> chRCodeBaudrate[<span class="number">12</span>];       <span class="comment">//  IN，关联扫码枪通讯波特率</span></span><br><span class="line">	_stInitMode Mode[<span class="number">16</span>];</span><br><span class="line">	<span class="comment">//	stInitMode_CD  Mode[16];</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> chRCodeCOM[<span class="number">10</span>];            <span class="comment">//  IN，关联扫码枪串口号</span></span><br><span class="line">	<span class="keyword">char</span> chModeStartTime[<span class="number">15</span>];			<span class="comment">// IN,模式发生时间(YYYYMMDDhh24mmss);</span></span><br><span class="line">	<span class="keyword">char</span> chRCodeServerAddr[<span class="number">256</span>];    <span class="comment">//  IN, 支付平台接入地址，例如http://182.140.238.35:61082/</span></span><br><span class="line">	U8 ucModeID;						<span class="comment">// IN,模式ID (参见第4分册“3.2.11 降级运营模式ID”)</span></span><br><span class="line">	<span class="keyword">bool</span> Mark_IsUseQRcode;           <span class="comment">//take:add是否启用二维码  在读写器里传参标志需要</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> stInitReaderInfo &#123;</span><br><span class="line">	<span class="keyword">char</span> chLineNumber[<span class="number">3</span>];			<span class="comment">// IN,线路编码</span></span><br><span class="line">	<span class="keyword">char</span> chStationNumber[<span class="number">3</span>];		<span class="comment">// IN,车站编码</span></span><br><span class="line">	<span class="keyword">char</span> chEquipmentType[<span class="number">3</span>];		<span class="comment">// IN,设备类型</span></span><br><span class="line">	<span class="keyword">char</span> chEquipmentNumber[<span class="number">4</span>];		<span class="comment">// IN,3bytes设备编号</span></span><br><span class="line">	U8 ucEquipWorkMode;				<span class="comment">// IN,设备工作模式(读写器工作模式：0x00——使用指令中的工作模式;0x10——ES;0x20——非付费区BOM;0x21——付费区BOM;0x22——TVM;0x23——TCM;0x24——PCA;0x40——进站AGM;0x41——出站AGM)</span></span><br><span class="line">	U8 ucDownWorkModenum;			<span class="comment">// IN,模式数量</span></span><br><span class="line">	_stInitMode Mode[<span class="number">16</span>];</span><br><span class="line">	<span class="comment">//char chEquipmentID[17];			// OUT,16位PSAM卡ID</span></span><br><span class="line">&#125; _stInitReaderInfo;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> _stRCodeInfo &#123;</span><br><span class="line">	<span class="keyword">char</span> chRCodeCOM[<span class="number">10</span>];            <span class="comment">//  IN，关联扫码枪串口号</span></span><br><span class="line">	<span class="keyword">char</span> chRCodeBaudrate[<span class="number">12</span>];       <span class="comment">//  IN，关联扫码枪通讯波特率</span></span><br><span class="line">	<span class="keyword">char</span> chRCodeServerAddr[<span class="number">256</span>];    <span class="comment">//  IN, 支付平台接入地址，例如http://182.140.238.35:61082/</span></span><br><span class="line">&#125; _stRCodeInfo;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">startReaderAFC</span><span class="params">(<span class="keyword">void</span>* i_StartAFCData)</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">/****&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;take:第一个参数结构体***&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;******************/</span></span><br><span class="line"></span><br><span class="line">	_stInitReaderInfo take_stInitReaderInfo;</span><br><span class="line">	<span class="built_in">strcpy</span>(take_stInitReaderInfo.chLineNumber, ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chLineNumber);</span><br><span class="line">	<span class="built_in">strcpy</span>(take_stInitReaderInfo.chStationNumber, ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chStationNumber);</span><br><span class="line">	<span class="built_in">strcpy</span>(take_stInitReaderInfo.chEquipmentType, ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chEquipType);</span><br><span class="line">	<span class="built_in">strcpy</span>(take_stInitReaderInfo.chEquipmentNumber, ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chEquipNumber);</span><br><span class="line">	take_stInitReaderInfo.ucEquipWorkMode = ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;EquipWorkMode;</span><br><span class="line">	take_stInitReaderInfo.ucDownWorkModenum = ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;DownWorkModenum;</span><br><span class="line">	<span class="comment">//take_stInitReaderInfo.Mode = ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;Mode;</span></span><br><span class="line">	<span class="built_in">memcpy</span>(take_stInitReaderInfo.Mode, ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;Mode, <span class="keyword">sizeof</span>(take_stInitReaderInfo.Mode));<span class="comment">//take:这样可以吗？</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/***&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;take:第一个参数结构体**&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;******/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;take:第二个参数*&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;*/</span></span><br><span class="line">	_stRCodeInfo *ptr_stRCodeInfo = (_stRCodeInfo*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(_stRCodeInfo));</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">memset</span>(ptr_stRCodeInfo-&gt;chRCodeBaudrate, <span class="string">'\0'</span>, <span class="keyword">sizeof</span>(ptr_stRCodeInfo-&gt;chRCodeBaudrate));</span><br><span class="line">	<span class="built_in">memset</span>(ptr_stRCodeInfo-&gt;chRCodeCOM, <span class="string">'\0'</span>, <span class="keyword">sizeof</span>(ptr_stRCodeInfo-&gt;chRCodeCOM));</span><br><span class="line">	<span class="built_in">memset</span>(ptr_stRCodeInfo-&gt;chRCodeServerAddr, <span class="string">'\0'</span>, <span class="keyword">sizeof</span>(ptr_stRCodeInfo-&gt;chRCodeServerAddr));</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"(stInitReaderInfo_CD*)i_StartAFCData)-&gt;chRCodeCOM):"</span> &lt;&lt; ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chRCodeCOM &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">strcpy</span>(ptr_stRCodeInfo-&gt;chRCodeCOM, ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chRCodeCOM);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ptr_stRCodeInfo-&gt;chRCodeCOM &lt;&lt; <span class="string">" line:"</span> &lt;&lt; __LINE__ &lt;&lt; endl;   <span class="comment">//只有这里是正确的</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">strcpy</span>(ptr_stRCodeInfo-&gt;chRCodeBaudrate, ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chRCodeBaudrate);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ptr_stRCodeInfo-&gt;chRCodeCOM &lt;&lt;<span class="string">" line:"</span>&lt;&lt;__LINE__&lt;&lt; endl;</span><br><span class="line">	<span class="built_in">strcpy</span>(ptr_stRCodeInfo-&gt;chRCodeServerAddr, ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chRCodeServerAddr);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ptr_stRCodeInfo-&gt;chRCodeCOM &lt;&lt; <span class="string">" line:"</span> &lt;&lt; __LINE__ &lt;&lt; endl;</span><br><span class="line">	<span class="comment">//cout &lt;&lt; "(stInitReaderInfo_CD*)i_StartAFCData)-&gt;chRCodeCOM):" &lt;&lt; ((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chRCodeCOM &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">/*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*******************************************************&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*/</span></span><br><span class="line"><span class="comment">//	cout &lt;&lt; ((test*)i_StartAFCData)-&gt;chEquipNumber &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//	cout&lt;&lt;((stInitReaderInfo_CD*)i_StartAFCData)-&gt;chEquipmentNumber;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	stInitReaderInfo_CD temp[<span class="number">2</span>];</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">//	strcpy(temp[0].chEquipNumber_, "aa");</span></span><br><span class="line">	temp[<span class="number">0</span>].EquipWorkMode = <span class="number">34</span>;</span><br><span class="line">	</span><br><span class="line">	 <span class="built_in">strcpy</span>(temp[<span class="number">0</span>].Mode[<span class="number">0</span>].chModeStartTime, <span class="string">"201804-=18"</span>);</span><br><span class="line">	<span class="built_in">strcpy</span>( temp[<span class="number">0</span>].chLineNumber, <span class="string">"nu"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">strcpy</span>(temp[<span class="number">0</span>].chStationNumber,<span class="string">"st"</span>);</span><br><span class="line">	 <span class="built_in">strcpy</span>(temp[<span class="number">0</span>].chEquipType,<span class="string">"tp"</span>);</span><br><span class="line">	 <span class="built_in">strcpy</span>(temp[<span class="number">0</span>].chEquipNumber, <span class="string">"chn"</span>);</span><br><span class="line">	 <span class="built_in">sprintf</span>(temp[<span class="number">0</span>].chRCodeBaudrate, <span class="string">"%d"</span>, <span class="number">115200</span>);</span><br><span class="line">	 <span class="built_in">strcpy</span>(temp[<span class="number">0</span>].chRCodeCOM, <span class="string">"/dev/ttyS8"</span>);</span><br><span class="line">	 <span class="built_in">strcpy</span>(temp[<span class="number">1</span>].chRCodeCOM, <span class="string">"/dev/ttyS9"</span>);</span><br><span class="line"></span><br><span class="line">	 temp[<span class="number">1</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	 </span><br><span class="line">  startReaderAFC(&amp;temp);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2018/06/05/q_结束符号问题/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -417,7 +433,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>46</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -482,7 +498,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>19</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
 			
 		
 			

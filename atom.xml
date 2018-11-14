@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.vivatakethat.com/"/>
-  <updated>2018-03-26T16:45:04.000Z</updated>
+  <updated>2018-10-28T14:07:21.675Z</updated>
   <id>https://www.vivatakethat.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.vivatakethat.com/2018/10/28/BUG/"/>
+    <id>https://www.vivatakethat.com/2018/10/28/BUG/</id>
+    <published>2018-10-28T14:07:21.675Z</published>
+    <updated>2018-10-28T14:07:21.675Z</updated>
+    
+    <content type="html">&lt;ol&gt;
+&lt;li&gt;C++动态库编译连接一个C语言静态库，调用崩溃&lt;br&gt;解决:&lt;br&gt;在C静态库，每个函数逐个再封装一层函数，并且在外面嵌套一层&lt;code&gt;extern c&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;C++动态库编译连接一个C语言静态库，调用崩溃&lt;br&gt;解决:&lt;br&gt;在C静态库，每个函数逐个再封装一层函数，并且在外面嵌套一层&lt;code&gt;extern c&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>回调函数</title>
@@ -48,6 +72,59 @@
     
     
       <category term="IDE" scheme="https://www.vivatakethat.com/tags/IDE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CRC校验</title>
+    <link href="https://www.vivatakethat.com/2018/10/04/CRC_/"/>
+    <id>https://www.vivatakethat.com/2018/10/04/CRC_/</id>
+    <published>2018-10-04T01:59:32.000Z</published>
+    <updated>2018-10-04T14:39:36.102Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;LSB&lt;br&gt;英文： Least Significant Bit&lt;br&gt;中文： 最低有效位&lt;br&gt;介绍： 对于一个给定的数据串（整数），如二进制的1001或者十进制351，其最低有效位就是拥有最小单位数值的那一位。比如二进制1001的最右一位，拥有数值1，在该整数中代表最低位，该位的值可以决定整数是奇数（为1）还是偶数（为0），十进制数同理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一般LSB就是一个整数的最右一位，所以似乎该概念有些多余，==但是凡事都有例外，某些数据传输或是处理器恰恰相反，最左一位是LSB==，所以在计算领域就定义了这个最低有效位以明确说明数据格式。&lt;br&gt;注：相应的也有MSB - 最高有效位。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;LSB&lt;br&gt;英文： Least Significant Bit&lt;br&gt;中文： 最低有效位&lt;br&gt;介绍： 对于一
+    
+    </summary>
+    
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
+    
+    
+      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.vivatakethat.com/2018/09/21/%E7%A8%8B%E5%BA%8F%E6%8A%A5%E9%94%99%E5%B4%A9%E6%BA%83/"/>
+    <id>https://www.vivatakethat.com/2018/09/21/程序报错崩溃/</id>
+    <published>2018-09-21T05:20:41.513Z</published>
+    <updated>2018-09-21T05:20:41.513Z</updated>
+    
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;QT程序崩溃:Segmentation fault&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;描述:&lt;br&gt;&lt;figure class=&quot;highlight livecodeserver&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;The inferior stopped because &lt;span class=&quot;keyword&quot;&gt;it&lt;/span&gt; received &lt;span class=&quot;operator&quot;&gt;a&lt;/span&gt; signal &lt;span class=&quot;built_in&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;the&lt;/span&gt; operating &lt;span class=&quot;keyword&quot;&gt;system&lt;/span&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Signal name: SIGSEGV&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Signal meaning: Segmentation fault&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;出错代码:&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;QT程序崩溃:Segmentation fault&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;描述:&lt;br&gt;&lt;figure class=&quot;highlight livecodeserver&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cl
+    
+    </summary>
+    
     
   </entry>
   
@@ -171,22 +248,6 @@
   
   <entry>
     <title></title>
-    <link href="https://www.vivatakethat.com/2018/06/05/c++%E5%86%99%E6%96%87%E4%BB%B6%E6%97%A5%E5%BF%97/"/>
-    <id>https://www.vivatakethat.com/2018/06/05/c++写文件日志/</id>
-    <published>2018-06-04T18:10:28.220Z</published>
-    <updated>2018-04-20T16:40:28.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="https://www.vivatakethat.com/2018/06/05/2018-03-28_/"/>
     <id>https://www.vivatakethat.com/2018/06/05/2018-03-28_/</id>
     <published>2018-06-04T18:10:28.220Z</published>
@@ -245,6 +306,22 @@
     
       &lt;ol&gt;
 &lt;li&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;spa
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.vivatakethat.com/2018/06/05/c++%E5%86%99%E6%96%87%E4%BB%B6%E6%97%A5%E5%BF%97/"/>
+    <id>https://www.vivatakethat.com/2018/06/05/c++写文件日志/</id>
+    <published>2018-06-04T18:10:28.220Z</published>
+    <updated>2018-04-20T16:40:28.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
     
     </summary>
     
@@ -336,7 +413,7 @@
     <link href="https://www.vivatakethat.com/2018/01/25/Windows%E7%BC%96%E8%AF%91/"/>
     <id>https://www.vivatakethat.com/2018/01/25/Windows编译/</id>
     <published>2018-01-25T05:32:10.000Z</published>
-    <updated>2018-08-29T02:15:18.502Z</updated>
+    <updated>2018-10-23T12:15:44.571Z</updated>
     
     <content type="html">&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;This function or variable may be unsafe&lt;/code&gt;&lt;br&gt;vs2015报错:&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Severity	Code	Description	Project	File	Line	Suppression State&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Error	C4996	&#39;sprintf&#39;: This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, &lt;span class=&quot;operator&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; _CRT_SECURE_NO_WARNINGS. See &lt;span class=&quot;keyword&quot;&gt;online&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;help&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; details.	DLL_ZBLCommunication	&lt;span class=&quot;keyword&quot;&gt;d&lt;/span&gt;:\gx_2017\&lt;span class=&quot;number&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;07&lt;/span&gt;\&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;\dll_zblcommunication\dll_zblcommunication\zblcommunication.cpp	&lt;span class=&quot;number&quot;&gt;156&lt;/span&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Severity	Code	Description	&lt;span class=&quot;keyword&quot;&gt;Project&lt;/span&gt;	&lt;span class=&quot;keyword&quot;&gt;File&lt;/span&gt;	Line	Suppression State&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;Error&lt;/span&gt;	C4996	&lt;span class=&quot;string&quot;&gt;&#39;fopen&#39;&lt;/span&gt;: This &lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;variable&lt;/span&gt; may be &lt;span class=&quot;keyword&quot;&gt;unsafe&lt;/span&gt;. &lt;span class=&quot;keyword&quot;&gt;Consider&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; fopen_s instead. &lt;span class=&quot;keyword&quot;&gt;To&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;disable&lt;/span&gt; deprecation, &lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; _CRT_SECURE_NO_WARNINGS. See &lt;span class=&quot;keyword&quot;&gt;online&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;help&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; details.	DLL_ZBLCommunication	&lt;span class=&quot;keyword&quot;&gt;d&lt;/span&gt;:\gx_2017\&lt;span class=&quot;number&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;07&lt;/span&gt;\&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;\dll_zblcommunication\dll_zblcommunication\zblcommunication.cpp	&lt;span class=&quot;number&quot;&gt;504&lt;/span&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Severity	Code	Description	&lt;span class=&quot;keyword&quot;&gt;Project&lt;/span&gt;	&lt;span class=&quot;keyword&quot;&gt;File&lt;/span&gt;	Line	Suppression State&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;Error&lt;/span&gt;	C4996	&lt;span class=&quot;string&quot;&gt;&#39;fopen&#39;&lt;/span&gt;: This &lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;variable&lt;/span&gt; may be &lt;span class=&quot;keyword&quot;&gt;unsafe&lt;/span&gt;. &lt;span class=&quot;keyword&quot;&gt;Consider&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; fopen_s instead. &lt;span class=&quot;keyword&quot;&gt;To&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;disable&lt;/span&gt; deprecation, &lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; _CRT_SECURE_NO_WARNINGS. See &lt;span class=&quot;keyword&quot;&gt;online&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;help&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; details.	DLL_ZBLCommunication	&lt;span class=&quot;keyword&quot;&gt;d&lt;/span&gt;:\gx_2017\&lt;span class=&quot;number&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;07&lt;/span&gt;\&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;\dll_zblcommunication\dll_zblcommunication\zblcommunication.cpp	&lt;span class=&quot;number&quot;&gt;531&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -384,6 +461,15 @@
 &lt;p&gt;实际解决:&lt;/p&gt;
 &lt;p&gt;把工程属性中&lt;code&gt;VC++ Directories&lt;/code&gt;中选项:&lt;code&gt;Library Directories&lt;/code&gt;、&lt;code&gt;Include Diretories&lt;/code&gt;设置Berkeley DB XML 6.0.18相应路径&lt;/p&gt;
 &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;C1073: Internal error involving incremental compilation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Severity    Code    Description    Project    File    Line    Suppression State&lt;br&gt;Error    C1073    Internal error involving incremental compilation(compiler file ‘f:\dd\vctools\compiler\cxxfe\sl\p1\c\p0io.c’, line 997)    UnitTest    d:\github\crcpp\inc\crc.h    1    &lt;/p&gt;
+&lt;p&gt;解决:&lt;br&gt;工程属性—&amp;gt; Configuration Properties——&amp;gt;C/C++——–&amp;gt;Code Generation—–&amp;gt;Enable Minimal Rebuild   :No(/Gm-)&lt;/p&gt;
+&lt;h1 id=&quot;vs2005使用Berkeley-DB-XML-2-3-10编程的时候报连接错误&quot;&gt;&lt;a href=&quot;#vs2005使用Berkeley-DB-XML-2-3-10编程的时候报连接错误&quot; class=&quot;headerlink&quot; title=&quot;vs2005使用Berkeley DB XML 2.3.10编程的时候报连接错误&quot;&gt;&lt;/a&gt;vs2005使用Berkeley DB XML 2.3.10编程的时候报连接错误&lt;/h1&gt;&lt;p&gt;在使用C++编程的时候连接问题&lt;br&gt;&lt;figure class=&quot;highlight d&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;main.obj : error LNK2019: unresolved external symbol &lt;span class=&quot;string&quot;&gt;&quot;public: __thiscall Dbt::~Dbt(void)&quot;&lt;/span&gt; (??&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;Dbt@&lt;span class=&quot;keyword&quot;&gt;@QAE&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;@XZ&lt;/span&gt;) referenced &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;function&lt;/span&gt; _main&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;main.obj : error LNK2019: unresolved external symbol &lt;span class=&quot;string&quot;&gt;&quot;public: __thiscall Dbt::Dbt(void)&quot;&lt;/span&gt; (??&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;Dbt@&lt;span class=&quot;keyword&quot;&gt;@QAE&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;@XZ&lt;/span&gt;) referenced &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;function&lt;/span&gt; _main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;工程属性设置：&lt;br&gt;&lt;code&gt;Configuration Properties&lt;/code&gt;—&amp;gt;&lt;code&gt;C/C++&lt;/code&gt;填上:&lt;br&gt;C:\Program Files\Oracle\Berkeley DB XML 2.3.10\include&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Configuration Properties&lt;/code&gt;—&amp;gt;&lt;code&gt;Linker&lt;/code&gt;—&amp;gt; &lt;code&gt;Input&lt;/code&gt; 填上:  &lt;code&gt;libdb45d.lib&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;参考文章&lt;br&gt;&lt;a href=&quot;http://www.91linux.com/Berkeley_DB/2014/0131/5719.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.91linux.com/Berkeley_DB/2014/0131/5719.html&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;boost配置报错&quot;&gt;&lt;a href=&quot;#boost配置报错&quot; class=&quot;headerlink&quot; title=&quot;boost配置报错&quot;&gt;&lt;/a&gt;boost配置报错&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;LNK1104&lt;figure class=&quot;highlight stata&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&amp;gt;LINK : fatal &lt;span class=&quot;keyword&quot;&gt;error&lt;/span&gt; LNK1104: cannot &lt;span class=&quot;keyword&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;file&lt;/span&gt; &#39;libboost_thread-vc100-mt-gd-1_57.lib&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
@@ -473,6 +559,30 @@
   </entry>
   
   <entry>
+    <title>QLineEdit</title>
+    <link href="https://www.vivatakethat.com/2018/01/05/Qt5_memo/"/>
+    <id>https://www.vivatakethat.com/2018/01/05/Qt5_memo/</id>
+    <published>2018-01-04T16:42:32.000Z</published>
+    <updated>2018-02-06T13:20:02.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;QLineEdit&quot;&gt;&lt;a href=&quot;#QLineEdit&quot; class=&quot;headerlink&quot; title=&quot;QLineEdit&quot;&gt;&lt;/a&gt;QLineEdit&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.ithao123.cn/content-10026001.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ithao123.cn/content-10026001.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/hmsiwtv/article/details/7566128&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/hmsiwtv/article/details/7566128&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;QLineEdit&quot;&gt;&lt;a href=&quot;#QLineEdit&quot; class=&quot;headerlink&quot; title=&quot;QLineEdit&quot;&gt;&lt;/a&gt;QLineEdit&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.ithao123.cn/content-10
+    
+    </summary>
+    
+      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
+    
+    
+      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>c++虚函数经</title>
     <link href="https://www.vivatakethat.com/2018/01/05/OOP_%E8%99%9A%E6%9E%84%E5%87%BD%E6%95%B0/"/>
     <id>https://www.vivatakethat.com/2018/01/05/OOP_虚构函数/</id>
@@ -498,30 +608,6 @@
   </entry>
   
   <entry>
-    <title>QLineEdit</title>
-    <link href="https://www.vivatakethat.com/2018/01/05/Qt5_memo/"/>
-    <id>https://www.vivatakethat.com/2018/01/05/Qt5_memo/</id>
-    <published>2018-01-04T16:42:32.000Z</published>
-    <updated>2018-02-06T13:20:02.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;QLineEdit&quot;&gt;&lt;a href=&quot;#QLineEdit&quot; class=&quot;headerlink&quot; title=&quot;QLineEdit&quot;&gt;&lt;/a&gt;QLineEdit&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.ithao123.cn/content-10026001.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ithao123.cn/content-10026001.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/hmsiwtv/article/details/7566128&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/hmsiwtv/article/details/7566128&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;QLineEdit&quot;&gt;&lt;a href=&quot;#QLineEdit&quot; class=&quot;headerlink&quot; title=&quot;QLineEdit&quot;&gt;&lt;/a&gt;QLineEdit&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.ithao123.cn/content-10
-    
-    </summary>
-    
-      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-    
-    
-      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>char_chart指针</title>
     <link href="https://www.vivatakethat.com/2018/01/01/char_chart%E6%8C%87%E9%92%88/"/>
     <id>https://www.vivatakethat.com/2018/01/01/char_chart指针/</id>
@@ -536,283 +622,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/habit2/article/details/4331804&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/habit2/article/details/
-    
-    </summary>
-    
-      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-    
-    
-      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>预编译_跨平台编译</title>
-    <link href="https://www.vivatakethat.com/2017/06/29/%E9%A2%84%E7%BC%96%E8%AF%91/"/>
-    <id>https://www.vivatakethat.com/2017/06/29/预编译/</id>
-    <published>2017-06-29T05:32:10.000Z</published>
-    <updated>2017-06-29T11:50:50.000Z</updated>
-    
-    <content type="html">&lt;ol&gt;
-&lt;li&gt;#ifdef 编译时候带参数编译 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;ifdef&lt;/span&gt; TAKE&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;define&lt;/span&gt; THAT &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;endif&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;ifdef&lt;/span&gt; TAKE2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;define&lt;/span&gt; THAT &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;endif&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt;&amp;lt;&amp;lt;THAT&amp;lt;&amp;lt;endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight brainfuck&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;literal&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;literal&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;DTAKE2&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;ndef&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;cpp&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;选择编译TAKE2的宏定义&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;#ifdef 编译时候带参数编译 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span 
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://www.vivatakethat.com/categories/Linux/"/>
-    
-    
-      <category term="Record" scheme="https://www.vivatakethat.com/tags/Record/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Win&amp;Linux_编写&amp;加载_动态库-共享库</title>
-    <link href="https://www.vivatakethat.com/2017/06/20/Win&Linux_%E7%BC%96%E5%86%99&%E5%8A%A0%E8%BD%BD_%E5%8A%A8%E6%80%81%E5%BA%93-%E5%85%B1%E4%BA%AB%E5%BA%93/"/>
-    <id>https://www.vivatakethat.com/2017/06/20/Win&Linux_编写&加载_动态库-共享库/</id>
-    <published>2017-06-20T07:42:32.000Z</published>
-    <updated>2018-06-22T05:43:17.703Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;a href=&quot;http://blog.chinaunix.net/xmlrpc.php?r=blog/article&amp;amp;uid=29121609&amp;amp;id=3851844&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vs创建DLL/使用&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;知识:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Linux 动态库剖析&lt;br&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.ibm.com/developerworks/cn/linux/l-dynamic-libraries/index.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;linux下动态链接库(.so)的显式调用和隐式调用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/lc_910927/article/details/42393121&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://blog.csdn.net/lc_910927/article/details/42393121&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;DLL中类的显式链接&lt;br&gt;&lt;a href=&quot;http://www.moon-soft.com/doc/14639.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.moon-soft.com/doc/14639.htm&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;Windows关键字&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;BOOL APIENTRY &lt;span class=&quot;title&quot;&gt;DllMain&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(HANDLE hModule,DOWRD dwReason,&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; * lpReserved)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;APIENTRY:表明此函数是应用程序的入口点，相当于c的main()函数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;visualstudio2015加载DLL&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;将编译好的&lt;code&gt;DLL_AGM.lib&lt;/code&gt;和&lt;code&gt;DLL_AGM.dll&lt;/code&gt;还有头文件&lt;code&gt;DLL_AGM.h&lt;/code&gt;文件放入vs工程源码目录里，以及子目录&lt;code&gt;Debug&lt;/code&gt;目录里;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;每次更改代码都要替换.dll以及.lib文件，如修改.h文件也要替换.h文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;Linux下编写so&quot;&gt;&lt;a href=&quot;#Linux下编写so&quot; class=&quot;headerlink&quot; title=&quot;Linux下编写so&quot;&gt;&lt;/a&gt;Linux下编写so&lt;/h1&gt;&lt;p&gt;参考文章:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/cbbbc/article/details/45102861&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;linux与windows调用动态库so dll文件&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;add.cpp&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;add.h&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a,&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; b)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; sum;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   sum=a+b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//std::cout&amp;lt;&amp;lt;sum&amp;lt;&amp;lt;std::endl;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; sum;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;add.h&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a,&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; b)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;封装成.so&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;g&lt;/span&gt;++   &lt;span class=&quot;tag&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.cpp&lt;/span&gt;  &lt;span class=&quot;tag&quot;&gt;-fPIC&lt;/span&gt;  &lt;span class=&quot;tag&quot;&gt;-shared&lt;/span&gt; &lt;span class=&quot;tag&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;tag&quot;&gt;libADD&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.so&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;生成&lt;code&gt;libADD.so&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;调用代码&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;main.cpp&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;add.h&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; sum = add(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt;&amp;lt;&amp;lt;sum&amp;lt;&amp;lt;endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;g++链接.so&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;g++ main&lt;span class=&quot;class&quot;&gt;.cpp&lt;/span&gt; -L. -lADD -Wl,-rpath,./ -o &lt;span class=&quot;tag&quot;&gt;b&lt;/span&gt;.out&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;VS创建DLL&quot;&gt;&lt;a href=&quot;#VS创建DLL&quot; class=&quot;headerlink&quot; title=&quot;VS创建DLL&quot;&gt;&lt;/a&gt;VS创建DLL&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;用Visualstudio新建一个工程&lt;code&gt;Templates&lt;/code&gt;—–&amp;gt;&lt;code&gt;Visual c++&lt;/code&gt;——–&amp;gt;&lt;code&gt;Win32 Project&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;在&lt;code&gt;Overview Application Settings&lt;/code&gt;   选择&lt;code&gt;Application type:&lt;/code&gt;下的&lt;code&gt;DLL&lt;/code&gt;  勾选&lt;code&gt;Empty project&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;通过编译会生成&lt;code&gt;^&amp;amp;*.dll&lt;/code&gt;以及&lt;code&gt;*&amp;amp;^.lib&lt;/code&gt;  &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;VS使用dll&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在工程里新建一个&lt;code&gt;include&lt;/code&gt;文件，将编译&lt;code&gt;dll&lt;/code&gt;工程里的&lt;code&gt;.h&lt;/code&gt;文件放入&lt;code&gt;include&lt;/code&gt;里面&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在工程目录新建一个&lt;code&gt;lib&lt;/code&gt;文件夹，将编译&lt;code&gt;dll&lt;/code&gt;工程生成的&lt;code&gt;.lib&lt;/code&gt;文件放入该目录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在使用dll工程中设置加载lib,&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;http://ofkarhqoq.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0lib%E6%96%87%E4%BB%B6.png&quot; alt=&quot;工程添加lib&quot; title=&quot;工程添加lib&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;2018-06-22 &lt;/p&gt;
-&lt;p&gt;隐式加载&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;add_header.h &lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*      add_header.h  */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(cosnt &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a, &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; b)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;libadd_source.cpp&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a, &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; b)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;编译指令:&lt;br&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;g++ -shared -fPIC libadd_source.cpp -o libadd.so&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;main_test.cpp&lt;blockquote&gt;
-&lt;p&gt;隐式加载&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;add_header.h&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; 	b = &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt;&amp;lt;&amp;lt;a&amp;lt;&amp;lt;&lt;span class=&quot;string&quot;&gt;&quot;+&quot;&lt;/span&gt;&amp;lt;&amp;lt;b&amp;lt;&amp;lt;&lt;span class=&quot;string&quot;&gt;&quot;=&quot;&lt;/span&gt;&amp;lt;&amp;lt;add(a,b)&amp;lt;&amp;lt;endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;编译指令:&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;g++ -o a.out main_test.cpp  -L. -ladd -Wl,-rpath,./&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://blog.chinaunix.net/xmlrpc.php?r=blog/article&amp;amp;uid=29121609&amp;amp;id=3851844&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vs创建DLL/使用&lt;/
-    
-    </summary>
-    
-      <category term="C | C++ | Qt" scheme="https://www.vivatakethat.com/categories/C-C-Qt/"/>
-    
-    
-      <category term="C++" scheme="https://www.vivatakethat.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>win32_c++_socket</title>
-    <link href="https://www.vivatakethat.com/2017/05/25/win32%20c++%20socket%20/"/>
-    <id>https://www.vivatakethat.com/2017/05/25/win32 c++ socket /</id>
-    <published>2017-05-25T05:32:10.000Z</published>
-    <updated>2017-05-31T07:08:48.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/cpp/html/3029.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;socket编程教程_C语言中文网&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/guoguojune/article/details/6185301&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;代码参考socket&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://network.51cto.com/art/201412/459619_all.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;sokect原理参考&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;code&gt;服务器&lt;/code&gt;: 它是被动的，它只能等待别人跟它建立连接，自己不会去主动连接；&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/a497785609/article/details/12871301&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原理:使用SOCKET实现TCP/IP协议的通讯&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/zhuyanling0106/article/details/9020809&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考资料_什么是原端口和目的端口&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://network.51cto.com/art/201412/459619_all.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;基本TCP套接字编程讲解_流程图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://network.51cto.com/art/201411/457626.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;图解TCP-IP协议&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/sight_/article/details/8138802&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Socket详解&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[MAKEWORD(2,2)使用][]&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_48d7f92901010roj.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;什么叫“低八位、高八位；低四位、高四位” &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[c++中冒号（:）和双冒号（::）的用法  ][]&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/xiaobai1593/article/details/6657095&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows Socket和Linux Socket编程的区别&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/dcrmg/article/details/53912941#t0&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; C++使用thread类多线程编程&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;基础概念&quot;&gt;&lt;a href=&quot;#基础概念&quot; class=&quot;headerlink&quot; title=&quot;基础概念&quot;&gt;&lt;/a&gt;基础概念&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;TCP/IP协议族&lt;blockquote&gt;
-&lt;p&gt;英语：TCP/IP Protocol Suite，或TCP/IP Protocols），简称TCP/IP&lt;br&gt;因为该协议家族的两个核心协议：TCP（传输控制协议）和IP（网际协议），为该家族中最早通过的标准[3]。由于在网络通讯协议普遍采用分层的结构，当多个层次的协议共同工作时，类似计算机科学中的堆栈，因此又被称为TCP/IP协议栈（英语：TCP/IP Protocol Stack）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;端口&lt;br&gt;端口就是特定的程序或者软件也可以理解为特定软件或程序的接口，&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;原端口/目的端口&lt;br&gt;&lt;code&gt;源端口&lt;/code&gt;就是本机程序用来发送数据的端口，&lt;code&gt;目的端口&lt;/code&gt;就是对方主机用哪个端口接收;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;封目的端口自己就出不去，封源端口别人就进不来。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;数据发送时计算机会在数据段上添上本机端口号（源端口号）和目的主机接收数据的端口号（目的端口号）&lt;br&gt;数据包通过网络设备走的时候，第一个检查的就是你这个数据包的目的地址在什么地方。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;TCP通信3个步骤:&lt;br&gt;1)建立TCP连接很简单，通过三次握手便可建立连接。&lt;br&gt;2)建立好连接后，开始传输数据。TCP数据传输牵涉到的概念很多：超时重传、快速重传、流量控制、拥塞控制等等。&lt;br&gt;3)断开连接的过程也很简单，通过四次握手完成断开连接的过程。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;TCP三次握手建立连接&lt;br&gt;第一次握手：客户端发送syn包(seq=x)到服务器，并进入SYN_SEND状态，等待服务器确认;&lt;br&gt;第二次握手：服务器收到syn包，必须确认客户的SYN(ack=x+1)，同时自己也发送一个SYN包(seq=y)，即SYN+ACK包，此时服务器进入SYN_RECV状态;&lt;br&gt;第三次握手：客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(ack=y+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;ACK&lt;br&gt;用于确认资料有无正确的传输到接收端，在ASCII中编号为6&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;网络中进程之间如何通信&lt;br&gt;网络层的“ip地址”可以唯一标识网络中的主机，而传输层的“协议+端口”可以唯一标识主机中的应用程序（进程）。这样利用三元组（ip地址，协议，端口）就可以标识网络的进程了，网络中的进程通信就可以利用这个标志与其它进程进行交互。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;侦听端口&lt;br&gt;服务器倾听端口 ,是服务器监听客户端用的 ,相当于”地址” ,是服务器与客户端间的纽带 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;TCP/IP首先要有一个&lt;code&gt;服务端&lt;/code&gt;，它是被建立连接的;&lt;/p&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;WSAStartup&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;WSAStartup就是为了向操作系统说明，我们要用哪个库文件，让该库文件与当前的应用程序绑定，从而就可以调用该版本的socket的各种函数了。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_4b146a9c01011ncl.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WSAStartup解释1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;WSAStartup() - 使用方法&lt;br&gt;当一个应用程序调用WSAStartup函数时，操作系统根据请求的Socket版本来搜索相应的Socket库，然后绑定找到的Socket库到该应用程序中。以后应用程序就可以调用所请求的Socket库中的其它Socket函数了。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;socket&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Windows 下也使用 socket() 函数来创建套接字，原型为：&lt;br&gt;&lt;figure class=&quot;highlight aspectj&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;SOCKET &lt;span class=&quot;title&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; af, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; type, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; protocol)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;除了返回值类型不同，其他都是相同的。Windows 不把套接字作为普通文件对待，而是返回 SOCKET 类型的句柄。请看下面的例子：&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;SOCKET sock = socket(AF_INET, SOCK_STREAM, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);  &lt;span class=&quot;comment&quot;&gt;//创建TCP套接字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;af 为地址族（Address Family），也就是 IP 地址类型，常用的有 AF_INET 和 AF_INET6。AF 是“Address Family”的简写，INET是“Inetnet”的简写。AF_INET 表示 IPv4 地址，例如 127.0.0.1；AF_INET6 表示 IPv6 地址，例如 1030::C9B4:FF12:48AA:1A2B。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;type 为数据传输方式，常用的有 SOCK_STREAM 和 SOCK_DGRAM，在《socket是什么意思》一节中已经进行了介绍。&lt;blockquote&gt;
-&lt;p&gt;1) SOCK_STREAM 表示面向连接的数据传输方式。数据可以准确无误地到达另一台计算机，如果损坏或丢失，可以重新发送，但效率相对较慢。常见的 http 协议就使用 SOCK_STREAM 传输数据，因为要确保数据的正确性，否则网页不能正常解析。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;2) SOCK_DGRAM 表示无连接的数据传输方式。计算机只管传输数据，不作数据校验，如果数据在传输中损坏，或者没有到达另一台计算机，是没有办法补救的。也就是说，数据错了就错了，无法重传。因为 SOCK_DGRAM 所做的校验工作少，所以效率比 SOCK_STREAM 高。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;protocol 表示传输协议，常用的有 IPPROTO_TCP 和 IPPTOTO_UDP，分别表示 TCP 传输协议和 UDP 传输协议。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;bind&lt;/code&gt; 函数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;调用函数 socket 创建套接字描述符时，该套接字描述符是存储在它的协议族空间中，没有具体的地址，要使它与一个地址相关联，可以调用函数bind 使其与地址绑定。客户端的套接字关联的地址一般可由系统默认分配，因此不需要指定具体的地址。若要为服务器端套接字绑定地址，可以通过调用函数 bind 将套接字绑定到一个地址。下面是该函数的描述：&lt;/p&gt;
-&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/&lt;span class=&quot;bullet&quot;&gt;* 套接字的基本操作 *&lt;/span&gt;/   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/*  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * 函数功能：将协议地址绑定到一个套接字；其中协议地址包含IP地址和端口号；  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * 返回值：若成功则返回0，若出错则返回-1；  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * 函数原型：  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;header&quot;&gt;#include &amp;lt;sys/socket.h&amp;gt;   &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/*  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * 说明：  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * sockfd 为套接字描述符；  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * addr是一个指向特定协议地址结构的指针；  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * addrlen是地址结构的长度；  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;```&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;+ 	&lt;/span&gt;&lt;span class=&quot;code&quot;&gt;``SOCKADDR_IN`&lt;/span&gt;` 结构体&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;sockaddr_in结构体简介&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;sockaddr_in结构体简介&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://blog.chinaunix.net/uid-20673616-id-1578732.html&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;header&quot;&gt;# 代码解析&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;#pragma comment(lib, “ws2_32.lib”)&lt;br&gt;&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;97&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;98&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;99&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;101&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;102&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;103&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;104&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;105&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;106&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;107&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;108&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;109&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;110&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;111&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;112&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;113&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;114&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;115&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;116&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;117&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;118&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;静态加入一个lib文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ws2&lt;span class=&quot;emphasis&quot;&gt;_32.lib文件，提供了对以下网络相关API的支持，若使用其中的API，则应该将ws2_&lt;/span&gt;32.lib加入工程（否则需要动态载入ws2_32.dll）。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;这句话一般出现在网络编程中，需要使用网络API函数的时候，就必须使用这条语句加载ws2&lt;span class=&quot;emphasis&quot;&gt;_32.lib库或者动态载入ws2_&lt;/span&gt;32.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;header&quot;&gt;# 非阻塞套接字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;参考_Windows Socket 非阻塞模式开发&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;参考_Windows Socket 非阻塞模式开发&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://blog.csdn.net/ithzhang/article/details/8274596&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[socket同步/异步通信]  []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;socket同步/异步通信&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://www.it610.com/article/5036113.htm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;重点参考_TCP Server处理多Client请求的方法—非阻塞accept与select&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;重点参考_TCP Server处理多Client请求的方法—非阻塞accept与select&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://velep.com/archives/1137.html&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;重点参考_linux下TCP连接的client和server&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;重点参考_linux下TCP连接的client和server&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://blog.csdn.net/linuxheik/article/details/19326469&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;可参考代码_C++多线程socket系统新编&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;可参考代码_C++多线程socket系统新编&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://blog.csdn.net/wyansai/article/details/50762479&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;header&quot;&gt;## 多线程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;参考代码_C++多线程socket系统新编&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;参考代码_C++多线程socket系统新编&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://blog.csdn.net/wyansai/article/details/50762479&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;Socket编程模型之简单选择模型&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;Socket编程模型之简单选择模型&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://blog.csdn.net/caoshiying/article/details/52550761&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;使用Cout输出String和CString对象&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;使用Cout输出String和CString对象&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt;  http://www.cnblogs.com/hushaojun/p/4920151.html&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt; C++基础::为什么不能cout一个string？&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt; C++基础::为什么不能cout一个string？&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://blog.csdn.net/lanchunhui/article/details/49757713&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt; C++中的C_str()函数用法&lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt; C++中的C_str()函数用法&lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt; http://blog.csdn.net/nancy_m/article/details/7583550&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fork()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;对于主进程 fork()返回新建的子进程ID， 子进程fork()返回0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_label&quot;&gt;fork（）函数详解 &lt;/span&gt;][&lt;span class=&quot;link_reference&quot;&gt;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;link_reference&quot;&gt;fork（）函数详解 &lt;/span&gt;]:&lt;span class=&quot;link_url&quot;&gt;  http://blog.chinaunix.net/uid-26495963-id-3150116.html&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;header&quot;&gt;# 问题&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;+ &lt;/span&gt;提示:blind fail&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;尝试解决:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;SO_REUSEADDR&lt;br&gt;&lt;figure class=&quot;highlight http&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;livecodeserver&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ &lt;span class=&quot;built_in&quot;&gt;socket&lt;/span&gt;客户端使用recv从服务器`接收数据：有“烫烫”乱码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;结论:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;TCP中&lt;span class=&quot;built_in&quot;&gt;send&lt;/span&gt;和recv函数针对的是字符（无边界）， 而不是字符串（以&lt;span class=&quot;string&quot;&gt;&#39;\0&#39;&lt;/span&gt;作为边界）。 换句话说， tcp的&lt;span class=&quot;built_in&quot;&gt;send&lt;/span&gt;和recv函数对所传的内容不敏感， 它关注的是字符， 仅此而已。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;recv要做数组初始化，否则会出现``烫烫``的乱码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;问题代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  recv(sHost, bufRecv,5 , 0);     // 接收服务器端的数据， 只接收5个字符  
-    cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt;&amp;quot;从服务器接收数据：&amp;quot; &amp;lt;&amp;lt; bufRecv;  
-}  
-//退出 
-&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;方法&lt;span class=&quot;number&quot;&gt;1.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解决后的代码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;手动在recv接受数组添加&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;作为结束&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;pre&gt;&lt;code&gt;    auto len = recv(sHost, bufRecv, BUF_SIZE, 0);     // 接收服务器端的数据， 只接收5个字符            // client4:  读
-    bufRecv[len] = 0;
-    cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; &amp;quot;从服务器`接收数据：&amp;quot; &amp;lt;&amp;lt; bufRecv;
-}
-//退出 
-&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;highlight http&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;cpp&quot;&gt;方法&lt;span class=&quot;number&quot;&gt;2.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;在recv前做数组初始化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;pre&gt;&lt;code&gt;char bufRecv[100] = { 0 };
- recv(sHost, bufRecv, 100, 0);
-&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;highlight http&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;cpp&quot;&gt;方法&lt;span class=&quot;number&quot;&gt;3.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;在recv前做清零操作&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;pre&gt;&lt;code&gt;ZeroMemory(bufRecv, BUF_SIZE);  //清0   /*或者这样:    memset(bufRecv, 0, BUF_SIZE);*/
- recv(sHost, bufRecv, BUF_SIZE, 0);
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;```&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;是不是说char数组没有结尾&lt;code&gt;\0&lt;/code&gt;输出会出现乱码？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;server端，send数组明明有&lt;code&gt;\0&lt;/code&gt;但是client端的rev却没有接收到&lt;code&gt;\0&lt;/code&gt;？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_73428e9a0101bdkh.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;需要了解_c语言——‘\0’,’0’,”0” ,0之间的区别&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/candcplusplus/article/details/8264676&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;需要了解_字符和字符字面值&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://bbs.csdn.net/topics/390408164&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSDN类似问题&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/cpp/html/3029.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;socket编程教程_C语言中文网&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn
     
     </summary>
     

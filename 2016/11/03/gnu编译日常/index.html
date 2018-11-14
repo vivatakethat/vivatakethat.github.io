@@ -20,7 +20,7 @@
 <meta property="og:description" content="Linux编译日常备忘。">
 <meta property="og:image" content="http://7xsic8.com1.z0.glb.clouddn.com/%E8%A2%AB%E5%85%B3%E5%9C%A8%E7%89%A2%E7%AC%BC%E4%B8%AD%E7%9A%84%E7%A9%B6%E7%AB%9F%E6%98%AFJames%E8%BF%98%E6%98%AFMary.jpg">
 <meta property="og:image" content="http://www.cnblogs.com/ggjucheng/archive/2011/12/15/2289291.html">
-<meta property="og:updated_time" content="2018-06-22T03:12:48.241Z">
+<meta property="og:updated_time" content="2018-10-29T02:38:57.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gnu编译日常">
 <meta name="twitter:description" content="Linux编译日常备忘。">
@@ -129,7 +129,7 @@
 </ul>
 <p>显示上一个执行的命令（或程序）的返回值，这个值通常在0~255之间，0表示一切正常。</p>
 <hr>
-<h1 id="封成库文件"><a href="#封成库文件" class="headerlink" title="封成库文件"></a>封成库文件</h1><p><a href="(http://blog.chinaunix.net/uid-23069658-id-3142046.html)">参考博文</a></p>
+<h1 id="封成库文件"><a href="#封成库文件" class="headerlink" title="封成库文件"></a>封成库文件</h1><p><a href="https://www.cnblogs.com/homejim/p/8004883.html" target="_blank" rel="external">参考博文</a></p>
 <ul>
 <li>静态连接库</li>
 </ul>
@@ -208,7 +208,7 @@
 <p>const<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="number">10.</span> <span class="keyword">operator</span>是C++关键字不能作为函数名!! </span><br><span class="line">&gt;vi下关键字是黄色</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 数组报错</span></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span>报错</span><br></pre></td></tr></table></figure></p>
 <p>RS232-gx_v4_Flag.cpp: In member function ‘void Rs232::register_68()’:<br>RS232-gx_v4_Flag.cpp:113:33: error: conflicting declaration ‘unsigned char register68_data [0]’<br>  unsigned char register68_data[0]=0;<br>                                 ^<br>RS232-gx_v4_Flag.cpp:95:17: note: previous declaration as ‘unsigned char register68_data [48]’<br>  unsigned char  register68_data[48];<br>  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">错误原因</span><br></pre></td></tr></table></figure></p>
 <p>unsigned char  register68_data[48];</p>
-<p>unsigned char register68_data[0]=0;<br>unsigned char     register68_data<a href="(http://blog.chinaunix.net/uid-23069658-id-3142046.html)">1</a>=15;<br>unsigned char     register68_data[2] = 10;<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">这是错误的，赋值的时候不需要在写``unsigned <span class="built_in">char</span>``</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 编译线程程序报错</span></span><br><span class="line"></span><br><span class="line">```Linux</span><br><span class="line">[root@localhost test_]<span class="preprocessor"># gcc threadl1.c </span></span><br><span class="line">/tmp/cceEaXN0.o: <span class="keyword">In</span> <span class="keyword">function</span> `main<span class="comment">':</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0x22</span>): undefined reference <span class="keyword">to</span> `pthread_create<span class="comment">'</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0x68</span>): undefined reference <span class="keyword">to</span> `pthread_join<span class="comment">'</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0xae</span>): undefined reference <span class="keyword">to</span> `pthread_join<span class="comment">'</span></span><br><span class="line">collect2: <span class="keyword">error</span>: ld returned <span class="number">1</span> <span class="keyword">exit</span> status</span><br></pre></td></tr></table></figure></p>
+<p>unsigned char register68_data[0]=0;<br>unsigned char     register68_data<a href="https://www.cnblogs.com/homejim/p/8004883.html" target="_blank" rel="external">1</a>=15;<br>unsigned char     register68_data[2] = 10;<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">这是错误的，赋值的时候不需要在写``unsigned <span class="built_in">char</span>``</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 编译线程程序报错</span></span><br><span class="line"></span><br><span class="line">```Linux</span><br><span class="line">[root@localhost test_]<span class="preprocessor"># gcc threadl1.c </span></span><br><span class="line">/tmp/cceEaXN0.o: <span class="keyword">In</span> <span class="keyword">function</span> `main<span class="comment">':</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0x22</span>): undefined reference <span class="keyword">to</span> `pthread_create<span class="comment">'</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0x68</span>): undefined reference <span class="keyword">to</span> `pthread_join<span class="comment">'</span></span><br><span class="line">threadl1.c:(.<span class="keyword">text</span>+<span class="number">0xae</span>): undefined reference <span class="keyword">to</span> `pthread_join<span class="comment">'</span></span><br><span class="line">collect2: <span class="keyword">error</span>: ld returned <span class="number">1</span> <span class="keyword">exit</span> status</span><br></pre></td></tr></table></figure></p>
 <p>解决办法:要链接线程库<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -pthread -o <span class="tag">a</span> threadl1.c</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>线程有一套完整的与其相关的函数库调用，在程序头文要包含<code>pthread.h</code>并且在编译程序的时候要用选项<code>-pthread</code></p>
@@ -249,6 +249,12 @@
 <ul>
 <li>报错:g++: 错误：当输入来自标准输入设备时，需要 -E 或 -x<br>编译指令加了<code>-</code>但是没有加参数‘’</li>
 </ul>
+<ul>
+<li>动态库=&gt; not found</li>
+</ul>
+<p>编译命令:<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># g++ -ldl -lboost_container -lboost_thread -lboost_system  test_gate.cpp</span></span><br></pre></td></tr></table></figure></p>
+<p>正确编译命令:<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># g++ -ldl -lboost_container -lboost_thread -lboost_system -Wl,-rpath,./ test_gate.cpp</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/homejim/p/8004883.html" target="_blank" rel="external">运行时动态库：not found 及介绍-linux的-Wl,-rpath命令</a></p>
 <ul>
 <li><p>GDG调试报错</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost SOFTWARE_PACKAGE_DEBUG]# gdb ./AGM_Client core.7544.1527411160</span><br><span class="line">GNU gdb Red Hat Linux (6.6-8.fc7rh)</span><br><span class="line">Copyright (C) 2006 Free Software Foundation, Inc.</span><br><span class="line">GDB is free software, covered by the GNU General Public License, and you are</span><br><span class="line">welcome to <span class="operator"><span class="keyword">change</span> it <span class="keyword">and</span>/<span class="keyword">or</span> <span class="keyword">distribute</span> copies <span class="keyword">of</span> it <span class="keyword">under</span> certain conditions.</span><br><span class="line"><span class="keyword">Type</span> <span class="string">"show copying"</span> <span class="keyword">to</span> see the conditions.</span><br><span class="line">There <span class="keyword">is</span> absolutely <span class="keyword">no</span> warranty <span class="keyword">for</span> GDB.  <span class="keyword">Type</span> <span class="string">"show warranty"</span> <span class="keyword">for</span> details.</span><br><span class="line">This GDB was configured <span class="keyword">as</span> <span class="string">"i386-redhat-linux-gnu"</span>...</span><br><span class="line">Dwarf <span class="keyword">Error</span>: wrong <span class="keyword">version</span> <span class="keyword">in</span> compilation unit header (<span class="keyword">is</span> <span class="number">4</span>, should be <span class="number">2</span>) [<span class="keyword">in</span> <span class="keyword">module</span> /home/AGM_CD/SOFTWARE_PACKAGE_DEBUG/AGM_Client]</span><br><span class="line">/home/AGM_CD/SOFTWARE_PACKAGE_DEBUG/core<span class="number">.7544</span><span class="number">.1527411160</span>: <span class="keyword">No</span> such <span class="keyword">file</span> <span class="keyword">or</span> <span class="keyword">directory</span>.</span></span><br></pre></td></tr></table></figure>
@@ -465,7 +471,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>46</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -530,7 +536,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>19</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
 			
 		
 			

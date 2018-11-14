@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://www.vivatakethat.com/2018/01/25/Windows编译/index.html">
 <meta property="og:site_name" content="take that的博客">
 <meta property="og:description" content="This function or variable may be unsafevs2015报错:1234567891011Severity	Code	Description	Project	File	Line	Suppression StateError	C4996	&apos;sprintf&apos;: This function or variable may be unsafe. Consider using">
-<meta property="og:updated_time" content="2018-08-29T02:15:18.502Z">
+<meta property="og:updated_time" content="2018-10-23T12:15:44.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows编译">
 <meta name="twitter:description" content="This function or variable may be unsafevs2015报错:1234567891011Severity	Code	Description	Project	File	Line	Suppression StateError	C4996	&apos;sprintf&apos;: This function or variable may be unsafe. Consider using">
@@ -104,7 +104,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#boost配置报错"><span class="toc-number">1.</span> <span class="toc-text">boost配置报错</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vs2005使用Berkeley-DB-XML-2-3-10编程的时候报连接错误"><span class="toc-number">1.</span> <span class="toc-text">vs2005使用Berkeley DB XML 2.3.10编程的时候报连接错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#boost配置报错"><span class="toc-number">2.</span> <span class="toc-text">boost配置报错</span></a></li></ol>
 		
 		</div>
 		
@@ -154,6 +154,15 @@
 <p>实际解决:</p>
 <p>把工程属性中<code>VC++ Directories</code>中选项:<code>Library Directories</code>、<code>Include Diretories</code>设置Berkeley DB XML 6.0.18相应路径</p>
 <hr>
+<ul>
+<li>C1073: Internal error involving incremental compilation</li>
+</ul>
+<p>Severity    Code    Description    Project    File    Line    Suppression State<br>Error    C1073    Internal error involving incremental compilation(compiler file ‘f:\dd\vctools\compiler\cxxfe\sl\p1\c\p0io.c’, line 997)    UnitTest    d:\github\crcpp\inc\crc.h    1    </p>
+<p>解决:<br>工程属性—&gt; Configuration Properties——&gt;C/C++——–&gt;Code Generation—–&gt;Enable Minimal Rebuild   :No(/Gm-)</p>
+<h1 id="vs2005使用Berkeley-DB-XML-2-3-10编程的时候报连接错误"><a href="#vs2005使用Berkeley-DB-XML-2-3-10编程的时候报连接错误" class="headerlink" title="vs2005使用Berkeley DB XML 2.3.10编程的时候报连接错误"></a>vs2005使用Berkeley DB XML 2.3.10编程的时候报连接错误</h1><p>在使用C++编程的时候连接问题<br><figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">main.obj : error LNK2019: unresolved external symbol <span class="string">"public: __thiscall Dbt::~Dbt(void)"</span> (??<span class="number">1</span>Dbt@<span class="keyword">@QAE</span><span class="keyword">@XZ</span>) referenced <span class="keyword">in</span> <span class="built_in">function</span> _main</span><br><span class="line">main.obj : error LNK2019: unresolved external symbol <span class="string">"public: __thiscall Dbt::Dbt(void)"</span> (??<span class="number">0</span>Dbt@<span class="keyword">@QAE</span><span class="keyword">@XZ</span>) referenced <span class="keyword">in</span> <span class="built_in">function</span> _main</span><br></pre></td></tr></table></figure></p>
+<p>工程属性设置：<br><code>Configuration Properties</code>—&gt;<code>C/C++</code>填上:<br>C:\Program Files\Oracle\Berkeley DB XML 2.3.10\include</p>
+<p><code>Configuration Properties</code>—&gt;<code>Linker</code>—&gt; <code>Input</code> 填上:  <code>libdb45d.lib</code></p>
+<p>参考文章<br><a href="http://www.91linux.com/Berkeley_DB/2014/0131/5719.html" target="_blank" rel="external">http://www.91linux.com/Berkeley_DB/2014/0131/5719.html</a></p>
 <h1 id="boost配置报错"><a href="#boost配置报错" class="headerlink" title="boost配置报错"></a>boost配置报错</h1><ol>
 <li>LNK1104<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1&gt;LINK : fatal <span class="keyword">error</span> LNK1104: cannot <span class="keyword">open</span> <span class="keyword">file</span> 'libboost_thread-vc100-mt-gd-1_57.lib</span><br></pre></td></tr></table></figure>
 </li>
@@ -339,7 +348,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#boost配置报错"><span class="toc-number">1.</span> <span class="toc-text">boost配置报错</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vs2005使用Berkeley-DB-XML-2-3-10编程的时候报连接错误"><span class="toc-number">1.</span> <span class="toc-text">vs2005使用Berkeley DB XML 2.3.10编程的时候报连接错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#boost配置报错"><span class="toc-number">2.</span> <span class="toc-text">boost配置报错</span></a></li></ol>
  
   </div>
 
@@ -367,7 +376,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>46</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
 		  
 		
 		  
@@ -432,7 +441,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/C/" title="C++">C++<sup>19</sup></a></li>
+				<li><a href="/tags/C/" title="C++">C++<sup>20</sup></a></li>
 			
 		
 			
