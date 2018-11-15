@@ -86,6 +86,133 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/11/15/c++写文件日志/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2018-11-15T07:58:16.445Z" itemprop="datePublished"> 发表于 2018-11-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/11/15/c++写文件日志/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/11/15/指针/" title="指针" itemprop="url">指针</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
+		
+  <p class="article-time">
+  <span id="busuanzi_container_page_pv">
+    总阅读<span id="busuanzi_value_page_pv"></span>次
+</span>
+    <time datetime="2018-11-15T07:57:32.000Z" itemprop="datePublished"> 发表于 2018-11-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="类指针"><a href="#类指针" class="headerlink" title="类指针"></a>类指针</h1><ol>
+<li>指针对象为NULL,为什么仍然可以调用成员函数</li>
+</ol>
+<p><a href="https://blog.csdn.net/chenzrcd/article/details/60472616" title="对象指针为NULL，为什么还是可以调用成员函数" target="_blank" rel="external">参考文章1_对象指针为NULL，为什么还是可以调用成员函数</a></p>
+<p><a href="https://www.cnblogs.com/Tour/p/4085002.html" target="_blank" rel="external">参考文章2——值为NULL的对象指针</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">class</span> A</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">f1</span><span class="params">()</span></span>&#123; <span class="built_in">cout</span>&lt;&lt;<span class="string">"f1"</span>&lt;&lt;endl; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">f2</span><span class="params">()</span></span>&#123; <span class="built_in">cout</span>&lt;&lt;<span class="string">"f2"</span>&lt;&lt;endl; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">f3</span><span class="params">()</span></span>&#123; <span class="built_in">cout</span>&lt;&lt;num&lt;&lt;endl; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f4</span><span class="params">()</span> </span>&#123;<span class="built_in">cout</span>&lt;&lt;<span class="string">"f4"</span>&lt;&lt;endl; &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span>* argv[])</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	A* pa = <span class="literal">NULL</span>;</span><br><span class="line">	pa-&gt;f1();	<span class="comment">//正常</span></span><br><span class="line">	pa-&gt;f2();   <span class="comment">//正常</span></span><br><span class="line">	pa-&gt;f3();   <span class="comment">//错误，提示段错误</span></span><br><span class="line">	pa-&gt;f4();   <span class="comment">//错误，提示段错误</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>类的成员函数并不与具体对象绑定，所有的对象共用同一份成员函数体，当程序被编译后，成员函数的地址即已确定，这份共有的成员函数体之所以能够把不同对象的数据区分开来，靠的是隐式传递给成员函数的this指针，成员函数中对成员变量的访问都是转化成”this-&gt;数据成员”的方式。因此，从这一角度说，成员函数与普通函数一样，只是多了一个隐式参数，即指向对象的this指针。而类的静态成员函数只能访问静态成员变量，不能访问非静态成员变量，所以静态成员函数不需要指向对象的this指针作为隐式参数。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C-C-Qt/">C | C++ | Qt</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/11/15/指针/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/10/28/BUG/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
@@ -286,124 +413,9 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/09/21/程序报错崩溃/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2018-09-21T05:20:41.513Z" itemprop="datePublished"> 发表于 2018-09-21</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <ul>
-<li>QT程序崩溃:Segmentation fault</li>
-</ul>
-<p>描述:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The inferior stopped because <span class="keyword">it</span> received <span class="operator">a</span> signal <span class="built_in">from</span> <span class="operator">the</span> operating <span class="keyword">system</span>.</span><br><span class="line"></span><br><span class="line">Signal name: SIGSEGV</span><br><span class="line">Signal meaning: Segmentation fault</span><br></pre></td></tr></table></figure></p>
-<p>出错代码:</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2018/09/21/程序报错崩溃/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/08/02/QuickUp_C++/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="takethat" target="_blank" itemprop="author">takethat</a>
-		
-  <p class="article-time">
-  <span id="busuanzi_container_page_pv">
-    总阅读<span id="busuanzi_value_page_pv"></span>次
-</span>
-    <time datetime="2018-08-02T11:11:18.752Z" itemprop="datePublished"> 发表于 2018-08-02</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2018/08/02/QuickUp_C++/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
@@ -433,7 +445,7 @@
 		  
 		
 		  
-			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>47</sup></a></li>
+			<li><a href="/categories/C-C-Qt/" title="C | C++ | Qt">C | C++ | Qt<sup>48</sup></a></li>
 		  
 		
 		  
@@ -506,7 +518,7 @@
 			
 		
 			
-				<li><a href="/tags/C/" title="C">C<sup>11</sup></a></li>
+				<li><a href="/tags/C/" title="C">C<sup>12</sup></a></li>
 			
 		
 			
@@ -526,7 +538,7 @@
 			
 		
 			
-				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
 			
 		
 			
@@ -534,7 +546,7 @@
 			
 		
 			
-				<li><a href="/tags/驱动/" title="驱动">驱动<sup>3</sup></a></li>
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
 			
 		
 			
@@ -546,7 +558,7 @@
 			
 		
 			
-				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
+				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
 			
 		
 			
@@ -566,7 +578,7 @@
 			
 		
 			
-				<li><a href="/tags/Coursera-Algorithms/" title="Coursera-Algorithms">Coursera-Algorithms<sup>2</sup></a></li>
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>2</sup></a></li>
 			
 		
 			
